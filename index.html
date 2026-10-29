@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IKAPI JABAR — Online Bookstore Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    /* Design Tokens from DESIGN.md */
+    :root {
+      --color-notion-blue: #0075de;
+      --color-paper-warmth: #f6f5f4;
+      --color-pure-white: #ffffff;
+      --color-ink-black: #000000;
+      --color-charcoal: #111111;
+      --color-stone: #757575;
+      --color-graphite: #615d59;
+      --color-slate: #696969;
+      --color-sky-tint: #e6f3fe;
+      --color-marigold: #ffb110;
+      --color-coral: #f64932;
+      --color-saffron: #e89d01;
+      --color-vermillion: #e32d14;
+      --color-mocha: #b18164;
+      --color-signal-blue: #097fe8;
+      --color-sky-wash: #62aef0;
+      --color-midnight-ink: #02093a;
+
+      /* Typography */
+      --font-notioninter: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-lyon-text: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+
+      /* Border Radius */
+      --radius-small: 4px;
+      --radius-buttons: 8px;
+      --radius-cards: 12px;
+      --radius-pills: 9999px;
+
+      /* Spacing & Layout */
+      --page-max-width: 1360px;
+      --border-hairline: 1px solid rgba(0, 0, 0, 0.08);
+      --border-hairline-subtle: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--color-paper-warmth);
+      color: var(--color-ink-black);
+      font-family: var(--font-notioninter);
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Container */
+    .container {
+      max-width: var(--page-max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    /* Typography Utilities */
+    h1, h2, h3, h4 {
+      color: var(--color-ink-black);
+      font-weight: 600;
+    }
+
+    .editorial-subhead {
+      font-family: var(--font-lyon-text);
+      font-size: 18px;
+      color: var(--color-graphite);
+      line-height: 1.56;
+      font-weight: 400;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--font-notioninter);
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: var(--radius-buttons);
+      padding: 8px 16px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.18s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: var(--color-notion-blue);
+      color: var(--color-pure-white);
+    }
+    .btn-primary:hover {
+      background-color: #0063bd;
+    }
+
+    .btn-ghost {
+      background-color: var(--color-sky-tint);
+      color: var(--color-notion-blue);
+    }
+    .btn-ghost:hover {
+      background-color: #d8ecfd;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: rgba(0, 0, 0, 0.85);
+      border: var(--border-hairline);
+    }
+    .btn-outline:hover {
+      background-color: rgba(0, 0, 0, 0.03);
+      border-color: rgba(0, 0, 0, 0.16);
+    }
+
+    .btn-sm {
+      padding: 6px 12px;
+      font-size: 13px;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: var(--border-hairline);
+      height: 68px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--color-ink-black);
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--color-notion-blue);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      line-height: 1.1;
+    }
+
+    .brand-subtitle {
+      font-size: 11px;
+      color: var(--color-stone);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Nav Search */
+    .nav-search {
+      flex: 1;
+      max-width: 440px;
+      position: relative;
+    }
+
+    .nav-search input {
+      width: 100%;
+      height: 40px;
+      background: var(--color-paper-warmth);
+      border: var(--border-hairline);
+      border-radius: var(--radius-buttons);
+      padding: 8px 14px 8px 38px;
+      font-size: 14px;
+      font-family: inherit;
+      color: var(--color-ink-black);
+      outline: none;
+      transition: all 0.18s ease;
+    }
+
+    .nav-search input:focus {
+      background: #ffffff;
+      border-color: var(--color-notion-blue);
+      box-shadow: 0 0 0 3px rgba(0, 117, 222, 0.12);
+    }
+
+    .nav-search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-stone);
+      pointer-events: none;
+      display: flex;
+    }
+
+    /* Nav Actions */
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-link {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.65);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--color-ink-black);
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+
+    .nav-link.active {
+      color: var(--color-notion-blue);
+      background-color: var(--color-sky-tint);
+    }
+
+    .cart-btn {
+      position: relative;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(0, 0, 0, 0.85);
+      transition: background-color 0.15s ease;
+    }
+
+    .cart-btn:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .cart-badge {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      background-color: var(--color-coral);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      width: 18px;
+      height: 18px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .user-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px 4px 6px;
+      background: var(--color-paper-warmth);
+      border: var(--border-hairline);
+      border-radius: var(--radius-pills);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .user-avatar {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #ffdb8e;
+      color: #724b00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 40px 0 32px;
+    }
+
+    .hero-banner {
+      background: var(--color-pure-white);
+      border: var(--border-hairline);
+      border-radius: var(--radius-cards);
+      padding: 36px 40px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero-headline {
+      font-size: 40px;
+      line-height: 1.15;
+      letter-spacing: -1.2px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .hero-pill {
+      background-color: #ffdeb3;
+      color: #633700;
+      border-radius: var(--radius-pills);
+      padding: 2px 14px;
+      display: inline-block;
+    }
+
+    .hero-desc {
+      margin-bottom: 24px;
+      max-width: 540px;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--color-graphite);
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--color-notion-blue);
+    }
+
+    .hero-side-card {
+      background: #faf9f8;
+      border: var(--border-hairline);
+      border-radius: var(--radius-cards);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .partner-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      background: var(--color-sky-tint);
+      color: var(--color-notion-blue);
+      border-radius: var(--radius-pills);
+      padding: 4px 10px;
+      width: fit-content;
+    }
+
+    .hero-side-title {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      line-height: 1.35;
+    }
+
+    .hero-side-text {
+      font-size: 13px;
+      color: var(--color-stone);
+      line-height: 1.5;
+    }
+
+    /* Main Content Layout */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 32px;
+      margin-bottom: 80px;
+      align-items: start;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: var(--color-pure-white);
+      border: var(--border-hairline);
+      border-radius: var(--radius-cards);
+      padding: 20px;
+      position: sticky;
+      top: 88px;
+    }
+
+    .sidebar-section {
+      margin-bottom: 24px;
+    }
+    .sidebar-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .sidebar-title {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--color-stone);
+      margin-bottom: 12px;
+    }
+
+    .category-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .category-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 12px;
+      background: transparent;
+      border: none;
+      border-radius: var(--radius-buttons);
+      font-size: 14px;
+      font-family: inherit;
+      color: rgba(0, 0, 0, 0.75);
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.15s ease;
+    }
+
+    .category-btn:hover {
+      background-color: var(--color-paper-warmth);
+      color: var(--color-ink-black);
+    }
+
+    .category-btn.active {
+      background-color: var(--color-sky-tint);
+      color: var(--color-notion-blue);
+      font-weight: 600;
+    }
+
+    .category-btn-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .category-count {
+      font-size: 12px;
+      color: var(--color-stone);
+      font-weight: 400;
+    }
+
+    .category-btn.active .category-count {
+      color: var(--color-notion-blue);
+      font-weight: 600;
+    }
+
+    /* Copyright Notice Box */
+    .notice-card {
+      background: #fbfbfb;
+      border: 1px dashed rgba(0, 0, 0, 0.12);
+      border-radius: 8px;
+      padding: 14px;
+      font-size: 12px;
+      color: var(--color-graphite);
+      line-height: 1.45;
+    }
+
+    .notice-card strong {
+      color: var(--color-ink-black);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    /* Content Area */
+    .content-area {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .catalog-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      background: var(--color-pure-white);
+      border: var(--border-hairline);
+      border-radius: var(--radius-cards);
+      padding: 16px 20px;
+    }
+
+    .catalog-header-left {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .catalog-title {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .catalog-count-badge {
+      font-size: 13px;
+      color: var(--color-stone);
+    }
+
+    .catalog-header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sort-label {
+      font-size: 13px;
+      color: var(--color-stone);
+    }
+
+    .sort-select {
+      background: var(--color-paper-warmth);
+      border: var(--border-hairline);
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-family: inherit;
+      color: var(--color-ink-black);
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* Book Cards Grid */
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .book-card {
+      background: var(--color-pure-white);
+      border: var(--border-hairline);
+      border-radius: var(--radius-cards);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.18s ease, border-color 0.18s ease;
+      position: relative;
+    }
+
+    .book-card:hover {
+      border-color: rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .book-cover {
+      width: 100%;
+      height: 220px;
+      border-radius: 8px;
+      margin-bottom: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      border: var(--border-hairline-subtle);
+      padding: 16px;
+      text-align: center;
+    }
+
+    .book-cover-title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.25;
+      margin-bottom: 8px;
+      z-index: 2;
+    }
+
+    .book-cover-author {
+      font-size: 12px;
+      opacity: 0.85;
+      z-index: 2;
+    }
+
+    .book-cover-icon {
+      margin-top: 12px;
+      opacity: 0.6;
+      z-index: 2;
+    }
+
+    .book-format-tag {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(4px);
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--color-charcoal);
+      padding: 2px 8px;
+      border-radius: var(--radius-pills);
+      border: var(--border-hairline);
+      z-index: 3;
+    }
+
+    .book-category-tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.65);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: var(--radius-pills);
+      z-index: 3;
+    }
+
+    .book-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .book-title {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 4px;
+      letter-spacing: -0.2px;
+      color: var(--color-ink-black);
+    }
+
+    .book-meta {
+      font-size: 12px;
+      color: var(--color-stone);
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .book-price-row {
+      margin-top: auto;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding-top: 10px;
+      border-top: var(--border-hairline-subtle);
+      margin-bottom: 12px;
+    }
+
+    .book-price {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--color-ink-black);
+      letter-spacing: -0.3px;
+    }
+
+    .book-pages {
+      font-size: 11px;
+      color: var(--color-stone);
+    }
+
+    .book-card-actions {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+    }
+
+    .empty-state {
+      background: var(--color-pure-white);
+      border: var(--border-hairline);
+      border-radius: var(--radius-cards);
+      padding: 60px 20px;
+      text-align: center;
+      grid-column: 1 / -1;
+    }
+
+    .empty-state-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .empty-state-text {
+      color: var(--color-stone);
+      font-size: 14px;
+      max-width: 400px;
+      margin: 0 auto 20px;
+    }
+
+    /* Modal Styles */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(2px);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-box {
+      background: var(--color-pure-white);
+      border-radius: var(--radius-cards);
+      border: var(--border-hairline);
+      max-width: 760px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      transform: scale(0.96);
+      transition: transform 0.2s ease;
+      position: relative;
+    }
+
+    .modal-overlay.active .modal-box {
+      transform: scale(1);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: var(--color-paper-warmth);
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--color-stone);
+      transition: all 0.15s ease;
+      z-index: 5;
+    }
+
+    .modal-close-btn:hover {
+      background: #e5e4e2;
+      color: var(--color-ink-black);
+    }
+
+    .modal-content {
+      padding: 32px;
+    }
+
+    .modal-breadcrumb {
+      font-size: 12px;
+      color: var(--color-stone);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 32px;
+    }
+
+    .detail-cover {
+      width: 100%;
+      height: 310px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      border: var(--border-hairline-subtle);
+    }
+
+    .detail-title {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .detail-publisher {
+      font-size: 13px;
+      color: var(--color-stone);
+      margin-bottom: 16px;
+    }
+
+    .detail-price {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--color-ink-black);
+      margin-bottom: 16px;
+    }
+
+    .detail-spec-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .detail-spec-chip {
+      background: var(--color-paper-warmth);
+      border: var(--border-hairline);
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--color-graphite);
+    }
+
+    .protection-banner {
+      background: var(--color-sky-tint);
+      border-left: 3px solid var(--color-notion-blue);
+      border-radius: 0 6px 6px 0;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: #004b91;
+      margin-bottom: 24px;
+      line-height: 1.45;
+    }
+
+    .detail-actions {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .detail-section-title {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-stone);
+      margin-bottom: 8px;
+    }
+
+    .detail-synopsis {
+      font-size: 14px;
+      color: var(--color-graphite);
+      line-height: 1.6;
+    }
+
+    /* Cart Drawer */
+    .cart-drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(2px);
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .cart-drawer-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: 420px;
+      background: var(--color-pure-white);
+      z-index: 101;
+      border-left: var(--border-hairline);
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .cart-drawer-overlay.active .cart-drawer {
+      transform: translateX(0);
+    }
+
+    .cart-drawer-header {
+      padding: 20px 24px;
+      border-bottom: var(--border-hairline);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cart-drawer-title {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .cart-items-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .cart-item {
+      display: grid;
+      grid-template-columns: 56px 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding-bottom: 16px;
+      border-bottom: var(--border-hairline-subtle);
+    }
+
+    .cart-item-thumb {
+      width: 56px;
+      height: 72px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      text-align: center;
+      font-weight: 700;
+      padding: 4px;
+    }
+
+    .cart-item-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cart-item-title {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.25;
+      margin-bottom: 2px;
+    }
+
+    .cart-item-pub {
+      font-size: 11px;
+      color: var(--color-stone);
+      margin-bottom: 4px;
+    }
+
+    .cart-item-price {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-notion-blue);
+    }
+
+    .cart-item-del {
+      background: transparent;
+      border: none;
+      color: var(--color-stone);
+      cursor: pointer;
+      padding: 6px;
+      border-radius: 4px;
+      transition: all 0.15s ease;
+    }
+
+    .cart-item-del:hover {
+      color: var(--color-coral);
+      background: #ffeeea;
+    }
+
+    .cart-drawer-footer {
+      padding: 20px 24px;
+      border-top: var(--border-hairline);
+      background: var(--color-paper-warmth);
+    }
+
+    .cart-summary-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: var(--color-graphite);
+      margin-bottom: 8px;
+    }
+
+    .cart-summary-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-ink-black);
+      margin-bottom: 16px;
+      padding-top: 8px;
+      border-top: var(--border-hairline);
+    }
+
+    .cart-info-notice {
+      font-size: 11px;
+      color: var(--color-stone);
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--color-charcoal);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: auto;
+      background: var(--color-pure-white);
+      border-top: var(--border-hairline);
+      padding: 48px 0 32px;
+      font-size: 13px;
+      color: var(--color-stone);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 36px;
+    }
+
+    .footer-heading {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--color-ink-black);
+      margin-bottom: 14px;
+    }
+
+    .footer-address {
+      line-height: 1.6;
+      color: var(--color-graphite);
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-links a {
+      color: var(--color-graphite);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-notion-blue);
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      border-top: var(--border-hairline-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero-banner {
+        grid-template-columns: 1fr;
+        padding: 24px;
+      }
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        position: static;
+      }
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+      .detail-cover {
+        height: 220px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-search {
+        display: none;
+      }
+      .hero-headline {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Top Navigation -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="nav-brand">
+        <div class="brand-mark">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
+            <path d="M6 6h10"/>
+            <path d="M6 10h10"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">IKAPI JABAR</span>
+          <span class="brand-subtitle">Online Bookstore</span>
+        </div>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="nav-search">
+        <span class="nav-search-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.3-4.3"/>
+          </svg>
+        </span>
+        <input type="text" id="searchInput" placeholder="Cari judul buku atau penulis..." autocomplete="off">
+      </div>
+
+      <!-- Action Nav Items -->
+      <div class="nav-actions">
+        <a href="#" class="nav-link active">Katalog</a>
+        <a href="#" class="nav-link" onclick="showToast('Fitur Perpustakaan Saya dapat diakses setelah login'); return false;">Perpustakaan Saya</a>
+        
+        <!-- Cart Trigger Button -->
+        <button class="cart-btn" id="openCartBtn" title="Keranjang Belanja">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1"/>
+            <circle cx="19" cy="21" r="1"/>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+          </svg>
+          <span class="cart-badge" id="cartBadgeCount">0</span>
+        </button>
+
+        <!-- User Profile Pill -->
+        <div class="user-pill" onclick="showToast('Akun Pengguna: Rina (Pembeli Aktif)')">
+          <div class="user-avatar">R</div>
+          <span>Rina ⌵</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-banner">
+        <div>
+          <h1 class="hero-headline">
+            Temukan Buku, Perluas <span class="hero-pill">Wawasan</span>
+          </h1>
+          <p class="editorial-subhead hero-desc">
+            Beli dan baca buku digital resmi dari jaringan penerbit anggota IKAPI Jawa Barat. Akses baca instan langsung di peramban secara legal dan aman.
+          </p>
+          <div class="hero-meta">
+            <div class="hero-badge-item">
+              <span class="hero-badge-dot"></span>
+              <span>100% E-Book Resmi Penerbit</span>
+            </div>
+            <div class="hero-badge-item">
+              <span class="hero-badge-dot" style="background: var(--color-marigold);"></span>
+              <span>Pembayaran Otomatis Midtrans</span>
+            </div>
+            <div class="hero-badge-item">
+              <span class="hero-badge-dot" style="background: var(--color-coral);"></span>
+              <span>Perlindungan Hak Cipta Karya</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Side Feature Card -->
+        <div class="hero-side-card">
+          <div class="partner-pill">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+            Inisiatif TTG Telkom University & IKAPI Jabar
+          </div>
+          <h3 class="hero-side-title">Buku dari Penerbit Lokal untuk Masa Depan Literasi Jawa Barat</h3>
+          <p class="hero-side-text">
+            Platform bersama terintegrasi untuk katalog, transaksi pembayaran otomatis, pembaca buku terproteksi, serta transparansi royalti penerbit.
+          </p>
+          <div style="display: flex; gap: 8px;">
+            <a href="#katalog" class="btn btn-primary btn-sm">Lihat Koleksi</a>
+            <button class="btn btn-outline btn-sm" onclick="showAboutModal()">Tentang Program</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Layout: Sidebar Filter & Book Grid -->
+    <div class="main-layout" id="katalog">
+      <!-- Left Sidebar: Filters -->
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">Kategori Buku</h3>
+          <ul class="category-list">
+            <li>
+              <button class="category-btn active" data-category="all">
+                <span class="category-btn-left">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect width="7" height="7" x="3" y="3" rx="1"/>
+                    <rect width="7" height="7" x="14" y="3" rx="1"/>
+                    <rect width="7" height="7" x="14" y="14" rx="1"/>
+                    <rect width="7" height="7" x="3" y="14" rx="1"/>
+                  </svg>
+                  Semua Buku
+                </span>
+                <span class="category-count" id="countAll">8</span>
+              </button>
+            </li>
+            <li>
+              <button class="category-btn" data-category="Teknologi">
+                <span class="category-btn-left">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect width="20" height="14" x="2" y="3" rx="2"/>
+                    <line x1="8" x2="16" y1="21" y2="21"/>
+                    <line x1="12" x2="12" y1="17" y2="21"/>
+                  </svg>
+                  Teknologi
+                </span>
+                <span class="category-count" id="countTeknologi">2</span>
+              </button>
+            </li>
+            <li>
+              <button class="category-btn" data-category="Pendidikan">
+                <span class="category-btn-left">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                  </svg>
+                  Pendidikan
+                </span>
+                <span class="category-count" id="countPendidikan">2</span>
+              </button>
+            </li>
+            <li>
+              <button class="category-btn" data-category="Bisnis">
+                <span class="category-btn-left">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect width="20" height="14" x="2" y="7" rx="2" ry="2"/>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                  </svg>
+                  Bisnis
+                </span>
+                <span class="category-count" id="countBisnis">2</span>
+              </button>
+            </li>
+            <li>
+              <button class="category-btn" data-category="Sastra">
+                <span class="category-btn-left">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
+                  </svg>
+                  Sastra
+                </span>
+                <span class="category-count" id="countSastra">1</span>
+              </button>
+            </li>
+            <li>
+              <button class="category-btn" data-category="Budaya">
+                <span class="category-btn-left">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                    <path d="M2 12h20"/>
+                  </svg>
+                  Budaya
+                </span>
+                <span class="category-count" id="countBudaya">1</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Security & Content Protection Notice Box -->
+        <div class="sidebar-section">
+          <div class="notice-card">
+            <strong>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+              Perlindungan Konten
+            </strong>
+            Buku digital disajikan langsung melalui fasilitas web reader terenkripsi tanpa fitur unduh berkas asli guna melindungi hak cipta penulis & penerbit.
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right Area: Books Grid & Sorting -->
+      <section class="content-area">
+        <!-- Header Toolbar -->
+        <div class="catalog-header">
+          <div class="catalog-header-left">
+            <h2 class="catalog-title" id="activeCategoryTitle">Katalog Buku</h2>
+            <span class="catalog-count-badge" id="resultCountBadge">Menampilkan 8 buku</span>
+          </div>
+          <div class="catalog-header-right">
+            <span class="sort-label">Urutkan:</span>
+            <select class="sort-select" id="sortSelect">
+              <option value="latest">Terbaru</option>
+              <option value="price-asc">Harga: Rendah ke Tinggi</option>
+              <option value="price-desc">Harga: Tinggi ke Rendah</option>
+              <option value="title-asc">Judul A - Z</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Grid Cards -->
+        <div class="books-grid" id="booksGrid">
+          <!-- Dynamically populated via JavaScript -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Book Detail Modal (Spec Gambar 2.1-02) -->
+  <div class="modal-overlay" id="detailModal">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="closeDetailModal" title="Tutup">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" x2="6" y1="6" y2="18"/>
+          <line x1="6" x2="18" y1="6" y2="18"/>
+        </svg>
+      </button>
+
+      <div class="modal-content" id="modalDetailContent">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer (Spec Gambar 2.1-03) -->
+  <div class="cart-drawer-overlay" id="cartOverlay">
+    <div class="cart-drawer">
+      <div class="cart-drawer-header">
+        <h3 class="cart-drawer-title">Keranjang Belanja</h3>
+        <button class="cart-item-del" id="closeCartBtn" title="Tutup">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" x2="6" y1="6" y2="18"/>
+            <line x1="6" x2="18" y1="6" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="cart-items-list" id="cartItemsContainer">
+        <!-- Rendered items -->
+      </div>
+
+      <div class="cart-drawer-footer">
+        <div class="cart-summary-row">
+          <span>Subtotal (<span id="cartTotalItems">0</span> buku)</span>
+          <span id="cartSubtotal">Rp0</span>
+        </div>
+        <div class="cart-summary-total">
+          <span>Total Pembayaran</span>
+          <span id="cartGrandTotal">Rp0</span>
+        </div>
+        <button class="btn btn-primary" style="width: 100%;" id="checkoutBtn">
+          Lanjut ke Pembayaran Midtrans
+        </button>
+        <p class="cart-info-notice">
+          📖 Buku otomatis terbuka di Perpustakaan Saya segera setelah pembayaran terverifikasi.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toastNotification">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5">
+      <polyline points="20 6 9 17 4 12"/>
+    </svg>
+    <span id="toastMessage">Pemberitahuan</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4 class="footer-heading">IKAPI Jawa Barat — Online Bookstore</h4>
+          <p class="footer-address">
+            Sekretariat Pengurus Daerah IKAPI Jawa Barat<br>
+            Jl. Ibu Inggit Garnasih No. 30-C, Kel. Ciateul, Kec. Regol<br>
+            Kota Bandung, Jawa Barat 40252<br>
+            Email: sekretariatikapijabar@gmail.com
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Pengabdian Kepada Masyarakat</h4>
+          <p class="footer-address">
+            Program Teknologi Tepat Guna (TTG) 2026<br>
+            Kelompok Keahlian Applied Information Technology & Multimedia (KK ITEM)<br>
+            Fakultas Ilmu Terapan, Universitas Telkom
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Akses Cepat</h4>
+          <ul class="footer-links">
+            <li><a href="#katalog">Katalog Lengkap</a></li>
+            <li><a href="#" onclick="showToast('Portal Penerbit IKAPI Jabar'); return false;">Portal Penerbit</a></li>
+            <li><a href="#" onclick="showToast('Ketentuan Layanan & Kebijakan Hak Cipta'); return false;">Kebijakan Konten & Hak Cipta</a></li>
+            <li><a href="#" onclick="showToast('Bantuan Teknis & FAQ'); return false;">Bantuan & Kontak</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 IKAPI Jawa Barat & Tim Pengabdian Masyarakat Universitas Telkom. Seluruh hak cipta dilindungi.</span>
+        <span>Platform E-Book Resmi Terintegrasi</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Master Book Data according to Spec PDF (Gambar 2.1 & Context)
+    const booksData = [
+      {
+        id: 1,
+        title: "Dasar Pemrograman Web",
+        author: "Raka Pratama",
+        publisher: "Pustaka Cendekia",
+        category: "Teknologi",
+        price: 75000,
+        pages: 180,
+        language: "Bahasa Indonesia",
+        format: "Format PDF",
+        coverBg: "#1d4ed8",
+        textColor: "#ffffff",
+        accentColor: "#93c5fd",
+        codeSnippet: "</>",
+        synopsis: "Buku ini membahas konsep dasar pemrograman web dengan pendekatan praktik dan mudah dipahami. Cocok untuk pemula yang ingin mempelajari HTML, CSS, dan JavaScript secara bertahap melalui contoh nyata dan latihan sederhana.",
+        isPopular: true,
+        dateAdded: "2026-09-01"
+      },
+      {
+        id: 2,
+        title: "Literasi Digital: Cerdas di Dunia Online",
+        author: "Siti Rahmawati",
+        publisher: "Pustaka Nusantara",
+        category: "Pendidikan",
+        price: 60000,
+        pages: 210,
+        language: "Bahasa Indonesia",
+        format: "Format PDF",
+        coverBg: "#e0f2fe",
+        textColor: "#0369a1",
+        accentColor: "#38bdf8",
+        codeSnippet: "🌐",
+        synopsis: "Panduan komprehensif untuk memahami dinamika dunia digital, keamanan data pribadi, penyaringan informasi anti-hoaks, serta pemanfaatan teknologi internet untuk produktivitas generasi muda.",
+        isPopular: true,
+        dateAdded: "2026-09-05"
+      },
+      {
+        id: 3,
+        title: "Manajemen Usaha & Bisnis Berkelanjutan",
+        author: "Andi Hermawan",
+        publisher: "Penerbit Maju Bersama",
+        category: "Bisnis",
+        price: 85000,
+        pages: 245,
+        language: "Bahasa Indonesia",
+        format: "Format PDF",
+        coverBg: "#fef3c7",
+        textColor: "#92400e",
+        accentColor: "#f59e0b",
+        codeSnippet: "📈",
+        synopsis: "Kupas tuntas strategi mendirikan dan mengelola UMKM di era digital. Membahas manajemen keuangan teratur, segmentasi pasar modern, efisiensi operasional, hingga ekspansi kemitraan strategis.",
+        isPopular: false,
+        dateAdded: "2026-08-20"
+      },
+      {
+        id: 4,
+        title: "Pesona Budaya Sunda & Kearifan Lokal",
+        author: "Tati Suryani",
+        publisher: "Sunda Pustaka",
+        category: "Budaya",
+        price: 55000,
+        pages: 160,
+        language: "Bahasa Indonesia",
+        format: "Format PDF",
+        coverBg: "#dcfce7",
+        textColor: "#166534",
+        accentColor: "#22c55e",
+        codeSnippet: "🎋",
+        synopsis: "Kumpulan tulisan mendalam tentang khazanah budaya, tradisi lisan, filosofi hidup 'Silih Asih, Silih Asah, Silih Asuh', dan relevansi nilai luhur Parahyangan di era transformasi zaman.",
+        isPopular: true,
+        dateAdded: "2026-08-15"
+      },
+      {
+        id: 5,
+        title: "Algoritma & Pemecahan Masalah Komputasi",
+        author: "Ir. Hendra Saputra",
+        publisher: "Pustaka Cendekia",
+        category: "Teknologi",
+        price: 80000,
+        pages: 290,
+        language: "Bahasa Indonesia",
+        format: "Format PDF",
+        coverBg: "#0f172a",
+        textColor: "#f8fafc",
+        accentColor: "#38bdf8",
+        codeSnippet: "{ }",
+        synopsis: "Buku rujukan esensial bagi mahasiswa dan praktisi software yang ingin memperkuat pondasi pemikiran logika pemrograman, struktur data dasar, dan analisis kompleksitas komputasi.",
+        isPopular: false,
+        dateAdded: "2026-09-06"
+      },
+      {
+        id: 6,
+        title: "Strategi Transformasi Digital UMKM Kreatif",
+        author: "Devina & Fadli",
+        publisher: "Penerbit Maju Bersama",
+        category: "Bisnis",
+        price: 65000,
+        pages: 195,
+        language: "Bahasa Indonesia",
+        format: "Format PDF",
+        coverBg: "#fae8ff",
+        textColor: "#86198f",
+        accentColor: "#d946ef",
+        codeSnippet: "💡",
+        synopsis: "Langkah terukur bagi pelaku industri kreatif Jawa Barat untuk beralih ke ekosistem pemasaran daring, pemanfaatan payment gateway modern, dan otomatisasi administrasi penjualan.",
+        isPopular: false,
+        dateAdded: "2026-09-07"
+      },
+      {
+        id: 7,
+        title: "Antologi Puisi: Senja di Parahyangan",
+        author: "Asep Gunawan",
+        publisher: "Sunda Pustaka",
+        category: "Sastra",
+        price: 45000,
+        pages: 120,
+        language: "Bahasa Indonesia",
+        format: "Format PDF",
+        coverBg: "#ffe4e6",
+        textColor: "#9f1239",
+        accentColor: "#f43f5e",
+        codeSnippet: "✒️",
+        synopsis: "Rangkaian bait puisi penuh kehangatan yang merefleksikan keindahan lanskap pegunungan Jawa Barat, keakraban masyarakat pedesaan, serta perjalanan rasa manusia.",
+        isPopular: false,
+        dateAdded: "2026-07-28"
+      },
+      {
+        id: 8,
+        title: "Metode Pembelajaran Tepat Guna Abad 21",
+        author: "Dr. Inne Gartina & Tim",
+        publisher: "Pustaka Nusantara",
+        category: "Pendidikan",
+        price: 90000,
+        pages: 230,
+        language: "Bahasa Indonesia",
+        format: "Format PDF",
+        coverBg: "#ffedd5",
+        textColor: "#9a3412",
+        accentColor: "#ea580c",
+        codeSnippet: "🎓",
+        synopsis: "Kajian inovatif mengenai implementasi sistem informasi interaktif dan model pengajaran partisipatif dalam meningkatkan kapasitas literasi digital tenaga pendidik dan pelajar.",
+        isPopular: true,
+        dateAdded: "2026-09-02"
+      }
+    ];
+
+    // State
+    let currentCategory = 'all';
+    let searchQuery = '';
+    let sortMethod = 'latest';
+    let cart = [];
+
+    // DOM Elements
+    const booksGrid = document.getElementById('booksGrid');
+    const resultCountBadge = document.getElementById('resultCountBadge');
+    const activeCategoryTitle = document.getElementById('activeCategoryTitle');
+    const searchInput = document.getElementById('searchInput');
+    const sortSelect = document.getElementById('sortSelect');
+    const categoryButtons = document.querySelectorAll('.category-btn');
+
+    const detailModal = document.getElementById('detailModal');
+    const closeDetailModal = document.getElementById('closeDetailModal');
+    const modalDetailContent = document.getElementById('modalDetailContent');
+
+    const cartOverlay = document.getElementById('cartOverlay');
+    const openCartBtn = document.getElementById('openCartBtn');
+    const closeCartBtn = document.getElementById('closeCartBtn');
+    const cartBadgeCount = document.getElementById('cartBadgeCount');
+    const cartItemsContainer = document.getElementById('cartItemsContainer');
+    const cartSubtotal = document.getElementById('cartSubtotal');
+    const cartGrandTotal = document.getElementById('cartGrandTotal');
+    const cartTotalItems = document.getElementById('cartTotalItems');
+    const checkoutBtn = document.getElementById('checkoutBtn');
+
+    // Format currency to IDR
+    function formatRupiah(number) {
+      return new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        maximumFractionDigits: 0
+      }).format(number);
+    }
+
+    // Render Books Grid
+    function renderBooks() {
+      // Filter
+      let filtered = booksData.filter(book => {
+        const matchesCategory = currentCategory === 'all' || book.category === currentCategory;
+        const matchesSearch = book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                              book.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                              book.publisher.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesCategory && matchesSearch;
+      });
+
+      // Sort
+      filtered.sort((a, b) => {
+        if (sortMethod === 'price-asc') return a.price - b.price;
+        if (sortMethod === 'price-desc') return b.price - a.price;
+        if (sortMethod === 'title-asc') return a.title.localeCompare(b.title);
+        // Default: latest
+        return new Date(b.dateAdded) - new Date(a.dateAdded);
+      });
+
+      // Update counter
+      resultCountBadge.textContent = `Menampilkan ${filtered.length} buku`;
+      activeCategoryTitle.textContent = currentCategory === 'all' ? 'Katalog Buku' : `Katalog: ${currentCategory}`;
+
+      if (filtered.length === 0) {
+        booksGrid.innerHTML = `
+          <div class="empty-state">
+            <h3 class="empty-state-title">Buku tidak ditemukan</h3>
+            <p class="empty-state-text">Tidak ada buku yang sesuai dengan pencarian "${searchQuery}" pada kategori ini.</p>
+            <button class="btn btn-outline btn-sm" onclick="resetFilters()">Reset Filter & Pencarian</button>
+          </div>
+        `;
+        return;
+      }
+
+      booksGrid.innerHTML = filtered.map(book => {
+        const isInCart = cart.some(item => item.id === book.id);
+        return `
+          <article class="book-card">
+            <div class="book-cover" style="background-color: ${book.coverBg}; color: ${book.textColor};">
+              <span class="book-category-tag">${book.category}</span>
+              <span class="book-format-tag">PDF</span>
+              <div class="book-cover-title">${book.title}</div>
+              <div class="book-cover-author">${book.author}</div>
+              <div class="book-cover-icon" style="font-size: 26px;">${book.codeSnippet}</div>
+            </div>
+
+            <div class="book-info">
+              <h3 class="book-title" title="${book.title}">${book.title}</h3>
+              <p class="book-meta">${book.author} • ${book.publisher}</p>
+              
+              <div class="book-price-row">
+                <span class="book-price">${formatRupiah(book.price)}</span>
+                <span class="book-pages">${book.pages} hlm</span>
+              </div>
+
+              <div class="book-card-actions">
+                <button class="btn btn-ghost btn-sm" onclick="openBookDetail(${book.id})">
+                  Lihat Detail
+                </button>
+                <button class="btn ${isInCart ? 'btn-outline' : 'btn-primary'} btn-sm" onclick="toggleCart(${book.id})">
+                  ${isInCart ? '✓ Keranjang' : '+ Beli'}
+                </button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    // Reset Filters
+    window.resetFilters = function() {
+      currentCategory = 'all';
+      searchQuery = '';
+      searchInput.value = '';
+      categoryButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.category === 'all');
+      });
+      renderBooks();
+    };
+
+    // Open Book Detail Modal (Spec Gambar 2.1-02)
+    window.openBookDetail = function(bookId) {
+      const book = booksData.find(b => b.id === bookId);
+      if (!book) return;
+
+      const isInCart = cart.some(item => item.id === book.id);
+
+      modalDetailContent.innerHTML = `
+        <div class="modal-breadcrumb">
+          <span>Katalog</span>
+          <span>/</span>
+          <span>${book.category}</span>
+          <span>/</span>
+          <span style="color: var(--color-ink-black); font-weight: 500;">${book.title}</span>
+        </div>
+
+        <div class="detail-grid">
+          <div class="detail-cover" style="background-color: ${book.coverBg}; color: ${book.textColor};">
+            <span style="font-size: 40px; margin-bottom: 12px;">${book.codeSnippet}</span>
+            <h4 style="font-size: 18px; font-weight: 700; line-height: 1.3; margin-bottom: 8px;">${book.title}</h4>
+            <p style="font-size: 13px; opacity: 0.9;">${book.author}</p>
+            <p style="font-size: 11px; opacity: 0.75; margin-top: 4px;">${book.publisher}</p>
+          </div>
+
+          <div>
+            <h2 class="detail-title">${book.title}</h2>
+            <p class="detail-publisher">Penerbit: <strong>${book.publisher}</strong> • Penulis: <strong>${book.author}</strong></p>
+            <div class="detail-price">${formatRupiah(book.price)}</div>
+
+            <div class="detail-spec-row">
+              <div class="detail-spec-chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                </svg>
+                ${book.format}
+              </div>
+              <div class="detail-spec-chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
+                </svg>
+                ${book.pages} halaman
+              </div>
+              <div class="detail-spec-chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="2" x2="22" y1="12" y2="12"/>
+                </svg>
+                ${book.language}
+              </div>
+            </div>
+
+            <!-- Content Protection alert according to PDF spec -->
+            <div class="protection-banner">
+              <strong>🔒 Baca melalui website setelah pembelian</strong><br>
+              Hak akses langsung aktif pada akun Anda. Demi menjaga hak cipta karya, berkas tidak disediakan untuk diunduh secara offline.
+            </div>
+
+            <div class="detail-actions">
+              <button class="btn ${isInCart ? 'btn-outline' : 'btn-primary'}" onclick="toggleCart(${book.id}); openBookDetail(${book.id});">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="8" cy="21" r="1"/>
+                  <circle cx="19" cy="21" r="1"/>
+                  <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+                </svg>
+                ${isInCart ? 'Sudah di Keranjang' : 'Tambah ke Keranjang'}
+              </button>
+              <button class="btn btn-ghost" onclick="buyDirectly(${book.id})">
+                Beli Sekarang
+              </button>
+            </div>
+
+            <div>
+              <h4 class="detail-section-title">Tentang Buku</h4>
+              <p class="detail-synopsis">${book.synopsis}</p>
+            </div>
+          </div>
+        </div>
+      `;
+
+      detailModal.classList.add('active');
+    };
+
+    // Close Modal
+    closeDetailModal.addEventListener('click', () => {
+      detailModal.classList.remove('active');
+    });
+
+    detailModal.addEventListener('click', (e) => {
+      if (e.target === detailModal) detailModal.classList.remove('active');
+    });
+
+    // Cart Interactions (Spec Gambar 2.1-03)
+    window.toggleCart = function(bookId) {
+      const book = booksData.find(b => b.id === bookId);
+      if (!book) return;
+
+      const index = cart.findIndex(item => item.id === bookId);
+      if (index > -1) {
+        cart.splice(index, 1);
+        showToast(`"${book.title}" dikeluarkan dari keranjang`);
+      } else {
+        cart.push(book);
+        showToast(`"${book.title}" berhasil ditambahkan ke keranjang`);
+      }
+
+      updateCartUI();
+      renderBooks();
+    };
+
+    window.removeFromCart = function(bookId) {
+      const book = booksData.find(b => b.id === bookId);
+      cart = cart.filter(item => item.id !== bookId);
+      if (book) showToast(`"${book.title}" dihapus`);
+      updateCartUI();
+      renderBooks();
+    };
+
+    window.buyDirectly = function(bookId) {
+      const book = booksData.find(b => b.id === bookId);
+      if (!book) return;
+
+      if (!cart.some(item => item.id === bookId)) {
+        cart.push(book);
+      }
+      detailModal.classList.remove('active');
+      updateCartUI();
+      cartOverlay.classList.add('active');
+      renderBooks();
+    };
+
+    function updateCartUI() {
+      // Badge
+      cartBadgeCount.textContent = cart.length;
+      cartTotalItems.textContent = cart.length;
+
+      // Calculate total
+      const total = cart.reduce((sum, item) => sum + item.price, 0);
+      cartSubtotal.textContent = formatRupiah(total);
+      cartGrandTotal.textContent = formatRupiah(total);
+
+      // Render cart items
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = `
+          <div style="text-align: center; padding: 40px 10px; color: var(--color-stone);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom: 8px;">
+              <circle cx="8" cy="21" r="1"/>
+              <circle cx="19" cy="21" r="1"/>
+              <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+            </svg>
+            <p style="font-size: 14px;">Keranjang belanja Anda masih kosong</p>
+          </div>
+        `;
+        checkoutBtn.disabled = true;
+        checkoutBtn.style.opacity = '0.5';
+        checkoutBtn.style.cursor = 'not-allowed';
+      } else {
+        checkoutBtn.disabled = false;
+        checkoutBtn.style.opacity = '1';
+        checkoutBtn.style.cursor = 'pointer';
+
+        cartItemsContainer.innerHTML = cart.map(item => `
+          <div class="cart-item">
+            <div class="cart-item-thumb" style="background-color: ${item.coverBg}; color: ${item.textColor};">
+              ${item.codeSnippet}
+            </div>
+            <div class="cart-item-details">
+              <span class="cart-item-title">${item.title}</span>
+              <span class="cart-item-pub">${item.publisher}</span>
+              <span class="cart-item-price">${formatRupiah(item.price)}</span>
+            </div>
+            <button class="cart-item-del" onclick="removeFromCart(${item.id})" title="Hapus buku">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="3 6 5 6 21 6"/>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+              </svg>
+            </button>
+          </div>
+        `).join('');
+      }
+    }
+
+    // Open & Close Cart Drawer
+    openCartBtn.addEventListener('click', () => cartOverlay.classList.add('active'));
+    closeCartBtn.addEventListener('click', () => cartOverlay.classList.remove('active'));
+    cartOverlay.addEventListener('click', (e) => {
+      if (e.target === cartOverlay) cartOverlay.classList.remove('active');
+    });
+
+    // Checkout Simulation
+    checkoutBtn.addEventListener('click', () => {
+      if (cart.length === 0) return;
+      alert(`Simulasi Pembayaran Midtrans:\nTotal: ${cartGrandTotal.textContent}\nJumlah Item: ${cart.length} e-book\n\nSetelah pembayaran berhasil diverifikasi Midtrans, hak akses baca akan langsung aktif di Perpustakaan Saya.`);
+      cart = [];
+      updateCartUI();
+      renderBooks();
+      cartOverlay.classList.remove('active');
+      showToast('Pembayaran berhasil! Buku ditambahkan ke Perpustakaan Saya');
+    });
+
+    // Search & Filter Listeners
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim();
+      renderBooks();
+    });
+
+    sortSelect.addEventListener('change', (e) => {
+      sortMethod = e.target.value;
+      renderBooks();
+    });
+
+    categoryButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        categoryButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentCategory = btn.dataset.category;
+        renderBooks();
+      });
+    });
+
+    // Toast Notification Utility
+    window.showToast = function(msg) {
+      const toast = document.getElementById('toastNotification');
+      const toastMsg = document.getElementById('toastMessage');
+      toastMsg.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    };
+
+    // About Program Modal Dialog
+    window.showAboutModal = function() {
+      alert("Inisiatif Kolaborasi Pengabdian kepada Masyarakat 2026:\n\nPengembangan Aplikasi Online Bookstore Berbasis Web untuk IKAPI Jawa Barat oleh Kelompok Keahlian Applied Information Technology & Multimedia (KK ITEM), Fakultas Ilmu Terapan, Universitas Telkom.");
+    };
+
+    // Initial Execution
+    updateCartUI();
+    renderBooks();
+  </script>
+</body>
+</html>
