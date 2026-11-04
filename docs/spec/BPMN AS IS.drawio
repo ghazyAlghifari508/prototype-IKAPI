@@ -1,0 +1,336 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Halaman-1" id="W5dDkWWAnQuW3jAJ7-fN">
+    <mxGraphModel grid="1" page="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-1" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" value="Pembeli" vertex="1">
+          <mxGeometry height="200" width="2940" x="120" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-84" edge="1" parent="eqw_3bnSFbbGgOIXySlG-1" source="eqw_3bnSFbbGgOIXySlG-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="eqw_3bnSFbbGgOIXySlG-67" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-59" parent="eqw_3bnSFbbGgOIXySlG-1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Start" vertex="1">
+          <mxGeometry height="40" width="40" x="50" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-85" edge="1" parent="eqw_3bnSFbbGgOIXySlG-1" source="eqw_3bnSFbbGgOIXySlG-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="eqw_3bnSFbbGgOIXySlG-68" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-67" parent="eqw_3bnSFbbGgOIXySlG-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Mencari buku&lt;/span&gt; " vertex="1">
+          <mxGeometry height="60" width="120" x="130" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-86" edge="1" parent="eqw_3bnSFbbGgOIXySlG-1" source="eqw_3bnSFbbGgOIXySlG-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-69">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-68" parent="eqw_3bnSFbbGgOIXySlG-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Menemukan penerbit&lt;/span&gt; " vertex="1">
+          <mxGeometry height="60" width="120" x="280" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-87" edge="1" parent="eqw_3bnSFbbGgOIXySlG-1" source="eqw_3bnSFbbGgOIXySlG-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-69" parent="eqw_3bnSFbbGgOIXySlG-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Mengakses kanal penjualan penerbit&lt;/span&gt; " vertex="1">
+          <mxGeometry height="60" width="120" x="420" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-70" parent="eqw_3bnSFbbGgOIXySlG-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;&amp;nbsp;memesan buku&amp;nbsp;&lt;/span&gt; " vertex="1">
+          <mxGeometry height="60" width="120" x="580" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-96" edge="1" parent="eqw_3bnSFbbGgOIXySlG-1" source="eqw_3bnSFbbGgOIXySlG-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="eqw_3bnSFbbGgOIXySlG-95">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-93" parent="eqw_3bnSFbbGgOIXySlG-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Melakukan transfer pembayaran&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="930" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-95" parent="eqw_3bnSFbbGgOIXySlG-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Mengirim Bukti pembayaran&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="1100" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-100" edge="1" parent="eqw_3bnSFbbGgOIXySlG-1" source="eqw_3bnSFbbGgOIXySlG-98" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-93">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-98" parent="eqw_3bnSFbbGgOIXySlG-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Menerima informasi harga dan pembayaran&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="140" x="755" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-109" parent="eqw_3bnSFbbGgOIXySlG-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Mengirim bukti pembayaran Ulang&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="1965" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-119" edge="1" parent="eqw_3bnSFbbGgOIXySlG-1" source="eqw_3bnSFbbGgOIXySlG-115" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="eqw_3bnSFbbGgOIXySlG-118" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-115" parent="eqw_3bnSFbbGgOIXySlG-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Menerima akses e-book&lt;/span&gt;" vertex="1">
+          <mxGeometry height="57.5" width="210" x="2360" y="82.5" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-121" edge="1" parent="eqw_3bnSFbbGgOIXySlG-1" source="eqw_3bnSFbbGgOIXySlG-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="eqw_3bnSFbbGgOIXySlG-120" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-118" parent="eqw_3bnSFbbGgOIXySlG-1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Membuka dan membaca e-book&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="160" x="2630" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-120" parent="eqw_3bnSFbbGgOIXySlG-1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;End&lt;/span&gt;" vertex="1">
+          <mxGeometry height="59" width="59" x="2860" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-2" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=23;" value="Kanal Penjualan Penerbit" vertex="1">
+          <mxGeometry height="250" width="2940" x="120" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-90" edge="1" parent="eqw_3bnSFbbGgOIXySlG-2" source="eqw_3bnSFbbGgOIXySlG-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-71" parent="eqw_3bnSFbbGgOIXySlG-2" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Menerima permintaan pembelian&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="580" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-72" parent="eqw_3bnSFbbGgOIXySlG-2" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Memberikan informasi harga dan pembayaran&lt;/span&gt;" vertex="1">
+          <mxGeometry height="75" width="130" x="760" y="87.5" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-92" edge="1" parent="eqw_3bnSFbbGgOIXySlG-2" source="eqw_3bnSFbbGgOIXySlG-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="eqw_3bnSFbbGgOIXySlG-74">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-73" parent="eqw_3bnSFbbGgOIXySlG-2" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Menerima bukti pembayaran&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="1100" y="102.5" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-74" parent="eqw_3bnSFbbGgOIXySlG-2" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Meneruskan / menyampaikan bukti pembayaran kepada penerbit&lt;/span&gt; " vertex="1">
+          <mxGeometry height="75" width="160" x="1310" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;BPMN as is membeli buku&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="250" x="110" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-82" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=23;" value="Penerbit" vertex="1">
+          <mxGeometry height="360" width="2940" x="120" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-105" edge="1" parent="eqw_3bnSFbbGgOIXySlG-82" source="eqw_3bnSFbbGgOIXySlG-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-102">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-101" parent="eqw_3bnSFbbGgOIXySlG-82" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Menerima pesanan&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="130" x="1325" y="82.5" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-106" edge="1" parent="eqw_3bnSFbbGgOIXySlG-82" source="eqw_3bnSFbbGgOIXySlG-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="eqw_3bnSFbbGgOIXySlG-103" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-102" parent="eqw_3bnSFbbGgOIXySlG-82" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Memvalidasi pembayaran&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="130" x="1520" y="82.5" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-108" edge="1" parent="eqw_3bnSFbbGgOIXySlG-82" source="eqw_3bnSFbbGgOIXySlG-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-107">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-112" edge="1" parent="eqw_3bnSFbbGgOIXySlG-82" source="eqw_3bnSFbbGgOIXySlG-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-111">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-103" parent="eqw_3bnSFbbGgOIXySlG-82" style="rhombus;whiteSpace=wrap;html=1;" value="Pembayaran Valid" vertex="1">
+          <mxGeometry height="115" width="110" x="1730" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-107" parent="eqw_3bnSFbbGgOIXySlG-82" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Meminta konfirmasi / bukti pembayaran ulang&lt;/span&gt;" vertex="1">
+          <mxGeometry height="57.5" width="210" x="1920" y="78.75" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-114" edge="1" parent="eqw_3bnSFbbGgOIXySlG-82" source="eqw_3bnSFbbGgOIXySlG-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-113">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-111" parent="eqw_3bnSFbbGgOIXySlG-82" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Mengonfirmasi pembayaran&lt;/span&gt;" vertex="1">
+          <mxGeometry height="57.5" width="210" x="2100" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-113" parent="eqw_3bnSFbbGgOIXySlG-82" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Memberikan / mengirim akses e-book&lt;/span&gt;" vertex="1">
+          <mxGeometry height="57.5" width="210" x="2360" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-268" parent="eqw_3bnSFbbGgOIXySlG-82" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Tidak" vertex="1">
+          <mxGeometry height="30" width="60" x="1830" y="78.75" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-269" parent="eqw_3bnSFbbGgOIXySlG-82" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Ya" vertex="1">
+          <mxGeometry height="30" width="60" x="1770" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-88" edge="1" parent="1" source="eqw_3bnSFbbGgOIXySlG-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="eqw_3bnSFbbGgOIXySlG-71">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-97" edge="1" parent="1" source="eqw_3bnSFbbGgOIXySlG-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-99" edge="1" parent="1" source="eqw_3bnSFbbGgOIXySlG-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-98">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-104" edge="1" parent="1" source="eqw_3bnSFbbGgOIXySlG-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="eqw_3bnSFbbGgOIXySlG-101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-110" edge="1" parent="1" source="eqw_3bnSFbbGgOIXySlG-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-109">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-116" edge="1" parent="1" source="eqw_3bnSFbbGgOIXySlG-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-111">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-117" edge="1" parent="1" source="eqw_3bnSFbbGgOIXySlG-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-115">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-200" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" value="Pembeli" vertex="1">
+          <mxGeometry height="200" width="3570" x="70" y="1370" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-201" edge="1" parent="eqw_3bnSFbbGgOIXySlG-200" source="eqw_3bnSFbbGgOIXySlG-202" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="eqw_3bnSFbbGgOIXySlG-204" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-202" parent="eqw_3bnSFbbGgOIXySlG-200" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Start" vertex="1">
+          <mxGeometry height="40" width="40" x="50" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-204" parent="eqw_3bnSFbbGgOIXySlG-200" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Mencari buku&lt;/span&gt; " vertex="1">
+          <mxGeometry height="60" width="120" x="130" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-205" edge="1" parent="eqw_3bnSFbbGgOIXySlG-200" source="eqw_3bnSFbbGgOIXySlG-206" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-208">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-206" parent="eqw_3bnSFbbGgOIXySlG-200" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Menemukan buku / penerbit&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="280" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-207" edge="1" parent="eqw_3bnSFbbGgOIXySlG-200" source="eqw_3bnSFbbGgOIXySlG-208" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-209">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-208" parent="eqw_3bnSFbbGgOIXySlG-200" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Melihat informasi buku&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="450" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-209" parent="eqw_3bnSFbbGgOIXySlG-200" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;&amp;nbsp;memesan buku&amp;nbsp;&lt;/span&gt; " vertex="1">
+          <mxGeometry height="60" width="120" x="620" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-211" parent="eqw_3bnSFbbGgOIXySlG-200" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Melakukan pembayaran&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="1075" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-213" edge="1" parent="eqw_3bnSFbbGgOIXySlG-200" source="eqw_3bnSFbbGgOIXySlG-214" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-211">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-214" parent="eqw_3bnSFbbGgOIXySlG-200" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Menerima informasi harga dan pembayaran&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="140" x="805" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-256" edge="1" parent="eqw_3bnSFbbGgOIXySlG-200" source="eqw_3bnSFbbGgOIXySlG-215" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-204">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1915" y="40" />
+              <mxPoint x="190" y="40" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-215" parent="eqw_3bnSFbbGgOIXySlG-200" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Menerima informasi bahwa buku tidak tersedia&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="220" x="1915" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-216" edge="1" parent="eqw_3bnSFbbGgOIXySlG-200" source="eqw_3bnSFbbGgOIXySlG-217" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="eqw_3bnSFbbGgOIXySlG-219" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-217" parent="eqw_3bnSFbbGgOIXySlG-200" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Menerima buku&lt;/span&gt;" vertex="1">
+          <mxGeometry height="57.5" width="210" x="2885" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-218" edge="1" parent="eqw_3bnSFbbGgOIXySlG-200" source="eqw_3bnSFbbGgOIXySlG-219" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="eqw_3bnSFbbGgOIXySlG-220" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-219" parent="eqw_3bnSFbbGgOIXySlG-200" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Membaca Buku&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="160" x="3160" y="97.5" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-220" parent="eqw_3bnSFbbGgOIXySlG-200" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;End&lt;/span&gt;" vertex="1">
+          <mxGeometry height="59" width="59" x="3380" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-221" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=23;" value="Kanal Penjualan Penerbit" vertex="1">
+          <mxGeometry height="250" width="3570" x="70" y="1570" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-222" edge="1" parent="eqw_3bnSFbbGgOIXySlG-221" source="eqw_3bnSFbbGgOIXySlG-223" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-224">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-223" parent="eqw_3bnSFbbGgOIXySlG-221" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Menerima permintaan pemesanan&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="620" y="87.5" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-224" parent="eqw_3bnSFbbGgOIXySlG-221" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Memberikan informasi harga dan ketersediaan&lt;/span&gt;" vertex="1">
+          <mxGeometry height="75" width="130" x="810" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-226" parent="eqw_3bnSFbbGgOIXySlG-221" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Menerima informasi pembayaran / pesanan&lt;/span&gt;" vertex="1">
+          <mxGeometry height="57.5" width="190" x="1040" y="88.75" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-249" parent="eqw_3bnSFbbGgOIXySlG-221" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Menampilkan informasi buku&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="130" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-228" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;BPMN as is membeli buku&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="250" x="60" y="1320" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-229" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=23;" value="Penerbit" vertex="1">
+          <mxGeometry height="280" width="3570" x="70" y="1820" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-230" edge="1" parent="eqw_3bnSFbbGgOIXySlG-229" source="eqw_3bnSFbbGgOIXySlG-231" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-233">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-231" parent="eqw_3bnSFbbGgOIXySlG-229" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Menerima pesanan&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="130" x="1070" y="82.5" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-232" edge="1" parent="eqw_3bnSFbbGgOIXySlG-229" source="eqw_3bnSFbbGgOIXySlG-233" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="eqw_3bnSFbbGgOIXySlG-236" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-233" parent="eqw_3bnSFbbGgOIXySlG-229" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Memeriksa ketersediaan buku&lt;/span&gt;" vertex="1">
+          <mxGeometry height="67.5" width="140" x="1320" y="73.75" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-235" edge="1" parent="eqw_3bnSFbbGgOIXySlG-229" source="eqw_3bnSFbbGgOIXySlG-236" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-239">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-275" edge="1" parent="eqw_3bnSFbbGgOIXySlG-229" source="eqw_3bnSFbbGgOIXySlG-236" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-237">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-236" parent="eqw_3bnSFbbGgOIXySlG-229" style="rhombus;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Buku tersedia?&lt;/span&gt;" vertex="1">
+          <mxGeometry height="115" width="110" x="1640" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-237" parent="eqw_3bnSFbbGgOIXySlG-229" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Memberikan informasi bahwa buku tidak tersedia&lt;/span&gt;" vertex="1">
+          <mxGeometry height="57.5" width="210" x="1920" y="78.75" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-238" edge="1" parent="eqw_3bnSFbbGgOIXySlG-229" source="eqw_3bnSFbbGgOIXySlG-239" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-240">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-239" parent="eqw_3bnSFbbGgOIXySlG-229" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Mengonfirmasi pesanan&lt;/span&gt;" vertex="1">
+          <mxGeometry height="57.5" width="210" x="1970" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-259" edge="1" parent="eqw_3bnSFbbGgOIXySlG-229" source="eqw_3bnSFbbGgOIXySlG-240" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="eqw_3bnSFbbGgOIXySlG-258">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-240" parent="eqw_3bnSFbbGgOIXySlG-229" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Memproses pesanan&lt;/span&gt;" vertex="1">
+          <mxGeometry height="57.5" width="210" x="2230" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-258" parent="eqw_3bnSFbbGgOIXySlG-229" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Menyerahkan buku kepada pihak pengiriman&lt;/span&gt;" vertex="1">
+          <mxGeometry height="57.5" width="210" x="2520" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-272" parent="eqw_3bnSFbbGgOIXySlG-229" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Ya" vertex="1">
+          <mxGeometry height="30" width="60" x="1690" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-276" parent="eqw_3bnSFbbGgOIXySlG-229" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Tidak" vertex="1">
+          <mxGeometry height="30" width="60" x="1740" y="78.75" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-241" edge="1" parent="1" source="eqw_3bnSFbbGgOIXySlG-209" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="eqw_3bnSFbbGgOIXySlG-223">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-243" edge="1" parent="1" source="eqw_3bnSFbbGgOIXySlG-224" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-214">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-245" edge="1" parent="1" source="eqw_3bnSFbbGgOIXySlG-237" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-215">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-251" edge="1" parent="1" source="eqw_3bnSFbbGgOIXySlG-204" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="eqw_3bnSFbbGgOIXySlG-249">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-252" edge="1" parent="1" source="eqw_3bnSFbbGgOIXySlG-249" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-206">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-254" edge="1" parent="1" source="eqw_3bnSFbbGgOIXySlG-211" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="eqw_3bnSFbbGgOIXySlG-226">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-255" edge="1" parent="1" source="eqw_3bnSFbbGgOIXySlG-226" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="eqw_3bnSFbbGgOIXySlG-231">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-260" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=23;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Distribusi/Pengiriman&lt;/span&gt;" vertex="1">
+          <mxGeometry height="290" width="3570" x="70" y="2100" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-265" edge="1" parent="eqw_3bnSFbbGgOIXySlG-260" source="eqw_3bnSFbbGgOIXySlG-261" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="eqw_3bnSFbbGgOIXySlG-263">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-261" parent="eqw_3bnSFbbGgOIXySlG-260" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Menerima buku dari penerbit&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="2565" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-266" edge="1" parent="eqw_3bnSFbbGgOIXySlG-260" source="eqw_3bnSFbbGgOIXySlG-263" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-264">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-263" parent="eqw_3bnSFbbGgOIXySlG-260" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Mengemas buku&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="2760" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-264" parent="eqw_3bnSFbbGgOIXySlG-260" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px;&quot;&gt;Mengirim buku&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="2930" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-262" edge="1" parent="1" source="eqw_3bnSFbbGgOIXySlG-258" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="eqw_3bnSFbbGgOIXySlG-261">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eqw_3bnSFbbGgOIXySlG-267" edge="1" parent="1" source="eqw_3bnSFbbGgOIXySlG-264" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="eqw_3bnSFbbGgOIXySlG-217">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

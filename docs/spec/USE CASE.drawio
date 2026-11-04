@@ -1,0 +1,270 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="ikapi-usecase-complete" name="Use Case IKAPI Jabar">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="2350" pageHeight="2500" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sys" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1E4E8C;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=16;spacingTop=12;fontColor=#1E4E8C;" value="Sistem Marketplace Buku Digital IKAPI Jawa Barat" vertex="1">
+          <mxGeometry height="2380" width="1750" x="290" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="user" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeWidth=1.6;fontSize=13;fontStyle=1;" value="User / Pelanggan" vertex="1">
+          <mxGeometry height="130" width="90" x="60" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="penerbit" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeWidth=1.6;fontSize=13;fontStyle=1;" value="Penerbit (Publisher)" vertex="1">
+          <mxGeometry height="130" width="90" x="60" y="1850" as="geometry" />
+        </mxCell>
+        <mxCell id="admin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeWidth=1.6;fontSize=13;fontStyle=1;" value="Administrator (IKAPI)" vertex="1">
+          <mxGeometry height="130" width="90" x="2130" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="midtrans" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeWidth=1.6;fontSize=13;fontStyle=1;" value="Payment Gateway (Midtrans)" vertex="1">
+          <mxGeometry height="130" width="90" x="2130" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_reg_user" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Registrasi akun pembeli" vertex="1">
+          <mxGeometry height="60" width="220" x="370" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_login_user" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Login akun pembeli" vertex="1">
+          <mxGeometry height="60" width="220" x="370" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_profile_user" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Mengelola profil pengguna" vertex="1">
+          <mxGeometry height="60" width="220" x="370" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_community" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Mengakses forum komunitas &amp; jadwal event" vertex="1">
+          <mxGeometry height="60" width="240" x="370" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_catalog" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Melihat katalog buku" vertex="1">
+          <mxGeometry height="60" width="220" x="370" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_filter_cat" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Memfilter kategori buku" vertex="1">
+          <mxGeometry height="60" width="210" x="730" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_search" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Mencari buku" vertex="1">
+          <mxGeometry height="60" width="210" x="730" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_detail" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Melihat detail &amp; sinopsis buku" vertex="1">
+          <mxGeometry height="60" width="220" x="350" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_preview" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Melihat preview buku" vertex="1">
+          <mxGeometry height="60" width="210" x="730" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_add_cart" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Menambahkan ke keranjang" vertex="1">
+          <mxGeometry height="60" width="210" x="720" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_cart" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Mengelola keranjang belanja" vertex="1">
+          <mxGeometry height="60" width="220" x="375" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_checkout" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Checkout / membuat pesanan" vertex="1">
+          <mxGeometry height="60" width="220" x="370" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_payment_method" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Memilih metode pembayaran" vertex="1">
+          <mxGeometry height="60" width="220" x="730" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_order_status" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Melihat status pesanan" vertex="1">
+          <mxGeometry height="60" width="210" x="730" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_midtrans_process" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Memproses pembayaran (Midtrans)" vertex="1">
+          <mxGeometry height="65" width="230" x="1470" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_order_history" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Melihat riwayat pembelian" vertex="1">
+          <mxGeometry height="60" width="220" x="370" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_user_invoice" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Mengunduh invoice pembelian" vertex="1">
+          <mxGeometry height="60" width="210" x="730" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_library" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Mengakses perpustakaan pribadi (koleksi &amp; buku favorit)" vertex="1">
+          <mxGeometry height="65" width="240" x="370" y="1230" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_search_lib" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Mencari buku di perpustakaan" vertex="1">
+          <mxGeometry height="60" width="220" x="730" y="1190" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_read_ebook" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Membaca e-book (digital reader)" vertex="1">
+          <mxGeometry height="60" width="220" x="730" y="1270" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_bookmark" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Menambahkan bookmark &amp; tanda halaman" vertex="1">
+          <mxGeometry height="60" width="230" x="1080" y="1270" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_review" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Memberikan ulasan &amp; rating" vertex="1">
+          <mxGeometry height="60" width="220" x="370" y="1380" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_reg_pub" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Registrasi akun penerbit" vertex="1">
+          <mxGeometry height="60" width="220" x="370" y="1540" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_login_pub" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Login akun penerbit" vertex="1">
+          <mxGeometry height="60" width="220" x="370" y="1630" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_profile_pub" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Mengelola profil &amp; nomor rekening" vertex="1">
+          <mxGeometry height="60" width="230" x="370" y="1720" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_dashboard_pub" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Melihat dashboard &amp; grafik penjualan (rating, penjualan, dll)" vertex="1">
+          <mxGeometry height="65" width="240" x="370" y="1820" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_manage_books" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Mengunggah &amp; mengelola buku (menunggu acc admin)" vertex="1">
+          <mxGeometry height="65" width="240" x="370" y="1940" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_list_products" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Melihat daftar produk buku" vertex="1">
+          <mxGeometry height="60" width="210" x="730" y="1940" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_pub_orders" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Melihat daftar pesanan masuk" vertex="1">
+          <mxGeometry height="60" width="220" x="370" y="2060" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_pub_invoice" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Mengunduh invoice pesanan" vertex="1">
+          <mxGeometry height="60" width="210" x="730" y="2060" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_pub_payout" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Mengajukan pencairan dana (menunggu acc admin)" vertex="1">
+          <mxGeometry height="65" width="240" x="370" y="2180" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_view_proof" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Melihat bukti transfer pencairan" vertex="1">
+          <mxGeometry height="60" width="220" x="730" y="2180" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_reply_comment" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Membalas komentar &amp; ulasan" vertex="1">
+          <mxGeometry height="60" width="220" x="370" y="2300" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_admin_login" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Login administrator" vertex="1">
+          <mxGeometry height="60" width="240" x="1470" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_admin_verify_pub" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Memverifikasi &amp; approve akun penerbit" vertex="1">
+          <mxGeometry height="60" width="240" x="1470" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_admin_manage_catalog" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Mengelola katalog global &amp; kategori buku" vertex="1">
+          <mxGeometry height="60" width="240" x="1470" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_admin_manage_events" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Mengelola agenda event &amp; berita literasi" vertex="1">
+          <mxGeometry height="60" width="240" x="1470" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_admin_monitor" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Memantau transaksi &amp; katalog global" vertex="1">
+          <mxGeometry height="60" width="240" x="1470" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_admin_payout" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Memproses pencairan dana penerbit" vertex="1">
+          <mxGeometry height="60" width="240" x="1470" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_admin_upload_proof" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=1.35;fillColor=#ffffff;strokeColor=#333333;fontSize=12;fontFamily=Helvetica;" value="Mengunggah bukti transfer pencairan" vertex="1">
+          <mxGeometry height="60" width="240" x="1080" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_1" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_reg_user" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_2" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_login_user" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_3" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_profile_user" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_4" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_community" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_5" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_catalog" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_6" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_detail" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_7" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_cart" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc_8" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_checkout" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_9" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_order_history" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_10" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_library" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_11" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_review" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_12" edge="1" parent="1" source="penerbit" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_reg_pub" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_13" edge="1" parent="1" source="penerbit" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_login_pub" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_14" edge="1" parent="1" source="penerbit" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_profile_pub" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_15" edge="1" parent="1" source="penerbit" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_dashboard_pub" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_16" edge="1" parent="1" source="penerbit" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_manage_books" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_17" edge="1" parent="1" source="penerbit" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_pub_orders" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_18" edge="1" parent="1" source="penerbit" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_pub_payout" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_19" edge="1" parent="1" source="penerbit" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_reply_comment" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_20" edge="1" parent="1" source="admin" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_admin_login" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_21" edge="1" parent="1" source="admin" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_admin_verify_pub" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_22" edge="1" parent="1" source="admin" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_admin_manage_catalog" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_26" edge="1" parent="1" source="admin" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_admin_manage_events" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_23" edge="1" parent="1" source="admin" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_admin_monitor" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_24" edge="1" parent="1" source="admin" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_admin_payout" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_25" edge="1" parent="1" source="midtrans" style="endArrow=none;html=1;rounded=0;strokeWidth=1.25;strokeColor=#4A4A4A;" target="uc_midtrans_process" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_1" edge="1" parent="1" source="uc_filter_cat" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;strokeWidth=1.2;fontSize=11;fontStyle=2;strokeColor=#555555;labelBackgroundColor=#ffffff;" target="uc_catalog" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_2" edge="1" parent="1" source="uc_search" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;strokeWidth=1.2;fontSize=11;fontStyle=2;strokeColor=#555555;labelBackgroundColor=#ffffff;" target="uc_catalog" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_3" edge="1" parent="1" source="uc_preview" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;strokeWidth=1.2;fontSize=11;fontStyle=2;strokeColor=#555555;labelBackgroundColor=#ffffff;" target="uc_detail" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_4" edge="1" parent="1" source="uc_add_cart" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;strokeWidth=1.2;fontSize=11;fontStyle=2;strokeColor=#555555;labelBackgroundColor=#ffffff;" target="uc_detail" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_5" edge="1" parent="1" source="uc_checkout" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;strokeWidth=1.2;fontSize=11;fontStyle=2;strokeColor=#555555;labelBackgroundColor=#ffffff;" target="uc_payment_method" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_6" edge="1" parent="1" source="uc_order_status" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;strokeWidth=1.2;fontSize=11;fontStyle=2;strokeColor=#555555;labelBackgroundColor=#ffffff;" target="uc_checkout" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_7" edge="1" parent="1" source="uc_payment_method" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;strokeWidth=1.2;fontSize=11;fontStyle=2;strokeColor=#555555;labelBackgroundColor=#ffffff;" target="uc_midtrans_process" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_8" edge="1" parent="1" source="uc_user_invoice" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;strokeWidth=1.2;fontSize=11;fontStyle=2;strokeColor=#555555;labelBackgroundColor=#ffffff;" target="uc_order_history" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_9" edge="1" parent="1" source="uc_search_lib" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;strokeWidth=1.2;fontSize=11;fontStyle=2;strokeColor=#555555;labelBackgroundColor=#ffffff;" target="uc_library" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_10" edge="1" parent="1" source="uc_read_ebook" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;strokeWidth=1.2;fontSize=11;fontStyle=2;strokeColor=#555555;labelBackgroundColor=#ffffff;" target="uc_library" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_11" edge="1" parent="1" source="uc_bookmark" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;strokeWidth=1.2;fontSize=11;fontStyle=2;strokeColor=#555555;labelBackgroundColor=#ffffff;" target="uc_read_ebook" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_12" edge="1" parent="1" source="uc_list_products" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;strokeWidth=1.2;fontSize=11;fontStyle=2;strokeColor=#555555;labelBackgroundColor=#ffffff;" target="uc_manage_books" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_13" edge="1" parent="1" source="uc_pub_invoice" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;strokeWidth=1.2;fontSize=11;fontStyle=2;strokeColor=#555555;labelBackgroundColor=#ffffff;" target="uc_pub_orders" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_14" edge="1" parent="1" source="uc_view_proof" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;strokeWidth=1.2;fontSize=11;fontStyle=2;strokeColor=#555555;labelBackgroundColor=#ffffff;" target="uc_pub_payout" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_15" edge="1" parent="1" source="uc_admin_payout" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;strokeWidth=1.2;fontSize=11;fontStyle=2;strokeColor=#555555;labelBackgroundColor=#ffffff;" target="uc_admin_upload_proof" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
