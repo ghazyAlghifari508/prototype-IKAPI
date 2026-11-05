@@ -23,7 +23,11 @@ export interface PublisherBook {
     title: string;
     author: string;
     category: string;
+    edition?: string;
+    genre?: string;
     synopsis: string;
+    endorsementBy?: string;
+    endorsementText?: string;
     pages: number;
     price: number;
     sales: number;
@@ -32,6 +36,7 @@ export interface PublisherBook {
     coverName?: string;
     pdfName?: string;
     pdfSizeBytes?: number;
+    sampleName?: string;
     updatedAt: string;
 }
 
@@ -80,6 +85,7 @@ export interface PublisherReview {
 export interface PublisherData {
     profile: PublisherProfile;
     bankAccount: BankAccount;
+    authors: string[];
     books: PublisherBook[];
     orders: PublisherOrder[];
     payouts: PayoutRecord[];
@@ -111,6 +117,7 @@ const initialData: PublisherData = {
         memberId: 'IKAPI-JBR-0421',
     },
     bankAccount: account,
+    authors: ['Rama Nugraha', 'Siti A. Pranoto', 'Nabila Rahayu', 'R. Anwar'],
     books: [
         {
             id: 'bk-kota',
@@ -241,15 +248,9 @@ const initialData: PublisherData = {
                     price: 49000,
                     quantity: 2,
                 },
-                {
-                    bookId: 'bk-priangan',
-                    title: 'Cerita dari Priangan',
-                    price: 39000,
-                    quantity: 1,
-                },
             ],
-            bookTotal: 137000,
-            publisherNet: 137000,
+            bookTotal: 98000,
+            publisherNet: 98000,
             paymentStatus: 'Lunas',
         },
     ],
@@ -294,23 +295,13 @@ const initialData: PublisherData = {
         },
         {
             id: 'rv-1003',
-            bookId: 'bk-kota',
-            bookTitle: 'Membaca Kota lewat Arsip',
+            bookId: 'bk-hutan',
+            bookTitle: 'Belajar Mengelola Hutan',
             displayName: 'D. Putra',
             date: '2026-10-27',
             rating: 4,
             comment:
-                'Banyak cerita kecil yang membuat saya melihat sudut kota dengan cara baru.',
-        },
-        {
-            id: 'rv-1004',
-            bookId: 'bk-priangan',
-            bookTitle: 'Cerita dari Priangan',
-            displayName: 'M. Amelia',
-            date: '2026-10-22',
-            rating: 5,
-            comment:
-                'Cerita pendeknya terasa akrab dan setiap tokohnya punya suara sendiri.',
+                'Penjelasannya runtut dan contoh lapangannya membuat topik lebih mudah dipahami.',
         },
     ],
     metrics: {
@@ -361,7 +352,12 @@ function hydrate() {
                 parsed.profile &&
                 parsed.bankAccount
             ) {
-                current = parsed;
+                current = {
+                    ...parsed,
+                    authors: Array.isArray(parsed.authors)
+                        ? parsed.authors
+                        : [...new Set(parsed.books.map((book) => book.author))],
+                };
             }
         }
     } catch {

@@ -40,8 +40,10 @@ export default function PublisherPayouts() {
             );
             return;
         }
-        if (!Number.isFinite(value) || value <= 0) {
-            setError('Masukkan nominal pencairan lebih dari Rp0.');
+        if (!Number.isInteger(value) || value <= 0) {
+            setError(
+                'Masukkan nominal pencairan dana dalam rupiah lebih dari Rp0.',
+            );
             return;
         }
         if (value > data.metrics.availableBalance) {
@@ -129,7 +131,7 @@ export default function PublisherPayouts() {
                 <div className="ikapi-grid ikapi-grid-2 ikapi-payout-main">
                     <section className="ikapi-panel ikapi-panel-pad">
                         <SectionHeading
-                            title="Ajukan pencairan"
+                            title="Ajukan pencairan dana"
                             detail="Saldo akan dicadangkan setelah pengajuan berhasil."
                         />
                         <div className="ikapi-payout-bank">
@@ -178,7 +180,7 @@ export default function PublisherPayouts() {
                         >
                             <div className="ikapi-field">
                                 <label htmlFor="payout-amount">
-                                    Nominal pencairan
+                                    Nominal pencairan dana
                                 </label>
                                 <div className="ikapi-money-input">
                                     <span>Rp</span>
@@ -186,6 +188,7 @@ export default function PublisherPayouts() {
                                         id="payout-amount"
                                         type="number"
                                         min="1"
+                                        step="1"
                                         max={data.metrics.availableBalance}
                                         inputMode="numeric"
                                         value={amount}
@@ -246,7 +249,7 @@ export default function PublisherPayouts() {
                             >
                                 {submitting
                                     ? 'Mengirim pengajuan…'
-                                    : 'Ajukan pencairan'}{' '}
+                                    : 'Ajukan pencairan dana'}{' '}
                                 <ArrowRight size={16} aria-hidden="true" />
                             </Button>
                         </form>

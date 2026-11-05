@@ -506,6 +506,41 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px 20px;
 }
+.ikapi-author-select-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+}
+.ikapi-author-add-toggle {
+    min-height: 46px !important;
+    padding-inline: 12px !important;
+    white-space: nowrap;
+}
+.ikapi-author-add-panel {
+    display: grid;
+    gap: 7px;
+    padding: 13px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--canvas);
+}
+.ikapi-author-add-panel > label {
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 700;
+}
+.ikapi-author-add-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px;
+}
+.ikapi-publisher-field-control {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+}
 .ikapi-field-full {
     grid-column: 1 / -1;
 }
@@ -1425,7 +1460,8 @@
     overflow: hidden;
 }
 .ikapi-books-toolbar {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 290px);
     align-items: flex-end;
     justify-content: space-between;
     gap: 24px;
@@ -1474,6 +1510,16 @@
     border-radius: 8px;
     background: var(--surface);
     padding: 8px 11px;
+}
+.ikapi-books-refinements {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(180px, 1fr) repeat(2, minmax(170px, 220px));
+    gap: 14px;
+}
+.ikapi-books-refinements select,
+.ikapi-books-refinements input {
+    min-height: 42px;
 }
 .ikapi-book-table {
     display: grid;
@@ -1558,6 +1604,18 @@
     margin: 5px 0 0;
     color: var(--muted);
     font-size: 13px;
+}
+.ikapi-book-reviews {
+    margin-top: 20px;
+}
+.ikapi-book-reviews .ikapi-book-form-heading {
+    align-items: center;
+}
+.ikapi-book-reviews .ikapi-book-form-heading p {
+    max-width: 65ch;
+}
+.ikapi-book-review-list .ikapi-review-card:last-child {
+    border-bottom: 0;
 }
 .ikapi-cover-preview {
     display: block;
@@ -1998,8 +2056,8 @@
         font-size: 19px;
     }
     .ikapi-books-toolbar {
+        grid-template-columns: minmax(0, 1fr);
         align-items: stretch;
-        flex-direction: column;
         gap: 15px;
     }
     .ikapi-filter-tabs {
@@ -2012,6 +2070,14 @@
     }
     .ikapi-book-search {
         width: 100%;
+    }
+    .ikapi-books-refinements {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+    .ikapi-book-reviews .ikapi-book-form-heading {
+        align-items: stretch;
+        flex-direction: column;
     }
     .ikapi-book-table {
         padding-inline: 16px;
@@ -2116,6 +2182,13 @@
     }
     .ikapi-field-full {
         grid-column: auto;
+    }
+    .ikapi-author-select-row,
+    .ikapi-author-add-row {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .ikapi-author-add-toggle {
+        width: 100%;
     }
     .ikapi-invoice-callout {
         flex-wrap: wrap;

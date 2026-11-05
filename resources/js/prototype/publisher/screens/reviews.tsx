@@ -1,5 +1,5 @@
 import { useMemo, useState, type FormEvent } from 'react';
-import { Head } from '@inertiajs/react';
+import { Head, usePage } from '@inertiajs/react';
 import { MessageSquareReply, Star } from 'lucide-react';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
@@ -12,7 +12,15 @@ import { formatDate, usePublisherData } from '@/prototype/publisher/store';
 
 export default function PublisherReviews() {
     const [data, update] = usePublisherData();
-    const [bookFilter, setBookFilter] = useState('all');
+    const { url } = usePage();
+    const requestedBook = new URL('http://ikapi.local' + url).searchParams.get(
+        'buku',
+    );
+    const [bookFilter, setBookFilter] = useState(() =>
+        data.books.some((book) => book.id === requestedBook)
+            ? requestedBook!
+            : 'all',
+    );
     const [drafts, setDrafts] = useState<Record<string, string>>({});
     const [errors, setErrors] = useState<Record<string, string>>({});
     const reviews = useMemo(

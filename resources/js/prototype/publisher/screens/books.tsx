@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Head, Link } from '@inertiajs/react';
+import { Head, Link, usePage } from '@inertiajs/react';
 import { ArrowRight, BookPlus, Search, SlidersHorizontal } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -9,8 +9,13 @@ import {
     PageHeading,
     PublisherLayout,
     StatusBadge,
+    bookCategories,
 } from '@/prototype/publisher/components';
-import { usePublisherData, type BookStatus } from '@/prototype/publisher/store';
+import {
+    formatDate,
+    usePublisherData,
+    type BookStatus,
+} from '@/prototype/publisher/store';
 
 const filters: { label: string; value: BookStatus | 'Semua' }[] = [
     { label: 'Semua', value: 'Semua' },
@@ -21,23 +26,71 @@ const filters: { label: string; value: BookStatus | 'Semua' }[] = [
 
 export default function PublisherBooks() {
     const [data] = usePublisherData();
-    const [filter, setFilter] = useState<BookStatus | 'Semua'>('Semua');
-    const [search, setSearch] = useState('');
+    const { url } = usePage();
+    const params = new URL('http://ikapi.local' + url).searchParams;
+    const requestedStatus = params.get('status');
+    const initialStatus = filters.some((item) => item.value === requestedStatus)
+        ? (requestedStatus as BookStatus | 'Semua')
+        : 'Semua';
+    const [filter, setFilter] = useState<BookStatus | 'Semua'>(initialStatus);
+    const [search, setSearch] = useState(params.get('q') ?? '');
+    const [category, setCategory] = useState(() =>
+        bookCategories.includes(params.get('kategori') ?? '')
+            ? (params.get('kategori') as string)
+            : 'Semua',
+    );
+    const [fromDate, setFromDate] = useState(params.get('dari') ?? '');
+    const [throughDate, setThroughDate] = useState(params.get('sampai') ?? '');
     const books = useMemo(
         () =>
             data.books.filter((book) => {
                 const matchesStatus =
                     filter === 'Semua' || book.status === filter;
+                const matchesCategory =
+                    category === 'Semua' || book.category === category;
                 const query = search.trim().toLocaleLowerCase('id-ID');
                 const matchesText =
                     !query ||
                     (book.title + ' ' + book.author)
                         .toLocaleLowerCase('id-ID')
                         .includes(query);
-                return matchesStatus && matchesText;
+                const matchesFrom = !fromDate || book.updatedAt >= fromDate;
+                const matchesThrough =
+                    !throughDate || book.updatedAt <= throughDate;
+                return (
+                    matchesStatus &&
+                    matchesCategory &&
+                    matchesText &&
+                    matchesFrom &&
+                    matchesThrough
+                );
             }),
-        [data.books, filter, search],
+        [data.books, category, filter, fromDate, search, throughDate],
     );
+    const hasActiveFilters = Boolean(
+        search ||
+        filter !== 'Semua' ||
+        category !== 'Semua' ||
+        fromDate ||
+        throughDate,
+    );
+
+    function resetFilters() {
+        setSearch('');
+        setFilter('Semua');
+        setCategory('Semua');
+        setFromDate('');
+        setThroughDate('');
+    }
+
+    const detailParams = new URLSearchParams({
+        q: search,
+        status: filter,
+        kategori: category,
+        dari: fromDate,
+        sampai: throughDate,
+    });
+    const detailQuery = detailParams.toString();
 
     return (
         <>
@@ -106,6 +159,63 @@ export default function PublisherBooks() {
                                 placeholder="Judul atau nama penulis"
                             />
                         </div>
+                        <div className="ikapi-books-refinements">
+                            <div className="ikapi-field">
+                                <label htmlFor="book-category-filter">
+                                    Filter kategori
+                                </label>
+                                <select
+                                    id="book-category-filter"
+                                    value={category}
+                                    onChange={(event) =>
+                                        setCategory(event.target.value)
+                                    }
+                                >
+                                    <option value="Semua">
+                                        Semua kategori
+                                    </option>
+                                    {bookCategories.map((item) => (
+                                        <option key={item} value={item}>
+                                            {item}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div className="ikapi-field">
+                                <label htmlFor="book-date-from">
+                                    Diperbarui sejak
+                                </label>
+                                <input
+                                    id="book-date-from"
+                                    type="date"
+                                    value={fromDate}
+                                    max={throughDate || undefined}
+                                    onChange={(event) => {
+                                        const value = event.target.value;
+                                        setFromDate(value);
+                                        if (throughDate && value > throughDate)
+                                            setThroughDate('');
+                                    }}
+                                />
+                            </div>
+                            <div className="ikapi-field">
+                                <label htmlFor="book-date-through">
+                                    Diperbarui sampai
+                                </label>
+                                <input
+                                    id="book-date-through"
+                                    type="date"
+                                    value={throughDate}
+                                    min={fromDate || undefined}
+                                    onChange={(event) => {
+                                        const value = event.target.value;
+                                        setThroughDate(value);
+                                        if (fromDate && value < fromDate)
+                                            setFromDate('');
+                                    }}
+                                />
+                            </div>
+                        </div>
                     </div>
                     {books.length ? (
                         <div
@@ -126,6 +236,10 @@ export default function PublisherBooks() {
                                         <span>
                                             {book.category} · {book.pages}{' '}
                                             halaman
+                                        </span>
+                                        <span>
+                                            Diperbarui{' '}
+                                            {formatDate(book.updatedAt)}
                                         </span>
                                         {book.revisionNote &&
                                         book.status === 'Ditolak/Revisi' ? (
@@ -161,7 +275,8 @@ export default function PublisherBooks() {
                                                     href={
                                                         '/prototype/penerbit/buku/' +
                                                         book.id +
-                                                        '/edit'
+                                                        '/edit?' +
+                                                        detailQuery
                                                     }
                                                 >
                                                     Lihat detail
@@ -177,7 +292,8 @@ export default function PublisherBooks() {
                                                     href={
                                                         '/prototype/penerbit/buku/' +
                                                         book.id +
-                                                        '/edit'
+                                                        '/edit?' +
+                                                        detailQuery
                                                     }
                                                 >
                                                     {book.status ===
@@ -194,26 +310,23 @@ export default function PublisherBooks() {
                     ) : (
                         <EmptyState
                             title={
-                                search
+                                hasActiveFilters
                                     ? 'Buku tidak ditemukan'
                                     : 'Belum ada buku pada filter ini'
                             }
                             description={
-                                search
-                                    ? 'Coba kata kunci lain atau hapus pencarian untuk melihat daftar.'
+                                hasActiveFilters
+                                    ? 'Coba ubah kata kunci, kategori, status, atau rentang tanggal.'
                                     : 'Buku dengan status ini akan muncul di sini setelah tersedia.'
                             }
                             action={
-                                search ? (
+                                hasActiveFilters ? (
                                     <Button
                                         variant="outline"
                                         className="ikapi-button ikapi-button-secondary"
-                                        onClick={() => {
-                                            setSearch('');
-                                            setFilter('Semua');
-                                        }}
+                                        onClick={resetFilters}
                                     >
-                                        Hapus pencarian
+                                        Hapus semua filter
                                     </Button>
                                 ) : filter !== 'Semua' ? (
                                     <Button
