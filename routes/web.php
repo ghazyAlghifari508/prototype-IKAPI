@@ -45,5 +45,19 @@ if (app()->environment('local')) {
             })->where('payout', '[A-Za-z0-9_-]+')->name('payouts.show');
             Route::inertia('ulasan', 'prototype/publisher/reviews/index')->name('reviews.index');
         });
+
+        // Falih Afnan Fauzi Modules (UC-07, 09, 10, 18, 19, 20)
+        Route::prefix('falih')->name('falih.')->group(function () {
+            Route::inertia('/', 'prototype/falih/index')->name('hub');
+            Route::inertia('katalog', 'prototype/falih/katalog')->name('katalog');
+            Route::inertia('keranjang', 'prototype/falih/cart')->name('cart');
+            Route::inertia('reader', 'prototype/falih/reader')->name('reader');
+            Route::inertia('ulasan', 'prototype/falih/reviews')->name('reviews');
+        });
+
+        // Direct aliases for buyer features
+        Route::inertia('keranjang', 'prototype/cart/index')->name('buyer.cart');
+        Route::inertia('reader', 'prototype/reader/index')->name('buyer.reader');
+        Route::inertia('ulasan-buku', 'prototype/reviews/index')->name('buyer.reviews');
     });
 }
