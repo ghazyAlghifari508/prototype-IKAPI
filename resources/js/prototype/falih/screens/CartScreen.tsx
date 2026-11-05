@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { Link } from '@inertiajs/react';
+import { Head, Link } from '@inertiajs/react';
 import { 
     Trash2, Plus, Minus, ShoppingBag, ArrowRight, 
-    ShieldCheck, Tag, CheckCircle2, AlertCircle, Sparkles, BookOpen 
+    ShieldCheck, Tag, CheckCircle2, AlertCircle, BookOpen 
 } from 'lucide-react';
-import { FalihNavbar } from '../components/FalihNavbar';
+import { BuyerLayout, PageHeading } from '../components/BuyerLayout';
 import { 
     useFalihStore, updateCartQuantity, removeFromCart, 
     clearCart, applyPromoCode, removePromoCode 
 } from '../store';
 import { toast } from 'sonner';
-import '../styles.css';
+import '@/prototype/publisher/styles.css';
 
 export default function CartScreen() {
     const { cartItems, cartSummary } = useFalihStore();
@@ -55,314 +55,292 @@ export default function CartScreen() {
     };
 
     return (
-        <div className="falih-layout flex flex-col min-h-screen">
-            <FalihNavbar activeTab="cart" />
-
-            <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                {/* Header Section */}
-                <div className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-[#e3e2e0] pb-5">
-                    <div>
-                        <div className="flex items-center gap-2 mb-1">
-                            <span className="falih-pill bg-blue-100 text-[#0075de]">
-                                UC-09 & UC-10
-                            </span>
-                            <span className="text-xs text-gray-500 font-medium">
-                                Pengelolaan Keranjang Belanja Pelanggan
-                            </span>
-                        </div>
-                        <h1 className="text-2xl sm:text-3xl font-bold text-[#111111] tracking-tight">
-                            Keranjang Belanja
-                        </h1>
-                    </div>
-
-                    <div className="flex items-center gap-2">
+        <>
+            <Head title="Keranjang Belanja - IKAPI Jawa Barat" />
+            <BuyerLayout active="cart">
+                <PageHeading
+                    eyebrow="Pesanan & Checkout Pembeli"
+                    title="Keranjang belanja"
+                    description="Kelola item buku digital pilihan Anda, atur jumlah eksemplar lisensi, dan terapkan voucher potongan harga resmi."
+                    action={
                         <Link
-                            href="/prototype/falih/katalog"
-                            className="inline-flex items-center gap-1.5 text-xs font-medium text-[#0075de] hover:underline"
+                            href="/prototype/katalog"
+                            className="ikapi-button ikapi-button-secondary text-xs flex items-center gap-1.5 cursor-pointer"
                         >
-                            <span>+ Tambah buku dari katalog</span>
+                            <BookOpen size={14} />
+                            <span>+ Tambah dari Katalog</span>
                         </Link>
-                    </div>
-                </div>
+                    }
+                />
 
                 {orderSuccess ? (
-                    <div className="falih-card max-w-xl mx-auto p-8 text-center my-12 fade-in-slide">
-                        <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <CheckCircle2 className="w-9 h-9" />
+                    <div className="ikapi-panel ikapi-panel-pad max-w-xl mx-auto text-center my-8">
+                        <div 
+                            className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+                            style={{ background: 'var(--green-wash)', color: 'var(--green)' }}
+                        >
+                            <CheckCircle2 size={36} />
                         </div>
-                        <h2 className="text-2xl font-bold text-gray-900 mb-2">Pemesanan Berhasil Disimulasikan!</h2>
-                        <p className="text-gray-600 text-sm mb-6 leading-relaxed">
-                            Order digital Anda telah dicatat ke dalam database. Pada skenario lengkap, pesanan akan diteruskan ke gerbang pembayaran digital Midtrans (PIC Ghazy / F06).
+                        <h2 className="font-serif text-2xl font-bold text-[var(--ink)] mb-2">
+                            Pemesanan Berhasil Disimulasikan!
+                        </h2>
+                        <p className="text-[var(--muted)] text-sm mb-6 leading-relaxed">
+                            Order naskah digital Anda telah dicatat ke dalam antrean pesanan. Naskah berlisensi akan langsung dapat dibuka di Web E-Reader setelah pelunasan pembayaran.
                         </p>
                         <div className="flex flex-col sm:flex-row justify-center gap-3">
                             <Link
-                                href="/prototype/falih/reader"
-                                className="falih-btn-primary px-5 py-2.5 text-sm inline-flex items-center justify-center gap-2"
+                                href="/prototype/reader"
+                                className="ikapi-button ikapi-button-primary text-xs flex items-center justify-center gap-2 cursor-pointer"
                             >
-                                <BookOpen className="w-4 h-4" />
-                                <span>Buka Buku di E-Reader</span>
+                                <BookOpen size={15} />
+                                <span>Buka Web Reader</span>
                             </Link>
-                            <button
-                                onClick={() => setOrderSuccess(false)}
-                                className="px-5 py-2.5 text-sm rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 transition"
+                            <Link
+                                href="/prototype/katalog"
+                                className="ikapi-button ikapi-button-secondary text-xs flex items-center justify-center gap-2 cursor-pointer"
                             >
-                                Kembali ke Keranjang
-                            </button>
+                                <span>Kembali ke Katalog</span>
+                            </Link>
                         </div>
-                    </div>
-                ) : cartItems.length === 0 ? (
-                    /* UC-10 Alternative Scenario 2.a: Keranjang Kosong */
-                    <div className="falih-card p-12 text-center my-8 max-w-lg mx-auto">
-                        <div className="w-20 h-20 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center mx-auto mb-4 border border-amber-200">
-                            <ShoppingBag className="w-10 h-10" />
-                        </div>
-                        <h3 className="text-lg font-bold text-gray-900 mb-1">
-                            Keranjang Belanja Anda Masih Kosong
-                        </h3>
-                        <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto leading-relaxed">
-                            Belum ada e-book yang Anda pilih. Jelajahi katalog buku karya penerbit anggota IKAPI Jawa Barat untuk mulai membaca.
-                        </p>
-                        <Link
-                            href="/prototype/falih/katalog"
-                            className="falih-btn-primary px-6 py-2.5 text-sm inline-flex items-center gap-2 shadow-xs"
-                        >
-                            <Sparkles className="w-4 h-4" />
-                            <span>Jelajahi Katalog Buku Sekarang</span>
-                        </Link>
                     </div>
                 ) : (
-                    /* Active Cart Items & Summary Layout */
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                        {/* Left: Item List */}
+                        {/* Cart Items List */}
                         <div className="lg:col-span-8 space-y-4">
-                            <div className="flex items-center justify-between text-xs text-gray-500 px-1 font-medium">
-                                <span>Item E-Book ({cartSummary.totalItems} Buku)</span>
-                                <button 
-                                    onClick={() => {
-                                        if (confirm('Kosongkan seluruh isi keranjang?')) {
-                                            clearCart();
-                                            toast.info('Keranjang berhasil dikosongkan.');
-                                        }
-                                    }}
-                                    className="text-red-600 hover:underline flex items-center gap-1"
-                                >
-                                    <Trash2 className="w-3.5 h-3.5" />
-                                    <span>Hapus Semua</span>
-                                </button>
-                            </div>
+                            <div className="ikapi-panel ikapi-panel-pad">
+                                <div className="flex items-center justify-between pb-3 border-b border-[var(--line)] mb-4">
+                                    <div className="flex items-center gap-2">
+                                        <ShoppingBag size={18} className="text-[#a33b46]" />
+                                        <h2 className="font-serif font-bold text-base text-[var(--ink)]">
+                                            Daftar Buku ({cartItems.length} Judul)
+                                        </h2>
+                                    </div>
+                                    {cartItems.length > 0 && (
+                                        <button
+                                            onClick={() => {
+                                                clearCart();
+                                                toast.info('Seluruh isi keranjang belanja telah dikosongkan.');
+                                            }}
+                                            className="text-xs text-[var(--muted)] hover:text-red-600 transition flex items-center gap-1 cursor-pointer"
+                                        >
+                                            <Trash2 size={13} />
+                                            <span>Kosongkan</span>
+                                        </button>
+                                    )}
+                                </div>
 
-                            <div className="space-y-3">
-                                {cartItems.map(({ book, quantity, format }) => (
-                                    <div
-                                        key={book.id}
-                                        className="falih-card p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:shadow-xs transition"
-                                    >
-                                        <div className="flex items-start gap-4">
-                                            {/* Book Cover */}
-                                            <img
-                                                src={book.coverImage}
-                                                alt={book.title}
-                                                className="w-16 h-22 sm:w-20 sm:h-28 object-cover rounded-md shadow-xs border border-gray-200 shrink-0"
-                                            />
-                                            {/* Details */}
-                                            <div>
-                                                <div className="flex items-center gap-2 mb-1">
-                                                    <span className="text-[11px] font-semibold text-[#0075de] uppercase tracking-wider">
-                                                        {book.category}
-                                                    </span>
-                                                    <span className="text-gray-300">•</span>
-                                                    <span className="text-[11px] text-gray-500 font-medium">
-                                                        {book.publisher}
-                                                    </span>
-                                                </div>
-                                                <h3 className="font-semibold text-gray-900 text-base leading-snug">
-                                                    {book.title}
-                                                </h3>
-                                                <p className="text-xs text-gray-600 mb-2">
-                                                    Penulis: {book.author}
-                                                </p>
-                                                <span className="inline-block px-2 py-0.5 rounded text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
-                                                    {format}
-                                                </span>
-                                            </div>
+                                {cartItems.length === 0 ? (
+                                    <div className="ikapi-empty-state">
+                                        <div className="ikapi-empty-icon">
+                                            <ShoppingBag size={22} />
                                         </div>
-
-                                        {/* Actions & Price */}
-                                        <div className="w-full sm:w-auto flex sm:flex-col items-center sm:items-end justify-between gap-3 pt-3 sm:pt-0 border-t sm:border-t-0 border-gray-100">
-                                            <div className="text-right">
-                                                <div className="text-base font-bold text-gray-900">
-                                                    {formatRupiah(book.price * quantity)}
-                                                </div>
-                                                {quantity > 1 && (
-                                                    <div className="text-[11px] text-gray-500">
-                                                        {formatRupiah(book.price)} / lisensi
-                                                    </div>
-                                                )}
-                                            </div>
-
-                                            {/* Quantity Controls */}
-                                            <div className="flex items-center gap-2">
-                                                <div className="inline-flex items-center border border-gray-200 rounded-md bg-gray-50">
-                                                    <button
-                                                        onClick={() => updateCartQuantity(book.id, -1)}
-                                                        className="p-1.5 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded-l-md transition"
-                                                        title="Kurangi kuantitas"
-                                                    >
-                                                        <Minus className="w-3.5 h-3.5" />
-                                                    </button>
-                                                    <span className="px-2.5 text-xs font-bold text-gray-800">
-                                                        {quantity}
-                                                    </span>
-                                                    <button
-                                                        onClick={() => updateCartQuantity(book.id, 1)}
-                                                        className="p-1.5 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded-r-md transition"
-                                                        title="Tambah kuantitas"
-                                                    >
-                                                        <Plus className="w-3.5 h-3.5" />
-                                                    </button>
-                                                </div>
-
-                                                <button
-                                                    onClick={() => {
-                                                        removeFromCart(book.id);
-                                                        toast.info(`Buku "${book.title}" dihapus dari keranjang.`);
-                                                    }}
-                                                    className="p-1.5 text-gray-400 hover:text-red-600 rounded-md transition"
-                                                    title="Hapus buku"
-                                                >
-                                                    <Trash2 className="w-4 h-4" />
-                                                </button>
-                                            </div>
+                                        <h3>Keranjang belanja Anda masih kosong</h3>
+                                        <p>
+                                            Anda belum menambahkan naskah digital ke dalam keranjang belanja. Jelajahi katalog buku IKAPI Jawa Barat.
+                                        </p>
+                                        <div className="ikapi-empty-action">
+                                            <Link
+                                                href="/prototype/katalog"
+                                                className="ikapi-button ikapi-button-primary text-xs inline-flex items-center gap-2"
+                                            >
+                                                <span>Eksplorasi Katalog Buku</span>
+                                                <ArrowRight size={14} />
+                                            </Link>
                                         </div>
                                     </div>
-                                ))}
-                            </div>
+                                ) : (
+                                    <div className="divide-y divide-[var(--line)]">
+                                        {cartItems.map((item) => (
+                                            <div
+                                                key={item.book.id}
+                                                className="py-4 first:pt-0 last:pb-0 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+                                            >
+                                                <div className="flex items-start gap-3.5 min-w-0">
+                                                    <img
+                                                        src={item.book.coverImage}
+                                                        alt={item.book.title}
+                                                        className="w-16 h-22 object-cover rounded-md border border-[var(--line)] shadow-2xs shrink-0"
+                                                    />
+                                                    <div className="min-w-0">
+                                                        <span className="text-[11px] font-bold uppercase tracking-wider text-[#a33b46] block truncate">
+                                                            {item.book.category}
+                                                        </span>
+                                                        <h3 className="font-serif font-bold text-[var(--ink)] text-sm sm:text-base leading-snug line-clamp-2">
+                                                            {item.book.title}
+                                                        </h3>
+                                                        <p className="text-xs text-[var(--muted)] mt-0.5">
+                                                            {item.book.author}
+                                                        </p>
+                                                        <span className="inline-block mt-1 text-[11px] font-medium text-[var(--green)]">
+                                                            Format: {item.format}
+                                                        </span>
+                                                    </div>
+                                                </div>
 
-                            {/* Trust Badge */}
-                            <div className="p-3.5 bg-white rounded-lg border border-[#e3e2e0] flex items-center gap-3 text-xs text-gray-600">
-                                <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0" />
-                                <span>
-                                    Setiap pembelian e-book resmi di IKAPI Jawa Barat menjamin hak lisensi baca seumur hidup dan mendukung langsung royalti penulis lokal.
-                                </span>
+                                                <div className="flex items-center justify-between sm:justify-end gap-6 w-full sm:w-auto pt-2 sm:pt-0 border-t sm:border-t-0 border-[var(--line)]">
+                                                    {/* Quantity Control */}
+                                                    <div className="flex items-center border border-[var(--line)] rounded-lg bg-[var(--surface-quiet)]">
+                                                        <button
+                                                            onClick={() => updateCartQuantity(item.book.id, -1)}
+                                                            className="p-1.5 text-[var(--muted)] hover:text-[var(--ink)] cursor-pointer"
+                                                            title="Kurangi kuantitas"
+                                                        >
+                                                            <Minus size={14} />
+                                                        </button>
+                                                        <span className="px-3 text-xs font-bold font-mono text-[var(--ink)]">
+                                                            {item.quantity}
+                                                        </span>
+                                                        <button
+                                                            onClick={() => updateCartQuantity(item.book.id, 1)}
+                                                            className="p-1.5 text-[var(--muted)] hover:text-[var(--ink)] cursor-pointer"
+                                                            title="Tambah kuantitas"
+                                                        >
+                                                            <Plus size={14} />
+                                                        </button>
+                                                    </div>
+
+                                                    <div className="text-right min-w-[100px]">
+                                                        <div className="text-sm font-serif font-bold text-[var(--ink)]">
+                                                            {formatRupiah(item.book.price * item.quantity)}
+                                                        </div>
+                                                        <span className="text-[11px] text-[var(--muted)] block">
+                                                            @{formatRupiah(item.book.price)}
+                                                        </span>
+                                                    </div>
+
+                                                    <button
+                                                        onClick={() => {
+                                                            removeFromCart(item.book.id);
+                                                            toast.info(`Buku "${item.book.title}" dihapus dari keranjang.`);
+                                                        }}
+                                                        className="text-[var(--muted)] hover:text-red-600 transition p-1 cursor-pointer"
+                                                        title="Hapus buku"
+                                                    >
+                                                        <Trash2 size={16} />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                         </div>
 
-                        {/* Right: Order Summary */}
-                        <div className="lg:col-span-4">
-                            <div className="falih-card p-6 sticky top-24">
-                                <h2 className="text-base font-bold text-gray-900 mb-4 pb-3 border-b border-gray-100">
-                                    Ringkasan Belanja
-                                </h2>
+                        {/* Cart Summary */}
+                        <div className="lg:col-span-4 space-y-5">
+                            {/* Promo Code Input */}
+                            <div className="ikapi-panel ikapi-panel-pad">
+                                <h3 className="font-serif font-bold text-sm text-[var(--ink)] mb-3 flex items-center gap-1.5">
+                                    <Tag size={15} className="text-[#a33b46]" />
+                                    <span>Voucher Promo Diskon</span>
+                                </h3>
 
-                                {/* Promo Code Form */}
-                                <form onSubmit={handleApplyPromo} className="mb-5">
-                                    <label className="block text-xs font-medium text-gray-700 mb-1.5">
-                                        Punya Kode Promo / Voucher?
-                                    </label>
-                                    <div className="flex gap-2">
-                                        <div className="relative flex-1">
-                                            <Tag className="w-3.5 h-3.5 text-gray-400 absolute left-2.5 top-2.5" />
-                                            <input
-                                                type="text"
-                                                placeholder="Contoh: IKAPIJABAR"
-                                                value={promoInput}
-                                                onChange={e => setPromoInput(e.target.value)}
-                                                className="w-full text-xs pl-8 pr-2 py-2 rounded-md border border-gray-200 focus:outline-hidden focus:border-[#0075de] uppercase font-mono"
-                                            />
-                                        </div>
-                                        <button
-                                            type="submit"
-                                            className="px-3 py-2 text-xs font-semibold bg-gray-900 text-white rounded-md hover:bg-gray-800 transition"
-                                        >
-                                            Terapkan
-                                        </button>
-                                    </div>
-                                    <p className="text-[11px] text-gray-400 mt-1">
-                                        Tips prototype: Coba gunakan kode <span className="font-mono text-blue-600 font-bold">IKAPIJABAR</span>
-                                    </p>
-                                </form>
-
-                                {cartSummary.promoCode && (
-                                    <div className="mb-4 p-2.5 bg-blue-50 border border-blue-200 rounded-md flex items-center justify-between text-xs text-blue-900">
-                                        <div className="flex items-center gap-1.5 font-medium">
-                                            <Tag className="w-3.5 h-3.5 text-[#0075de]" />
-                                            <span>Voucher: {cartSummary.promoCode} (-{cartSummary.discountPercent}%)</span>
+                                {cartSummary.promoCode ? (
+                                    <div 
+                                        className="p-2.5 rounded-lg border flex items-center justify-between text-xs"
+                                        style={{ background: 'var(--green-wash)', borderColor: 'var(--line)', color: 'var(--green)' }}
+                                    >
+                                        <div>
+                                            <span className="font-bold">{cartSummary.promoCode}</span>
+                                            <span className="block text-[11px] opacity-80">Diskon 15% Diterapkan</span>
                                         </div>
                                         <button
                                             onClick={handleRemovePromo}
-                                            className="text-red-600 hover:underline font-semibold text-[11px]"
+                                            className="text-[11px] underline hover:opacity-80 cursor-pointer"
                                         >
                                             Hapus
                                         </button>
                                     </div>
+                                ) : (
+                                    <form onSubmit={handleApplyPromo} className="space-y-2">
+                                        <div className="flex gap-2">
+                                            <input
+                                                type="text"
+                                                placeholder="Kode: IKAPIJABAR"
+                                                value={promoInput}
+                                                onChange={e => setPromoInput(e.target.value.toUpperCase())}
+                                                className="w-full text-xs uppercase font-mono px-3 py-2 rounded-lg border border-[var(--line-strong)] bg-[var(--surface)]"
+                                            />
+                                            <button
+                                                type="submit"
+                                                className="ikapi-button ikapi-button-secondary text-xs px-4 cursor-pointer"
+                                            >
+                                                Gunakan
+                                            </button>
+                                        </div>
+                                        <p className="text-[11px] text-[var(--muted)]">
+                                            Gunakan kode promo <strong>IKAPIJABAR</strong> untuk diskon 15%.
+                                        </p>
+                                    </form>
                                 )}
+                            </div>
 
-                                {/* Pricing Breakdown */}
-                                <div className="space-y-2.5 text-xs pb-4 border-b border-gray-100">
-                                    <div className="flex justify-between text-gray-600">
-                                        <span>Total Harga ({cartSummary.totalItems} item)</span>
-                                        <span className="font-medium text-gray-900">{formatRupiah(cartSummary.subtotal)}</span>
+                            {/* Cost Breakdown */}
+                            <div className="ikapi-panel ikapi-panel-pad space-y-3">
+                                <h3 className="font-serif font-bold text-sm text-[var(--ink)] pb-2 border-b border-[var(--line)]">
+                                    Ringkasan Pembayaran
+                                </h3>
+
+                                <div className="space-y-2 text-xs">
+                                    <div className="flex justify-between text-[var(--muted)]">
+                                        <span>Subtotal ({cartSummary.totalItems} unit lisensi):</span>
+                                        <span className="font-bold text-[var(--ink)]">{formatRupiah(cartSummary.subtotal)}</span>
                                     </div>
 
                                     {cartSummary.discountAmount > 0 && (
-                                        <div className="flex justify-between text-emerald-600 font-medium">
-                                            <span>Diskon Voucher</span>
-                                            <span>-{formatRupiah(cartSummary.discountAmount)}</span>
+                                        <div className="flex justify-between text-[var(--green)]">
+                                            <span>Potongan Diskon ({cartSummary.discountPercent}%):</span>
+                                            <span className="font-bold">- {formatRupiah(cartSummary.discountAmount)}</span>
                                         </div>
                                     )}
 
-                                    <div className="flex justify-between text-gray-600">
+                                    <div className="flex justify-between text-[var(--muted)]">
                                         <span className="flex items-center gap-1">
-                                            PPN (11%)
-                                            <span title="Pajak Pertambahan Nilai resmi">
-                                                <AlertCircle className="w-3 h-3 text-gray-400" />
+                                            <span>PPN (11%):</span>
+                                            <span title="Pajak Pertambahan Nilai 11% sesuai perundang-undangan">
+                                                <AlertCircle size={12} className="text-[var(--muted)]" />
                                             </span>
                                         </span>
-                                        <span className="font-medium text-gray-900">{formatRupiah(cartSummary.tax)}</span>
+                                        <span className="font-bold text-[var(--ink)]">{formatRupiah(cartSummary.tax)}</span>
                                     </div>
 
-                                    <div className="flex justify-between text-gray-600">
-                                        <span>Biaya Layanan Platform</span>
-                                        <span className="font-medium text-gray-900">{formatRupiah(cartSummary.adminFee)}</span>
+                                    <div className="flex justify-between text-[var(--muted)]">
+                                        <span>Biaya Layanan Gerbang:</span>
+                                        <span className="font-bold text-[var(--ink)]">{formatRupiah(cartSummary.adminFee)}</span>
                                     </div>
-                                </div>
 
-                                {/* Total Due */}
-                                <div className="flex justify-between items-baseline py-4 mb-5">
-                                    <div>
-                                        <span className="text-xs text-gray-500 block">Total Pembayaran</span>
-                                        <span className="text-xl font-bold text-gray-900">
+                                    <div className="pt-3 border-t border-[var(--line)] flex justify-between items-baseline">
+                                        <span className="font-bold text-sm text-[var(--ink)]">Total Tagihan:</span>
+                                        <span className="font-serif text-xl font-bold text-[#a33b46]">
                                             {formatRupiah(cartSummary.total)}
                                         </span>
                                     </div>
-                                    <span className="text-[11px] text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-semibold border border-emerald-200">
-                                        Akses Digital Instan
-                                    </span>
                                 </div>
 
-                                {/* Checkout Button */}
                                 <button
                                     onClick={handleCheckout}
-                                    disabled={isCheckingOut}
-                                    className="falih-btn-primary w-full py-3 px-4 text-sm font-semibold flex items-center justify-center gap-2 shadow-xs disabled:opacity-50"
+                                    disabled={cartItems.length === 0 || isCheckingOut}
+                                    className="ikapi-button ikapi-button-primary w-full py-2.5 text-xs flex items-center justify-center gap-2 mt-4 cursor-pointer disabled:opacity-40 disabled:pointer-events-none"
                                 >
                                     {isCheckingOut ? (
-                                        <span>Memproses Pesanan...</span>
+                                        <span>Memproses Checkout...</span>
                                     ) : (
                                         <>
                                             <span>Lanjut ke Pembayaran</span>
-                                            <ArrowRight className="w-4 h-4" />
+                                            <ArrowRight size={14} />
                                         </>
                                     )}
                                 </button>
-                                <p className="text-center text-[11px] text-gray-400 mt-2.5">
-                                    Simulasi pemesanan untuk evaluasi prototype frontend
-                                </p>
+
+                                <div className="text-[11px] text-[var(--muted)] text-center flex items-center justify-center gap-1 pt-1">
+                                    <ShieldCheck size={13} className="text-[var(--green)]" />
+                                    <span>Transaksi aman berlisensi resmi IKAPI Jabar</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 )}
-            </main>
-        </div>
+            </BuyerLayout>
+        </>
     );
 }

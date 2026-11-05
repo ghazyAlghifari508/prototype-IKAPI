@@ -46,18 +46,19 @@ if (app()->environment('local')) {
             Route::inertia('ulasan', 'prototype/publisher/reviews/index')->name('reviews.index');
         });
 
-        // Falih Afnan Fauzi Modules (UC-07, 09, 10, 18, 19, 20)
-        Route::prefix('falih')->name('falih.')->group(function () {
-            Route::inertia('/', 'prototype/falih/index')->name('hub');
-            Route::inertia('katalog', 'prototype/falih/katalog')->name('katalog');
-            Route::inertia('keranjang', 'prototype/falih/cart')->name('cart');
-            Route::inertia('reader', 'prototype/falih/reader')->name('reader');
-            Route::inertia('ulasan', 'prototype/falih/reviews')->name('reviews');
-        });
-
-        // Direct aliases for buyer features
+        // Buyer / Pembaca Portal Routes (UC-07, 09, 10, 18, 19, 20)
+        Route::inertia('katalog', 'prototype/katalog/index')->name('buyer.katalog');
         Route::inertia('keranjang', 'prototype/cart/index')->name('buyer.cart');
         Route::inertia('reader', 'prototype/reader/index')->name('buyer.reader');
-        Route::inertia('ulasan-buku', 'prototype/reviews/index')->name('buyer.reviews');
+        Route::inertia('ulasan', 'prototype/reviews/index')->name('buyer.reviews');
+        Route::inertia('ulasan-buku', 'prototype/reviews/index')->name('buyer.reviews-alias');
+        Route::inertia('pembeli', 'prototype/falih/index')->name('buyer.hub');
+
+        // Backward compatibility redirects (eliminate /falih from URLs)
+        Route::redirect('falih/ulasan', '/prototype/ulasan');
+        Route::redirect('falih/katalog', '/prototype/katalog');
+        Route::redirect('falih/keranjang', '/prototype/keranjang');
+        Route::redirect('falih/reader', '/prototype/reader');
+        Route::redirect('falih', '/prototype/katalog');
     });
 }

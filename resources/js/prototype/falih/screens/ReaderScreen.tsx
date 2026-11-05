@@ -113,7 +113,7 @@ export default function ReaderScreen({ initialBookId = 'B01' }: ReaderScreenProp
                     {/* Left: Back & Book Selector */}
                     <div className="flex items-center gap-3">
                         <Link
-                            href="/prototype/falih/katalog"
+                            href="/prototype/katalog"
                             className="p-1.5 rounded-md hover:bg-black/5 text-inherit transition"
                             title="Kembali ke Katalog"
                         >
@@ -123,7 +123,7 @@ export default function ReaderScreen({ initialBookId = 'B01' }: ReaderScreenProp
                         <div>
                             <button
                                 onClick={() => setShowBookSwitcher(true)}
-                                className="flex items-center gap-1.5 font-bold text-sm hover:opacity-75 transition text-left"
+                                className="flex items-center gap-1.5 font-serif font-bold text-sm hover:opacity-75 transition text-left"
                             >
                                 <span className="truncate max-w-[180px] sm:max-w-xs">{activeBook.title}</span>
                                 <Library className="w-3.5 h-3.5 opacity-60 shrink-0" />
@@ -136,8 +136,8 @@ export default function ReaderScreen({ initialBookId = 'B01' }: ReaderScreenProp
 
                     {/* Center: Reading Progress Indicator & Streak */}
                     <div className="hidden sm:flex items-center gap-3 text-xs opacity-80 font-mono">
-                        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/20 text-[11px] font-bold">
-                            <Flame className="w-3.5 h-3.5 fill-current animate-pulse text-amber-500" />
+                        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold border" style={{ background: 'var(--amber-wash)', borderColor: 'var(--line)', color: 'var(--amber)' }}>
+                            <Flame className="w-3.5 h-3.5 fill-current animate-pulse text-[#a33b46]" />
                             <span>Streak {readingStreak.days} Hari</span>
                         </div>
                         <span>Hal. {currentPage} / {activeBook.totalPages} ({Math.round((currentPage / activeBook.totalPages) * 100)}%)</span>
@@ -153,9 +153,9 @@ export default function ReaderScreen({ initialBookId = 'B01' }: ReaderScreenProp
                                     description: activeBook.title
                                 });
                             }}
-                            className={`p-2 rounded-md transition flex items-center gap-1 text-xs font-semibold ${
+                            className={`p-2 rounded-md transition flex items-center gap-1 text-xs font-semibold cursor-pointer ${
                                 isBookCompleted(activeBook.id)
-                                    ? 'bg-emerald-600 text-white shadow-xs'
+                                    ? 'bg-emerald-700 text-white shadow-xs'
                                     : 'hover:bg-black/5 text-inherit border border-black/10'
                             }`}
                             title={isBookCompleted(activeBook.id) ? 'Buku sudah selesai dibaca (Klik untuk batalkan)' : 'Tandai buku sebagai Sudah Dibaca'}
@@ -173,7 +173,7 @@ export default function ReaderScreen({ initialBookId = 'B01' }: ReaderScreenProp
                                 saveReaderSettings({ theme: nextTheme });
                                 toast.info(nextTheme === 'dark' ? 'Mengaktifkan Mode Gelap 🌙' : 'Mengaktifkan Mode Terang (Warm Paper) ☀️');
                             }}
-                            className="p-2 rounded-md hover:bg-black/5 text-inherit transition"
+                            className="p-2 rounded-md hover:bg-black/5 text-inherit transition cursor-pointer"
                             title={readerSettings.theme === 'dark' ? 'Ganti ke Mode Terang (Warm Paper)' : 'Ganti ke Mode Gelap (Dark Mode)'}
                         >
                             {readerSettings.theme === 'dark' ? (
@@ -186,9 +186,9 @@ export default function ReaderScreen({ initialBookId = 'B01' }: ReaderScreenProp
                         {/* Bookmark Button (UC-19) */}
                         <button
                             onClick={handleToggleBookmark}
-                            className={`p-2 rounded-md transition flex items-center gap-1 text-xs font-semibold ${
+                            className={`p-2 rounded-md transition flex items-center gap-1 text-xs font-semibold cursor-pointer ${
                                 isCurrentPageBookmarked
-                                    ? 'bg-[#0075de] text-white shadow-xs'
+                                    ? 'bg-[#a33b46] text-white shadow-xs'
                                     : 'hover:bg-black/5 text-inherit'
                             }`}
                             title={isCurrentPageBookmarked ? 'Halaman ini sudah ditandai' : 'Tandai halaman ini (Bookmark)'}
@@ -202,19 +202,19 @@ export default function ReaderScreen({ initialBookId = 'B01' }: ReaderScreenProp
                         {/* Open Bookmarks List */}
                         <button
                             onClick={() => setShowBookmarksDrawer(true)}
-                            className="p-2 rounded-md hover:bg-black/5 text-inherit relative transition"
+                            className="p-2 rounded-md hover:bg-black/5 text-inherit relative transition cursor-pointer"
                             title="Lihat Daftar Bookmark"
                         >
                             <BookmarkCheck className="w-4 h-4" />
                             {currentBookmarks.length > 0 && (
-                                <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-[#0075de]"></span>
+                                <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-[#a33b46]"></span>
                             )}
                         </button>
 
                         {/* Settings Button */}
                         <button
                             onClick={() => setShowSettingsDrawer(true)}
-                            className="p-2 rounded-md hover:bg-black/5 text-inherit transition"
+                            className="p-2 rounded-md hover:bg-black/5 text-inherit transition cursor-pointer"
                             title="Pengaturan Tampilan Baca Lengkap"
                         >
                             <Settings className="w-4 h-4" />
@@ -225,7 +225,7 @@ export default function ReaderScreen({ initialBookId = 'B01' }: ReaderScreenProp
                 {/* Reading Progress Line */}
                 <div className="w-full bg-black/5 h-1 mt-2.5 rounded-full overflow-hidden">
                     <div
-                        className="bg-[#0075de] h-full transition-all duration-300"
+                        className="bg-[#a33b46] h-full transition-all duration-300"
                         style={{ width: `${(currentPage / activeBook.totalPages) * 100}%` }}
                     />
                 </div>
