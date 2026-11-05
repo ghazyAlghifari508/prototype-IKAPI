@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { 
     BookOpen, Bookmark as BookmarkIcon, ChevronLeft, ChevronRight, 
     Settings, X, Trash2, CheckCircle2, AlertCircle, Sun, Moon, 
-    Coffee, FileText, ArrowLeft, BookmarkCheck, Library 
+    Coffee, FileText, ArrowLeft, BookmarkCheck, Library, Flame 
 } from 'lucide-react';
 import { Link } from '@inertiajs/react';
 import { FalihNavbar } from '../components/FalihNavbar';
 import { 
     useFalihStore, saveReadingProgress, addBookmark, 
-    removeBookmark, saveReaderSettings, ReaderSettings 
+    removeBookmark, saveReaderSettings, ReaderSettings,
+    toggleBookCompleted, isBookCompleted 
 } from '../store';
 import { toast } from 'sonner';
 import '../styles.css';
@@ -18,7 +19,7 @@ interface ReaderScreenProps {
 }
 
 export default function ReaderScreen({ initialBookId = 'B01' }: ReaderScreenProps) {
-    const { books, getBookmarks, getReadingProgress, readerSettings } = useFalihStore();
+    const { books, getBookmarks, getReadingProgress, readerSettings, readingStreak } = useFalihStore();
 
     // Select active book
     const [selectedBookId, setSelectedBookId] = useState<string>(initialBookId);
@@ -133,14 +134,55 @@ export default function ReaderScreen({ initialBookId = 'B01' }: ReaderScreenProp
                         </div>
                     </div>
 
-                    {/* Center: Reading Progress Indicator */}
-                    <div className="hidden sm:flex items-center gap-2 text-xs opacity-75 font-mono">
-                        <span>Hal. {currentPage} / {activeBook.totalPages}</span>
-                        <span>({Math.round((currentPage / activeBook.totalPages) * 100)}%)</span>
+                    {/* Center: Reading Progress Indicator & Streak */}
+                    <div className="hidden sm:flex items-center gap-3 text-xs opacity-80 font-mono">
+                        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/20 text-[11px] font-bold">
+                            <Flame className="w-3.5 h-3.5 fill-current animate-pulse text-amber-500" />
+                            <span>Streak {readingStreak.days} Hari</span>
+                        </div>
+                        <span>Hal. {currentPage} / {activeBook.totalPages} ({Math.round((currentPage / activeBook.totalPages) * 100)}%)</span>
                     </div>
 
                     {/* Right: Actions */}
                     <div className="flex items-center gap-1.5">
+                        {/* Tandai Selesai Dibaca Button (22 Okt Revision) */}
+                        <button
+                            onClick={() => {
+                                const res = toggleBookCompleted(activeBook.id);
+                                toast(res.isCompleted ? 'Selamat! Buku ditandai Selesai Dibaca 🎓' : 'Status buku diubah kembali ke sedang dibaca', {
+                                    description: activeBook.title
+                                });
+                            }}
+                            className={`p-2 rounded-md transition flex items-center gap-1 text-xs font-semibold ${
+                                isBookCompleted(activeBook.id)
+                                    ? 'bg-emerald-600 text-white shadow-xs'
+                                    : 'hover:bg-black/5 text-inherit border border-black/10'
+                            }`}
+                            title={isBookCompleted(activeBook.id) ? 'Buku sudah selesai dibaca (Klik untuk batalkan)' : 'Tandai buku sebagai Sudah Dibaca'}
+                        >
+                            <CheckCircle2 className="w-4 h-4" />
+                            <span className="hidden md:inline">
+                                {isBookCompleted(activeBook.id) ? 'Sudah Dibaca' : 'Tandai Selesai'}
+                            </span>
+                        </button>
+
+                        {/* Quick Dark Mode / Light Mode Toggle (22 Okt Revision) */}
+                        <button
+                            onClick={() => {
+                                const nextTheme = readerSettings.theme === 'dark' ? 'paper' : 'dark';
+                                saveReaderSettings({ theme: nextTheme });
+                                toast.info(nextTheme === 'dark' ? 'Mengaktifkan Mode Gelap 🌙' : 'Mengaktifkan Mode Terang (Warm Paper) ☀️');
+                            }}
+                            className="p-2 rounded-md hover:bg-black/5 text-inherit transition"
+                            title={readerSettings.theme === 'dark' ? 'Ganti ke Mode Terang (Warm Paper)' : 'Ganti ke Mode Gelap (Dark Mode)'}
+                        >
+                            {readerSettings.theme === 'dark' ? (
+                                <Sun className="w-4 h-4 text-amber-400" />
+                            ) : (
+                                <Moon className="w-4 h-4 text-gray-700" />
+                            )}
+                        </button>
+
                         {/* Bookmark Button (UC-19) */}
                         <button
                             onClick={handleToggleBookmark}
@@ -173,7 +215,7 @@ export default function ReaderScreen({ initialBookId = 'B01' }: ReaderScreenProp
                         <button
                             onClick={() => setShowSettingsDrawer(true)}
                             className="p-2 rounded-md hover:bg-black/5 text-inherit transition"
-                            title="Pengaturan Tampilan Baca"
+                            title="Pengaturan Tampilan Baca Lengkap"
                         >
                             <Settings className="w-4 h-4" />
                         </button>

@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { 
     Star, MessageSquare, Send, ThumbsUp, ShieldCheck, 
-    AlertTriangle, CheckCircle2, Award, Sparkles, Filter, CornerDownRight 
+    AlertTriangle, CheckCircle2, Award, Sparkles, Filter, CornerDownRight,
+    Lock, Unlock, ShoppingCart
 } from 'lucide-react';
 import { FalihNavbar } from '../components/FalihNavbar';
 import { 
     useFalihStore, submitComment, submitEvaluation, 
-    EvaluationInput 
+    EvaluationInput, isBookPaidByBuyer, togglePaidStatusForDemo
 } from '../store';
 import { toast } from 'sonner';
 import '../styles.css';
@@ -18,6 +19,19 @@ export default function ReviewsScreen() {
     const [selectedBookId, setSelectedBookId] = useState<string>('B01');
     const activeBook = books.find(b => b.id === selectedBookId) || books[0];
     const bookReviews = getReviews(activeBook.id);
+    const isPaid = isBookPaidByBuyer(activeBook.id);
+    const [reviewFilter, setReviewFilter] = useState<'all' | 'evaluated' | 'fiveStar'>('all');
+
+    const handleTogglePaid = () => {
+        const res = togglePaidStatusForDemo(activeBook.id);
+        toast.info(res.message);
+    };
+
+    const displayedReviews = bookReviews.filter(r => {
+        if (reviewFilter === 'evaluated') return !!r.evaluationScores;
+        if (reviewFilter === 'fiveStar') return r.rating === 5;
+        return true;
+    });
 
     // UC-07 State: Quick Comment Form
     const [commentInput, setCommentInput] = useState('');
@@ -172,18 +186,52 @@ export default function ReviewsScreen() {
                                 </div>
                             </div>
 
-                            {/* Evaluation CTA Button (UC-20) */}
+                            {/* Payment Status & Evaluation CTA (22 Oktober Meeting Notes) */}
                             <div className="pt-2 border-t border-gray-100">
-                                <p className="text-xs text-gray-600 mb-3 leading-relaxed">
-                                    Sudah selesai membaca? Bagikan evaluasi mutu penerbit dan testimoni pengalaman membaca Anda.
-                                </p>
-                                <button
-                                    onClick={() => setShowEvalModal(true)}
-                                    className="falih-btn-primary w-full py-2.5 px-4 text-xs font-semibold flex items-center justify-center gap-2 shadow-xs"
-                                >
-                                    <Award className="w-4 h-4" />
-                                    <span>Isi Kuesioner Evaluasi (UC-20)</span>
-                                </button>
+                                {isPaid ? (
+                                    <>
+                                        <div className="mb-3 p-2.5 bg-emerald-50 border border-emerald-200 rounded-lg flex items-center justify-between text-xs text-emerald-800">
+                                            <span className="flex items-center gap-1.5 font-bold">
+                                                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                                                <span>Pembayaran Lunas (Hak Ulasan Aktif)</span>
+                                            </span>
+                                            <button 
+                                                onClick={handleTogglePaid}
+                                                className="text-[10px] text-gray-500 hover:text-gray-800 underline"
+                                                title="Ubah simulasi status bayar"
+                                            >
+                                                Ubah Demo
+                                            </button>
+                                        </div>
+                                        <p className="text-xs text-gray-600 mb-3 leading-relaxed">
+                                            Sudah selesai membaca? Bagikan evaluasi mutu penerbit dan testimoni pengalaman membaca Anda.
+                                        </p>
+                                        <button
+                                            onClick={() => setShowEvalModal(true)}
+                                            className="falih-btn-primary w-full py-2.5 px-4 text-xs font-semibold flex items-center justify-center gap-2 shadow-xs"
+                                        >
+                                            <Award className="w-4 h-4" />
+                                            <span>Isi Kuesioner Evaluasi (UC-20)</span>
+                                        </button>
+                                    </>
+                                ) : (
+                                    <div className="p-3.5 bg-amber-50/70 border border-amber-200 rounded-lg text-xs space-y-2">
+                                        <div className="flex items-center gap-1.5 font-bold text-amber-900">
+                                            <Lock className="w-4 h-4 text-amber-700" />
+                                            <span>Ulasan Terkunci: Belum Dibayar</span>
+                                        </div>
+                                        <p className="text-[11px] text-gray-600 leading-relaxed">
+                                            Sesuai ketentuan, hanya pembeli yang telah menyelesaikan pembayaran yang berhak memberikan ulasan & mengisi evaluasi mutu.
+                                        </p>
+                                        <button
+                                            onClick={handleTogglePaid}
+                                            className="w-full py-1.5 text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white rounded-md transition flex items-center justify-center gap-1.5 shadow-xs"
+                                        >
+                                            <Unlock className="w-3.5 h-3.5" />
+                                            <span>Simulasikan Sudah Bayar (Buka Akses)</span>
+                                        </button>
+                                    </div>
+                                )}
                             </div>
                         </div>
 
@@ -213,64 +261,113 @@ export default function ReviewsScreen() {
                                 </span>
                             </div>
 
-                            <form onSubmit={handleCommentSubmit} className="space-y-3">
-                                <div>
-                                    <textarea
-                                        rows={3}
-                                        value={commentInput}
-                                        onChange={e => {
-                                            setCommentInput(e.target.value);
-                                            if (commentErrorHtml) setCommentErrorHtml(null);
-                                        }}
-                                        placeholder="Bagikan tanggapan Anda mengenai buku ini (teks valid minimal 5 karakter)..."
-                                        className="w-full text-sm p-3 rounded-lg border border-gray-300 focus:outline-hidden focus:border-[#0075de] focus:ring-1 focus:ring-[#0075de]"
-                                    />
-
-                                    {/* Smart Filter Error Feedback (UC-07 Alternative Flow 4.a) */}
-                                    {commentErrorHtml && (
-                                        <div className="mt-2 p-3 bg-red-50 border border-red-200 rounded-lg text-xs text-red-800 fade-in-slide">
-                                            <div className="flex items-center gap-1.5 font-bold mb-1">
-                                                <AlertTriangle className="w-4 h-4 text-red-600" />
-                                                <span>Peringatan Filter Konten:</span>
-                                            </div>
-                                            <p className="mb-2">Komentar mengandung kata yang tidak pantas, mohon perbaiki ulasan Anda:</p>
-                                            <div 
-                                                className="p-2 bg-white rounded border border-red-200 font-mono text-xs"
-                                                dangerouslySetInnerHTML={{ __html: commentErrorHtml }}
-                                            />
-                                        </div>
-                                    )}
-                                </div>
-
-                                <div className="flex items-center justify-between">
-                                    <div className="text-[11px] text-gray-400">
-                                        Posting sebagai: <span className="font-semibold text-gray-700">Falih Afnan Fauzi (Pembeli)</span>
-                                    </div>
-
-                                    {/* Tombol hanya aktif jika input valid (UC-07 Main Flow 2) */}
+                            {!isPaid ? (
+                                <div className="p-5 bg-gray-50 border border-gray-200 rounded-lg text-center space-y-2">
+                                    <Lock className="w-7 h-7 text-gray-400 mx-auto" />
+                                    <h3 className="font-bold text-sm text-gray-800">Kolom Komentar Terkunci</h3>
+                                    <p className="text-xs text-gray-500 max-w-md mx-auto">
+                                        "Ulasan: yang penting udah bayar udah boleh ngulas". Selesaikan pembayaran buku ini terlebih dahulu untuk mempublikasikan komentar.
+                                    </p>
                                     <button
-                                        type="submit"
-                                        disabled={!commentInput.trim() || commentInput.trim().length < 3}
-                                        className="falih-btn-primary px-4 py-2 text-xs font-semibold flex items-center gap-1.5 shadow-xs disabled:opacity-40 disabled:pointer-events-none"
+                                        onClick={handleTogglePaid}
+                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#0075de] text-white text-xs font-semibold rounded-md hover:bg-blue-600 transition"
                                     >
-                                        <Send className="w-3.5 h-3.5" />
-                                        <span>Kirim Komentar</span>
+                                        <Unlock className="w-3.5 h-3.5" />
+                                        <span>Aktifkan Status Sudah Bayar (Demo Mode)</span>
                                     </button>
                                 </div>
-                            </form>
+                            ) : (
+                                <form onSubmit={handleCommentSubmit} className="space-y-3">
+                                    <div>
+                                        <textarea
+                                            rows={3}
+                                            value={commentInput}
+                                            onChange={e => {
+                                                setCommentInput(e.target.value);
+                                                if (commentErrorHtml) setCommentErrorHtml(null);
+                                            }}
+                                            placeholder="Bagikan tanggapan Anda mengenai buku ini (teks valid minimal 5 karakter)..."
+                                            className="w-full text-sm p-3 rounded-lg border border-gray-300 focus:outline-hidden focus:border-[#0075de] focus:ring-1 focus:ring-[#0075de]"
+                                        />
+
+                                        {/* Smart Filter Error Feedback (UC-07 Alternative Flow 4.a) */}
+                                        {commentErrorHtml && (
+                                            <div className="mt-2 p-3 bg-red-50 border border-red-200 rounded-lg text-xs text-red-800 fade-in-slide">
+                                                <div className="flex items-center gap-1.5 font-bold mb-1">
+                                                    <AlertTriangle className="w-4 h-4 text-red-600" />
+                                                    <span>Peringatan Filter Konten:</span>
+                                                </div>
+                                                <p className="mb-2">Komentar mengandung kata yang tidak pantas, mohon perbaiki ulasan Anda:</p>
+                                                <div 
+                                                    className="p-2 bg-white rounded border border-red-200 font-mono text-xs"
+                                                    dangerouslySetInnerHTML={{ __html: commentErrorHtml }}
+                                                />
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    <div className="flex items-center justify-between">
+                                        <div className="text-[11px] text-gray-500 flex items-center gap-1">
+                                            <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                                            <span>Posting sebagai: <strong className="text-gray-800">Falih Afnan Fauzi (Pembeli Sah)</strong></span>
+                                        </div>
+
+                                        {/* Tombol hanya aktif jika input valid (UC-07 Main Flow 2) */}
+                                        <button
+                                            type="submit"
+                                            disabled={!commentInput.trim() || commentInput.trim().length < 3}
+                                            className="falih-btn-primary px-4 py-2 text-xs font-semibold flex items-center gap-1.5 shadow-xs disabled:opacity-40 disabled:pointer-events-none"
+                                        >
+                                            <Send className="w-3.5 h-3.5" />
+                                            <span>Kirim Komentar</span>
+                                        </button>
+                                    </div>
+                                </form>
+                            )}
                         </div>
 
-                        {/* Feed Komentar & Ulasan Publik */}
+                        {/* Feed Komentar & Ulasan Publik (Read Ulasan) */}
                         <div className="space-y-4">
-                            <div className="flex items-center justify-between text-xs text-gray-500 font-medium px-1">
-                                <span>Daftar Ulasan & Diskusi Publik ({bookReviews.length})</span>
-                                <span className="flex items-center gap-1 text-emerald-700 font-semibold">
+                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-medium px-1">
+                                <div className="flex items-center gap-2">
+                                    <span className="text-gray-500">Filter Ulasan:</span>
+                                    <button
+                                        onClick={() => setReviewFilter('all')}
+                                        className={`px-2.5 py-1 rounded-md text-xs font-semibold transition ${
+                                            reviewFilter === 'all' ? 'bg-[#0075de] text-white' : 'bg-white border text-gray-700'
+                                        }`}
+                                    >
+                                        Semua ({bookReviews.length})
+                                    </button>
+                                    <button
+                                        onClick={() => setReviewFilter('evaluated')}
+                                        className={`px-2.5 py-1 rounded-md text-xs font-semibold transition ${
+                                            reviewFilter === 'evaluated' ? 'bg-[#0075de] text-white' : 'bg-white border text-gray-700'
+                                        }`}
+                                    >
+                                        Kuesioner Mutu ({bookReviews.filter(r => !!r.evaluationScores).length})
+                                    </button>
+                                    <button
+                                        onClick={() => setReviewFilter('fiveStar')}
+                                        className={`px-2.5 py-1 rounded-md text-xs font-semibold transition ${
+                                            reviewFilter === 'fiveStar' ? 'bg-[#0075de] text-white' : 'bg-white border text-gray-700'
+                                        }`}
+                                    >
+                                        Bintang 5 ({bookReviews.filter(r => r.rating === 5).length})
+                                    </button>
+                                </div>
+                                <span className="flex items-center gap-1 text-emerald-700 font-semibold text-[11px]">
                                     <ShieldCheck className="w-3.5 h-3.5" />
-                                    <span>Seluruh pembeli terverifikasi</span>
+                                    <span>Seluruh pembeli terverifikasi lunas</span>
                                 </span>
                             </div>
 
-                            {bookReviews.map(r => (
+                            {displayedReviews.length === 0 ? (
+                                <div className="falih-card p-8 text-center text-gray-500 text-xs">
+                                    Belum ada ulasan untuk filter ini.
+                                </div>
+                            ) : (
+                                displayedReviews.map(r => (
                                 <div key={r.id} className="falih-card p-5 space-y-3 hover:border-gray-300 transition">
                                     <div className="flex items-start justify-between gap-3">
                                         <div className="flex items-center gap-2.5">
@@ -343,7 +440,7 @@ export default function ReviewsScreen() {
                                         </div>
                                     )}
                                 </div>
-                            ))}
+                            )))}
                         </div>
                     </div>
                 </div>

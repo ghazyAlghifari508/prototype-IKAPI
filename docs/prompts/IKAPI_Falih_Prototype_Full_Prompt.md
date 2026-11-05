@@ -264,3 +264,24 @@ Route::prefix('prototype')->name('prototype.')->group(function () {
 4. **Reader Experience:** Halaman e-reader dapat dibolak-balik, ukuran font/tema dapat diganti, bookmark tersimpan dan mendeteksi duplikat, serta posisi halaman terakhir otomatis tersimpan (*auto-resume*).
 5. **Review & Evaluation:** Filter kata kasar pada form komentar bekerja dengan baik, dan kuesioner evaluasi 4 skala likert memvalidasi kelengkapan sebelum terkirim.
 6. **Code Quality:** `npm run build` dan `php artisan test` tetap lulus 100% tanpa regresi.
+
+---
+
+## 9. Addendum: Catatan Rapat Revisi 22 Oktober 2026 (Domain Pembeli)
+
+Berdasarkan arahan rapat koordinasi 22 Oktober 2026, ditambahkan fitur-fitur spesifik untuk pembeli (Falih Afnan Fauzi):
+
+1. **Ulasan Pembeli Terverifikasi (Wajib Lunas):**
+   - *"Ulasan (yang penting udah bayar udah boleh ngulas), create dan read ulasan"*.
+   - Pembeli hanya diizinkan mempublikasikan ulasan dan evaluasi jika status transaksi buku tersebut telah dibayar/lunas.
+   - Dilengkapi switch simulasi status pembayaran pada demo untuk memudahkan pengujian live kedua skenario (lunas vs belum lunas).
+2. **Ikon Love (Favoritkan Buku):**
+   - Terdapat ikon hati di setiap sampul buku untuk menandai buku favorit ke dalam daftar *Favorit Saya*.
+   - Filter cepat kategori *❤️ Favorit Saya* di katalog.
+3. **Status 'Sudah Dibaca' di Perpustakaan / E-Reader:**
+   - Pembaca dapat menandai status buku sebagai *Sudah Dibaca 🎓* dengan lencana visual pada kartu katalog dan tombol centang pada E-Reader.
+4. **Streak Membaca Harian (Reading Streak):**
+   - Indikator streak membaca harian pembeli (misal: 4 hari berturut-turut) beserta pencapaian target waktu membaca harian.
+5. **Dark Mode & Light Mode pada E-Reader:**
+   - Tombol cepat 1-klik untuk beralih antara Mode Gelap (Dark Mode) dan Mode Terang (Warm Paper) di bilah navigasi reader.
+

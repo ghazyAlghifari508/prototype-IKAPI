@@ -20,7 +20,11 @@ const STORAGE_KEYS = {
     BOOKMARKS: 'ikapi_prototype_falih_bookmarks',
     REVIEWS: 'ikapi_prototype_falih_reviews',
     SETTINGS: 'ikapi_prototype_falih_reader_settings',
-    PROMO: 'ikapi_prototype_falih_promo'
+    PROMO: 'ikapi_prototype_falih_promo',
+    FAVORITES: 'ikapi_prototype_falih_favorites',
+    COMPLETED: 'ikapi_prototype_falih_completed',
+    STREAK: 'ikapi_prototype_falih_streak',
+    PAID_BOOKS: 'ikapi_prototype_falih_paid_books'
 };
 
 // Initial state helpers
@@ -383,6 +387,117 @@ export function submitEvaluation(bookId: string, input: EvaluationInput): {
     };
 }
 
+// ==========================================
+// 22 OKTOBER REVISION FEATURES
+// ==========================================
+
+// 1. Ikon Love / Favoritkan Buku
+export function getFavoriteBookIds(): string[] {
+    return getStored<string[]>(STORAGE_KEYS.FAVORITES, ['B01', 'B05']);
+}
+
+export function isBookFavorite(bookId: string): boolean {
+    return getFavoriteBookIds().includes(bookId);
+}
+
+export function toggleFavoriteBook(bookId: string): { isFavorite: boolean; message: string } {
+    const list = getFavoriteBookIds();
+    const index = list.indexOf(bookId);
+    let newState = false;
+
+    if (index > -1) {
+        list.splice(index, 1);
+        newState = false;
+    } else {
+        list.push(bookId);
+        newState = true;
+    }
+
+    setStored(STORAGE_KEYS.FAVORITES, list);
+    return {
+        isFavorite: newState,
+        message: newState ? 'Buku berhasil ditambahkan ke daftar Favorit Saya ❤️' : 'Buku dihapus dari daftar Favorit'
+    };
+}
+
+// 2. Status 'Sudah Dibaca' di Perpustakaan / E-Reader
+export function getCompletedBookIds(): string[] {
+    return getStored<string[]>(STORAGE_KEYS.COMPLETED, ['B07']);
+}
+
+export function isBookCompleted(bookId: string): boolean {
+    return getCompletedBookIds().includes(bookId);
+}
+
+export function toggleBookCompleted(bookId: string): { isCompleted: boolean; message: string } {
+    const list = getCompletedBookIds();
+    const index = list.indexOf(bookId);
+    let newState = false;
+
+    if (index > -1) {
+        list.splice(index, 1);
+        newState = false;
+    } else {
+        list.push(bookId);
+        newState = true;
+    }
+
+    setStored(STORAGE_KEYS.COMPLETED, list);
+    return {
+        isCompleted: newState,
+        message: newState ? 'Selamat! Buku ditandai sebagai Sudah Selesai Dibaca 🎓' : 'Status buku diubah kembali ke sedang dibaca'
+    };
+}
+
+// 3. Streak Membaca Harian
+export interface StreakData {
+    days: number;
+    todayMinutes: number;
+    goalMinutes: number;
+    isGoalAchieved: boolean;
+}
+
+export function getReadingStreak(): StreakData {
+    return getStored<StreakData>(STORAGE_KEYS.STREAK, {
+        days: 4,
+        todayMinutes: 25,
+        goalMinutes: 20,
+        isGoalAchieved: true
+    });
+}
+
+// 4. Syarat Ulasan: Wajib Pembeli yang Sudah Membayar
+export function getPaidBookIds(): string[] {
+    // Default buku yang disimulasikan sudah dibeli/dibayar oleh pembeli Falih
+    return getStored<string[]>(STORAGE_KEYS.PAID_BOOKS, ['B01', 'B02', 'B03', 'B05', 'B07']);
+}
+
+export function isBookPaidByBuyer(bookId: string): boolean {
+    return getPaidBookIds().includes(bookId);
+}
+
+export function togglePaidStatusForDemo(bookId: string): { isPaid: boolean; message: string } {
+    const list = getPaidBookIds();
+    const index = list.indexOf(bookId);
+    let newState = false;
+
+    if (index > -1) {
+        list.splice(index, 1);
+        newState = false;
+    } else {
+        list.push(bookId);
+        newState = true;
+    }
+
+    setStored(STORAGE_KEYS.PAID_BOOKS, list);
+    return {
+        isPaid: newState,
+        message: newState 
+            ? 'Simulasi diubah: Buku ini telah berhasil DIBAYAR oleh pembeli (Hak Ulasan Terbuka ✅)' 
+            : 'Simulasi diubah: Buku ini BELUM dibayar (Hak Ulasan Terkunci 🔒)'
+    };
+}
+
 export function resetAllFalihData(): void {
     localStorage.removeItem(STORAGE_KEYS.CART);
     localStorage.removeItem(STORAGE_KEYS.PROGRESS);
@@ -390,6 +505,10 @@ export function resetAllFalihData(): void {
     localStorage.removeItem(STORAGE_KEYS.REVIEWS);
     localStorage.removeItem(STORAGE_KEYS.SETTINGS);
     localStorage.removeItem(STORAGE_KEYS.PROMO);
+    localStorage.removeItem(STORAGE_KEYS.FAVORITES);
+    localStorage.removeItem(STORAGE_KEYS.COMPLETED);
+    localStorage.removeItem(STORAGE_KEYS.STREAK);
+    localStorage.removeItem(STORAGE_KEYS.PAID_BOOKS);
     notifyListeners();
 }
 
@@ -406,8 +525,15 @@ export function useFalihStore() {
         cartItems: getCartItems(),
         cartSummary: getCartSummary(),
         readerSettings: getReaderSettings(),
+        favoriteBookIds: getFavoriteBookIds(),
+        completedBookIds: getCompletedBookIds(),
+        readingStreak: getReadingStreak(),
+        paidBookIds: getPaidBookIds(),
         getBookmarks,
         getReadingProgress,
-        getReviews
+        getReviews,
+        isBookFavorite,
+        isBookCompleted,
+        isBookPaidByBuyer
     };
 }
