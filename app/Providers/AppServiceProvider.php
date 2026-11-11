@@ -2,9 +2,12 @@
 
 namespace App\Providers;
 
+use App\Notifications\PasswordChangedNotification;
 use Carbon\CarbonImmutable;
+use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
 
@@ -24,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->configureDefaults();
+        $this->invalidateDatabaseSessionsAfterPasswordReset();
     }
 
     /**
@@ -46,5 +50,20 @@ class AppServiceProvider extends ServiceProvider
                 ->uncompromised()
             : null,
         );
+    }
+
+    protected function invalidateDatabaseSessionsAfterPasswordReset(): void
+    {
+        Event::listen(PasswordReset::class, function (PasswordReset $event): void {
+            $event->user->notify(new PasswordChangedNotification);
+
+            if (config('session.driver') !== 'database') {
+                return;
+            }
+
+            DB::table((string) config('session.table', 'sessions'))
+                ->where('user_id', $event->user->getAuthIdentifier())
+                ->delete();
+        });
     }
 }

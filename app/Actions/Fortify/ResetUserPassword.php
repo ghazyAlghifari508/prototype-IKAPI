@@ -20,6 +20,15 @@ class ResetUserPassword implements ResetsUserPasswords
     {
         Validator::make($input, [
             'password' => $this->passwordRules(),
+        ], [
+            'password.required' => 'Kata sandi wajib diisi.',
+            'password.confirmed' => 'Konfirmasi kata sandi tidak cocok.',
+            'password.min' => 'Kata sandi minimal :min karakter.',
+            'password.password.mixed' => 'Gunakan huruf besar dan huruf kecil pada kata sandi.',
+            'password.password.letters' => 'Kata sandi harus mengandung huruf.',
+            'password.password.numbers' => 'Kata sandi harus mengandung angka.',
+            'password.password.symbols' => 'Kata sandi harus mengandung simbol.',
+            'password.password.uncompromised' => 'Kata sandi pernah terlibat dalam kebocoran data. Pilih kata sandi lain.',
         ])->validate();
 
         $user->forceFill([
