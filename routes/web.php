@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\Publisher\BookController;
+use App\Http\Controllers\Publisher\PublisherDashboardController;
 use App\Http\Controllers\Publisher\PublisherLoginController;
 use App\Http\Controllers\Publisher\PublisherRegistrationController;
+use App\Http\Controllers\Publisher\PublisherSettingsController;
 use App\Http\Controllers\Publisher\PublisherVerificationDocumentController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,7 +31,15 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware(['auth', 'verified', 'publisher.approved'])->group(function () {
-    Route::inertia('/publisher/dashboard', 'publisher/dashboard')->name('publisher.dashboard');
+    Route::get('/publisher/dashboard', PublisherDashboardController::class)->name('publisher.dashboard');
+    Route::get('/publisher/settings', [PublisherSettingsController::class, 'edit'])->name('publisher.settings.edit');
+    Route::put('/publisher/settings', [PublisherSettingsController::class, 'update'])->name('publisher.settings.update');
+
+    Route::get('/publisher/books', [BookController::class, 'index'])->name('publisher.books.index');
+    Route::get('/publisher/books/create', [BookController::class, 'create'])->name('publisher.books.create');
+    Route::post('/publisher/books', [BookController::class, 'store'])->name('publisher.books.store');
+    Route::get('/publisher/books/{book}/edit', [BookController::class, 'edit'])->name('publisher.books.edit');
+    Route::put('/publisher/books/{book}', [BookController::class, 'update'])->name('publisher.books.update');
 });
 
 require __DIR__.'/settings.php';
