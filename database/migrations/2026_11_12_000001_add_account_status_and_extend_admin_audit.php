@@ -19,7 +19,22 @@ return new class extends Migration
             $table->string('action')->nullable();
             $table->text('reason')->nullable();
         });
-        DB::statement("UPDATE publisher_registration_reviews AS reviews SET target_user_id = registrations.user_id, action = CASE WHEN reviews.new_status = 'approved' THEN 'approval' ELSE 'rejection' END, reason = reviews.rejection_reason FROM publisher_registrations AS registrations WHERE registrations.id = reviews.publisher_registration_id");
+        // Backfill legacy approval audits without PostgreSQL-only UPDATE ... FROM syntax.
+        DB::table('publisher_registration_reviews')
+            ->whereNotNull('publisher_registration_id')
+            ->chunkById(200, function ($reviews): void {
+                $userIds = DB::table('publisher_registrations')
+                    ->whereIn('id', $reviews->pluck('publisher_registration_id'))
+                    ->pluck('user_id', 'id');
+
+                foreach ($reviews as $review) {
+                    DB::table('publisher_registration_reviews')->where('id', $review->id)->update([
+                        'target_user_id' => $userIds[$review->publisher_registration_id] ?? null,
+                        'action' => $review->new_status === 'approved' ? 'approval' : 'rejection',
+                        'reason' => $review->rejection_reason,
+                    ]);
+                }
+            }, 'id');
     }
 
     public function down(): void
