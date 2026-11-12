@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Permission;
@@ -24,6 +25,10 @@ class DatabaseSeeder extends Seeder
         Permission::findOrCreate('access-admin-panel', 'web');
         Permission::findOrCreate('review-publisher-registrations', 'web');
         Permission::findOrCreate('manage-user-accounts', 'web');
+
+        foreach (['Fiksi', 'Nonfiksi', 'Pendidikan', 'Bisnis', 'Teknologi', 'Anak', 'Agama', 'Biografi'] as $category) {
+            Category::firstOrCreate(['name' => $category]);
+        }
 
         // WithoutModelEvents suppresses Spatie's normal cache invalidation.
         app(PermissionRegistrar::class)->forgetCachedPermissions();

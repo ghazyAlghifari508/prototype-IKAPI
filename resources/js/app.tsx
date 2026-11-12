@@ -5,6 +5,7 @@ import { initializeTheme } from '@/hooks/use-appearance';
 import AppLayout from '@/layouts/app-layout';
 import AuthLayout from '@/layouts/auth-layout';
 import ProfileLayout from '@/layouts/profile-layout';
+import PublisherLayout from '@/layouts/publisher-layout';
 import SettingsLayout from '@/layouts/settings/layout';
 
 const appName = import.meta.env.VITE_APP_NAME || 'IKAPI Jabar';
@@ -13,12 +14,14 @@ void createInertiaApp({
     title: (title) => (title ? `${title} - ${appName}` : appName),
     layout: (name) => {
         switch (true) {
-            case name === 'welcome' || name === 'publisher/dashboard':
+            case name === 'welcome':
                 return null;
             case name.startsWith('auth/') ||
                 name === 'publisher/login' ||
                 name === 'publisher/register':
                 return AuthLayout;
+            case name.startsWith('publisher/'):
+                return PublisherLayout;
             case name === 'settings/profile':
                 return ProfileLayout;
             case name.startsWith('settings/'):
