@@ -45,7 +45,7 @@
             "composer install",
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "@php artisan key:generate --skip-if-set",
-            "@php artisan migrate",
+            "@php artisan migrate --seed",
             "npm ci",
             "npm run build"
         ],
@@ -87,7 +87,7 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
-            "@php artisan migrate --graceful --ansi"
+            "@php artisan migrate --seed --graceful --ansi"
         ],
         "pre-package-uninstall": [
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"

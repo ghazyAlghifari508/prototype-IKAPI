@@ -5,6 +5,7 @@ namespace Tests\Feature\Auth;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\RateLimiter;
+use Inertia\Testing\AssertableInertia as Assert;
 use Laravel\Fortify\Features;
 use Tests\TestCase;
 
@@ -32,6 +33,24 @@ class AuthenticationTest extends TestCase
         $response->assertRedirect(route('dashboard', absolute: false));
     }
 
+    public function test_inertia_shares_only_the_public_authenticated_identity(): void
+    {
+        $user = User::factory()->create(['phone' => '+6281234567890']);
+
+        $this->actingAs($user)
+            ->get(route('dashboard'))
+            ->assertInertia(fn (Assert $page) => $page
+                ->where('auth.user.id', $user->id)
+                ->where('auth.user.email', $user->email)
+                ->where('auth.user.phone', '+6281234567890')
+                ->where('auth.user.roles', [])
+                ->missing('auth.user.password')
+                ->missing('auth.user.two_factor_secret')
+                ->missing('auth.user.two_factor_confirmed_at')
+                ->missing('auth.user.created_at'),
+            );
+    }
+
     public function test_users_with_two_factor_enabled_are_redirected_to_two_factor_challenge()
     {
         $this->skipUnlessFortifyHas(Features::twoFactorAuthentication());
@@ -57,12 +76,26 @@ class AuthenticationTest extends TestCase
     {
         $user = User::factory()->create();
 
-        $this->post(route('login.store'), [
+        $response = $this->from(route('login'))->post(route('login.store'), [
             'email' => $user->email,
             'password' => 'wrong-password',
         ]);
 
         $this->assertGuest();
+        $response->assertRedirect(route('login'));
+        $response->assertSessionHasErrors(['email' => 'Email atau kata sandi salah.']);
+    }
+
+    public function test_unknown_email_gets_the_same_generic_login_error(): void
+    {
+        $response = $this->from(route('login'))->post(route('login.store'), [
+            'email' => 'unknown@example.com',
+            'password' => 'wrong-password',
+        ]);
+
+        $this->assertGuest();
+        $response->assertRedirect(route('login'));
+        $response->assertSessionHasErrors(['email' => 'Email atau kata sandi salah.']);
     }
 
     public function test_users_can_logout()

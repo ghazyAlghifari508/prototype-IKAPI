@@ -16,6 +16,8 @@ return [
 
     'default' => env('MAIL_MAILER', 'log'),
 
+    'password_reset_mailer' => env('MAIL_PASSWORD_RESET_MAILER', 'smtp'),
+
     /*
     |--------------------------------------------------------------------------
     | Mailer Configurations

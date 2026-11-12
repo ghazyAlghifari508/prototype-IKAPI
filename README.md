@@ -32,7 +32,7 @@ Permission 8. Detail versi, analisis dokumen, dan hasil verifikasi terdapat di
 
    ```sh
    php artisan key:generate --skip-if-set
-   php artisan migrate
+   php artisan migrate --seed
    php artisan wayfinder:generate --with-form
    npm run build
    ```

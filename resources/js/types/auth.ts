@@ -2,15 +2,28 @@ export type User = {
     id: number;
     name: string;
     email: string;
-    avatar?: string;
+    phone: string | null;
+    address: string | null;
+    avatar_url: string | null;
+    avatar_preset:
+        | 'cat'
+        | 'dog'
+        | 'panda'
+        | 'frog'
+        | 'rabbit'
+        | 'owl'
+        | 'bear'
+        | 'koala'
+        | null;
     email_verified_at: string | null;
-    two_factor_enabled?: boolean;
-    created_at: string;
-    updated_at: string;
-    [key: string]: unknown;
+    roles: string[];
 };
 
 export type Auth = {
+    user: User | null;
+};
+
+export type AuthenticatedAuth = {
     user: User;
 };
 

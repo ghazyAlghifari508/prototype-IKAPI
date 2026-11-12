@@ -4,6 +4,9 @@ namespace App\Providers;
 
 use App\Actions\Fortify\CreateNewUser;
 use App\Actions\Fortify\ResetUserPassword;
+use App\Http\Controllers\Auth\PasswordResetLinkController as AppPasswordResetLinkController;
+use App\Http\Responses\FailedPasswordResetResponse;
+use App\Http\Responses\SuccessfulPasswordResetResponse;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
@@ -11,8 +14,11 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rules\Password;
 use Inertia\Inertia;
+use Laravel\Fortify\Contracts\FailedPasswordResetResponse as FailedPasswordResetResponseContract;
+use Laravel\Fortify\Contracts\PasswordResetResponse as PasswordResetResponseContract;
 use Laravel\Fortify\Features;
 use Laravel\Fortify\Fortify;
+use Laravel\Fortify\Http\Controllers\PasswordResetLinkController;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -21,7 +27,12 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(
+            PasswordResetLinkController::class,
+            AppPasswordResetLinkController::class,
+        );
+        $this->app->bind(FailedPasswordResetResponseContract::class, FailedPasswordResetResponse::class);
+        $this->app->bind(PasswordResetResponseContract::class, SuccessfulPasswordResetResponse::class);
     }
 
     /**
@@ -96,5 +107,6 @@ class FortifyServiceProvider extends ServiceProvider
                 ($request->input('credential.id') ?: $request->session()->getId()).'|'.$request->ip(),
             );
         });
+
     }
 }

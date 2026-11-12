@@ -12,13 +12,17 @@ trait ProfileValidationRules
     /**
      * Get the validation rules used to validate user profiles.
      *
-     * @return array<string, array<int, Unique|ValidationRule|array<mixed>|string>>
+     * @return array<string, array<int, \Closure|Unique|ValidationRule|array<mixed>|string>>
      */
     protected function profileRules(?int $userId = null): array
     {
         return [
             'name' => $this->nameRules(),
             'email' => $this->emailRules($userId),
+            'phone' => $this->phoneRules(),
+            'address' => $this->addressRules(),
+            'avatar' => $this->avatarRules(),
+            'avatar_preset' => ['nullable', 'string', 'in:cat,dog,panda,frog,rabbit,owl,bear,koala'],
         ];
     }
 
@@ -29,7 +33,7 @@ trait ProfileValidationRules
      */
     protected function nameRules(): array
     {
-        return ['required', 'string', 'max:255'];
+        return ['bail', 'required', 'string', 'max:255'];
     }
 
     /**
@@ -40,6 +44,7 @@ trait ProfileValidationRules
     protected function emailRules(?int $userId = null): array
     {
         return [
+            'bail',
             'required',
             'string',
             'email',
@@ -48,5 +53,42 @@ trait ProfileValidationRules
                 ? Rule::unique(User::class)
                 : Rule::unique(User::class)->ignore($userId),
         ];
+    }
+
+    /**
+     * @return array<int, string>
+     */
+    protected function addressRules(): array
+    {
+        return ['nullable', 'string', 'max:1000'];
+    }
+
+    /**
+     * @return array<int, string|\Closure>
+     */
+    protected function phoneRules(): array
+    {
+        return [
+            'nullable', 'string', 'max:32', 'regex:/^\\+?[0-9\\s().-]+$/',
+            function (string $attribute, mixed $value, \Closure $fail): void {
+                if ($value === null || $value === '') {
+                    return;
+                }
+
+                $digits = preg_replace('/\\D/', '', (string) $value);
+
+                if (strlen($digits) < 8 || strlen($digits) > 15) {
+                    $fail('Masukkan nomor telepon yang valid.');
+                }
+            },
+        ];
+    }
+
+    /**
+     * @return array<int, string>
+     */
+    protected function avatarRules(): array
+    {
+        return ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048'];
     }
 }
