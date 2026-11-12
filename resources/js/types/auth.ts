@@ -5,7 +5,16 @@ export type User = {
     phone: string | null;
     address: string | null;
     avatar_url: string | null;
-    avatar_preset: 'cat' | 'dog' | 'panda' | 'frog' | 'rabbit' | 'owl' | 'bear' | 'koala' | null;
+    avatar_preset:
+        | 'cat'
+        | 'dog'
+        | 'panda'
+        | 'frog'
+        | 'rabbit'
+        | 'owl'
+        | 'bear'
+        | 'koala'
+        | null;
     email_verified_at: string | null;
     roles: string[];
 };

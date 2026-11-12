@@ -97,6 +97,7 @@ class ProfileController extends Controller
         }
 
         Inertia::flash('toast', ['type' => 'success', 'message' => 'Profil berhasil diperbarui.']);
+        $request->session()->flash('status', 'Profil berhasil diperbarui.');
 
         return to_route('profile.edit');
     }

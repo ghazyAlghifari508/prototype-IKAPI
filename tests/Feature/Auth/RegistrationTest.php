@@ -33,9 +33,13 @@ class RegistrationTest extends TestCase
         $this->seed();
         $this->seed();
 
-        $this->assertDatabaseCount('roles', 1);
+        $this->assertDatabaseCount('roles', 2);
         $this->assertDatabaseHas('roles', [
             'name' => 'buyer',
+            'guard_name' => 'web',
+        ]);
+        $this->assertDatabaseHas('roles', [
+            'name' => 'publisher',
             'guard_name' => 'web',
         ]);
     }
@@ -50,6 +54,7 @@ class RegistrationTest extends TestCase
             'phone' => '081234567890',
             'password' => 'password',
             'password_confirmation' => 'password',
+            'terms_accepted' => true,
         ]);
 
         $response->assertSessionHasErrors([
@@ -66,6 +71,7 @@ class RegistrationTest extends TestCase
             'phone' => '081234567890',
             'password' => 'password',
             'password_confirmation' => 'password',
+            'terms_accepted' => true,
             'role' => 'admin',
             'is_admin' => true,
             'permissions' => ['access-admin-panel'],
@@ -92,6 +98,7 @@ class RegistrationTest extends TestCase
             'phone' => 'not a phone',
             'password' => 'password',
             'password_confirmation' => 'password',
+            'terms_accepted' => true,
         ]);
 
         $response->assertRedirect(route('register'));
@@ -107,6 +114,7 @@ class RegistrationTest extends TestCase
             'phone' => '081234567890',
             'password' => 'password',
             'password_confirmation' => 'different-password',
+            'terms_accepted' => true,
         ]);
 
         $response->assertSessionHasErrors([
@@ -123,6 +131,7 @@ class RegistrationTest extends TestCase
             'phone' => '081234567890',
             'password' => 'password',
             'password_confirmation' => 'password',
+            'terms_accepted' => true,
         ];
 
         foreach ([
@@ -130,6 +139,7 @@ class RegistrationTest extends TestCase
             'email' => ['email' => 'not-an-email'],
             'phone' => ['phone' => ''],
             'password' => ['password' => 'short', 'password_confirmation' => 'short'],
+            'terms_accepted' => ['terms_accepted' => false],
         ] as $field => $changes) {
             $response = $this->from(route('register'))->post(
                 route('register.store'),
@@ -139,7 +149,9 @@ class RegistrationTest extends TestCase
             $response->assertRedirect(route('register'));
             $response->assertSessionHasErrors($field === 'password'
                 ? ['password' => 'Kata sandi minimal 8 karakter.']
-                : [$field],
+                : ($field === 'terms_accepted'
+                    ? ['terms_accepted' => 'Anda harus menyetujui syarat penggunaan dan kebijakan privasi.']
+                    : [$field]),
             );
         }
 
@@ -156,6 +168,7 @@ class RegistrationTest extends TestCase
             'phone' => '081234567890',
             'password' => 'password',
             'password_confirmation' => 'password',
+            'terms_accepted' => true,
         ]);
 
         $response->assertSessionHasErrors(['email' => 'Email sudah terdaftar.']);

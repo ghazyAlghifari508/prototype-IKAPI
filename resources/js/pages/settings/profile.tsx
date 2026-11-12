@@ -1,5 +1,11 @@
 import { Form, Head, Link, usePage } from '@inertiajs/react';
-import { ArrowRight, Camera, KeyRound, UserRound } from 'lucide-react';
+import {
+    ArrowRight,
+    Camera,
+    CheckCircle2,
+    KeyRound,
+    UserRound,
+} from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import ProfileController from '@/actions/App/Http/Controllers/Settings/ProfileController';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -111,6 +117,20 @@ export default function Profile({
                         <KeyRound className="size-4" /> Keamanan
                     </Link>
                 </nav>
+
+                {status && (
+                    <div
+                        role="status"
+                        className="flex items-center gap-3 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-800"
+                    >
+                        <CheckCircle2 className="size-5 shrink-0 text-emerald-600" />
+                        <span>
+                            {status === 'verification-link-sent'
+                                ? 'Tautan verifikasi baru telah dikirim ke alamat email Anda.'
+                                : status}
+                        </span>
+                    </div>
+                )}
 
                 {!isEditing ? (
                     <div className="space-y-6">

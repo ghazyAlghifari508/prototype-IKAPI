@@ -26,11 +26,12 @@ export default function DeleteUser() {
                 title="Hapus akun"
                 description="Hapus akun dan seluruh data yang tersimpan di dalamnya."
             />
-                <div className="space-y-4 rounded-xl border border-rose-200 bg-rose-50/70 p-5">
-                    <div className="relative space-y-0.5 text-rose-700">
-                        <p className="font-semibold">Perhatian</p>
+            <div className="space-y-4 rounded-xl border border-rose-200 bg-rose-50/70 p-5">
+                <div className="relative space-y-0.5 text-rose-700">
+                    <p className="font-semibold">Perhatian</p>
                     <p className="text-sm">
-                            Penghapusan akun bersifat permanen dan tidak dapat dibatalkan.
+                        Penghapusan akun bersifat permanen dan tidak dapat
+                        dibatalkan.
                     </p>
                 </div>
 
@@ -44,11 +45,10 @@ export default function DeleteUser() {
                         </Button>
                     </DialogTrigger>
                     <DialogContent>
-                        <DialogTitle>
-                            Yakin ingin menghapus akun?
-                        </DialogTitle>
+                        <DialogTitle>Yakin ingin menghapus akun?</DialogTitle>
                         <DialogDescription>
-                            Seluruh data akun akan dihapus permanen. Masukkan kata sandi untuk mengonfirmasi tindakan ini.
+                            Seluruh data akun akan dihapus permanen. Masukkan
+                            kata sandi untuk mengonfirmasi tindakan ini.
                         </DialogDescription>
 
                         <Form

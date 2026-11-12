@@ -8,10 +8,13 @@ export default function ProfileLayout({
     children: React.ReactNode;
 }) {
     return (
-        <main className="min-h-svh bg-[#f2f7ff] px-4 py-5 text-[#17233b] [--background:#ffffff] [--foreground:#17233b] [--card:#ffffff] [--card-foreground:#17233b] [--muted:#f1f6fc] [--muted-foreground:#64748b] [--border:#dbe5f2] [--input:#dbe5f2] [--primary:#0878df] [--primary-foreground:#ffffff] [--ring:#0878df] sm:px-6 sm:py-8">
+        <main className="min-h-svh bg-[#f2f7ff] px-4 py-5 text-[#17233b] [--background:#ffffff] [--border:#dbe5f2] [--card-foreground:#17233b] [--card:#ffffff] [--foreground:#17233b] [--input:#dbe5f2] [--muted-foreground:#64748b] [--muted:#f1f6fc] [--primary-foreground:#ffffff] [--primary:#0878df] [--ring:#0878df] sm:px-6 sm:py-8">
             <div className="mx-auto w-full max-w-6xl">
                 <header className="mb-6 flex items-center justify-between rounded-2xl border border-[#dce8f7] bg-white px-5 py-4 shadow-sm sm:px-7">
-                    <Link href={home()} className="inline-flex items-center gap-3">
+                    <Link
+                        href={home()}
+                        className="inline-flex items-center gap-3"
+                    >
                         <span className="flex size-10 items-center justify-center rounded-xl bg-[#0878df] text-white shadow-sm">
                             <BookOpen className="size-5" />
                         </span>

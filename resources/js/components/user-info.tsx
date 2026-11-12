@@ -19,7 +19,8 @@ export function UserInfo({
                     <AvatarImage src={user.avatar_url} alt={user.name} />
                 )}
                 <AvatarFallback className="rounded-lg bg-neutral-200 text-black dark:bg-neutral-700 dark:text-white">
-                    {avatarPresetEmoji(user.avatar_preset) ?? getInitials(user.name)}
+                    {avatarPresetEmoji(user.avatar_preset) ??
+                        getInitials(user.name)}
                 </AvatarFallback>
             </Avatar>
             <div className="grid flex-1 text-left text-sm leading-tight">

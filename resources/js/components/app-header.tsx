@@ -225,7 +225,13 @@ export function AppHeader({ breadcrumbs = [] }: Props) {
                                             />
                                         )}
                                         <AvatarFallback className="rounded-lg bg-neutral-200 text-black dark:bg-neutral-700 dark:text-white">
-                                            {avatarPresetEmoji(auth.user?.avatar_preset ?? null) ?? getInitials(auth.user?.name ?? '')}
+                                            {avatarPresetEmoji(
+                                                auth.user?.avatar_preset ??
+                                                    null,
+                                            ) ??
+                                                getInitials(
+                                                    auth.user?.name ?? '',
+                                                )}
                                         </AvatarFallback>
                                     </Avatar>
                                 </Button>
