@@ -2,14 +2,18 @@
 
 namespace App\Providers;
 
+use App\Models\User;
 use App\Notifications\PasswordChangedNotification;
 use Carbon\CarbonImmutable;
+use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\PasswordReset;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
+use Illuminate\Validation\ValidationException;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -28,6 +32,23 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->configureDefaults();
         $this->invalidateDatabaseSessionsAfterPasswordReset();
+        Event::listen(Login::class, function (Login $event): void {
+            if (! $event->user instanceof User) {
+                return;
+            }
+            $user = $event->user->fresh();
+            if (! $user || ! $user->isActive()) {
+                Auth::guard($event->guard)->logout();
+                if (request()->hasSession()) {
+                    request()->session()->invalidate();
+                    request()->session()->regenerateToken();
+                }
+                throw ValidationException::withMessages(['email' => __('auth.failed')]);
+            }
+            if (request()->hasSession()) {
+                request()->session()->put('account_version', $user->account_version);
+            }
+        });
     }
 
     /**

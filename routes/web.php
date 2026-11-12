@@ -2,9 +2,14 @@
 
 use App\Http\Controllers\Publisher\PublisherLoginController;
 use App\Http\Controllers\Publisher\PublisherRegistrationController;
+use App\Http\Controllers\Publisher\PublisherVerificationDocumentController;
 use Illuminate\Support\Facades\Route;
 
 Route::inertia('/', 'welcome')->name('home');
+
+Route::get('/admin/publisher-registrations/{registration}/document', PublisherVerificationDocumentController::class)
+    ->middleware(['auth:web', 'verified'])
+    ->name('admin.publisher-registration.document');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::inertia('dashboard', 'dashboard')->name('dashboard');

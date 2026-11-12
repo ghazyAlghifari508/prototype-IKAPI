@@ -4,11 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 /**
  * @property int $id
  * @property int $user_id
  * @property string $approval_status
+ * @property string $publisher_name
+ * @property string|null $verification_document_path
+ * @property string|null $rejection_reason
  */
 class PublisherRegistration extends Model
 {
@@ -36,5 +40,11 @@ class PublisherRegistration extends Model
     public function isApproved(): bool
     {
         return $this->approval_status === 'approved';
+    }
+
+    /** @return HasOne<PublisherRegistrationReview, $this> */
+    public function review(): HasOne
+    {
+        return $this->hasOne(PublisherRegistrationReview::class);
     }
 }

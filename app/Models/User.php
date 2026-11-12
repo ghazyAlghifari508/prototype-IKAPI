@@ -10,6 +10,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Hidden;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -31,6 +32,8 @@ use Spatie\Permission\Traits\HasRoles;
  * @property string|null $avatar_url
  * @property Carbon|null $email_verified_at
  * @property string $password
+ * @property string $account_status
+ * @property int $account_version
  * @property string|null $two_factor_secret
  * @property string|null $two_factor_recovery_codes
  * @property Carbon|null $two_factor_confirmed_at
@@ -42,6 +45,8 @@ use Spatie\Permission\Traits\HasRoles;
 #[Hidden(['password', 'two_factor_secret', 'two_factor_recovery_codes', 'two_factor_confirmed_at', 'remember_token'])]
 class User extends Authenticatable implements FilamentUser, MustVerifyEmail, PasskeyUser
 {
+    protected $attributes = ['account_status' => 'active', 'account_version' => 0];
+
     public const AVATAR_PRESETS = ['cat', 'dog', 'panda', 'frog', 'rabbit', 'owl', 'bear', 'koala'];
 
     /** @use HasFactory<UserFactory> */
@@ -50,6 +55,7 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail, Pas
     public function canAccessPanel(Panel $panel): bool
     {
         return $panel->getId() === 'admin'
+            && $this->isActive()
             && $this->hasVerifiedEmail()
             && $this->checkPermissionTo('access-admin-panel');
     }
@@ -84,7 +90,26 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail, Pas
 
     public function canAccessPublisherPortal(): bool
     {
-        return $this->isPublisherApproved();
+        return $this->isActive() && $this->isPublisherApproved();
+    }
+
+    public function isActive(): bool
+    {
+        return $this->account_status === 'active';
+    }
+
+    public function isProtectedAdministrator(): bool
+    {
+        return $this->hasAnyRole(['admin', 'administrator', 'super-admin'])
+            || $this->checkPermissionTo('access-admin-panel', 'web')
+            || $this->checkPermissionTo('review-publisher-registrations', 'web')
+            || $this->checkPermissionTo('manage-user-accounts', 'web');
+    }
+
+    /** @return HasMany<PublisherRegistrationReview, $this> */
+    public function accountActions(): HasMany
+    {
+        return $this->hasMany(PublisherRegistrationReview::class, 'target_user_id');
     }
 
     /**
@@ -96,6 +121,7 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail, Pas
     {
         return [
             'email_verified_at' => 'datetime',
+            'account_version' => 'integer',
             'password' => 'hashed',
             'two_factor_confirmed_at' => 'datetime',
         ];

@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'account_status_mailer' => env('MAIL_ACCOUNT_STATUS_MAILER', 'smtp'),
+    'publisher_approval_mailer' => env('MAIL_PUBLISHER_APPROVAL_MAILER', 'smtp'),
 
     /*
     |--------------------------------------------------------------------------
