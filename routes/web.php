@@ -12,10 +12,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 Route::middleware('guest')->group(function () {
     Route::get('/publisher/register', [PublisherRegistrationController::class, 'create'])->name('publisher.register');
-    Route::post('/publisher/register', [PublisherRegistrationController::class, 'store'])->name('publisher.register.store');
+    Route::post('/publisher/register', [PublisherRegistrationController::class, 'store'])
+        ->middleware('throttle:6,1')
+        ->name('publisher.register.store');
 
     Route::get('/publisher/login', [PublisherLoginController::class, 'create'])->name('publisher.login');
-    Route::post('/publisher/login', [PublisherLoginController::class, 'store'])->name('publisher.login.store');
+    Route::post('/publisher/login', [PublisherLoginController::class, 'store'])
+        ->middleware('throttle:login')
+        ->name('publisher.login.store');
 });
 
 Route::middleware(['auth', 'verified', 'publisher.approved'])->group(function () {

@@ -170,4 +170,21 @@ class PublisherAuthTest extends TestCase
         $this->assertAuthenticatedAs($user);
         $response->assertRedirect(route('publisher.dashboard'));
     }
+
+    public function test_publisher_login_is_rate_limited_after_excessive_attempts(): void
+    {
+        for ($i = 0; $i < 5; $i++) {
+            $this->post(route('publisher.login.store'), [
+                'email' => 'throttled@example.com',
+                'password' => 'wrong-password',
+            ]);
+        }
+
+        $response = $this->post(route('publisher.login.store'), [
+            'email' => 'throttled@example.com',
+            'password' => 'wrong-password',
+        ]);
+
+        $response->assertTooManyRequests();
+    }
 }

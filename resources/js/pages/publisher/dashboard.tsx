@@ -18,10 +18,10 @@ export default function PublisherDashboardPage() {
     const { auth } = usePage<PageProps>().props;
 
     return (
-        <>
+        <main className="min-h-svh bg-[#f8fafc] px-4 py-8 text-[#17233b]">
             <Head title="Portal Penerbit" />
 
-            <div className="mx-auto max-w-4xl px-4 py-8">
+            <div className="mx-auto max-w-4xl">
                 <div className="mb-6 flex items-center justify-between">
                     <Link
                         href={home()}
@@ -76,11 +76,6 @@ export default function PublisherDashboardPage() {
                     </div>
                 </div>
             </div>
-        </>
+        </main>
     );
 }
-
-PublisherDashboardPage.layout = {
-    title: '',
-    description: '',
-};
