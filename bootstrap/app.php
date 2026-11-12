@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\EnsureAccountActive;
 use App\Http\Middleware\EnsurePublisherApproved;
 use App\Http\Middleware\HandleAppearance;
 use App\Http\Middleware\HandleInertiaRequests;
@@ -20,10 +21,12 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->encryptCookies(except: ['appearance', 'sidebar_state']);
 
         $middleware->alias([
+            'active' => EnsureAccountActive::class,
             'publisher.approved' => EnsurePublisherApproved::class,
         ]);
 
         $middleware->web(append: [
+            EnsureAccountActive::class,
             PasswordRecoveryRateLimiter::class,
             HandleAppearance::class,
             HandleInertiaRequests::class,
