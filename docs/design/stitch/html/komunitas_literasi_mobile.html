@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fcf8ff;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary": "#ffffff", "ink-muted": "#555665", "tertiary-container": "#cea623", "on-tertiary-fixed-variant": "#584400", "on-secondary-container": "#7a495a", "surface-dim": "#dbd8e7", "primary": "#3f3ad0", "on-tertiary-fixed": "#241a00", "secondary": "#815060", "background": "#fcf8ff", "ink-body": "#191923", "tertiary": "#745b00", "surface-container-low": "#f5f2ff", "on-background": "#1b1b25", "surface-lilac": "#E5E4FF", "surface-tint": "#4c48dc", "inverse-surface": "#302f3a", "inverse-deep": "#24233D", "on-error": "#ffffff", "tertiary-fixed": "#ffe08d", "on-secondary-fixed": "#330e1d", "surface": "#fcf8ff", "border-subtle": "#E7E7EF", "secondary-container": "#fdbed1", "error-container": "#ffdad6", "tertiary-fixed-dim": "#ecc23f", "on-secondary": "#ffffff", "surface-container-high": "#e9e6f5", "on-primary-fixed-variant": "#3229c4", "surface-cream": "#FFF1E3", "outline": "#777586", "surface-container-highest": "#e3e1ef", "on-surface-variant": "#464555", "surface-sky": "#E0F6FC", "secondary-fixed": "#ffd9e3", "on-primary-container": "#eeeaff", "error": "#ba1a1a", "primary-fixed": "#e2dfff", "on-secondary-fixed-variant": "#663949", "on-error-container": "#93000a", "primary-container": "#5956e9", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#4f3d00", "on-primary-fixed": "#0c006a", "feedback-error": "#B42318", "primary-fixed-dim": "#c2c1ff", "on-surface": "#1b1b25", "on-primary": "#ffffff", "surface-variant": "#e3e1ef", "border-bold": "#CFD0DD", "outline-variant": "#c7c4d7", "inverse-primary": "#c2c1ff", "surface-soft": "#F8F7FF", "surface-bright": "#fcf8ff", "inverse-on-surface": "#f2effe", "surface-container": "#efecfb", "secondary-fixed-dim": "#f4b5c8", "surface-paper": "#FFF0E3" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-2xl": "3rem", "gutter-mobile": "1.25rem", "space-sm": "0.5rem", "margin-mobile": "1.25rem", "space-3xl": "4.5rem", "margin": "2.5rem", "space-xs": "0.25rem", "space-md": "1rem", "space-xl": "2rem", "gutter": "1.5rem" }, "fontFamily": { "body-small": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-base": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "label-small": ["Plus Jakarta Sans"], "label": ["Plus Jakarta Sans"], "display-md-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "display-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-small": ["14px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "1.25", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-base": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }], "display-lg-mobile": ["34px", { "lineHeight": "1.15", "letterSpacing": "-0.03em", "fontWeight": "800" }], "display-lg": ["56px", { "lineHeight": "1.08", "letterSpacing": "-0.04em", "fontWeight": "800" }], "label-small": ["12px", { "lineHeight": "1.3", "letterSpacing": "0.02em", "fontWeight": "600" }], "label": ["14px", { "lineHeight": "1.35", "letterSpacing": "0", "fontWeight": "600" }], "display-md-mobile": ["28px", { "lineHeight": "1.2", "letterSpacing": "-0.025em", "fontWeight": "800" }], "headline-lg": ["36px", { "lineHeight": "1.18", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-md": ["28px", { "lineHeight": "1.22", "letterSpacing": "-0.025em", "fontWeight": "700" }], "display-md": ["44px", { "lineHeight": "1.12", "letterSpacing": "-0.035em", "fontWeight": "800" }], "title-md": ["18px", { "lineHeight": "1.35", "letterSpacing": "-0.01em", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-base text-body-base text-ink-body flex flex-col min-h-screen selection:bg-surface-lilac"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(25,25,35,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="logo-ikapu.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAtESD9h3_i3_U28gL48IE-CmqOBpHx0tP0EEoXkPWueXcyoVOcm4pKtcCmkQ-BTU-_mZ-NxVijgD5bnqhESu31UeT1lNTDZL6qBXWDfggq9jHB2jXY_joWRJ-KLVASL07A5-SPOiCWwp2iL8a44gEhjDEINilbsk-EQcA07VDM1AeYhlVg-Qz6CJtBbHvfUtg9FJDA5oUS6m6mE-N8tuyW4kt12LJLajnXgO2KfQB-55DghwzSlu87aaAW"/><div class="flex flex-col"><span class="font-title-md text-title-md text-ink-body leading-none font-bold">IKAPI Store</span><span class="font-label-small text-label-small text-ink-muted leading-tight">Beranda</span></div></div><div class="flex items-center gap-space-xs"><a aria-label="Keranjang Belanja" class="w-11 h-11 relative flex items-center justify-center rounded-full text-ink-body hover:bg-surface-container-high transition-colors" data-path="keranjang" href="#"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute top-1.5 right-1.5 min-w-[18px] h-[18px] px-1 bg-primary text-on-primary font-label-small text-[10px] rounded-full flex items-center justify-center font-bold leading-none">3</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full text-ink-body">
+<!-- Mode Simulasi Bar (Sticky under fixed header) -->
+<aside aria-label="Mode Simulasi State" class="w-full bg-surface-container-high px-gutter-mobile py-2.5 flex items-center justify-between gap-space-xs sticky top-0 z-30 shadow-sm">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">tune</span>
+<span class="font-label-small text-label-small text-ink-muted truncate font-semibold">Simulasi State:</span>
+</div>
+<div class="flex items-center gap-1 overflow-x-auto scrollbar-none py-0.5" id="simulation-bar">
+<button class="px-2.5 py-1 rounded-full text-xs font-semibold bg-primary text-on-primary shadow-xs transition-colors shrink-0" data-state-btn="normal" onclick="setSimState('normal')" type="button">Normal</button>
+<button class="px-2.5 py-1 rounded-full text-xs font-semibold bg-surface text-ink-muted hover:text-ink-body shadow-xs transition-colors shrink-0" data-state-btn="detail" onclick="setSimState('detail')" type="button">Detail</button>
+<button class="px-2.5 py-1 rounded-full text-xs font-semibold bg-surface text-ink-muted hover:text-ink-body shadow-xs transition-colors shrink-0" data-state-btn="nihil" onclick="setSimState('nihil')" type="button">Pencarian Nihil</button>
+<button class="px-2.5 py-1 rounded-full text-xs font-semibold bg-surface text-ink-muted hover:text-ink-body shadow-xs transition-colors shrink-0" data-state-btn="kosong" onclick="setSimState('kosong')" type="button">Data Kosong</button>
+</div>
+</aside>
+<!-- VIEW 1: DIRECTORY VIEW (Normal, Search Empty, Empty State) -->
+<section class="flex flex-col w-full" id="directory-view">
+<!-- Editorial Warm Banner -->
+<header class="px-gutter-mobile pt-space-md pb-space-sm">
+<div class="rounded-xl bg-surface-paper p-space-md shadow-xs flex flex-col gap-space-xs relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-semibold">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">local_library</span>
+<span>IKAPI Jawa Barat</span>
+</div>
+<span class="font-label-small text-label-small text-ink-muted">Direktori Terkurasi</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-ink-body font-bold tracking-tight mt-1">Komunitas Literasi</h1>
+<p class="font-body-small text-body-small text-ink-muted leading-relaxed">
+          Temukan ruang silaturahmi pegiat perbukuan dan komunitas baca di Jawa Barat.
+        </p>
+<!-- Cozy Aesthetic Feature Strip -->
+<div class="mt-2 pt-2 flex items-center gap-3">
+<div class="flex -space-x-1.5 items-center">
+<span class="w-6 h-6 rounded-full bg-primary-fixed flex items-center justify-center text-[11px] font-bold text-on-primary-fixed ring-2 ring-surface-paper">FP</span>
+<span class="w-6 h-6 rounded-full bg-secondary-container flex items-center justify-center text-[11px] font-bold text-on-secondary-container ring-2 ring-surface-paper">BP</span>
+<span class="w-6 h-6 rounded-full bg-tertiary-fixed flex items-center justify-center text-[11px] font-bold text-on-tertiary-fixed ring-2 ring-surface-paper">SP</span>
+</div>
+<span class="font-label-small text-label-small text-ink-muted">Tersambung langsung dengan agenda lokakarya buku &amp; manuskrip.</span>
+</div>
+</div>
+</header>
+<!-- Search & Category Filters -->
+<nav aria-label="Pencarian dan Kategori" class="px-gutter-mobile pt-space-xs pb-space-sm flex flex-col gap-space-sm">
+<!-- Search Bar -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-muted text-[22px]">search</span>
+<input class="w-full h-12 pl-11 pr-10 rounded-xl bg-surface-container-lowest text-body-base text-ink-body placeholder:text-ink-muted/70 focus:outline-hidden focus:ring-2 focus:ring-primary shadow-xs transition-all" id="search-input" oninput="handleSearch(this.value)" placeholder="Cari komunitas literasi..." type="search"/>
+<button aria-label="Bersihkan pencarian" class="hidden absolute right-3 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-surface-container-high text-ink-muted items-center justify-center hover:text-ink-body" id="clear-search-btn" onclick="clearSearch()" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Horizontal Pills Scrolling -->
+<div class="flex items-center gap-2 overflow-x-auto scrollbar-none py-1 -mx-gutter-mobile px-gutter-mobile">
+<button class="cat-pill px-3.5 py-1.5 rounded-full text-xs font-bold bg-primary text-on-primary shrink-0 transition-colors shadow-xs" data-category="Semua" onclick="setCategoryFilter('Semua')" type="button">Semua</button>
+<button class="cat-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-surface-container text-ink-body hover:bg-surface-container-high shrink-0 transition-colors shadow-xs" data-category="Filologi &amp; Aksara" onclick="setCategoryFilter('Filologi &amp; Aksara')" type="button">Filologi &amp; Aksara</button>
+<button class="cat-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-surface-container text-ink-body hover:bg-surface-container-high shrink-0 transition-colors shadow-xs" data-category="Klub Buku" onclick="setCategoryFilter('Klub Buku')" type="button">Klub Buku</button>
+<button class="cat-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-surface-container text-ink-body hover:bg-surface-container-high shrink-0 transition-colors shadow-xs" data-category="Sejarah" onclick="setCategoryFilter('Sejarah')" type="button">Sejarah</button>
+</div>
+</nav>
+<!-- Community Cards Container (1-Column Touch-Friendly Layout) -->
+<main class="px-gutter-mobile flex flex-col gap-space-md pb-space-lg" id="cards-container">
+<!-- Card 1: Komunitas Filologi Pasundan -->
+<article class="community-card bg-surface-container-lowest rounded-xl p-space-md shadow-xs flex flex-col gap-space-sm hover:shadow-md transition-shadow" data-cat="Filologi &amp; Aksara" data-community-id="filologi">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-surface-lilac flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[26px]">history_edu</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h2 class="font-title-md text-title-md text-ink-body font-bold truncate">Komunitas Filologi Pasundan</h2>
+<span class="font-body-small text-body-small text-ink-muted">Bandung &amp; Sumedang</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 pt-0.5">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-lilac text-primary font-label-small text-xs font-bold">Filologi &amp; Naskah</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-ink-muted font-label-small text-[11px] flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Mitrabina IKAPI
+          </span>
+</div>
+<p class="font-body-small text-body-small text-ink-body/90 leading-relaxed">
+          Mengkaji naskah lontar dan manuskrip Sunda kuno bersama para filolog muda. Terhubung dengan lokakarya IKAPI.
+        </p>
+<div class="pt-2 flex items-center justify-between gap-2 mt-auto">
+<span class="font-label-small text-label-small text-ink-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">event_note</span>
+            1 Agenda terdaftar
+          </span>
+<button class="min-h-[44px] px-4 py-2 rounded-lg bg-primary text-on-primary font-label text-label font-semibold flex items-center justify-center gap-1.5 hover:bg-primary-container transition-colors shadow-xs" onclick="openCommunityDetail('filologi')" type="button">
+<span>Lihat Detail Komunitas</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Klub Buku Priangan -->
+<article class="community-card bg-surface-container-lowest rounded-xl p-space-md shadow-xs flex flex-col gap-space-sm hover:shadow-md transition-shadow" data-cat="Klub Buku" data-community-id="priangan">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[26px]">auto_stories</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h2 class="font-title-md text-title-md text-ink-body font-bold truncate">Klub Buku Priangan</h2>
+<span class="font-body-small text-body-small text-ink-muted">Bandung Raya</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 pt-0.5">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-small text-xs font-bold">Apresiasi Fiksi</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-ink-muted font-label-small text-[11px] flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Lingkar Membaca
+          </span>
+</div>
+<p class="font-body-small text-body-small text-ink-body/90 leading-relaxed">
+          Lingkar baca rutin buku sastra dan fiksi sejarah Jawa Barat.
+        </p>
+<div class="pt-2 flex items-center justify-between gap-2 mt-auto">
+<span class="font-label-small text-label-small text-ink-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-ink-muted">schedule</span>
+            Rembuk 2 Pekanan
+          </span>
+<button class="min-h-[44px] px-4 py-2 rounded-lg bg-surface-container-high text-ink-body font-label text-label font-semibold flex items-center justify-center gap-1.5 hover:bg-surface-dim transition-colors" onclick="openCommunityDetail('priangan')" type="button">
+<span>Lihat Detail Komunitas</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Masyarakat Sejarah Priangan -->
+<article class="community-card bg-surface-container-lowest rounded-xl p-space-md shadow-xs flex flex-col gap-space-sm hover:shadow-md transition-shadow" data-cat="Sejarah" data-community-id="sejarah">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[26px]">account_balance</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h2 class="font-title-md text-title-md text-ink-body font-bold truncate">Masyarakat Sejarah Priangan</h2>
+<span class="font-body-small text-body-small text-ink-muted">Cimahi &amp; Garut</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 pt-0.5">
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-small text-xs font-bold">Sejarah &amp; Ekologi</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-ink-muted font-label-small text-[11px] flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Kajian Babad
+          </span>
+</div>
+<p class="font-body-small text-body-small text-ink-body/90 leading-relaxed">
+          Diskusi kajian sejarah alam, babad, dan kearifan lokal Tatar Pasundan.
+        </p>
+<div class="pt-2 flex items-center justify-between gap-2 mt-auto">
+<span class="font-label-small text-label-small text-ink-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-ink-muted">place</span>
+            Tatap Muka &amp; Arsip
+          </span>
+<button class="min-h-[44px] px-4 py-2 rounded-lg bg-surface-container-high text-ink-body font-label text-label font-semibold flex items-center justify-center gap-1.5 hover:bg-surface-dim transition-colors" onclick="openCommunityDetail('sejarah')" type="button">
+<span>Lihat Detail Komunitas</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</article>
+</main>
+<!-- State: Pencarian Nihil (Search Empty) -->
+<div class="hidden px-gutter-mobile py-space-xl flex-col items-center text-center" id="state-search-empty">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-ink-muted mb-space-sm">
+<span class="material-symbols-outlined text-[32px]">search_off</span>
+</div>
+<h3 class="font-title-md text-title-md text-ink-body font-bold mb-1">Komunitas Tidak Ditemukan</h3>
+<p class="font-body-small text-body-small text-ink-muted max-w-[280px] mb-space-md">
+        Kata kunci yang Anda cari tidak cocok dengan nama atau bidang minat komunitas terdaftar.
+      </p>
+<button class="min-h-[44px] px-4 py-2 rounded-lg bg-surface-paper text-ink-body font-label text-label font-semibold shadow-xs hover:bg-surface-container transition-colors" onclick="clearSearch()" type="button">
+        Setel Ulang Pencarian
+      </button>
+</div>
+<!-- State: Data Kosong (Global Empty) -->
+<div class="hidden px-gutter-mobile py-space-2xl flex-col items-center text-center" id="state-data-empty">
+<div class="w-20 h-20 rounded-2xl bg-surface-paper flex items-center justify-center text-secondary mb-space-md shadow-xs">
+<span class="material-symbols-outlined text-[40px]">menu_book</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-ink-body font-bold mb-1.5">Belum Ada Direktori Aktif</h3>
+<p class="font-body-small text-body-small text-ink-muted max-w-[290px] mb-space-lg leading-relaxed">
+        Pendaftaran komunitas perbukuan Jawa Barat sedang dalam proses sinkronisasi dengan sekretariat IKAPI.
+      </p>
+<button class="min-h-[48px] px-5 py-2.5 rounded-lg bg-primary text-on-primary font-label text-label font-semibold shadow-xs hover:bg-primary-container transition-colors" onclick="setSimState('normal')" type="button">
+        Segarkan Direktori
+      </button>
+</div>
+<!-- Section: Agenda Kolaboratif Terkait (Preview) -->
+<section class="px-gutter-mobile py-space-md border-t-0 bg-surface-soft mt-space-sm rounded-t-3xl">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-small text-label-small text-primary font-bold uppercase tracking-wider">Kolaborasi Terkini</span>
+<h2 class="font-title-md text-title-md text-ink-body font-bold">Agenda &amp; Berita Literasi</h2>
+</div>
+<span class="material-symbols-outlined text-ink-muted text-[20px]">calendar_month</span>
+</div>
+<!-- Agenda Preview Card -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-xs flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-md bg-tertiary-fixed text-on-tertiary-fixed font-label-small text-[11px] font-bold">Lokakarya Terbuka</span>
+<span class="font-label-small text-label-small text-ink-muted">18 Nov 2026</span>
+</div>
+<h3 class="font-title-md text-title-md text-ink-body font-bold">Lokakarya Filologi Populer: Membaca Lontar Sunda</h3>
+<p class="font-body-small text-body-small text-ink-muted line-clamp-2">
+          Sesi pengenalan aksara naskah kuno nusantara dan konservasi preventif bersama Komunitas Filologi Pasundan dan Penerbit IKAPI.
+        </p>
+<div class="pt-2 flex items-center justify-between">
+<span class="font-label-small text-label-small text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Bandung
+          </span>
+<button class="min-h-[40px] px-3 py-1.5 rounded-lg bg-surface-container text-ink-body text-xs font-semibold hover:bg-surface-container-high transition-colors" onclick="openCommunityDetail('filologi')" type="button">
+            Lihat Keterkaitan
+          </button>
+</div>
+</article>
+</section>
+</section>
+<!-- VIEW 2: DETAIL KOMUNITAS VIEW (Dedicated Single Community) -->
+<section class="hidden flex-col w-full px-gutter-mobile pt-space-sm pb-space-2xl" id="detail-view">
+<!-- Back Button -->
+<div class="py-space-xs">
+<button class="min-h-[44px] inline-flex items-center gap-2 text-ink-body hover:text-primary font-label text-label font-bold transition-colors" onclick="closeCommunityDetail()" type="button">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+<span>Kembali ke Direktori</span>
+</button>
+</div>
+<!-- Community Header Banner -->
+<article class="bg-surface-paper rounded-2xl p-space-md shadow-xs flex flex-col gap-space-sm relative overflow-hidden mt-space-xs">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-xl bg-surface-lilac flex items-center justify-center shrink-0" id="detail-icon-wrap">
+<span class="material-symbols-outlined text-primary text-[32px]" id="detail-icon">history_edu</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-surface-lilac text-primary font-label-small text-xs font-bold" id="detail-badge">Filologi &amp; Naskah</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-ink-body font-bold truncate mt-1" id="detail-title">Komunitas Filologi Pasundan</h1>
+</div>
+</div>
+<!-- Tactile Divider -->
+<div class="h-px w-full bg-surface-dim/60 my-1"></div>
+<div class="flex flex-col gap-1.5">
+<h2 class="font-label text-label font-bold text-ink-body">Fokus &amp; Profil Gerakan</h2>
+<p class="font-body-small text-body-small text-ink-muted leading-relaxed" id="detail-description">
+          Mengkaji naskah lontar dan manuskrip Sunda kuno bersama para filolog muda. Komunitas ini berfokus pada digitalisasi naskah rontal, alih aksara, dan edukasi publik terkait warisan tulis Tatar Pasundan. Terhubung erat dalam jejaring pelatihan kurasi naskah binaan IKAPI Jawa Barat.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-3 pt-2 text-ink-muted font-body-small text-xs">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span> Jawa Barat</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-tertiary">verified</span> Mitra Resmi IKAPI</span>
+</div>
+</article>
+<!-- PRD Policy / Form Notice -->
+<aside aria-label="Informasi Keanggotaan" class="my-space-md p-space-md rounded-xl bg-surface-sky text-ink-body flex items-start gap-3 shadow-xs">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">info</span>
+<div class="flex flex-col gap-0.5">
+<h3 class="font-label text-label font-bold">Pemberitahuan Pendaftaran &amp; Forum</h3>
+<p class="font-body-small text-body-small text-ink-body/85 leading-snug">
+          Fitur pendaftaran keanggotaan dan forum diskusi mandiri sedang menunggu penetapan spesifikasi PRD resmi IKAPI. Saat ini interaksi diselenggarakan terpusat melalui agenda lokakarya bersama.
+        </p>
+</div>
+</aside>
+<!-- Kegiatan Terkait Section -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-title-md text-title-md text-ink-body font-bold">Kegiatan Terkait Komunitas</h2>
+<span class="font-label-small text-label-small text-ink-muted">Agenda Terverifikasi</span>
+</div>
+<!-- Event Card connected to PRD -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-xs flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-lilac text-primary font-label-small text-xs font-bold">Lokakarya Terbuka</span>
+<span class="font-label-small text-label-small text-ink-muted">18 Nov 2026</span>
+</div>
+<h3 class="font-title-md text-title-md text-ink-body font-bold">Lokakarya Filologi Populer</h3>
+<p class="font-body-small text-body-small text-ink-muted leading-relaxed">
+          Praktik membaca aksara Sunda kuno, penanganan fisik naskah kertas dluwang, dan pengenalan katalogisasi digital naskah lokal. Terbuka untuk umum dan mahasiswa pegiat buku.
+        </p>
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-1.5 text-xs text-ink-muted font-semibold">
+<span class="material-symbols-outlined text-[16px] text-tertiary">schedule</span>
+<span>09.00 - 15.30 WIB</span>
+</div>
+<button class="min-h-[44px] px-4 py-2 rounded-lg bg-primary text-on-primary font-label text-label font-semibold flex items-center gap-1 shadow-xs hover:bg-primary-container transition-colors" onclick="alert('Mengarahkan ke halaman Agenda &amp; Berita Literasi: Lokakarya Filologi Populer')" type="button">
+<span>Detail Agenda</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</article>
+</section>
+</section>
+</div>
+<script>
+  // Community dataset for seamless interactive detail views
+  const communityData = {
+    filologi: {
+      title: "Komunitas Filologi Pasundan",
+      badge: "Filologi & Naskah",
+      badgeClass: "bg-surface-lilac text-primary",
+      icon: "history_edu",
+      iconBg: "bg-surface-lilac text-primary",
+      desc: "Mengkaji naskah lontar dan manuskrip Sunda kuno bersama para filolog muda. Komunitas ini berfokus pada digitalisasi naskah rontal, alih aksara, dan edukasi publik terkait warisan tulis Tatar Pasundan. Terhubung erat dalam jejaring pelatihan kurasi naskah binaan IKAPI Jawa Barat."
+    },
+    priangan: {
+      title: "Klub Buku Priangan",
+      badge: "Apresiasi Fiksi",
+      badgeClass: "bg-secondary-fixed text-on-secondary-fixed",
+      icon: "auto_stories",
+      iconBg: "bg-secondary-fixed text-secondary",
+      desc: "Lingkar baca rutin buku sastra dan fiksi sejarah Jawa Barat. Beranggotakan pembaca aktif, guru bahasa, dan penulis muda yang berkumpul dwi-mingguan untuk mengapresiasi karya sastra terbitan anggota IKAPI serta mengulas prosa modern."
+    },
+    sejarah: {
+      title: "Masyarakat Sejarah Priangan",
+      badge: "Sejarah & Ekologi",
+      badgeClass: "bg-tertiary-fixed text-on-tertiary-fixed",
+      icon: "account_balance",
+      iconBg: "bg-tertiary-fixed text-tertiary",
+      desc: "Diskusi kajian sejarah alam, babad, dan kearifan lokal Tatar Pasundan. Melakukan penelusuran pustaka arsip kolonial, riwayat perkebunan, dan toponimi wilayah bekerja sama dengan penerbit sejarah dan perguruan tinggi."
+    }
+  };
+
+  let activeCategory = 'Semua';
+
+  function setSimState(state) {
+    // Reset simulation button active styling
+    const buttons = document.querySelectorAll('#simulation-bar button');
+    buttons.forEach(btn => {
+      if (btn.getAttribute('data-state-btn') === state) {
+        btn.className = "px-2.5 py-1 rounded-full text-xs font-semibold bg-primary text-on-primary shadow-xs transition-colors shrink-0";
+      } else {
+        btn.className = "px-2.5 py-1 rounded-full text-xs font-semibold bg-surface text-ink-muted hover:text-ink-body shadow-xs transition-colors shrink-0";
+      }
+    });
+
+    const dirView = document.getElementById('directory-view');
+    const detailView = document.getElementById('detail-view');
+    const cardsContainer = document.getElementById('cards-container');
+    const searchEmpty = document.getElementById('state-search-empty');
+    const dataEmpty = document.getElementById('state-data-empty');
+
+    if (state === 'normal') {
+      dirView.classList.remove('hidden');
+      detailView.classList.add('hidden');
+      cardsContainer.classList.remove('hidden');
+      searchEmpty.classList.add('hidden');
+      dataEmpty.classList.add('hidden');
+      setCategoryFilter('Semua');
+      clearSearch();
+    } else if (state === 'detail') {
+      openCommunityDetail('filologi');
+    } else if (state === 'nihil') {
+      dirView.classList.remove('hidden');
+      detailView.classList.add('hidden');
+      cardsContainer.classList.add('hidden');
+      searchEmpty.classList.remove('hidden');
+      dataEmpty.classList.add('hidden');
+      document.getElementById('search-input').value = 'Toponimi Kuno Xyz';
+      document.getElementById('clear-search-btn').classList.remove('hidden');
+      document.getElementById('clear-search-btn').classList.add('flex');
+    } else if (state === 'kosong') {
+      dirView.classList.remove('hidden');
+      detailView.classList.add('hidden');
+      cardsContainer.classList.add('hidden');
+      searchEmpty.classList.add('hidden');
+      dataEmpty.classList.remove('hidden');
+      clearSearch();
+    }
+  }
+
+  function setCategoryFilter(cat) {
+    activeCategory = cat;
+    const catButtons = document.querySelectorAll('.cat-pill');
+    catButtons.forEach(btn => {
+      if (btn.getAttribute('data-category') === cat) {
+        btn.className = "cat-pill px-3.5 py-1.5 rounded-full text-xs font-bold bg-primary text-on-primary shrink-0 transition-colors shadow-xs";
+      } else {
+        btn.className = "cat-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-surface-container text-ink-body hover:bg-surface-container-high shrink-0 transition-colors shadow-xs";
+      }
+    });
+
+    const searchVal = document.getElementById('search-input').value.toLowerCase().trim();
+    filterCards(searchVal, activeCategory);
+  }
+
+  function handleSearch(val) {
+    const clearBtn = document.getElementById('clear-search-btn');
+    if (val.length > 0) {
+      clearBtn.classList.remove('hidden');
+      clearBtn.classList.add('flex');
+    } else {
+      clearBtn.classList.add('hidden');
+      clearBtn.classList.remove('flex');
+    }
+    filterCards(val.toLowerCase().trim(), activeCategory);
+  }
+
+  function clearSearch() {
+    const input = document.getElementById('search-input');
+    input.value = '';
+    const clearBtn = document.getElementById('clear-search-btn');
+    clearBtn.classList.add('hidden');
+    clearBtn.classList.remove('flex');
+    filterCards('', activeCategory);
+  }
+
+  function filterCards(query, category) {
+    const cards = document.querySelectorAll('.community-card');
+    const searchEmpty = document.getElementById('state-search-empty');
+    const cardsContainer = document.getElementById('cards-container');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const cardCat = card.getAttribute('data-cat');
+      const textContent = card.innerText.toLowerCase();
+
+      const matchesCat = (category === 'Semua' || cardCat.includes(category) || (category === 'Filologi & Aksara' && cardCat.includes('Filologi')));
+      const matchesSearch = query === '' || textContent.includes(query);
+
+      if (matchesCat && matchesSearch) {
+        card.classList.remove('hidden');
+        card.classList.add('flex');
+        visibleCount++;
+      } else {
+        card.classList.add('hidden');
+        card.classList.remove('flex');
+      }
+    });
+
+    if (visibleCount === 0) {
+      cardsContainer.classList.add('hidden');
+      searchEmpty.classList.remove('hidden');
+      searchEmpty.classList.add('flex');
+    } else {
+      cardsContainer.classList.remove('hidden');
+      searchEmpty.classList.add('hidden');
+      searchEmpty.classList.remove('flex');
+    }
+  }
+
+  function openCommunityDetail(id) {
+    const data = communityData[id] || communityData['filologi'];
+    
+    document.getElementById('detail-title').innerText = data.title;
+    document.getElementById('detail-description').innerText = data.desc;
+    
+    const badgeEl = document.getElementById('detail-badge');
+    badgeEl.innerText = data.badge;
+    badgeEl.className = `px-2 py-0.5 rounded-full font-label-small text-xs font-bold ${data.badgeClass}`;
+
+    const iconWrap = document.getElementById('detail-icon-wrap');
+    iconWrap.className = `w-14 h-14 rounded-xl flex items-center justify-center shrink-0 ${data.iconBg}`;
+    document.getElementById('detail-icon').innerText = data.icon;
+
+    document.getElementById('directory-view').classList.add('hidden');
+    document.getElementById('detail-view').classList.remove('hidden');
+    document.getElementById('detail-view').classList.add('flex');
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function closeCommunityDetail() {
+    document.getElementById('detail-view').classList.add('hidden');
+    document.getElementById('detail-view').classList.remove('flex');
+    document.getElementById('directory-view').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(25,25,35,0.05)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 transition-colors text-primary font-bold" data-path="beranda" href="#"><span class="material-symbols-outlined text-[24px]">cottage</span><span class="font-label-small text-[11px] leading-tight">Beranda</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-ink-muted hover:text-ink-body transition-colors" data-path="katalog" href="#"><span class="material-symbols-outlined text-[24px]">auto_stories</span><span class="font-label-small text-[11px] leading-tight">Katalog</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-ink-muted hover:text-ink-body transition-colors relative" data-path="keranjang" href="#"><span class="material-symbols-outlined text-[24px]">shopping_cart</span><span class="font-label-small text-[11px] leading-tight">Keranjang</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-ink-muted hover:text-ink-body transition-colors" data-path="koleksi" href="#"><span class="material-symbols-outlined text-[24px]">bookmarks</span><span class="font-label-small text-[11px] leading-tight">Koleksi</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-ink-muted hover:text-ink-body transition-colors" data-path="akun" href="#"><span class="material-symbols-outlined text-[24px]">forum</span><span class="font-label-small text-[11px] leading-tight">Komunitas</span></a></div></nav></body></html>
