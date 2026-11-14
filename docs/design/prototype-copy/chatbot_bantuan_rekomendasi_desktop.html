@@ -1,0 +1,515 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>IKAPI Store</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "ink-body": "#191923", "surface-bright": "#fcf8ff", "on-secondary-container": "#7a495a", "surface-container": "#efecfb", "inverse-deep": "#24233D", "tertiary-container": "#cea623", "primary-container": "#5956e9", "inverse-on-surface": "#f2effe", "surface-variant": "#e3e1ef", "inverse-surface": "#302f3a", "on-tertiary-fixed-variant": "#584400", "on-error": "#ffffff", "secondary-fixed": "#ffd9e3", "error-container": "#ffdad6", "surface": "#fcf8ff", "surface-lilac": "#E5E4FF", "primary": "#3f3ad0", "ink-muted": "#555665", "surface-container-low": "#f5f2ff", "surface-container-high": "#e9e6f5", "primary-fixed-dim": "#c2c1ff", "on-tertiary": "#ffffff", "inverse-primary": "#c2c1ff", "secondary": "#815060", "on-secondary": "#ffffff", "border-bold": "#CFD0DD", "surface-sky": "#E0F6FC", "feedback-error": "#B42318", "on-tertiary-fixed": "#241a00", "on-background": "#1b1b25", "surface-tint": "#F0EFFF", "surface-cream": "#FFF1E3", "secondary-container": "#fdbed1", "error": "#ba1a1a", "surface-paper": "#FFF0E3", "on-error-container": "#93000a", "on-tertiary-container": "#4f3d00", "surface-container-lowest": "#ffffff", "background": "#fcf8ff", "border-subtle": "#E7E7EF", "on-secondary-fixed": "#330e1d", "on-surface": "#1b1b25", "on-primary": "#ffffff", "surface-soft": "#F8F7FF", "on-primary-fixed-variant": "#3229c4", "tertiary-fixed-dim": "#ecc23f", "outline-variant": "#c7c4d7", "on-primary-container": "#eeeaff", "surface-container-highest": "#e3e1ef", "surface-dim": "#dbd8e7", "tertiary-fixed": "#ffe08d", "on-surface-variant": "#464555", "outline": "#777586", "on-primary-fixed": "#0c006a", "tertiary": "#745b00", "secondary-fixed-dim": "#f4b5c8", "primary-fixed": "#e2dfff", "on-secondary-fixed-variant": "#663949" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-3xl": "4.5rem", "space-xl": "2rem", "space-lg": "1.5rem", "gutter-mobile": "1.25rem", "margin-mobile": "1.25rem", "space-sm": "0.5rem", "margin": "2.5rem", "space-2xl": "3rem", "space-md": "1rem", "gutter": "1.5rem" }, "fontFamily": { "body-base": [ "Plus Jakarta Sans" ], "display-lg": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "body-small": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "title-md": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "display-lg-mobile": [ "Plus Jakarta Sans" ], "label-small": [ "Plus Jakarta Sans" ], "display-md": [ "Plus Jakarta Sans" ], "display-md-mobile": [ "Plus Jakarta Sans" ], "label": [ "Plus Jakarta Sans" ] }, "fontSize": { "body-base": [ "16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" } ], "display-lg": [ "56px", { "lineHeight": "1.08", "letterSpacing": "-0.04em", "fontWeight": "800" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "1.25", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-small": [ "14px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" } ], "headline-md": [ "28px", { "lineHeight": "1.22", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "title-md": [ "18px", { "lineHeight": "1.35", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-lg": [ "36px", { "lineHeight": "1.18", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "display-lg-mobile": [ "34px", { "lineHeight": "1.15", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "label-small": [ "12px", { "lineHeight": "1.3", "letterSpacing": "0.02em", "fontWeight": "600" } ], "display-md": [ "44px", { "lineHeight": "1.12", "letterSpacing": "-0.035em", "fontWeight": "800" } ], "display-md-mobile": [ "28px", { "lineHeight": "1.2", "letterSpacing": "-0.025em", "fontWeight": "800" } ], "label": [ "14px", { "lineHeight": "1.35", "letterSpacing": "0", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-base text-body-base text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(25,25,35,0.06)]"><div class="h-20 max-w-[1240px] mx-auto px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-lg flex-shrink-0"><a class="flex items-center gap-space-sm" data-path="beranda" href="#"><img alt="logo-ikapu.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAtESD9h3_i3_U28gL48IE-CmqOBpHx0tP0EEoXkPWueXcyoVOcm4pKtcCmkQ-BTU-_mZ-NxVijgD5bnqhESu31UeT1lNTDZL6qBXWDfggq9jHB2jXY_joWRJ-KLVASL07A5-SPOiCWwp2iL8a44gEhjDEINilbsk-EQcA07VDM1AeYhlVg-Qz6CJtBbHvfUtg9FJDA5oUS6m6mE-N8tuyW4kt12LJLajnXgO2KfQB-55DghwzSlu87aaAW"><span class="font-headline-md text-headline-md text-ink-body font-bold tracking-tight">IKAPI Store</span></a><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="text-primary font-bold"><a class="font-label text-label text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" data-path="beranda" href="#">Beranda</a><a aria-current="page" class="transition-colors py-space-xs px-space-xs text-primary font-bold" data-path="katalog-buku" href="#">Katalog Buku</a><a class="font-label text-label text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" data-path="agenda-literasi" href="#">Agenda Literasi</a><a class="font-label text-label text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" data-path="komunitas" href="#">Komunitas</a><a class="font-label text-label text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" data-path="tentang-ikapi" href="#">Tentang IKAPI</a></nav></div><div class="flex-1 max-w-md hidden lg:block"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-md text-ink-muted pointer-events-none text-[20px]">search</span><input class="w-full h-12 pl-11 pr-space-md bg-surface-soft rounded-lg font-body-small text-body-small text-ink-body placeholder:text-ink-muted outline-none focus:bg-surface-container-lowest transition-all" placeholder="Cari e-book, penulis, atau penerbit..." type="text"></div></div><div class="flex items-center gap-space-md flex-shrink-0"><a class="relative p-space-sm rounded-lg bg-surface-soft hover:bg-surface-container-high transition-colors flex items-center justify-center" data-path="keranjang-belanja" href="#"><span class="material-symbols-outlined text-ink-body text-[22px]">shopping_bag</span><span class="absolute -top-1 -right-1 bg-primary text-on-primary font-label-small text-label-small h-5 min-w-[20px] px-1 rounded-full flex items-center justify-center shadow-sm">3</span></a><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:flex flex-col text-left"><span class="font-label text-label text-ink-body leading-none">Ahmad Hidayat</span><span class="font-label-small text-label-small text-ink-muted leading-tight">Pembaca Aktif</span></div></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive State Switcher for Simulation (High-Fidelity Reviewer Bar) -->
+<aside aria-label="Interactive Demo Toolbar" class="w-full bg-surface-container-high py-space-xs px-margin border-b border-border-subtle sticky top-20 z-30">
+<div class="max-w-[1240px] mx-auto flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">smart_toy</span>
+<span class="font-label-small text-label-small text-ink-body font-bold">Simulasi Widget AI IKAPI:</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs text-left" id="state-selector-container">
+<button class="px-space-sm py-1 rounded-lg font-label-small text-label-small bg-primary text-on-primary transition-all shadow-sm" id="btn-state-rekomendasi" onclick="switchChatState('rekomendasi')" type="button">
+          Rekomendasi Buku
+        </button>
+<button class="px-space-sm py-1 rounded-lg font-label-small text-label-small bg-surface-container-lowest text-ink-muted hover:text-ink-body transition-all" id="btn-state-pembayaran" onclick="switchChatState('pembayaran')" type="button">
+          Bantuan Pembayaran &amp; Reader
+        </button>
+<button class="px-space-sm py-1 rounded-lg font-label-small text-label-small bg-surface-container-lowest text-ink-muted hover:text-ink-body transition-all" id="btn-state-eskalasi" onclick="switchChatState('eskalasi')" type="button">
+          Layanan CS / Luar Lingkup
+        </button>
+<button class="px-space-sm py-1 rounded-lg font-label-small text-label-small bg-surface-container-lowest text-ink-muted hover:text-ink-body transition-all" id="btn-state-loading" onclick="switchChatState('loading')" type="button">
+          Status Memuat...
+        </button>
+<button class="px-space-sm py-1 rounded-lg font-label-small text-label-small bg-surface-tint text-primary font-bold hover:bg-surface-variant transition-all flex items-center gap-1" id="btn-state-toggle" onclick="toggleWidgetPanel()" type="button">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span id="toggle-label-text">Tutup Jendela Chat</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Background Catalog Page Context: IKAPI Store Discover Shelf -->
+<div class="w-full max-w-[1240px] mx-auto px-margin py-space-xl">
+<!-- Breadcrumb & Header Title -->
+<div class="flex flex-col gap-space-xs mb-space-xl">
+<div class="flex items-center gap-space-xs text-ink-muted font-label-small text-label-small">
+<span class="hover:text-primary cursor-pointer">Beranda</span>
+<span>/</span>
+<span class="text-ink-body font-bold">Katalog Resmi IKAPI Jawa Barat</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div>
+
+<h1 class="font-headline-lg text-headline-lg text-ink-body">Pustaka Tatar Pasundan &amp; Karya Ilmiah</h1>
+<p class="font-body-small text-body-small text-ink-muted mt-space-xs max-w-2xl">Jelajahi karya orisinal anggota IKAPI Jabar dengan hak cipta terlindungi DRM. Akses instan membaca langsung di Web Reader browser Anda.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center bg-surface-container-low px-space-md py-space-xs rounded-lg font-label text-label text-ink-body">
+<span class="material-symbols-outlined text-[18px] text-ink-muted mr-space-xs">tune</span>
+            Filter Kategori: <span class="font-bold text-primary ml-1">Semua Genre (148)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Curated Books Row Context -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter mb-space-3xl">
+<!-- Book 1 -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow">
+<div class="aspect-[2/3] w-full bg-surface-container-low rounded-lg overflow-hidden relative mb-space-md">
+<img class="w-full h-full object-cover" data-alt="Cover of the historical book Laskar Aksara Pasundan featuring traditional West Javanese Sundanese ancient script illustration, warm ochre and terracotta paper aesthetic with subtle modern typography, clean literary layout in 2:3 vertical book aspect ratio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_tnQ1wIi0R4j2WAQUpKmhK-7Pt2ke0g_cHCmZj0QcBiTd_ENbDuBD9ozNcRW4BM4Fm-oMb2V2zR3zlLgxh_NtVhXLMy4YLDwyUdSBAkwwBmFe9U4JzR6u9iNtnhEmTKrIwqHJvX7pr1eM6Dp-qH8boKJIpKIUckgsHts72_H_vzSBDMT8GxlMrNTY-AgRo-vuomhWSNN1S3uclx-3guTGJOdNtOUZ2sGfaLin2lmq">
+<span class="absolute top-2 left-2 bg-primary text-on-primary font-label-small text-label-small px-2 py-0.5 rounded shadow-sm">Pilihan Redaksi</span>
+</div>
+<div class="flex flex-col flex-grow justify-between">
+<div>
+<span class="font-label-small text-label-small text-secondary font-semibold">Kiblat Buku Utama</span>
+<h2 class="font-title-md text-title-md text-ink-body mt-1 line-clamp-1">Laskar Aksara Pasundan</h2>
+<p class="font-body-small text-body-small text-ink-muted mt-0.5">Ayi R. Kurnia</p>
+</div>
+<div class="pt-space-md flex items-center justify-between border-t border-border-subtle mt-space-md">
+<div>
+<span class="font-label-small text-label-small text-ink-muted block leading-none">Format Digital</span>
+<span class="font-title-md text-title-md text-ink-body font-bold">Rp 45.000</span>
+</div>
+<button class="p-2 rounded-lg bg-surface-soft text-primary hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Book 2 -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow">
+<div class="aspect-[2/3] w-full bg-surface-cream rounded-lg overflow-hidden relative mb-space-md">
+<img class="w-full h-full object-cover" data-alt="Cover of book Pendidikan Karakter Sunda featuring educational cultural motif, Sundanese bamboo architecture and contemporary typography in warm slate and earthen tones, professional academic publishing style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTefiWSn4t3StzThbCabZozHnkXD-gNxdGAei4f8134c1FOopVUajOA13-TM0QmPdga0qLKbnbDZykpg3B-ee4dii9c5wqPH8fSA5NJJ7ZOrqKcYTlHy0qO0-sHJy6i60H6pKF5pr4jAS7hkDJdrNb2HPfKk0YhtAdH0NHIpr1o-sqDEFwlUiuwZWoy6W3cePuz0zyQ2TREcOUP4Yb70XlOVTOUUxt7HEJrq_UQt43">
+<span class="absolute top-2 left-2 bg-surface-cream text-tertiary font-label-small text-label-small px-2 py-0.5 rounded shadow-sm">Kajian Nilai</span>
+</div>
+<div class="flex flex-col flex-grow justify-between">
+<div>
+<span class="font-label-small text-label-small text-secondary font-semibold">Remaja Rosdakarya</span>
+<h2 class="font-title-md text-title-md text-ink-body mt-1 line-clamp-1">Pendidikan Karakter Sunda</h2>
+<p class="font-body-small text-body-small text-ink-muted mt-0.5">Dr. Cecep Hidayat</p>
+</div>
+<div class="pt-space-md flex items-center justify-between border-t border-border-subtle mt-space-md">
+<div>
+<span class="font-label-small text-label-small text-ink-muted block leading-none">Format Digital</span>
+<span class="font-title-md text-title-md text-ink-body font-bold">Rp 52.000</span>
+</div>
+<button class="p-2 rounded-lg bg-surface-soft text-primary hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Book 3 -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow">
+<div class="aspect-[2/3] w-full bg-surface-sky rounded-lg overflow-hidden relative mb-space-md">
+<img class="w-full h-full object-cover" data-alt="Cover of Bumi Parahyangan Jejak Purba featuring geographic topographic maps and ancient volcanic crater contour lines of ancient Lake Bandung in deep electric blue and warm parchment colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwzcyWfljdmceHamdMu2aAiEBuur_lCvaH1u6YsADXGpYboK73GLKm8UX3fOoLtmcZBxgDEd6w6by4BQZqlrrvlvyAC5Pd3qg4vpUW6Aiy7XLwDXYvwfVecBooTedJg1pByqOut8bvMGMFys2LjbwqCZlX_fqD1XxvskV5Lf9Jp3fjLkxJQ198zqK6H0AokOucK6jS5Dh5HcstFdFkYYPSGmU-OC9LJG7c_yNHFQDX">
+<span class="absolute top-2 left-2 bg-surface-sky text-ink-body font-label-small text-label-small px-2 py-0.5 rounded shadow-sm">Sains Geologi</span>
+</div>
+<div class="flex flex-col flex-grow justify-between">
+<div>
+<span class="font-label-small text-label-small text-secondary font-semibold">ITB Press</span>
+<h2 class="font-title-md text-title-md text-ink-body mt-1 line-clamp-1">Bumi Parahyangan: Jejak Purba</h2>
+<p class="font-body-small text-body-small text-ink-muted mt-0.5">T. Bachtiar</p>
+</div>
+<div class="pt-space-md flex items-center justify-between border-t border-border-subtle mt-space-md">
+<div>
+<span class="font-label-small text-label-small text-ink-muted block leading-none">Format Digital</span>
+<span class="font-title-md text-title-md text-ink-body font-bold">Rp 65.000</span>
+</div>
+<button class="p-2 rounded-lg bg-surface-soft text-primary hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Book 4 -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow">
+<div class="aspect-[2/3] w-full bg-surface-container rounded-lg overflow-hidden relative mb-space-md">
+<img class="w-full h-full object-cover" data-alt="Cover of book Flora Priangan Botanical Guide with delicate botanical illustrations of West Java native mountain plants and tea plantation flowers in warm vintage paper aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPERSjDcOHshSI6CzGTBkRXjVzr4YdyMLXo2FdnR4cM0PNBDYQrULvgPy_w0MABIb2E105NSDaYJ7MdiopUQE9gxs2lfztU4NjOSicxxwNkq7xLaeJUuB_0Se30KB0yTDG60CBazQlylcTsCOJ9nKVN-oEJIKditmtGzNzBsSkH0ZRLN-V8etAnzfxcw4s9C4PZEabL86g-6ldUmOyj0nqpoeyjQ7Py6RAZlTsVlXi">
+</div>
+<div class="flex flex-col flex-grow justify-between">
+<div>
+<span class="font-label-small text-label-small text-secondary font-semibold">Mizan Publishing</span>
+<h2 class="font-title-md text-title-md text-ink-body mt-1 line-clamp-1">Flora Priangan: Arsip Hayati</h2>
+<p class="font-body-small text-body-small text-ink-muted mt-0.5">Dr. Encep Kosasih</p>
+</div>
+<div class="pt-space-md flex items-center justify-between border-t border-border-subtle mt-space-md">
+<div>
+<span class="font-label-small text-label-small text-ink-muted block leading-none">Format Digital</span>
+<span class="font-title-md text-title-md text-ink-body font-bold">Rp 48.000</span>
+</div>
+<button class="p-2 rounded-lg bg-surface-soft text-primary hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Editorial Banner inside Background -->
+
+</div>
+<!-- FLOATING AI CHAT WIDGET SYSTEM -->
+<div class="fixed bottom-7 right-7 z-50 flex flex-col items-end">
+<!-- Chat Window Container (Crisp / Intercom tailored for IKAPI Store) -->
+<div class="w-[410px] h-[610px] max-w-[calc(100vw-32px)] max-h-[calc(100vh-110px)] bg-surface-container-lowest rounded-2xl shadow-[0_16px_40px_rgba(25,25,35,0.16)] border border-border-subtle flex flex-col overflow-hidden mb-4 transition-all duration-300 origin-bottom-right" id="ikapi-chat-window">
+<!-- Widget Header -->
+<div class="bg-primary px-space-md py- space-sm py-3.5 text-on-primary flex items-center justify-between flex-shrink-0 shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-white/15 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-white text-[20px]">auto_stories</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label text-label font-bold text-white tracking-tight">Bantuan IKAPI</span>
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
+</div>
+<span class="font-label-small text-label-small text-primary-fixed text-[11px] leading-tight">Asisten Virtual Katalog &amp; Panduan</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-primary-fixed hover:text-white hover:bg-white/10 transition-colors" onclick="resetChatConversation()" title="Bersihkan Percakapan" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-primary-fixed hover:text-white hover:bg-white/10 transition-colors" onclick="toggleWidgetPanel()" title="Tutup Jendela" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<!-- Quick Scope Filter Navigation -->
+<div class="bg-surface-soft px-3 py-2 flex items-center justify-between border-b border-border-subtle text-ink-muted">
+<div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
+<button class="px-2.5 py-1 rounded-full text-[11px] font-label-small font-bold bg-primary text-on-primary shadow-xs" id="subnav-rekomendasi" onclick="switchChatState('rekomendasi')" type="button">
+            Rekomendasi
+          </button>
+<button class="px-2.5 py-1 rounded-full text-[11px] font-label-small bg-surface-container text-ink-body hover:bg-surface-variant" id="subnav-pembayaran" onclick="switchChatState('pembayaran')" type="button">
+            Pembayaran &amp; Reader
+          </button>
+<button class="px-2.5 py-1 rounded-full text-[11px] font-label-small bg-surface-container text-ink-body hover:bg-surface-variant" id="subnav-eskalasi" onclick="switchChatState('eskalasi')" type="button">
+            Kontak Tim
+          </button>
+</div>
+</div>
+<!-- Chat Body (Scrollable Conversation Thread) -->
+<div class="flex-1 overflow-y-auto p-space-md space-y-space-md bg-surface-bright" id="chat-body-scrollable">
+<!-- Welcome Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl border border-border-subtle shadow-xs">
+<div class="flex items-center gap-space-xs text-primary mb-1">
+<span class="material-symbols-outlined text-[18px]">waving_hand</span>
+<span class="font-label text-label font-bold text-ink-body">Wilujeng Sumping!</span>
+</div>
+<p class="font-body-small text-body-small text-ink-muted">
+            Ada yang bisa dibantu? Anda dapat menanyakan kurasi judul naskah Sunda, panduan verifikasi transaksi e-book, atau akses Web Reader IKAPI Store.
+          </p>
+</div>
+<!-- Quick Question Chips -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-small text-label-small text-ink-muted uppercase tracking-wider text-[11px]">Pertanyaan Cepat:</span>
+<div class="flex flex-wrap gap-1.5">
+<button class="text-left font-label-small text-label-small px-space-sm py-1 rounded-lg bg-surface-container text-ink-body hover:bg-surface-tint hover:text-primary transition-colors border border-border-subtle/60" onclick="sendPrompt('Ada rekomendasi buku tentang sejarah atau naskah Sunda kuno?')" type="button">
+              📚 Naskah Sunda Kuno
+            </button>
+<button class="text-left font-label-small text-label-small px-space-sm py-1 rounded-lg bg-surface-container text-ink-body hover:bg-surface-tint hover:text-primary transition-colors border border-border-subtle/60" onclick="switchChatState('pembayaran')" type="button">
+              💳 Cara Pembayaran e-Book
+            </button>
+<button class="text-left font-label-small text-label-small px-space-sm py-1 rounded-lg bg-surface-container text-ink-body hover:bg-surface-tint hover:text-primary transition-colors border border-border-subtle/60" onclick="sendPrompt('Bagaimana cara membaca e-book di Web Reader?')" type="button">
+              📖 Panduan Web Reader
+            </button>
+<button class="text-left font-label-small text-label-small px-space-sm py-1 rounded-lg bg-surface-container text-ink-body hover:bg-surface-tint hover:text-primary transition-colors border border-border-subtle/60" onclick="switchChatState('eskalasi')" type="button">
+              📞 Kontak Sekretariat
+            </button>
+</div>
+</div>
+<!-- DYNAMIC SCENARIO CONTAINER -->
+<!-- State 1: Book Recommendation (Default) -->
+<div class="space-y-space-md" id="scenario-rekomendasi">
+<!-- User Bubble -->
+<div class="flex justify-end">
+<div class="max-w-[85%] bg-primary text-on-primary rounded-2xl rounded-br-xs px-space-md py-space-sm shadow-xs font-body-small text-body-small">
+              Ada rekomendasi buku tentang sejarah atau naskah Sunda kuno?
+            </div>
+</div>
+<!-- Bot Bubble & Recommended Cards -->
+<div class="flex flex-col items-start gap-space-xs">
+<div class="flex items-center gap-1.5 text-ink-muted font-label-small text-label-small text-[11px]">
+<span class="w-4 h-4 rounded-full bg-primary-fixed flex items-center justify-center text-primary text-[10px] font-bold">IK</span>
+<span>Asisten IKAPI Store</span>
+</div>
+<div class="max-w-[92%] bg-surface-container-low text-ink-body rounded-2xl rounded-tl-xs px-space-md py-space-sm shadow-xs font-body-small text-body-small">
+              Tentu! Di katalog resmi IKAPI Store Pengda Jabar, kami memiliki dua naskah terpilih yang membahas filologi dan bentang alam Tatar Pasundan:
+            </div>
+<!-- Embedded Book Cards (In-chat UI) -->
+<div class="w-full space-y-space-xs mt-1">
+<!-- Mini Card 1 -->
+<div class="bg-surface-container-lowest border border-border-subtle rounded-xl p-3 flex gap-3 shadow-xs">
+<div class="w-16 h-24 bg-surface-cream rounded-md overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Cover of Laskar Aksara Pasundan novel shown in mini preview tile, historical Sundanese manuscript artwork in ochre tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzIgbkjBc-93DzsPqMzDOgDkzE6MXM77bQcNkipYXLy7TTwVwL6sPUeio0jVAagd8k_1Qog2b29-ctpqS1drl_WlZQqXccyaN6CQ5S9O7ERcOofADQdFdsd1RrCsgecg4QbF9sCWR2by-In9JuELblsMTyABHAV8GFiUiF55Kj00DIQXChxT3FLk6OURkV675WWVon4Vkbd-yRnBMV3kW0xi38cYItQsQhZIHKAxHD">
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div>
+<span class="text-[10px] font-label-small text-secondary uppercase font-bold tracking-wider">Kiblat Buku Utama</span>
+<h4 class="font-title-md text-[14px] leading-tight text-ink-body font-bold truncate">Laskar Aksara Pasundan</h4>
+<p class="font-body-small text-body-small text-[12px] text-ink-muted line-clamp-2 mt-0.5 leading-snug">Novel fiksi sejarah berlatar naskah lontar abad ke-16 dan peradaban Kawali.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label text-label font-bold text-ink-body">Rp 45.000</span>
+<a class="inline-flex items-center gap-0.5 text-primary font-label-small text-label-small hover:underline font-bold text-[12px]" href="#">
+                      Lihat Buku
+                      <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Mini Card 2 -->
+<div class="bg-surface-container-lowest border border-border-subtle rounded-xl p-3 flex gap-3 shadow-xs">
+<div class="w-16 h-24 bg-surface-sky rounded-md overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Cover of Bumi Parahyangan Jejak Purba geological study book, showing scientific strata and mountain crater of ancient Bandung." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqyKLx181i8Vjz-d16cw_MGWwuctKrpXJl0Ore45-oZRXgiMcinyXnJAr-4ShR3ECSNz6Ya-xjaj2fQQ-WGV0svHq8boG7ljY90HkmPHEojZnk6YjVGqVFk2ffyb8gzAcMVE9t-zRZf_TnNM230E_h6whHN9cthxU9mEzZ-PaIsgFHcFykcA1xQHokl0FM_EPwkaafjf9_JyVwMno_lg58dZ_z3uk-UMDDraiz1UUk">
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div>
+<span class="text-[10px] font-label-small text-secondary uppercase font-bold tracking-wider">ITB Press</span>
+<h4 class="font-title-md text-[14px] leading-tight text-ink-body font-bold truncate">Bumi Parahyangan: Jejak Purba</h4>
+<p class="font-body-small text-body-small text-[12px] text-ink-muted line-clamp-2 mt-0.5 leading-snug">Kajian geomorfologi, fosil, dan bentang alam Bandung Purba terlengkap.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label text-label font-bold text-ink-body">Rp 65.000</span>
+<a class="inline-flex items-center gap-0.5 text-primary font-label-small text-label-small hover:underline font-bold text-[12px]" href="#">
+                      Lihat Buku
+                      <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- DRM note pill -->
+
+</div>
+</div>
+<!-- State 2: Payment & Web Reader Assistance -->
+<div class="space-y-space-md hidden" id="scenario-pembayaran">
+<div class="flex justify-end">
+<div class="max-w-[85%] bg-primary text-on-primary rounded-2xl rounded-br-xs px-space-md py-space-sm shadow-xs font-body-small text-body-small">
+              Bagaimana alur pembayaran QRIS dan cara membuka buku di Web Reader?
+            </div>
+</div>
+<div class="flex flex-col items-start gap-space-xs">
+<div class="flex items-center gap-1.5 text-ink-muted font-label-small text-label-small text-[11px]">
+<span class="w-4 h-4 rounded-full bg-primary-fixed flex items-center justify-center text-primary text-[10px] font-bold">IK</span>
+<span>Panduan Transaksi IKAPI</span>
+</div>
+<div class="max-w-[95%] bg-surface-container-low text-ink-body rounded-2xl rounded-tl-xs p-space-md shadow-xs space-y-space-sm font-body-small text-body-small">
+<p class="font-bold text-ink-body">Alur Pembelian &amp; Sinkronisasi Reader:</p>
+<ol class="space-y-2 list-decimal list-inside text-[13px] text-ink-muted">
+<li><strong class="text-ink-body">Checkout &amp; QRIS:</strong> Pembayaran diproses instan melalui gerbang Midtrans Snap (QRIS, VA Bank Mandiri/BCA/BNI).</li>
+<li><strong class="text-ink-body">Verifikasi Otomatis:</strong> Tidak perlu konfirmasi manual via WhatsApp. Status pembayaran langsung beralih ke <span class="text-emerald-700 font-bold bg-emerald-50 px-1 rounded">Lunas</span> dalam hitungan detik.</li>
+<li><strong class="text-ink-body">Buka Web Reader:</strong> Akses menu <span class="font-semibold text-primary">"Perpustakaan Saya"</span> di akun Anda, lalu klik tombol <em>Mulai Membaca</em>.</li>
+</ol>
+<div class="p-2.5 rounded-lg bg-surface-sky/60 text-ink-body text-[12px]">
+<strong class="font-bold block text-primary mb-0.5">Kompatibilitas Perangkat:</strong>
+                Web Reader dapat dibuka langsung lewat Safari, Chrome, atau Firefox tanpa instalasi aplikasi tambahan baik di PC, tablet, maupun ponsel.
+              </div>
+<div class="pt-1 flex items-center gap-2">
+<a class="px-3 py-1.5 bg-primary text-on-primary rounded-lg font-label-small text-label-small font-bold hover:bg-primary-container transition-colors inline-block" href="#">
+                  Cek Perpustakaan Saya
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- State 3: Out of Scope / Support Contact Escalation -->
+<div class="space-y-space-md hidden" id="scenario-eskalasi">
+<div class="flex justify-end">
+<div class="max-w-[85%] bg-primary text-on-primary rounded-2xl rounded-br-xs px-space-md py-space-sm shadow-xs font-body-small text-body-small">
+              Saya ingin mengajukan proposal kerja sama pameran buku sekolah dan konsultasi royalti naskah.
+            </div>
+</div>
+<div class="flex flex-col items-start gap-space-xs">
+<div class="flex items-center gap-1.5 text-ink-muted font-label-small text-label-small text-[11px]">
+<span class="w-4 h-4 rounded-full bg-primary-fixed flex items-center justify-center text-primary text-[10px] font-bold">IK</span>
+<span>Sekretariat IKAPI Jabar</span>
+</div>
+<div class="max-w-[95%] bg-surface-container-low text-ink-body rounded-2xl rounded-tl-xs p-space-md shadow-xs font-body-small text-body-small space-y-space-sm">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px] flex-shrink-0 mt-0.5">info</span>
+<p class="text-ink-body text-[13px]">
+                  Pertanyaan ini berada di luar wewenang asisten virtual katalog e-book. Urusan kemitraan organisasi, keanggotaan penerbit, dan legalitas naskah ditangani langsung oleh pengurus.
+                </p>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-sm border border-border-subtle space-y-2 text-[13px]">
+<div class="font-label text-label font-bold text-ink-body">Saluran Komunikasi Resmi:</div>
+<div class="flex items-center gap-2 text-ink-muted">
+<span class="material-symbols-outlined text-[16px] text-primary">mail</span>
+<a class="text-primary hover:underline font-semibold" href="mailto:sekretariat@ikapi-jabar.or.id">sekretariat@ikapi-jabar.or.id</a>
+</div>
+<div class="flex items-center gap-2 text-ink-muted">
+<span class="material-symbols-outlined text-[16px] text-primary">call</span>
+<span>(022) 7320084 (Senin - Jumat, 09.00 - 16.00 WIB)</span>
+</div>
+<div class="flex items-start gap-2 text-ink-muted">
+<span class="material-symbols-outlined text-[16px] text-primary flex-shrink-0 mt-0.5">location_on</span>
+<span>Gedung Dispusipda Jabar Lt. 2, Jl. Kawaluyaan Indah II No.4, Bandung</span>
+</div>
+</div>
+<div class="text-[12px] text-ink-muted italic">
+                Pesan tertulis via email akan dibalas resmi oleh staf sekretariat IKAPI Jawa Barat.
+              </div>
+</div>
+</div>
+</div>
+<!-- State 4: Loading State Simulation -->
+<div class="space-y-space-md hidden" id="scenario-loading">
+<div class="flex justify-end">
+<div class="max-w-[85%] bg-primary text-on-primary rounded-2xl rounded-br-xs px-space-md py-space-sm shadow-xs font-body-small text-body-small">
+              Carikan buku antologi puisi Sunda kontemporer...
+            </div>
+</div>
+<div class="flex flex-col items-start gap-space-xs">
+<div class="flex items-center gap-1.5 text-ink-muted font-label-small text-label-small text-[11px]">
+<span class="w-4 h-4 rounded-full bg-primary-fixed flex items-center justify-center text-primary text-[10px] font-bold">IK</span>
+<span>Menelusuri database IKAPI...</span>
+</div>
+<div class="bg-surface-container-low px-4 py-3 rounded-2xl rounded-tl-xs flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse [animation-delay:200ms]"></span>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse [animation-delay:400ms]"></span>
+<span class="font-label-small text-label-small text-ink-muted text-[12px] ml-1">Mencocokkan penerbit terdaftar...</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Composer / Bottom Input Area -->
+<div class="p-3 bg-surface-container-lowest border-t border-border-subtle flex-shrink-0">
+<form class="relative flex items-end gap-2" onsubmit="handleChatSubmit(event)">
+<div class="relative flex-1">
+<textarea class="w-full resize-none max-h-24 py-2.5 pl-3 pr-8 rounded-xl bg-surface-soft border border-border-subtle text-ink-body font-body-small text-[13px] placeholder:text-ink-muted focus:outline-none focus:border-primary focus:bg-white transition-all" id="chat-input-field" placeholder="Tulis pertanyaan seputar buku atau transaksi..." rows="1"></textarea>
+<span class="material-symbols-outlined absolute right-2.5 bottom-2.5 text-ink-muted text-[18px]">keyboard</span>
+</div>
+<button aria-label="Kirim Pesan" class="h-10 w-10 rounded-xl bg-primary hover:bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0 transition-colors shadow-sm" type="submit">
+<span class="material-symbols-outlined text-[19px]">send</span>
+</button>
+</form>
+<div class="mt-2 text-center">
+<span class="font-label-small text-[10px] text-ink-muted block leading-none">
+            Asisten virtual IKAPI Store • Rekomendasi berdasarkan katalog resmi anggota Jabar
+          </span>
+</div>
+</div>
+</div>
+<!-- Floating Support Launcher Button (Fixed 28px offset) -->
+<div class="relative flex items-center justify-end">
+<!-- Tooltip Tag -->
+<div class="absolute right-16 top-1/2 -translate-y-1/2 bg-inverse-surface text-inverse-on-surface px-3 py-1.5 rounded-lg font-label-small text-label-small whitespace-nowrap shadow-md pointer-events-none transition-opacity duration-200" id="launcher-tooltip">
+        Bantuan IKAPI &amp; Cari Buku
+      </div>
+<!-- Main Circle Floating Action Button -->
+<button aria-label="Buka Bantuan IKAPI" class="w-14 h-14 rounded-full bg-primary hover:bg-primary-container text-on-primary shadow-[0_8px_24px_rgba(89,86,233,0.38)] flex items-center justify-center transition-all duration-200 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-primary-fixed" onclick="toggleWidgetPanel()" type="button">
+<span class="material-symbols-outlined text-[28px] transition-transform duration-200" id="launcher-icon-chat">chat_bubble</span>
+<span class="material-symbols-outlined text-[28px] hidden transition-transform duration-200" id="launcher-icon-close">expand_more</span>
+<!-- Active Status Indicator Dot -->
+<span class="absolute top-1 right-1 w-3.5 h-3.5 bg-emerald-400 border-2 border-white rounded-full"></span>
+</button>
+</div>
+</div>
+<script>
+    let isWidgetOpen = true;
+
+    function toggleWidgetPanel() {
+      const windowEl = document.getElementById('ikapi-chat-window');
+      const chatIcon = document.getElementById('launcher-icon-chat');
+      const closeIcon = document.getElementById('launcher-icon-close');
+      const toggleLabel = document.getElementById('toggle-label-text');
+      const tooltip = document.getElementById('launcher-tooltip');
+
+      isWidgetOpen = !isWidgetOpen;
+
+      if (isWidgetOpen) {
+        windowEl.classList.remove('hidden', 'scale-95', 'opacity-0', 'pointer-events-none');
+        windowEl.classList.add('flex', 'scale-100', 'opacity-100');
+        chatIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+        toggleLabel.textContent = 'Tutup Jendela Chat';
+        if (tooltip) tooltip.classList.add('opacity-0');
+      } else {
+        windowEl.classList.add('hidden', 'scale-95', 'opacity-0', 'pointer-events-none');
+        windowEl.classList.remove('flex', 'scale-100', 'opacity-100');
+        chatIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        toggleLabel.textContent = 'Buka Jendela Chat';
+        if (tooltip) tooltip.classList.remove('opacity-0');
+      }
+    }
+
+    function openWidgetIfClosed() {
+      if (!isWidgetOpen) {
+        toggleWidgetPanel();
+      }
+    }
+
+    function switchChatState(stateName) {
+      openWidgetIfClosed();
+
+      const scenarios = ['rekomendasi', 'pembayaran', 'eskalasi', 'loading'];
+      scenarios.forEach(s => {
+        const el = document.getElementById('scenario-' + s);
+        const btnState = document.getElementById('btn-state-' + s);
+        const subnav = document.getElementById('subnav-' + s);
+
+        if (el) {
+          if (s === stateName) {
+            el.classList.remove('hidden');
+          } else {
+            el.classList.add('hidden');
+          }
+        }
+
+        if (btnState) {
+          if (s === stateName) {
+            btnState.className = 'px-space-sm py-1 rounded-lg font-label-small text-label-small bg-primary text-on-primary transition-all shadow-sm';
+          } else {
+            btnState.className = 'px-space-sm py-1 rounded-lg font-label-small text-label-small bg-surface-container-lowest text-ink-muted hover:text-ink-body transition-all';
+          }
+        }
+
+        if (subnav) {
+          if (s === stateName) {
+            subnav.className = 'px-2.5 py-1 rounded-full text-[11px] font-label-small font-bold bg-primary text-on-primary shadow-xs';
+          } else {
+            subnav.className = 'px-2.5 py-1 rounded-full text-[11px] font-label-small bg-surface-container text-ink-body hover:bg-surface-variant';
+          }
+        }
+      });
+
+      // Scroll to bottom of conversation
+      setTimeout(() => {
+        const scrollEl = document.getElementById('chat-body-scrollable');
+        if (scrollEl) scrollEl.scrollTop = scrollEl.scrollHeight;
+      }, 50);
+    }
+
+    function sendPrompt(text) {
+      const input = document.getElementById('chat-input-field');
+      if (input) input.value = text;
+      switchChatState('rekomendasi');
+    }
+
+    function handleChatSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById('chat-input-field');
+      const val = input.value.trim();
+      if (!val) return;
+
+      // Temporary switch to loading then fallback to recommendations
+      switchChatState('loading');
+      setTimeout(() => {
+        switchChatState('rekomendasi');
+        input.value = '';
+      }, 800);
+    }
+
+    function resetChatConversation() {
+      switchChatState('rekomendasi');
+      const input = document.getElementById('chat-input-field');
+      if (input) input.value = '';
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-paper pt-space-3xl pb-space-2xl mt-space-3xl"><div class="max-w-[1240px] mx-auto px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter pb-space-2xl"><div class="flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="logo-ikapu.png" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAtESD9h3_i3_U28gL48IE-CmqOBpHx0tP0EEoXkPWueXcyoVOcm4pKtcCmkQ-BTU-_mZ-NxVijgD5bnqhESu31UeT1lNTDZL6qBXWDfggq9jHB2jXY_joWRJ-KLVASL07A5-SPOiCWwp2iL8a44gEhjDEINilbsk-EQcA07VDM1AeYhlVg-Qz6CJtBbHvfUtg9FJDA5oUS6m6mE-N8tuyW4kt12LJLajnXgO2KfQB-55DghwzSlu87aaAW"><span class="font-title-md text-title-md text-ink-body">IKAPI Store</span></div><p class="font-body-small text-body-small text-ink-muted">Platform kurasi literatur resmi Ikatan Penerbit Indonesia (IKAPI) Pengurus Daerah Jawa Barat. Menghubungkan pembaca dengan karya orisinal penerbit anggota se-Jawa Barat.</p></div><div class="flex flex-col gap-space-sm"><h4 class="font-title-md text-title-md text-ink-body mb-space-xs">Penerbit Terverifikasi</h4><ul class="flex flex-col gap-space-xs font-body-small text-body-small text-ink-muted"><li><a class="hover:text-primary transition-colors" href="#">Mizan Group</a></li><li><a class="hover:text-primary transition-colors" href="#">Penerbit ITB Press</a></li><li><a class="hover:text-primary transition-colors" href="#">Remaja Rosdakarya</a></li><li><a class="hover:text-primary transition-colors" href="#">Kiblat Buku Utama</a></li><li><a class="hover:text-primary transition-colors" href="#">Pustaka Setia</a></li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-title-md text-title-md text-ink-body mb-space-xs">Tentang IKAPI Jabar</h4><ul class="flex flex-col gap-space-xs font-body-small text-body-small text-ink-muted"><li><a class="hover:text-primary transition-colors" href="#">Profil Organisasi</a></li><li><a class="hover:text-primary transition-colors" href="#">Keanggotaan Penerbit</a></li><li><a class="hover:text-primary transition-colors" href="#">Jabar Book Fair</a></li><li><a class="hover:text-primary transition-colors" href="#">Program Hibah Naskah</a></li><li><a class="hover:text-primary transition-colors" href="#">Pusat Literasi Digital</a></li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-title-md text-title-md text-ink-body mb-space-xs">Kontak Resmi</h4><div class="flex flex-col gap-space-xs font-body-small text-body-small text-ink-muted"><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-ink-body flex-shrink-0 mt-0.5">location_on</span><span>Gedung Perpustakaan &amp; Arsip Daerah Jawa Barat, Jl. Kawaluyaan Indah II No.4, Buahbatu, Bandung, Jawa Barat 40286</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-ink-body flex-shrink-0">mail</span><span>sekretariat@ikapi-jabar.or.id</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-ink-body flex-shrink-0">call</span><span>(022) 7320084 / +62 812-2144-8901</span></div></div></div></div><div class="pt-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md text-center md:text-left"><p class="font-label-small text-label-small text-ink-muted">© 2025 IKAPI Jawa Barat. Seluruh Hak Cipta Dilindungi Undang-Undang.</p><div class="flex items-center gap-space-lg font-label-small text-label-small text-ink-muted"><a class="hover:text-primary transition-colors" href="#">Ketentuan Layanan</a><a class="hover:text-primary transition-colors" href="#">Kebijakan Privasi</a><a class="hover:text-primary transition-colors" href="#">Panduan Pembeli</a></div></div></div></footer>
+
+</body></html>
