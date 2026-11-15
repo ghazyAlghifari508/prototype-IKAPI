@@ -1,0 +1,729 @@
+<!DOCTYPE html><html lang="id" style="width: 1280px; height: 1256px; overflow: hidden; position: relative;"><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "surface-lilac": "#E5E4FF",
+        "surface-container-highest": "#e3e1ef",
+        "surface-bright": "#fcf8ff",
+        "surface-variant": "#e3e1ef",
+        "surface-dim": "#dbd8e7",
+        "on-surface": "#1b1b25",
+        "on-tertiary": "#ffffff",
+        "background": "#fcf8ff",
+        "secondary-fixed-dim": "#f4b5c8",
+        "outline-variant": "#c7c4d7",
+        "on-background": "#1b1b25",
+        "surface-sky": "#E0F6FC",
+        "surface-container-high": "#e9e6f5",
+        "on-error": "#ffffff",
+        "surface-container-low": "#f5f2ff",
+        "inverse-primary": "#c2c1ff",
+        "surface-tint": "#4c48dc",
+        "on-tertiary-fixed": "#241a00",
+        "tertiary-container": "#cea623",
+        "on-secondary-container": "#7a495a",
+        "on-secondary-fixed-variant": "#663949",
+        "primary-container": "#5956e9",
+        "surface-soft": "#F8F7FF",
+        "on-primary": "#ffffff",
+        "surface-container": "#efecfb",
+        "on-secondary": "#ffffff",
+        "ink-body": "#191923",
+        "on-primary-container": "#eeeaff",
+        "inverse-on-surface": "#f2effe",
+        "on-primary-fixed": "#0c006a",
+        "inverse-surface": "#302f3a",
+        "surface-cream": "#FFF1E3",
+        "feedback-error": "#B42318",
+        "error-container": "#ffdad6",
+        "tertiary": "#745b00",
+        "outline": "#777586",
+        "primary": "#3f3ad0",
+        "secondary-fixed": "#ffd9e3",
+        "surface-container-lowest": "#ffffff",
+        "on-primary-fixed-variant": "#3229c4",
+        "secondary-container": "#fdbed1",
+        "surface-paper": "#FFF0E3",
+        "on-secondary-fixed": "#330e1d",
+        "primary-fixed": "#e2dfff",
+        "on-tertiary-fixed-variant": "#584400",
+        "error": "#ba1a1a",
+        "on-surface-variant": "#464555",
+        "tertiary-fixed-dim": "#ecc23f",
+        "primary-fixed-dim": "#c2c1ff",
+        "inverse-deep": "#24233D",
+        "border-bold": "#CFD0DD",
+        "surface": "#fcf8ff",
+        "on-error-container": "#93000a",
+        "secondary": "#815060",
+        "on-tertiary-container": "#4f3d00",
+        "tertiary-fixed": "#ffe08d",
+        "border-subtle": "#E7E7EF",
+        "ink-muted": "#555665"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "gutter": "1.5rem",
+        "space-sm": "0.5rem",
+        "space-md": "1rem",
+        "space-xs": "0.25rem",
+        "margin-mobile": "1.25rem",
+        "space-3xl": "4.5rem",
+        "space-lg": "1.5rem",
+        "space-xl": "2rem",
+        "space-2xl": "3rem",
+        "gutter-mobile": "1.25rem",
+        "margin": "2.5rem"
+      },
+      "fontFamily": {
+        "display-md-mobile": ["Plus Jakarta Sans"],
+        "label-small": ["Plus Jakarta Sans"],
+        "display-lg-mobile": ["Plus Jakarta Sans"],
+        "body-base": ["Plus Jakarta Sans"],
+        "display-md": ["Plus Jakarta Sans"],
+        "body-small": ["Plus Jakarta Sans"],
+        "headline-lg-mobile": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"],
+        "headline-md": ["Plus Jakarta Sans"],
+        "title-md": ["Plus Jakarta Sans"],
+        "display-lg": ["Plus Jakarta Sans"],
+        "label": ["Plus Jakarta Sans"]
+      },
+      "fontSize": {
+        "display-md-mobile": ["28px", {"lineHeight": "1.2", "letterSpacing": "-0.025em", "fontWeight": "800"}],
+        "label-small": ["12px", {"lineHeight": "1.3", "letterSpacing": "0.02em", "fontWeight": "600"}],
+        "display-lg-mobile": ["34px", {"lineHeight": "1.15", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+        "body-base": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+        "display-md": ["44px", {"lineHeight": "1.12", "letterSpacing": "-0.035em", "fontWeight": "800"}],
+        "body-small": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+        "headline-lg-mobile": ["24px", {"lineHeight": "1.25", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "headline-lg": ["36px", {"lineHeight": "1.18", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+        "headline-md": ["28px", {"lineHeight": "1.22", "letterSpacing": "-0.025em", "fontWeight": "700"}],
+        "title-md": ["18px", {"lineHeight": "1.35", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+        "display-lg": ["56px", {"lineHeight": "1.08", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+        "label": ["14px", {"lineHeight": "1.35", "letterSpacing": "0", "fontWeight": "600"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-base text-ink-body"><aside class="fixed left-0 top-0 h-full w-[240px] bg-surface-soft z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="logo-ikapu.png" class="h-8 w-auto object-contain" src="../../assets/logo-ikapi-jabar.png"><div class="flex flex-col min-w-0"></div></div><div class="px-space-md py-space-sm"></div><nav class="flex flex-col gap-1 px-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg transition-colors bg-primary-container text-on-primary font-semibold" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label text-label" data-path="kelola-buku" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>Kelola Buku</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label text-label" data-path="pesanan-masuk" href="#"><span class="material-symbols-outlined text-[20px]">inbox</span><span>Pesanan Masuk</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label text-label" data-path="pendapatan-dan-pencairan" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span>Pendapatan &amp; Pencairan</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label text-label" data-path="ulasan-pembeli" href="#"><span class="material-symbols-outlined text-[20px]">reviews</span><span>Ulasan Pembeli</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label text-label" data-path="pengaturan-profil" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span>Pengaturan Profil</span></a></nav></div></aside><div class="pl-[240px]"><header class="fixed top-0 left-[240px] right-0 h-16 bg-surface-bright/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"></div><div class="flex items-center gap-space-md"><button aria-label="Notifikasi" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-feedback-error"></span></button><div class="flex items-center gap-space-sm pl-space-sm py-1"><div class="flex flex-col items-end min-w-0 hidden md:flex"><div class="flex items-center gap-1"></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive State Switcher Simulator Bar -->
+<div class="w-full bg-surface-container-high px-space-md py-space-sm shadow-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs text-ink-body font-label-small text-label-small">
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">tune</span>
+<span class="font-bold uppercase tracking-wider text-ink-body">Simulasi Status Tampilan:</span>
+</div>
+<div aria-label="Switcher Mode Dashboard" class="inline-flex p-1 bg-surface-container rounded-lg gap-1" role="tablist">
+<button aria-selected="true" class="state-tab-btn px-space-sm py-1.5 rounded-lg font-label text-label transition-all bg-primary-container text-on-primary font-bold shadow-sm" id="btn-state-a" onclick="switchDashboardState('state-a')" type="button">
+        State A: Penerbit Baru (Kosong)
+      </button>
+<button aria-selected="false" class="state-tab-btn px-space-sm py-1.5 rounded-lg font-label text-label transition-all hover:text-on-surface hover:bg-surface-container-highest text-on-surface-variant" id="btn-state-b" onclick="switchDashboardState('state-b')" type="button">
+        State B: Data Penjualan Terisi
+      </button>
+<button aria-selected="false" class="state-tab-btn px-space-sm py-1.5 rounded-lg font-label text-label transition-all hover:text-on-surface hover:bg-surface-container-highest text-on-surface-variant" id="btn-state-c" onclick="switchDashboardState('state-c')" type="button">
+        State C: Sedang Memuat (Skeleton)
+      </button>
+<button aria-selected="false" class="state-tab-btn px-space-sm py-1.5 rounded-lg font-label text-label transition-all hover:text-on-surface hover:bg-surface-container-highest text-on-surface-variant" id="btn-state-d" onclick="switchDashboardState('state-d')" type="button">
+        State D: Gagal Memuat Analitik
+      </button>
+</div>
+
+</div>
+<!-- Main Dashboard Canvas -->
+<div class="w-full px-space-lg py-space-xl max-w-[1240px] mx-auto flex flex-col gap-space-xl">
+<!-- Page Header (Editorial & Structural) -->
+<header class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col min-w-0">
+
+<h1 class="font-headline-lg text-headline-lg text-ink-body">Dashboard Penerbit</h1>
+<p class="font-body-base text-body-base text-ink-muted mt-0.5">
+          Ringkasan aktivitas penerbitan buku, performa penjualan, dan saldo pencairan.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-surface-container text-ink-body hover:bg-surface-container-high transition-colors font-label text-label" type="button">
+<span class="material-symbols-outlined text-[18px]">summarize</span>
+<span>Laporan Penjualan</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-primary-container text-on-primary hover:bg-primary transition-colors font-label text-label shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Tambah Buku Baru</span>
+</button>
+</div>
+</header>
+<!-- Global State Container Wrappers -->
+<!-- ==================== STATE C: SKELETON LOADING ==================== -->
+<div class="flex-col gap-space-xl animate-pulse hidden" id="view-state-c">
+<!-- Skeleton KPI Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col justify-between h-36">
+<div class="h-4 bg-surface-container-high rounded w-24"></div>
+<div class="h-9 bg-surface-container-high rounded w-20 my-2"></div>
+<div class="h-3.5 bg-surface-container rounded w-36"></div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col justify-between h-36">
+<div class="h-4 bg-surface-container-high rounded w-24"></div>
+<div class="h-9 bg-surface-container-high rounded w-16 my-2"></div>
+<div class="h-3.5 bg-surface-container rounded w-32"></div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col justify-between h-36">
+<div class="h-4 bg-surface-container-high rounded w-28"></div>
+<div class="h-9 bg-surface-container-high rounded w-36 my-2"></div>
+<div class="h-3.5 bg-surface-container rounded w-44"></div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col justify-between h-36">
+<div class="h-4 bg-surface-container-high rounded w-28"></div>
+<div class="h-9 bg-surface-container-high rounded w-32 my-2"></div>
+<div class="h-3.5 bg-surface-container rounded w-40"></div>
+</div>
+</div>
+<!-- Skeleton Analytics Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<div class="lg:col-span-2 bg-surface-container-lowest p-space-lg rounded-xl h-96 flex flex-col justify-between">
+<div class="flex justify-between items-center">
+<div class="space-y-2">
+<div class="h-5 bg-surface-container-high rounded w-44"></div>
+<div class="h-3 bg-surface-container rounded w-32"></div>
+</div>
+<div class="h-8 bg-surface-container rounded w-28"></div>
+</div>
+<div class="h-60 bg-surface-container-high/40 rounded flex items-end p-4 gap-4">
+<div class="w-full h-1/4 bg-surface-container rounded"></div>
+<div class="w-full h-2/4 bg-surface-container rounded"></div>
+<div class="w-full h-1/3 bg-surface-container rounded"></div>
+<div class="w-full h-3/4 bg-surface-container rounded"></div>
+<div class="w-full h-1/2 bg-surface-container rounded"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl h-96 flex flex-col justify-between">
+<div class="space-y-2">
+<div class="h-5 bg-surface-container-high rounded w-36"></div>
+<div class="h-3 bg-surface-container rounded w-48"></div>
+</div>
+<div class="space-y-4 my-auto">
+<div class="h-4 bg-surface-container rounded w-full"></div>
+<div class="h-4 bg-surface-container rounded w-5/6"></div>
+<div class="h-4 bg-surface-container rounded w-4/5"></div>
+<div class="h-4 bg-surface-container rounded w-3/4"></div>
+</div>
+<div class="h-3 bg-surface-container rounded w-40"></div>
+</div>
+</div>
+<!-- Skeleton Table -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl flex flex-col gap-4">
+<div class="h-5 bg-surface-container-high rounded w-52"></div>
+<div class="h-10 bg-surface-container rounded w-full"></div>
+<div class="h-12 bg-surface-container-high/40 rounded w-full"></div>
+<div class="h-12 bg-surface-container-high/40 rounded w-full"></div>
+<div class="h-12 bg-surface-container-high/40 rounded w-full"></div>
+</div>
+</div>
+<!-- ==================== STATE D: ERROR LOADING STATE ==================== -->
+<div class="flex-col gap-space-lg hidden" id="view-state-d">
+<div class="w-full bg-surface-container-lowest p-space-2xl rounded-xl flex flex-col items-center text-center justify-center min-h-[460px]">
+<div class="w-16 h-16 rounded-full bg-error-container text-error flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[36px]">cloud_off</span>
+</div>
+<span class="font-label-small text-label-small uppercase tracking-wider text-feedback-error font-bold mb-1">KENDALA ANALITIK</span>
+<h3 class="font-headline-md text-headline-md text-ink-body mb-2">Gagal Memuat Analitik Penjualan</h3>
+<p class="font-body-base text-body-base text-ink-muted max-w-md mb-space-lg">
+          Sistem analitik penjualan buku digital saat ini tidak dapat diakses. Periksa sambungan koneksi internet Anda atau coba muat kembali data.
+        </p>
+<button class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-xl bg-primary-container text-on-primary hover:bg-primary transition-colors font-label text-label shadow-sm" onclick="switchDashboardState('state-b')" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Coba Muat Ulang</span>
+</button>
+</div>
+</div>
+<!-- ==================== ACTIVE KPI ROW (FOR STATE A & STATE B) ==================== -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md" id="kpi-container">
+<!-- Card 1: Buku Aktif -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.03)] transition-transform hover:-translate-y-0.5">
+<div class="flex items-center justify-between text-ink-muted">
+<span class="font-label-small text-label-small uppercase tracking-wider font-bold">Buku Aktif</span>
+<span class="material-symbols-outlined text-primary text-[20px]">menu_book</span>
+</div>
+<div class="my-space-xs">
+<span class="font-display-md text-display-md text-ink-body tracking-tight leading-none" id="kpi-books-val">0</span>
+</div>
+<p class="font-body-small text-body-small text-ink-muted leading-tight truncate" id="kpi-books-sub">Belum ada judul e-book yang diterbitkan</p>
+</div>
+<!-- Card 2: Buku Terjual -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.03)] transition-transform hover:-translate-y-0.5">
+<div class="flex items-center justify-between text-ink-muted">
+<span class="font-label-small text-label-small uppercase tracking-wider font-bold">Buku Terjual</span>
+<span class="material-symbols-outlined text-primary text-[20px]">shopping_bag</span>
+</div>
+<div class="my-space-xs">
+<span class="font-display-md text-display-md text-ink-body tracking-tight leading-none" id="kpi-sold-val">0</span>
+</div>
+<p class="font-body-small text-body-small text-ink-muted leading-tight truncate" id="kpi-sold-sub">0 eksemplar terverifikasi</p>
+</div>
+<!-- Card 3: Pendapatan Bersih -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.03)] transition-transform hover:-translate-y-0.5">
+<div class="flex items-center justify-between text-ink-muted">
+<span class="font-label-small text-label-small uppercase tracking-wider font-bold">Pendapatan Bersih</span>
+<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
+</div>
+<div class="my-space-xs">
+<span class="font-headline-lg text-headline-lg text-ink-body tracking-tight leading-tight" id="kpi-rev-val">Rp 0</span>
+</div>
+<p class="font-body-small text-body-small text-ink-muted leading-tight truncate" id="kpi-rev-sub">Akumulasi neto hak penerbit</p>
+</div>
+<!-- Card 4: Saldo Tersedia -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.03)] transition-transform hover:-translate-y-0.5">
+<div class="flex items-center justify-between text-ink-muted">
+<span class="font-label-small text-label-small uppercase tracking-wider font-bold">Saldo Tersedia</span>
+<span class="material-symbols-outlined text-primary text-[20px]">account_balance_wallet</span>
+</div>
+<div class="my-space-xs">
+<span class="font-headline-lg text-headline-lg text-ink-body tracking-tight leading-tight" id="kpi-bal-val">Rp 0</span>
+</div>
+<p class="font-body-small text-body-small text-ink-muted leading-tight truncate" id="kpi-bal-sub">Dapat diajukan untuk pencairan</p>
+</div>
+</div>
+<!-- ==================== ANALYTICAL ROW (2/3 + 1/3) ==================== -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md" id="analytics-container">
+<!-- Left 2/3: Grafik Tren Penjualan -->
+<section class="lg:col-span-2 bg-surface-container-lowest p-space-lg rounded-xl flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.03)]">
+<!-- Section Header with Period Selector -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-xs">
+<div>
+<h2 class="font-title-md text-title-md text-ink-body">Tren Penjualan E-Book</h2>
+<p class="font-body-small text-body-small text-ink-muted">Jumlah buku terjual per hari</p>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg self-start sm:self-auto">
+<button class="px-2.5 py-1 text-xs font-label text-ink-muted hover:text-ink-body rounded" type="button">7 Hari</button>
+<button class="px-2.5 py-1 text-xs font-label bg-surface-container-lowest text-primary font-bold rounded shadow-sm" type="button">30 Hari</button>
+<button class="px-2.5 py-1 text-xs font-label text-ink-muted hover:text-ink-body rounded" type="button">90 Hari</button>
+</div>
+</div>
+<!-- Chart Body: State A (Empty Baseline) -->
+<div class="w-full flex-1 min-h-[280px] flex flex-col items-center justify-center p-space-md rounded-lg bg-surface-container-low relative" id="chart-state-a">
+<!-- Subtle Zero-Axis Grid Background -->
+<svg class="absolute inset-0 w-full h-full text-surface-container-high opacity-70 pointer-events-none" preserveAspectRatio="none" viewBox="0 0 500 200">
+<line stroke="currentColor" stroke-dasharray="4 4" stroke-width="1" x1="40" x2="480" y1="40" y2="40"></line>
+<line stroke="currentColor" stroke-dasharray="4 4" stroke-width="1" x1="40" x2="480" y1="90" y2="90"></line>
+<line stroke="currentColor" stroke-dasharray="4 4" stroke-width="1" x1="40" x2="480" y1="140" y2="140"></line>
+<line stroke="currentColor" stroke-width="1.5" x1="40" x2="480" y1="180" y2="180"></line>
+</svg>
+<div class="relative z-10 flex flex-col items-center text-center max-w-sm px-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-ink-muted mb-space-sm">
+<span class="material-symbols-outlined text-[24px]">query_stats</span>
+</div>
+<p class="font-body-small text-body-small text-ink-muted leading-relaxed">
+              Belum ada data penjualan pada periode ini. Penjualan akan tercatat otomatis saat pembeli menyelesaikan transaksi.
+            </p>
+</div>
+</div>
+<!-- Chart Body: State B (Full Elegant SVG Line Chart with Data Points) -->
+<div class="w-full flex-1 min-h-[280px] flex flex-col justify-between relative pt-2 hidden" id="chart-state-b">
+<div class="relative w-full h-[240px]">
+<svg class="w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 680 200">
+<defs>
+<linearGradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#5956E9" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#5956E9" stop-opacity="0.0"></stop>
+</linearGradient>
+</defs>
+<!-- Y-Axis Guides & Labels -->
+<g class="text-ink-muted opacity-40 font-label-small" font-size="11">
+<line stroke="currentColor" stroke-dasharray="3 3" x1="30" x2="680" y1="20" y2="20"></line>
+<text fill="currentColor" x="0" y="24">15</text>
+<line stroke="currentColor" stroke-dasharray="3 3" x1="30" x2="680" y1="75" y2="75"></line>
+<text fill="currentColor" x="0" y="79">10</text>
+<line stroke="currentColor" stroke-dasharray="3 3" x1="30" x2="680" y1="130" y2="130"></line>
+<text fill="currentColor" x="0" y="134">5</text>
+<line stroke="currentColor" x1="30" x2="680" y1="185" y2="185"></line>
+<text fill="currentColor" x="0" y="189">0</text>
+</g>
+<!-- Filled Area -->
+<polygon fill="url(#chartGradient)" points="35,185 35,160 115,145 195,110 275,130 355,80 435,95 515,40 595,50 675,25 675,185"></polygon>
+<!-- Main Trend Stroke -->
+<polyline fill="none" points="35,160 115,145 195,110 275,130 355,80 435,95 515,40 595,50 675,25" stroke="#5956E9" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline>
+<!-- Interactive / Anchor Points with Tooltip Badges -->
+<g fill="#5956E9">
+<circle class="fill-surface-container-lowest stroke-[3px] stroke-primary" cx="35" cy="160" r="4"></circle>
+<circle class="fill-surface-container-lowest stroke-[3px] stroke-primary" cx="115" cy="145" r="4"></circle>
+<circle class="fill-surface-container-lowest stroke-[3px] stroke-primary" cx="195" cy="110" r="4"></circle>
+<circle class="fill-surface-container-lowest stroke-[3px] stroke-primary" cx="275" cy="130" r="4"></circle>
+<circle class="fill-surface-container-lowest stroke-[3px] stroke-primary" cx="355" cy="80" r="4"></circle>
+<circle class="fill-surface-container-lowest stroke-[3px] stroke-primary" cx="435" cy="95" r="4"></circle>
+<circle class="fill-surface-container-lowest stroke-[3px] stroke-primary" cx="515" cy="40" r="4"></circle>
+<circle class="fill-surface-container-lowest stroke-[3px] stroke-primary" cx="595" cy="50" r="4"></circle>
+<circle class="fill-surface-container-lowest stroke-[3px] stroke-primary" cx="675" cy="25" r="5"></circle>
+</g>
+<!-- Highlight Tooltip on Peak -->
+<g transform="translate(620, -5)">
+<rect fill="#191923" height="24" rx="4" width="65"></rect>
+<text fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle" x="32" y="16">14 eks</text>
+</g>
+</svg>
+</div>
+<!-- X-Axis Labels -->
+<div class="flex justify-between pl-8 pr-1 pt-2 text-ink-muted font-label-small text-label-small">
+<span>01 Nov</span>
+<span>07 Nov</span>
+<span>14 Nov</span>
+<span>21 Nov</span>
+<span>28 Nov</span>
+<span>30 Nov</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-ink-muted text-body-small">
+<span class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span>Penjualan Harian (Eksemplar)</span>
+</span>
+<span class="font-label-small text-label-small">Diperbarui: Hari ini 15:30 WIB</span>
+</div>
+</section>
+<!-- Right 1/3: Evaluasi Pembeli -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.03)]">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h2 class="font-title-md text-title-md text-ink-body">Evaluasi Pembeli</h2>
+<span class="material-symbols-outlined text-[20px] text-primary">rate_review</span>
+</div>
+<p class="font-body-small text-body-small text-ink-muted">
+            Rata-rata 4 dimensi evaluasi pascapembelian (Skala 1–5)
+          </p>
+</div>
+<!-- Rating Body: State A (Empty) -->
+<div class="flex-1 my-space-md flex flex-col items-center justify-center p-space-md rounded-lg bg-surface-container-low text-center" id="eval-state-a">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-ink-muted mb-space-sm">
+<span class="material-symbols-outlined text-[24px]">reviews</span>
+</div>
+<p class="font-body-small text-body-small text-ink-muted leading-relaxed max-w-xs">
+            Belum ada evaluasi dari pembeli. Ulasan akan muncul setelah pembeli menyelesaikan bacaan dan memberikan evaluasi mutu.
+          </p>
+</div>
+<!-- Rating Body: State B (4 Dimensi Terverifikasi) -->
+<div class="flex-1 my-space-md flex flex-col justify-center gap-space-md hidden" id="eval-state-b">
+<!-- Overall Aggregate Display -->
+<div class="flex items-baseline justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-ink-body font-bold">4.75</span>
+<span class="font-label-small text-label-small text-ink-muted">/ 5.0</span>
+</div>
+<div class="flex items-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+</div>
+<!-- Dimension 1 -->
+<div class="space-y-1">
+<div class="flex justify-between font-label-small text-label-small text-ink-body">
+<span>Kesesuaian Ekspektasi</span>
+<span class="font-bold text-primary">4.8</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 96%"></div>
+</div>
+</div>
+<!-- Dimension 2 -->
+<div class="space-y-1">
+<div class="flex justify-between font-label-small text-label-small text-ink-body">
+<span>Kebermanfaatan Isi</span>
+<span class="font-bold text-primary">4.9</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 98%"></div>
+</div>
+</div>
+<!-- Dimension 3 -->
+<div class="space-y-1">
+<div class="flex justify-between font-label-small text-label-small text-ink-body">
+<span>Kesesuaian Harga</span>
+<span class="font-bold text-primary">4.6</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<!-- Dimension 4 -->
+<div class="space-y-1">
+<div class="flex justify-between font-label-small text-label-small text-ink-body">
+<span>Peluang Beli Lagi</span>
+<span class="font-bold text-primary">4.7</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 94%"></div>
+</div>
+</div>
+</div>
+<div class="pt-space-xs text-center border-none">
+<p class="font-label-small text-label-small text-ink-muted" id="eval-footnote">Belum ada sampel evaluasi</p>
+</div>
+</section>
+</div>
+<!-- ==================== RECENT TRANSACTIONS TABLE SECTION ==================== -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.03)] flex flex-col gap-space-md" id="table-container">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-title-md text-title-md text-ink-body">Transaksi Penjualan Terbaru</h2>
+<p class="font-body-small text-body-small text-ink-muted">Daftar transaksi e-book terverifikasi sistem</p>
+</div>
+<a class="inline-flex items-center gap-1 font-label text-label text-primary hover:text-surface-tint transition-colors" href="#">
+<span>Lihat Semua Pesanan</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- State A: Empty Table State -->
+<div class="w-full py-space-2xl px-space-md flex flex-col items-center justify-center text-center bg-surface-container-low rounded-lg" id="table-state-a">
+<div class="w-14 h-14 rounded-full bg-surface-container flex items-center justify-center text-ink-muted mb-space-sm">
+<span class="material-symbols-outlined text-[28px]">receipt_long</span>
+</div>
+<p class="font-title-md text-title-md text-ink-body mb-1">Belum Ada Transaksi Penjualan</p>
+<p class="font-body-small text-body-small text-ink-muted max-w-md">
+          Belum ada transaksi penjualan. Transaksi buku yang berhasil dibayar akan ditampilkan di sini secara real-time.
+        </p>
+</div>
+<!-- State B: Filled Table State -->
+<div class="w-full overflow-x-auto hidden" id="table-state-b">
+<table class="w-full text-left border-collapse min-w-[700px]">
+<thead>
+<tr class="bg-surface-container-low text-ink-muted font-label-small text-label-small uppercase tracking-wider">
+<th class="py-3 px-space-md rounded-l-lg font-bold">No. Pesanan</th>
+<th class="py-3 px-space-md font-bold">Tanggal &amp; Waktu</th>
+<th class="py-3 px-space-md font-bold">Judul Buku</th>
+<th class="py-3 px-space-md font-bold">Format</th>
+<th class="py-3 px-space-md font-bold text-right">Pendapatan Neto</th>
+<th class="py-3 px-space-md rounded-r-lg font-bold text-center">Status Transaksi</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-ink-body font-body-small text-body-small">
+<tr class="hover:bg-surface-soft transition-colors">
+<td class="py-3.5 px-space-md font-mono font-semibold text-primary">#ORD-20261114-0891</td>
+<td class="py-3.5 px-space-md text-ink-muted">14 Nov 2026, 14:22</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label text-label text-ink-body font-semibold">Laskar Aksara Pasundan</span>
+<span class="text-xs text-ink-muted">Ayi R. Kurnia</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container font-label-small text-label-small text-ink-body">
+                  E-Book DRM
+                </span>
+</td>
+<td class="py-3.5 px-space-md font-semibold text-right text-ink-body">Rp 40.500</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-sky text-primary font-label-small text-label-small font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Lunas
+                </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-soft transition-colors bg-surface-container-lowest">
+<td class="py-3.5 px-space-md font-mono font-semibold text-primary">#ORD-20261114-0842</td>
+<td class="py-3.5 px-space-md text-ink-muted">14 Nov 2026, 11:05</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label text-label text-ink-body font-semibold">Laskar Aksara Pasundan</span>
+<span class="text-xs text-ink-muted">Ayi R. Kurnia</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container font-label-small text-label-small text-ink-body">
+                  E-Book DRM
+                </span>
+</td>
+<td class="py-3.5 px-space-md font-semibold text-right text-ink-body">Rp 40.500</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-sky text-primary font-label-small text-label-small font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Lunas
+                </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-soft transition-colors">
+<td class="py-3.5 px-space-md font-mono font-semibold text-primary">#ORD-20261113-0765</td>
+<td class="py-3.5 px-space-md text-ink-muted">13 Nov 2026, 18:40</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label text-label text-ink-body font-semibold">Tata Bahasa Sunda Kiwari</span>
+<span class="text-xs text-ink-muted">Dr. Dadan S.</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container font-label-small text-label-small text-ink-body">
+                  E-Book DRM
+                </span>
+</td>
+<td class="py-3.5 px-space-md font-semibold text-right text-ink-body">Rp 36.000</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-sky text-primary font-label-small text-label-small font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Lunas
+                </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-soft transition-colors bg-surface-container-lowest">
+<td class="py-3.5 px-space-md font-mono font-semibold text-primary">#ORD-20261113-0711</td>
+<td class="py-3.5 px-space-md text-ink-muted">13 Nov 2026, 09:15</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label text-label text-ink-body font-semibold">Babad Galuh &amp; Cimanuk</span>
+<span class="text-xs text-ink-muted">Tim Litbang Kiblat</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container font-label-small text-label-small text-ink-body">
+                  E-Book DRM
+                </span>
+</td>
+<td class="py-3.5 px-space-md font-semibold text-right text-ink-body">Rp 45.000</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-sky text-primary font-label-small text-label-small font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Lunas
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<!-- State Switcher Controller JavaScript -->
+<script>
+    function switchDashboardState(state) {
+      // 1. Update Switcher Button Styles
+      const buttons = document.querySelectorAll('.state-tab-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-primary-container', 'text-on-primary', 'font-bold', 'shadow-sm');
+        btn.classList.add('text-on-surface-variant');
+        btn.setAttribute('aria-selected', 'false');
+      });
+
+      const activeBtn = document.getElementById('btn-' + state);
+      if (activeBtn) {
+        activeBtn.classList.remove('text-on-surface-variant');
+        activeBtn.classList.add('bg-primary-container', 'text-on-primary', 'font-bold', 'shadow-sm');
+        activeBtn.setAttribute('aria-selected', 'true');
+      }
+
+      // 2. Identify elements
+      const kpiContainer = document.getElementById('kpi-container');
+      const analyticsContainer = document.getElementById('analytics-container');
+      const tableContainer = document.getElementById('table-container');
+
+      const viewSkeleton = document.getElementById('view-state-c');
+      const viewError = document.getElementById('view-state-d');
+
+      const chartA = document.getElementById('chart-state-a');
+      const chartB = document.getElementById('chart-state-b');
+
+      const evalA = document.getElementById('eval-state-a');
+      const evalB = document.getElementById('eval-state-b');
+      const evalFootnote = document.getElementById('eval-footnote');
+
+      const tableA = document.getElementById('table-state-a');
+      const tableB = document.getElementById('table-state-b');
+
+      const kpiBooksVal = document.getElementById('kpi-books-val');
+      const kpiBooksSub = document.getElementById('kpi-books-sub');
+      const kpiSoldVal = document.getElementById('kpi-sold-val');
+      const kpiSoldSub = document.getElementById('kpi-sold-sub');
+      const kpiRevVal = document.getElementById('kpi-rev-val');
+      const kpiRevSub = document.getElementById('kpi-rev-sub');
+      const kpiBalVal = document.getElementById('kpi-bal-val');
+      const kpiBalSub = document.getElementById('kpi-bal-sub');
+
+      // 3. Handle Visibility based on state
+      if (state === 'state-c') {
+        // Skeleton view
+        kpiContainer.classList.add('hidden');
+        analyticsContainer.classList.add('hidden');
+        tableContainer.classList.add('hidden');
+        viewError.classList.add('hidden');
+        viewSkeleton.classList.remove('hidden');
+        return;
+      }
+
+      if (state === 'state-d') {
+        // Error view
+        kpiContainer.classList.add('hidden');
+        analyticsContainer.classList.add('hidden');
+        tableContainer.classList.add('hidden');
+        viewSkeleton.classList.add('hidden');
+        viewError.classList.remove('hidden');
+        return;
+      }
+
+      // Default: Restore Main Analytical Containers
+      viewSkeleton.classList.add('hidden');
+      viewError.classList.add('hidden');
+      kpiContainer.classList.remove('hidden');
+      analyticsContainer.classList.remove('hidden');
+      tableContainer.classList.remove('hidden');
+
+      if (state === 'state-a') {
+        // KPI State A
+        kpiBooksVal.textContent = '0';
+        kpiBooksSub.textContent = 'Belum ada judul e-book yang diterbitkan';
+        
+        kpiSoldVal.textContent = '0';
+        kpiSoldSub.textContent = '0 eksemplar terverifikasi';
+
+        kpiRevVal.textContent = 'Rp 0';
+        kpiRevSub.textContent = 'Akumulasi neto hak penerbit';
+
+        kpiBalVal.textContent = 'Rp 0';
+        kpiBalSub.textContent = 'Dapat diajukan untuk pencairan';
+
+        // Chart State A
+        chartA.classList.remove('hidden');
+        chartB.classList.add('hidden');
+
+        // Eval State A
+        evalA.classList.remove('hidden');
+        evalB.classList.add('hidden');
+        evalFootnote.textContent = 'Belum ada sampel evaluasi';
+
+        // Table State A
+        tableA.classList.remove('hidden');
+        tableB.classList.add('hidden');
+      } 
+      else if (state === 'state-b') {
+        // KPI State B
+        kpiBooksVal.textContent = '12';
+        kpiBooksSub.textContent = '12 judul aktif di katalog IKAPI Store';
+        
+        kpiSoldVal.textContent = '148';
+        kpiSoldSub.textContent = 'Total unit buku digital terverifikasi lunas';
+
+        kpiRevVal.textContent = 'Rp 5.920.000';
+        kpiRevSub.textContent = 'Setelah potongan bagi hasil platform';
+
+        kpiBalVal.textContent = 'Rp 2.450.000';
+        kpiBalSub.textContent = 'Siap dicairkan ke rekening resmi';
+
+        // Chart State B
+        chartA.classList.add('hidden');
+        chartB.classList.remove('hidden');
+
+        // Eval State B
+        evalA.classList.add('hidden');
+        evalB.classList.remove('hidden');
+        evalFootnote.textContent = 'Berdasarkan 42 evaluasi pembeli terverifikasi';
+
+        // Table State B
+        tableA.classList.add('hidden');
+        tableB.classList.remove('hidden');
+      }
+    }
+  </script>
+</div></main></div>
+
+</body></html>

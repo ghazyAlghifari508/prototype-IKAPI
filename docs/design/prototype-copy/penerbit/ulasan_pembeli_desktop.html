@@ -1,0 +1,674 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"feedback-error":"#B42318","primary-fixed":"#e2dfff","on-primary-fixed-variant":"#3229c4","surface-container-lowest":"#ffffff","on-error":"#ffffff","surface":"#fcf8ff","on-tertiary-fixed-variant":"#584400","tertiary-fixed-dim":"#ecc23f","primary":"#3f3ad0","surface-container-low":"#f5f2ff","on-secondary-container":"#7a495a","on-surface-variant":"#464555","surface-soft":"#F8F7FF","on-error-container":"#93000a","border-subtle":"#E7E7EF","surface-tint":"#4c48dc","ink-body":"#191923","inverse-primary":"#c2c1ff","error":"#ba1a1a","border-bold":"#CFD0DD","surface-sky":"#E0F6FC","surface-paper":"#FFF0E3","on-secondary-fixed":"#330e1d","on-tertiary":"#ffffff","error-container":"#ffdad6","secondary-fixed":"#ffd9e3","inverse-surface":"#302f3a","surface-bright":"#fcf8ff","surface-variant":"#e3e1ef","surface-container-high":"#e9e6f5","surface-cream":"#FFF1E3","on-background":"#1b1b25","secondary-container":"#fdbed1","surface-container-highest":"#e3e1ef","background":"#fcf8ff","on-surface":"#1b1b25","on-secondary":"#ffffff","surface-container":"#efecfb","on-primary":"#ffffff","tertiary-fixed":"#ffe08d","surface-lilac":"#E5E4FF","outline":"#777586","tertiary":"#745b00","primary-container":"#5956e9","secondary":"#815060","surface-dim":"#dbd8e7","on-primary-container":"#eeeaff","inverse-deep":"#24233D","inverse-on-surface":"#f2effe","secondary-fixed-dim":"#f4b5c8","on-tertiary-container":"#4f3d00","primary-fixed-dim":"#c2c1ff","tertiary-container":"#cea623","outline-variant":"#c7c4d7","ink-muted":"#555665","on-tertiary-fixed":"#241a00","on-secondary-fixed-variant":"#663949","on-primary-fixed":"#0c006a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"2.5rem","space-md":"1rem","space-2xl":"3rem","margin-mobile":"1.25rem","gutter":"1.5rem","gutter-mobile":"1.25rem","space-sm":"0.5rem","space-xs":"0.25rem","space-lg":"1.5rem","space-3xl":"4.5rem","space-xl":"2rem"},"fontFamily":{"headline-lg":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"label-small":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"body-small":["Plus Jakarta Sans"],"display-md-mobile":["Plus Jakarta Sans"],"label":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"body-base":["Plus Jakarta Sans"],"display-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"]},"fontSize":{"headline-lg":["36px",{"lineHeight":"1.18","letterSpacing":"-0.03em","fontWeight":"700"}],"display-lg":["56px",{"lineHeight":"1.08","letterSpacing":"-0.04em","fontWeight":"800"}],"label-small":["12px",{"lineHeight":"1.3","letterSpacing":"0.02em","fontWeight":"600"}],"title-md":["18px",{"lineHeight":"1.35","letterSpacing":"-0.01em","fontWeight":"700"}],"body-small":["14px",{"lineHeight":"1.5","letterSpacing":"0","fontWeight":"400"}],"display-md-mobile":["28px",{"lineHeight":"1.2","letterSpacing":"-0.025em","fontWeight":"800"}],"label":["14px",{"lineHeight":"1.35","letterSpacing":"0","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"1.25","letterSpacing":"-0.02em","fontWeight":"700"}],"display-lg-mobile":["34px",{"lineHeight":"1.15","letterSpacing":"-0.03em","fontWeight":"800"}],"body-base":["16px",{"lineHeight":"1.6","letterSpacing":"0","fontWeight":"400"}],"display-md":["44px",{"lineHeight":"1.12","letterSpacing":"-0.035em","fontWeight":"800"}],"headline-md":["28px",{"lineHeight":"1.22","letterSpacing":"-0.025em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-base text-ink-body antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="logo-ikapu.png" class="h-8 w-auto object-contain" src="../../assets/logo-ikapi-jabar.png"><div class="flex flex-col"></div></div><div class="px-space-md py-space-sm"></div><div class="px-space-md mt-space-sm"><span class="px-space-sm font-label-small text-label-small uppercase tracking-wider text-ink-muted">Menu Utama</span><nav class="mt-space-xs flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-label rounded-xl"><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl text-on-surface-variant font-label text-label hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl text-on-surface-variant font-label text-label hover:bg-surface-container hover:text-on-surface transition-all" data-path="kelola-buku" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span>Kelola Buku</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl text-on-surface-variant font-label text-label hover:bg-surface-container hover:text-on-surface transition-all" data-path="pesanan-masuk" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Pesanan Masuk</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl text-on-surface-variant font-label text-label hover:bg-surface-container hover:text-on-surface transition-all" data-path="pendapatan-dan-pencairan" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span>Pendapatan &amp; Pencairan</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2.5 transition-all bg-primary-container text-on-primary-container font-label rounded-xl" data-path="ulasan-pembeli" href="#"><span class="material-symbols-outlined text-[20px]">rate_review</span><span>Ulasan Pembeli</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl text-on-surface-variant font-label text-label hover:bg-surface-container hover:text-on-surface transition-all" data-path="pengaturan-profil" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span>Pengaturan Profil</span></a></nav></div></div><div class="p-space-md"></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm text-ink-muted font-body-small text-body-small"><span>Portal Penerbit IKAPI Jabar</span><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="text-ink-body font-label text-label">Katalog &amp; Distribusi</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center px-space-sm py-1.5 rounded-lg bg-surface-container-low text-ink-muted gap-space-xs"><span class="material-symbols-outlined text-[18px]">verified</span><span class="font-label-small text-label-small text-on-surface-variant">No. Registrasi: IKP-JBR-0041</span></div><button class="w-10 h-10 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="h-8 w-px bg-surface-variant"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label text-label text-ink-body leading-none">PT Kiblat Buku Utama</span><span class="font-label-small text-label-small text-ink-muted mt-1">Penerbit Terverifikasi</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-20 w-full min-h-screen bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive State Simulator Bar -->
+<div class="sticky top-20 z-30 bg-surface-container-lowest shadow-sm px-space-xl py-3 flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs overflow-x-auto py-1 text-label-small">
+
+<button class="state-pill px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label hover:bg-surface-container-high transition-all" id="btn-state-default" onclick="setScreenState('default')" type="button">State A: Berisi (Default)</button>
+<button class="state-pill px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label hover:bg-surface-container-high transition-all" id="btn-state-open-reply" onclick="setScreenState('open-reply')" type="button">State B: Buka Editor Balasan</button>
+<button class="state-pill px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label hover:bg-surface-container-high transition-all" id="btn-state-validation-error" onclick="setScreenState('validation-error')" type="button">State C: Balasan Kosong</button>
+<button class="state-pill px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label hover:bg-surface-container-high transition-all" id="btn-state-sending" onclick="setScreenState('sending')" type="button">State D: Sedang Mengirim</button>
+<button class="state-pill px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label hover:bg-surface-container-high transition-all" id="btn-state-success" onclick="setScreenState('success')" type="button">State E: Konfirmasi Sukses</button>
+<button class="state-pill px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label hover:bg-surface-container-high transition-all" id="btn-state-empty-all" onclick="setScreenState('empty-all')" type="button">State F: Ulasan Kosong</button>
+<button class="state-pill px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label transition-all" id="btn-state-search-empty" onclick="setScreenState('search-empty')" type="button">State G: Cari Nihil</button>
+</div>
+<div class="hidden lg:flex items-center gap-2">
+
+</div>
+</div>
+<!-- Main Editorial Content Workspace -->
+<div class="px-space-xl py-space-xl max-w-[1240px] mx-auto w-full flex flex-col gap-space-lg">
+<!-- Header Block with Editorial Typography & Micro-Metrics -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-1 max-w-2xl">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-lilac text-on-primary-fixed-variant font-label-small text-label-small">Komunikasi Pembaca &amp; Kurasi Respon</span>
+<span class="text-ink-muted text-body-small">· DPD IKAPI Jabar</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-ink-body mt-1">Ulasan Pembeli</h1>
+<p class="font-body-base text-body-base text-ink-muted">
+          Baca dan berikan tanggapan resmi penerbit pada ulasan pembaca buku Anda secara transparan dan akuntabel.
+        </p>
+</div>
+<!-- Quick Operational Metrics Strip (Paper Stacking) -->
+<div class="flex items-center gap-space-sm bg-surface-container-lowest p-2 rounded-xl shadow-sm">
+<div class="px-space-md py-2 bg-surface-paper rounded-lg flex flex-col">
+<span class="font-label-small text-label-small text-tertiary">Perlu Balasan</span>
+<span class="font-title-md text-title-md text-ink-body font-bold" id="counter-unreplied">2 Ulasan</span>
+</div>
+<div class="px-space-md py-2 bg-surface-sky rounded-lg flex flex-col">
+<span class="font-label-small text-label-small text-on-surface-variant">Tingkat Respon</span>
+<span class="font-title-md text-title-md text-ink-body font-bold">87.5%</span>
+</div>
+</div>
+</div>
+<!-- Integrated Search & Filter Segmented Toolbar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<!-- Search Input Container -->
+<div class="relative w-full md:w-96 flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-ink-muted text-[20px] pointer-events-none">search</span>
+<input class="w-full h-11 pl-10 pr-4 bg-surface rounded-lg font-body-small text-body-small text-ink-body placeholder:text-ink-muted focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#5956e9] transition-all" id="reviews-search-input" oninput="handleSearch(this.value)" placeholder="Cari judul buku atau isi ulasan..." type="text">
+<button class="absolute right-3 text-ink-muted hover:text-ink-body" id="clear-search-btn" onclick="clearSearch()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Filter Pills / Segmented Controls -->
+<div class="flex items-center gap-1.5 w-full md:w-auto overflow-x-auto p-1 bg-surface-container-low rounded-lg">
+<button class="filter-pill px-3.5 py-1.5 rounded-md font-label text-label transition-all bg-surface-container-lowest text-primary shadow-sm" id="filter-tab-all" onclick="setFilterTab('all')" type="button">
+          Semua (4)
+        </button>
+<button class="filter-pill px-3.5 py-1.5 rounded-md font-label text-label transition-all text-ink-muted hover:text-ink-body" id="filter-tab-unreplied" onclick="setFilterTab('unreplied')" type="button">
+          Belum Dibalas (2)
+        </button>
+<button class="filter-pill px-3.5 py-1.5 rounded-md font-label text-label transition-all text-ink-muted hover:text-ink-body" id="filter-tab-replied" onclick="setFilterTab('replied')" type="button">
+          Sudah Dibalas (2)
+        </button>
+</div>
+</div>
+<!-- Active Reviews Container -->
+<div class="flex flex-col gap-space-lg hidden" id="reviews-list-container">
+<!-- Review Card 1 (Belum Dibalas - Interactive Target for State B, C, D, E) -->
+<article class="review-item bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md transition-all" data-review-id="1" data-status="unreplied">
+<!-- Book Identification Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm bg-surface-soft p-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm min-w-0">
+<!-- Book Cover 2:3 Aspect Ratio (Strict Editorial Guidelines) -->
+<div class="w-10 h-15 aspect-[2/3] rounded bg-surface-dim overflow-hidden flex-shrink-0 shadow-xs">
+<img class="w-full h-full object-cover" data-alt="Editorial book cover art for Laskar Aksara Pasundan by Ayi R. Kurnia showing Sundanese traditional ancient script calligraphy with warm periwinkle and soft gold geometric patterns." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMJCDrmlOwQW_YQbR4KZAe4MQUV90w_8BNu742BsoMIw9-NrU96XZCatsoVsoF_va_vaDA9e_Gte-zuilKQNfbuoDh0QHY5D6Tf_Y3pK0fh7KdbvjZOuJ34E4Kv9W9eCuSoRSsM9_KSJB7JN7wL9c3MwOroh7NxHCrJtc_pT5vJCEv1nAFuwd1ZXQ_Q0Z0D7VvdgQA6wC69KiA7W39JpjRRuOg7JixXz6YrqdiIqeR">
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-ink-body font-bold truncate">Laskar Aksara Pasundan</span>
+<span class="px-2 py-0.5 rounded bg-surface-lilac text-on-primary-fixed-variant font-label-small text-[11px] whitespace-nowrap">Komentar Buku (UC-07)</span>
+</div>
+<span class="font-body-small text-body-small text-ink-muted truncate">Penulis: Ayi R. Kurnia · ISBN: 978-602-1209-41-2</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="flex items-center gap-1 text-ink-muted font-label-small text-label-small bg-surface-container-lowest px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified_user</span> Terverifikasi Pembaca
+            </span>
+</div>
+</div>
+<!-- Reader Info & Timestamp -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<!-- Reader Avatar (DN) -->
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-title-md text-title-md font-bold">
+              DN
+            </div>
+<div class="flex flex-col">
+<span class="font-label text-label text-ink-body font-bold">Dian Nugraha</span>
+<span class="font-label-small text-label-small text-ink-muted">14 Nov 2026 · Edisi Cetak Softcover</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-paper text-tertiary font-label-small text-label-small font-semibold">
+            Belum Ada Balasan
+          </span>
+</div>
+<!-- Review Comment Text -->
+<div class="font-body-base text-body-base text-ink-body pl-0 md:pl-12 leading-relaxed">
+          “Uraian sejarah aksara dan kearifan Sunda disajikan sangat hidup dan mudah dipahami. Namun di bab 4 terkait aksara rarangken rasanya butuh glosarium tambahan untuk pembaca pemula agar tidak tertukar antara panolong dan panyecek.”
+        </div>
+<!-- Action / Toggle Trigger Area -->
+<div class="flex justify-end pt-2 hidden" id="reply-trigger-zone-1">
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container text-primary font-label text-label hover:bg-surface-lilac transition-all" onclick="toggleReplyEditor(1, true)" type="button">
+<span class="material-symbols-outlined text-[18px]">reply</span>
+<span>+ Balas Komentar</span>
+</button>
+</div>
+<!-- Inline Reply Editor Form (State B, C, D control) -->
+<div class="flex-col gap-space-sm pt-space-xs mt-2 pl-0 md:pl-12 hidden" id="reply-editor-box-1">
+<div class="bg-surface-soft p-space-md rounded-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label text-label text-ink-body font-bold">Balasan Resmi Penerbit (PT Kiblat Buku Utama)</span>
+</div>
+<span class="text-ink-muted font-label-small text-label-small">Respons akan tampil publik di laman buku</span>
+</div>
+<div class="relative">
+<textarea class="w-full p-space-sm bg-surface-container-lowest rounded-lg font-body-small text-body-small text-ink-body placeholder:text-ink-muted focus:outline-none focus:shadow-[0_0_0_2px_#5956e9] transition-all resize-none" id="reply-textarea-1" placeholder="Tulis tanggapan Anda kepada pembaca..." rows="3"></textarea>
+</div>
+<!-- Validation Error Alert (State C) -->
+<div class="items-center gap-2 p-2.5 rounded-lg bg-error-container text-feedback-error font-label-small text-label-small hidden" id="reply-validation-error-1">
+<span class="material-symbols-outlined text-[18px]">error</span>
+<span>Balasan komentar tidak boleh kosong. Silakan tulis tanggapan penerbit sebelum mengirim.</span>
+</div>
+<!-- Editor Action Buttons -->
+<div class="flex items-center justify-end gap-space-sm pt-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest text-ink-muted font-label text-label hover:text-ink-body hover:bg-surface-container transition-all" onclick="toggleReplyEditor(1, false)" type="button">
+                Batal
+              </button>
+<button class="flex items-center gap-2 px-5 py-2 rounded-lg bg-primary-container text-on-primary font-label text-label hover:bg-primary transition-all shadow-sm" id="reply-submit-btn-1" onclick="submitReply(1)" type="button">
+<span class="material-symbols-outlined text-[18px]" id="submit-icon-1">send</span>
+<span id="submit-label-1">Kirim Balasan</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Official Publisher Reply Block (Rendered upon dynamic reply submission) -->
+<div class="flex-col gap-2 mt-2 pl-0 md:pl-12 flex" id="publisher-reply-block-1">
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-2 relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary rounded-l-xl"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span class="font-label text-label text-ink-body font-bold">Balasan Resmi Penerbit · PT Kiblat Buku Utama</span>
+</div>
+<span class="font-label-small text-label-small text-ink-muted">Baru saja</span>
+</div>
+<p class="font-body-small text-body-small text-ink-body leading-relaxed" id="publisher-reply-text-1">
+              Terima kasih atas masukannya. Glosarium istilah aksara akan kami tambahkan pada cetakan ulang berikutnya.
+            </p>
+</div>
+</div>
+</article>
+<!-- Review Card 2 (Sudah Dibalas - Trustpilot Pattern) -->
+<article class="review-item bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md" data-review-id="2" data-status="replied">
+<!-- Book Identification Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm bg-surface-soft p-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-15 aspect-[2/3] rounded bg-surface-dim overflow-hidden flex-shrink-0 shadow-xs">
+<img class="w-full h-full object-cover" data-alt="Modern textbook cover for Pendidikan Karakter Sunda by Dr. Cecep Hidayat featuring educational illustrations of moral integrity and youth culture in Bandung West Java with soft pastel blue palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwftyR0p05fdFtNYhsJ3IYdC-KD-1ujFpkgF4035hX1SS9iIRsaGbQPJ8bfOEZLkZjdg4o8tA8HEBFas09OLFeQnhqp8OVvktoaWsDk7_wCTGc6I-RrXO5MR6tlnGUGG8WOP_36uQa5eyjEq8ab-CniZBIxW14R0SdnCH_5qHJU13sEcbs6xvjrXYv3uiBBINLiCvYQDayYJkdBmscaopKNXLOwSb8nvHeg6mkzaY5">
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-ink-body font-bold truncate">Pendidikan Karakter Sunda</span>
+<span class="px-2 py-0.5 rounded bg-surface-sky text-on-surface font-label-small text-[11px] whitespace-nowrap">Evaluasi Pembelian (UC-20) · 4.8/5.0</span>
+</div>
+<span class="font-body-small text-body-small text-ink-muted truncate">Penulis: Dr. Cecep Hidayat · ISBN: 978-602-8811-19-0</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-lilac text-on-primary-fixed-variant font-label-small text-label-small font-semibold">
+              Sudah Dibalas
+            </span>
+</div>
+</div>
+<!-- Reader Info & Review Text -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-lilac text-primary flex items-center justify-center font-title-md text-title-md font-bold">
+              SP
+            </div>
+<div class="flex flex-col">
+<span class="font-label text-label text-ink-body font-bold">Siti Rahmawati</span>
+<span class="font-label-small text-label-small text-ink-muted">12 Nov 2026 · Edisi Digital (Web Reader)</span>
+</div>
+</div>
+<span class="font-label-small text-label-small text-ink-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary">check_circle</span> Terbaca Publik
+          </span>
+</div>
+<div class="font-body-base text-body-base text-ink-body pl-0 md:pl-12 leading-relaxed">
+          “Buku yang sangat komprehensif untuk pengajaran nilai budi pekerti di sekolah. Format e-book di web reader sangat nyaman dibaca baik di laptop maupun tablet.”
+        </div>
+<!-- Official Publisher Reply Box (Trustpilot Container with tinted background & left accent) -->
+<div class="pl-0 md:pl-12">
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-2 relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary rounded-l-xl"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+<span class="font-label text-label text-ink-body font-bold">Balasan Resmi Penerbit · PT Kiblat Buku Utama</span>
+</div>
+<span class="font-label-small text-label-small text-ink-muted">13 Nov 2026</span>
+</div>
+<p class="font-body-small text-body-small text-ink-body leading-relaxed">
+              “Terima kasih Ibu Siti atas apresiasi dan masukannya. Kami berkomitmen terus menghadirkan karya literasi pendidikan yang mendalam bagi generasi muda Jawa Barat.”
+            </p>
+</div>
+</div>
+</article>
+<!-- Review Card 3 (Belum Dibalas) -->
+<article class="review-item bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md" data-review-id="3" data-status="unreplied">
+<!-- Book Identification Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm bg-surface-soft p-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-15 aspect-[2/3] rounded bg-surface-dim overflow-hidden flex-shrink-0 shadow-xs">
+<img class="w-full h-full object-cover" data-alt="Editorial book cover of Bumi Parahyangan: Jejak Purba by T. Bachtiar displaying geological strata, prehistoric lake Bandung basin landscape in earthy terracotta and deep indigo tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4Yxa97Froro5lCF2AD0bUUOZ3e07lB6XKdA8jX3z1Jj_tMbL6jyIrIg8X6H3_vpnu9s4G2KkQ_x6aXJQHYUTV_3UNwBWwVgdqhgKBERI8vUMEeDwQlMKQ0QsRjX0eDiaiaSxidCzjmu8gjvnzcyThdzPp4fccCeDEqF9eAIIGzgfmjnyDgGGk40VAlF1QZziwpCpRy7i98qcRbGso7QX1p46TpI1NE3qYieVred0q">
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-ink-body font-bold truncate">Bumi Parahyangan: Jejak Purba</span>
+<span class="px-2 py-0.5 rounded bg-surface-paper text-tertiary font-label-small text-[11px] whitespace-nowrap">Koleksi Geologi Populer</span>
+</div>
+<span class="font-body-small text-body-small text-ink-muted truncate">Penulis: T. Bachtiar · ISBN: 978-602-7901-02-1</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-paper text-tertiary font-label-small text-label-small font-semibold">
+            Belum Ada Balasan
+          </span>
+</div>
+<!-- Reader Info -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-title-md text-title-md font-bold">
+              HW
+            </div>
+<div class="flex flex-col">
+<span class="font-label text-label text-ink-body font-bold">Hendra Wijaya</span>
+<span class="font-label-small text-label-small text-ink-muted">10 Nov 2026 · Edisi Hardcover Kolektor</span>
+</div>
+</div>
+<span class="text-ink-muted font-label-small text-label-small">Terbaca Pembaca Terverifikasi</span>
+</div>
+<!-- Comment Text -->
+<div class="font-body-base text-body-base text-ink-body pl-0 md:pl-12 leading-relaxed">
+          “Foto dan ilustrasi geologi purbanya luar biasa informatif. Sangat membuka wawasan tentang Bandung purba dan pembentukan bentang alam Priangan.”
+        </div>
+<!-- Action / Dynamic Inline Editor for Review 3 -->
+<div class="flex justify-end pt-2" id="reply-trigger-zone-3">
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container text-primary font-label text-label hover:bg-surface-lilac transition-all" onclick="toggleReplyEditor(3, true)" type="button">
+<span class="material-symbols-outlined text-[18px]">reply</span>
+<span>+ Balas Komentar</span>
+</button>
+</div>
+<div class="hidden flex-col gap-space-sm pt-space-xs mt-2 pl-0 md:pl-12" id="reply-editor-box-3">
+<div class="bg-surface-soft p-space-md rounded-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label text-label text-ink-body font-bold">Balasan Resmi Penerbit (PT Kiblat Buku Utama)</span>
+<span class="text-ink-muted font-label-small text-label-small">Respons akan tampil publik</span>
+</div>
+<textarea class="w-full p-space-sm bg-surface-container-lowest rounded-lg font-body-small text-body-small text-ink-body placeholder:text-ink-muted focus:outline-none focus:shadow-[0_0_0_2px_#5956e9] transition-all resize-none" id="reply-textarea-3" placeholder="Tulis tanggapan Anda kepada Hendra Wijaya..." rows="3"></textarea>
+<div class="flex items-center justify-end gap-space-sm pt-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest text-ink-muted font-label text-label hover:text-ink-body" onclick="toggleReplyEditor(3, false)" type="button">
+                Batal
+              </button>
+<button class="flex items-center gap-2 px-5 py-2 rounded-lg bg-primary-container text-on-primary font-label text-label hover:bg-primary transition-all shadow-sm" onclick="submitReply(3)" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Kirim Balasan</span>
+</button>
+</div>
+</div>
+</div>
+<div class="hidden flex-col gap-2 mt-2 pl-0 md:pl-12" id="publisher-reply-block-3">
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-2 relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary rounded-l-xl"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span class="font-label text-label text-ink-body font-bold">Balasan Resmi Penerbit · PT Kiblat Buku Utama</span>
+</div>
+<span class="font-label-small text-label-small text-ink-muted">Baru saja</span>
+</div>
+<p class="font-body-small text-body-small text-ink-body leading-relaxed" id="publisher-reply-text-3"></p>
+</div>
+</div>
+</article>
+<!-- Review Card 4 (Sudah Dibalas) -->
+<article class="review-item bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md" data-review-id="4" data-status="replied">
+<!-- Book Identification Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm bg-surface-soft p-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-15 aspect-[2/3] rounded bg-surface-dim overflow-hidden flex-shrink-0 shadow-xs">
+<img class="w-full h-full object-cover" data-alt="Scholarly publication book cover for Flora Priangan: Arsip Hayati by Dr. Encep Kosasih depicting vintage botanical engravings of endemic tea plantations and tropical plants of mountain regions in West Java." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-KLthiZH9fMTDPutZkecp8JstO58sHqViqDmV8vmFdSxT2id17bcwogK1kWd5xUWOCE200gV2i1mVNVbZwLK1l0EFPhPeQnGT-VwZSF0zjOgLz4MKlNypTsIVoXOqNzZksQBHfl87Db7LPQBcPGN7H2iLlEKIz8upKkIxZNKNW2VoDMMxWyXg6GuK_CEAcIRJ1uUsPJJart5AmIn8HboPtIrdLzaLBovcODIYLOg9">
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-ink-body font-bold truncate">Flora Priangan: Arsip Hayati</span>
+<span class="px-2 py-0.5 rounded bg-surface-sky text-on-surface font-label-small text-[11px] whitespace-nowrap">Dokumentasi Ilmiah Hayati</span>
+</div>
+<span class="font-body-small text-body-small text-ink-muted truncate">Penulis: Dr. Encep Kosasih · ISBN: 978-602-5310-88-5</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-lilac text-on-primary-fixed-variant font-label-small text-label-small font-semibold">
+            Sudah Dibalas
+          </span>
+</div>
+<!-- Reader Info & Comment -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-paper text-tertiary flex items-center justify-center font-title-md text-title-md font-bold">
+              ML
+            </div>
+<div class="flex flex-col">
+<span class="font-label text-label text-ink-body font-bold">Maya Lestari</span>
+<span class="font-label-small text-label-small text-ink-muted">08 Nov 2026 · Edisi Cetak Softcover</span>
+</div>
+</div>
+<span class="font-label-small text-label-small text-ink-muted">Pembeli Terdaftar</span>
+</div>
+<div class="font-body-base text-body-base text-ink-body pl-0 md:pl-12 leading-relaxed">
+          “Dokumentasi taksonomi tanaman endemik yang sangat langka dan berharga. Kualitas kertas dan cetakan warna tanaman obat sangat jernih.”
+        </div>
+<!-- Official Publisher Reply Box -->
+<div class="pl-0 md:pl-12">
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-2 relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary rounded-l-xl"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+<span class="font-label text-label text-ink-body font-bold">Balasan Resmi Penerbit · PT Kiblat Buku Utama</span>
+</div>
+<span class="font-label-small text-label-small text-ink-muted">09 Nov 2026</span>
+</div>
+<p class="font-body-small text-body-small text-ink-body leading-relaxed">
+              “Terima kasih banyak atas dukungannya! Edisi suplemen botani pegunungan sedang kami siapkan untuk awal tahun depan.”
+            </p>
+</div>
+</div>
+</article>
+</div>
+<!-- Empty State: Global Empty (State F) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-2xl flex-col items-center justify-center text-center gap-space-md hidden" id="state-empty-global">
+<div class="w-16 h-16 rounded-full bg-surface-lilac flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">rate_review</span>
+</div>
+<div class="flex flex-col gap-1 max-w-md">
+<h3 class="font-title-md text-title-md text-ink-body font-bold">Belum Ada Ulasan Pembeli</h3>
+<p class="font-body-small text-body-small text-ink-muted">
+          Buku yang terdaftar di IKAPI Store saat ini belum menerima penilaian atau ulasan publik dari pembaca.
+        </p>
+</div>
+<button class="mt-2 px-5 py-2.5 rounded-lg bg-surface-container text-ink-body font-label text-label hover:bg-surface-container-high transition-all" onclick="setScreenState('default')" type="button">
+        Segarkan Daftar Ulasan
+      </button>
+</div>
+<!-- Empty State: Search Results Nihil (State G) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-2xl flex-col items-center justify-center text-center gap-space-md flex" id="state-empty-search">
+<div class="w-16 h-16 rounded-full bg-surface-paper flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[32px]">search_off</span>
+</div>
+<div class="flex flex-col gap-1 max-w-md">
+<h3 class="font-title-md text-title-md text-ink-body font-bold">Ulasan Tidak Ditemukan</h3>
+<p class="font-body-small text-body-small text-ink-muted">
+          Tidak ada ulasan atau judul buku yang sesuai dengan kata kunci pencarian Anda. Pastikan ejaan tepat atau gunakan kata kunci umum lainnya.
+        </p>
+</div>
+<button class="mt-2 px-5 py-2 rounded-lg bg-primary-container text-on-primary font-label text-label hover:bg-primary transition-all" onclick="clearSearch()" type="button">
+        Hapus Filter Pencarian
+      </button>
+</div>
+<!-- Editorial Guidelines Footer Callout -->
+<div class="bg-surface-soft rounded-xl p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary flex-shrink-0 shadow-xs">
+<span class="material-symbols-outlined text-[22px]">policy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label text-label text-ink-body font-bold">Kode Etik Komunikasi Pembaca &amp; Penerbit IKAPI</span>
+<p class="font-body-small text-body-small text-ink-muted max-w-3xl mt-0.5">
+            Setiap tanggapan resmi penerbit akan disematkan secara permanen pada katalog publik buku terkait. Gunakan bahasa yang santun, objektif, dan mencerminkan martabat literasi Jawa Barat.
+          </p>
+</div>
+</div>
+<a class="font-label-small text-label-small text-primary font-bold hover:underline whitespace-nowrap flex items-center gap-1" href="#">
+<span>Pedoman Penerbit</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Modal Dialog: State E - Konfirmasi Sukses Publikasi -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-xs items-center justify-center p-space-md hidden" id="success-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-md w-full p-space-lg shadow-xl flex flex-col items-center text-center gap-space-md animate-in fade-in zoom-in duration-200">
+<div class="w-14 h-14 rounded-full bg-surface-sky flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">task_alt</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-title-md text-title-md text-ink-body font-bold">Balasan Komentar Berhasil Dipublikasikan</h3>
+<p class="font-body-small text-body-small text-ink-muted">
+          Tanggapan resmi penerbit telah diperbarui secara langsung dan kini dapat dibaca oleh seluruh pengunjung katalog IKAPI Store.
+        </p>
+</div>
+<div class="w-full flex items-center justify-center gap-space-sm pt-2">
+<button class="w-full py-2.5 rounded-lg bg-primary-container text-on-primary font-label text-label hover:bg-primary transition-all" onclick="closeSuccessModal()" type="button">
+          Selesai &amp; Lanjutkan
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let activeFilter = 'all';
+  let currentSearchQuery = '';
+
+  function setScreenState(state) {
+    // Reset state pills highlighting
+    document.querySelectorAll('.state-pill').forEach(btn => {
+      btn.className = 'state-pill px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label hover:bg-surface-container-high transition-all';
+    });
+
+    const activeBtn = document.getElementById('btn-state-' + state);
+    if (activeBtn) {
+      activeBtn.className = 'state-pill px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label transition-all';
+    }
+
+    const reviewsContainer = document.getElementById('reviews-list-container');
+    const emptyGlobal = document.getElementById('state-empty-global');
+    const emptySearch = document.getElementById('state-empty-search');
+    const replyEditorBox = document.getElementById('reply-editor-box-1');
+    const replyTriggerZone = document.getElementById('reply-trigger-zone-1');
+    const validationError = document.getElementById('reply-validation-error-1');
+    const submitBtn = document.getElementById('reply-submit-btn-1');
+    const submitIcon = document.getElementById('submit-icon-1');
+    const submitLabel = document.getElementById('submit-label-1');
+    const successModal = document.getElementById('success-modal');
+    const replyTextarea = document.getElementById('reply-textarea-1');
+    const pubReplyBlock = document.getElementById('publisher-reply-block-1');
+
+    // Default resets
+    emptyGlobal.classList.add('hidden');
+    emptyGlobal.classList.remove('flex');
+    emptySearch.classList.add('hidden');
+    emptySearch.classList.remove('flex');
+    reviewsContainer.classList.remove('hidden');
+    successModal.classList.add('hidden');
+    successModal.classList.remove('flex');
+    validationError.classList.add('hidden');
+    validationError.classList.remove('flex');
+    
+    // Reset button 1 loading state
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+      submitIcon.innerText = 'send';
+      submitIcon.classList.remove('animate-spin');
+      submitLabel.innerText = 'Kirim Balasan';
+    }
+
+    if (state === 'default') {
+      replyEditorBox.classList.add('hidden');
+      replyEditorBox.classList.remove('flex');
+      replyTriggerZone.classList.remove('hidden');
+      setFilterTab('all');
+    } else if (state === 'open-reply') {
+      replyEditorBox.classList.remove('hidden');
+      replyEditorBox.classList.add('flex');
+      replyTriggerZone.classList.add('hidden');
+      replyTextarea.focus();
+    } else if (state === 'validation-error') {
+      replyEditorBox.classList.remove('hidden');
+      replyEditorBox.classList.add('flex');
+      replyTriggerZone.classList.add('hidden');
+      replyTextarea.value = '';
+      validationError.classList.remove('hidden');
+      validationError.classList.add('flex');
+    } else if (state === 'sending') {
+      replyEditorBox.classList.remove('hidden');
+      replyEditorBox.classList.add('flex');
+      replyTriggerZone.classList.add('hidden');
+      replyTextarea.value = 'Terima kasih atas saran pembaca terkait glosarium rarangken.';
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+      submitIcon.innerText = 'sync';
+      submitIcon.classList.add('animate-spin');
+      submitLabel.innerText = 'Memproses...';
+    } else if (state === 'success') {
+      replyEditorBox.classList.add('hidden');
+      replyEditorBox.classList.remove('flex');
+      replyTriggerZone.classList.add('hidden');
+      pubReplyBlock.classList.remove('hidden');
+      pubReplyBlock.classList.add('flex');
+      successModal.classList.remove('hidden');
+      successModal.classList.add('flex');
+    } else if (state === 'empty-all') {
+      reviewsContainer.classList.add('hidden');
+      emptyGlobal.classList.remove('hidden');
+      emptyGlobal.classList.add('flex');
+    } else if (state === 'search-empty') {
+      reviewsContainer.classList.add('hidden');
+      emptySearch.classList.remove('hidden');
+      emptySearch.classList.add('flex');
+      document.getElementById('reviews-search-input').value = 'Babad Tanah Siluman';
+      document.getElementById('clear-search-btn').classList.remove('hidden');
+    }
+  }
+
+  function toggleReplyEditor(reviewId, isOpen) {
+    const editor = document.getElementById('reply-editor-box-' + reviewId);
+    const trigger = document.getElementById('reply-trigger-zone-' + reviewId);
+    const err = document.getElementById('reply-validation-error-' + reviewId);
+    if (!editor || !trigger) return;
+
+    if (isOpen) {
+      editor.classList.remove('hidden');
+      editor.classList.add('flex');
+      trigger.classList.add('hidden');
+      const textarea = document.getElementById('reply-textarea-' + reviewId);
+      if (textarea) textarea.focus();
+    } else {
+      editor.classList.add('hidden');
+      editor.classList.remove('flex');
+      trigger.classList.remove('hidden');
+      if (err) {
+        err.classList.add('hidden');
+        err.classList.remove('flex');
+      }
+    }
+  }
+
+  function submitReply(reviewId) {
+    const textarea = document.getElementById('reply-textarea-' + reviewId);
+    const errorBox = document.getElementById('reply-validation-error-' + reviewId);
+    const editorBox = document.getElementById('reply-editor-box-' + reviewId);
+    const pubReplyBlock = document.getElementById('publisher-reply-block-' + reviewId);
+    const replyTextP = document.getElementById('publisher-reply-text-' + reviewId);
+    const submitBtn = document.getElementById('reply-submit-btn-' + reviewId);
+
+    const val = textarea ? textarea.value.trim() : '';
+
+    if (!val) {
+      if (errorBox) {
+        errorBox.classList.remove('hidden');
+        errorBox.classList.add('flex');
+      }
+      return;
+    }
+
+    if (errorBox) {
+      errorBox.classList.add('hidden');
+      errorBox.classList.remove('flex');
+    }
+
+    // Simulate short sending state
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-75');
+    }
+
+    setTimeout(() => {
+      if (editorBox) {
+        editorBox.classList.add('hidden');
+        editorBox.classList.remove('flex');
+      }
+      if (pubReplyBlock && replyTextP) {
+        replyTextP.innerText = '“' + val + '”';
+        pubReplyBlock.classList.remove('hidden');
+        pubReplyBlock.classList.add('flex');
+      }
+      // Update article status attribute
+      const article = document.querySelector(`article[data-review-id="${reviewId}"]`);
+      if (article) {
+        article.setAttribute('data-status', 'replied');
+      }
+      // Show success modal
+      document.getElementById('success-modal').classList.remove('hidden');
+      document.getElementById('success-modal').classList.add('flex');
+      
+      // Update counter
+      const counter = document.getElementById('counter-unreplied');
+      if (counter) counter.innerText = '1 Ulasan';
+    }, 400);
+  }
+
+  function closeSuccessModal() {
+    document.getElementById('success-modal').classList.add('hidden');
+    document.getElementById('success-modal').classList.remove('flex');
+  }
+
+  function setFilterTab(status) {
+    activeFilter = status;
+    
+    // Update tab styles
+    const tabs = ['all', 'unreplied', 'replied'];
+    tabs.forEach(tabKey => {
+      const el = document.getElementById('filter-tab-' + tabKey);
+      if (el) {
+        if (tabKey === status) {
+          el.className = 'filter-pill px-3.5 py-1.5 rounded-md font-label text-label transition-all bg-surface-container-lowest text-primary shadow-sm';
+        } else {
+          el.className = 'filter-pill px-3.5 py-1.5 rounded-md font-label text-label transition-all text-ink-muted hover:text-ink-body';
+        }
+      }
+    });
+
+    applyFilters();
+  }
+
+  function handleSearch(query) {
+    currentSearchQuery = (query || '').toLowerCase().trim();
+    const clearBtn = document.getElementById('clear-search-btn');
+    if (currentSearchQuery.length > 0) {
+      clearBtn.classList.remove('hidden');
+    } else {
+      clearBtn.classList.add('hidden');
+    }
+    applyFilters();
+  }
+
+  function clearSearch() {
+    const input = document.getElementById('reviews-search-input');
+    input.value = '';
+    currentSearchQuery = '';
+    document.getElementById('clear-search-btn').classList.add('hidden');
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const reviews = document.querySelectorAll('.review-item');
+    const reviewsContainer = document.getElementById('reviews-list-container');
+    const emptySearch = document.getElementById('state-empty-search');
+    let visibleCount = 0;
+
+    reviews.forEach(card => {
+      const cardStatus = card.getAttribute('data-status');
+      const cardText = card.innerText.toLowerCase();
+
+      const matchesStatus = (activeFilter === 'all') || (cardStatus === activeFilter);
+      const matchesSearch = !currentSearchQuery || cardText.includes(currentSearchQuery);
+
+      if (matchesStatus && matchesSearch) {
+        card.classList.remove('hidden');
+        card.classList.add('flex');
+        visibleCount++;
+      } else {
+        card.classList.add('hidden');
+        card.classList.remove('flex');
+      }
+    });
+
+    if (visibleCount === 0) {
+      reviewsContainer.classList.add('hidden');
+      emptySearch.classList.remove('hidden');
+      emptySearch.classList.add('flex');
+    } else {
+      reviewsContainer.classList.remove('hidden');
+      emptySearch.classList.add('hidden');
+      emptySearch.classList.remove('flex');
+    }
+  }
+</script></main></div>
+
+</body></html>

@@ -1,0 +1,810 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error-container": "#93000a", "on-background": "#1b1b25", "on-tertiary": "#ffffff", "inverse-surface": "#302f3a", "ink-body": "#191923", "outline-variant": "#c7c4d7", "error": "#ba1a1a", "surface-variant": "#e3e1ef", "surface-container-highest": "#e3e1ef", "tertiary-fixed-dim": "#ecc23f", "ink-muted": "#555665", "tertiary-container": "#cea623", "tertiary-fixed": "#ffe08d", "feedback-error": "#B42318", "on-tertiary-fixed": "#241a00", "surface-paper": "#FFF0E3", "surface-container-low": "#f5f2ff", "on-tertiary-fixed-variant": "#584400", "secondary-fixed": "#ffd9e3", "surface-container-high": "#e9e6f5", "border-bold": "#CFD0DD", "surface-tint": "#F0EFFF", "inverse-primary": "#c2c1ff", "on-surface": "#1b1b25", "on-primary-fixed": "#0c006a", "surface-sky": "#E0F6FC", "surface-container": "#efecfb", "on-secondary-container": "#7a495a", "on-tertiary-container": "#4f3d00", "surface": "#fcf8ff", "inverse-deep": "#24233D", "on-error": "#ffffff", "surface-dim": "#dbd8e7", "tertiary": "#745b00", "primary": "#3f3ad0", "primary-container": "#5956e9", "on-secondary-fixed-variant": "#663949", "on-secondary-fixed": "#330e1d", "outline": "#777586", "secondary": "#815060", "border-subtle": "#E7E7EF", "on-secondary": "#ffffff", "surface-cream": "#FFF1E3", "secondary-fixed-dim": "#f4b5c8", "primary-fixed": "#e2dfff", "on-surface-variant": "#464555", "inverse-on-surface": "#f2effe", "on-primary": "#ffffff", "background": "#fcf8ff", "surface-container-lowest": "#ffffff", "surface-soft": "#F8F7FF", "surface-bright": "#fcf8ff", "error-container": "#ffdad6", "surface-lilac": "#E5E4FF", "secondary-container": "#fdbed1", "on-primary-fixed-variant": "#3229c4", "primary-fixed-dim": "#c2c1ff", "on-primary-container": "#eeeaff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter": "1.5rem", "space-xl": "2rem", "margin": "2.5rem", "space-2xl": "3rem", "space-3xl": "4.5rem", "space-md": "1rem", "space-lg": "1.5rem", "gutter-mobile": "1.25rem", "margin-mobile": "1.25rem", "space-xs": "0.25rem" }, "fontFamily": { "display-md": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "label-small": [ "Plus Jakarta Sans" ], "title-md": [ "Plus Jakarta Sans" ], "body-small": [ "Plus Jakarta Sans" ], "label": [ "Plus Jakarta Sans" ], "display-lg-mobile": [ "Plus Jakarta Sans" ], "body-base": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "display-lg": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "display-md-mobile": [ "Plus Jakarta Sans" ] }, "fontSize": { "display-md": [ "44px", { "lineHeight": "1.12", "letterSpacing": "-0.035em", "fontWeight": "800" } ], "headline-md": [ "28px", { "lineHeight": "1.22", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "label-small": [ "12px", { "lineHeight": "1.3", "letterSpacing": "0.02em", "fontWeight": "600" } ], "title-md": [ "18px", { "lineHeight": "1.35", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-small": [ "14px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" } ], "label": [ "14px", { "lineHeight": "1.35", "letterSpacing": "0", "fontWeight": "600" } ], "display-lg-mobile": [ "34px", { "lineHeight": "1.15", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "body-base": [ "16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "1.25", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "display-lg": [ "56px", { "lineHeight": "1.08", "letterSpacing": "-0.04em", "fontWeight": "800" } ], "headline-lg": [ "36px", { "lineHeight": "1.18", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "display-md-mobile": [ "28px", { "lineHeight": "1.2", "letterSpacing": "-0.025em", "fontWeight": "800" } ] } } } };</script></head><body class="bg-background font-body-base text-ink-body"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-lg px-space-md"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-sm"><img alt="logo-ikapu.png" class="h-8 w-auto object-contain" src="../../assets/logo-ikapi-jabar.png"><div class="flex flex-col"></div></div><div class="px-space-sm"><span class="font-label-small text-label-small text-ink-muted uppercase tracking-wider">Menu Penerbit</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-label text-label"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="kelola-buku" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>Kelola Buku</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="pesanan-masuk" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span>Pesanan Masuk</span></div><span class="bg-surface-lilac text-primary font-label-small text-label-small px-space-xs py-0.5 rounded">12</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary-container font-label text-label" data-path="pendapatan-dan-pencairan" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span>Pendapatan &amp; Pencairan</span></div></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ulasan-pembeli" href="#"><span class="material-symbols-outlined text-[20px]">rate_review</span><span>Ulasan Pembeli</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="pengaturan-profil" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Pengaturan Profil</span></a></nav></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(25,25,35,0.04)]"><div class="h-16 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><button class="w-9 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center relative transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-feedback-error"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right"></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 flex-1 bg-surface-soft"><div class="max-w-7xl mx-auto p-gutter"><div class="flex flex-col w-full">
+<!-- Interactive State Simulator Tool Bar -->
+<aside aria-label="Interactive State Simulator" class="mb-space-lg p-space-sm bg-surface-container rounded-lg flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs text-ink-muted">
+<span class="material-symbols-outlined text-[18px] text-primary">tune</span>
+<span class="font-label-small text-label-small uppercase tracking-wider text-ink-muted font-bold">Simulator Status (UC-36 &amp; UC-37)</span>
+</div>
+
+</div>
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<button class="state-btn px-space-sm py-1 rounded bg-primary text-on-primary font-label-small text-label-small transition-all" id="btn-state-A" onclick="setState('A')" type="button">
+        State A: Saldo Tersedia (Default)
+      </button>
+<button class="state-btn px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high font-label-small text-label-small transition-all" id="btn-state-B" onclick="setState('B')" type="button">
+        State B: Saldo Kosong (Rp 0)
+      </button>
+<button class="state-btn px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high font-label-small text-label-small transition-all" id="btn-state-C" onclick="setState('C')" type="button">
+        State C: Rekening Belum Ada
+      </button>
+<button class="state-btn px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high font-label-small text-label-small transition-all" id="btn-state-D" onclick="setState('D')" type="button">
+        State D: Validasi Error
+      </button>
+<button class="state-btn px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high font-label-small text-label-small transition-all" id="btn-state-E" onclick="setState('E')" type="button">
+        State E: Sedang Mengajukan
+      </button>
+<button class="state-btn px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high font-label-small text-label-small transition-all" id="btn-state-F" onclick="setState('F')" type="button">
+        State F: Sukses Konfirmasi
+      </button>
+<button class="state-btn px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high font-label-small text-label-small transition-all" id="btn-state-G" onclick="setState('G')" type="button">
+        State G: Modal Bukti (Selesai)
+      </button>
+<button class="state-btn px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high font-label-small text-label-small transition-all" id="btn-state-H" onclick="setState('H')" type="button">
+        State H: Bukti Dalam Proses
+      </button>
+<button class="state-btn px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high font-label-small text-label-small transition-all" id="btn-state-I" onclick="setState('I')" type="button">
+        State I: Gagal Memuat
+      </button>
+</div>
+</aside>
+<!-- Error Failure View (State I) -->
+<section class="hidden flex-col items-center justify-center p-space-2xl bg-surface-container-lowest rounded-xl shadow-sm text-center my-space-lg" id="view-error-state">
+<div class="w-14 h-14 rounded-full bg-error-container text-on-error-container flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[32px]">cloud_off</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-ink-body mb-space-xs">Gagal Memuat Data Saldo</h2>
+<p class="font-body-base text-body-base text-ink-muted max-w-lg mb-space-lg">
+      Koneksi ke sistem kliring perbankan IKAPI Jawa Barat mengalami kendala sementara. Silakan segarkan halaman atau hubungi layanan bantuan penerbit.
+    </p>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-sm bg-primary text-on-primary font-label text-label rounded-lg hover:bg-primary-container transition-colors flex items-center gap-space-xs" onclick="setState('A')" type="button">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+        Coba Muat Ulang
+      </button>
+<a class="px-space-md py-space-sm bg-surface-container text-on-surface font-label text-label rounded-lg hover:bg-surface-container-high transition-colors" href="#">
+        Hubungi Sekretariat
+      </a>
+</div>
+</section>
+<!-- Main Content Container -->
+<div class="flex flex-col w-full gap-space-xl" id="view-main-content">
+<!-- Header Section -->
+<header class="flex flex-col gap-space-sm">
+
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-ink-body tracking-tight">Pendapatan &amp; Pencairan</h1>
+<p class="font-body-base text-body-base text-ink-muted mt-space-xs">
+            Kelola saldo royalti penjualan e-book dan ajukan permohonan pencairan dana ke rekening terdaftar.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-label text-label hover:bg-surface-container shadow-sm flex items-center gap-space-xs transition-colors" onclick="alert('Laporan rekapitulasi royalti diunduh (PDF/XLS).')" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>Ekspor Rekap Royalti</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Ringkasan Saldo (3 Kolom Sejajar Stripe Express Inspiration) -->
+<section aria-label="Ringkasan Saldo Rekening" class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Card 1: Saldo Bersih -->
+<article class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label text-label text-ink-muted">Total Pendapatan Neto</span>
+<span class="material-symbols-outlined text-ink-muted text-[20px]">receipt_long</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-baseline gap-1">
+<span class="font-title-md text-title-md text-ink-muted">Rp</span>
+<span class="font-display-md text-display-md text-ink-body tracking-tight" id="val-saldo-bersih">1.485.000</span>
+</div>
+<span class="font-body-small text-body-small text-ink-muted">
+            Total akumulasi penjualan buku bersih setelah potongan administrasi platform 10%.
+          </span>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-soft -mx-space-lg -mb-space-lg px-space-lg py-space-xs rounded-b-xl flex items-center justify-between text-ink-muted">
+<span class="font-label-small text-label-small">Periode Buku Aktif 2026</span>
+<span class="font-label-small text-label-small text-primary font-semibold">14 Transaksi</span>
+</div>
+</article>
+<!-- Card 2: Saldo Tersedia (Visual Focus Accent) -->
+<article class="bg-surface-tint p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-label text-label text-primary font-bold">Saldo Tersedia</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-lilac text-primary font-label-small text-label-small">Siap Cair</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[22px]">account_balance_wallet</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-baseline gap-1">
+<span class="font-title-md text-title-md text-primary font-bold">Rp</span>
+<span class="font-display-md text-display-md text-primary tracking-tight" id="val-saldo-tersedia">840.000</span>
+</div>
+<span class="font-body-small text-body-small text-on-surface-variant">
+            Dana aktif yang dapat Anda ajukan pencairannya ke rekening bank saat ini.
+          </span>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-lilac -mx-space-lg -mb-space-lg px-space-lg py-space-xs rounded-b-xl flex items-center justify-between text-primary font-semibold">
+<span class="font-label-small text-label-small flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified_user</span> Bebas Biaya Kliring IKAPI
+          </span>
+<span class="font-label-small text-label-small underline cursor-pointer" onclick="document.getElementById('input-nominal').value = '840.000'; validateNominal();">Tarik Semua</span>
+</div>
+</article>
+<!-- Card 3: Dalam Proses -->
+<article class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label text-label text-ink-muted">Dalam Proses Transfer</span>
+<span class="material-symbols-outlined text-tertiary-container text-[22px]">pending_actions</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-baseline gap-1">
+<span class="font-title-md text-title-md text-ink-muted">Rp</span>
+<span class="font-display-md text-display-md text-ink-body tracking-tight" id="val-saldo-proses">645.000</span>
+</div>
+<span class="font-body-small text-body-small text-ink-muted">
+            Sedang diverifikasi oleh bendahara DPD IKAPI Jabar dalam batch antrean mingguan.
+          </span>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-soft -mx-space-lg -mb-space-lg px-space-lg py-space-xs rounded-b-xl flex items-center justify-between text-ink-muted">
+<span class="font-label-small text-label-small">Batch Penyaluran: Jumat</span>
+<span class="font-label-small text-label-small font-semibold text-tertiary">1 Pengajuan Antre</span>
+</div>
+</article>
+</section>
+<!-- Sesi Interaktif 2 Kolom (60/40 Layout) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column (60%): Formulir Ajukan Pencairan Dana (UC-36) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg">
+<div>
+<div class="flex items-center justify-between">
+<h2 class="font-title-md text-title-md text-ink-body">Ajukan Pencairan Dana</h2>
+
+</div>
+<p class="font-body-small text-body-small text-ink-muted mt-space-xs">
+            Pengajuan akan diproses oleh Administrator IKAPI sebelum dana ditransfer ke rekening tujuan.
+          </p>
+</div>
+<form class="flex flex-col gap-space-md" id="form-pencairan" onsubmit="handlePengajuan(event)">
+<!-- Input Nominal -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label text-label text-ink-body" for="input-nominal">
+              Nominal Pencairan <span class="text-feedback-error">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="absolute left-space-md font-title-md text-title-md text-ink-muted font-bold select-none">Rp</span>
+<input class="w-full pl-12 pr-space-md py-space-sm rounded-lg bg-surface text-ink-body font-title-md text-title-md font-bold focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="input-nominal" name="nominal" oninput="validateNominal()" placeholder="0" type="text" value="500.000">
+</div>
+<div class="flex items-center justify-between text-ink-muted font-body-small text-body-small pt-1">
+<span id="helper-maksimal">Maksimal pencairan: <strong class="text-ink-body">Rp 840.000</strong> (Saldo Tersedia)</span>
+<button class="text-primary font-label-small text-label-small hover:underline" onclick="setNominalMaksimal()" type="button">Gunakan Maksimum</button>
+</div>
+</div>
+<!-- Alert Error Box (Validation) -->
+<div class="hidden p-space-sm rounded-lg bg-error-container text-on-error-container flex items-start gap-space-sm" id="alert-error-box">
+<span class="material-symbols-outlined text-[20px] text-feedback-error flex-shrink-0 mt-0.5">error</span>
+<div class="flex flex-col">
+<span class="font-label text-label font-bold text-feedback-error">Pengajuan Tidak Memenuhi Syarat</span>
+<span class="font-body-small text-body-small text-on-error-container" id="alert-error-msg">
+                Nominal melebihi saldo tersedia atau rekening bank belum terdaftar.
+              </span>
+</div>
+</div>
+<!-- Alert Empty Balance Box -->
+<div class="hidden p-space-sm rounded-lg bg-surface-paper text-ink-body flex items-start gap-space-sm" id="alert-empty-balance">
+<span class="material-symbols-outlined text-[20px] text-tertiary flex-shrink-0 mt-0.5">info</span>
+<div class="flex flex-col">
+<span class="font-label text-label font-bold">Saldo Aktif Saat Ini Kosong</span>
+<span class="font-body-small text-body-small text-ink-muted">
+                Pencairan hanya dapat dilakukan jika Anda memiliki saldo royalti yang telah diselesaikan pelanggannya.
+              </span>
+</div>
+</div>
+<!-- Checkbox WAJIB UC-36 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-start gap-space-sm">
+<input checked="" class="w-5 h-5 mt-0.5 rounded accent-primary text-primary focus:ring-primary cursor-pointer" id="check-rekening-valid" name="konfirmasi_rekening" onchange="checkFormValidity()" type="checkbox">
+<label class="font-label text-label text-ink-body cursor-pointer select-none" for="check-rekening-valid">
+              Data rekening tujuan sudah benar dan sesuai dengan buku rekening resmi perusahaan penerbit.
+              <span class="block font-body-small text-body-small text-ink-muted font-normal mt-0.5">
+                DPD IKAPI Jabar tidak bertanggung jawab atas kegagalan atau kesalahan transfer akibat data bank yang kedaluwarsa.
+              </span>
+</label>
+</div>
+<!-- Action Button -->
+<div class="flex items-center gap-space-md pt-space-xs">
+<button class="w-full sm:w-auto px-space-xl py-space-sm rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label text-label font-bold shadow-sm transition-all flex items-center justify-center gap-space-sm" id="btn-submit-pencairan" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span id="btn-submit-label">Ajukan Pencairan</span>
+</button>
+<span class="hidden sm:inline-block font-label-small text-label-small text-ink-muted">
+              Biaya transfer bank: <strong class="text-ink-body">Rp 0</strong> (Ditanggung IKAPI)
+            </span>
+</div>
+<!-- Informational Footer Note -->
+
+</form>
+</div>
+<!-- Right Column (40%): Rekening Bank Tujuan (UC-30) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Rekening Card Active -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between gap-space-md" id="card-rekening-aktif">
+<div class="flex items-center justify-between">
+<span class="font-label-small text-label-small uppercase tracking-wider text-ink-muted font-bold">Rekening Bank Tujuan</span>
+
+</div>
+<!-- Bank Graphic / Identity Plate -->
+<div class="p-space-md rounded-lg bg-surface-soft flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary font-title-md font-extrabold shadow-sm">
+                  BCA
+                </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-ink-body leading-none">Bank Central Asia</span>
+<span class="font-label-small text-label-small text-ink-muted">KCP Bandung Dago</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-ink-muted text-[24px]">account_balance</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-small text-label-small text-ink-muted">Nomor Rekening Terdaftar</span>
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-ink-body tracking-wider font-mono">•••• •••• 4892</span>
+<span class="material-symbols-outlined text-ink-muted text-[18px] cursor-pointer" title="Nomor disamarkan untuk keamanan">lock</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-small text-label-small text-ink-muted">Atas Nama Rekening Perusahaan</span>
+<span class="font-label text-label text-ink-body font-bold uppercase tracking-tight">PT KIBLAT BUKU UTAMA</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-body-small">
+<a class="font-label text-label text-primary hover:text-primary-container font-semibold flex items-center gap-1" href="#">
+              Ubah di Pengaturan Profil <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+
+</div>
+</div>
+<!-- Rekening Card Empty (Hidden by default, used in State C) -->
+<div class="hidden bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex-col gap-space-md text-center items-center justify-center py-space-2xl" id="card-rekening-kosong">
+<div class="w-12 h-12 rounded-full bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">account_balance</span>
+</div>
+<div class="flex flex-col gap-1 max-w-xs">
+<h3 class="font-title-md text-title-md text-ink-body">Rekening Belum Terdaftar</h3>
+<p class="font-body-small text-body-small text-ink-muted">
+              Anda belum menghubungkan rekening bank operasional penerbit. Pengajuan pencairan tidak dapat diproses.
+            </p>
+</div>
+<a class="px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label text-label font-bold flex items-center gap-space-xs shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px]">add_link</span>
+            Daftarkan Rekening Bank Sekarang
+          </a>
+</div>
+<!-- Catatan Kebijakan IKAPI -->
+<div class="bg-surface-cream rounded-xl p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">format_image_left</span>
+<span class="font-label text-label font-bold">Kebijakan Pencairan Royalti IKAPI</span>
+</div>
+<ul class="font-body-small text-body-small text-ink-body list-disc pl-5 flex flex-col gap-1 mt-1">
+<li>Batas minimum pencairan adalah <strong>Rp 100.000</strong>.</li>
+<li>Pengajuan di atas <strong>Rp 5.000.000</strong> memerlukan verifikasi dua mata dari Dewan Pengurus IKAPI Jabar.</li>
+<li>Bukti transfer bank resmi akan diunggah paling lambat <strong>2x24 jam kerja</strong> setelah disetujui.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Tabel Riwayat Pencairan (Shopify Payments Inspiration) -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<h2 class="font-title-md text-title-md text-ink-body">Riwayat Pengajuan Pencairan</h2>
+
+</div>
+<p class="font-body-small text-body-small text-ink-muted mt-0.5">
+            Daftar pengajuan pencairan dana dan arsip bukti transfer resmi dari Administrator IKAPI.
+          </p>
+</div>
+<!-- Filter bar -->
+<div class="flex items-center gap-space-xs">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-space-xs top-2 text-[18px] text-ink-muted">search</span>
+<input class="pl-8 pr-space-sm py-1.5 rounded-lg bg-surface text-ink-body font-body-small text-body-small focus:outline-none focus:ring-1 focus:ring-primary w-48 shadow-sm" placeholder="Cari No. Pengajuan..." type="text">
+</div>
+<select class="px-space-sm py-1.5 rounded-lg bg-surface text-ink-body font-body-small text-body-small focus:outline-none focus:ring-1 focus:ring-primary shadow-sm cursor-pointer">
+<option>Semua Status</option>
+<option>Dalam Proses</option>
+<option>Selesai</option>
+</select>
+</div>
+</div>
+<!-- Table responsive wrapper -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body-small text-body-small">
+<thead class="bg-surface-soft text-ink-muted font-label-small text-label-small uppercase tracking-wider">
+<tr>
+<th class="py-space-sm px-space-lg" scope="col">No. Pengajuan / Tanggal</th>
+<th class="py-space-sm px-space-md" scope="col">Nominal Pencairan</th>
+<th class="py-space-sm px-space-md" scope="col">Rekening Tujuan</th>
+<th class="py-space-sm px-space-md" scope="col">Status</th>
+<th class="py-space-sm px-space-lg text-right" scope="col">Aksi</th>
+</tr>
+</thead>
+<tbody class="text-ink-body divide-y divide-surface-container">
+<!-- Row 1: WDR-2026-0042 (Dalam Proses) -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<span class="font-label text-label font-bold text-ink-body">WDR-2026-0042</span>
+<span class="text-ink-muted font-label-small text-label-small">14 Nov 2026, 10:15 WIB</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label text-label font-bold text-ink-body">
+                Rp 645.000
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-small text-label-small font-bold">BCA</span>
+<span class="text-ink-muted">•••• 4892</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-paper text-tertiary font-label-small text-label-small font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span>
+                  Dalam Proses
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-small text-label-small font-semibold transition-colors" onclick="openDalamProsesToast()" type="button">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>Lihat Status / Bukti</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: WDR-2026-0038 (Selesai with Modal UC-37) -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<span class="font-label text-label font-bold text-ink-body">WDR-2026-0038</span>
+<span class="text-ink-muted font-label-small text-label-small">28 Okt 2026, 14:20 WIB</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label text-label font-bold text-ink-body">
+                Rp 1.250.000
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-small text-label-small font-bold">BCA</span>
+<span class="text-ink-muted">•••• 4892</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-sky text-primary font-label-small text-label-small font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                  Selesai
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-primary-container text-on-primary-container font-label-small text-label-small font-semibold hover:bg-primary hover:text-on-primary transition-all shadow-sm" onclick="openModalBuktiTransfer('WDR-2026-0038', '28 Oktober 2026', 'Rp 1.250.000', 'TRF-IKP-8829103')" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Lihat Bukti Transfer</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: WDR-2026-0029 (Selesai with Modal UC-37) -->
+<tr class="hover:bg-surface transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<span class="font-label text-label font-bold text-ink-body">WDR-2026-0029</span>
+<span class="text-ink-muted font-label-small text-label-small">15 Sep 2026, 09:40 WIB</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label text-label font-bold text-ink-body">
+                Rp 850.000
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-small text-label-small font-bold">BCA</span>
+<span class="text-ink-muted">•••• 4892</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-sky text-primary font-label-small text-label-small font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                  Selesai
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-primary-container text-on-primary-container font-label-small text-label-small font-semibold hover:bg-primary hover:text-on-primary transition-all shadow-sm" onclick="openModalBuktiTransfer('WDR-2026-0029', '15 September 2026', 'Rp 850.000', 'TRF-IKP-7718290')" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Lihat Bukti Transfer</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination / History summary footer -->
+<div class="p-space-md bg-surface-soft flex items-center justify-between text-ink-muted font-body-small text-body-small">
+<span>Menampilkan 3 dari 3 transaksi pencairan dana tahun berjalan</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-surface-container-high opacity-50 cursor-not-allowed" disabled="" type="button">Sebelumnya</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-high opacity-50 cursor-not-allowed" disabled="" type="button">Selanjutnya</button>
+</div>
+</div>
+</section>
+</div>
+<!-- Modal Dialog Bukti Transfer (UC-37) -->
+<div class="fixed inset-0 z-50 hidden items-center justify-center bg-inverse-deep/60 backdrop-blur-sm p-space-md" id="modal-bukti-transfer">
+<div class="relative w-full max-w-xl bg-surface-container-lowest rounded-xl shadow-xl overflow-hidden flex flex-col max-h-[90vh]">
+<!-- Modal Header -->
+<div class="p-space-lg bg-surface-soft flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">verified</span>
+<h3 class="font-title-md text-title-md text-ink-body">Bukti Transfer Pencairan Dana</h3>
+</div>
+<p class="font-body-small text-body-small text-ink-muted mt-1" id="modal-bukti-subtitle">
+            No. Pengajuan: WDR-2026-0038 · Tanggal Transfer: 28 Oktober 2026
+          </p>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-ink-muted hover:text-ink-body flex items-center justify-center transition-colors" onclick="closeModalBuktiTransfer()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body (Transfer Proof Voucher Area) -->
+<div class="p-space-lg overflow-y-auto flex flex-col gap-space-md">
+<div class="bg-surface-lilac/30 p-space-sm rounded-lg flex items-center gap-space-xs text-primary font-label-small text-label-small">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Dokumen resmi diunggah oleh: <strong>Administrator IKAPI Jawa Barat</strong> (Bendahara Sekretariat)</span>
+</div>
+<!-- Realistic Simulated Banking Slip Slip -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm font-sans flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-surface-soft -mx-space-lg -mt-space-lg p-space-lg rounded-t-xl">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded bg-primary text-on-primary font-bold text-center flex items-center justify-center text-[12px]">BCA</div>
+<span class="font-label text-label font-bold text-ink-body">KlikBCA Bisnis / Corporate</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-sky text-primary font-label-small text-label-small font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> TRANSFER BERHASIL
+            </span>
+</div>
+<div class="grid grid-cols-2 gap-y-space-sm text-body-small">
+<div>
+<span class="font-label-small text-label-small text-ink-muted block">Tanggal &amp; Waktu Eksekusi</span>
+<span class="font-label text-label font-bold text-ink-body" id="slip-tanggal">28/10/2026 · 14:22:10 WIB</span>
+</div>
+<div>
+<span class="font-label-small text-label-small text-ink-muted block">Nomor Referensi Bank</span>
+<span class="font-label text-label font-mono font-bold text-primary" id="slip-ref">TRF-IKP-8829103</span>
+</div>
+<div class="col-span-2 pt-space-xs">
+<span class="font-label-small text-label-small text-ink-muted block">Rekening Pengirim (Debet)</span>
+<span class="font-label text-label text-ink-body">DPD IKAPI JAWA BARAT</span>
+<span class="text-ink-muted font-mono block text-label-small">BCA - 008-992-1100</span>
+</div>
+<div class="col-span-2 pt-space-xs">
+<span class="font-label-small text-label-small text-ink-muted block">Rekening Penerima (Kredit)</span>
+<span class="font-label text-label font-bold text-ink-body">PT KIBLAT BUKU UTAMA</span>
+<span class="text-ink-muted font-mono block text-label-small">BCA - •••• •••• 4892</span>
+</div>
+<div class="col-span-2 pt-space-sm bg-surface-soft p-space-sm rounded-lg flex items-center justify-between">
+<span class="font-label text-label font-bold text-ink-body">Jumlah Dana Ditransfer</span>
+<span class="font-headline-md text-headline-md font-bold text-primary" id="slip-nominal">Rp 1.250.000</span>
+</div>
+<div class="col-span-2 text-ink-muted font-label-small text-label-small">
+              Berita Transfer: <span class="italic text-ink-body">"Penyaluran royalti buku digital IKAPI Store Jabar Q3"</span>
+</div>
+</div>
+</div>
+<p class="font-label-small text-label-small text-ink-muted text-center">
+          Tanda bukti ini sah dan diakui sebagai konfirmasi resmi penyelesaian kewajiban royalti IKAPI Jawa Barat.
+        </p>
+</div>
+<!-- Modal Footer -->
+<div class="p-space-md bg-surface-soft flex items-center justify-between">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container text-on-surface font-label text-label hover:bg-surface-container-high transition-colors" onclick="closeModalBuktiTransfer()" type="button">
+          Tutup
+        </button>
+<button class="px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label text-label font-bold hover:bg-primary-container transition-colors flex items-center gap-space-xs shadow-sm" onclick="alert('Mengunduh salinan gambar bukti transfer...')" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+          Unduh Bukti Gambar
+        </button>
+</div>
+</div>
+</div>
+<!-- Modal Konfirmasi Sukses (UC-36) -->
+<div class="fixed inset-0 z-50 hidden items-center justify-center bg-inverse-deep/60 backdrop-blur-sm p-space-md" id="modal-sukses-pengajuan">
+<div class="relative w-full max-w-md bg-surface-container-lowest rounded-xl shadow-xl p-space-xl flex flex-col items-center text-center gap-space-md">
+<div class="w-16 h-16 rounded-full bg-surface-sky text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[36px]">check_circle</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-title-md text-title-md text-ink-body">Pengajuan Berhasil Dikirim</h3>
+<p class="font-body-small text-body-small text-ink-muted">
+          Permohonan pencairan dana sejumlah <strong class="text-ink-body" id="sukses-nominal-modal">Rp 500.000</strong> telah diterima oleh sistem dan sedang menunggu verifikasi transfer dari Administrator IKAPI Jawa Barat.
+        </p>
+</div>
+<div class="w-full p-space-sm bg-surface-soft rounded-lg text-ink-muted font-label-small text-label-small text-left flex flex-col gap-1">
+<div class="flex justify-between">
+<span>ID Pengajuan:</span>
+<span class="font-bold text-ink-body">WDR-2026-0043</span>
+</div>
+<div class="flex justify-between">
+<span>Estimasi Proses:</span>
+<span class="font-semibold text-primary">1 - 2 Hari Kerja</span>
+</div>
+</div>
+<button class="w-full py-space-sm rounded-lg bg-primary text-on-primary font-label text-label font-bold hover:bg-primary-container transition-colors shadow-sm" onclick="closeModalSukses()" type="button">
+        Selesai &amp; Tutup
+      </button>
+</div>
+</div>
+<!-- In-app Floating Toast / Notification -->
+<div class="fixed bottom-6 right-6 z-50 hidden items-center gap-space-sm p-space-md rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl max-w-md transition-all" id="toast-notification">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed" id="toast-icon">info</span>
+<span class="font-body-small text-body-small flex-1" id="toast-text">Pencairan masih diproses, bukti transfer belum tersedia.</span>
+<button class="text-inverse-on-surface hover:opacity-75" onclick="hideToast()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<script>
+  let currentState = 'A';
+  let availableBalance = 840000;
+  let hasBankAccount = true;
+
+  function setState(state) {
+    currentState = state;
+
+    // Reset simulator button highlight
+    const allBtns = document.querySelectorAll('.state-btn');
+    allBtns.forEach(btn => {
+      btn.className = "state-btn px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high font-label-small text-label-small transition-all";
+    });
+    const currentBtn = document.getElementById('btn-state-' + state);
+    if (currentBtn) {
+      currentBtn.className = "state-btn px-space-sm py-1 rounded bg-primary text-on-primary font-label-small text-label-small transition-all shadow-sm";
+    }
+
+    // Modal resets
+    closeModalBuktiTransfer();
+    closeModalSukses();
+    hideToast();
+
+    // Elements
+    const viewMain = document.getElementById('view-main-content');
+    const viewError = document.getElementById('view-error-state');
+    const valSaldoBersih = document.getElementById('val-saldo-bersih');
+    const valSaldoTersedia = document.getElementById('val-saldo-tersedia');
+    const inputNominal = document.getElementById('input-nominal');
+    const alertErrorBox = document.getElementById('alert-error-box');
+    const alertErrorMsg = document.getElementById('alert-error-msg');
+    const alertEmptyBalance = document.getElementById('alert-empty-balance');
+    const btnSubmit = document.getElementById('btn-submit-pencairan');
+    const btnSubmitLabel = document.getElementById('btn-submit-label');
+    const cardRekeningAktif = document.getElementById('card-rekening-aktif');
+    const cardRekeningKosong = document.getElementById('card-rekening-kosong');
+    const checkRekening = document.getElementById('check-rekening-valid');
+
+    // Default visibilities
+    viewMain.classList.remove('hidden');
+    viewError.classList.add('hidden');
+    alertErrorBox.classList.add('hidden');
+    alertEmptyBalance.classList.add('hidden');
+    btnSubmit.disabled = false;
+    btnSubmit.classList.remove('opacity-50', 'cursor-not-allowed');
+    btnSubmitLabel.textContent = "Ajukan Pencairan";
+
+    if (state === 'A') {
+      // Default Normal
+      availableBalance = 840000;
+      hasBankAccount = true;
+      valSaldoBersih.textContent = "1.485.000";
+      valSaldoTersedia.textContent = "840.000";
+      inputNominal.value = "500.000";
+      cardRekeningAktif.classList.remove('hidden');
+      cardRekeningKosong.classList.add('hidden');
+      checkRekening.checked = true;
+      validateNominal();
+    } else if (state === 'B') {
+      // Saldo Kosong
+      availableBalance = 0;
+      hasBankAccount = true;
+      valSaldoBersih.textContent = "645.000";
+      valSaldoTersedia.textContent = "0";
+      inputNominal.value = "0";
+      cardRekeningAktif.classList.remove('hidden');
+      cardRekeningKosong.classList.add('hidden');
+      alertEmptyBalance.classList.remove('hidden');
+      btnSubmit.disabled = true;
+      btnSubmit.classList.add('opacity-50', 'cursor-not-allowed');
+    } else if (state === 'C') {
+      // Rekening Belum Ada
+      availableBalance = 840000;
+      hasBankAccount = false;
+      valSaldoBersih.textContent = "1.485.000";
+      valSaldoTersedia.textContent = "840.000";
+      cardRekeningAktif.classList.add('hidden');
+      cardRekeningKosong.classList.remove('hidden');
+      cardRekeningKosong.classList.add('flex');
+      alertErrorBox.classList.remove('hidden');
+      alertErrorMsg.textContent = "Rekening bank penerbit belum terdaftar. Silakan hubungkan rekening di profil terlebih dahulu.";
+      btnSubmit.disabled = true;
+      btnSubmit.classList.add('opacity-50', 'cursor-not-allowed');
+    } else if (state === 'D') {
+      // Validasi Error (Melebihi saldo)
+      availableBalance = 840000;
+      hasBankAccount = true;
+      cardRekeningAktif.classList.remove('hidden');
+      cardRekeningKosong.classList.add('hidden');
+      inputNominal.value = "1.500.000";
+      alertErrorBox.classList.remove('hidden');
+      alertErrorMsg.textContent = "Nominal pencairan (Rp 1.500.000) melebihi saldo tersedia (Rp 840.000).";
+      btnSubmit.disabled = true;
+      btnSubmit.classList.add('opacity-50', 'cursor-not-allowed');
+    } else if (state === 'E') {
+      // Sedang Mengajukan (Loading state)
+      availableBalance = 840000;
+      hasBankAccount = true;
+      cardRekeningAktif.classList.remove('hidden');
+      cardRekeningKosong.classList.add('hidden');
+      inputNominal.value = "500.000";
+      btnSubmit.disabled = true;
+      btnSubmit.classList.add('opacity-75');
+      btnSubmitLabel.textContent = "Mengirim Pengajuan...";
+      showToast("Mengirimkan permohonan ke server kliring IKAPI...", "sync");
+    } else if (state === 'F') {
+      // Sukses Konfirmasi
+      availableBalance = 840000;
+      hasBankAccount = true;
+      cardRekeningAktif.classList.remove('hidden');
+      cardRekeningKosong.classList.add('hidden');
+      document.getElementById('sukses-nominal-modal').textContent = "Rp " + inputNominal.value;
+      document.getElementById('modal-sukses-pengajuan').classList.remove('hidden');
+      document.getElementById('modal-sukses-pengajuan').classList.add('flex');
+    } else if (state === 'G') {
+      // Modal Bukti Transfer (Selesai)
+      availableBalance = 840000;
+      hasBankAccount = true;
+      openModalBuktiTransfer('WDR-2026-0038', '28 Oktober 2026', 'Rp 1.250.000', 'TRF-IKP-8829103');
+    } else if (state === 'H') {
+      // Bukti Dalam Proses
+      availableBalance = 840000;
+      hasBankAccount = true;
+      openDalamProsesToast();
+    } else if (state === 'I') {
+      // Gagal Memuat
+      viewMain.classList.add('hidden');
+      viewError.classList.remove('hidden');
+      viewError.classList.add('flex');
+    }
+  }
+
+  function validateNominal() {
+    if (currentState === 'B' || currentState === 'C' || currentState === 'I') return;
+
+    const input = document.getElementById('input-nominal');
+    const rawVal = input.value.replace(/\D/g, '');
+    const num = parseInt(rawVal, 10) || 0;
+    const alertErrorBox = document.getElementById('alert-error-box');
+    const alertErrorMsg = document.getElementById('alert-error-msg');
+    const btnSubmit = document.getElementById('btn-submit-pencairan');
+    const checkRekening = document.getElementById('check-rekening-valid');
+
+    // Reformat to Indonesian thousand separators
+    if (rawVal) {
+      input.value = new Intl.NumberFormat('id-ID').format(num);
+    }
+
+    if (!hasBankAccount) {
+      alertErrorBox.classList.remove('hidden');
+      alertErrorMsg.textContent = "Rekening bank penerbit belum terdaftar.";
+      btnSubmit.disabled = true;
+      btnSubmit.classList.add('opacity-50', 'cursor-not-allowed');
+      return;
+    }
+
+    if (num > availableBalance) {
+      alertErrorBox.classList.remove('hidden');
+      alertErrorMsg.textContent = "Nominal pencairan (Rp " + new Intl.NumberFormat('id-ID').format(num) + ") melebihi saldo tersedia (Rp " + new Intl.NumberFormat('id-ID').format(availableBalance) + ").";
+      btnSubmit.disabled = true;
+      btnSubmit.classList.add('opacity-50', 'cursor-not-allowed');
+    } else if (num < 100000) {
+      alertErrorBox.classList.remove('hidden');
+      alertErrorMsg.textContent = "Batas minimum pengajuan pencairan adalah Rp 100.000.";
+      btnSubmit.disabled = true;
+      btnSubmit.classList.add('opacity-50', 'cursor-not-allowed');
+    } else if (!checkRekening.checked) {
+      alertErrorBox.classList.remove('hidden');
+      alertErrorMsg.textContent = "Harap centang konfirmasi bahwa data rekening tujuan sudah benar.";
+      btnSubmit.disabled = true;
+      btnSubmit.classList.add('opacity-50', 'cursor-not-allowed');
+    } else {
+      alertErrorBox.classList.add('hidden');
+      btnSubmit.disabled = false;
+      btnSubmit.classList.remove('opacity-50', 'cursor-not-allowed');
+    }
+  }
+
+  function checkFormValidity() {
+    validateNominal();
+  }
+
+  function setNominalMaksimal() {
+    if (availableBalance <= 0) return;
+    document.getElementById('input-nominal').value = new Intl.NumberFormat('id-ID').format(availableBalance);
+    validateNominal();
+  }
+
+  function handlePengajuan(e) {
+    e.preventDefault();
+    if (!hasBankAccount) {
+      alert('Rekening bank belum terdaftar!');
+      return;
+    }
+    const input = document.getElementById('input-nominal');
+    const num = parseInt(input.value.replace(/\D/g, ''), 10) || 0;
+    if (num > availableBalance) {
+      setState('D');
+      return;
+    }
+    // Simulate submission
+    setState('E');
+    setTimeout(() => {
+      setState('F');
+    }, 900);
+  }
+
+  function openModalBuktiTransfer(noPengajuan, tgl, nominal, ref) {
+    document.getElementById('modal-bukti-subtitle').textContent = "No. Pengajuan: " + noPengajuan + " · Tanggal Transfer: " + tgl + " · Diunggah oleh: Administrator IKAPI Jawa Barat";
+    document.getElementById('slip-tanggal').textContent = tgl + " · 14:22 WIB";
+    document.getElementById('slip-ref').textContent = ref;
+    document.getElementById('slip-nominal').textContent = nominal;
+    const modal = document.getElementById('modal-bukti-transfer');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeModalBuktiTransfer() {
+    const modal = document.getElementById('modal-bukti-transfer');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  function closeModalSukses() {
+    const modal = document.getElementById('modal-sukses-pengajuan');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  function openDalamProsesToast() {
+    showToast("Pencairan dana masih dalam tahap verifikasi antrean transfer. Bukti transfer belum tersedia.", "schedule");
+  }
+
+  function showToast(msg, icon) {
+    const toast = document.getElementById('toast-notification');
+    const toastText = document.getElementById('toast-text');
+    const toastIcon = document.getElementById('toast-icon');
+    toastText.textContent = msg;
+    if (icon) toastIcon.textContent = icon;
+    toast.classList.remove('hidden');
+    toast.classList.add('flex');
+    setTimeout(() => {
+      hideToast();
+    }, 4500);
+  }
+
+  function hideToast() {
+    const toast = document.getElementById('toast-notification');
+    toast.classList.add('hidden');
+    toast.classList.remove('flex');
+  }
+
+  // Keyboard escape listeners for modals
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      closeModalBuktiTransfer();
+      closeModalSukses();
+      hideToast();
+    }
+  });
+</script></div></main></div>
+
+</body></html>

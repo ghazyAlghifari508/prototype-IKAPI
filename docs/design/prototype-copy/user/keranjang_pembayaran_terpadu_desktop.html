@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <title>Keranjang Belanja — IKAPI Store Jawa Barat</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overflow-x: clip;
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    .scrollbar-none::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-none {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-error": "#ffffff",
+            "secondary-fixed": "#ffd9e3",
+            "surface-sky": "#E0F6FC",
+            "feedback-error": "#B42318",
+            "surface-tint": "#4c48dc",
+            "on-surface": "#1b1b25",
+            "on-secondary": "#ffffff",
+            "primary-container": "#5956e9",
+            "primary-fixed-dim": "#c2c1ff",
+            "tertiary": "#745b00",
+            "outline-variant": "#c7c4d7",
+            "on-primary": "#ffffff",
+            "on-error-container": "#93000a",
+            "surface-lilac": "#E5E4FF",
+            "tertiary-fixed": "#ffe08d",
+            "inverse-surface": "#302f3a",
+            "secondary": "#815060",
+            "on-primary-fixed": "#0c006a",
+            "on-tertiary-container": "#4f3d00",
+            "error": "#ba1a1a",
+            "on-secondary-container": "#7a495a",
+            "surface-bright": "#fcf8ff",
+            "surface-dim": "#dbd8e7",
+            "on-tertiary-fixed": "#241a00",
+            "primary": "#3f3ad0",
+            "ink-body": "#191923",
+            "inverse-on-surface": "#f2effe",
+            "on-background": "#1b1b25",
+            "surface-variant": "#e3e1ef",
+            "ink-muted": "#555665",
+            "outline": "#777586",
+            "surface-container-high": "#e9e6f5",
+            "on-secondary-fixed-variant": "#663949",
+            "secondary-fixed-dim": "#f4b5c8",
+            "border-bold": "#CFD0DD",
+            "background": "#fcf8ff",
+            "on-secondary-fixed": "#330e1d",
+            "inverse-primary": "#c2c1ff",
+            "error-container": "#ffdad6",
+            "surface-container-highest": "#e3e1ef",
+            "tertiary-fixed-dim": "#ecc23f",
+            "surface": "#fcf8ff",
+            "surface-soft": "#F8F7FF",
+            "on-primary-container": "#eeeaff",
+            "inverse-deep": "#24233D",
+            "surface-cream": "#FFF1E3",
+            "surface-container": "#efecfb",
+            "surface-paper": "#FFF0E3",
+            "tertiary-container": "#cea623",
+            "on-tertiary-fixed-variant": "#584400",
+            "on-primary-fixed-variant": "#3229c4",
+            "surface-container-low": "#f5f2ff",
+            "on-surface-variant": "#464555",
+            "surface-container-lowest": "#ffffff",
+            "border-subtle": "#E7E7EF",
+            "secondary-container": "#fdbed1",
+            "primary-fixed": "#e2dfff",
+            "on-tertiary": "#ffffff"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            "2xl": "1rem",
+            full: "9999px"
+          },
+          spacing: {
+            "margin": "2.5rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "space-2xl": "3rem",
+            "space-3xl": "4.5rem",
+            "gutter": "1.5rem"
+          },
+          fontFamily: {
+            "body-base": ["Plus Jakarta Sans", "sans-serif"],
+            "body-small": ["Plus Jakarta Sans", "sans-serif"],
+            "label": ["Plus Jakarta Sans", "sans-serif"],
+            "label-small": ["Plus Jakarta Sans", "sans-serif"],
+            "title-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg": ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-body-base text-ink-body antialiased">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-surface-container-lowest shadow-[0_1px_8px_rgba(25,25,35,0.06)]">
+    <div class="h-28 max-w-[1240px] mx-auto px-4 md:px-margin flex flex-col justify-between">
+      <div class="h-16 flex items-center justify-between gap-2 sm:gap-gutter">
+        <div class="flex items-center gap-space-md shrink-0">
+          <a href="beranda_desktop.html" data-path="beranda" class="flex items-center">
+            <img alt="Logo IKAPI Jawa Barat" class="h-7 sm:h-8 w-auto object-contain" src="../../assets/logo-ikapi-jabar.png">
+          </a>
+        </div>
+        <div class="flex-1 max-w-xl mx-2 hidden sm:flex items-center gap-space-xs">
+          <div class="relative w-full">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+            <input class="w-full h-10 pl-10 pr-space-md rounded-lg bg-surface-container-lowest font-body-small text-[14px] text-ink-body placeholder:text-outline outline-none ring-1 ring-border-bold focus:ring-2 focus:ring-primary transition-all" placeholder="Cari judul, penulis, atau topik buku..." type="text">
+          </div>
+        </div>
+        <div class="flex items-center gap-3 sm:gap-space-lg shrink-0">
+          <a class="relative flex items-center text-primary transition-colors" data-path="keranjang" href="keranjang_pembayaran_terpadu_desktop.html" aria-label="Keranjang Belanja">
+            <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+            <span id="header-cart-badge" class="absolute -top-1.5 -right-2 min-w-[18px] h-[18px] px-1 rounded-full bg-primary-container text-on-primary font-label-small text-[11px] font-bold flex items-center justify-center">2</span>
+          </a>
+          <div class="h-6 w-px bg-border-subtle"></div>
+          <a class="hidden sm:flex h-10 px-space-lg rounded-lg bg-primary text-on-primary font-label text-[14px] font-semibold items-center gap-space-xs hover:bg-surface-tint transition-colors" data-path="login" href="masuk_login_desktop.html">
+            <span>Masuk / Akun</span>
+          </a>
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary">
+            <span class="material-symbols-outlined text-[18px]">person</span>
+          </div>
+        </div>
+      </div>
+      <nav class="h-12 flex items-center gap-4 sm:gap-space-xl overflow-x-auto scrollbar-none max-w-full">
+        <a class="h-full flex items-center font-label text-[14px] text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="beranda" href="beranda_desktop.html">Beranda</a>
+        <a class="h-full flex items-center font-label text-[14px] text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a>
+        <a class="h-full flex items-center font-label text-[14px] text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a>
+        <a class="h-full flex items-center font-label text-[14px] text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="kabar-artikel" href="agenda_berita_literasi_desktop.html">Kabar &amp; Artikel</a>
+        <a class="h-full flex items-center font-label text-[14px] text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Komunitas Penerbit</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="w-full pt-28 bg-surface min-h-[calc(100vh-16rem)]">
+    <div class="flex flex-col w-full">
+      <div class="max-w-[1240px] mx-auto px-4 md:px-margin pt-space-md pb-space-3xl w-full">
+        
+        <!-- Breadcrumb Hierarchy -->
+        <nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-[13px] font-body-small text-ink-muted mb-space-md">
+          <a class="hover:text-primary transition-colors" data-path="beranda" href="beranda_desktop.html">Beranda</a>
+          <span class="text-outline-variant">/</span>
+          <span class="text-ink-body font-semibold">Keranjang Belanja</span>
+        </nav>
+
+        <!-- Page Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-lg border-b border-border-subtle mb-space-xl">
+          <div class="flex flex-col gap-1">
+            <h1 class="font-headline-md md:font-headline-lg text-[28px] md:text-[34px] font-bold text-ink-body tracking-tight">
+              Keranjang Belanja
+            </h1>
+            <p id="cart-item-count" class="font-body-base text-[15px] text-ink-muted">
+              2 buku
+            </p>
+          </div>
+        </div>
+
+        <!-- VIEW 1: ACTIVE FILLED CART (Grid Layout) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start" id="cart-filled-view">
+          
+          <!-- LEFT COLUMN: Book List (8 Cols) -->
+          <div class="lg:col-span-8 flex flex-col gap-space-md">
+            <h2 class="font-title-md text-[18px] font-bold text-ink-body mb-space-xs">
+              Buku di Keranjang
+            </h2>
+
+            <!-- BOOK ITEM 1 -->
+            <article class="cart-item bg-surface-container-lowest rounded-xl p-space-md border border-border-subtle shadow-xs transition-all" id="cart-item-1" data-id="1" data-price="45000" data-title="Laskar Aksara Pasundan" data-cover="../../assets/covers/laskar-aksara-pasundan.jpg">
+              <div class="flex gap-space-md sm:gap-space-lg items-center">
+                <!-- Cover -->
+                <div class="w-20 sm:w-24 aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-high border border-border-subtle shrink-0 shadow-xs">
+                  <img src="../../assets/covers/laskar-aksara-pasundan.jpg" alt="Sampul Laskar Aksara Pasundan" class="w-full h-full object-cover">
+                </div>
+                <!-- Details -->
+                <div class="flex-1 min-w-0 flex flex-col justify-between py-1">
+                  <div>
+                    <h3 class="font-label text-[16px] font-bold text-ink-body truncate">
+                      Laskar Aksara Pasundan
+                    </h3>
+                    <p class="font-body-small text-[13px] text-ink-muted mt-0.5">
+                      Ayi R. Kurnia
+                    </p>
+                  </div>
+                  <div class="mt-3 flex items-center justify-between">
+                    <span class="font-title-md text-[17px] font-bold text-ink-body">
+                      Rp 45.000
+                    </span>
+                    <div class="flex items-center gap-1">
+                      <button type="button" aria-label="Pindahkan ke Favorit" class="btn-fav w-8 h-8 rounded-lg hover:bg-surface-soft text-ink-muted hover:text-primary transition-colors flex items-center justify-center" onclick="moveFavorite(1)">
+                        <span class="material-symbols-outlined text-[20px]">favorite_border</span>
+                      </button>
+                      <button type="button" aria-label="Hapus dari Keranjang" class="h-8 px-2.5 rounded-lg text-feedback-error hover:bg-error-container/40 font-label text-[13px] font-semibold flex items-center gap-1 transition-colors" onclick="removeCartItem(1)">
+                        <span class="material-symbols-outlined text-[18px]">delete</span>
+                        <span>Hapus</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- BOOK ITEM 2 -->
+            <article class="cart-item bg-surface-container-lowest rounded-xl p-space-md border border-border-subtle shadow-xs transition-all" id="cart-item-2" data-id="2" data-price="58000" data-title="Pendidikan Karakter Sunda" data-cover="https://lh3.googleusercontent.com/aida-public/AB6AXuDFf19AO9EVo6HybkUXmcGuWzMG3MhTKDnjjR9axwV2wBLqpMmsxQNHrkIti_kOfkHy9N6ITdxLpsj1C-Zq9WCrBwUMRPsRpFVU5koCQwuw_OwNxDIl4dDAgQ4NbrFvrcpzrkudcxT1AYpqmf40YA3uUi7xAvB7S0quwMdWe2vRhkFpLaZZAGigKMHz7u243UCPu9Jf-Jqu9M6NUkiakePkvfADeHda3mRK0290hbZO">
+              <div class="flex gap-space-md sm:gap-space-lg items-center">
+                <!-- Cover -->
+                <div class="w-20 sm:w-24 aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-high border border-border-subtle shrink-0 shadow-xs">
+                  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFf19AO9EVo6HybkUXmcGuWzMG3MhTKDnjjR9axwV2wBLqpMmsxQNHrkIti_kOfkHy9N6ITdxLpsj1C-Zq9WCrBwUMRPsRpFVU5koCQwuw_OwNxDIl4dDAgQ4NbrFvrcpzrkudcxT1AYpqmf40YA3uUi7xAvB7S0quwMdWe2vRhkFpLaZZAGigKMHz7u243UCPu9Jf-Jqu9M6NUkiakePkvfADeHda3mRK0290hbZO" alt="Sampul Pendidikan Karakter Sunda" class="w-full h-full object-cover">
+                </div>
+                <!-- Details -->
+                <div class="flex-1 min-w-0 flex flex-col justify-between py-1">
+                  <div>
+                    <h3 class="font-label text-[16px] font-bold text-ink-body truncate">
+                      Pendidikan Karakter Sunda
+                    </h3>
+                    <p class="font-body-small text-[13px] text-ink-muted mt-0.5">
+                      Dr. Cecep Hidayat
+                    </p>
+                  </div>
+                  <div class="mt-3 flex items-center justify-between">
+                    <span class="font-title-md text-[17px] font-bold text-ink-body">
+                      Rp 58.000
+                    </span>
+                    <div class="flex items-center gap-1">
+                      <button type="button" aria-label="Pindahkan ke Favorit" class="btn-fav w-8 h-8 rounded-lg hover:bg-surface-soft text-ink-muted hover:text-primary transition-colors flex items-center justify-center" onclick="moveFavorite(2)">
+                        <span class="material-symbols-outlined text-[20px]">favorite_border</span>
+                      </button>
+                      <button type="button" aria-label="Hapus dari Keranjang" class="h-8 px-2.5 rounded-lg text-feedback-error hover:bg-error-container/40 font-label text-[13px] font-semibold flex items-center gap-1 transition-colors" onclick="removeCartItem(2)">
+                        <span class="material-symbols-outlined text-[18px]">delete</span>
+                        <span>Hapus</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- RIGHT COLUMN: Order Summary (4 Cols, Sticky on Desktop) -->
+          <aside class="lg:col-span-4 lg:sticky lg:top-32 w-full">
+            <div class="bg-surface-container-lowest rounded-xl p-space-lg border border-border-subtle shadow-sm flex flex-col gap-space-md">
+              <h2 class="font-title-md text-[18px] font-bold text-ink-body pb-space-xs border-b border-border-subtle">
+                Ringkasan Pesanan
+              </h2>
+
+              <div class="flex flex-col gap-2.5 text-[14px]">
+                <div class="flex items-center justify-between">
+                  <span class="text-ink-muted">Subtotal</span>
+                  <span id="summary-subtotal" class="font-semibold text-ink-body">Rp 103.000</span>
+                </div>
+                <div class="flex items-center justify-between text-ink-muted">
+                  <span>Biaya Layanan</span>
+                  <span class="text-primary font-medium">Gratis</span>
+                </div>
+              </div>
+
+              <div class="pt-space-sm border-t border-border-subtle flex items-baseline justify-between">
+                <span class="font-label text-[15px] font-bold text-ink-body">Total Pembayaran</span>
+                <span id="summary-total" class="font-headline-md text-[24px] font-bold text-primary-container leading-none">
+                  Rp 103.000
+                </span>
+              </div>
+
+              <button id="btn-checkout" type="button" class="w-full h-12 rounded-xl bg-primary-container hover:bg-surface-tint text-on-primary font-label text-[15px] font-bold flex items-center justify-center gap-2 transition-all shadow-sm active:scale-[0.99] cursor-pointer" onclick="openOrderModal()">
+                <span>Lanjut ke Pembayaran</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </button>
+            </div>
+          </aside>
+
+        </div>
+
+        <!-- VIEW 2: EMPTY CART STATE (Initially Hidden) -->
+        <div class="w-full max-w-xl mx-auto py-space-2xl hidden" id="cart-empty-view">
+          <div class="bg-surface-container-lowest rounded-2xl p-8 sm:p-12 border border-border-subtle shadow-sm text-center flex flex-col items-center gap-space-md">
+            <div class="w-48 sm:w-56 aspect-square flex items-center justify-center">
+              <img src="../../assets/ilustration/cart_empty_state.svg" alt="Keranjang Belanja Kosong" class="w-full h-full object-contain">
+            </div>
+            <div class="space-y-1">
+              <h2 class="font-headline-md text-[22px] sm:text-[24px] font-bold text-ink-body tracking-tight">
+                Keranjang Belanja Kosong
+              </h2>
+              <p class="font-body-base text-[14px] sm:text-[15px] text-ink-muted">
+                Belum ada buku di keranjang Anda.
+              </p>
+            </div>
+            <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="mt-2 inline-flex items-center justify-center gap-2 h-11 px-6 rounded-xl bg-primary-container hover:bg-surface-tint text-on-primary font-label text-[14px] font-semibold transition-colors shadow-xs">
+              <span class="material-symbols-outlined text-[18px]">explore</span>
+              <span>Lihat Katalog Buku</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ============================================================== -->
+  <!-- 1. MODAL DIALOG: KONFIRMASI PESANAN -->
+  <!-- ============================================================== -->
+  <div id="modal-order-confirm" role="dialog" aria-modal="true" aria-labelledby="modal-confirm-title" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs hidden items-center justify-center p-4">
+    <div class="bg-surface-container-lowest w-full max-w-xl rounded-2xl shadow-xl overflow-hidden border border-border-subtle flex flex-col max-h-[85vh]">
+      
+      <!-- Modal Header -->
+      <div class="p-space-lg border-b border-border-subtle flex items-center justify-between bg-surface-soft">
+        <div>
+          <h3 id="modal-confirm-title" class="font-headline-md text-[18px] font-bold text-ink-body">
+            Konfirmasi Pesanan
+          </h3>
+          <p class="font-body-small text-[13px] text-ink-muted mt-0.5">
+            Periksa pesanan sebelum melanjutkan pembayaran.
+          </p>
+        </div>
+        <button type="button" aria-label="Tutup Konfirmasi" class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-ink-muted hover:text-ink-body flex items-center justify-center transition-colors" onclick="closeOrderModal()">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-space-lg overflow-y-auto space-y-space-md flex-1">
+        
+        <!-- Buyer Information -->
+        <div class="bg-surface-soft rounded-xl p-space-md border border-border-subtle text-[13px] space-y-1">
+          <span class="font-label text-[12px] uppercase tracking-wider text-ink-muted font-bold block mb-1">
+            Informasi Pembeli
+          </span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div>
+              <span class="text-ink-muted block text-[12px]">Nama Pembeli</span>
+              <span class="font-semibold text-ink-body">Ahmad Hidayat</span>
+            </div>
+            <div>
+              <span class="text-ink-muted block text-[12px]">Email Akun</span>
+              <span class="font-semibold text-ink-body">ahmad.hidayat@literasi.id</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book Items in Modal -->
+        <div class="space-y-1.5">
+          <span class="font-label text-[12px] uppercase tracking-wider text-ink-muted font-bold block mb-1">
+            Daftar Buku
+          </span>
+          <div id="modal-book-list" class="divide-y divide-border-subtle rounded-xl border border-border-subtle bg-surface-container-lowest overflow-hidden">
+            <!-- Dynamically populated in JS -->
+          </div>
+        </div>
+
+        <!-- Total Price Recap -->
+        <div class="p-space-md rounded-xl bg-surface-soft border border-border-subtle flex items-center justify-between">
+          <span class="font-label text-[14px] font-bold text-ink-body">Total Pembayaran</span>
+          <span id="modal-total-display" class="font-headline-md text-[20px] font-bold text-primary-container">
+            Rp 103.000
+          </span>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer Actions -->
+      <div class="p-space-md border-t border-border-subtle flex items-center justify-end gap-space-sm bg-surface-soft">
+        <button type="button" class="h-10 px-4 rounded-xl border border-border-bold bg-surface-container-lowest hover:bg-surface-soft text-ink-body font-label text-[14px] font-semibold transition-colors" onclick="closeOrderModal()">
+          Kembali
+        </button>
+        <button id="btn-confirm-pay" type="button" class="h-10 px-5 rounded-xl bg-primary-container hover:bg-surface-tint text-on-primary font-label text-[14px] font-bold flex items-center gap-1.5 transition-colors shadow-xs" onclick="triggerMidtransPayment()">
+          <span>Lanjut ke Pembayaran</span>
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- 2. MIDTRANS SNAP PORTAL & STATUS PREVIEW MODAL -->
+  <!-- ============================================================== -->
+  <div id="snap-overlay" role="dialog" aria-modal="true" class="fixed inset-0 z-50 bg-black/65 backdrop-blur-xs hidden items-center justify-center p-4">
+    <div id="snap-modal-box" class="bg-surface-container-lowest w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden border border-border-subtle flex flex-col max-h-[90vh]">
+      
+      <!-- Snap Top Bar -->
+      <div class="bg-inverse-surface text-inverse-on-surface px-space-md py-3 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="text-[11px] font-extrabold text-[#00c8b3] bg-[#00c8b3]/15 px-2 py-0.5 rounded tracking-wider">MIDTRANS SNAP</span>
+          <span class="text-[12px] text-outline-variant font-medium">Portal Pembayaran</span>
+        </div>
+        <button type="button" aria-label="Tutup Pop-up" class="w-7 h-7 rounded-lg text-outline-variant hover:text-on-primary hover:bg-surface-container-high/30 flex items-center justify-center transition-colors" onclick="closeSnapOverlay()">
+          <span class="material-symbols-outlined text-[18px]">close</span>
+        </button>
+      </div>
+
+      <!-- Modal Body Container -->
+      <div class="p-space-lg overflow-y-auto flex-1">
+        
+        <!-- SUBVIEW 1: PAYMENT METHOD SELECTOR -->
+        <div id="snap-selection-view" class="space-y-space-md">
+          <div class="flex items-center justify-between pb-space-sm border-b border-border-subtle">
+            <div>
+              <h4 class="font-title-md text-[16px] font-bold text-ink-body">IKAPI Store Jawa Barat</h4>
+              <span class="text-[12px] text-ink-muted">Order ID: #IKP-2025-08942</span>
+            </div>
+            <div class="text-right">
+              <span class="text-[11px] text-ink-muted block">Total Tagihan</span>
+              <span id="snap-total-display" class="font-title-md text-[17px] font-extrabold text-primary-container">Rp 103.000</span>
+            </div>
+          </div>
+
+          <!-- Channel Selection -->
+          <div class="space-y-2">
+            <span class="font-label text-[12px] font-bold text-ink-muted uppercase tracking-wider block">
+              Pilih Metode Pembayaran:
+            </span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <!-- QRIS -->
+              <button type="button" class="p-3 rounded-xl border border-border-subtle hover:border-primary hover:bg-surface-soft transition-all text-left flex items-center gap-3 group" onclick="simulatePaymentFlow('qris')">
+                <div class="w-10 h-10 rounded-lg bg-surface-soft group-hover:bg-primary-fixed flex items-center justify-center shrink-0 transition-colors">
+                  <span class="material-symbols-outlined text-primary text-[22px]">qr_code_2</span>
+                </div>
+                <div class="min-w-0">
+                  <strong class="font-label text-[13px] text-ink-body block truncate">QRIS</strong>
+                  <span class="text-[11px] text-ink-muted block truncate">GoPay, OVO, ShopeePay</span>
+                </div>
+              </button>
+
+              <!-- BCA Virtual Account -->
+              <button type="button" class="p-3 rounded-xl border border-border-subtle hover:border-primary hover:bg-surface-soft transition-all text-left flex items-center gap-3 group" onclick="simulatePaymentFlow('bca')">
+                <div class="w-10 h-10 rounded-lg bg-surface-soft group-hover:bg-primary-fixed flex items-center justify-center shrink-0 transition-colors">
+                  <span class="material-symbols-outlined text-primary text-[22px]">account_balance</span>
+                </div>
+                <div class="min-w-0">
+                  <strong class="font-label text-[13px] text-ink-body block truncate">Virtual Account BCA</strong>
+                  <span class="text-[11px] text-ink-muted block truncate">Verifikasi Otomatis</span>
+                </div>
+              </button>
+
+              <!-- Mandiri Bill -->
+              <button type="button" class="p-3 rounded-xl border border-border-subtle hover:border-primary hover:bg-surface-soft transition-all text-left flex items-center gap-3 group" onclick="simulatePaymentFlow('mandiri')">
+                <div class="w-10 h-10 rounded-lg bg-surface-soft group-hover:bg-primary-fixed flex items-center justify-center shrink-0 transition-colors">
+                  <span class="material-symbols-outlined text-primary text-[22px]">credit_card</span>
+                </div>
+                <div class="min-w-0">
+                  <strong class="font-label text-[13px] text-ink-body block truncate">Mandiri Bill</strong>
+                  <span class="text-[11px] text-ink-muted block truncate">Livin' by Mandiri &amp; ATM</span>
+                </div>
+              </button>
+
+              <!-- Bank BJB -->
+              <button type="button" class="p-3 rounded-xl border border-border-subtle hover:border-primary hover:bg-surface-soft transition-all text-left flex items-center gap-3 group" onclick="simulatePaymentFlow('bjb')">
+                <div class="w-10 h-10 rounded-lg bg-surface-soft group-hover:bg-primary-fixed flex items-center justify-center shrink-0 transition-colors">
+                  <span class="material-symbols-outlined text-primary text-[22px]">corporate_fare</span>
+                </div>
+                <div class="min-w-0">
+                  <strong class="font-label text-[13px] text-ink-body block truncate">Bank BJB Digicash</strong>
+                  <span class="text-[11px] text-ink-muted block truncate">Kemitraan Pemprov Jabar</span>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Status Simulator Controller Bar for QA/Demo -->
+          <div class="pt-space-sm border-t border-border-subtle space-y-1.5">
+            <span class="text-[11px] font-bold text-ink-muted uppercase tracking-wider block">
+              Pratinjau Status Pembayaran (Demo):
+            </span>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
+              <button type="button" class="py-1.5 px-2 text-center text-[12px] font-bold rounded-lg bg-emerald-100 text-emerald-800 hover:bg-emerald-200 transition-colors" onclick="renderStatusView('berhasil')">
+                ✓ Berhasil
+              </button>
+              <button type="button" class="py-1.5 px-2 text-center text-[12px] font-bold rounded-lg bg-amber-100 text-amber-800 hover:bg-amber-200 transition-colors" onclick="renderStatusView('menunggu')">
+                ⏳ Menunggu
+              </button>
+              <button type="button" class="py-1.5 px-2 text-center text-[12px] font-bold rounded-lg bg-rose-100 text-rose-800 hover:bg-rose-200 transition-colors" onclick="renderStatusView('gagal')">
+                ✕ Gagal
+              </button>
+              <button type="button" class="py-1.5 px-2 text-center text-[12px] font-bold rounded-lg bg-surface-container-high text-ink-body hover:bg-surface-variant transition-colors" onclick="renderStatusView('kedaluwarsa')">
+                ⏰ Kedaluwarsa
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUBVIEW 2: STATUS BERHASIL -->
+        <div id="status-berhasil" class="hidden flex flex-col items-center text-center gap-space-md py-space-sm">
+          <div class="w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shadow-xs">
+            <span class="material-symbols-outlined text-[36px]">check_circle</span>
+          </div>
+          <div class="space-y-1">
+            <h4 class="font-headline-md text-[20px] font-bold text-ink-body">Pembayaran Berhasil</h4>
+            <p class="font-body-small text-[13px] text-ink-muted max-w-sm">
+              Pembayaran telah dikonfirmasi. Buku yang dibeli sudah tersedia di Perpustakaan Saya.
+            </p>
+          </div>
+          <div class="w-full bg-surface-soft p-space-md rounded-xl text-left border border-border-subtle text-[13px] space-y-1.5">
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Nomor Pesanan</span>
+              <span class="font-mono font-semibold text-ink-body">#IKP-2025-08942</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Total Transaksi</span>
+              <span class="font-bold text-primary-container" id="status-berhasil-total">Rp 103.000</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Status Pembayaran</span>
+              <span class="font-semibold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded text-[11px]">Lunas</span>
+            </div>
+          </div>
+          <div class="w-full flex flex-col gap-2 pt-1">
+            <a href="perpustakaan_saya_desktop.html" data-path="perpustakaan-saya" class="w-full h-11 rounded-xl bg-primary-container hover:bg-surface-tint text-on-primary font-label text-[14px] font-bold flex items-center justify-center gap-2 transition-all shadow-xs">
+              <span class="material-symbols-outlined text-[18px]">local_library</span>
+              <span>Buka Perpustakaan Saya</span>
+            </a>
+            <button type="button" class="w-full h-10 rounded-xl border border-border-bold bg-surface-container-lowest hover:bg-surface-soft text-ink-body font-label text-[13px] font-semibold transition-colors" onclick="backToSnapSelector()">
+              Kembali ke Pilihan Metode
+            </button>
+          </div>
+        </div>
+
+        <!-- SUBVIEW 3: STATUS MENUNGGU -->
+        <div id="status-menunggu" class="hidden flex flex-col items-center text-center gap-space-md py-space-sm">
+          <div class="w-16 h-16 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center shadow-xs">
+            <span class="material-symbols-outlined text-[36px]">schedule</span>
+          </div>
+          <div class="space-y-1">
+            <h4 class="font-headline-md text-[20px] font-bold text-ink-body">Menunggu Pembayaran</h4>
+            <p class="font-body-small text-[13px] text-ink-muted max-w-sm">
+              Selesaikan pembayaran sebelum batas waktu berakhir.
+            </p>
+          </div>
+          <div class="w-full bg-amber-50/60 p-space-md rounded-xl border border-amber-200 text-left text-[13px] space-y-1.5">
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Nomor Pesanan</span>
+              <span class="font-mono font-semibold text-ink-body">#IKP-2025-08942</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Total Pembayaran</span>
+              <span class="font-bold text-primary-container" id="status-menunggu-total">Rp 103.000</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Batas Pembayaran</span>
+              <span class="font-bold text-amber-800">24 Jam</span>
+            </div>
+          </div>
+          <div class="w-full flex flex-col gap-2 pt-1">
+            <button type="button" class="w-full h-11 rounded-xl bg-primary-container hover:bg-surface-tint text-on-primary font-label text-[14px] font-bold flex items-center justify-center gap-2 transition-all shadow-xs" onclick="checkPaymentStatus()">
+              <span class="material-symbols-outlined text-[18px]">sync</span>
+              <span>Cek Status Pembayaran</span>
+            </button>
+            <button type="button" class="w-full h-10 rounded-xl border border-border-bold bg-surface-container-lowest hover:bg-surface-soft text-ink-body font-label text-[13px] font-semibold transition-colors" onclick="backToSnapSelector()">
+              Kembali ke Pilihan Metode
+            </button>
+          </div>
+        </div>
+
+        <!-- SUBVIEW 4: STATUS GAGAL -->
+        <div id="status-gagal" class="hidden flex flex-col items-center text-center gap-space-md py-space-sm">
+          <div class="w-16 h-16 rounded-full bg-rose-50 text-feedback-error flex items-center justify-center shadow-xs">
+            <span class="material-symbols-outlined text-[36px]">error</span>
+          </div>
+          <div class="space-y-1">
+            <h4 class="font-headline-md text-[20px] font-bold text-ink-body">Pembayaran Gagal</h4>
+            <p class="font-body-small text-[13px] text-ink-muted max-w-sm">
+              Pembayaran tidak berhasil diproses. Silakan coba lagi dengan metode lain.
+            </p>
+          </div>
+          <div class="w-full bg-surface-soft p-space-md rounded-xl border border-border-subtle text-left text-[13px] space-y-1.5">
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Nomor Pesanan</span>
+              <span class="font-mono font-semibold text-ink-body">#IKP-2025-08942</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Status</span>
+              <span class="font-semibold text-feedback-error">Gagal</span>
+            </div>
+          </div>
+          <div class="w-full flex flex-col gap-2 pt-1">
+            <button type="button" class="w-full h-11 rounded-xl bg-primary-container hover:bg-surface-tint text-on-primary font-label text-[14px] font-bold flex items-center justify-center gap-2 transition-all shadow-xs" onclick="backToSnapSelector()">
+              <span class="material-symbols-outlined text-[18px]">replay</span>
+              <span>Coba Bayar Lagi</span>
+            </button>
+            <button type="button" class="w-full h-10 rounded-xl border border-border-bold bg-surface-container-lowest hover:bg-surface-soft text-ink-body font-label text-[13px] font-semibold transition-colors" onclick="closeSnapOverlay()">
+              Tutup
+            </button>
+          </div>
+        </div>
+
+        <!-- SUBVIEW 5: STATUS KEDALUWARSA -->
+        <div id="status-kedaluwarsa" class="hidden flex flex-col items-center text-center gap-space-md py-space-sm">
+          <div class="w-16 h-16 rounded-full bg-surface-container text-ink-muted flex items-center justify-center shadow-xs">
+            <span class="material-symbols-outlined text-[36px]">timer_off</span>
+          </div>
+          <div class="space-y-1">
+            <h4 class="font-headline-md text-[20px] font-bold text-ink-body">Pembayaran Kedaluwarsa</h4>
+            <p class="font-body-small text-[13px] text-ink-muted max-w-sm">
+              Waktu pembayaran untuk pesanan ini telah berakhir.
+            </p>
+          </div>
+          <div class="w-full bg-surface-soft p-space-md rounded-xl border border-border-subtle text-left text-[13px] space-y-1.5">
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Nomor Pesanan</span>
+              <span class="font-mono font-semibold text-ink-body">#IKP-2025-08942</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Status</span>
+              <span class="font-semibold text-ink-muted">Kedaluwarsa</span>
+            </div>
+          </div>
+          <div class="w-full flex flex-col gap-2 pt-1">
+            <button type="button" class="w-full h-11 rounded-xl bg-primary-container hover:bg-surface-tint text-on-primary font-label text-[14px] font-bold flex items-center justify-center gap-2 transition-all shadow-xs" onclick="closeSnapOverlay()">
+              <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+              <span>Kembali ke Keranjang</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="cart-toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2 px-4 py-3 rounded-xl bg-ink-body text-surface shadow-lg text-[14px] font-label font-medium">
+    <span id="toast-icon" class="material-symbols-outlined text-primary-fixed text-[20px]">check_circle</span>
+    <span id="toast-msg">Item berhasil diperbarui</span>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-low text-ink-body pt-space-2xl pb-space-xl border-t border-border-subtle">
+    <div class="max-w-[1240px] mx-auto px-4 md:px-margin">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter mb-space-2xl">
+        <!-- Kolom 1 -->
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-title-md text-[16px] text-ink-body font-bold">Jelajahi</span>
+          <ul class="flex flex-col gap-2 font-body-small text-[14px] text-ink-muted">
+            <li><a class="hover:text-primary transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="kategori" href="katalog_buku_desktop.html">Kategori</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Buku Terbaru</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Buku Terlaris</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 2 -->
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-title-md text-[16px] text-ink-body font-bold">Informasi Pembelian</span>
+          <ul class="flex flex-col gap-2 font-body-small text-[14px] text-ink-muted">
+            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Cara Pembelian</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Metode Pembayaran</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Panduan Web Reader</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Bantuan &amp; FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3 -->
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-title-md text-[16px] text-ink-body font-bold">Tentang IKAPI</span>
+          <ul class="flex flex-col gap-2 font-body-small text-[14px] text-ink-muted">
+            <li><a class="hover:text-primary transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Tentang Kami</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Anggota Penerbit</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Kemitraan Perpustakaan</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Hubungi Kami</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 4 -->
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-title-md text-[16px] text-ink-body font-bold">Lainnya</span>
+          <ul class="flex flex-col gap-2 font-body-small text-[14px] text-ink-muted">
+            <li><a class="hover:text-primary transition-colors" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="kabar-artikel" href="agenda_berita_literasi_desktop.html">Kabar &amp; Artikel</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Syarat &amp; Ketentuan</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Kebijakan Privasi</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-space-lg border-t border-border-subtle flex flex-col md:flex-row items-center justify-between gap-space-md text-[13px] font-body-small text-ink-muted">
+        <p>© 2026 IKAPI Jawa Barat. Seluruh hak cipta dilindungi undang-undang.</p>
+        <div class="flex flex-wrap items-center gap-3 sm:gap-space-lg">
+          <span class="text-ink-body font-semibold">Media Sosial:</span>
+          <a href="#" class="hover:text-primary transition-colors" aria-label="Instagram IKAPI Jabar">Instagram</a>
+          <a href="#" class="hover:text-primary transition-colors" aria-label="YouTube IKAPI Jabar">YouTube</a>
+          <a href="#" class="hover:text-primary transition-colors" aria-label="Facebook IKAPI Jabar">Facebook</a>
+          <a href="#" class="hover:text-primary transition-colors" aria-label="X Twitter IKAPI Jabar">X</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT LOGIC -->
+  <script>
+    let currentCartTotal = 103000;
+    let toastTimer = null;
+
+    function showToast(message, icon = 'check_circle') {
+      const toast = document.getElementById('cart-toast');
+      const toastMsg = document.getElementById('toast-msg');
+      const toastIcon = document.getElementById('toast-icon');
+      if (!toast || !toastMsg) return;
+
+      toastMsg.textContent = message;
+      if (toastIcon) toastIcon.textContent = icon;
+      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2500);
+    }
+
+    function formatRupiah(number) {
+      return 'Rp ' + number.toLocaleString('id-ID');
+    }
+
+    function recalculateCart() {
+      const items = document.querySelectorAll('#cart-filled-view article.cart-item');
+      let total = 0;
+      items.forEach(item => {
+        const price = parseInt(item.getAttribute('data-price') || '0', 10);
+        total += price;
+      });
+
+      currentCartTotal = total;
+      const count = items.length;
+      const countDisplay = document.getElementById('cart-item-count');
+      const badgeDisplay = document.getElementById('header-cart-badge');
+      const subtotalDisplay = document.getElementById('summary-subtotal');
+      const totalDisplay = document.getElementById('summary-total');
+      const snapTotal = document.getElementById('snap-total-display');
+      const statusBerhasilTotal = document.getElementById('status-berhasil-total');
+      const statusMenungguTotal = document.getElementById('status-menunggu-total');
+
+      if (countDisplay) countDisplay.textContent = `${count} buku`;
+      if (badgeDisplay) badgeDisplay.textContent = count;
+      if (subtotalDisplay) subtotalDisplay.textContent = formatRupiah(total);
+      if (totalDisplay) totalDisplay.textContent = formatRupiah(total);
+      if (snapTotal) snapTotal.textContent = formatRupiah(total);
+      if (statusBerhasilTotal) statusBerhasilTotal.textContent = formatRupiah(total);
+      if (statusMenungguTotal) statusMenungguTotal.textContent = formatRupiah(total);
+
+      if (count === 0) {
+        document.getElementById('cart-filled-view')?.classList.add('hidden');
+        document.getElementById('cart-empty-view')?.classList.remove('hidden');
+      }
+    }
+
+    function removeCartItem(id) {
+      const itemEl = document.getElementById('cart-item-' + id);
+      if (itemEl) {
+        itemEl.style.transition = 'all 0.25s ease';
+        itemEl.style.opacity = '0';
+        itemEl.style.transform = 'translateX(-20px)';
+        setTimeout(() => {
+          itemEl.remove();
+          recalculateCart();
+          showToast('Buku dihapus dari keranjang belanja', 'delete');
+        }, 250);
+      }
+    }
+
+    function moveFavorite(id) {
+      const itemEl = document.getElementById('cart-item-' + id);
+      const title = itemEl?.getAttribute('data-title') || 'Buku';
+      showToast(`"${title}" dipindahkan ke favorit`, 'favorite');
+      removeCartItem(id);
+    }
+
+    // Modal Confirmation Management
+    function openOrderModal() {
+      const items = document.querySelectorAll('#cart-filled-view article.cart-item');
+      if (items.length === 0) {
+        showToast('Keranjang Anda masih kosong', 'info');
+        return;
+      }
+
+      const modalList = document.getElementById('modal-book-list');
+      const modalTotal = document.getElementById('modal-total-display');
+      const modal = document.getElementById('modal-order-confirm');
+
+      let listHtml = '';
+      let total = 0;
+
+      items.forEach(item => {
+        const title = item.getAttribute('data-title') || '';
+        const cover = item.getAttribute('data-cover') || '';
+        const price = parseInt(item.getAttribute('data-price') || '0', 10);
+        total += price;
+
+        listHtml += `
+          <div class="p-3 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-9 h-12 rounded bg-surface-paper overflow-hidden shrink-0 border border-border-subtle">
+                <img src="${cover}" alt="${title}" class="w-full h-full object-cover">
+              </div>
+              <span class="font-label text-[14px] font-bold text-ink-body truncate">${title}</span>
+            </div>
+            <span class="font-label text-[14px] font-semibold text-ink-body whitespace-nowrap">${formatRupiah(price)}</span>
+          </div>
+        `;
+      });
+
+      if (modalList) modalList.innerHTML = listHtml;
+      if (modalTotal) modalTotal.textContent = formatRupiah(total);
+
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeOrderModal() {
+      const modal = document.getElementById('modal-order-confirm');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Midtrans Snap Modal Management
+    function triggerMidtransPayment() {
+      closeOrderModal();
+      setTimeout(() => {
+        const snap = document.getElementById('snap-overlay');
+        if (snap) {
+          snap.classList.remove('hidden');
+          snap.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+          backToSnapSelector();
+        }
+      }, 150);
+    }
+
+    function closeSnapOverlay() {
+      const snap = document.getElementById('snap-overlay');
+      if (snap) {
+        snap.classList.add('hidden');
+        snap.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function hideAllSnapSubviews() {
+      document.getElementById('snap-selection-view')?.classList.add('hidden');
+      document.getElementById('status-berhasil')?.classList.add('hidden');
+      document.getElementById('status-menunggu')?.classList.add('hidden');
+      document.getElementById('status-gagal')?.classList.add('hidden');
+      document.getElementById('status-kedaluwarsa')?.classList.add('hidden');
+    }
+
+    function backToSnapSelector() {
+      hideAllSnapSubviews();
+      document.getElementById('snap-selection-view')?.classList.remove('hidden');
+    }
+
+    function simulatePaymentFlow(method) {
+      showToast('Menghubungkan ke gateway pembayaran...', 'payment');
+      setTimeout(() => {
+        renderStatusView('menunggu');
+      }, 400);
+    }
+
+    function renderStatusView(status) {
+      hideAllSnapSubviews();
+      if (status === 'berhasil') {
+        document.getElementById('status-berhasil')?.classList.remove('hidden');
+        showToast('Pembayaran berhasil dikonfirmasi!', 'check_circle');
+      } else if (status === 'menunggu') {
+        document.getElementById('status-menunggu')?.classList.remove('hidden');
+      } else if (status === 'gagal') {
+        document.getElementById('status-gagal')?.classList.remove('hidden');
+      } else if (status === 'kedaluwarsa') {
+        document.getElementById('status-kedaluwarsa')?.classList.remove('hidden');
+      }
+    }
+
+    function checkPaymentStatus() {
+      showToast('Memeriksa status transaksi terkini...', 'sync');
+      setTimeout(() => {
+        renderStatusView('berhasil');
+      }, 800);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeOrderModal();
+        closeSnapOverlay();
+      }
+    });
+
+    document.getElementById('modal-order-confirm')?.addEventListener('click', (e) => {
+      if (e.target.id === 'modal-order-confirm') closeOrderModal();
+    });
+
+    document.getElementById('snap-overlay')?.addEventListener('click', (e) => {
+      if (e.target.id === 'snap-overlay') closeSnapOverlay();
+    });
+  </script>
+</body>
+</html>

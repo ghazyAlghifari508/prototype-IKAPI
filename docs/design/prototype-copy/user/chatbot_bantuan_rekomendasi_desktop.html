@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <title>Bantuan &amp; Rekomendasi Buku — IKAPI Store Jawa Barat</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overflow-x: clip;
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    .scrollbar-none::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-none {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-error": "#ffffff",
+            "secondary-fixed": "#ffd9e3",
+            "surface-sky": "#E0F6FC",
+            "feedback-error": "#B42318",
+            "surface-tint": "#4c48dc",
+            "on-surface": "#1b1b25",
+            "on-secondary": "#ffffff",
+            "primary-container": "#5956e9",
+            "primary-fixed-dim": "#c2c1ff",
+            "tertiary": "#745b00",
+            "outline-variant": "#c7c4d7",
+            "on-primary": "#ffffff",
+            "on-error-container": "#93000a",
+            "surface-lilac": "#E5E4FF",
+            "tertiary-fixed": "#ffe08d",
+            "inverse-surface": "#302f3a",
+            "secondary": "#815060",
+            "on-primary-fixed": "#0c006a",
+            "on-tertiary-container": "#4f3d00",
+            "error": "#ba1a1a",
+            "on-secondary-container": "#7a495a",
+            "surface-bright": "#fcf8ff",
+            "surface-dim": "#dbd8e7",
+            "on-tertiary-fixed": "#241a00",
+            "primary": "#3f3ad0",
+            "ink-body": "#191923",
+            "inverse-on-surface": "#f2effe",
+            "on-background": "#1b1b25",
+            "surface-variant": "#e3e1ef",
+            "ink-muted": "#555665",
+            "outline": "#777586",
+            "surface-container-high": "#e9e6f5",
+            "on-secondary-fixed-variant": "#663949",
+            "secondary-fixed-dim": "#f4b5c8",
+            "border-bold": "#CFD0DD",
+            "background": "#fcf8ff",
+            "on-secondary-fixed": "#330e1d",
+            "inverse-primary": "#c2c1ff",
+            "error-container": "#ffdad6",
+            "surface-container-highest": "#e3e1ef",
+            "tertiary-fixed-dim": "#ecc23f",
+            "surface": "#fcf8ff",
+            "surface-soft": "#F8F7FF",
+            "on-primary-container": "#eeeaff",
+            "inverse-deep": "#24233D",
+            "surface-cream": "#FFF1E3",
+            "surface-container": "#efecfb",
+            "surface-paper": "#FFF0E3",
+            "tertiary-container": "#cea623",
+            "on-tertiary-fixed-variant": "#584400",
+            "on-primary-fixed-variant": "#3229c4",
+            "surface-container-low": "#f5f2ff",
+            "on-surface-variant": "#464555",
+            "surface-container-lowest": "#ffffff",
+            "border-subtle": "#E7E7EF",
+            "secondary-container": "#fdbed1",
+            "primary-fixed": "#e2dfff",
+            "on-tertiary": "#ffffff"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            "2xl": "1rem",
+            full: "9999px"
+          },
+          spacing: {
+            "margin": "2.5rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "space-2xl": "3rem",
+            "space-3xl": "4.5rem",
+            "gutter": "1.5rem"
+          },
+          fontFamily: {
+            "body-base": ["Plus Jakarta Sans", "sans-serif"],
+            "body-small": ["Plus Jakarta Sans", "sans-serif"],
+            "label": ["Plus Jakarta Sans", "sans-serif"],
+            "label-small": ["Plus Jakarta Sans", "sans-serif"],
+            "title-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg": ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-body-base text-ink-body antialiased">
+
+  <!-- HEADER (Unified Navigation) -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-surface-container-lowest shadow-[0_1px_8px_rgba(25,25,35,0.06)]">
+    <div class="h-28 max-w-[1240px] mx-auto px-4 md:px-margin flex flex-col justify-between">
+      <div class="h-16 flex items-center justify-between gap-2 sm:gap-gutter">
+        <div class="flex items-center gap-space-md shrink-0">
+          <a href="beranda_desktop.html" data-path="beranda" class="flex items-center">
+            <img alt="Logo IKAPI Jawa Barat" class="h-7 sm:h-8 w-auto object-contain" src="../../assets/logo-ikapi-jabar.png">
+          </a>
+        </div>
+        <div class="flex-1 max-w-xl mx-2 hidden sm:flex items-center gap-space-xs">
+          <div class="relative w-full">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+            <input class="w-full h-10 pl-10 pr-space-md rounded-lg bg-surface-container-lowest font-body-small text-[14px] text-ink-body placeholder:text-outline outline-none ring-1 ring-border-bold focus:ring-2 focus:ring-primary transition-all" placeholder="Cari judul, penulis, atau topik buku..." type="text">
+          </div>
+        </div>
+        <div class="flex items-center gap-3 sm:gap-space-lg shrink-0">
+          <a class="relative flex items-center text-on-surface-variant hover:text-primary transition-colors" data-path="keranjang" href="keranjang_pembayaran_terpadu_desktop.html" aria-label="Keranjang Belanja">
+            <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+            <span id="header-cart-badge" class="absolute -top-1.5 -right-2 min-w-[18px] h-[18px] px-1 rounded-full bg-primary-container text-on-primary font-label-small text-[11px] font-bold flex items-center justify-center">2</span>
+          </a>
+          <div class="h-6 w-px bg-border-subtle"></div>
+          <a class="hidden sm:flex h-10 px-space-lg rounded-lg bg-primary text-on-primary font-label text-[14px] font-semibold items-center gap-space-xs hover:bg-surface-tint transition-colors" data-path="login" href="masuk_login_desktop.html">
+            <span>Masuk / Akun</span>
+          </a>
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary">
+            <span class="material-symbols-outlined text-[18px]">person</span>
+          </div>
+        </div>
+      </div>
+      <nav class="h-12 flex items-center gap-4 sm:gap-space-xl overflow-x-auto scrollbar-none max-w-full">
+        <a class="h-full flex items-center font-label text-[14px] text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="beranda" href="beranda_desktop.html">Beranda</a>
+        <a class="h-full flex items-center font-label text-[14px] text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a>
+        <a class="h-full flex items-center font-label text-[14px] text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a>
+        <a class="h-full flex items-center font-label text-[14px] text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="kabar-artikel" href="agenda_berita_literasi_desktop.html#section-berita">Kabar &amp; Artikel</a>
+        <a class="h-full flex items-center font-label text-[14px] text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Komunitas Penerbit</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="w-full pt-28 bg-surface min-h-[calc(100vh-16rem)]">
+    <div class="flex flex-col w-full">
+      
+      <!-- REVIEWER SIMULATION TOOLBAR (Preserved in same HTML) -->
+      <aside aria-label="Interactive Demo Toolbar" class="w-full bg-surface-container-high py-space-xs px-4 md:px-margin border-b border-border-subtle sticky top-28 z-40">
+        <div class="max-w-[1240px] mx-auto flex flex-wrap items-center gap-space-md text-[12px] font-body-small">
+          <div class="flex items-center gap-1.5 text-ink-body font-bold shrink-0">
+            <span class="material-symbols-outlined text-primary text-[18px]">smart_toy</span>
+            <span>Simulasi:</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-1.5" id="state-selector-container">
+            <button id="btn-state-rekomendasi" type="button" class="px-2.5 py-1 rounded-lg bg-primary-container text-on-primary font-medium transition-all shadow-xs" onclick="setDemoScenario('rekomendasi')">
+              Rekomendasi Buku
+            </button>
+            <button id="btn-state-pembayaran" type="button" class="px-2.5 py-1 rounded-lg bg-surface-container-lowest text-ink-body hover:bg-surface-cream font-medium transition-all border border-border-subtle" onclick="setDemoScenario('pembayaran')">
+              Bantuan Pembayaran &amp; Reader
+            </button>
+            <button id="btn-state-eskalasi" type="button" class="px-2.5 py-1 rounded-lg bg-surface-container-lowest text-ink-body hover:bg-surface-cream font-medium transition-all border border-border-subtle" onclick="setDemoScenario('eskalasi')">
+              Layanan CS / Luar Lingkup
+            </button>
+            <button id="btn-state-loading" type="button" class="px-2.5 py-1 rounded-lg bg-surface-container-lowest text-ink-body hover:bg-surface-cream font-medium transition-all border border-border-subtle" onclick="setDemoScenario('loading')">
+              Status Memuat...
+            </button>
+            <button id="btn-state-toggle" type="button" class="px-2.5 py-1 rounded-lg bg-surface-soft text-primary font-bold hover:bg-surface-variant transition-all flex items-center gap-1 border border-border-subtle" onclick="toggleWidgetPanel()">
+              <span class="material-symbols-outlined text-[15px]">visibility</span>
+              <span id="toggle-label-text">Tutup Jendela Chat</span>
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- BACKGROUND CATALOG CONTEXT SHELF -->
+      <div class="max-w-[1240px] w-full mx-auto px-4 md:px-margin py-space-xl">
+        <div class="flex flex-col gap-space-xs mb-space-lg pb-space-sm border-b border-border-subtle">
+          <nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-[13px] font-body-small text-ink-muted">
+            <a class="hover:text-primary transition-colors" data-path="beranda" href="beranda_desktop.html">Beranda</a>
+            <span class="text-outline-variant">/</span>
+            <span class="text-ink-body font-semibold">Katalog Buku Digital</span>
+          </nav>
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm mt-1">
+            <div>
+              <h1 class="font-headline-md md:font-headline-lg text-[26px] md:text-[30px] font-bold text-ink-body tracking-tight">
+                Katalog Buku Digital
+              </h1>
+              <p class="font-body-base text-[14px] text-ink-muted mt-1">
+                Koleksi buku digital resmi dari penerbit anggota IKAPI Jawa Barat.
+              </p>
+            </div>
+            <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="font-label text-[14px] text-primary hover:text-surface-tint font-bold flex items-center gap-1 transition-colors">
+              <span>Buka Katalog Lengkap</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Catalog Sample Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-gutter mb-space-2xl">
+          <!-- Book 1 -->
+          <article class="group flex flex-col bg-surface-container-lowest rounded-xl p-space-sm border border-border-subtle shadow-xs hover:shadow-md transition-all">
+            <div class="aspect-[2/3] w-full bg-surface-container-high rounded-lg overflow-hidden relative mb-space-sm border border-border-subtle shadow-xs">
+              <img src="../../assets/covers/laskar-aksara-pasundan.jpg" alt="Sampul Laskar Aksara Pasundan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+            </div>
+            <div class="flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="font-label text-[15px] font-bold text-ink-body line-clamp-1 group-hover:text-primary transition-colors">
+                  Laskar Aksara Pasundan
+                </h3>
+                <p class="text-[13px] font-body-small text-ink-muted mt-0.5">Ayi R. Kurnia</p>
+              </div>
+              <div class="pt-3 mt-2 border-t border-border-subtle flex items-center justify-between">
+                <span class="font-label text-[15px] font-bold text-ink-body">Rp 45.000</span>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-8 px-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary text-[12px] font-label font-semibold flex items-center transition-colors">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 2 -->
+          <article class="group flex flex-col bg-surface-container-lowest rounded-xl p-space-sm border border-border-subtle shadow-xs hover:shadow-md transition-all">
+            <div class="aspect-[2/3] w-full bg-surface-container-high rounded-lg overflow-hidden relative mb-space-sm border border-border-subtle shadow-xs">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFf19AO9EVo6HybkUXmcGuWzMG3MhTKDnjjR9axwV2wBLqpMmsxQNHrkIti_kOfkHy9N6ITdxLpsj1C-Zq9WCrBwUMRPsRpFVU5koCQwuw_OwNxDIl4dDAgQ4NbrFvrcpzrkudcxT1AYpqmf40YA3uUi7xAvB7S0quwMdWe2vRhkFpLaZZAGigKMHz7u243UCPu9Jf-Jqu9M6NUkiakePkvfADeHda3mRK0290hbZO" alt="Sampul Pendidikan Karakter Sunda" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+            </div>
+            <div class="flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="font-label text-[15px] font-bold text-ink-body line-clamp-1 group-hover:text-primary transition-colors">
+                  Pendidikan Karakter Sunda
+                </h3>
+                <p class="text-[13px] font-body-small text-ink-muted mt-0.5">Dr. Cecep Hidayat</p>
+              </div>
+              <div class="pt-3 mt-2 border-t border-border-subtle flex items-center justify-between">
+                <span class="font-label text-[15px] font-bold text-ink-body">Rp 58.000</span>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-8 px-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary text-[12px] font-label font-semibold flex items-center transition-colors">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 3 -->
+          <article class="group flex flex-col bg-surface-container-lowest rounded-xl p-space-sm border border-border-subtle shadow-xs hover:shadow-md transition-all">
+            <div class="aspect-[2/3] w-full bg-surface-container-high rounded-lg overflow-hidden relative mb-space-sm border border-border-subtle shadow-xs">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYwNEDwKw9fXka8nPawuKK7hm2hPPpqAUctFpyUVuvBJncXi2RykqbgnWB4Be8GrXkJrhWqnPjZEvv758JY-HEaYC60H1Sgq7bvuTE_SQ2yntx48YnMsfTELXvUBuCsDc8sBYa0I_hwGfcIMSMJsLEfwQdQggvO1Jyx9DBoO_St9nmlPhYrFQmxvokrUoBImL1El6nZWGHsqyDrJ36xX7Fx7DgXxZBhyV-u_bijW5V" alt="Sampul Bumi Parahyangan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+            </div>
+            <div class="flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="font-label text-[15px] font-bold text-ink-body line-clamp-1 group-hover:text-primary transition-colors">
+                  Bumi Parahyangan: Narasi Alam
+                </h3>
+                <p class="text-[13px] font-body-small text-ink-muted mt-0.5">Prof. Didi Supardi</p>
+              </div>
+              <div class="pt-3 mt-2 border-t border-border-subtle flex items-center justify-between">
+                <span class="font-label text-[15px] font-bold text-ink-body">Rp 74.000</span>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-8 px-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary text-[12px] font-label font-semibold flex items-center transition-colors">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 4 -->
+          <article class="group flex flex-col bg-surface-container-lowest rounded-xl p-space-sm border border-border-subtle shadow-xs hover:shadow-md transition-all">
+            <div class="aspect-[2/3] w-full bg-surface-container-high rounded-lg overflow-hidden relative mb-space-sm border border-border-subtle shadow-xs">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyZHkSKaqVFAK9l95PqY7ZhTifwBxYTwZkeH_ucufg9hCUe1dtSAh6gyJqkOAgLOKz5dLCViSgY6K8TnLpngBGHkzD8YyJi8JB8Pg_jVnXOWtDFvhGn_5TQHkxqyvw4oxGZuEFLDuFCf1OcFi3Zvg4GrGkYnm2Y3-SHow42pQCyoVT7VEQbbDvQHlX-hk1aZbLGdun_NxiZkOZObyiIn6ihtm0IwQUrXgMcWL0GuMO" alt="Sampul Antologi Puisi Lembayung Bandung" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+            </div>
+            <div class="flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="font-label text-[15px] font-bold text-ink-body line-clamp-1 group-hover:text-primary transition-colors">
+                  Antologi Puisi Lembayung
+                </h3>
+                <p class="text-[13px] font-body-small text-ink-muted mt-0.5">Dewi Sartika Putri</p>
+              </div>
+              <div class="pt-3 mt-2 border-t border-border-subtle flex items-center justify-between">
+                <span class="font-label text-[15px] font-bold text-ink-body">Rp 38.000</span>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-8 px-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary text-[12px] font-label font-semibold flex items-center transition-colors">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FLOATING CHATBOT WIDGET -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    
+    <!-- Chat Window Container -->
+    <div id="ikapi-chat-window" class="w-[390px] h-[520px] max-w-[calc(100vw-32px)] max-h-[calc(100vh-140px)] bg-surface-container-lowest rounded-2xl shadow-2xl border border-border-subtle flex flex-col overflow-hidden mb-3 transition-all duration-300 origin-bottom-right" role="dialog" aria-labelledby="chat-header-title">
+      
+      <!-- Widget Header -->
+      <div class="bg-primary px-space-md py-3 text-on-primary flex items-center justify-between shrink-0 shadow-xs">
+        <div>
+          <h2 id="chat-header-title" class="font-label text-[15px] font-bold text-white tracking-tight leading-none">
+            Bantuan IKAPI
+          </h2>
+          <span class="text-[12px] text-primary-fixed leading-tight block mt-0.5">
+            Asisten untuk buku dan pesanan
+          </span>
+        </div>
+        <div class="flex items-center gap-1">
+          <button type="button" aria-label="Bersihkan Percakapan" class="w-8 h-8 rounded-lg flex items-center justify-center text-primary-fixed hover:text-white hover:bg-white/10 transition-colors" onclick="resetChatConversation()" title="Bersihkan Percakapan">
+            <span class="material-symbols-outlined text-[18px]">refresh</span>
+          </button>
+          <button type="button" aria-label="Tutup Jendela Bantuan" class="w-8 h-8 rounded-lg flex items-center justify-center text-primary-fixed hover:text-white hover:bg-white/10 transition-colors" onclick="toggleWidgetPanel()" title="Tutup Jendela">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Chat Body (Scrollable Conversation Thread) -->
+      <div id="chat-body-scrollable" class="flex-1 overflow-y-auto p-4 space-y-3.5 bg-surface-bright" role="log" aria-live="polite">
+        <!-- Messages rendered dynamically by JS -->
+      </div>
+
+      <!-- Quick Question Prompts Container (Anchored above Composer) -->
+      <div id="quick-prompts-wrapper" class="px-4 py-2 bg-surface-container-lowest border-t border-border-subtle shrink-0">
+        <span class="text-[11px] font-label font-bold text-ink-muted uppercase tracking-wider block mb-1.5">
+          Coba tanyakan:
+        </span>
+        <div class="flex flex-wrap gap-1.5">
+          <button type="button" class="text-left text-[12px] font-label font-medium px-2.5 py-1 rounded-lg bg-surface-soft hover:bg-surface-container text-ink-body hover:text-primary transition-colors border border-border-subtle" onclick="handleQuickPrompt('Cari buku sejarah Sunda')">
+            Cari buku sejarah Sunda
+          </button>
+          <button type="button" class="text-left text-[12px] font-label font-medium px-2.5 py-1 rounded-lg bg-surface-soft hover:bg-surface-container text-ink-body hover:text-primary transition-colors border border-border-subtle" onclick="handleQuickPrompt('Cara pembayaran')">
+            Cara pembayaran
+          </button>
+          <button type="button" class="text-left text-[12px] font-label font-medium px-2.5 py-1 rounded-lg bg-surface-soft hover:bg-surface-container text-ink-body hover:text-primary transition-colors border border-border-subtle" onclick="handleQuickPrompt('Cara membaca e-book')">
+            Cara membaca e-book
+          </button>
+          <button type="button" class="text-left text-[12px] font-label font-medium px-2.5 py-1 rounded-lg bg-surface-soft hover:bg-surface-container text-ink-body hover:text-primary transition-colors border border-border-subtle" onclick="handleQuickPrompt('Hubungi bantuan')">
+            Hubungi bantuan
+          </button>
+        </div>
+      </div>
+
+      <!-- Composer / Bottom Input Area -->
+      <div class="p-3 bg-surface-container-lowest border-t border-border-subtle shrink-0">
+        <form class="flex items-center gap-2" onsubmit="handleChatSubmit(event)">
+          <div class="relative flex-1">
+            <textarea id="chat-input-field" rows="1" class="w-full resize-none py-2 px-3 rounded-xl bg-surface-soft border border-border-subtle text-ink-body font-body-small text-[13px] placeholder:text-ink-muted focus:outline-none focus:border-primary focus:bg-white transition-all max-h-24" placeholder="Tulis pertanyaan..." onkeydown="handleTextareaKeydown(event)"></textarea>
+          </div>
+          <button type="submit" aria-label="Kirim Pesan" class="h-10 w-10 rounded-xl bg-primary hover:bg-surface-tint text-on-primary flex items-center justify-center shrink-0 transition-colors shadow-xs">
+            <span class="material-symbols-outlined text-[19px]">send</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Floating Action Button Launcher -->
+    <button id="launcher-button" type="button" aria-expanded="true" aria-controls="ikapi-chat-window" aria-label="Buka Bantuan IKAPI" class="w-13 h-13 p-3.5 rounded-full bg-primary hover:bg-surface-tint text-on-primary shadow-lg flex items-center justify-center transition-all duration-200 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-primary-fixed" onclick="toggleWidgetPanel()">
+      <span id="launcher-icon-chat" class="material-symbols-outlined text-[26px]">chat</span>
+      <span id="launcher-icon-close" class="material-symbols-outlined text-[26px] hidden">close</span>
+    </button>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-low text-ink-body pt-space-2xl pb-space-xl border-t border-border-subtle">
+    <div class="max-w-[1240px] mx-auto px-4 md:px-margin">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter mb-space-2xl">
+        <!-- Kolom 1 -->
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-title-md text-[16px] text-ink-body font-bold">Jelajahi</span>
+          <ul class="flex flex-col gap-2 font-body-small text-[14px] text-ink-muted">
+            <li><a class="hover:text-primary transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="kategori" href="katalog_buku_desktop.html">Kategori</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Buku Terbaru</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Buku Terlaris</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 2 -->
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-title-md text-[16px] text-ink-body font-bold">Informasi Pembelian</span>
+          <ul class="flex flex-col gap-2 font-body-small text-[14px] text-ink-muted">
+            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Cara Pembelian</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Metode Pembayaran</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Panduan Web Reader</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Bantuan &amp; FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3 -->
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-title-md text-[16px] text-ink-body font-bold">Tentang IKAPI</span>
+          <ul class="flex flex-col gap-2 font-body-small text-[14px] text-ink-muted">
+            <li><a class="hover:text-primary transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Tentang Kami</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Anggota Penerbit</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Kemitraan Perpustakaan</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Hubungi Kami</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 4 -->
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-title-md text-[16px] text-ink-body font-bold">Lainnya</span>
+          <ul class="flex flex-col gap-2 font-body-small text-[14px] text-ink-muted">
+            <li><a class="hover:text-primary transition-colors" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="kabar-artikel" href="agenda_berita_literasi_desktop.html#section-berita">Kabar &amp; Artikel</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Syarat &amp; Ketentuan</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Kebijakan Privasi</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-space-lg border-t border-border-subtle flex flex-col md:flex-row items-center justify-between gap-space-md text-[13px] font-body-small text-ink-muted">
+        <p>© 2026 IKAPI Jawa Barat. Seluruh hak cipta dilindungi undang-undang.</p>
+        <div class="flex flex-wrap items-center gap-3 sm:gap-space-lg">
+          <span class="text-ink-body font-semibold">Media Sosial:</span>
+          <a href="#" class="hover:text-primary transition-colors" aria-label="Instagram IKAPI Jabar">Instagram</a>
+          <a href="#" class="hover:text-primary transition-colors" aria-label="YouTube IKAPI Jabar">YouTube</a>
+          <a href="#" class="hover:text-primary transition-colors" aria-label="Facebook IKAPI Jabar">Facebook</a>
+          <a href="#" class="hover:text-primary transition-colors" aria-label="X Twitter IKAPI Jabar">X</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT STATE ENGINE -->
+  <script>
+    let isWidgetOpen = true;
+
+    // True Conversation Thread State
+    let conversationHistory = [];
+
+    // Helper to sanitize HTML strings
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    function initWelcomeConversation() {
+      conversationHistory = [
+        {
+          id: 'msg-welcome',
+          role: 'assistant',
+          type: 'welcome',
+          title: 'Halo! Ada yang bisa dibantu?',
+          content: 'Mau cari buku atau butuh bantuan soal pesanan?'
+        }
+      ];
+      renderConversation();
+    }
+
+    function renderConversation() {
+      const body = document.getElementById('chat-body-scrollable');
+      if (!body) return;
+
+      body.innerHTML = conversationHistory.map(msg => {
+        if (msg.role === 'user') {
+          return `
+            <div class="flex justify-end">
+              <div class="max-w-[85%] bg-primary text-on-primary rounded-2xl rounded-br-xs px-3.5 py-2 text-[13px] leading-relaxed shadow-xs">
+                ${escapeHtml(msg.content)}
+              </div>
+            </div>
+          `;
+        }
+
+        // Assistant Messages
+        if (msg.type === 'welcome') {
+          return `
+            <div class="bg-surface-container-lowest p-3.5 rounded-xl border border-border-subtle shadow-xs space-y-1">
+              <p class="font-label text-[14px] font-bold text-ink-body">${escapeHtml(msg.title)}</p>
+              <p class="text-[13px] text-ink-muted">${escapeHtml(msg.content)}</p>
+            </div>
+          `;
+        }
+
+        if (msg.type === 'loading') {
+          return `
+            <div class="flex flex-col items-start gap-1">
+              <div class="bg-surface-container-low px-3.5 py-2.5 rounded-2xl rounded-tl-xs flex items-center gap-2 border border-border-subtle">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse [animation-delay:200ms]"></span>
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse [animation-delay:400ms]"></span>
+                <span class="text-[12px] text-ink-muted ml-1">Menyiapkan jawaban...</span>
+              </div>
+            </div>
+          `;
+        }
+
+        if (msg.type === 'rekomendasi') {
+          return `
+            <div class="flex flex-col items-start gap-1.5 w-full">
+              <div class="max-w-[92%] bg-surface-container-low text-ink-body rounded-2xl rounded-tl-xs px-3.5 py-2.5 text-[13px] leading-relaxed border border-border-subtle">
+                ${escapeHtml(msg.content)}
+              </div>
+              <div class="w-full bg-surface-container-lowest border border-border-subtle rounded-xl p-3 flex gap-3 shadow-xs">
+                <div class="w-16 h-24 bg-surface-container-high rounded-lg overflow-hidden shrink-0 border border-border-subtle">
+                  <img src="../../assets/covers/laskar-aksara-pasundan.jpg" alt="Sampul Laskar Aksara Pasundan" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col justify-between flex-1 min-w-0 py-0.5">
+                  <div>
+                    <h4 class="font-label text-[14px] font-bold text-ink-body leading-tight truncate">Laskar Aksara Pasundan</h4>
+                    <p class="text-[12px] text-ink-muted mt-0.5">Ayi R. Kurnia</p>
+                    <p class="text-[13px] font-bold text-primary-container mt-1">Rp 45.000</p>
+                  </div>
+                  <div class="pt-1">
+                    <a href="detail_buku_desktop.html" data-path="detail-buku" class="inline-flex items-center gap-1 text-[12px] font-label font-bold text-primary hover:underline">
+                      <span>Lihat Buku</span>
+                      <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        if (msg.type === 'pembayaran') {
+          return `
+            <div class="flex flex-col items-start gap-1.5 w-full">
+              <div class="max-w-[95%] bg-surface-container-low text-ink-body rounded-2xl rounded-tl-xs p-3.5 text-[13px] leading-relaxed border border-border-subtle space-y-2">
+                <p class="font-bold text-ink-body">Cara Membeli &amp; Membayar E-Book:</p>
+                <ol class="list-decimal list-inside space-y-1 text-ink-body text-[13px]">
+                  <li>Pilih buku dan tambahkan ke keranjang belanja.</li>
+                  <li>Lanjutkan ke konfirmasi pesanan dan pembayaran.</li>
+                  <li>Pilih metode pembayaran (QRIS atau Virtual Account).</li>
+                  <li>Setelah terverifikasi, buku otomatis masuk ke akun Anda.</li>
+                </ol>
+                <div class="pt-2 border-t border-border-subtle flex items-center justify-between">
+                  <a href="perpustakaan_saya_desktop.html" data-path="perpustakaan-saya" class="text-[12px] font-label font-bold text-primary hover:underline inline-flex items-center gap-1">
+                    <span>Cek Perpustakaan Saya</span>
+                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        if (msg.type === 'reader') {
+          return `
+            <div class="flex flex-col items-start gap-1.5 w-full">
+              <div class="max-w-[95%] bg-surface-container-low text-ink-body rounded-2xl rounded-tl-xs p-3.5 text-[13px] leading-relaxed border border-border-subtle space-y-2">
+                <p class="font-bold text-ink-body">Cara Membaca E-Book:</p>
+                <ol class="list-decimal list-inside space-y-1 text-ink-body text-[13px]">
+                  <li>Masuk ke akun IKAPI Store Anda.</li>
+                  <li>Buka menu <strong>Perpustakaan Saya</strong>.</li>
+                  <li>Pilih buku yang telah dibeli, lalu klik <strong>Mulai Baca</strong> atau <strong>Lanjutkan Membaca</strong>.</li>
+                  <li>E-book langsung dibaca di peramban tanpa unduh file mentah.</li>
+                </ol>
+                <div class="pt-2 border-t border-border-subtle">
+                  <a href="perpustakaan_saya_desktop.html" data-path="perpustakaan-saya" class="text-[12px] font-label font-bold text-primary hover:underline inline-flex items-center gap-1">
+                    <span>Buka Perpustakaan Saya</span>
+                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        if (msg.type === 'eskalasi') {
+          return `
+            <div class="flex flex-col items-start gap-1.5 w-full">
+              <div class="max-w-[95%] bg-surface-container-low text-ink-body rounded-2xl rounded-tl-xs p-3.5 text-[13px] leading-relaxed border border-border-subtle space-y-2">
+                <p class="text-ink-body">
+                  Untuk pertanyaan seputar kerja sama penerbit, keanggotaan, atau kendala transaksi khusus, silakan hubungi tim kami:
+                </p>
+                <div class="bg-surface-container-lowest p-2.5 rounded-xl border border-border-subtle text-[12px] space-y-1.5">
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[16px] text-primary">mail</span>
+                    <a href="mailto:sekretariat@ikapi-jabar.id" class="text-primary font-medium hover:underline">sekretariat@ikapi-jabar.id</a>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+                    <span class="text-ink-body">Jl. Buah Batu No. 120, Kota Bandung</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        // Generic / Fallback Text
+        return `
+          <div class="flex flex-col items-start gap-1">
+            <div class="max-w-[92%] bg-surface-container-low text-ink-body rounded-2xl rounded-tl-xs px-3.5 py-2.5 text-[13px] leading-relaxed border border-border-subtle">
+              ${escapeHtml(msg.content)}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Auto scroll to bottom
+      setTimeout(() => {
+        body.scrollTop = body.scrollHeight;
+      }, 50);
+    }
+
+    // Toggle Chat Window
+    function toggleWidgetPanel() {
+      const windowEl = document.getElementById('ikapi-chat-window');
+      const chatIcon = document.getElementById('launcher-icon-chat');
+      const closeIcon = document.getElementById('launcher-icon-close');
+      const toggleLabel = document.getElementById('toggle-label-text');
+      const launcherBtn = document.getElementById('launcher-button');
+
+      isWidgetOpen = !isWidgetOpen;
+
+      if (isWidgetOpen) {
+        windowEl.classList.remove('hidden', 'scale-95', 'opacity-0', 'pointer-events-none');
+        windowEl.classList.add('flex', 'scale-100', 'opacity-100');
+        chatIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+        if (toggleLabel) toggleLabel.textContent = 'Tutup Jendela Chat';
+        if (launcherBtn) launcherBtn.setAttribute('aria-expanded', 'true');
+      } else {
+        windowEl.classList.add('hidden', 'scale-95', 'opacity-0', 'pointer-events-none');
+        windowEl.classList.remove('flex', 'scale-100', 'opacity-100');
+        chatIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        if (toggleLabel) toggleLabel.textContent = 'Buka Jendela Chat';
+        if (launcherBtn) launcherBtn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    function openWidgetIfClosed() {
+      if (!isWidgetOpen) {
+        toggleWidgetPanel();
+      }
+    }
+
+    // Reset Conversation to Initial Welcome
+    function resetChatConversation() {
+      initWelcomeConversation();
+      const input = document.getElementById('chat-input-field');
+      if (input) input.value = '';
+    }
+
+    // Dispatch Assistant Response by Intent
+    function dispatchAssistantResponse(userText) {
+      const lower = userText.toLowerCase();
+
+      // Check Intent
+      if (lower.includes('sunda') || lower.includes('naskah') || lower.includes('sejarah') || lower.includes('rekomendasi')) {
+        conversationHistory.push({
+          id: 'msg-' + Date.now(),
+          role: 'assistant',
+          type: 'rekomendasi',
+          content: 'Ada buku yang membahas sejarah dan naskah Sunda. Ini yang paling sesuai dengan pencarianmu:'
+        });
+      } else if (lower.includes('bayar') || lower.includes('qris') || lower.includes('transfer') || lower.includes('pembayaran')) {
+        conversationHistory.push({
+          id: 'msg-' + Date.now(),
+          role: 'assistant',
+          type: 'pembayaran',
+          content: ''
+        });
+      } else if (lower.includes('baca') || lower.includes('reader') || lower.includes('e-book') || lower.includes('perpustakaan')) {
+        conversationHistory.push({
+          id: 'msg-' + Date.now(),
+          role: 'assistant',
+          type: 'reader',
+          content: ''
+        });
+      } else if (lower.includes('hubungi') || lower.includes('kontak') || lower.includes('bantuan') || lower.includes('cs') || lower.includes('admin') || lower.includes('kerja sama')) {
+        conversationHistory.push({
+          id: 'msg-' + Date.now(),
+          role: 'assistant',
+          type: 'eskalasi',
+          content: ''
+        });
+      } else {
+        // Fallback response
+        conversationHistory.push({
+          id: 'msg-' + Date.now(),
+          role: 'assistant',
+          type: 'text',
+          content: 'Untuk saat ini, aku bisa bantu cari buku, menjelaskan pembayaran, dan cara membaca e-book. Mau pilih salah satunya?'
+        });
+      }
+
+      renderConversation();
+    }
+
+    function handleQuickPrompt(text) {
+      openWidgetIfClosed();
+      conversationHistory.push({
+        id: 'msg-' + Date.now(),
+        role: 'user',
+        content: text
+      });
+      renderConversation();
+      setTimeout(() => {
+        dispatchAssistantResponse(text);
+      }, 100);
+    }
+
+    function handleChatSubmit(e) {
+      if (e) e.preventDefault();
+      const input = document.getElementById('chat-input-field');
+      if (!input) return;
+      const val = input.value.trim();
+      if (!val) return;
+
+      openWidgetIfClosed();
+      conversationHistory.push({
+        id: 'msg-' + Date.now(),
+        role: 'user',
+        content: val
+      });
+      input.value = '';
+      renderConversation();
+
+      setTimeout(() => {
+        dispatchAssistantResponse(val);
+      }, 100);
+    }
+
+    function handleTextareaKeydown(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        handleChatSubmit(e);
+      }
+    }
+
+    // Demo Scenario Switcher for Reviewers
+    function setDemoScenario(scenario) {
+      openWidgetIfClosed();
+
+      // Update Toolbar buttons visual
+      ['rekomendasi', 'pembayaran', 'eskalasi', 'loading'].forEach(sc => {
+        const btn = document.getElementById('btn-state-' + sc);
+        if (!btn) return;
+        if (sc === scenario) {
+          btn.className = "px-2.5 py-1 rounded-lg bg-primary-container text-on-primary font-medium transition-all shadow-xs";
+        } else {
+          btn.className = "px-2.5 py-1 rounded-lg bg-surface-container-lowest text-ink-body hover:bg-surface-cream font-medium transition-all border border-border-subtle";
+        }
+      });
+
+      if (scenario === 'rekomendasi') {
+        conversationHistory = [
+          {
+            id: 'msg-welcome',
+            role: 'assistant',
+            type: 'welcome',
+            title: 'Halo! Ada yang bisa dibantu?',
+            content: 'Mau cari buku atau butuh bantuan soal pesanan?'
+          },
+          {
+            id: 'demo-u1',
+            role: 'user',
+            content: 'Ada rekomendasi buku tentang sejarah atau naskah Sunda kuno?'
+          },
+          {
+            id: 'demo-a1',
+            role: 'assistant',
+            type: 'rekomendasi',
+            content: 'Ada buku yang membahas sejarah dan naskah Sunda. Ini yang paling sesuai dengan pencarianmu:'
+          }
+        ];
+      } else if (scenario === 'pembayaran') {
+        conversationHistory = [
+          {
+            id: 'demo-u2',
+            role: 'user',
+            content: 'Bagaimana cara melakukan pembayaran dan membuka e-book?'
+          },
+          {
+            id: 'demo-a2',
+            role: 'assistant',
+            type: 'pembayaran',
+            content: ''
+          }
+        ];
+      } else if (scenario === 'eskalasi') {
+        conversationHistory = [
+          {
+            id: 'demo-u3',
+            role: 'user',
+            content: 'Saya ingin mengajukan kerja sama penerbitan naskah.'
+          },
+          {
+            id: 'demo-a3',
+            role: 'assistant',
+            type: 'eskalasi',
+            content: ''
+          }
+        ];
+      } else if (scenario === 'loading') {
+        conversationHistory = [
+          {
+            id: 'demo-u4',
+            role: 'user',
+            content: 'Carikan buku antologi puisi Sunda kontemporer...'
+          },
+          {
+            id: 'demo-a4',
+            role: 'assistant',
+            type: 'loading',
+            content: ''
+          }
+        ];
+      }
+
+      renderConversation();
+    }
+
+    // Close on Escape if inside chat
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isWidgetOpen) {
+        toggleWidgetPanel();
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initWelcomeConversation();
+    });
+  </script>
+</body>
+</html>

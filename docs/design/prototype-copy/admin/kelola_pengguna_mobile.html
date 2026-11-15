@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fcf8ff;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "error-container": "#ffdad6", "secondary-fixed": "#ffd9e3", "on-tertiary-fixed-variant": "#584400", "surface-cream": "#FFF1E3", "surface-variant": "#e3e1ef", "inverse-surface": "#302f3a", "on-background": "#1b1b25", "on-secondary-fixed-variant": "#663949", "tertiary-fixed": "#ffe08d", "on-surface-variant": "#464555", "surface-paper": "#FFF0E3", "inverse-primary": "#c2c1ff", "on-primary-fixed-variant": "#3229c4", "surface-container-lowest": "#ffffff", "on-error": "#ffffff", "tertiary-fixed-dim": "#ecc23f", "on-primary-fixed": "#0c006a", "border-subtle": "#E7E7EF", "surface-soft": "#F8F7FF", "on-secondary-fixed": "#330e1d", "surface-tint": "#4c48dc", "on-tertiary": "#ffffff", "surface": "#fcf8ff", "surface-sky": "#E0F6FC", "primary": "#3f3ad0", "error": "#ba1a1a", "border-bold": "#CFD0DD", "surface-container-low": "#f5f2ff", "on-error-container": "#93000a", "ink-body": "#191923", "primary-fixed": "#e2dfff", "outline-variant": "#c7c4d7", "on-secondary-container": "#7a495a", "on-tertiary-fixed": "#241a00", "primary-fixed-dim": "#c2c1ff", "on-secondary": "#ffffff", "surface-container-highest": "#e3e1ef", "tertiary": "#745b00", "on-tertiary-container": "#4f3d00", "feedback-error": "#B42318", "secondary-container": "#fdbed1", "on-primary-container": "#eeeaff", "surface-bright": "#fcf8ff", "surface-container-high": "#e9e6f5", "primary-container": "#5956e9", "inverse-on-surface": "#f2effe", "secondary": "#815060", "tertiary-container": "#cea623", "secondary-fixed-dim": "#f4b5c8", "surface-lilac": "#E5E4FF", "inverse-deep": "#24233D", "ink-muted": "#555665", "surface-container": "#efecfb", "outline": "#777586", "on-primary": "#ffffff", "on-surface": "#1b1b25", "surface-dim": "#dbd8e7", "background": "#fcf8ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter": "1.5rem", "gutter-mobile": "1.25rem", "space-md": "1rem", "margin-mobile": "1.25rem", "space-3xl": "4.5rem", "space-sm": "0.5rem", "margin": "2.5rem", "space-lg": "1.5rem", "space-xl": "2rem", "space-xs": "0.25rem", "space-2xl": "3rem" }, fontFamily: { "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-small": ["Plus Jakarta Sans"], "display-md": ["Plus Jakarta Sans"], "label": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-base": ["Plus Jakarta Sans"], "display-md-mobile": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-small": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg-mobile": ["24px", { lineHeight: "1.25", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-lg": ["36px", { lineHeight: "1.18", letterSpacing: "-0.03em", fontWeight: "700" }], "label-small": ["12px", { lineHeight: "1.3", letterSpacing: "0.02em", fontWeight: "600" }], "display-md": ["44px", { lineHeight: "1.12", letterSpacing: "-0.035em", fontWeight: "800" }], "label": ["14px", { lineHeight: "1.35", letterSpacing: "0", fontWeight: "600" }], "display-lg-mobile": ["34px", { lineHeight: "1.15", letterSpacing: "-0.03em", fontWeight: "800" }], "display-lg": ["56px", { lineHeight: "1.08", letterSpacing: "-0.04em", fontWeight: "800" }], "body-base": ["16px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }], "display-md-mobile": ["28px", { lineHeight: "1.2", letterSpacing: "-0.025em", fontWeight: "800" }], "title-md": ["18px", { lineHeight: "1.35", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-md": ["28px", { lineHeight: "1.22", letterSpacing: "-0.025em", fontWeight: "700" }], "body-small": ["14px", { lineHeight: "1.5", letterSpacing: "0", fontWeight: "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-base text-body-base text-ink-body flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><button aria-label="Open Menu" class="w-11 h-11 flex items-center justify-center rounded-lg text-ink-body hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-label text-label font-bold text-primary tracking-tight leading-none truncate">IKAPI STORE</span></div><span class="font-label-small text-label-small text-ink-muted leading-tight truncate">Portal Administrator</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-lg text-ink-body hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-12">
+<!-- State Simulator Floating Bar (Editorial Pill Deck) -->
+<aside aria-label="Simulator State" class="px-gutter-mobile pt-3 pb-2">
+<div class="p-1.5 rounded-full bg-surface-container-high flex items-center justify-between gap-1 overflow-x-auto shadow-sm">
+<button class="px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-small text-label-small font-bold shrink-0 transition-all flex items-center gap-1" id="sim-pending" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-cream animate-pulse"></span>
+        Pendaftaran (2)
+      </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest text-ink-muted hover:text-ink-body font-label-small text-label-small font-medium shrink-0 transition-all" id="sim-all" type="button">
+        Semua Akun (34)
+      </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest text-primary hover:bg-surface-lilac font-label-small text-label-small font-semibold shrink-0 transition-all flex items-center gap-0.5" id="sim-open-sheet" type="button">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+        Buka Detail
+      </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest text-error hover:bg-error-container font-label-small text-label-small font-semibold shrink-0 transition-all" id="sim-open-reject" type="button">
+        Tolak Modal
+      </button>
+</div>
+</aside>
+<!-- Editorial Section Header -->
+<header class="px-gutter-mobile pt-2 pb-4">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-lilac text-primary font-label-small text-label-small tracking-wider uppercase font-bold">
+        UC-40 • UC-28
+      </span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-small text-label-small text-ink-muted">Verifikasi Publisher</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-ink-body font-extrabold tracking-tight">
+      Kelola Pengguna
+    </h1>
+<p class="font-body-small text-body-small text-ink-muted mt-0.5">
+      Persetujuan pendaftaran &amp; kurasi status penerbit anggota.
+    </p>
+</header>
+<!-- Editorial Warm Color Block / Segment Summary -->
+<section class="mx-gutter-mobile mb-4 p-4 rounded-xl bg-surface-cream flex items-center justify-between shadow-sm relative overflow-hidden">
+<div class="flex flex-col z-10">
+<span class="font-label-small text-label-small text-on-tertiary-fixed-variant uppercase tracking-wider font-semibold">Tinjauan Tertunda</span>
+<span class="font-display-md-mobile text-display-md-mobile font-extrabold text-ink-body leading-none mt-1">02 Penerbit</span>
+<span class="font-body-small text-body-small text-ink-muted mt-1">Memerlukan validasi No. SK IKAPI</span>
+</div>
+<div class="w-14 h-14 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shadow-inner shrink-0 z-10">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<!-- Decorative page fold vector watermark -->
+<div class="absolute -right-4 -bottom-6 w-24 h-24 bg-surface-paper rounded-full opacity-60 pointer-events-none"></div>
+</section>
+<!-- Mobile Segmented Tabs -->
+<nav aria-label="User Filter Tabs" class="px-gutter-mobile mb-3">
+<div class="flex items-center border-b-2 border-surface-container-high relative">
+<button class="flex-1 py-3 text-center font-label text-label font-bold text-primary relative transition-colors flex items-center justify-center gap-1.5" id="tab-pending" type="button">
+<span>Menunggu</span>
+<span class="px-1.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-small text-[11px] font-bold">2</span>
+<span class="absolute bottom-[-2px] left-0 w-full h-[3px] bg-primary rounded-full" id="tab-indicator-1"></span>
+</button>
+<button class="flex-1 py-3 text-center font-label text-label font-semibold text-ink-muted hover:text-ink-body relative transition-colors flex items-center justify-center gap-1.5" id="tab-all" type="button">
+<span>Semua Pengguna</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-highest text-ink-muted font-label-small text-[11px] font-semibold">34</span>
+<span class="hidden absolute bottom-[-2px] left-0 w-full h-[3px] bg-primary rounded-full" id="tab-indicator-2"></span>
+</button>
+</div>
+</nav>
+<!-- Search & Quick Status Filters -->
+<section class="px-gutter-mobile mb-4 flex flex-col gap-2.5">
+<div class="relative w-full">
+<label class="sr-only" for="search-input">Cari penerbit atau email</label>
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-muted text-[20px] pointer-events-none">search</span>
+<input class="w-full h-12 pl-11 pr-4 rounded-xl bg-surface-container-lowest font-body-small text-body-small text-ink-body placeholder:text-ink-muted focus:outline-none focus:bg-surface-container-low shadow-sm" id="search-input" placeholder="Cari penerbit atau email..." type="text"/>
+</div>
+<!-- Status Chips (Horizontal scrollable, touch friendly) -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1" style="-webkit-overflow-scrolling: touch;">
+<button class="filter-chip px-3 py-1.5 rounded-full bg-inverse-deep text-on-primary font-label-small text-label-small font-semibold shrink-0 transition-all" type="button">
+        Semua
+      </button>
+<button class="filter-chip px-3 py-1.5 rounded-full bg-surface-container-high text-ink-body hover:bg-surface-container-highest font-label-small text-label-small font-semibold shrink-0 transition-all flex items-center gap-1" type="button">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+        Menunggu Approval
+      </button>
+<button class="filter-chip px-3 py-1.5 rounded-full bg-surface-container-high text-ink-body hover:bg-surface-container-highest font-label-small text-label-small font-semibold shrink-0 transition-all" type="button">
+        Aktif
+      </button>
+<button class="filter-chip px-3 py-1.5 rounded-full bg-surface-container-high text-ink-body hover:bg-surface-container-highest font-label-small text-label-small font-semibold shrink-0 transition-all" type="button">
+        Nonaktif
+      </button>
+</div>
+</section>
+<!-- List Section: Cards View -->
+<main class="px-gutter-mobile flex flex-col gap-3">
+<!-- Card 1: Pending (Mizan) -->
+<article class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3 transition-transform active:scale-[0.99]" id="card-mizan">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2.5 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-lilac flex items-center justify-center text-primary font-bold font-title-md shrink-0">
+            M
+          </div>
+<div class="min-w-0">
+<h2 class="font-title-md text-title-md text-ink-body font-bold truncate">PT Mizan Pustaka Utama</h2>
+<p class="font-body-small text-body-small text-ink-muted truncate">ahmad.fuadi@mizan.co.id</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-md bg-tertiary-fixed text-on-tertiary-fixed font-label-small text-[11px] font-bold shrink-0 tracking-tight flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+          Menunggu
+        </span>
+</div>
+<!-- Detail Matrix -->
+<div class="p-2.5 rounded-lg bg-surface-soft grid grid-cols-2 gap-2 font-label-small text-label-small">
+<div>
+<span class="text-ink-muted block text-[11px]">Penanggung Jawab</span>
+<span class="text-ink-body font-semibold truncate block">Ahmad Fuadi, M.Hum</span>
+</div>
+<div>
+<span class="text-ink-muted block text-[11px]">No. IKAPI</span>
+<span class="text-ink-body font-semibold truncate block">042/JBA/2018</span>
+</div>
+<div class="col-span-2 flex items-center justify-between pt-1 text-[11px]">
+<span class="text-ink-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+            Diajukan: 14 Nov 2026
+          </span>
+<span class="text-primary font-semibold">Dokumen Lengkap ✓</span>
+</div>
+</div>
+<!-- Primary Action -->
+<button class="btn-review w-full h-11 rounded-lg bg-surface-lilac hover:bg-primary-fixed text-primary font-label text-label font-bold flex items-center justify-center gap-1.5 transition-colors" data-address="Jl. Cinambo No. 135, Bandung" data-email="ahmad.fuadi@mizan.co.id" data-ikapi="042/JBA/2018" data-pic="Ahmad Fuadi, M.Hum" data-publisher="PT Mizan Pustaka Utama" data-tel="+62 22 7834 1120" type="button">
+<span>Tinjau Pendaftaran</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</article>
+<!-- Card 2: Pending (Angkasa) -->
+<article class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3 transition-transform active:scale-[0.99]" id="card-angkasa">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2.5 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-sky flex items-center justify-center text-on-surface font-bold font-title-md shrink-0">
+            A
+          </div>
+<div class="min-w-0">
+<h2 class="font-title-md text-title-md text-ink-body font-bold truncate">CV Angkasa Bandung</h2>
+<p class="font-body-small text-body-small text-ink-muted truncate">redaksi@angkasabandung.com</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-md bg-tertiary-fixed text-on-tertiary-fixed font-label-small text-[11px] font-bold shrink-0 tracking-tight flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+          Menunggu
+        </span>
+</div>
+<!-- Detail Matrix -->
+<div class="p-2.5 rounded-lg bg-surface-soft grid grid-cols-2 gap-2 font-label-small text-label-small">
+<div>
+<span class="text-ink-muted block text-[11px]">Penanggung Jawab</span>
+<span class="text-ink-body font-semibold truncate block">Dra. Ratna Juwita</span>
+</div>
+<div>
+<span class="text-ink-muted block text-[11px]">No. IKAPI</span>
+<span class="text-ink-body font-semibold truncate block">088/JBA/2021</span>
+</div>
+<div class="col-span-2 flex items-center justify-between pt-1 text-[11px]">
+<span class="text-ink-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+            Diajukan: 13 Nov 2026
+          </span>
+<span class="text-primary font-semibold">Dokumen Lengkap ✓</span>
+</div>
+</div>
+<!-- Primary Action -->
+<button class="btn-review w-full h-11 rounded-lg bg-surface-lilac hover:bg-primary-fixed text-primary font-label text-label font-bold flex items-center justify-center gap-1.5 transition-colors" data-address="Jl. Kolonel Masturi No. 19, Cimahi" data-email="redaksi@angkasabandung.com" data-ikapi="088/JBA/2021" data-pic="Dra. Ratna Juwita" data-publisher="CV Angkasa Bandung" data-tel="+62 22 420 5411" type="button">
+<span>Tinjau Pendaftaran</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</article>
+<!-- Card 3: Approved Account Example (Kiblat) -->
+<article class="p-4 rounded-xl bg-surface-container-low/70 flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2.5 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-ink-muted font-bold font-title-md shrink-0">
+            K
+          </div>
+<div class="min-w-0">
+<h2 class="font-title-md text-title-md text-ink-body font-bold truncate">PT Kiblat Buku Utama</h2>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-ink-muted font-label-small text-[10px] font-semibold">Penerbit</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-small text-[10px] font-bold">Aktif</span>
+</div>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-ink-body font-label-small text-label-small font-bold hover:bg-surface-container-high transition-colors flex items-center gap-0.5 shadow-sm" type="button">
+          Atur Akun →
+        </button>
+</div>
+<div class="flex items-center justify-between text-ink-muted font-body-small text-[12px] pt-1">
+<span>Anggota sejak Mar 2024</span>
+<span class="font-semibold text-ink-body">124 Judul Terdaftar</span>
+</div>
+</article>
+</main>
+<!-- Editorial Discovery Note / Footer Banner -->
+<aside class="px-gutter-mobile mt-6">
+<div class="p-3.5 rounded-xl bg-surface-sky/60 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[24px] shrink-0">policy</span>
+<p class="font-body-small text-[13px] text-on-surface-variant leading-snug">
+        Setiap akun penerbit yang disetujui terikat dengan Anggaran Dasar IKAPI dan kepemilikan ISBN resmi.
+      </p>
+</div>
+</aside>
+<!-- UC-28 Detail Review Mobile Bottom Sheet (Slide-Up Modal) -->
+<div class="fixed inset-0 z-50 bg-inverse-deep/50 backdrop-blur-sm transition-opacity duration-200 opacity-100 pointer-events-auto flex flex-col justify-end" id="bottom-sheet-overlay">
+<div class="w-full max-h-[813px] bg-surface-container-lowest rounded-t-3xl flex flex-col shadow-2xl overflow-hidden transition-transform duration-300 translate-y-0" id="bottom-sheet-panel">
+<!-- Drag Handle & Dismiss Header -->
+<div class="pt-3 pb-2 px-gutter-mobile flex flex-col items-center relative shrink-0 bg-surface-container-lowest">
+<div class="w-12 h-1.5 rounded-full bg-outline-variant mb-2"></div>
+<div class="w-full flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-cream text-tertiary font-label-small text-[11px] font-bold">
+              Menunggu Approval
+            </span>
+<span class="font-label-small text-label-small text-ink-muted font-medium">Verifikasi Admin</span>
+</div>
+<button aria-label="Tutup Review" class="w-9 h-9 rounded-full bg-surface-container-high hover:bg-surface-container-highest flex items-center justify-center text-ink-body transition-colors" id="btn-close-sheet" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<!-- Sheet Scrollable Body -->
+<div class="px-gutter-mobile py-2 overflow-y-auto space-y-4">
+<!-- Title & Header Block -->
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-ink-body tracking-tight" id="sheet-publisher-name">
+            PT Mizan Pustaka Utama
+          </h3>
+<p class="font-body-small text-body-small text-ink-muted">
+            Permohonan verifikasi akun penjual resmi IKAPI Store.
+          </p>
+</div>
+<!-- Identity Matrix: 6 Crucial Fields (UC-28, strictly no passwords) -->
+<div class="p-3.5 rounded-2xl bg-surface-soft space-y-3">
+<div class="flex flex-col">
+<span class="font-label-small text-[11px] text-ink-muted uppercase tracking-wider font-semibold">Nama Penerbit Resmi</span>
+<span class="font-label text-label font-bold text-ink-body mt-0.5" id="sheet-field-name">PT Mizan Pustaka Utama</span>
+</div>
+<div class="h-px bg-surface-variant w-full"></div>
+<div class="grid grid-cols-2 gap-3">
+<div class="flex flex-col">
+<span class="font-label-small text-[11px] text-ink-muted uppercase tracking-wider font-semibold">Penanggung Jawab</span>
+<span class="font-body-small text-body-small font-semibold text-ink-body mt-0.5" id="sheet-field-pic">Ahmad Fuadi, M.Hum</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-small text-[11px] text-ink-muted uppercase tracking-wider font-semibold">No. Anggota IKAPI</span>
+<span class="font-body-small text-body-small font-semibold text-primary mt-0.5" id="sheet-field-ikapi">042/JBA/2018</span>
+</div>
+</div>
+<div class="h-px bg-surface-variant w-full"></div>
+<div class="grid grid-cols-2 gap-3">
+<div class="flex flex-col min-w-0">
+<span class="font-label-small text-[11px] text-ink-muted uppercase tracking-wider font-semibold">Email Kontak</span>
+<span class="font-body-small text-body-small font-medium text-ink-body mt-0.5 truncate" id="sheet-field-email">ahmad.fuadi@mizan.co.id</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-small text-[11px] text-ink-muted uppercase tracking-wider font-semibold">Nomor Telepon</span>
+<span class="font-body-small text-body-small font-medium text-ink-body mt-0.5" id="sheet-field-tel">+62 22 7834 1120</span>
+</div>
+</div>
+<div class="h-px bg-surface-variant w-full"></div>
+<div class="flex flex-col">
+<span class="font-label-small text-[11px] text-ink-muted uppercase tracking-wider font-semibold">Alamat Kantor Penerbit</span>
+<span class="font-body-small text-body-small font-medium text-ink-body mt-0.5" id="sheet-field-address">Jl. Cinambo No. 135, Cisaranten Wetan, Bandung</span>
+</div>
+</div>
+<!-- Verification Checklist -->
+<div class="p-3 rounded-xl bg-surface-cream text-ink-body space-y-2">
+<span class="font-label-small text-label-small font-bold text-on-tertiary-fixed-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">task_alt</span>
+            Pemeriksaan Kelayakan Dokumen
+          </span>
+<div class="space-y-1.5 text-[12px] text-ink-muted">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>SK Keanggotaan IKAPI Pusat telah terverifikasi aktif.</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Kesesuaian NPWP dan Rekening Bank Penerbit valid.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer (Buttons >= 48px height) -->
+<div class="p-gutter-mobile pt-2 pb-safe bg-surface-container-lowest flex flex-col gap-2 shadow-[0_-4px_16px_rgba(0,0,0,0.04)]">
+<button class="w-full h-12 rounded-xl bg-primary hover:bg-surface-tint active:bg-inverse-deep text-on-primary font-label text-label font-bold flex items-center justify-center gap-2 transition-colors shadow-md" id="btn-approve" type="button">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>Setujui Penerbit</span>
+</button>
+<button class="w-full h-11 rounded-xl bg-surface-container-high hover:bg-error-container text-feedback-error font-label text-label font-bold flex items-center justify-center gap-1.5 transition-colors" id="btn-show-reject" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+<span>Tolak Pendaftaran</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Modal Overlay: 'Alasan Penolakan' -->
+<dialog class="fixed inset-0 z-50 p-4 m-0 w-full h-full bg-transparent flex items-center justify-center backdrop:bg-inverse-deep/60 hidden" id="modal-reject">
+<div class="w-full max-w-sm bg-surface-container-lowest rounded-2xl p-5 shadow-2xl flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-feedback-error">
+<span class="material-symbols-outlined text-[24px]">report</span>
+<h4 class="font-title-md text-title-md font-bold text-ink-body">Tolak Pendaftaran</h4>
+</div>
+<button aria-label="Tutup Dialog" class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-ink-muted hover:text-ink-body" id="btn-close-reject-x" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<p class="font-body-small text-body-small text-ink-muted">
+        Berikan catatan detail alasan penolakan. Surel resmi pemberitahuan akan otomatis diteruskan ke penerbit.
+      </p>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-small text-label-small font-bold text-ink-body" for="reject-reason">Alasan Penolakan / Catatan Perbaikan</label>
+<textarea class="w-full p-3 rounded-xl bg-surface-container-low font-body-small text-body-small text-ink-body placeholder:text-ink-muted focus:outline-none focus:bg-surface-container-lowest shadow-sm resize-none" id="reject-reason" placeholder="Contoh: Lampiran SK IKAPI telah kedaluwarsa atau alamat tidak sinkron..." rows="3"></textarea>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-11 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-ink-body font-label text-label font-semibold transition-colors" id="btn-cancel-reject" type="button">
+          Batal
+        </button>
+<button class="flex-1 h-11 rounded-xl bg-error hover:bg-error/90 text-on-error font-label text-label font-bold transition-colors shadow-sm" id="btn-submit-reject" type="button">
+          Kirim Penolakan
+        </button>
+</div>
+</div>
+</dialog>
+<!-- Interactive Toast Notification -->
+<aside class="fixed bottom-6 left-4 right-4 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="toast-success">
+<div class="p-3.5 rounded-xl bg-inverse-surface text-inverse-on-surface shadow-2xl flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-tertiary-fixed text-[22px] shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-small text-body-small font-medium truncate" id="toast-message">Status akun berhasil diperbarui!</span>
+</div>
+<button class="text-inverse-primary font-label-small text-label-small font-bold uppercase tracking-wider shrink-0 pointer-events-auto" id="btn-close-toast" type="button">
+        Tutup
+      </button>
+</div>
+</aside>
+</div>
+<script>
+  (function () {
+    const bottomSheet = document.getElementById('bottom-sheet-overlay');
+    const bottomSheetPanel = document.getElementById('bottom-sheet-panel');
+    const btnCloseSheet = document.getElementById('btn-close-sheet');
+    const btnApprove = document.getElementById('btn-approve');
+    const btnShowReject = document.getElementById('btn-show-reject');
+
+    const modalReject = document.getElementById('modal-reject');
+    const btnCloseRejectX = document.getElementById('btn-close-reject-x');
+    const btnCancelReject = document.getElementById('btn-cancel-reject');
+    const btnSubmitReject = document.getElementById('btn-submit-reject');
+    const rejectReason = document.getElementById('reject-reason');
+
+    const toast = document.getElementById('toast-success');
+    const toastMsg = document.getElementById('toast-message');
+    const btnCloseToast = document.getElementById('btn-close-toast');
+
+    // Simulator Buttons
+    const simPending = document.getElementById('sim-pending');
+    const simAll = document.getElementById('sim-all');
+    const simOpenSheet = document.getElementById('sim-open-sheet');
+    const simOpenReject = document.getElementById('sim-open-reject');
+
+    // Tab buttons
+    const tabPending = document.getElementById('tab-pending');
+    const tabAll = document.getElementById('tab-all');
+    const tabIndicator1 = document.getElementById('tab-indicator-1');
+    const tabIndicator2 = document.getElementById('tab-indicator-2');
+
+    // Dynamic Sheet Fields
+    const sheetPubName = document.getElementById('sheet-publisher-name');
+    const sheetFieldPic = document.getElementById('sheet-field-pic');
+    const sheetFieldEmail = document.getElementById('sheet-field-email');
+    const sheetFieldTel = document.getElementById('sheet-field-tel');
+    const sheetFieldAddress = document.getElementById('sheet-field-address');
+    const sheetFieldIkapi = document.getElementById('sheet-field-ikapi');
+    const sheetFieldName = document.getElementById('sheet-field-name');
+
+    function openSheet(data) {
+      if (data) {
+        sheetPubName.textContent = data.publisher || 'PT Mizan Pustaka Utama';
+        sheetFieldName.textContent = data.publisher || 'PT Mizan Pustaka Utama';
+        sheetFieldPic.textContent = data.pic || 'Ahmad Fuadi, M.Hum';
+        sheetFieldEmail.textContent = data.email || 'ahmad.fuadi@mizan.co.id';
+        sheetFieldTel.textContent = data.tel || '+62 22 7834 1120';
+        sheetFieldAddress.textContent = data.address || 'Jl. Cinambo No. 135, Bandung';
+        sheetFieldIkapi.textContent = data.ikapi || '042/JBA/2018';
+      }
+      bottomSheet.classList.remove('opacity-0', 'pointer-events-none');
+      bottomSheet.classList.add('opacity-100', 'pointer-events-auto');
+      bottomSheetPanel.classList.remove('translate-y-full');
+      bottomSheetPanel.classList.add('translate-y-0');
+    }
+
+    function closeSheet() {
+      bottomSheet.classList.remove('opacity-100', 'pointer-events-auto');
+      bottomSheet.classList.add('opacity-0', 'pointer-events-none');
+      bottomSheetPanel.classList.remove('translate-y-0');
+      bottomSheetPanel.classList.add('translate-y-full');
+    }
+
+    function showToast(text) {
+      toastMsg.textContent = text;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3500);
+    }
+
+    function openRejectModal() {
+      modalReject.classList.remove('hidden');
+      modalReject.showModal();
+    }
+
+    function closeRejectModal() {
+      modalReject.classList.add('hidden');
+      modalReject.close();
+      rejectReason.value = '';
+    }
+
+    // Attach listeners to Card "Tinjau Pendaftaran" buttons
+    document.querySelectorAll('.btn-review').forEach(btn => {
+      btn.addEventListener('click', () => {
+        openSheet(btn.dataset);
+      });
+    });
+
+    btnCloseSheet.addEventListener('click', closeSheet);
+
+    // Approve Flow
+    btnApprove.addEventListener('click', () => {
+      closeSheet();
+      showToast('Penerbit disetujui! Status akun berhasil diperbarui.');
+      const cardMizan = document.getElementById('card-mizan');
+      if (cardMizan) {
+        cardMizan.style.opacity = '0.4';
+        cardMizan.style.pointerEvents = 'none';
+      }
+    });
+
+    // Reject Flow
+    btnShowReject.addEventListener('click', () => {
+      openRejectModal();
+    });
+
+    btnCloseRejectX.addEventListener('click', closeRejectModal);
+    btnCancelReject.addEventListener('click', closeRejectModal);
+
+    btnSubmitReject.addEventListener('click', () => {
+      closeRejectModal();
+      closeSheet();
+      showToast('Pendaftaran ditolak. Notifikasi perbaikan terkirim.');
+    });
+
+    btnCloseToast.addEventListener('click', () => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-24', 'opacity-0');
+    });
+
+    // State Simulator Hookups
+    simOpenSheet.addEventListener('click', () => {
+      openSheet();
+    });
+
+    simOpenReject.addEventListener('click', () => {
+      openRejectModal();
+    });
+
+    simPending.addEventListener('click', () => {
+      simPending.classList.replace('bg-surface-container-lowest', 'bg-primary');
+      simPending.classList.replace('text-ink-muted', 'text-on-primary');
+      simAll.classList.replace('bg-primary', 'bg-surface-container-lowest');
+      simAll.classList.replace('text-on-primary', 'text-ink-muted');
+      tabIndicator1.classList.remove('hidden');
+      tabIndicator2.classList.add('hidden');
+      tabPending.classList.replace('text-ink-muted', 'text-primary');
+      tabAll.classList.replace('text-primary', 'text-ink-muted');
+    });
+
+    simAll.addEventListener('click', () => {
+      simAll.classList.replace('bg-surface-container-lowest', 'bg-primary');
+      simAll.classList.replace('text-ink-muted', 'text-on-primary');
+      simPending.classList.replace('bg-primary', 'bg-surface-container-lowest');
+      simPending.classList.replace('text-on-primary', 'text-ink-muted');
+      tabIndicator1.classList.add('hidden');
+      tabIndicator2.classList.remove('hidden');
+      tabAll.classList.replace('text-ink-muted', 'text-primary');
+      tabPending.classList.replace('text-primary', 'text-ink-muted');
+      showToast('Menampilkan seluruh 34 akun terdaftar.');
+    });
+
+    tabPending.addEventListener('click', () => simPending.click());
+    tabAll.addEventListener('click', () => simAll.click());
+
+    // Chip active toggle
+    document.querySelectorAll('.filter-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.filter-chip').forEach(c => {
+          c.classList.remove('bg-inverse-deep', 'text-on-primary');
+          c.classList.add('bg-surface-container-high', 'text-ink-body');
+        });
+        chip.classList.remove('bg-surface-container-high', 'text-ink-body');
+        chip.classList.add('bg-inverse-deep', 'text-on-primary');
+      });
+    });
+  })();
+</script></main></body></html>

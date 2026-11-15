@@ -1,0 +1,676 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-fixed":"#0c006a","primary-fixed-dim":"#c2c1ff","surface-sky":"#E0F6FC","surface-paper":"#FFF0E3","inverse-primary":"#c2c1ff","surface-container":"#efecfb","surface-bright":"#fcf8ff","on-secondary-fixed":"#330e1d","ink-body":"#191923","secondary-fixed":"#ffd9e3","on-primary":"#ffffff","on-error-container":"#93000a","on-secondary-fixed-variant":"#663949","primary-container":"#5956e9","border-subtle":"#E7E7EF","on-error":"#ffffff","tertiary":"#745b00","primary-fixed":"#e2dfff","error-container":"#ffdad6","tertiary-container":"#cea623","on-surface-variant":"#464555","on-background":"#1b1b25","inverse-surface":"#302f3a","error":"#ba1a1a","on-primary-container":"#eeeaff","on-secondary-container":"#7a495a","background":"#fcf8ff","inverse-deep":"#24233D","secondary-container":"#fdbed1","surface-variant":"#e3e1ef","tertiary-fixed-dim":"#ecc23f","border-bold":"#CFD0DD","on-tertiary-fixed-variant":"#584400","surface-cream":"#FFF1E3","on-tertiary-fixed":"#241a00","surface-tint":"#4c48dc","tertiary-fixed":"#ffe08d","surface-container-highest":"#e3e1ef","secondary":"#815060","primary":"#3f3ad0","on-tertiary-container":"#4f3d00","feedback-error":"#B42318","surface-soft":"#F8F7FF","secondary-fixed-dim":"#f4b5c8","surface":"#fcf8ff","ink-muted":"#555665","surface-dim":"#dbd8e7","surface-lilac":"#E5E4FF","on-surface":"#1b1b25","on-primary-fixed-variant":"#3229c4","surface-container-lowest":"#ffffff","surface-container-low":"#f5f2ff","on-secondary":"#ffffff","inverse-on-surface":"#f2effe","surface-container-high":"#e9e6f5","outline":"#777586","outline-variant":"#c7c4d7","on-tertiary":"#ffffff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-lg":"1.5rem","space-3xl":"4.5rem","gutter-mobile":"1.25rem",margin:"2.5rem",gutter:"1.5rem","space-xs":"0.25rem","space-md":"1rem","space-2xl":"3rem","margin-mobile":"1.25rem","space-xl":"2rem","space-sm":"0.5rem"},fontFamily:{"display-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],label:["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-small":["Plus Jakarta Sans"],"body-base":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"label-small":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"display-md":["Plus Jakarta Sans"],"display-md-mobile":["Plus Jakarta Sans"]},fontSize:{"display-lg":["56px",{lineHeight:"1.08",letterSpacing:"-0.04em",fontWeight:"800"}],"headline-md":["28px",{lineHeight:"1.22",letterSpacing:"-0.025em",fontWeight:"700"}],label:["14px",{lineHeight:"1.35",letterSpacing:"0",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"1.25",letterSpacing:"-0.02em",fontWeight:"700"}],"body-small":["14px",{lineHeight:"1.5",letterSpacing:"0",fontWeight:"400"}],"body-base":["16px",{lineHeight:"1.6",letterSpacing:"0",fontWeight:"400"}],"title-md":["18px",{lineHeight:"1.35",letterSpacing:"-0.01em",fontWeight:"700"}],"label-small":["12px",{lineHeight:"1.3",letterSpacing:"0.02em",fontWeight:"600"}],"headline-lg":["36px",{lineHeight:"1.18",letterSpacing:"-0.03em",fontWeight:"700"}],"display-lg-mobile":["34px",{lineHeight:"1.15",letterSpacing:"-0.03em",fontWeight:"800"}],"display-md":["44px",{lineHeight:"1.12",letterSpacing:"-0.035em",fontWeight:"800"}],"display-md-mobile":["28px",{lineHeight:"1.2",letterSpacing:"-0.025em",fontWeight:"800"}]}}}};</script></head><body class="bg-surface font-body-base text-ink-body antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-space-lg mb-space-xl"><div class="flex items-center gap-space-sm mb-space-xs"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">auto_stories</span></div><div><span class="block font-title-md text-title-md text-ink-body tracking-tight leading-tight">IKAPI Store</span><span class="block font-label-small text-label-small text-primary-container font-bold uppercase tracking-wider">Portal Administrator</span></div></div></div><nav class="flex flex-col gap-space-md px-space-md" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg shadow-sm"><div class="flex flex-col gap-1"><span class="px-space-sm font-label-small text-label-small text-ink-muted uppercase tracking-wider">Utama</span><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a></div><div class="flex flex-col gap-1"><span class="px-space-sm font-label-small text-label-small text-ink-muted uppercase tracking-wider">Manajemen</span><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="kelola-pengguna" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Kelola Pengguna</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="pengawasan-katalog" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>Pengawasan Katalog</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2.5 transition-colors bg-primary-container text-on-primary font-bold rounded-lg shadow-sm" data-path="moderasi-ulasan" href="#"><span class="material-symbols-outlined text-[20px]">rate_review</span><span>Moderasi Ulasan</span></a></div><div class="flex flex-col gap-1"><span class="px-space-sm font-label-small text-label-small text-ink-muted uppercase tracking-wider">Keuangan &amp; Monitoring</span><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="monitoring-global" href="#"><span class="material-symbols-outlined text-[20px]">insights</span><span>Monitoring Global</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="kelola-pencairan-dana" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span>Kelola Pencairan Dana</span></a></div></nav></div><div class="px-space-lg pt-space-md border-t-0"><div class="p-space-sm rounded-lg bg-surface-cream flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary text-[22px]">verified</span><div><p class="font-label-small text-label-small text-on-surface font-bold">Status Sistem Aktif</p><p class="font-body-small text-body-small text-ink-muted text-[11px] leading-tight">Server Wilayah Jabar Stabil</p></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-lg"><button aria-label="Notifikasi Administrator" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-feedback-error rounded-full ring-2 ring-surface"></span></button><div class="h-7 w-[1px] bg-border-subtle"></div><div class="flex items-center gap-space-sm"><div class="text-right hidden sm:block"><p class="font-label text-label text-ink-body font-bold leading-tight">Admin Pusat</p><p class="font-label-small text-label-small text-ink-muted leading-tight">Operational Lead</p></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full min-h-screen bg-surface px-space-xl py-space-xl"><div class="flex flex-col w-full">
+<!-- Interactive Simulator Testing Bar (Dev & Audit Controls) -->
+<div class="w-full bg-surface-container-high px-space-md py-space-sm rounded-xl mb-space-lg flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary-container">science</span>
+<span class="font-label-small text-label-small text-ink-body font-bold uppercase tracking-wider">Simulator State &amp; UAT:</span>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<button class="px-2.5 py-1 rounded bg-primary-container text-on-primary font-label-small text-label-small transition-colors" id="sim-btn-tab-reported" onclick="setSimTab('reported')" type="button">Tab: Dilaporkan (3)</button>
+<button class="px-2.5 py-1 rounded bg-surface-container text-ink-body hover:bg-surface-variant font-label-small text-label-small transition-colors" id="sim-btn-tab-all" onclick="setSimTab('all')" type="button">Tab: Semua Ulasan (28)</button>
+<button class="px-2.5 py-1 rounded bg-surface-container text-ink-body hover:bg-surface-variant font-label-small text-label-small transition-colors" onclick="toggleDrawer(true)" type="button">Drawer: Tinjau Komentar</button>
+<button class="px-2.5 py-1 rounded bg-surface-container text-error hover:bg-error-container font-label-small text-label-small transition-colors" onclick="openDeleteModal()" type="button">Modal: Hapus Komentar</button>
+<button class="px-2.5 py-1 rounded bg-surface-container text-ink-body hover:bg-surface-variant font-label-small text-label-small transition-colors" onclick="simulateKeepComment()" type="button">Aksi: Pertahankan Komentar</button>
+<button class="px-2.5 py-1 rounded bg-surface-container text-ink-body hover:bg-surface-variant font-label-small text-label-small transition-colors" onclick="triggerToast('Komentar berhasil dihapus dari sistem')" type="button">Toast: Komentar Dihapus</button>
+<button class="px-2.5 py-1 rounded bg-surface-container text-ink-body hover:bg-surface-variant font-label-small text-label-small transition-colors" id="sim-btn-empty" onclick="setEmptyQueueState()" type="button">State: Antrean Bersih</button>
+</div>
+</div>
+<!-- Page Header: Editorial & Contextual -->
+<div class="mb-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<div class="inline-flex items-center gap-2 px-space-sm py-0.5 rounded-full bg-surface-lilac text-on-primary-fixed-variant font-label-small text-label-small font-bold uppercase tracking-wider mb-space-xs">
+<span class="material-symbols-outlined text-[15px]">verified_user</span>
+          Modul Pengawasan Literasi &amp; Komunitas
+        </div>
+<h1 class="font-headline-lg text-headline-lg text-ink-body tracking-tight">Moderasi Ulasan &amp; Komentar</h1>
+<p class="font-body-base text-body-base text-ink-muted mt-1 max-w-3xl">
+          Tinjau ulasan dan komentar pembeli, periksa laporan pelanggaran etika literasi, dan ambil keputusan moderasi yang akurat.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="px-space-md py-space-sm rounded-xl bg-surface-container flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">pending_actions</span>
+</div>
+<div>
+<span class="block font-label-small text-label-small text-ink-muted uppercase">Antrean Aktif</span>
+<span class="font-title-md text-title-md text-ink-body font-bold" id="queue-counter-badge">3 Kasus Terbuka</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Navigation Tabs -->
+<div class="flex items-center gap-space-md mb-space-lg">
+<button class="relative pb-space-sm font-label text-label flex items-center gap-space-xs text-primary font-bold" id="tab-nav-reported" onclick="setSimTab('reported')" type="button">
+<span>Dilaporkan</span>
+<span class="px-2 py-0.5 rounded-full bg-error text-on-error font-label-small text-label-small" id="reported-pill">3 Perlu Tindakan</span>
+<span class="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-container rounded-full" id="tab-indicator-reported"></span>
+</button>
+<button class="relative pb-space-sm font-label text-label flex items-center gap-space-xs text-ink-muted hover:text-ink-body transition-colors" id="tab-nav-all" onclick="setSimTab('all')" type="button">
+<span>Semua Ulasan</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-ink-muted font-label-small text-label-small">28 Ulasan</span>
+<span class="absolute bottom-0 left-0 right-0 h-0.5 bg-transparent rounded-full" id="tab-indicator-all"></span>
+</button>
+</div>
+<!-- Filter & Search Toolbar -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm mb-space-lg flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 bg-surface-bright rounded-lg font-body-small text-body-small text-ink-body placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary-container/20 focus:bg-surface-container-lowest transition-all" id="filter-search" oninput="handleSearch(this.value)" placeholder="Cari isi komentar, judul buku, atau nama pembeli..." type="text">
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="relative min-w-[200px]">
+<label class="sr-only" for="filter-category">Jenis Laporan</label>
+<select class="w-full appearance-none bg-surface-bright pl-3.5 pr-9 py-2.5 rounded-lg font-label-small text-label-small text-ink-body focus:outline-none focus:ring-2 focus:ring-primary-container/20 cursor-pointer" id="filter-category" onchange="handleCategoryFilter(this.value)">
+<option value="all">Jenis Laporan: Semua (3)</option>
+<option value="hate">Kata Kasar &amp; Provokasi</option>
+<option value="spam">Spam &amp; Promosi Komersial</option>
+<option value="speech">Ujaran Kebencian &amp; SARA</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+<div class="relative min-w-[190px]">
+<label class="sr-only" for="filter-sort">Urutan Laporan</label>
+<select class="w-full appearance-none bg-surface-bright pl-3.5 pr-9 py-2.5 rounded-lg font-label-small text-label-small text-ink-body focus:outline-none focus:ring-2 focus:ring-primary-container/20 cursor-pointer" id="filter-sort">
+<option value="latest">Urutan: Laporan Terbaru</option>
+<option value="reports_count">Urutan: Pelapor Terbanyak</option>
+<option value="oldest">Urutan: Terlama Menunggu</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">sort</span>
+</div>
+</div>
+</div>
+<!-- Split List-Detail Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start relative">
+<!-- Left Area: Editorial Moderation Queue Feed (~60% / 7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md" id="queue-container">
+<!-- Item 1 (Selected Active) -->
+<div class="moderation-item cursor-pointer p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all relative ring-2 ring-primary-container" id="item-card-1" onclick="selectItem(1)">
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center font-title-md text-title-md text-on-secondary-fixed">
+              RP
+            </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-ink-body leading-tight">Rian Pratama</span>
+<span class="font-label-small text-label-small text-ink-muted">@rian_pratama</span>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-small text-label-small text-primary font-semibold">Pembeli Terverifikasi</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-small text-label-small text-ink-muted">Rating: 1 / 5</span>
+</div>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-small text-label-small font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">flag</span>
+            Kata Kasar &amp; Provokasi
+          </span>
+</div>
+<!-- Book context chip -->
+<div class="p-space-sm rounded-lg bg-surface-container-low mb-space-md flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-container">menu_book</span>
+<p class="font-body-small text-body-small text-ink-body">
+            Pada buku <span class="font-bold text-ink-body">"Laskar Pelangi"</span> karya <span class="text-ink-muted">Andrea Hirata</span> • <span class="text-on-surface-variant">PT Bentang Pustaka</span>
+</p>
+</div>
+<!-- Content Preview -->
+<p class="font-body-base text-body-base text-ink-body bg-surface-bright p-space-md rounded-lg leading-relaxed mb-space-md">
+          “Buku ini sangat mengecewakan! Penerbit dan penulisnya tolol tidak tahu cara format e-book, buang-buang uang saja beli sampah begini! Jangan ada yang beli produk penipu ini!”
+        </p>
+<div class="flex items-center justify-between pt-space-xs text-ink-muted">
+<div class="flex items-center gap-space-sm font-label-small text-label-small">
+<span class="flex items-center gap-1 text-feedback-error font-semibold">
+<span class="material-symbols-outlined text-[16px]">report</span>
+              Dilaporkan 2 jam lalu oleh 3 pengguna
+            </span>
+</div>
+<button class="inline-flex items-center gap-1 px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary font-label text-label transition-colors" type="button">
+<span>Tinjau Komentar</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="moderation-item cursor-pointer p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all relative" id="item-card-2" onclick="selectItem(2)">
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center font-title-md text-title-md text-on-tertiary-fixed">
+              PB
+            </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-ink-body leading-tight">PromoBookOnline99</span>
+<span class="font-label-small text-label-small text-ink-muted">@bot_diskon</span>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-ink-muted">account_circle</span>
+<span class="font-label-small text-label-small text-ink-muted font-semibold">Akun Baru Terdaftar</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-small text-label-small text-ink-muted">Rating: 5 / 5</span>
+</div>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-paper text-tertiary font-label-small text-label-small font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+            Spam &amp; Promosi Eksternal
+          </span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low mb-space-md flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-container">menu_book</span>
+<p class="font-body-small text-body-small text-ink-body">
+            Pada buku <span class="font-bold text-ink-body">"Sang Pemimpi"</span> karya <span class="text-ink-muted">Andrea Hirata</span> • <span class="text-on-surface-variant">PT Mizan Pustaka Utama</span>
+</p>
+</div>
+<p class="font-body-base text-body-base text-ink-body bg-surface-bright p-space-md rounded-lg leading-relaxed mb-space-md">
+          “PROMO GILA! Mau dapat e-book gratis dan uang tunai jutaan rupiah tiap hari? Klik link bit.ly/uang-gratis-ikapi sekarang juga! Terbukti membayar 100% no hoax!!”
+        </p>
+<div class="flex items-center justify-between pt-space-xs text-ink-muted">
+<div class="flex items-center gap-space-sm font-label-small text-label-small">
+<span class="flex items-center gap-1 text-tertiary font-semibold">
+<span class="material-symbols-outlined text-[16px]">report</span>
+              Dilaporkan 4 jam lalu oleh 1 pengguna
+            </span>
+</div>
+<button class="inline-flex items-center gap-1 px-space-md py-1.5 rounded-lg bg-surface-container text-ink-body hover:bg-surface-variant font-label text-label transition-colors" type="button">
+<span>Tinjau Komentar</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="moderation-item cursor-pointer p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all relative" id="item-card-3" onclick="selectItem(3)">
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center font-title-md text-title-md text-on-secondary-container">
+              DS
+            </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-ink-body leading-tight">Dewi Sartika</span>
+<span class="font-label-small text-label-small text-ink-muted">@dewi.sartika</span>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-small text-label-small text-primary font-semibold">Pembeli Terverifikasi</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-small text-label-small text-ink-muted">Rating: 1 / 5</span>
+</div>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-small text-label-small font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">gavel</span>
+            Ujaran Kebencian
+          </span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low mb-space-md flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-container">menu_book</span>
+<p class="font-body-small text-body-small text-ink-body">
+            Pada buku <span class="font-bold text-ink-body">"Aroma Karsa"</span> karya <span class="text-ink-muted">Dee Lestari</span> • <span class="text-on-surface-variant">CV Angkasa Publishing</span>
+</p>
+</div>
+<p class="font-body-base text-body-base text-ink-body bg-surface-bright p-space-md rounded-lg leading-relaxed mb-space-md">
+          “Penulis dan jalan ceritanya sengaja merusak moral generasi muda dengan menyisipkan propaganda kebencian antar suku. Buku seperti ini harus dibakar dan dilarang edar!”
+        </p>
+<div class="flex items-center justify-between pt-space-xs text-ink-muted">
+<div class="flex items-center gap-space-sm font-label-small text-label-small">
+<span class="flex items-center gap-1 text-feedback-error font-semibold">
+<span class="material-symbols-outlined text-[16px]">report</span>
+              Dilaporkan kemarin oleh 5 pengguna
+            </span>
+</div>
+<button class="inline-flex items-center gap-1 px-space-md py-1.5 rounded-lg bg-surface-container text-ink-body hover:bg-surface-variant font-label text-label transition-colors" type="button">
+<span>Tinjau Komentar</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Empty State Component (Hidden by default, shown via sim toggle) -->
+<div class="hidden lg:col-span-7 p-space-3xl rounded-xl bg-surface-container-lowest shadow-sm flex-col items-center justify-center text-center" id="empty-queue-view">
+<div class="w-16 h-16 rounded-full bg-surface-lilac flex items-center justify-center text-primary-container mb-space-md">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-ink-body mb-space-xs">Tidak ada komentar yang perlu ditinjau</h3>
+<p class="font-body-base text-body-base text-ink-muted max-w-md mb-space-lg">
+        Semua antrean moderasi ulasan dan komentar pembeli telah selesai diproses. Sistem IKAPI Store berjalan normal dan kondusif.
+      </p>
+<button class="px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary font-label text-label" onclick="resetQueueState()" type="button">
+        Muat Ulang Antrean Laporan
+      </button>
+</div>
+<!-- Right Side: Contextual Inspection Drawer (~40% / 5 cols) -->
+<div class="lg:col-span-5 sticky top-20 flex flex-col gap-space-md" id="review-drawer">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-md flex flex-col gap-space-lg">
+<!-- Drawer Header -->
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-title-md text-title-md text-ink-body">Detail Moderasi Komentar</h2>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-small text-label-small text-ink-muted font-mono" id="detail-id-tag">MOD-2026-089</span>
+</div>
+<p class="font-body-small text-body-small text-ink-muted">Pemeriksaan bukti laporan dan riwayat pesanan pembeli</p>
+</div>
+<button aria-label="Tutup panel moderasi" class="p-1.5 rounded-lg text-ink-muted hover:bg-surface-container hover:text-ink-body transition-colors" onclick="toggleDrawer(false)" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Section A: BUKU YANG DIULAS -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<span class="font-label-small text-label-small text-ink-muted font-bold uppercase tracking-wider">Bagian A: Buku yang Diulas</span>
+<div class="flex gap-space-md items-start">
+<div class="w-16 h-24 rounded-lg bg-surface-container-highest flex-shrink-0 overflow-hidden shadow-sm relative">
+<img class="w-full h-full object-cover" data-alt="Cover of the book Laskar Pelangi by Andrea Hirata, a nostalgic literary novel featuring a vibrant rainbow over rural Indonesian Belitung landscape with artistic typography in Electric Periwinkle and soft cream aesthetic." id="detail-book-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDegLIRcdKSfVHVg2r62LNsbI4rsYkZP9yzaSJx_7jzBThNY65o3BIr61bO-tRsSMVOVHVjNUpXY0JinxxEDOL7kZ46x3TyTLGSUl1h87SrscLeyyR-me_ivIMPjCRRLsIfAl1p_sqTtlgceHERAVg3rmrpRYtuIosIrIYEIpLLi5uM_AlMnyighlweVCGvqS1LNNiOxiGXPcD0wNBGZG-Io0iBKK9BrRQKuDyDfgL7">
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-title-md text-title-md text-ink-body truncate" id="detail-book-title">Laskar Pelangi</h3>
+<p class="font-body-small text-body-small text-ink-muted" id="detail-book-author">Karya Andrea Hirata</p>
+<p class="font-label-small text-label-small text-on-surface-variant font-medium mt-1" id="detail-book-publisher">Penerbit: PT Bentang Pustaka</p>
+<div class="flex flex-wrap items-center gap-2 mt-2">
+<span class="px-2 py-0.5 rounded bg-surface-paper text-tertiary font-label-small text-label-small font-bold flex items-center gap-1" id="detail-book-rating"><span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span> 1/5 Bintang</span>
+<span class="px-2 py-0.5 rounded bg-surface-lilac text-on-primary-fixed-variant font-label-small text-label-small font-mono" id="detail-order-id">#ORD-2026-0889 (Terverifikasi Lunas)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section B: KOMENTAR LENGKAP PEMBELI -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-small text-label-small text-ink-muted font-bold uppercase tracking-wider">Bagian B: Komentar Lengkap Pembeli</span>
+<span class="font-label-small text-label-small text-ink-muted" id="detail-comment-time">14 Nov 2026, 11:20 WIB</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-bright relative">
+<span class="material-symbols-outlined absolute top-3 right-3 text-border-bold text-[28px] opacity-40">format_quote</span>
+<p class="font-body-base text-body-base text-ink-body leading-relaxed pr-8" id="detail-comment-full">“Buku ini sangat mengecewakan! Penerbit dan penulisnya tolol tidak tahu cara format e-book, buang-buang uang saja beli sampah begini! Jangan ada yang beli produk penipu ini!”</p>
+<div class="mt-space-sm pt-space-xs flex items-center gap-space-sm">
+<span class="font-label-small text-label-small text-feedback-error font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                Terdeteksi kata pemicu: tolol, sampah, penipu
+              </span>
+</div>
+</div>
+</div>
+<!-- Section C: KONTEKS BALASAN RESMI PENERBIT (UC-38) -->
+<div class="p-space-md rounded-xl bg-surface-sky/60 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-small text-label-small text-on-surface-variant font-bold uppercase tracking-wider">Bagian C: Respon Penerbit (UC-38)</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-ink-body font-label-small text-label-small text-[10px]">Terkonfirmasi</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-small text-label-small">
+<span class="material-symbols-outlined text-[14px]">business</span>
+</div>
+<span class="font-label text-label text-ink-body font-bold" id="detail-publisher-name">PT Bentang Pustaka (Resmi)</span>
+</div>
+<p class="font-body-small text-body-small text-ink-body mt-1 pl-8 leading-relaxed" id="detail-publisher-reply">“Halo Kak Rian, mohon maaf atas ketidaknyamanannya. Kendala rendering font di halaman 50 sudah kami perbaiki di versi e-book terbaru. Silakan muat ulang Web Reader Anda.”</p>
+</div>
+<!-- Section D: INFORMASI LAPORAN PENGGUNA -->
+<div class="p-space-md rounded-xl bg-error-container/40 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-small text-label-small text-on-error-container font-bold uppercase tracking-wider">Bagian D: Informasi Laporan Komunitas</span>
+<span class="font-label-small text-label-small text-feedback-error font-bold" id="detail-report-count">3 Laporan Pengguna</span>
+</div>
+<div class="mt-1">
+<p class="font-label text-label text-ink-body font-bold" id="detail-report-category">Kategori: Kata Kasar &amp; Provokasi</p>
+<p class="font-body-small text-body-small text-on-surface-variant mt-0.5 leading-relaxed" id="detail-report-notes">Pelapor menyatakan: “Menggunakan kata 'tolol', 'sampah', dan tuduhan fitnah 'penipu' yang melanggar ketentuan komunitas literasi IKAPI Store.”</p>
+</div>
+</div>
+<!-- Section E: KEPUTUSAN MODERATOR (UC-42) -->
+<div class="pt-space-xs flex flex-col gap-space-sm">
+<span class="font-label-small text-label-small text-ink-muted font-bold uppercase tracking-wider">Bagian E: Keputusan Moderator</span>
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="w-full px-space-md py-3 rounded-lg bg-surface-cream text-ink-body font-label text-label font-bold hover:bg-surface-paper transition-all flex items-center justify-center gap-1.5 shadow-sm" onclick="simulateKeepComment()" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span>
+<span>Pertahankan</span>
+</button>
+<button class="w-full px-space-md py-3 rounded-lg bg-error text-on-error font-label text-label font-bold hover:bg-feedback-error transition-all flex items-center justify-center gap-1.5 shadow-sm" onclick="openDeleteModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+<span>Hapus Komentar</span>
+</button>
+</div>
+<p class="font-label-small text-label-small text-ink-muted text-center">
+            Tindakan moderasi bersifat langsung dan dicatat dalam audit trail sistem IKAPI.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Konfirmasi Hapus Komentar (UC-42 compliant: No reason required) -->
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center p-space-md bg-inverse-deep/50 backdrop-blur-sm" id="delete-modal">
+<div class="w-full max-w-lg rounded-2xl bg-surface-container-lowest p-space-xl shadow-xl flex flex-col gap-space-md animate-in fade-in duration-200">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-error-container text-feedback-error flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">delete_forever</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-ink-body tracking-tight">Hapus Komentar dari Sistem?</h3>
+<p class="font-body-small text-body-small text-ink-muted mt-1 leading-relaxed">
+            Komentar yang melanggar etika literasi ini akan dihapus secara permanen dari halaman buku publik. Statistik ulasan buku akan diperbarui secara otomatis.
+          </p>
+</div>
+</div>
+<!-- Target Detail Summary -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-small text-label-small">
+<span class="text-ink-muted">Penulis Ulasan:</span>
+<span class="font-bold text-ink-body" id="modal-target-user">Rian Pratama (@rian_pratama)</span>
+</div>
+<div class="flex items-center justify-between font-label-small text-label-small">
+<span class="text-ink-muted">Pada Judul Buku:</span>
+<span class="font-bold text-ink-body" id="modal-target-book">Laskar Pelangi - Andrea Hirata</span>
+</div>
+<div class="flex items-center justify-between font-label-small text-label-small">
+<span class="text-ink-muted">Kategori Pelanggaran:</span>
+<span class="text-feedback-error font-semibold" id="modal-target-tag">Kata Kasar &amp; Provokasi</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-cream text-tertiary flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] flex-shrink-0 mt-0.5">info</span>
+<p class="font-label-small text-label-small leading-tight">
+          Sesuai SOP Moderasi IKAPI UC-42: Sistem tidak membebani form alasan tambahan untuk mempercepat eksekusi penghapusan konten berbahaya.
+        </p>
+</div>
+<!-- Actions -->
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-lg py-2.5 rounded-lg bg-surface-container text-ink-body hover:bg-surface-variant font-label text-label transition-colors" onclick="closeDeleteModal()" type="button">
+          Batal
+        </button>
+<button class="px-space-lg py-2.5 rounded-lg bg-error text-on-error font-label text-label font-bold hover:bg-feedback-error transition-all shadow-sm flex items-center gap-1.5" onclick="confirmDeleteComment()" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Ya, Hapus Komentar</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Toast Notification System (Fixed bottom right) -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 pointer-events-none transition-all duration-300 ease-out" id="toast-notification">
+<div class="px-space-lg py-3 rounded-xl bg-inverse-deep text-inverse-on-surface shadow-xl flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-surface-tint">check_circle</span>
+<span class="font-label text-label font-semibold" id="toast-message">Komentar berhasil dihapus dari sistem</span>
+</div>
+</div>
+</div>
+<script>
+  // Data Model representing reported moderation items
+  const moderationData = {
+    1: {
+      id: "MOD-2026-089",
+      userName: "Rian Pratama",
+      userHandle: "@rian_pratama",
+      bookTitle: "Laskar Pelangi",
+      bookAuthor: "Andrea Hirata",
+      publisher: "PT Bentang Pustaka",
+      rating: "1/5 Bintang",
+      orderId: "#ORD-2026-0889 (Terverifikasi Lunas)",
+      time: "14 Nov 2026, 11:20 WIB",
+      comment: "Buku ini sangat mengecewakan! Penerbit dan penulisnya tolol tidak tahu cara format e-book, buang-buang uang saja beli sampah begini! Jangan ada yang beli produk penipu ini!",
+      publisherReplyName: "PT Bentang Pustaka (Resmi)",
+      publisherReplyText: "Halo Kak Rian, mohon maaf atas ketidaknyamanannya. Kendala rendering font di halaman 50 sudah kami perbaiki di versi e-book terbaru. Silakan muat ulang Web Reader Anda.",
+      reportTag: "Kata Kasar & Provokasi",
+      reportNotes: "Menggunakan kata 'tolol', 'sampah', dan tuduhan fitnah 'penipu' yang melanggar ketentuan komunitas literasi IKAPI Store.",
+      reportCount: "3 Laporan Pengguna",
+      bookImgAlt: "Book cover of Laskar Pelangi by Andrea Hirata with artistic typography and Belitung natural setting."
+    },
+    2: {
+      id: "MOD-2026-090",
+      userName: "PromoBookOnline99",
+      userHandle: "@bot_diskon",
+      bookTitle: "Sang Pemimpi",
+      bookAuthor: "Andrea Hirata",
+      publisher: "PT Mizan Pustaka Utama",
+      rating: "5/5 Bintang",
+      orderId: "#ORD-2026-0912 (Belum Pernah Membeli)",
+      time: "14 Nov 2026, 09:15 WIB",
+      comment: "PROMO GILA! Mau dapat e-book gratis dan uang tunai jutaan rupiah tiap hari? Klik link bit.ly/uang-gratis-ikapi sekarang juga! Terbukti membayar 100% no hoax!!",
+      publisherReplyName: "PT Mizan Pustaka Utama (Resmi)",
+      publisherReplyText: "Peringatan resmi: Akun ini bukan perwakilan penerbit Mizan dan tautan di atas berpotensi phising berbahaya.",
+      reportTag: "Spam & Promosi Eksternal",
+      reportNotes: "Menyebarkan link afiliasi ilegal dan bot spamming komentar di berbagai etalase buku IKAPI Store.",
+      reportCount: "1 Laporan Pengguna",
+      bookImgAlt: "Book cover of Sang Pemimpi featuring nostalgic young boys on a jetty in Belitung under a starry evening sky."
+    },
+    3: {
+      id: "MOD-2026-091",
+      userName: "Dewi Sartika",
+      userHandle: "@dewi.sartika",
+      bookTitle: "Aroma Karsa",
+      bookAuthor: "Dee Lestari",
+      publisher: "CV Angkasa Publishing",
+      rating: "1/5 Bintang",
+      orderId: "#ORD-2026-0744 (Terverifikasi Lunas)",
+      time: "13 Nov 2026, 17:40 WIB",
+      comment: "Penulis dan jalan ceritanya sengaja merusak moral generasi muda dengan menyisipkan propaganda kebencian antar suku. Buku seperti ini harus dibakar dan dilarang edar!",
+      publisherReplyName: "CV Angkasa Publishing (Resmi)",
+      publisherReplyText: "Karya fiksi ini dilindungi undang-undang hak cipta dan telah melalui kurasi kurikuler resmi DPD IKAPI Jawa Barat.",
+      reportTag: "Ujaran Kebencian",
+      reportNotes: "Menyerukan aksi anarkis membakar buku serta ujaran intoleransi rasial tanpa dasar resensi objektif.",
+      reportCount: "5 Laporan Pengguna",
+      bookImgAlt: "Book cover of Aroma Karsa by Dee Lestari with mystical botanical scent bottle and deep forest illustration."
+    }
+  };
+
+  let currentSelectedId = 1;
+  let remainingCount = 3;
+
+  function selectItem(id) {
+    currentSelectedId = id;
+    const item = moderationData[id];
+    if (!item) return;
+
+    // Visual selection state on cards
+    document.querySelectorAll('.moderation-item').forEach(card => {
+      card.classList.remove('ring-2', 'ring-primary-container');
+    });
+    const targetCard = document.getElementById('item-card-' + id);
+    if (targetCard) {
+      targetCard.classList.add('ring-2', 'ring-primary-container');
+    }
+
+    // Update Drawer Content
+    document.getElementById('detail-id-tag').textContent = item.id;
+    document.getElementById('detail-book-title').textContent = item.bookTitle;
+    document.getElementById('detail-book-author').textContent = 'Karya ' + item.bookAuthor;
+    document.getElementById('detail-book-publisher').textContent = 'Penerbit: ' + item.publisher;
+    document.getElementById('detail-book-rating').innerHTML = `<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span> ${item.rating}`;
+    document.getElementById('detail-order-id').textContent = item.orderId;
+    document.getElementById('detail-comment-time').textContent = item.time;
+    document.getElementById('detail-comment-full').innerHTML = `&ldquo;${item.comment}&rdquo;`;
+    document.getElementById('detail-publisher-name').textContent = item.publisherReplyName;
+    document.getElementById('detail-publisher-reply').innerHTML = `&ldquo;${item.publisherReplyText}&rdquo;`;
+    document.getElementById('detail-report-count').textContent = item.reportCount;
+    document.getElementById('detail-report-category').textContent = 'Kategori: ' + item.reportTag;
+    document.getElementById('detail-report-notes').innerHTML = `Pelapor menyatakan: &ldquo;${item.reportNotes}&rdquo;`;
+
+    // Update Modal Target Info
+    document.getElementById('modal-target-user').textContent = `${item.userName} (${item.userHandle})`;
+    document.getElementById('modal-target-book').textContent = `${item.bookTitle} - ${item.bookAuthor}`;
+    document.getElementById('modal-target-tag').textContent = item.reportTag;
+
+    // Ensure Drawer is visible
+    toggleDrawer(true);
+  }
+
+  function toggleDrawer(show) {
+    const drawer = document.getElementById('review-drawer');
+    if (!drawer) return;
+    if (show) {
+      drawer.classList.remove('hidden');
+    } else {
+      drawer.classList.add('hidden');
+    }
+  }
+
+  function setSimTab(tab) {
+    const reportedBtn = document.getElementById('tab-nav-reported');
+    const allBtn = document.getElementById('tab-nav-all');
+    const indReported = document.getElementById('tab-indicator-reported');
+    const indAll = document.getElementById('tab-indicator-all');
+    const simRepBtn = document.getElementById('sim-btn-tab-reported');
+    const simAllBtn = document.getElementById('sim-btn-tab-all');
+
+    if (tab === 'reported') {
+      reportedBtn.classList.add('text-primary', 'font-bold');
+      reportedBtn.classList.remove('text-ink-muted');
+      indReported.classList.remove('bg-transparent');
+      indReported.classList.add('bg-primary-container');
+
+      allBtn.classList.remove('text-primary', 'font-bold');
+      allBtn.classList.add('text-ink-muted');
+      indAll.classList.add('bg-transparent');
+      indAll.classList.remove('bg-primary-container');
+
+      simRepBtn.className = "px-2.5 py-1 rounded bg-primary-container text-on-primary font-label-small text-label-small transition-colors";
+      simAllBtn.className = "px-2.5 py-1 rounded bg-surface-container text-ink-body hover:bg-surface-variant font-label-small text-label-small transition-colors";
+
+      resetQueueState();
+    } else {
+      allBtn.classList.add('text-primary', 'font-bold');
+      allBtn.classList.remove('text-ink-muted');
+      indAll.classList.remove('bg-transparent');
+      indAll.classList.add('bg-primary-container');
+
+      reportedBtn.classList.remove('text-primary', 'font-bold');
+      reportedBtn.classList.add('text-ink-muted');
+      indReported.classList.add('bg-transparent');
+      indReported.classList.remove('bg-primary-container');
+
+      simAllBtn.className = "px-2.5 py-1 rounded bg-primary-container text-on-primary font-label-small text-label-small transition-colors";
+      simRepBtn.className = "px-2.5 py-1 rounded bg-surface-container text-ink-body hover:bg-surface-variant font-label-small text-label-small transition-colors";
+
+      triggerToast("Menampilkan seluruh 28 ulasan pembeli publik");
+    }
+  }
+
+  function openDeleteModal() {
+    const modal = document.getElementById('delete-modal');
+    modal.classList.remove('hidden');
+  }
+
+  function closeDeleteModal() {
+    const modal = document.getElementById('delete-modal');
+    modal.classList.add('hidden');
+  }
+
+  function confirmDeleteComment() {
+    closeDeleteModal();
+    // Remove current card from queue
+    const activeCard = document.getElementById('item-card-' + currentSelectedId);
+    if (activeCard) {
+      activeCard.remove();
+      remainingCount--;
+      updateCounters();
+    }
+
+    triggerToast("Komentar berhasil dihapus dari sistem");
+
+    // Select next remaining card if any
+    const nextItem = document.querySelector('.moderation-item');
+    if (nextItem) {
+      const nextId = nextItem.id.replace('item-card-', '');
+      selectItem(nextId);
+    } else {
+      setEmptyQueueState();
+    }
+  }
+
+  function simulateKeepComment() {
+    const activeCard = document.getElementById('item-card-' + currentSelectedId);
+    if (activeCard) {
+      activeCard.remove();
+      remainingCount--;
+      updateCounters();
+    }
+
+    triggerToast("Komentar dipertahankan dan ditandai aman");
+
+    const nextItem = document.querySelector('.moderation-item');
+    if (nextItem) {
+      const nextId = nextItem.id.replace('item-card-', '');
+      selectItem(nextId);
+    } else {
+      setEmptyQueueState();
+    }
+  }
+
+  function updateCounters() {
+    const badge = document.getElementById('queue-counter-badge');
+    const pill = document.getElementById('reported-pill');
+    if (badge) badge.textContent = `${remainingCount} Kasus Terbuka`;
+    if (pill) pill.textContent = `${remainingCount} Perlu Tindakan`;
+  }
+
+  function setEmptyQueueState() {
+    const queue = document.getElementById('queue-container');
+    const emptyView = document.getElementById('empty-queue-view');
+    const drawer = document.getElementById('review-drawer');
+    
+    if (queue) queue.classList.add('hidden');
+    if (emptyView) {
+      emptyView.classList.remove('hidden');
+      emptyView.classList.add('flex');
+    }
+    if (drawer) drawer.classList.add('hidden');
+
+    remainingCount = 0;
+    updateCounters();
+  }
+
+  function resetQueueState() {
+    location.reload();
+  }
+
+  function triggerToast(text) {
+    const toast = document.getElementById('toast-notification');
+    const msg = document.getElementById('toast-message');
+    if (!toast || !msg) return;
+
+    msg.textContent = text;
+    toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 3500);
+  }
+
+  function handleSearch(term) {
+    const lower = term.toLowerCase();
+    document.querySelectorAll('.moderation-item').forEach(card => {
+      const text = card.textContent.toLowerCase();
+      if (text.includes(lower)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function handleCategoryFilter(val) {
+    document.querySelectorAll('.moderation-item').forEach(card => {
+      if (val === 'all') {
+        card.style.display = 'block';
+      } else if (val === 'hate' && card.id === 'item-card-1') {
+        card.style.display = 'block';
+      } else if (val === 'spam' && card.id === 'item-card-2') {
+        card.style.display = 'block';
+      } else if (val === 'speech' && card.id === 'item-card-3') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Set default selection state on load
+  document.addEventListener('DOMContentLoaded', () => {
+    selectItem(1);
+  });
+</script></main></div>
+
+</body></html>
