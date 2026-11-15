@@ -7,13 +7,28 @@
   <title>Lupa Kata Sandi — IKAPI Store Jawa Barat</title>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <!-- Typography: DM Sans (Hostinger Design System) & Fallback Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
   <style>
+    :root {
+      --color-primary: #673de6;
+      --color-primary-hover: #5025d1;
+      --color-primary-deep: #2f1c6a;
+      --color-canvas: #ffffff;
+      --color-surface-soft: #f5f6ff;
+      --color-surface-neutral: #f5f5f6;
+      --color-text-primary: #222225;
+      --color-text-secondary: #62636b;
+      --color-border: #e5e7eb;
+    }
     @layer base {
       html, body {
         margin: 0;
         padding: 0;
+        background-color: #f5f5f6;
+        color: #222225;
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       }
       body {
         overflow-x: clip;
@@ -40,180 +55,113 @@
       theme: {
         extend: {
           colors: {
-            "on-surface": "#1b1b25",
-            "on-background": "#1b1b25",
-            "surface-sky": "#E0F6FC",
-            "surface-container": "#efecfb",
-            "inverse-primary": "#c2c1ff",
-            "on-primary-container": "#eeeaff",
-            "on-secondary": "#ffffff",
-            "background": "#fcf8ff",
-            "tertiary-fixed": "#ffe08d",
-            "tertiary": "#745b00",
-            "surface-variant": "#e3e1ef",
-            "surface-container-high": "#e9e6f5",
-            "secondary-fixed-dim": "#f4b5c8",
-            "ink-muted": "#555665",
-            "on-tertiary-container": "#4f3d00",
-            "secondary-fixed": "#ffd9e3",
-            "on-tertiary": "#ffffff",
-            "outline": "#777586",
-            "surface-tint": "#4c48dc",
-            "on-surface-variant": "#464555",
-            "on-primary": "#ffffff",
-            "border-bold": "#CFD0DD",
-            "tertiary-container": "#cea623",
-            "error-container": "#ffdad6",
-            "on-tertiary-fixed": "#241a00",
-            "surface-paper": "#FFF0E3",
-            "primary-fixed-dim": "#c2c1ff",
-            "inverse-deep": "#24233D",
-            "on-secondary-container": "#7a495a",
-            "surface-container-lowest": "#ffffff",
-            "border-subtle": "#E7E7EF",
-            "inverse-on-surface": "#f2effe",
-            "ink-body": "#191923",
-            "surface-bright": "#fcf8ff",
-            "surface": "#fcf8ff",
-            "surface-dim": "#dbd8e7",
-            "feedback-error": "#B42318",
-            "inverse-surface": "#302f3a",
-            "error": "#ba1a1a",
-            "on-primary-fixed": "#0c006a",
-            "secondary-container": "#fdbed1",
-            "primary": "#3f3ad0",
-            "on-tertiary-fixed-variant": "#584400",
-            "surface-container-low": "#f5f2ff",
-            "surface-container-highest": "#e3e1ef",
-            "surface-soft": "#F8F7FF",
-            "on-secondary-fixed-variant": "#663949",
-            "on-primary-fixed-variant": "#3229c4",
-            "primary-container": "#5956e9",
-            "on-secondary-fixed": "#330e1d",
-            "outline-variant": "#c7c4d7",
-            "on-error-container": "#93000a",
-            "surface-lilac": "#E5E4FF",
-            "tertiary-fixed-dim": "#ecc23f",
-            "secondary": "#815060",
-            "primary-fixed": "#e2dfff",
-            "on-error": "#ffffff",
-            "surface-cream": "#FFF1E3"
-          },
-          borderRadius: {
-            DEFAULT: "0.25rem",
-            lg: "0.5rem",
-            xl: "0.75rem",
-            "2xl": "1rem",
-            full: "9999px"
-          },
-          spacing: {
-            "space-3xl": "4.5rem",
-            "space-xs": "0.25rem",
-            "gutter-mobile": "1.25rem",
-            "space-sm": "0.5rem",
-            "space-lg": "1.5rem",
-            "space-md": "1rem",
-            "gutter": "1.5rem",
-            "space-2xl": "3rem",
-            "space-xl": "2rem",
-            "margin": "2.5rem",
-            "margin-mobile": "1.25rem"
+            primary: {
+              DEFAULT: "#673de6",
+              hover: "#5025d1",
+              deep: "#2f1c6a",
+              container: "#673de6",
+              accent: "#9d99ff"
+            },
+            surface: {
+              DEFAULT: "#ffffff",
+              soft: "#f5f6ff",
+              neutral: "#f5f5f6",
+              border: "#e5e7eb"
+            },
+            ink: {
+              body: "#222225",
+              muted: "#62636b",
+              subtle: "#9d9ea4"
+            },
+            "border-subtle": "#e5e7eb",
+            "border-bold": "#d1d5db"
           },
           fontFamily: {
-            "body-base": ["Plus Jakarta Sans", "sans-serif"],
-            "body-small": ["Plus Jakarta Sans", "sans-serif"],
-            "label": ["Plus Jakarta Sans", "sans-serif"],
-            "label-small": ["Plus Jakarta Sans", "sans-serif"],
-            "title-md": ["Plus Jakarta Sans", "sans-serif"],
-            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
-            "headline-lg": ["Plus Jakarta Sans", "sans-serif"]
+            sans: ["'DM Sans'", "sans-serif"],
+            body: ["'DM Sans'", "sans-serif"]
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+            '4xl': '1.75rem'
           }
         }
       }
     };
   </script>
 </head>
-<body class="bg-surface font-body-base text-ink-body antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-surface-neutral font-sans text-ink-body antialiased selection:bg-surface-soft selection:text-primary-deep min-h-screen flex items-center justify-center p-4 sm:p-6">
 
-  <!-- TOP HEADER (Single Back Navigation) -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-sm shadow-[0_1px_8px_rgba(25,25,35,0.06)] h-16 flex items-center">
-    <div class="max-w-7xl w-full mx-auto px-4 md:px-margin flex items-center justify-between">
-      <a href="beranda_desktop.html" data-path="beranda" class="flex items-center gap-2 group">
-        <img alt="Logo IKAPI Jawa Barat" class="h-8 w-auto object-contain transition-transform duration-200 group-hover:scale-105" src="../../assets/logo-ikapi-jabar.png">
-      </a>
-      <a href="masuk_login_desktop.html" data-path="login" class="inline-flex items-center gap-1.5 font-label text-[13px] sm:text-[14px] font-semibold text-ink-muted hover:text-primary transition-colors group">
-        <span class="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
-        <span>Kembali ke Masuk</span>
-      </a>
-    </div>
-  </header>
-
-  <!-- MAIN (Editorial Split Layout) -->
-  <main class="w-full pt-20 flex-1 flex flex-col justify-center items-center py-space-xl px-4 sm:px-6 bg-surface">
-    <div class="w-full max-w-[1140px] my-auto">
+  <!-- MAIN CONTAINER -->
+  <main class="w-full max-w-6xl mx-auto py-4">
+    <div class="w-full">
       
-      <!-- Unified Authentication Container -->
-      <div class="w-full grid grid-cols-1 lg:grid-cols-12 rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(25,25,35,0.06)] bg-surface-container-lowest border border-border-subtle items-stretch">
+      <!-- Unified Split-Screen Authentication Card (Hostinger Rounded Composition, Both Sides White, Zero Divider) -->
+      <div class="w-full grid grid-cols-1 lg:grid-cols-12 rounded-3xl overflow-hidden shadow-xl bg-white border border-border-subtle">
         
-        <!-- Left: IKAPI Authentic Illustration Showcase (5 Cols) -->
-        <div class="lg:col-span-5 bg-surface-soft p-space-lg sm:p-space-xl lg:p-space-2xl flex flex-col items-center justify-center border-b lg:border-b-0 lg:border-r border-border-subtle">
-          <div class="w-full max-w-[220px] sm:max-w-[280px] lg:max-w-[360px] flex items-center justify-center">
-            <img src="../../assets/ilustration/auth_login_welcome.svg" alt="Ilustrasi Pemulihan Akun IKAPI Store" class="w-full h-auto object-contain">
+        <!-- Left Illustration Showcase (5 Cols) with Reading Illustration -->
+        <div class="hidden lg:flex lg:col-span-5 bg-white p-8 xl:p-12 items-center justify-center relative overflow-hidden">
+          <div class="relative w-full max-w-[380px] flex items-center justify-center">
+            <img src="../../assets/ilustration/auth_register_reading.png" alt="Ilustrasi Pemulihan Akun IKAPI Store" class="w-full h-auto max-h-[460px] object-contain drop-shadow-sm select-none">
           </div>
         </div>
 
-        <!-- Right: Focused Password Recovery Form (7 Cols) -->
-        <div class="lg:col-span-7 p-6 sm:p-10 md:p-12 flex flex-col justify-center bg-surface-container-lowest">
-          <div class="max-w-md w-full mx-auto space-y-space-lg">
+        <!-- Right Form Panel (7 Cols) with Compact & Balanced Typography -->
+        <div class="col-span-1 lg:col-span-7 p-6 sm:p-10 lg:p-12 flex flex-col justify-center bg-white">
+          <div class="max-w-md w-full mx-auto space-y-6">
             
             <!-- Header Copy -->
-            <div class="space-y-space-xs">
-              <h1 class="font-headline-md sm:font-headline-lg text-[26px] sm:text-[30px] font-extrabold text-ink-body tracking-tight leading-tight">
+            <div class="space-y-1">
+              <h1 class="text-[24px] sm:text-[26px] font-bold text-ink-body tracking-tight leading-snug">
                 Lupa Kata Sandi?
               </h1>
-              <p class="font-body-base text-[14px] sm:text-[15px] text-ink-muted mt-2 leading-relaxed">
+              <p class="text-[14px] text-ink-muted">
                 Masukkan email akun Anda untuk menerima tautan pengaturan ulang kata sandi.
               </p>
             </div>
 
             <!-- Feedback Notice (Triggered upon Submit) -->
-            <div id="success-banner" class="hidden p-space-md rounded-xl bg-surface-sky border border-border-subtle text-ink-body text-[13px] leading-relaxed">
+            <div id="success-banner" class="hidden p-3.5 rounded-2xl bg-surface-soft border border-primary/20 text-ink-body text-[13px] leading-relaxed">
               <div class="flex items-start gap-2.5">
                 <span class="material-symbols-outlined text-[20px] text-primary shrink-0 mt-0.5">mark_email_read</span>
-                <div class="flex flex-col gap-1">
-                  <span class="font-label font-bold text-ink-body">Periksa email Anda</span>
-                  <p class="text-ink-muted">Jika alamat email tersebut terdaftar, tautan pengaturan ulang kata sandi akan dikirimkan ke kotak masuk Anda.</p>
+                <div class="flex flex-col gap-0.5">
+                  <span class="font-bold text-ink-body">Periksa email Anda</span>
+                  <p class="text-ink-muted">Jika alamat email tersebut terdaftar, tautan pengaturan ulang kata sandi telah dikirimkan ke kotak masuk Anda.</p>
                 </div>
               </div>
             </div>
 
             <!-- Recovery Form -->
-            <form id="reset-password-form" class="space-y-space-md" onsubmit="handleResetSubmit(event)">
+            <form id="reset-password-form" class="space-y-4" onsubmit="handleResetSubmit(event)">
               
               <!-- Email Input -->
               <div class="space-y-1.5">
-                <label for="recovery-email" class="block font-label text-[13px] text-ink-body font-bold">
-                  Alamat Email <span class="text-error">*</span>
+                <label for="recovery-email" class="block text-[13px] font-bold text-ink-body">
+                  Alamat Email <span class="text-red-500">*</span>
                 </label>
-                <div class="relative group">
-                  <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-ink-muted group-focus-within:text-primary transition-colors">
-                    <span class="material-symbols-outlined text-[20px]">alternate_email</span>
+                <div class="relative flex items-center">
+                  <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-ink-muted">
+                    <span class="material-symbols-outlined text-[19px]">alternate_email</span>
                   </div>
-                  <input autofocus="" class="w-full h-12 pl-11 pr-4 rounded-xl bg-surface-soft text-ink-body font-body-base text-body-base placeholder:text-outline outline-none transition-all duration-200 border border-transparent focus:border-primary focus:bg-surface-container-lowest focus:shadow-[0_0_0_3px_rgba(89,86,233,0.15)]" id="recovery-email" name="email" placeholder="nama@email.com" required="" type="email">
+                  <input autofocus class="w-full h-11 pl-10 pr-4 rounded-xl bg-surface-neutral text-ink-body text-[14px] outline-none border border-border-subtle transition-all placeholder:text-ink-muted focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20" id="recovery-email" name="email" placeholder="nama@email.com" required type="email">
                 </div>
               </div>
 
               <!-- Submit Action Button -->
-              <button id="submit-btn" class="w-full h-12 rounded-xl bg-primary-container hover:bg-surface-tint text-on-primary font-label text-[15px] font-bold flex items-center justify-center gap-2 transition-all duration-200 shadow-sm active:scale-[0.99] cursor-pointer" type="submit">
+              <button id="submit-btn" class="w-full h-11 rounded-xl bg-primary hover:bg-primary-hover text-white text-[14px] font-bold flex items-center justify-center gap-2 transition-all shadow-xs active:scale-[0.99] cursor-pointer" type="submit">
                 <span id="submit-btn-text">Kirim Tautan</span>
                 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
               </button>
             </form>
 
-            <!-- Help Link -->
-            <div class="pt-space-xs text-center border-t border-border-subtle">
-              <a href="chatbot_bantuan_rekomendasi_desktop.html" data-path="bantuan" class="text-[13px] font-body-small text-ink-muted hover:text-primary transition-colors inline-flex items-center gap-1">
-                <span>Butuh bantuan?</span>
+            <!-- Bottom Links: Back to Login & Need Help -->
+            <div class="pt-2 flex flex-col items-center gap-2 text-[13.5px]">
+              <a href="masuk_login_desktop.html" data-path="login" class="text-primary hover:text-primary-hover font-semibold inline-flex items-center gap-1.5 hover:underline">
+                <span class="material-symbols-outlined text-[16px]">arrow_back</span>
+                <span>Kembali ke Masuk</span>
+              </a>
+              <a href="chatbot_bantuan_rekomendasi_desktop.html" data-path="bantuan" class="text-[12.5px] text-ink-muted hover:text-primary transition-colors">
+                Butuh bantuan?
               </a>
             </div>
 
@@ -225,14 +173,9 @@
     </div>
   </main>
 
-  <!-- MINIMAL FOOTER -->
-  <footer class="w-full py-5 text-center text-[12px] font-body-small text-ink-muted border-t border-border-subtle bg-surface-container-lowest/80 backdrop-blur-xs">
-    <p>© 2026 IKAPI Jawa Barat. Seluruh hak cipta dilindungi undang-undang.</p>
-  </footer>
-
   <!-- TOAST NOTIFICATION -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-16 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2 px-4 py-3 rounded-xl bg-ink-body text-surface shadow-lg text-[14px] font-label font-medium">
-    <span class="material-symbols-outlined text-primary-fixed text-[20px]">check_circle</span>
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-ink-body text-white shadow-xl text-[14px] font-medium border border-white/10">
+    <span class="material-symbols-outlined text-primary-accent text-[20px]">check_circle</span>
     <span id="toast-message">Permintaan berhasil diproses</span>
   </div>
 
@@ -244,41 +187,53 @@
       const toastMessage = document.getElementById('toast-message');
       if (!toast || !toastMessage) return;
       toastMessage.textContent = msg;
-      toast.classList.remove('translate-y-16', 'opacity-0', 'pointer-events-none');
+      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
       toast.classList.add('translate-y-0', 'opacity-100');
       if (toastTimer) clearTimeout(toastTimer);
       toastTimer = setTimeout(() => {
         toast.classList.remove('translate-y-0', 'opacity-100');
-        toast.classList.add('translate-y-16', 'opacity-0', 'pointer-events-none');
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
       }, 2500);
     }
 
     function handleResetSubmit(e) {
       e.preventDefault();
-      const email = document.getElementById('recovery-email').value.trim();
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-      if (!email || !emailPattern.test(email)) {
-        showToast('Harap masukkan alamat email yang valid');
-        return false;
-      }
+      const emailInput = document.getElementById('recovery-email');
+      const email = emailInput ? emailInput.value.trim() : '';
 
       const btn = document.getElementById('submit-btn');
       const btnText = document.getElementById('submit-btn-text');
       const banner = document.getElementById('success-banner');
 
-      if (btn && btnText) {
-        btn.disabled = true;
-        btnText.textContent = 'Mengirim Permintaan...';
-        setTimeout(() => {
-          if (banner) {
-            banner.classList.remove('hidden');
-          }
-          btnText.textContent = 'Kirim Ulang Tautan';
-          btn.disabled = false;
-          showToast('Permintaan pemulihan telah diproses');
-        }, 1000);
+      if (!email) {
+        showToast('Masukkan alamat email yang valid');
+        return false;
       }
+
+      if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = `
+          <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          <span>Mengirim Tautan...</span>
+        `;
+
+        setTimeout(() => {
+          btn.innerHTML = `
+            <span>Tautan Terkirim</span>
+            <span class="material-symbols-outlined text-[18px]">check</span>
+          `;
+          if (banner) banner.classList.remove('hidden');
+          showToast('Tautan pemulihan berhasil dikirim');
+          setTimeout(() => {
+            btn.innerHTML = `<span>Kirim Ulang Tautan</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span>`;
+            btn.disabled = false;
+          }, 3000);
+        }, 1200);
+      }
+
       return false;
     }
   </script>

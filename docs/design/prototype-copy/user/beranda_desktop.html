@@ -7,13 +7,28 @@
   <title>IKAPI Store Jawa Barat — Toko E-Book Resmi Penerbit Daerah</title>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <!-- Typography: DM Sans (Hostinger Design System) & Fallback Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
   <style>
+    :root {
+      --color-primary: #673de6;
+      --color-primary-hover: #5025d1;
+      --color-primary-deep: #2f1c6a;
+      --color-canvas: #ffffff;
+      --color-surface-soft: #f5f6ff;
+      --color-surface-neutral: #f5f5f6;
+      --color-text-primary: #222225;
+      --color-text-secondary: #62636b;
+      --color-border: #e5e7eb;
+    }
     @layer base {
       html, body {
         margin: 0;
         padding: 0;
+        background-color: #ffffff;
+        color: #222225;
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       }
       body {
         overflow-x: clip;
@@ -40,262 +55,207 @@
       theme: {
         extend: {
           colors: {
-            "on-error": "#ffffff",
-            "secondary-fixed": "#ffd9e3",
-            "surface-sky": "#E0F6FC",
-            "feedback-error": "#B42318",
-            "surface-tint": "#4c48dc",
-            "on-surface": "#1b1b25",
-            "on-secondary": "#ffffff",
-            "primary-container": "#5956e9",
-            "primary-fixed-dim": "#c2c1ff",
-            "tertiary": "#745b00",
-            "outline-variant": "#c7c4d7",
-            "on-primary": "#ffffff",
-            "on-error-container": "#93000a",
-            "surface-lilac": "#E5E4FF",
-            "tertiary-fixed": "#ffe08d",
-            "inverse-surface": "#302f3a",
-            "secondary": "#815060",
-            "on-primary-fixed": "#0c006a",
-            "on-tertiary-container": "#4f3d00",
-            "error": "#ba1a1a",
-            "on-secondary-container": "#7a495a",
-            "surface-bright": "#fcf8ff",
-            "surface-dim": "#dbd8e7",
-            "on-tertiary-fixed": "#241a00",
-            "primary": "#3f3ad0",
-            "ink-body": "#191923",
-            "inverse-on-surface": "#f2effe",
-            "on-background": "#1b1b25",
-            "surface-variant": "#e3e1ef",
-            "ink-muted": "#555665",
-            "outline": "#777586",
-            "surface-container-high": "#e9e6f5",
-            "on-secondary-fixed-variant": "#663949",
-            "secondary-fixed-dim": "#f4b5c8",
-            "border-bold": "#CFD0DD",
-            "background": "#fcf8ff",
-            "on-secondary-fixed": "#330e1d",
-            "inverse-primary": "#c2c1ff",
-            "error-container": "#ffdad6",
-            "surface-container-highest": "#e3e1ef",
-            "tertiary-fixed-dim": "#ecc23f",
-            "surface": "#fcf8ff",
-            "surface-soft": "#F8F7FF",
-            "on-primary-container": "#eeeaff",
-            "inverse-deep": "#24233D",
-            "surface-cream": "#FFF1E3",
-            "surface-container": "#efecfb",
-            "surface-paper": "#FFF0E3",
-            "tertiary-container": "#cea623",
-            "on-tertiary-fixed-variant": "#584400",
-            "on-primary-fixed-variant": "#3229c4",
-            "surface-container-low": "#f5f2ff",
-            "on-surface-variant": "#464555",
-            "surface-container-lowest": "#ffffff",
-            "border-subtle": "#E7E7EF",
-            "secondary-container": "#fdbed1",
-            "primary-fixed": "#e2dfff",
-            "on-tertiary": "#ffffff"
-          },
-          borderRadius: {
-            DEFAULT: "0.25rem",
-            lg: "0.5rem",
-            xl: "0.75rem",
-            "2xl": "1rem",
-            full: "9999px"
-          },
-          spacing: {
-            "margin": "2.5rem",
-            "space-xs": "0.25rem",
-            "space-sm": "0.5rem",
-            "space-md": "1rem",
-            "space-lg": "1.5rem",
-            "space-xl": "2rem",
-            "space-2xl": "3rem",
-            "space-3xl": "4.5rem",
-            "gutter": "1.5rem"
+            primary: {
+              DEFAULT: "#673de6",
+              hover: "#5025d1",
+              deep: "#2f1c6a",
+              container: "#673de6",
+              accent: "#9d99ff"
+            },
+            surface: {
+              DEFAULT: "#ffffff",
+              soft: "#f5f6ff",
+              neutral: "#f5f5f6",
+              border: "#e5e7eb"
+            },
+            ink: {
+              body: "#222225",
+              muted: "#62636b",
+              subtle: "#9d9ea4"
+            },
+            "border-subtle": "#e5e7eb",
+            "border-bold": "#d1d5db"
           },
           fontFamily: {
-            "body-base": ["Plus Jakarta Sans", "sans-serif"],
-            "body-small": ["Plus Jakarta Sans", "sans-serif"],
-            "label": ["Plus Jakarta Sans", "sans-serif"],
-            "label-small": ["Plus Jakarta Sans", "sans-serif"],
-            "title-md": ["Plus Jakarta Sans", "sans-serif"],
-            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
-            "headline-lg": ["Plus Jakarta Sans", "sans-serif"]
+            sans: ["'DM Sans'", "sans-serif"],
+            body: ["'DM Sans'", "sans-serif"]
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+            '4xl': '1.75rem'
           }
         }
       }
     };
   </script>
 </head>
-<body class="bg-surface font-body-base text-ink-body antialiased">
+<body class="bg-white font-sans text-ink-body antialiased selection:bg-surface-soft selection:text-primary-deep">
 
   <!-- HEADER -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(25,25,35,0.06)]">
-    <div class="h-28 max-w-[1240px] mx-auto px-4 md:px-margin flex flex-col justify-between">
-      <div class="h-16 flex items-center justify-between gap-2 sm:gap-gutter">
-        <div class="flex items-center gap-space-md shrink-0">
-          <a href="beranda_desktop.html" data-path="beranda" class="flex items-center">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-border-subtle shadow-[0_1px_4px_rgba(34,34,37,0.04)]">
+    <div class="h-28 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between">
+      <div class="h-16 flex items-center justify-between gap-4">
+        <!-- Logo -->
+        <div class="flex items-center gap-4 shrink-0">
+          <a href="beranda_desktop.html" data-path="beranda" class="flex items-center" aria-label="Beranda IKAPI Jawa Barat">
             <img alt="Logo IKAPI Jawa Barat" class="h-7 sm:h-8 w-auto object-contain" src="../../assets/logo-ikapi-jabar.png">
           </a>
         </div>
-        <div class="flex-1 max-w-xl mx-2 hidden sm:flex items-center gap-space-xs">
+        <!-- Search Bar -->
+        <div class="flex-1 max-w-xl mx-2 hidden sm:flex items-center">
           <div class="relative w-full">
-            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
-            <input class="w-full h-10 pl-10 pr-space-md rounded-lg bg-surface-container-lowest font-body-small text-[14px] text-ink-body placeholder:text-outline outline-none ring-1 ring-border-bold focus:ring-2 focus:ring-primary transition-all" placeholder="Cari judul, penulis, atau topik buku..." type="text">
+            <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-muted text-[20px]">search</span>
+            <input class="w-full h-10 pl-10 pr-4 rounded-xl bg-surface-neutral text-[14px] text-ink-body placeholder:text-ink-muted outline-none ring-1 ring-border-subtle focus:ring-2 focus:ring-primary focus:bg-white transition-all" placeholder="Cari judul, penulis, atau topik buku..." type="text">
           </div>
         </div>
-        <div class="flex items-center gap-3 sm:gap-space-lg shrink-0">
-          <a class="relative flex items-center text-on-surface-variant hover:text-primary transition-colors" data-path="keranjang" href="#" aria-label="Keranjang Belanja">
+        <!-- Right Actions -->
+        <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+          <a class="relative p-2 rounded-xl text-ink-body hover:text-primary hover:bg-surface-soft transition-colors" data-path="keranjang" href="keranjang_pembayaran_terpadu_desktop.html" aria-label="Keranjang Belanja">
             <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
-            <span id="cart-badge" class="absolute -top-1.5 -right-2 min-w-[18px] h-[18px] px-1 rounded-full bg-primary-container text-on-primary font-label-small text-[11px] font-bold flex items-center justify-center">2</span>
+            <span id="cart-badge" class="absolute top-1 right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-primary text-white text-[11px] font-bold flex items-center justify-center">2</span>
           </a>
           <div class="h-6 w-px bg-border-subtle"></div>
-          <a class="hidden sm:flex h-10 px-space-lg rounded-lg bg-primary text-on-primary font-label text-[14px] font-semibold items-center gap-space-xs hover:bg-surface-tint transition-colors" data-path="login" href="#">
+          <a class="hidden sm:flex h-10 px-5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[14px] font-semibold items-center gap-2 transition-colors shadow-xs" data-path="login" href="masuk_login_desktop.html">
             <span>Masuk / Akun</span>
           </a>
-          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary">
+          <a href="akun_saya_profil_dropdown_navigasi_desktop.html" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white shadow-xs" aria-label="Akun Saya">
             <span class="material-symbols-outlined text-[18px]">person</span>
-          </div>
+          </a>
         </div>
       </div>
-      <nav class="h-12 flex items-center gap-4 sm:gap-space-xl overflow-x-auto scrollbar-none max-w-full">
-        <a aria-current="page" class="h-full flex items-center transition-colors whitespace-nowrap text-primary font-bold border-b-2 border-primary" data-path="beranda" href="beranda_desktop.html">Beranda</a>
-        <a class="h-full flex items-center font-label text-[14px] text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a>
-        <a class="h-full flex items-center font-label text-[14px] text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a>
-        <a class="h-full flex items-center font-label text-[14px] text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="kabar-artikel" href="agenda_berita_literasi_desktop.html">Kabar &amp; Artikel</a>
-        <a class="h-full flex items-center font-label text-[14px] text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Komunitas Penerbit</a>
+      <!-- Primary Nav Tabs -->
+      <nav class="h-12 flex items-center gap-6 overflow-x-auto scrollbar-none max-w-full">
+        <a aria-current="page" class="h-full flex items-center transition-colors whitespace-nowrap text-primary font-bold border-b-2 border-primary text-[14px]" data-path="beranda" href="beranda_desktop.html">Beranda</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Komunitas Penerbit</a>
       </nav>
     </div>
   </header>
 
   <!-- MAIN -->
-  <main class="w-full pt-28 bg-surface">
+  <main class="w-full pt-28 bg-white">
     <div class="flex flex-col w-full">
 
       <!-- SECTION 1: HERO BANNER CAROUSEL -->
-      <section class="max-w-[1240px] mx-auto px-4 md:px-margin w-full pt-space-md pb-space-lg">
-        <div id="hero-carousel" class="group relative w-full aspect-[16/9] md:aspect-[2.8/1] rounded-2xl overflow-hidden bg-surface-container border border-border-subtle shadow-sm select-none" aria-roledescription="carousel" aria-label="Sorotan Promosi IKAPI Store">
+      <section class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6 pb-8">
+        <div id="hero-carousel" class="group relative w-full aspect-[16/9] md:aspect-[2.8/1] rounded-3xl overflow-hidden bg-surface-neutral border border-border-subtle shadow-sm select-none" aria-roledescription="carousel" aria-label="Sorotan Promosi IKAPI Store">
           
           <!-- Slides Track -->
           <div id="carousel-track" class="relative w-full h-full">
             <!-- Slide 1 -->
             <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-500 opacity-100 z-10" data-slide="0" aria-hidden="false">
-              <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="block w-full h-full focus:outline-none focus:ring-2 focus:ring-primary">
+              <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="block w-full h-full focus:outline-none focus:ring-2 focus:ring-primary rounded-3xl">
                 <img src="../../assets/banner-hero/Dari Penerbit Jawa Barat.png" alt="Dari Penerbit Jawa Barat" class="w-full h-full object-cover">
               </a>
             </div>
 
             <!-- Slide 2 -->
             <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-500 opacity-0 z-0 pointer-events-none" data-slide="1" aria-hidden="true">
-              <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="block w-full h-full focus:outline-none focus:ring-2 focus:ring-primary">
+              <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="block w-full h-full focus:outline-none focus:ring-2 focus:ring-primary rounded-3xl">
                 <img src="../../assets/banner-hero/Screenshot 2026-11-15 005252.png" alt="Promo Spesial E-Book IKAPI Store" class="w-full h-full object-cover">
               </a>
             </div>
 
             <!-- Slide 3 -->
             <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-500 opacity-0 z-0 pointer-events-none" data-slide="2" aria-hidden="true">
-              <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="block w-full h-full focus:outline-none focus:ring-2 focus:ring-primary">
+              <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="block w-full h-full focus:outline-none focus:ring-2 focus:ring-primary rounded-3xl">
                 <img src="../../assets/banner-hero/Screenshot 2026-11-15 005335.png" alt="Rekomendasi Naskah & Pre-Order Buku" class="w-full h-full object-cover">
               </a>
             </div>
           </div>
 
-          <!-- Navigation Arrow Buttons -->
-          <button id="carousel-prev" type="button" aria-label="Slide sebelumnya" class="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-surface-container-lowest/85 hover:bg-surface-container-lowest text-ink-body shadow-md flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 focus:opacity-100">
-            <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+          <!-- Navigation Arrow Buttons (Hostinger-inspired clean controls) -->
+          <button id="carousel-prev" type="button" aria-label="Slide sebelumnya" class="absolute left-3 md:left-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-ink-body shadow-md flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 hover:scale-105">
+            <span class="material-symbols-outlined text-[22px]">chevron_left</span>
           </button>
-          <button id="carousel-next" type="button" aria-label="Slide berikutnya" class="absolute right-3 md:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-surface-container-lowest/85 hover:bg-surface-container-lowest text-ink-body shadow-md flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 focus:opacity-100">
-            <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+          <button id="carousel-next" type="button" aria-label="Slide berikutnya" class="absolute right-3 md:right-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-ink-body shadow-md flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 hover:scale-105">
+            <span class="material-symbols-outlined text-[22px]">chevron_right</span>
           </button>
 
           <!-- Pagination Indicators -->
-          <div class="absolute bottom-3 md:bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2" role="tablist" aria-label="Navigasi Banner">
+          <div class="absolute bottom-3 md:bottom-5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2" role="tablist" aria-label="Navigasi Banner">
             <button type="button" id="carousel-dot-0" role="tab" aria-selected="true" aria-label="Ke slide 1" class="carousel-dot w-7 h-2 rounded-full bg-primary transition-all duration-300"></button>
-            <button type="button" id="carousel-dot-1" role="tab" aria-selected="false" aria-label="Ke slide 2" class="carousel-dot w-2 h-2 rounded-full bg-surface-container-lowest/70 hover:bg-surface-container-lowest transition-all duration-300"></button>
-            <button type="button" id="carousel-dot-2" role="tab" aria-selected="false" aria-label="Ke slide 3" class="carousel-dot w-2 h-2 rounded-full bg-surface-container-lowest/70 hover:bg-surface-container-lowest transition-all duration-300"></button>
+            <button type="button" id="carousel-dot-1" role="tab" aria-selected="false" aria-label="Ke slide 2" class="carousel-dot w-2 h-2 rounded-full bg-white/70 hover:bg-white transition-all duration-300"></button>
+            <button type="button" id="carousel-dot-2" role="tab" aria-selected="false" aria-label="Ke slide 3" class="carousel-dot w-2 h-2 rounded-full bg-white/70 hover:bg-white transition-all duration-300"></button>
           </div>
 
         </div>
       </section>
 
       <!-- SECTION 2: JELAJAHI KATEGORI -->
-      <section class="max-w-[1240px] mx-auto px-4 md:px-margin w-full py-space-xl">
-        <h2 class="font-headline-md md:font-headline-lg text-[24px] md:text-[28px] text-ink-body font-bold tracking-tight mb-space-lg">Jelajahi Kategori</h2>
-        
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-gutter">
+      <section class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 w-full py-8">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
           <!-- 1. Sastra & Fiksi -->
-          <a class="group flex flex-col items-center text-center p-space-sm rounded-xl hover:bg-surface-soft transition-all duration-200" data-path="katalog-buku" href="katalog_buku_desktop.html">
-            <div class="w-24 h-24 md:w-28 md:h-28 flex items-center justify-center mb-space-xs transition-transform duration-300 group-hover:scale-105">
+          <a class="group flex flex-col items-center text-center p-3 rounded-2xl hover:bg-surface-soft transition-all duration-200" data-path="katalog-buku" href="katalog_buku_desktop.html">
+            <div class="w-24 h-24 md:w-28 md:h-28 flex items-center justify-center mb-2 transition-transform duration-300 group-hover:scale-105">
               <img src="../../assets/sastra.png" alt="Sastra & Fiksi" class="w-full h-full object-contain">
             </div>
-            <span class="font-label text-[15px] text-ink-body font-semibold group-hover:text-primary transition-colors">Sastra &amp; Fiksi</span>
+            <span class="text-[15px] text-ink-body font-semibold group-hover:text-primary transition-colors">Sastra &amp; Fiksi</span>
           </a>
 
           <!-- 2. Pendidikan -->
-          <a class="group flex flex-col items-center text-center p-space-sm rounded-xl hover:bg-surface-soft transition-all duration-200" data-path="katalog-buku" href="katalog_buku_desktop.html">
-            <div class="w-24 h-24 md:w-28 md:h-28 flex items-center justify-center mb-space-xs transition-transform duration-300 group-hover:scale-105">
+          <a class="group flex flex-col items-center text-center p-3 rounded-2xl hover:bg-surface-soft transition-all duration-200" data-path="katalog-buku" href="katalog_buku_desktop.html">
+            <div class="w-24 h-24 md:w-28 md:h-28 flex items-center justify-center mb-2 transition-transform duration-300 group-hover:scale-105">
               <img src="../../assets/pendidikan.png" alt="Pendidikan" class="w-full h-full object-contain">
             </div>
-            <span class="font-label text-[15px] text-ink-body font-semibold group-hover:text-primary transition-colors">Pendidikan</span>
+            <span class="text-[15px] text-ink-body font-semibold group-hover:text-primary transition-colors">Pendidikan</span>
           </a>
 
           <!-- 3. Budaya & Tradisi -->
-          <a class="group flex flex-col items-center text-center p-space-sm rounded-xl hover:bg-surface-soft transition-all duration-200" data-path="katalog-buku" href="katalog_buku_desktop.html">
-            <div class="w-24 h-24 md:w-28 md:h-28 flex items-center justify-center mb-space-xs transition-transform duration-300 group-hover:scale-105">
+          <a class="group flex flex-col items-center text-center p-3 rounded-2xl hover:bg-surface-soft transition-all duration-200" data-path="katalog-buku" href="katalog_buku_desktop.html">
+            <div class="w-24 h-24 md:w-28 md:h-28 flex items-center justify-center mb-2 transition-transform duration-300 group-hover:scale-105">
               <img src="../../assets/budaya.png" alt="Budaya & Tradisi" class="w-full h-full object-contain">
             </div>
-            <span class="font-label text-[15px] text-ink-body font-semibold group-hover:text-primary transition-colors">Budaya &amp; Tradisi</span>
+            <span class="text-[15px] text-ink-body font-semibold group-hover:text-primary transition-colors">Budaya &amp; Tradisi</span>
           </a>
 
           <!-- 4. Bisnis & Ekonomi -->
-          <a class="group flex flex-col items-center text-center p-space-sm rounded-xl hover:bg-surface-soft transition-all duration-200" data-path="katalog-buku" href="katalog_buku_desktop.html">
-            <div class="w-24 h-24 md:w-28 md:h-28 flex items-center justify-center mb-space-xs transition-transform duration-300 group-hover:scale-105">
+          <a class="group flex flex-col items-center text-center p-3 rounded-2xl hover:bg-surface-soft transition-all duration-200" data-path="katalog-buku" href="katalog_buku_desktop.html">
+            <div class="w-24 h-24 md:w-28 md:h-28 flex items-center justify-center mb-2 transition-transform duration-300 group-hover:scale-105">
               <img src="../../assets/bisnis.png" alt="Bisnis & Ekonomi" class="w-full h-full object-contain">
             </div>
-            <span class="font-label text-[15px] text-ink-body font-semibold group-hover:text-primary transition-colors">Bisnis &amp; Ekonomi</span>
+            <span class="text-[15px] text-ink-body font-semibold group-hover:text-primary transition-colors">Bisnis &amp; Ekonomi</span>
           </a>
 
           <!-- 5. Anak & Remaja -->
-          <a class="group flex flex-col items-center text-center p-space-sm rounded-xl hover:bg-surface-soft transition-all duration-200" data-path="katalog-buku" href="katalog_buku_desktop.html">
-            <div class="w-24 h-24 md:w-28 md:h-28 flex items-center justify-center mb-space-xs transition-transform duration-300 group-hover:scale-105">
+          <a class="group flex flex-col items-center text-center p-3 rounded-2xl hover:bg-surface-soft transition-all duration-200" data-path="katalog-buku" href="katalog_buku_desktop.html">
+            <div class="w-24 h-24 md:w-28 md:h-28 flex items-center justify-center mb-2 transition-transform duration-300 group-hover:scale-105">
               <img src="../../assets/anak-remaja.png" alt="Anak & Remaja" class="w-full h-full object-contain">
             </div>
-            <span class="font-label text-[15px] text-ink-body font-semibold group-hover:text-primary transition-colors">Anak &amp; Remaja</span>
+            <span class="text-[15px] text-ink-body font-semibold group-hover:text-primary transition-colors">Anak &amp; Remaja</span>
           </a>
         </div>
       </section>
 
       <!-- SECTION 3: REKOMENDASI BUKU -->
-      <section class="max-w-[1240px] mx-auto px-4 md:px-margin w-full py-space-xl border-t border-border-subtle">
-        <div class="flex items-center justify-between mb-space-lg">
-          <h2 class="font-headline-md md:font-headline-lg text-[22px] md:text-[26px] text-ink-body font-bold tracking-tight">Rekomendasi Buku</h2>
-          <a class="inline-flex items-center gap-1 font-label text-[14px] text-primary hover:text-surface-tint font-bold group" data-path="katalog-buku" href="katalog_buku_desktop.html">
+      <section class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 border-t border-border-subtle">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-[22px] md:text-[26px] text-ink-body font-bold tracking-tight">Rekomendasi Buku</h2>
+          <a class="inline-flex items-center gap-1 text-[14px] text-primary hover:text-primary-hover font-bold group" data-path="katalog-buku" href="katalog_buku_desktop.html">
             <span>Lihat Semua</span>
             <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </a>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-gutter">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
           <!-- Book 1 (B01) -->
           <article class="group flex flex-col justify-between">
             <div>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-high mb-space-sm border border-border-subtle shadow-xs">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-2.5 border border-border-subtle shadow-xs">
                   <img src="../../assets/covers/B01.jpg" alt="Sampul buku Pride and Prejudice" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
                 </div>
               </a>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <h3 class="font-label text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">Pride and Prejudice</h3>
+                <h3 class="text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">Pride and Prejudice</h3>
               </a>
-              <p class="font-body-small text-[13px] text-ink-muted line-clamp-1 mt-0.5">Jane Austen</p>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Jane Austen</p>
             </div>
-            <div class="mt-space-sm pt-space-xs flex items-center justify-between">
-              <span class="font-label text-[16px] font-bold text-ink-body">Rp 45.000</span>
-              <button aria-label="Tambah Pride and Prejudice ke keranjang" data-book-id="B01" data-book-title="Pride and Prejudice" data-book-price="45000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary hover:text-on-primary text-ink-body transition-colors flex items-center justify-center" type="button" title="Tambah ke Keranjang">
+            <div class="mt-2.5 pt-1 flex items-center justify-between">
+              <span class="text-[16px] font-bold text-ink-body">Rp 45.000</span>
+              <button aria-label="Tambah Pride and Prejudice ke keranjang" data-book-id="B01" data-book-title="Pride and Prejudice" data-book-price="45000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white transition-colors flex items-center justify-center border border-primary/20 hover:border-transparent" type="button" title="Tambah ke Keranjang">
                 <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
               </button>
             </div>
@@ -305,18 +265,18 @@
           <article class="group flex flex-col justify-between">
             <div>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-high mb-space-sm border border-border-subtle shadow-xs">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-2.5 border border-border-subtle shadow-xs">
                   <img src="../../assets/covers/B08.jpg" alt="Sampul buku The Great Gatsby" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
                 </div>
               </a>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <h3 class="font-label text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">The Great Gatsby</h3>
+                <h3 class="text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">The Great Gatsby</h3>
               </a>
-              <p class="font-body-small text-[13px] text-ink-muted line-clamp-1 mt-0.5">F. Scott Fitzgerald</p>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">F. Scott Fitzgerald</p>
             </div>
-            <div class="mt-space-sm pt-space-xs flex items-center justify-between">
-              <span class="font-label text-[16px] font-bold text-ink-body">Rp 48.000</span>
-              <button aria-label="Tambah The Great Gatsby ke keranjang" data-book-id="B08" data-book-title="The Great Gatsby" data-book-price="48000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary hover:text-on-primary text-ink-body transition-colors flex items-center justify-center" type="button" title="Tambah ke Keranjang">
+            <div class="mt-2.5 pt-1 flex items-center justify-between">
+              <span class="text-[16px] font-bold text-ink-body">Rp 48.000</span>
+              <button aria-label="Tambah The Great Gatsby ke keranjang" data-book-id="B08" data-book-title="The Great Gatsby" data-book-price="48000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white transition-colors flex items-center justify-center border border-primary/20 hover:border-transparent" type="button" title="Tambah ke Keranjang">
                 <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
               </button>
             </div>
@@ -326,18 +286,18 @@
           <article class="group flex flex-col justify-between">
             <div>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-high mb-space-sm border border-border-subtle shadow-xs">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-2.5 border border-border-subtle shadow-xs">
                   <img src="../../assets/covers/B03.jpg" alt="Sampul buku The Adventures of Sherlock Holmes" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
                 </div>
               </a>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <h3 class="font-label text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">The Adventures of Sherlock Holmes</h3>
+                <h3 class="text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">The Adventures of Sherlock Holmes</h3>
               </a>
-              <p class="font-body-small text-[13px] text-ink-muted line-clamp-1 mt-0.5">Arthur Conan Doyle</p>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Arthur Conan Doyle</p>
             </div>
-            <div class="mt-space-sm pt-space-xs flex items-center justify-between">
-              <span class="font-label text-[16px] font-bold text-ink-body">Rp 59.000</span>
-              <button aria-label="Tambah The Adventures of Sherlock Holmes ke keranjang" data-book-id="B03" data-book-title="The Adventures of Sherlock Holmes" data-book-price="59000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary hover:text-on-primary text-ink-body transition-colors flex items-center justify-center" type="button" title="Tambah ke Keranjang">
+            <div class="mt-2.5 pt-1 flex items-center justify-between">
+              <span class="text-[16px] font-bold text-ink-body">Rp 59.000</span>
+              <button aria-label="Tambah The Adventures of Sherlock Holmes ke keranjang" data-book-id="B03" data-book-title="The Adventures of Sherlock Holmes" data-book-price="59000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white transition-colors flex items-center justify-center border border-primary/20 hover:border-transparent" type="button" title="Tambah ke Keranjang">
                 <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
               </button>
             </div>
@@ -347,18 +307,18 @@
           <article class="group flex flex-col justify-between">
             <div>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-high mb-space-sm border border-border-subtle shadow-xs">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-2.5 border border-border-subtle shadow-xs">
                   <img src="../../assets/covers/B05.jpg" alt="Sampul buku The Book of Tea" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
                 </div>
               </a>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <h3 class="font-label text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">The Book of Tea</h3>
+                <h3 class="text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">The Book of Tea</h3>
               </a>
-              <p class="font-body-small text-[13px] text-ink-muted line-clamp-1 mt-0.5">Okakura Kakuzō</p>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Okakura Kakuzō</p>
             </div>
-            <div class="mt-space-sm pt-space-xs flex items-center justify-between">
-              <span class="font-label text-[16px] font-bold text-ink-body">Rp 29.000</span>
-              <button aria-label="Tambah The Book of Tea ke keranjang" data-book-id="B05" data-book-title="The Book of Tea" data-book-price="29000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary hover:text-on-primary text-ink-body transition-colors flex items-center justify-center" type="button" title="Tambah ke Keranjang">
+            <div class="mt-2.5 pt-1 flex items-center justify-between">
+              <span class="text-[16px] font-bold text-ink-body">Rp 29.000</span>
+              <button aria-label="Tambah The Book of Tea ke keranjang" data-book-id="B05" data-book-title="The Book of Tea" data-book-price="29000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white transition-colors flex items-center justify-center border border-primary/20 hover:border-transparent" type="button" title="Tambah ke Keranjang">
                 <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
               </button>
             </div>
@@ -368,18 +328,18 @@
           <article class="group flex flex-col justify-between">
             <div>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-high mb-space-sm border border-border-subtle shadow-xs">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-2.5 border border-border-subtle shadow-xs">
                   <img src="../../assets/covers/B15.jpg" alt="Sampul buku The Picture of Dorian Gray" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
                 </div>
               </a>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <h3 class="font-label text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">The Picture of Dorian Gray</h3>
+                <h3 class="text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">The Picture of Dorian Gray</h3>
               </a>
-              <p class="font-body-small text-[13px] text-ink-muted line-clamp-1 mt-0.5">Oscar Wilde</p>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Oscar Wilde</p>
             </div>
-            <div class="mt-space-sm pt-space-xs flex items-center justify-between">
-              <span class="font-label text-[16px] font-bold text-ink-body">Rp 46.000</span>
-              <button aria-label="Tambah The Picture of Dorian Gray ke keranjang" data-book-id="B15" data-book-title="The Picture of Dorian Gray" data-book-price="46000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary hover:text-on-primary text-ink-body transition-colors flex items-center justify-center" type="button" title="Tambah ke Keranjang">
+            <div class="mt-2.5 pt-1 flex items-center justify-between">
+              <span class="text-[16px] font-bold text-ink-body">Rp 46.000</span>
+              <button aria-label="Tambah The Picture of Dorian Gray ke keranjang" data-book-id="B15" data-book-title="The Picture of Dorian Gray" data-book-price="46000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white transition-colors flex items-center justify-center border border-primary/20 hover:border-transparent" type="button" title="Tambah ke Keranjang">
                 <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
               </button>
             </div>
@@ -388,32 +348,32 @@
       </section>
 
       <!-- SECTION 4: BUKU RILIS TERBARU -->
-      <section class="max-w-[1240px] mx-auto px-4 md:px-margin w-full py-space-xl border-t border-border-subtle">
-        <div class="flex items-center justify-between mb-space-lg">
-          <h2 class="font-headline-md md:font-headline-lg text-[22px] md:text-[26px] text-ink-body font-bold tracking-tight">Buku Rilis Terbaru</h2>
-          <a class="inline-flex items-center gap-1 font-label text-[14px] text-primary hover:text-surface-tint font-bold group" data-path="katalog-buku" href="katalog_buku_desktop.html">
+      <section class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 border-t border-border-subtle">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-[22px] md:text-[26px] text-ink-body font-bold tracking-tight">Buku Rilis Terbaru</h2>
+          <a class="inline-flex items-center gap-1 text-[14px] text-primary hover:text-primary-hover font-bold group" data-path="katalog-buku" href="katalog_buku_desktop.html">
             <span>Lihat Semua</span>
             <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </a>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-gutter">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
           <!-- Book 6 (B02) -->
           <article class="group flex flex-col justify-between">
             <div>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-high mb-space-sm border border-border-subtle shadow-xs">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-2.5 border border-border-subtle shadow-xs">
                   <img src="../../assets/covers/B02.jpg" alt="Sampul buku Frankenstein" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
                 </div>
               </a>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <h3 class="font-label text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">Frankenstein</h3>
+                <h3 class="text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">Frankenstein</h3>
               </a>
-              <p class="font-body-small text-[13px] text-ink-muted line-clamp-1 mt-0.5">Mary Shelley</p>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Mary Shelley</p>
             </div>
-            <div class="mt-space-sm pt-space-xs flex items-center justify-between">
-              <span class="font-label text-[16px] font-bold text-ink-body">Rp 39.000</span>
-              <button aria-label="Tambah Frankenstein ke keranjang" data-book-id="B02" data-book-title="Frankenstein" data-book-price="39000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary hover:text-on-primary text-ink-body transition-colors flex items-center justify-center" type="button" title="Tambah ke Keranjang">
+            <div class="mt-2.5 pt-1 flex items-center justify-between">
+              <span class="text-[16px] font-bold text-ink-body">Rp 39.000</span>
+              <button aria-label="Tambah Frankenstein ke keranjang" data-book-id="B02" data-book-title="Frankenstein" data-book-price="39000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white transition-colors flex items-center justify-center border border-primary/20 hover:border-transparent" type="button" title="Tambah ke Keranjang">
                 <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
               </button>
             </div>
@@ -423,18 +383,18 @@
           <article class="group flex flex-col justify-between">
             <div>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-high mb-space-sm border border-border-subtle shadow-xs">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-2.5 border border-border-subtle shadow-xs">
                   <img src="../../assets/covers/B11.jpg" alt="Sampul buku Alice's Adventures in Wonderland" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
                 </div>
               </a>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <h3 class="font-label text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">Alice's Adventures in Wonderland</h3>
+                <h3 class="text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">Alice's Adventures in Wonderland</h3>
               </a>
-              <p class="font-body-small text-[13px] text-ink-muted line-clamp-1 mt-0.5">Lewis Carroll</p>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Lewis Carroll</p>
             </div>
-            <div class="mt-space-sm pt-space-xs flex items-center justify-between">
-              <span class="font-label text-[16px] font-bold text-ink-body">Rp 36.000</span>
-              <button aria-label="Tambah Alice's Adventures in Wonderland ke keranjang" data-book-id="B11" data-book-title="Alice's Adventures in Wonderland" data-book-price="36000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary hover:text-on-primary text-ink-body transition-colors flex items-center justify-center" type="button" title="Tambah ke Keranjang">
+            <div class="mt-2.5 pt-1 flex items-center justify-between">
+              <span class="text-[16px] font-bold text-ink-body">Rp 36.000</span>
+              <button aria-label="Tambah Alice's Adventures in Wonderland ke keranjang" data-book-id="B11" data-book-title="Alice's Adventures in Wonderland" data-book-price="36000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white transition-colors flex items-center justify-center border border-primary/20 hover:border-transparent" type="button" title="Tambah ke Keranjang">
                 <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
               </button>
             </div>
@@ -444,18 +404,18 @@
           <article class="group flex flex-col justify-between">
             <div>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-high mb-space-sm border border-border-subtle shadow-xs">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-2.5 border border-border-subtle shadow-xs">
                   <img src="../../assets/covers/B13.jpg" alt="Sampul buku The Time Machine" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
                 </div>
               </a>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <h3 class="font-label text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">The Time Machine</h3>
+                <h3 class="text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">The Time Machine</h3>
               </a>
-              <p class="font-body-small text-[13px] text-ink-muted line-clamp-1 mt-0.5">H. G. Wells</p>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">H. G. Wells</p>
             </div>
-            <div class="mt-space-sm pt-space-xs flex items-center justify-between">
-              <span class="font-label text-[16px] font-bold text-ink-body">Rp 38.000</span>
-              <button aria-label="Tambah The Time Machine ke keranjang" data-book-id="B13" data-book-title="The Time Machine" data-book-price="38000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary hover:text-on-primary text-ink-body transition-colors flex items-center justify-center" type="button" title="Tambah ke Keranjang">
+            <div class="mt-2.5 pt-1 flex items-center justify-between">
+              <span class="text-[16px] font-bold text-ink-body">Rp 38.000</span>
+              <button aria-label="Tambah The Time Machine ke keranjang" data-book-id="B13" data-book-title="The Time Machine" data-book-price="38000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white transition-colors flex items-center justify-center border border-primary/20 hover:border-transparent" type="button" title="Tambah ke Keranjang">
                 <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
               </button>
             </div>
@@ -465,18 +425,18 @@
           <article class="group flex flex-col justify-between">
             <div>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-high mb-space-sm border border-border-subtle shadow-xs">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-2.5 border border-border-subtle shadow-xs">
                   <img src="../../assets/covers/B04.jpg" alt="Sampul buku Flatland" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
                 </div>
               </a>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <h3 class="font-label text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">Flatland: A Romance</h3>
+                <h3 class="text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">Flatland: A Romance</h3>
               </a>
-              <p class="font-body-small text-[13px] text-ink-muted line-clamp-1 mt-0.5">Edwin A. Abbott</p>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Edwin A. Abbott</p>
             </div>
-            <div class="mt-space-sm pt-space-xs flex items-center justify-between">
-              <span class="font-label text-[16px] font-bold text-ink-body">Rp 35.000</span>
-              <button aria-label="Tambah Flatland ke keranjang" data-book-id="B04" data-book-title="Flatland" data-book-price="35000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary hover:text-on-primary text-ink-body transition-colors flex items-center justify-center" type="button" title="Tambah ke Keranjang">
+            <div class="mt-2.5 pt-1 flex items-center justify-between">
+              <span class="text-[16px] font-bold text-ink-body">Rp 35.000</span>
+              <button aria-label="Tambah Flatland ke keranjang" data-book-id="B04" data-book-title="Flatland" data-book-price="35000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white transition-colors flex items-center justify-center border border-primary/20 hover:border-transparent" type="button" title="Tambah ke Keranjang">
                 <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
               </button>
             </div>
@@ -486,18 +446,18 @@
           <article class="group flex flex-col justify-between">
             <div>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-high mb-space-sm border border-border-subtle shadow-xs">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-2.5 border border-border-subtle shadow-xs">
                   <img src="../../assets/covers/B14.jpg" alt="Sampul buku The Call of the Wild" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
                 </div>
               </a>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <h3 class="font-label text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">The Call of the Wild</h3>
+                <h3 class="text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">The Call of the Wild</h3>
               </a>
-              <p class="font-body-small text-[13px] text-ink-muted line-clamp-1 mt-0.5">Jack London</p>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Jack London</p>
             </div>
-            <div class="mt-space-sm pt-space-xs flex items-center justify-between">
-              <span class="font-label text-[16px] font-bold text-ink-body">Rp 34.000</span>
-              <button aria-label="Tambah The Call of the Wild ke keranjang" data-book-id="B14" data-book-title="The Call of the Wild" data-book-price="34000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary hover:text-on-primary text-ink-body transition-colors flex items-center justify-center" type="button" title="Tambah ke Keranjang">
+            <div class="mt-2.5 pt-1 flex items-center justify-between">
+              <span class="text-[16px] font-bold text-ink-body">Rp 34.000</span>
+              <button aria-label="Tambah The Call of the Wild ke keranjang" data-book-id="B14" data-book-title="The Call of the Wild" data-book-price="34000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white transition-colors flex items-center justify-center border border-primary/20 hover:border-transparent" type="button" title="Tambah ke Keranjang">
                 <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
               </button>
             </div>
@@ -506,32 +466,32 @@
       </section>
 
       <!-- SECTION 5: BUKU TERLARIS -->
-      <section class="max-w-[1240px] mx-auto px-4 md:px-margin w-full py-space-xl border-t border-border-subtle">
-        <div class="flex items-center justify-between mb-space-lg">
-          <h2 class="font-headline-md md:font-headline-lg text-[22px] md:text-[26px] text-ink-body font-bold tracking-tight">Buku Terlaris</h2>
-          <a class="inline-flex items-center gap-1 font-label text-[14px] text-primary hover:text-surface-tint font-bold group" data-path="katalog-buku" href="katalog_buku_desktop.html">
+      <section class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 border-t border-border-subtle">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-[22px] md:text-[26px] text-ink-body font-bold tracking-tight">Buku Terlaris</h2>
+          <a class="inline-flex items-center gap-1 text-[14px] text-primary hover:text-primary-hover font-bold group" data-path="katalog-buku" href="katalog_buku_desktop.html">
             <span>Lihat Semua</span>
             <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </a>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-gutter">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
           <!-- Book 11 (B06) -->
           <article class="group flex flex-col justify-between">
             <div>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-high mb-space-sm border border-border-subtle shadow-xs">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-2.5 border border-border-subtle shadow-xs">
                   <img src="../../assets/covers/B06.jpg" alt="Sampul buku The Art of War" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
                 </div>
               </a>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <h3 class="font-label text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">The Art of War</h3>
+                <h3 class="text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">The Art of War</h3>
               </a>
-              <p class="font-body-small text-[13px] text-ink-muted line-clamp-1 mt-0.5">Sun Tzu</p>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Sun Tzu</p>
             </div>
-            <div class="mt-space-sm pt-space-xs flex items-center justify-between">
-              <span class="font-label text-[16px] font-bold text-ink-body">Rp 32.000</span>
-              <button aria-label="Tambah The Art of War ke keranjang" data-book-id="B06" data-book-title="The Art of War" data-book-price="32000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary hover:text-on-primary text-ink-body transition-colors flex items-center justify-center" type="button" title="Tambah ke Keranjang">
+            <div class="mt-2.5 pt-1 flex items-center justify-between">
+              <span class="text-[16px] font-bold text-ink-body">Rp 32.000</span>
+              <button aria-label="Tambah The Art of War ke keranjang" data-book-id="B06" data-book-title="The Art of War" data-book-price="32000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white transition-colors flex items-center justify-center border border-primary/20 hover:border-transparent" type="button" title="Tambah ke Keranjang">
                 <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
               </button>
             </div>
@@ -541,18 +501,18 @@
           <article class="group flex flex-col justify-between">
             <div>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-high mb-space-sm border border-border-subtle shadow-xs">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-2.5 border border-border-subtle shadow-xs">
                   <img src="../../assets/covers/B10.jpg" alt="Sampul buku Dracula" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
                 </div>
               </a>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <h3 class="font-label text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">Dracula</h3>
+                <h3 class="text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">Dracula</h3>
               </a>
-              <p class="font-body-small text-[13px] text-ink-muted line-clamp-1 mt-0.5">Bram Stoker</p>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Bram Stoker</p>
             </div>
-            <div class="mt-space-sm pt-space-xs flex items-center justify-between">
-              <span class="font-label text-[16px] font-bold text-ink-body">Rp 42.000</span>
-              <button aria-label="Tambah Dracula ke keranjang" data-book-id="B10" data-book-title="Dracula" data-book-price="42000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary hover:text-on-primary text-ink-body transition-colors flex items-center justify-center" type="button" title="Tambah ke Keranjang">
+            <div class="mt-2.5 pt-1 flex items-center justify-between">
+              <span class="text-[16px] font-bold text-ink-body">Rp 42.000</span>
+              <button aria-label="Tambah Dracula ke keranjang" data-book-id="B10" data-book-title="Dracula" data-book-price="42000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white transition-colors flex items-center justify-center border border-primary/20 hover:border-transparent" type="button" title="Tambah ke Keranjang">
                 <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
               </button>
             </div>
@@ -562,18 +522,18 @@
           <article class="group flex flex-col justify-between">
             <div>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-high mb-space-sm border border-border-subtle shadow-xs">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-2.5 border border-border-subtle shadow-xs">
                   <img src="../../assets/covers/B07.jpg" alt="Sampul buku The Theory of the Leisure Class" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
                 </div>
               </a>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <h3 class="font-label text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">The Theory of the Leisure Class</h3>
+                <h3 class="text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">The Theory of the Leisure Class</h3>
               </a>
-              <p class="font-body-small text-[13px] text-ink-muted line-clamp-1 mt-0.5">Thorstein Veblen</p>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Thorstein Veblen</p>
             </div>
-            <div class="mt-space-sm pt-space-xs flex items-center justify-between">
-              <span class="font-label text-[16px] font-bold text-ink-body">Rp 49.000</span>
-              <button aria-label="Tambah The Theory of the Leisure Class ke keranjang" data-book-id="B07" data-book-title="The Theory of the Leisure Class" data-book-price="49000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary hover:text-on-primary text-ink-body transition-colors flex items-center justify-center" type="button" title="Tambah ke Keranjang">
+            <div class="mt-2.5 pt-1 flex items-center justify-between">
+              <span class="text-[16px] font-bold text-ink-body">Rp 49.000</span>
+              <button aria-label="Tambah The Theory of the Leisure Class ke keranjang" data-book-id="B07" data-book-title="The Theory of the Leisure Class" data-book-price="49000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white transition-colors flex items-center justify-center border border-primary/20 hover:border-transparent" type="button" title="Tambah ke Keranjang">
                 <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
               </button>
             </div>
@@ -583,18 +543,18 @@
           <article class="group flex flex-col justify-between">
             <div>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-high mb-space-sm border border-border-subtle shadow-xs">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-2.5 border border-border-subtle shadow-xs">
                   <img src="../../assets/covers/B12.jpg" alt="Sampul buku A Tale of Two Cities" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
                 </div>
               </a>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <h3 class="font-label text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">A Tale of Two Cities</h3>
+                <h3 class="text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">A Tale of Two Cities</h3>
               </a>
-              <p class="font-body-small text-[13px] text-ink-muted line-clamp-1 mt-0.5">Charles Dickens</p>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Charles Dickens</p>
             </div>
-            <div class="mt-space-sm pt-space-xs flex items-center justify-between">
-              <span class="font-label text-[16px] font-bold text-ink-body">Rp 52.000</span>
-              <button aria-label="Tambah A Tale of Two Cities ke keranjang" data-book-id="B12" data-book-title="A Tale of Two Cities" data-book-price="52000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary hover:text-on-primary text-ink-body transition-colors flex items-center justify-center" type="button" title="Tambah ke Keranjang">
+            <div class="mt-2.5 pt-1 flex items-center justify-between">
+              <span class="text-[16px] font-bold text-ink-body">Rp 52.000</span>
+              <button aria-label="Tambah A Tale of Two Cities ke keranjang" data-book-id="B12" data-book-title="A Tale of Two Cities" data-book-price="52000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white transition-colors flex items-center justify-center border border-primary/20 hover:border-transparent" type="button" title="Tambah ke Keranjang">
                 <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
               </button>
             </div>
@@ -604,18 +564,18 @@
           <article class="group flex flex-col justify-between">
             <div>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container-high mb-space-sm border border-border-subtle shadow-xs">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-2.5 border border-border-subtle shadow-xs">
                   <img src="../../assets/covers/B09.jpg" alt="Sampul buku Moby Dick" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
                 </div>
               </a>
               <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
-                <h3 class="font-label text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">Moby Dick</h3>
+                <h3 class="text-[15px] text-ink-body font-bold leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">Moby Dick</h3>
               </a>
-              <p class="font-body-small text-[13px] text-ink-muted line-clamp-1 mt-0.5">Herman Melville</p>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Herman Melville</p>
             </div>
-            <div class="mt-space-sm pt-space-xs flex items-center justify-between">
-              <span class="font-label text-[16px] font-bold text-ink-body">Rp 65.000</span>
-              <button aria-label="Tambah Moby Dick ke keranjang" data-book-id="B09" data-book-title="Moby Dick" data-book-price="65000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary hover:text-on-primary text-ink-body transition-colors flex items-center justify-center" type="button" title="Tambah ke Keranjang">
+            <div class="mt-2.5 pt-1 flex items-center justify-between">
+              <span class="text-[16px] font-bold text-ink-body">Rp 65.000</span>
+              <button aria-label="Tambah Moby Dick ke keranjang" data-book-id="B09" data-book-title="Moby Dick" data-book-price="65000" class="btn-add-to-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white transition-colors flex items-center justify-center border border-primary/20 hover:border-transparent" type="button" title="Tambah ke Keranjang">
                 <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
               </button>
             </div>
@@ -624,51 +584,51 @@
       </section>
 
       <!-- SECTION 6: AGENDA LITERASI -->
-      <section class="max-w-[1240px] mx-auto px-4 md:px-margin w-full py-space-2xl border-t border-border-subtle">
-        <div class="flex items-center justify-between mb-space-lg">
-          <h2 class="font-headline-md md:font-headline-lg text-[22px] md:text-[26px] text-ink-body font-bold tracking-tight">Agenda Literasi</h2>
-          <div class="flex items-center gap-space-sm">
-            <button id="agenda-scroll-prev" type="button" aria-label="Geser ke kiri" class="w-8 h-8 rounded-lg border border-border-bold bg-surface-container-lowest hover:bg-surface-soft text-ink-body flex items-center justify-center transition-colors">
+      <section class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 border-t border-border-subtle">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-[22px] md:text-[26px] text-ink-body font-bold tracking-tight">Agenda Literasi</h2>
+          <div class="flex items-center gap-2">
+            <button id="agenda-scroll-prev" type="button" aria-label="Geser ke kiri" class="w-8 h-8 rounded-lg border border-border-subtle bg-white hover:bg-surface-neutral text-ink-body flex items-center justify-center transition-colors">
               <span class="material-symbols-outlined text-[18px]">chevron_left</span>
             </button>
-            <button id="agenda-scroll-next" type="button" aria-label="Geser ke kanan" class="w-8 h-8 rounded-lg border border-border-bold bg-surface-container-lowest hover:bg-surface-soft text-ink-body flex items-center justify-center transition-colors">
+            <button id="agenda-scroll-next" type="button" aria-label="Geser ke kanan" class="w-8 h-8 rounded-lg border border-border-subtle bg-white hover:bg-surface-neutral text-ink-body flex items-center justify-center transition-colors">
               <span class="material-symbols-outlined text-[18px]">chevron_right</span>
             </button>
-            <a class="inline-flex items-center gap-1 font-label text-[14px] text-primary hover:text-surface-tint font-bold group ml-space-xs" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">
+            <a class="inline-flex items-center gap-1 text-[14px] text-primary hover:text-primary-hover font-bold group ml-1" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">
               <span>Lihat Semua</span>
               <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </a>
           </div>
         </div>
 
-        <!-- Horizontal Scrolling Event Cards (Gramedia Social Hub Reference) -->
-        <div id="agenda-scroll-container" class="flex gap-gutter overflow-x-auto pb-space-sm pt-space-xs scroll-smooth snap-x snap-mandatory scrollbar-none">
+        <!-- Horizontal Scrolling Event Cards -->
+        <div id="agenda-scroll-container" class="flex gap-6 overflow-x-auto pb-4 pt-1 scroll-smooth snap-x snap-mandatory scrollbar-none">
           
           <!-- Event Card 1 -->
-          <article class="w-[300px] sm:w-[320px] md:w-[340px] shrink-0 snap-start flex flex-col bg-surface-container-lowest rounded-xl border border-border-subtle shadow-xs hover:shadow-md transition-all duration-300 overflow-hidden">
-            <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+          <article class="w-[300px] sm:w-[320px] md:w-[340px] shrink-0 snap-start flex flex-col bg-white rounded-2xl border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all duration-300 overflow-hidden">
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-neutral">
               <img src="../../assets/events/event-book-fair.jpg" alt="Poster Pekan Buku Jawa Barat 2026" class="w-full h-full object-cover">
             </div>
-            <div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+            <div class="p-5 flex flex-col flex-1 justify-between gap-3">
               <div class="flex flex-col gap-1.5">
                 <a href="agenda_berita_literasi_desktop.html" data-path="agenda-literasi" class="block">
-                  <h3 class="font-label text-[15px] font-bold text-ink-body hover:text-primary transition-colors leading-snug line-clamp-2 min-h-[2.8em]">
+                  <h3 class="text-[15px] font-bold text-ink-body hover:text-primary transition-colors leading-snug line-clamp-2 min-h-[2.8em]">
                     Pekan Buku Jawa Barat 2026: Temu Penulis &amp; Penerbit
                   </h3>
                 </a>
-                <div class="flex items-center gap-1.5 text-ink-muted text-[12px] font-body-small">
-                  <span class="material-symbols-outlined text-[15px] text-primary shrink-0">calendar_today</span>
+                <div class="flex items-center gap-1.5 text-ink-muted text-[13px]">
+                  <span class="material-symbols-outlined text-[16px] text-primary shrink-0">calendar_today</span>
                   <span class="truncate">28 Nov – 05 Des 2026 | 09:00 - 18:00 WIB</span>
                 </div>
-                <div class="flex items-center gap-1.5 text-ink-muted text-[12px] font-body-small">
-                  <span class="material-symbols-outlined text-[15px] text-outline shrink-0">location_on</span>
+                <div class="flex items-center gap-1.5 text-ink-muted text-[13px]">
+                  <span class="material-symbols-outlined text-[16px] text-primary shrink-0">location_on</span>
                   <span class="truncate">Gedung Indonesia Menggugat, Bandung</span>
                 </div>
               </div>
 
-              <div class="pt-space-xs border-t border-border-subtle flex items-center justify-between">
-                <span class="font-label text-[14px] font-bold text-primary">Gratis</span>
-                <button type="button" aria-label="Bagikan event Pekan Buku Jawa Barat" data-title="Pekan Buku Jawa Barat 2026" class="btn-share-event flex items-center gap-1 text-[13px] font-label text-ink-muted hover:text-primary transition-colors">
+              <div class="pt-3 border-t border-border-subtle flex items-center justify-between">
+                <span class="text-[14px] font-bold text-primary">Gratis</span>
+                <button type="button" aria-label="Bagikan event Pekan Buku Jawa Barat" data-title="Pekan Buku Jawa Barat 2026" class="btn-share-event flex items-center gap-1 text-[13px] text-ink-muted hover:text-primary transition-colors">
                   <span class="material-symbols-outlined text-[16px]">share</span>
                   <span>Bagikan</span>
                 </button>
@@ -677,30 +637,30 @@
           </article>
 
           <!-- Event Card 2 -->
-          <article class="w-[300px] sm:w-[320px] md:w-[340px] shrink-0 snap-start flex flex-col bg-surface-container-lowest rounded-xl border border-border-subtle shadow-xs hover:shadow-md transition-all duration-300 overflow-hidden">
-            <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+          <article class="w-[300px] sm:w-[320px] md:w-[340px] shrink-0 snap-start flex flex-col bg-white rounded-2xl border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all duration-300 overflow-hidden">
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-neutral">
               <img src="../../assets/events/event-children-story.jpg" alt="Poster Festival Dongeng & Literasi Anak Pasundan" class="w-full h-full object-cover">
             </div>
-            <div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+            <div class="p-5 flex flex-col flex-1 justify-between gap-3">
               <div class="flex flex-col gap-1.5">
                 <a href="agenda_berita_literasi_desktop.html" data-path="agenda-literasi" class="block">
-                  <h3 class="font-label text-[15px] font-bold text-ink-body hover:text-primary transition-colors leading-snug line-clamp-2 min-h-[2.8em]">
+                  <h3 class="text-[15px] font-bold text-ink-body hover:text-primary transition-colors leading-snug line-clamp-2 min-h-[2.8em]">
                     Festival Dongeng &amp; Literasi Anak Pasundan
                   </h3>
                 </a>
-                <div class="flex items-center gap-1.5 text-ink-muted text-[12px] font-body-small">
-                  <span class="material-symbols-outlined text-[15px] text-primary shrink-0">calendar_today</span>
+                <div class="flex items-center gap-1.5 text-ink-muted text-[13px]">
+                  <span class="material-symbols-outlined text-[16px] text-primary shrink-0">calendar_today</span>
                   <span class="truncate">12 Desember 2026 | 10:00 - 15:00 WIB</span>
                 </div>
-                <div class="flex items-center gap-1.5 text-ink-muted text-[12px] font-body-small">
-                  <span class="material-symbols-outlined text-[15px] text-outline shrink-0">location_on</span>
+                <div class="flex items-center gap-1.5 text-ink-muted text-[13px]">
+                  <span class="material-symbols-outlined text-[16px] text-primary shrink-0">location_on</span>
                   <span class="truncate">Taman Literasi Bandung</span>
                 </div>
               </div>
 
-              <div class="pt-space-xs border-t border-border-subtle flex items-center justify-between">
-                <span class="font-label text-[14px] font-bold text-primary">Gratis</span>
-                <button type="button" aria-label="Bagikan event Festival Dongeng" data-title="Festival Dongeng & Literasi Anak Pasundan" class="btn-share-event flex items-center gap-1 text-[13px] font-label text-ink-muted hover:text-primary transition-colors">
+              <div class="pt-3 border-t border-border-subtle flex items-center justify-between">
+                <span class="text-[14px] font-bold text-primary">Gratis</span>
+                <button type="button" aria-label="Bagikan event Festival Dongeng" data-title="Festival Dongeng & Literasi Anak Pasundan" class="btn-share-event flex items-center gap-1 text-[13px] text-ink-muted hover:text-primary transition-colors">
                   <span class="material-symbols-outlined text-[16px]">share</span>
                   <span>Bagikan</span>
                 </button>
@@ -709,30 +669,30 @@
           </article>
 
           <!-- Event Card 3 -->
-          <article class="w-[300px] sm:w-[320px] md:w-[340px] shrink-0 snap-start flex flex-col bg-surface-container-lowest rounded-xl border border-border-subtle shadow-xs hover:shadow-md transition-all duration-300 overflow-hidden">
-            <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+          <article class="w-[300px] sm:w-[320px] md:w-[340px] shrink-0 snap-start flex flex-col bg-white rounded-2xl border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all duration-300 overflow-hidden">
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-neutral">
               <img src="../../assets/events/event-community.jpg" alt="Poster Bincang Buku Masa Depan Ekosistem E-Book" class="w-full h-full object-cover">
             </div>
-            <div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+            <div class="p-5 flex flex-col flex-1 justify-between gap-3">
               <div class="flex flex-col gap-1.5">
                 <a href="agenda_berita_literasi_desktop.html" data-path="agenda-literasi" class="block">
-                  <h3 class="font-label text-[15px] font-bold text-ink-body hover:text-primary transition-colors leading-snug line-clamp-2 min-h-[2.8em]">
+                  <h3 class="text-[15px] font-bold text-ink-body hover:text-primary transition-colors leading-snug line-clamp-2 min-h-[2.8em]">
                     Bincang Buku: Masa Depan Penerbitan &amp; Ekosistem E-Book
                   </h3>
                 </a>
-                <div class="flex items-center gap-1.5 text-ink-muted text-[12px] font-body-small">
-                  <span class="material-symbols-outlined text-[15px] text-primary shrink-0">calendar_today</span>
+                <div class="flex items-center gap-1.5 text-ink-muted text-[13px]">
+                  <span class="material-symbols-outlined text-[16px] text-primary shrink-0">calendar_today</span>
                   <span class="truncate">18 Desember 2026 | 14:00 - 17:00 WIB</span>
                 </div>
-                <div class="flex items-center gap-1.5 text-ink-muted text-[12px] font-body-small">
-                  <span class="material-symbols-outlined text-[15px] text-outline shrink-0">location_on</span>
+                <div class="flex items-center gap-1.5 text-ink-muted text-[13px]">
+                  <span class="material-symbols-outlined text-[16px] text-primary shrink-0">location_on</span>
                   <span class="truncate">Selasar Sunaryo Art Space, Bandung</span>
                 </div>
               </div>
 
-              <div class="pt-space-xs border-t border-border-subtle flex items-center justify-between">
-                <span class="font-label text-[14px] font-bold text-ink-body">Rp 25.000</span>
-                <button type="button" aria-label="Bagikan event Bincang Buku" data-title="Bincang Buku: Masa Depan Penerbitan & Ekosistem E-Book" class="btn-share-event flex items-center gap-1 text-[13px] font-label text-ink-muted hover:text-primary transition-colors">
+              <div class="pt-3 border-t border-border-subtle flex items-center justify-between">
+                <span class="text-[14px] font-bold text-ink-body">Rp 25.000</span>
+                <button type="button" aria-label="Bagikan event Bincang Buku" data-title="Bincang Buku: Masa Depan Penerbitan & Ekosistem E-Book" class="btn-share-event flex items-center gap-1 text-[13px] text-ink-muted hover:text-primary transition-colors">
                   <span class="material-symbols-outlined text-[16px]">share</span>
                   <span>Bagikan</span>
                 </button>
@@ -741,30 +701,30 @@
           </article>
 
           <!-- Event Card 4 -->
-          <article class="w-[300px] sm:w-[320px] md:w-[340px] shrink-0 snap-start flex flex-col bg-surface-container-lowest rounded-xl border border-border-subtle shadow-xs hover:shadow-md transition-all duration-300 overflow-hidden">
-            <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+          <article class="w-[300px] sm:w-[320px] md:w-[340px] shrink-0 snap-start flex flex-col bg-white rounded-2xl border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all duration-300 overflow-hidden">
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-neutral">
               <img src="../../assets/events/event-webinar.jpg" alt="Poster Lokakarya Penulisan Buku Akademik & Monograf" class="w-full h-full object-cover">
             </div>
-            <div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+            <div class="p-5 flex flex-col flex-1 justify-between gap-3">
               <div class="flex flex-col gap-1.5">
                 <a href="agenda_berita_literasi_desktop.html" data-path="agenda-literasi" class="block">
-                  <h3 class="font-label text-[15px] font-bold text-ink-body hover:text-primary transition-colors leading-snug line-clamp-2 min-h-[2.8em]">
+                  <h3 class="text-[15px] font-bold text-ink-body hover:text-primary transition-colors leading-snug line-clamp-2 min-h-[2.8em]">
                     Lokakarya Penulisan Buku Akademik &amp; Monograf Ber-ISBN
                   </h3>
                 </a>
-                <div class="flex items-center gap-1.5 text-ink-muted text-[12px] font-body-small">
-                  <span class="material-symbols-outlined text-[15px] text-primary shrink-0">calendar_today</span>
+                <div class="flex items-center gap-1.5 text-ink-muted text-[13px]">
+                  <span class="material-symbols-outlined text-[16px] text-primary shrink-0">calendar_today</span>
                   <span class="truncate">22 Desember 2026 | 09:00 - 12:00 WIB</span>
                 </div>
-                <div class="flex items-center gap-1.5 text-ink-muted text-[12px] font-body-small">
-                  <span class="material-symbols-outlined text-[15px] text-outline shrink-0">location_on</span>
+                <div class="flex items-center gap-1.5 text-ink-muted text-[13px]">
+                  <span class="material-symbols-outlined text-[16px] text-primary shrink-0">location_on</span>
                   <span class="truncate">Daring via Zoom / Hybrid Unpad</span>
                 </div>
               </div>
 
-              <div class="pt-space-xs border-t border-border-subtle flex items-center justify-between">
-                <span class="font-label text-[14px] font-bold text-primary">Gratis</span>
-                <button type="button" aria-label="Bagikan event Lokakarya Penulisan" data-title="Lokakarya Penulisan Buku Akademik & Monograf Ber-ISBN" class="btn-share-event flex items-center gap-1 text-[13px] font-label text-ink-muted hover:text-primary transition-colors">
+              <div class="pt-3 border-t border-border-subtle flex items-center justify-between">
+                <span class="text-[14px] font-bold text-primary">Gratis</span>
+                <button type="button" aria-label="Bagikan event Lokakarya Penulisan" data-title="Lokakarya Penulisan Buku Akademik & Monograf Ber-ISBN" class="btn-share-event flex items-center gap-1 text-[13px] text-ink-muted hover:text-primary transition-colors">
                   <span class="material-symbols-outlined text-[16px]">share</span>
                   <span>Bagikan</span>
                 </button>
@@ -779,68 +739,67 @@
   </main>
 
   <!-- TOAST NOTIFICATION -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-16 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2 px-4 py-3 rounded-xl bg-ink-body text-surface shadow-lg text-[14px] font-label font-medium">
-    <span id="toast-icon" class="material-symbols-outlined text-primary-fixed text-[20px]">check_circle</span>
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-16 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-ink-body text-white shadow-xl text-[14px] font-medium border border-white/10">
+    <span id="toast-icon" class="material-symbols-outlined text-primary-accent text-[20px]">check_circle</span>
     <span id="toast-message">Item berhasil ditambahkan ke keranjang</span>
   </div>
 
-  <!-- FOOTER -->
-  <footer class="w-full bg-surface-container-low text-ink-body pt-space-2xl pb-space-xl border-t border-border-subtle">
-    <div class="max-w-[1240px] mx-auto px-4 md:px-margin">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter mb-space-2xl">
+  <!-- FOOTER (Hostinger Deep Purple #2F1C6A Inspired) -->
+  <footer class="w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
         <!-- Kolom 1 -->
-        <div class="flex flex-col gap-space-sm">
-          <span class="font-title-md text-[16px] text-ink-body font-bold">Jelajahi</span>
-          <ul class="flex flex-col gap-2 font-body-small text-[14px] text-ink-muted">
-            <li><a class="hover:text-primary transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="kategori" href="katalog_buku_desktop.html">Kategori</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Buku Terbaru</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Buku Terlaris</a></li>
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Jelajahi</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="kategori" href="katalog_buku_desktop.html">Kategori Pilihan</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Buku Rilis Terbaru</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Buku Terlaris</a></li>
           </ul>
         </div>
 
         <!-- Kolom 2 -->
-        <div class="flex flex-col gap-space-sm">
-          <span class="font-title-md text-[16px] text-ink-body font-bold">Informasi Pembelian</span>
-          <ul class="flex flex-col gap-2 font-body-small text-[14px] text-ink-muted">
-            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Cara Pembelian</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Metode Pembayaran</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Panduan Web Reader</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Bantuan &amp; FAQ</a></li>
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Informasi Pembelian</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Cara Pembelian</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Metode Pembayaran</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Panduan Web Reader</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Bantuan &amp; FAQ</a></li>
           </ul>
         </div>
 
         <!-- Kolom 3 -->
-        <div class="flex flex-col gap-space-sm">
-          <span class="font-title-md text-[16px] text-ink-body font-bold">Tentang IKAPI</span>
-          <ul class="flex flex-col gap-2 font-body-small text-[14px] text-ink-muted">
-            <li><a class="hover:text-primary transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Tentang Kami</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Anggota Penerbit</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Kemitraan Perpustakaan</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Hubungi Kami</a></li>
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Tentang IKAPI</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Tentang Kami</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Anggota Penerbit</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Kemitraan Perpustakaan</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Hubungi Kami</a></li>
           </ul>
         </div>
 
         <!-- Kolom 4 -->
-        <div class="flex flex-col gap-space-sm">
-          <span class="font-title-md text-[16px] text-ink-body font-bold">Lainnya</span>
-          <ul class="flex flex-col gap-2 font-body-small text-[14px] text-ink-muted">
-            <li><a class="hover:text-primary transition-colors" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="kabar-artikel" href="agenda_berita_literasi_desktop.html">Kabar &amp; Artikel</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Syarat &amp; Ketentuan</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Kebijakan Privasi</a></li>
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Lainnya</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Syarat &amp; Ketentuan</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Kebijakan Privasi</a></li>
           </ul>
         </div>
       </div>
 
-      <div class="pt-space-lg border-t border-border-subtle flex flex-col md:flex-row items-center justify-between gap-space-md text-[13px] font-body-small text-ink-muted">
+      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-[13px] text-[#b8b8bd]">
         <p>© 2026 IKAPI Jawa Barat. Seluruh hak cipta dilindungi undang-undang.</p>
-        <div class="flex flex-wrap items-center gap-3 sm:gap-space-lg">
-          <span class="text-ink-body font-semibold">Media Sosial:</span>
-          <a href="#" class="hover:text-primary transition-colors" aria-label="Instagram IKAPI Jabar">Instagram</a>
-          <a href="#" class="hover:text-primary transition-colors" aria-label="YouTube IKAPI Jabar">YouTube</a>
-          <a href="#" class="hover:text-primary transition-colors" aria-label="Facebook IKAPI Jabar">Facebook</a>
-          <a href="#" class="hover:text-primary transition-colors" aria-label="X Twitter IKAPI Jabar">X</a>
+        <div class="flex flex-wrap items-center gap-4">
+          <span class="text-white/60">Media Sosial:</span>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="Instagram IKAPI Jabar">Instagram</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="YouTube IKAPI Jabar">YouTube</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="Facebook IKAPI Jabar">Facebook</a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="X Twitter IKAPI Jabar">X</a>
         </div>
       </div>
     </div>
@@ -881,7 +840,7 @@
             dot.className = 'carousel-dot w-7 h-2 rounded-full bg-primary transition-all duration-300';
             dot.setAttribute('aria-selected', 'true');
           } else {
-            dot.className = 'carousel-dot w-2 h-2 rounded-full bg-surface-container-lowest/70 hover:bg-surface-container-lowest transition-all duration-300';
+            dot.className = 'carousel-dot w-2 h-2 rounded-full bg-white/70 hover:bg-white transition-all duration-300';
             dot.setAttribute('aria-selected', 'false');
           }
         });
@@ -1005,13 +964,13 @@
 
           const originalHTML = btn.innerHTML;
           btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span>';
-          btn.classList.add('bg-primary', 'text-on-primary');
+          btn.classList.add('bg-primary', 'text-white');
           
           showToast(`"${title}" berhasil ditambahkan ke keranjang`);
 
           setTimeout(() => {
             btn.innerHTML = originalHTML;
-            btn.classList.remove('bg-primary', 'text-on-primary');
+            btn.classList.remove('bg-primary', 'text-white');
           }, 1500);
         });
       });

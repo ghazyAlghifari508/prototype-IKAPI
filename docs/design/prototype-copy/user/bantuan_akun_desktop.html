@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <title>Pusat Bantuan — IKAPI Store Jawa Barat</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <!-- Typography: DM Sans (Hostinger Design System) & Fallback Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #673de6;
+      --color-primary-hover: #5025d1;
+      --color-primary-deep: #2f1c6a;
+      --color-canvas: #ffffff;
+      --color-surface-soft: #f5f6ff;
+      --color-surface-neutral: #f5f5f6;
+      --color-text-primary: #222225;
+      --color-text-secondary: #62636b;
+      --color-border: #e5e7eb;
+    }
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        color: #222225;
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+      body {
+        overflow-x: clip;
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    .scrollbar-none::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-none {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: "#673de6",
+              hover: "#5025d1",
+              deep: "#2f1c6a",
+              container: "#673de6",
+              accent: "#9d99ff"
+            },
+            surface: {
+              DEFAULT: "#ffffff",
+              soft: "#f5f6ff",
+              neutral: "#f5f5f6",
+              border: "#e5e7eb"
+            },
+            ink: {
+              body: "#222225",
+              muted: "#62636b",
+              subtle: "#9d9ea4"
+            },
+            "border-subtle": "#e5e7eb",
+            "border-bold": "#d1d5db"
+          },
+          fontFamily: {
+            sans: ["'DM Sans'", "sans-serif"],
+            body: ["'DM Sans'", "sans-serif"]
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+            '4xl': '1.75rem'
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-white font-sans text-ink-body antialiased selection:bg-primary-soft selection:text-primary-deep">
+
+  <!-- GLOBAL HEADER (Consistent with Homepage) -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-border-subtle shadow-[0_1px_4px_rgba(34,34,37,0.04)]">
+    <div class="h-28 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between">
+      <div class="h-16 flex items-center justify-between gap-4">
+        <!-- Logo -->
+        <div class="flex items-center gap-4 shrink-0">
+          <a href="beranda_desktop.html" data-path="beranda" class="flex items-center" aria-label="Beranda IKAPI Jawa Barat">
+            <img alt="Logo IKAPI Jawa Barat" class="h-7 sm:h-8 w-auto object-contain" src="../../assets/logo-ikapi-jabar.png">
+          </a>
+        </div>
+        <!-- Search Bar -->
+        <div class="flex-1 max-w-xl mx-2 hidden sm:flex items-center">
+          <div class="relative w-full">
+            <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-muted text-[20px]">search</span>
+            <input class="w-full h-10 pl-10 pr-4 rounded-xl bg-surface-neutral text-[14px] text-ink-body placeholder:text-ink-muted outline-none ring-1 ring-border-subtle focus:ring-2 focus:ring-primary focus:bg-white transition-all" placeholder="Cari judul buku, penulis, atau topik..." type="text">
+          </div>
+        </div>
+        <!-- Right Actions & Dropdown -->
+        <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+          <a class="relative p-2 rounded-xl text-ink-body hover:text-primary hover:bg-surface-soft transition-colors" data-path="keranjang" href="keranjang_pembayaran_terpadu_desktop.html" aria-label="Keranjang Belanja">
+            <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+            <span id="header-cart-badge" class="absolute top-1 right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-primary text-white text-[11px] font-bold flex items-center justify-center">2</span>
+          </a>
+          <div class="h-6 w-px bg-border-subtle"></div>
+          
+          <!-- User Profile & Dropdown Trigger -->
+          <div class="relative">
+            <button id="toggle-dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true" class="flex items-center gap-2.5 p-1.5 pl-2 rounded-full hover:bg-surface-neutral transition-colors focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer">
+              <div id="header-avatar" class="w-8 h-8 rounded-full bg-primary text-white font-bold text-[13px] flex items-center justify-center shrink-0 overflow-hidden shadow-xs">
+                <span id="header-avatar-initials">AH</span>
+              </div>
+              <span id="header-user-name" class="hidden md:inline text-[14px] text-ink-body font-semibold">Ahmad Hidayat</span>
+              <span class="material-symbols-outlined text-[18px] text-ink-muted">expand_more</span>
+            </button>
+
+            <!-- Dropdown Menu (Synced, no standalone Buku Favorit) -->
+            <div id="header-user-dropdown" class="hidden absolute right-0 mt-2 w-64 bg-white rounded-2xl shadow-xl border border-border-subtle py-2 z-50 transition-all">
+              <div class="px-4 py-3 border-b border-border-subtle">
+                <p id="dropdown-user-name" class="text-[14px] font-bold text-ink-body truncate">Ahmad Hidayat</p>
+                <p id="dropdown-user-email" class="text-[12px] text-ink-muted truncate">ahmad.hidayat@literasi.id</p>
+              </div>
+              <div class="py-1 text-[13px]">
+                <a href="akun_saya_profil_dropdown_navigasi_desktop.html" class="flex items-center gap-2.5 px-4 py-2 text-ink-body hover:text-primary hover:bg-surface-neutral transition-colors font-medium">
+                  <span class="material-symbols-outlined text-[18px]">person</span>
+                  <span>Profil Saya</span>
+                </a>
+                <a href="riwayat_pesanan_desktop.html" class="flex items-center gap-2.5 px-4 py-2 text-ink-body hover:text-primary hover:bg-surface-neutral transition-colors font-medium">
+                  <span class="material-symbols-outlined text-[18px]">receipt_long</span>
+                  <span>Riwayat Pesanan</span>
+                </a>
+                <a href="perpustakaan_saya_desktop.html" class="flex items-center gap-2.5 px-4 py-2 text-ink-body hover:text-primary hover:bg-surface-neutral transition-colors font-medium">
+                  <span class="material-symbols-outlined text-[18px]">local_library</span>
+                  <span>Perpustakaan Saya</span>
+                </a>
+                <a href="riwayat_ulasan_desktop.html" class="flex items-center gap-2.5 px-4 py-2 text-ink-body hover:text-primary hover:bg-surface-neutral transition-colors font-medium">
+                  <span class="material-symbols-outlined text-[18px]">rate_review</span>
+                  <span>Riwayat Ulasan</span>
+                </a>
+                <a href="pengaturan_akun_desktop.html" class="flex items-center gap-2.5 px-4 py-2 text-ink-body hover:text-primary hover:bg-surface-neutral transition-colors font-medium">
+                  <span class="material-symbols-outlined text-[18px]">settings</span>
+                  <span>Pengaturan Akun</span>
+                </a>
+                <a href="bantuan_akun_desktop.html" class="flex items-center gap-2.5 px-4 py-2 font-bold text-primary bg-surface-soft transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">help</span>
+                  <span>Bantuan</span>
+                </a>
+              </div>
+              <div class="pt-1 border-t border-border-subtle">
+                <a href="masuk_login_desktop.html" class="flex items-center gap-2.5 px-4 py-2 text-[13px] text-red-600 hover:bg-red-50 transition-colors font-semibold">
+                  <span class="material-symbols-outlined text-[18px]">logout</span>
+                  <span>Keluar Akun</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Primary Nav Tabs -->
+      <nav class="h-12 flex items-center gap-6 overflow-x-auto scrollbar-none max-w-full">
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="beranda" href="beranda_desktop.html">Beranda</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Komunitas Penerbit</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN ACCOUNT WORKSPACE -->
+  <main class="w-full pt-28 bg-white min-h-[calc(100vh-16rem)]">
+    <div class="flex flex-col w-full">
+      <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 w-full flex flex-col gap-6">
+        
+        <!-- Mobile Compact Account Navigation Menu -->
+        <details class="lg:hidden group bg-white border border-border-subtle rounded-2xl text-[14px] overflow-hidden shadow-xs">
+          <summary class="px-4 py-3 cursor-pointer font-semibold text-ink-body flex items-center justify-between list-none select-none">
+            <div class="flex items-center gap-2.5 text-primary">
+              <span class="material-symbols-outlined text-[20px]">help</span>
+              <span>Menu Akun: Bantuan</span>
+            </div>
+            <span class="material-symbols-outlined text-[20px] text-ink-muted transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <div class="p-3 border-t border-border-subtle bg-surface-neutral flex flex-col gap-1">
+            <a href="akun_saya_profil_dropdown_navigasi_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Profil Saya</a>
+            <a href="riwayat_pesanan_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Riwayat Pesanan</a>
+            <a href="perpustakaan_saya_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Perpustakaan Saya</a>
+            <a href="riwayat_ulasan_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Riwayat Ulasan</a>
+            <a href="pengaturan_akun_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Pengaturan Akun</a>
+            <a href="bantuan_akun_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-surface-soft text-primary font-bold">Bantuan</a>
+            <div class="h-px bg-border-subtle my-1"></div>
+            <a href="masuk_login_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-red-600 font-semibold">Keluar Akun</a>
+          </div>
+        </details>
+
+        <!-- Page Header -->
+        <div class="pb-2 border-b border-border-subtle">
+          <h1 class="text-[30px] md:text-[34px] font-bold text-ink-body tracking-tight leading-tight">
+            Pusat Bantuan
+          </h1>
+          <p class="text-[14px] sm:text-[15px] text-ink-muted mt-1">
+            Temukan jawaban seputar akun, pembelian, dan akses e-book di IKAPI Store Jawa Barat.
+          </p>
+        </div>
+
+        <!-- 2-COLUMN WORKSPACE: Google Stitch Floating Sidebar + Main Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- LEFT FLOATING SIDEBAR (Independent Rounded Panel) -->
+          <aside class="hidden lg:block lg:col-span-4 xl:col-span-3">
+            <div class="lg:sticky lg:top-36 bg-white rounded-3xl border border-border-subtle shadow-sm p-6 flex flex-col gap-6">
+              
+              <!-- Mini Profile Identity Header -->
+              <div class="flex items-center gap-3.5 pb-5 border-b border-border-subtle">
+                <div id="sidebar-avatar" class="w-12 h-12 rounded-full bg-primary text-white font-bold text-[18px] flex items-center justify-center shrink-0 overflow-hidden shadow-xs">
+                  <span id="sidebar-avatar-initials">AH</span>
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <span id="sidebar-user-name" class="font-bold text-[15px] text-ink-body truncate">Ahmad Hidayat</span>
+                  <span id="sidebar-user-email" class="text-[12px] text-ink-muted truncate">ahmad.hidayat@literasi.id</span>
+                </div>
+              </div>
+
+              <!-- Navigation Menu Links (Updated: Buku Favorit removed, Riwayat Ulasan & Bantuan present) -->
+              <nav class="flex flex-col gap-1.5 text-[14px]">
+                <a href="akun_saya_profil_dropdown_navigasi_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">person</span>
+                  <span>Profil Saya</span>
+                </a>
+                <a href="riwayat_pesanan_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">receipt_long</span>
+                  <span>Riwayat Pesanan</span>
+                </a>
+                <a href="perpustakaan_saya_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">local_library</span>
+                  <span>Perpustakaan Saya</span>
+                </a>
+                <a href="riwayat_ulasan_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">rate_review</span>
+                  <span>Riwayat Ulasan</span>
+                </a>
+                <a href="pengaturan_akun_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">settings</span>
+                  <span>Pengaturan Akun</span>
+                </a>
+                <a href="bantuan_akun_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl bg-surface-soft text-primary font-bold shadow-xs transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">help</span>
+                  <span>Bantuan</span>
+                </a>
+
+                <div class="h-px bg-border-subtle my-2"></div>
+
+                <a href="masuk_login_desktop.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-red-600 hover:bg-red-50 transition-colors font-semibold">
+                  <span class="material-symbols-outlined text-[20px]">logout</span>
+                  <span>Keluar Akun</span>
+                </a>
+              </nav>
+
+            </div>
+          </aside>
+
+          <!-- RIGHT MAIN: Help Center Content Workspace -->
+          <section class="lg:col-span-8 xl:col-span-9 flex flex-col gap-8">
+            
+            <!-- Search Bar -->
+            <div class="relative w-full">
+              <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-ink-muted text-[20px] pointer-events-none">search</span>
+              <input id="faq-search-input" type="text" class="w-full h-12 pl-12 pr-10 rounded-2xl bg-surface-neutral border border-border-subtle text-ink-body text-[14px] placeholder:text-ink-muted outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Cari pertanyaan atau kata kunci bantuan..." oninput="handleFaqSearch(event)">
+              <button id="clear-faq-search" type="button" class="hidden absolute right-3.5 top-1/2 -translate-y-1/2 text-ink-muted hover:text-ink-body p-1 cursor-pointer" onclick="clearFaqSearch()">
+                <span class="material-symbols-outlined text-[18px]">close</span>
+              </button>
+            </div>
+
+            <!-- Topic Categories Grid (4 Topics) -->
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-[12px] font-bold text-ink-muted uppercase tracking-wider block">Kategori Bantuan</span>
+                <button type="button" id="btn-topic-all" class="text-[12px] font-bold text-primary hover:underline cursor-pointer" onclick="selectFaqTopic('all')">
+                  Lihat Semua
+                </button>
+              </div>
+
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <!-- Topic 1 -->
+                <button type="button" class="topic-btn p-4 rounded-2xl bg-white hover:bg-surface-soft border border-border-subtle text-left transition-all cursor-pointer group shadow-xs" data-topic="pembayaran" onclick="selectFaqTopic('pembayaran')">
+                  <div class="w-10 h-10 rounded-xl bg-surface-soft group-hover:bg-primary text-primary group-hover:text-white flex items-center justify-center transition-colors mb-2.5">
+                    <span class="material-symbols-outlined text-[20px]">payments</span>
+                  </div>
+                  <h3 class="text-[14px] font-bold text-ink-body group-hover:text-primary transition-colors">Pembayaran</h3>
+                  <p class="text-[11.5px] text-ink-muted mt-0.5">QRIS &amp; Virtual Account</p>
+                </button>
+
+                <!-- Topic 2 -->
+                <button type="button" class="topic-btn p-4 rounded-2xl bg-white hover:bg-surface-soft border border-border-subtle text-left transition-all cursor-pointer group shadow-xs" data-topic="reader" onclick="selectFaqTopic('reader')">
+                  <div class="w-10 h-10 rounded-xl bg-surface-soft group-hover:bg-primary text-primary group-hover:text-white flex items-center justify-center transition-colors mb-2.5">
+                    <span class="material-symbols-outlined text-[20px]">menu_book</span>
+                  </div>
+                  <h3 class="text-[14px] font-bold text-ink-body group-hover:text-primary transition-colors">Akses E-Book</h3>
+                  <p class="text-[11.5px] text-ink-muted mt-0.5">Web Reader &amp; Pustaka</p>
+                </button>
+
+                <!-- Topic 3 -->
+                <button type="button" class="topic-btn p-4 rounded-2xl bg-white hover:bg-surface-soft border border-border-subtle text-left transition-all cursor-pointer group shadow-xs" data-topic="akun" onclick="selectFaqTopic('akun')">
+                  <div class="w-10 h-10 rounded-xl bg-surface-soft group-hover:bg-primary text-primary group-hover:text-white flex items-center justify-center transition-colors mb-2.5">
+                    <span class="material-symbols-outlined text-[20px]">manage_accounts</span>
+                  </div>
+                  <h3 class="text-[14px] font-bold text-ink-body group-hover:text-primary transition-colors">Akun</h3>
+                  <p class="text-[11.5px] text-ink-muted mt-0.5">Profil &amp; Kata Sandi</p>
+                </button>
+
+                <!-- Topic 4 -->
+                <button type="button" class="topic-btn p-4 rounded-2xl bg-white hover:bg-surface-soft border border-border-subtle text-left transition-all cursor-pointer group shadow-xs" data-topic="pesanan" onclick="selectFaqTopic('pesanan')">
+                  <div class="w-10 h-10 rounded-xl bg-surface-soft group-hover:bg-primary text-primary group-hover:text-white flex items-center justify-center transition-colors mb-2.5">
+                    <span class="material-symbols-outlined text-[20px]">receipt_long</span>
+                  </div>
+                  <h3 class="text-[14px] font-bold text-ink-body group-hover:text-primary transition-colors">Pesanan</h3>
+                  <p class="text-[11.5px] text-ink-muted mt-0.5">Riwayat &amp; Status</p>
+                </button>
+              </div>
+            </div>
+
+            <!-- FAQ Accordion Section -->
+            <div class="space-y-4">
+              <div class="flex items-center justify-between pb-2 border-b border-border-subtle">
+                <h2 id="faq-section-title" class="text-[18px] font-bold text-ink-body">
+                  Pertanyaan Populer
+                </h2>
+                <span id="faq-count-text" class="text-[12.5px] text-ink-muted font-medium">8 pertanyaan</span>
+              </div>
+
+              <!-- Accordion List Container -->
+              <div id="faq-accordion-container" class="rounded-3xl border border-border-subtle bg-white overflow-hidden divide-y divide-border-subtle shadow-xs">
+                <!-- Rendered dynamically by renderFaqList() -->
+              </div>
+
+              <!-- Empty State for Search Results -->
+              <div id="faq-empty-state" class="hidden p-10 rounded-3xl bg-white border border-border-subtle shadow-xs text-center flex-col items-center justify-center gap-3">
+                <div class="w-32 aspect-square flex items-center justify-center mb-1">
+                  <img src="../../assets/ilustration/notfoundil.png" alt="Tidak Ada Hasil" class="w-full h-full object-contain">
+                </div>
+                <h3 class="text-[18px] font-bold text-ink-body">Tidak Ada Hasil yang Cocok</h3>
+                <p class="text-[13.5px] text-ink-muted max-w-sm">
+                  Coba gunakan kata kunci lain atau pilih salah satu topik bantuan di atas.
+                </p>
+                <button type="button" class="mt-2 h-10 px-5 rounded-xl bg-surface-neutral hover:bg-surface-soft hover:text-primary text-ink-body font-bold text-[13px] border border-border-subtle transition-colors cursor-pointer" onclick="clearFaqSearch()">
+                  Hapus Pencarian
+                </button>
+              </div>
+            </div>
+
+            <!-- Bottom Contact / Escalation Section (Solid Deep Purple Hostinger Style) -->
+            <div class="bg-[#2f1c6a] rounded-3xl p-6 sm:p-8 border border-[#1e1047] text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 shadow-lg">
+              <div class="space-y-1">
+                <h3 class="text-[20px] font-bold tracking-tight">Masih Butuh Bantuan?</h3>
+                <p class="text-[14px] text-[#b8b8bd] max-w-md leading-relaxed">
+                  Gunakan asisten chat atau hubungi sekretariat IKAPI Jawa Barat untuk bantuan langsung.
+                </p>
+              </div>
+              <div class="flex items-center gap-2.5 w-full sm:w-auto shrink-0">
+                <a href="chatbot_bantuan_rekomendasi_desktop.html" class="flex-1 sm:flex-initial h-11 px-5 rounded-xl bg-white hover:bg-white/90 text-[#2f1c6a] text-[13.5px] font-bold flex items-center justify-center gap-1.5 transition-colors shadow-sm">
+                  <span class="material-symbols-outlined text-[18px]">chat</span>
+                  <span>Chat Bantuan</span>
+                </a>
+                <a href="mailto:sekretariat@ikapi-jabar.id" class="flex-1 sm:flex-initial h-11 px-5 rounded-xl border border-white/20 bg-white/10 hover:bg-white/20 text-white text-[13.5px] font-bold flex items-center justify-center gap-1.5 transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">mail</span>
+                  <span>Email Kami</span>
+                </a>
+              </div>
+            </div>
+
+          </section>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (Hostinger Deep Purple #2F1C6A Inspired) -->
+  <footer class="w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <!-- Kolom 1 -->
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Jelajahi</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="kategori" href="katalog_buku_desktop.html">Kategori Pilihan</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Buku Rilis Terbaru</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Buku Terlaris</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 2 -->
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Informasi Pembelian</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Cara Pembelian</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Metode Pembayaran</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Panduan Web Reader</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Bantuan &amp; FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3 -->
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Tentang IKAPI</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Tentang Kami</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Anggota Penerbit</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Kemitraan Perpustakaan</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Hubungi Kami</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 4 -->
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Lainnya</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Syarat &amp; Ketentuan</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Kebijakan Privasi</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-[13px] text-[#b8b8bd]">
+        <p>© 2026 IKAPI Jawa Barat. Seluruh hak cipta dilindungi undang-undang.</p>
+        <div class="flex flex-wrap items-center gap-4">
+          <span class="text-white/60">Media Sosial:</span>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="Instagram IKAPI Jabar">Instagram</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="YouTube IKAPI Jabar">YouTube</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="Facebook IKAPI Jabar">Facebook</a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="X Twitter IKAPI Jabar">X</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT LOGIC -->
+  <script>
+    const STORAGE_KEY = 'ikapi_user_profile';
+    const DEFAULT_PROFILE = {
+      fullName: 'Ahmad Hidayat',
+      email: 'ahmad.hidayat@literasi.id'
+    };
+
+    function getStoredProfile() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) return JSON.parse(raw);
+      } catch (e) {}
+      return Object.assign({}, DEFAULT_PROFILE);
+    }
+
+    function getInitials(name) {
+      if (!name) return 'AH';
+      const parts = name.trim().split(/\s+/);
+      if (parts.length === 1) return parts[0].substring(0, 2).toUpperCase();
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    }
+
+    function syncGlobalIdentity(profile) {
+      const initials = getInitials(profile.fullName);
+
+      ['header-user-name', 'dropdown-user-name', 'sidebar-user-name'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = profile.fullName;
+      });
+
+      ['dropdown-user-email', 'sidebar-user-email'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = profile.email;
+      });
+
+      const avatarContainers = [
+        { id: 'header-avatar', initialsId: 'header-avatar-initials' },
+        { id: 'sidebar-avatar', initialsId: 'sidebar-avatar-initials' }
+      ];
+
+      avatarContainers.forEach(t => {
+        const container = document.getElementById(t.id);
+        if (!container) return;
+        if (profile.avatarUrl) {
+          container.innerHTML = `<img src="${profile.avatarUrl}" alt="Avatar" class="w-full h-full object-cover">`;
+        } else {
+          container.innerHTML = `<span id="${t.initialsId}">${initials}</span>`;
+        }
+      });
+    }
+
+    // Accurate IKAPI FAQ Dataset
+    const faqData = [
+      {
+        id: 'faq-1',
+        topic: 'pembayaran',
+        question: 'Bagaimana cara membeli e-book di IKAPI Store?',
+        answer: 'Pilih e-book yang Anda inginkan di Katalog Buku, klik tombol "Tambah ke Keranjang", lalu buka halaman Keranjang Belanja. Klik "Lanjut ke Pembayaran" dan pilih metode pembayaran seperti QRIS atau Virtual Account bank yang tersedia.'
+      },
+      {
+        id: 'faq-2',
+        topic: 'pembayaran',
+        question: 'Metode pembayaran apa saja yang didukung?',
+        answer: 'IKAPI Store mendukung pembayaran instan via QRIS (GoPay, OVO, Dana, ShopeePay, LinkAja) serta Virtual Account transfer otomatis untuk bank-bank utama di Indonesia.'
+      },
+      {
+        id: 'faq-3',
+        topic: 'pembayaran',
+        question: 'Pembayaran sudah selesai, mengapa e-book belum muncul?',
+        answer: 'Verifikasi sistem biasanya berlangsung instan. Namun jika terjadi jeda perbankan, silakan periksa tab Riwayat Pesanan atau lakukan penyegaran pada halaman Perpustakaan Saya. Jika kendala berlanjut, hubungi tim kami via surel sekretariat@ikapi-jabar.id.'
+      },
+      {
+        id: 'faq-4',
+        topic: 'reader',
+        question: 'Bagaimana cara membaca e-book yang sudah dibeli?',
+        answer: 'Masuk ke akun Anda dan buka menu Perpustakaan Saya. Klik "Mulai Baca" atau "Lanjutkan Membaca" pada buku yang Anda miliki. Buku akan otomatis terbuka pada Web Reader interaktif peramban Anda.'
+      },
+      {
+        id: 'faq-5',
+        topic: 'reader',
+        question: 'Apakah e-book dapat diunduh sebagai file mentah PDF atau EPUB?',
+        answer: 'Untuk melindungi hak cipta pengarang dan penerbit daerah Jawa Barat, seluruh e-book di IKAPI Store dilindungi lisensi resmi dan dibaca langsung melalui peramban Web Reader tanpa unduhan berkas mentah.'
+      },
+      {
+        id: 'faq-6',
+        topic: 'akun',
+        question: 'Bagaimana cara mengatur ulang kata sandi jika saya lupa?',
+        answer: 'Buka halaman Masuk, klik tautan "Lupa kata sandi?", lalu masukkan alamat email akun Anda. Kami akan mengirimkan tautan pemulihan kata sandi ke kotak masuk email Anda.'
+      },
+      {
+        id: 'faq-7',
+        topic: 'akun',
+        question: 'Bagaimana cara mengubah foto profil dan informasi akun?',
+        answer: 'Buka menu Profil Saya dari bilah navigasi samping akun. Di sana Anda dapat mengunggah foto profil baru (JPG/PNG/WebP maks 2MB), mengganti nama lengkap, dan memilih preferensi kategori bacaan favorit.'
+      },
+      {
+        id: 'faq-8',
+        topic: 'pesanan',
+        question: 'Di mana saya bisa melihat riwayat pembelian e-book?',
+        answer: 'Seluruh riwayat transaksi yang pernah Anda lakukan tercatat rapi di halaman Riwayat Pesanan. Anda dapat memfilter pesanan berdasarkan status Berhasil, Menunggu, Gagal, atau Kedaluwarsa.'
+      }
+    ];
+
+    let currentSelectedTopic = 'all';
+    let currentSearchTerm = '';
+    let activeAccordionId = null;
+
+    function renderFaqList() {
+      const container = document.getElementById('faq-accordion-container');
+      const emptyState = document.getElementById('faq-empty-state');
+      const countText = document.getElementById('faq-count-text');
+      const sectionTitle = document.getElementById('faq-section-title');
+
+      if (!container || !emptyState) return;
+
+      let filtered = faqData.slice();
+
+      if (currentSelectedTopic !== 'all') {
+        filtered = filtered.filter(f => f.topic === currentSelectedTopic);
+      }
+
+      if (currentSearchTerm) {
+        const q = currentSearchTerm.toLowerCase();
+        filtered = filtered.filter(f => 
+          f.question.toLowerCase().includes(q) || 
+          f.answer.toLowerCase().includes(q)
+        );
+      }
+
+      if (countText) countText.textContent = `${filtered.length} pertanyaan`;
+
+      if (filtered.length === 0) {
+        container.classList.add('hidden');
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      emptyState.classList.remove('flex');
+      container.classList.remove('hidden');
+
+      container.innerHTML = filtered.map(item => {
+        const isOpen = activeAccordionId === item.id;
+        return `
+          <div class="faq-item">
+            <button type="button" aria-expanded="${isOpen}" class="w-full p-5 flex items-center justify-between text-left hover:bg-surface-soft transition-colors cursor-pointer group" onclick="toggleFaqAccordion('${item.id}')">
+              <span class="text-[15px] font-bold text-ink-body group-hover:text-primary transition-colors pr-4">
+                ${item.question}
+              </span>
+              <span class="material-symbols-outlined text-[20px] text-ink-muted group-hover:text-primary transition-transform ${isOpen ? 'rotate-180' : ''} shrink-0">
+                expand_more
+              </span>
+            </button>
+            <div class="${isOpen ? 'block' : 'hidden'} px-5 pb-5 text-[14px] text-ink-muted leading-relaxed">
+              <p>${item.answer}</p>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function toggleFaqAccordion(id) {
+      if (activeAccordionId === id) {
+        activeAccordionId = null;
+      } else {
+        activeAccordionId = id;
+      }
+      renderFaqList();
+    }
+
+    function selectFaqTopic(topic) {
+      currentSelectedTopic = topic;
+      activeAccordionId = null;
+
+      // Update button styles
+      document.querySelectorAll('.topic-btn').forEach(btn => {
+        const t = btn.getAttribute('data-topic');
+        if (t === topic) {
+          btn.className = "topic-btn p-4 rounded-2xl bg-surface-soft border border-primary text-left transition-all cursor-pointer group shadow-xs";
+        } else {
+          btn.className = "topic-btn p-4 rounded-2xl bg-white hover:bg-surface-soft border border-border-subtle text-left transition-all cursor-pointer group shadow-xs";
+        }
+      });
+
+      renderFaqList();
+    }
+
+    function handleFaqSearch(e) {
+      currentSearchTerm = e.target.value.trim();
+      const clearBtn = document.getElementById('clear-faq-search');
+      if (clearBtn) {
+        if (currentSearchTerm) clearBtn.classList.remove('hidden');
+        else clearBtn.classList.add('hidden');
+      }
+      activeAccordionId = null;
+      renderFaqList();
+    }
+
+    function clearFaqSearch() {
+      const input = document.getElementById('faq-search-input');
+      const clearBtn = document.getElementById('clear-faq-search');
+      if (input) input.value = '';
+      if (clearBtn) clearBtn.classList.add('hidden');
+      currentSearchTerm = '';
+      currentSelectedTopic = 'all';
+      selectFaqTopic('all');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const profile = getStoredProfile();
+      syncGlobalIdentity(profile);
+      renderFaqList();
+
+      const toggleBtn = document.getElementById('toggle-dropdown-btn');
+      const dropdownMenu = document.getElementById('header-user-dropdown');
+
+      if (toggleBtn && dropdownMenu) {
+        toggleBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isHidden = dropdownMenu.classList.contains('hidden');
+          if (isHidden) {
+            dropdownMenu.classList.remove('hidden');
+            toggleBtn.setAttribute('aria-expanded', 'true');
+          } else {
+            dropdownMenu.classList.add('hidden');
+            toggleBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!dropdownMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+            dropdownMenu.classList.add('hidden');
+            toggleBtn?.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            dropdownMenu.classList.add('hidden');
+            toggleBtn?.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

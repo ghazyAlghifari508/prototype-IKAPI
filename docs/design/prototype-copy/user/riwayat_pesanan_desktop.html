@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <title>Riwayat Pesanan — IKAPI Store Jawa Barat</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #673de6;
+      --color-primary-hover: #5025d1;
+      --color-primary-deep: #2f1c6a;
+      --color-canvas: #ffffff;
+      --color-surface-soft: #f5f6ff;
+      --color-surface-neutral: #f5f5f6;
+      --color-text-primary: #222225;
+      --color-text-secondary: #62636b;
+      --color-border: #e5e7eb;
+    }
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        color: #222225;
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+      body {
+        overflow-x: clip;
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    .scrollbar-none::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-none {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: "#673de6",
+              hover: "#5025d1",
+              deep: "#2f1c6a",
+              container: "#673de6",
+              accent: "#9d99ff"
+            },
+            surface: {
+              DEFAULT: "#ffffff",
+              soft: "#f5f6ff",
+              neutral: "#f5f5f6",
+              border: "#e5e7eb"
+            },
+            ink: {
+              body: "#222225",
+              muted: "#62636b",
+              subtle: "#9d9ea4"
+            },
+            "border-subtle": "#e5e7eb",
+            "border-bold": "#d1d5db"
+          },
+          fontFamily: {
+            sans: ["'DM Sans'", "sans-serif"],
+            body: ["'DM Sans'", "sans-serif"]
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+            '4xl': '1.75rem'
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-white font-sans text-ink-body antialiased selection:bg-primary-soft selection:text-primary-deep">
+
+  <!-- GLOBAL HEADER (Consistent with Homepage) -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-border-subtle shadow-[0_1px_4px_rgba(34,34,37,0.04)]">
+    <div class="h-28 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between">
+      <div class="h-16 flex items-center justify-between gap-4">
+        <!-- Logo -->
+        <div class="flex items-center gap-4 shrink-0">
+          <a href="beranda_desktop.html" data-path="beranda" class="flex items-center" aria-label="Beranda IKAPI Jawa Barat">
+            <img alt="Logo IKAPI Jawa Barat" class="h-7 sm:h-8 w-auto object-contain" src="../../assets/logo-ikapi-jabar.png">
+          </a>
+        </div>
+        <!-- Search Bar -->
+        <div class="flex-1 max-w-xl mx-2 hidden sm:flex items-center">
+          <div class="relative w-full">
+            <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-muted text-[20px]">search</span>
+            <input class="w-full h-10 pl-10 pr-4 rounded-xl bg-surface-neutral text-[14px] text-ink-body placeholder:text-ink-muted outline-none ring-1 ring-border-subtle focus:ring-2 focus:ring-primary focus:bg-white transition-all" placeholder="Cari judul buku, penulis, atau topik..." type="text">
+          </div>
+        </div>
+        <!-- Right Actions & Dropdown -->
+        <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+          <a class="relative p-2 rounded-xl text-ink-body hover:text-primary hover:bg-surface-soft transition-colors" data-path="keranjang" href="keranjang_pembayaran_terpadu_desktop.html" aria-label="Keranjang Belanja">
+            <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+            <span id="header-cart-badge" class="absolute top-1 right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-primary text-white text-[11px] font-bold flex items-center justify-center">2</span>
+          </a>
+          <div class="h-6 w-px bg-border-subtle"></div>
+          
+          <!-- User Profile & Dropdown Trigger -->
+          <div class="relative">
+            <button id="toggle-dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true" class="flex items-center gap-2.5 p-1.5 pl-2 rounded-full hover:bg-surface-neutral transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+              <div id="header-avatar" class="w-8 h-8 rounded-full bg-primary text-white font-bold text-[13px] flex items-center justify-center shrink-0 overflow-hidden shadow-xs">
+                <span id="header-avatar-initials">AH</span>
+              </div>
+              <span id="header-user-name" class="hidden md:inline text-[14px] text-ink-body font-semibold">Ahmad Hidayat</span>
+              <span class="material-symbols-outlined text-[18px] text-ink-muted">expand_more</span>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div id="header-user-dropdown" class="hidden absolute right-0 mt-2 w-64 bg-white rounded-2xl shadow-xl border border-border-subtle py-2 z-50 transition-all">
+              <div class="px-4 py-3 border-b border-border-subtle">
+                <p id="dropdown-user-name" class="text-[14px] font-bold text-ink-body truncate">Ahmad Hidayat</p>
+                <p id="dropdown-user-email" class="text-[12px] text-ink-muted truncate">ahmad.hidayat@literasi.id</p>
+              </div>
+              <div class="py-1 text-[13px]">
+                <a href="akun_saya_profil_dropdown_navigasi_desktop.html" class="flex items-center gap-2.5 px-4 py-2 text-ink-body hover:text-primary hover:bg-surface-neutral transition-colors font-medium">
+                  <span class="material-symbols-outlined text-[18px]">person</span>
+                  <span>Profil Saya</span>
+                </a>
+                <a href="riwayat_pesanan_desktop.html" class="flex items-center gap-2.5 px-4 py-2 font-bold text-primary bg-surface-soft transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">receipt_long</span>
+                  <span>Riwayat Pesanan</span>
+                </a>
+                <a href="perpustakaan_saya_desktop.html" class="flex items-center gap-2.5 px-4 py-2 text-ink-body hover:text-primary hover:bg-surface-neutral transition-colors font-medium">
+                  <span class="material-symbols-outlined text-[18px]">local_library</span>
+                  <span>Perpustakaan Saya</span>
+                </a>
+                <a href="riwayat_ulasan_desktop.html" class="flex items-center gap-2.5 px-4 py-2 text-ink-body hover:text-primary hover:bg-surface-neutral transition-colors font-medium">
+                  <span class="material-symbols-outlined text-[18px]">rate_review</span>
+                  <span>Riwayat Ulasan</span>
+                </a>
+                <a href="pengaturan_akun_desktop.html" class="flex items-center gap-2.5 px-4 py-2 text-ink-body hover:text-primary hover:bg-surface-neutral transition-colors font-medium">
+                  <span class="material-symbols-outlined text-[18px]">settings</span>
+                  <span>Pengaturan Akun</span>
+                </a>
+                <a href="bantuan_akun_desktop.html" class="flex items-center gap-2.5 px-4 py-2 text-ink-body hover:text-primary hover:bg-surface-neutral transition-colors font-medium">
+                  <span class="material-symbols-outlined text-[18px]">help</span>
+                  <span>Bantuan</span>
+                </a>
+              </div>
+              <div class="pt-1 border-t border-border-subtle">
+                <a href="masuk_login_desktop.html" class="flex items-center gap-2.5 px-4 py-2 text-[13px] text-red-600 hover:bg-red-50 transition-colors font-semibold">
+                  <span class="material-symbols-outlined text-[18px]">logout</span>
+                  <span>Keluar Akun</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Primary Nav Tabs -->
+      <nav class="h-12 flex items-center gap-6 overflow-x-auto scrollbar-none max-w-full">
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="beranda" href="beranda_desktop.html">Beranda</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Komunitas Penerbit</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN ACCOUNT WORKSPACE -->
+  <main class="w-full pt-28 bg-white min-h-[calc(100vh-16rem)]">
+    <div class="flex flex-col w-full">
+      <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 w-full flex flex-col gap-6">
+
+        <!-- Mobile Compact Account Navigation Menu -->
+        <details class="lg:hidden group bg-white border border-border-subtle rounded-2xl text-[14px] overflow-hidden shadow-xs">
+          <summary class="px-4 py-3 cursor-pointer font-semibold text-ink-body flex items-center justify-between list-none select-none">
+            <div class="flex items-center gap-2.5 text-primary">
+              <span class="material-symbols-outlined text-[20px]">receipt_long</span>
+              <span>Menu Akun: Riwayat Pesanan</span>
+            </div>
+            <span class="material-symbols-outlined text-[20px] text-ink-muted transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <div class="p-3 border-t border-border-subtle bg-surface-neutral flex flex-col gap-1">
+            <a href="akun_saya_profil_dropdown_navigasi_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Profil Saya</a>
+            <a href="riwayat_pesanan_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-surface-soft text-primary font-bold">Riwayat Pesanan</a>
+            <a href="perpustakaan_saya_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Perpustakaan Saya</a>
+            <a href="riwayat_ulasan_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Riwayat Ulasan</a>
+            <a href="pengaturan_akun_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Pengaturan Akun</a>
+            <a href="bantuan_akun_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Bantuan</a>
+            <div class="h-px bg-border-subtle my-1"></div>
+            <a href="masuk_login_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-red-600 font-semibold">Keluar Akun</a>
+          </div>
+        </details>
+
+        <!-- Page Header -->
+        <div class="pb-2 border-b border-border-subtle">
+          <h1 class="text-[30px] md:text-[34px] font-bold text-ink-body tracking-tight leading-tight">
+            Riwayat Pesanan
+          </h1>
+          <p class="text-[15px] text-ink-muted mt-1">
+            Lihat status dan rincian pembelian e-book kamu.
+          </p>
+        </div>
+
+        <!-- 2-COLUMN WORKSPACE: Google Stitch Floating Sidebar + Main Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- LEFT FLOATING SIDEBAR (Independent Rounded Panel) -->
+          <aside class="hidden lg:block lg:col-span-4 xl:col-span-3">
+            <div class="lg:sticky lg:top-36 bg-white rounded-3xl border border-border-subtle shadow-sm p-6 flex flex-col gap-6">
+              
+              <!-- Mini Profile Identity Header -->
+              <div class="flex items-center gap-3.5 pb-5 border-b border-border-subtle">
+                <div id="sidebar-avatar" class="w-12 h-12 rounded-full bg-primary text-white font-bold text-[18px] flex items-center justify-center shrink-0 overflow-hidden shadow-xs">
+                  <span id="sidebar-avatar-initials">AH</span>
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <span id="sidebar-user-name" class="font-bold text-[15px] text-ink-body truncate">Ahmad Hidayat</span>
+                  <span id="sidebar-user-email" class="text-[12px] text-ink-muted truncate">ahmad.hidayat@literasi.id</span>
+                </div>
+              </div>
+
+              <!-- Navigation Menu Links -->
+              <nav class="flex flex-col gap-1.5 text-[14px]">
+                <a href="akun_saya_profil_dropdown_navigasi_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">person</span>
+                  <span>Profil Saya</span>
+                </a>
+                <a href="riwayat_pesanan_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl bg-surface-soft text-primary font-bold shadow-xs transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">receipt_long</span>
+                  <span>Riwayat Pesanan</span>
+                </a>
+                <a href="perpustakaan_saya_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">local_library</span>
+                  <span>Perpustakaan Saya</span>
+                </a>
+                <a href="riwayat_ulasan_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">rate_review</span>
+                  <span>Riwayat Ulasan</span>
+                </a>
+                <a href="pengaturan_akun_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">settings</span>
+                  <span>Pengaturan Akun</span>
+                </a>
+                <a href="bantuan_akun_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">help</span>
+                  <span>Bantuan</span>
+                </a>
+
+                <div class="h-px bg-border-subtle my-2"></div>
+
+                <a href="masuk_login_desktop.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-red-600 hover:bg-red-50 transition-colors font-semibold">
+                  <span class="material-symbols-outlined text-[20px]">logout</span>
+                  <span>Keluar Akun</span>
+                </a>
+              </nav>
+
+            </div>
+          </aside>
+
+          <!-- RIGHT MAIN: Order History Workspace -->
+          <section class="lg:col-span-8 xl:col-span-9 flex flex-col gap-6">
+            
+            <!-- Filter Tabs Bar -->
+            <div class="flex items-center gap-2 overflow-x-auto scrollbar-none pb-1 border-b border-border-subtle text-[13px] font-semibold">
+              <button id="tab-filter-all" type="button" class="tab-filter-btn px-4 py-2 rounded-xl bg-primary text-white shadow-xs transition-all" onclick="filterOrders('all')">
+                Semua (5)
+              </button>
+              <button id="tab-filter-success" type="button" class="tab-filter-btn px-4 py-2 rounded-xl bg-surface-neutral text-ink-muted hover:text-ink-body hover:bg-surface-soft transition-all" onclick="filterOrders('success')">
+                Berhasil (2)
+              </button>
+              <button id="tab-filter-pending" type="button" class="tab-filter-btn px-4 py-2 rounded-xl bg-surface-neutral text-ink-muted hover:text-ink-body hover:bg-surface-soft transition-all" onclick="filterOrders('pending')">
+                Menunggu (1)
+              </button>
+              <button id="tab-filter-failed" type="button" class="tab-filter-btn px-4 py-2 rounded-xl bg-surface-neutral text-ink-muted hover:text-ink-body hover:bg-surface-soft transition-all" onclick="filterOrders('failed')">
+                Gagal (1)
+              </button>
+              <button id="tab-filter-expired" type="button" class="tab-filter-btn px-4 py-2 rounded-xl bg-surface-neutral text-ink-muted hover:text-ink-body hover:bg-surface-soft transition-all" onclick="filterOrders('expired')">
+                Kedaluwarsa (1)
+              </button>
+            </div>
+
+            <!-- Orders Container -->
+            <div id="orders-container" class="flex flex-col gap-4">
+              <!-- Rendered dynamically by renderOrders() -->
+            </div>
+
+            <!-- Empty State for Orders -->
+            <div id="orders-empty-state" class="hidden p-8 sm:p-14 rounded-3xl bg-white border border-border-subtle shadow-sm text-center flex-col items-center justify-center gap-3">
+              <div class="w-36 sm:w-44 aspect-square flex items-center justify-center mb-1">
+                <img src="../../assets/ilustration/cart_empty_state.svg" alt="Belum Ada Pesanan" class="w-full h-full object-contain">
+              </div>
+              <h3 class="text-[20px] font-bold text-ink-body tracking-tight">
+                Belum Ada Pesanan
+              </h3>
+              <p id="orders-empty-desc" class="text-[14px] text-ink-muted max-w-sm">
+                Kamu belum melakukan pembelian e-book dengan kriteria status ini.
+              </p>
+              <a href="katalog_buku_desktop.html" class="mt-2 h-11 px-6 rounded-xl bg-primary hover:bg-primary-hover text-white text-[14px] font-bold flex items-center gap-2 transition-colors shadow-xs">
+                <span>Jelajahi Katalog Buku</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </a>
+            </div>
+
+          </section>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- MODAL: ORDER DETAILS (Clean In-Page Dialog) -->
+  <div id="modal-order-detail" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="order-modal-title">
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-border-subtle flex flex-col animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- Modal Header -->
+      <div class="p-6 sm:p-8 border-b border-border-subtle flex items-start justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2.5">
+            <span id="modal-order-id" class="text-[18px] sm:text-[20px] font-bold text-ink-body font-mono">
+              #IKP-20261115-081
+            </span>
+            <span id="modal-order-badge" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold">
+              Pembayaran Berhasil
+            </span>
+          </div>
+          <p id="modal-order-date" class="text-[13px] text-ink-muted mt-1">
+            15 November 2026, 14:20 WIB
+          </p>
+        </div>
+        <button type="button" onclick="closeOrderDetailModal()" class="w-9 h-9 rounded-full bg-surface-neutral hover:bg-border-subtle text-ink-body flex items-center justify-center transition-colors shrink-0" aria-label="Tutup Rincian">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 sm:p-8 space-y-6">
+        
+        <!-- Payment & Delivery Info -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 rounded-2xl bg-surface-neutral border border-border-subtle text-[13px]">
+          <div>
+            <span class="text-ink-muted block text-[11px] font-bold uppercase tracking-wider mb-1">Metode Pembayaran</span>
+            <span id="modal-order-payment" class="font-bold text-ink-body text-[14px]">GoPay / QRIS</span>
+          </div>
+          <div>
+            <span class="text-ink-muted block text-[11px] font-bold uppercase tracking-wider mb-1">Format Pembelian</span>
+            <span class="font-bold text-ink-body text-[14px]">E-Book Digital (Web Reader)</span>
+          </div>
+        </div>
+
+        <!-- Purchased Book Items -->
+        <div class="space-y-3">
+          <h4 class="text-[15px] font-bold text-ink-body">Buku yang Dibeli</h4>
+          <div id="modal-order-items" class="space-y-3">
+            <!-- Injected dynamically -->
+          </div>
+        </div>
+
+        <!-- Price Breakdown -->
+        <div class="pt-4 border-t border-border-subtle space-y-2 text-[14px]">
+          <div class="flex justify-between text-ink-muted">
+            <span>Subtotal Buku</span>
+            <span id="modal-order-subtotal" class="text-ink-body font-medium">Rp45.000</span>
+          </div>
+          <div class="flex justify-between text-ink-muted">
+            <span>Biaya Layanan &amp; Transaksi</span>
+            <span class="text-emerald-700 font-medium">Gratis</span>
+          </div>
+          <div class="flex justify-between text-ink-body font-bold text-[16px] pt-2 border-t border-border-subtle">
+            <span>Total Pembayaran</span>
+            <span id="modal-order-total" class="text-primary font-bold">Rp45.000</span>
+          </div>
+        </div>
+
+        <!-- Note -->
+        <div class="p-4 rounded-2xl bg-surface-soft border border-primary/20 text-[13px] text-ink-muted flex items-start gap-2.5">
+          <span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">menu_book</span>
+          <p class="leading-relaxed">
+            E-book berlisensi resmi langsung aktif di akunmu dan dapat dibaca kapan saja melalui Web Reader di halaman <strong>Perpustakaan Saya</strong> tanpa perlu mengunduh berkas.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer Actions -->
+      <div class="p-4 sm:p-6 border-t border-border-subtle bg-surface-neutral/60 rounded-b-3xl flex flex-wrap items-center justify-between gap-3">
+        <button type="button" onclick="closeOrderDetailModal()" class="h-10 px-5 rounded-xl border border-border-subtle bg-white hover:bg-surface-neutral text-ink-body font-semibold text-[13px] transition-colors">
+          Tutup
+        </button>
+        <div id="modal-order-actions" class="flex items-center gap-2">
+          <!-- Dynamic CTA injected based on status -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast-notification" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-ink-body text-white shadow-xl text-[14px] font-medium border border-white/10">
+    <span id="toastIcon" class="material-symbols-outlined text-primary-accent text-[20px]">check_circle</span>
+    <span id="toastMessage">Tindakan berhasil dilakukan.</span>
+  </div>
+
+  <!-- FOOTER (Hostinger Deep Purple #2F1C6A Inspired) -->
+  <footer class="w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        
+        <!-- Kolom 1 -->
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Jelajahi</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="kategori" href="katalog_buku_desktop.html">Kategori Pilihan</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Buku Rilis Terbaru</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Buku Terlaris</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 2 -->
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Informasi Pembelian</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Cara Pembelian</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Metode Pembayaran</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Panduan Web Reader</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Bantuan &amp; FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3 -->
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Tentang IKAPI</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Tentang Kami</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Anggota Penerbit</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Kemitraan Perpustakaan</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Hubungi Kami</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 4 -->
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Lainnya</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Syarat &amp; Ketentuan</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Kebijakan Privasi</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-[13px] text-[#b8b8bd]">
+        <p>© 2026 IKAPI Jawa Barat. Seluruh hak cipta dilindungi undang-undang.</p>
+        <div class="flex flex-wrap items-center gap-4">
+          <span class="text-white/60">Media Sosial:</span>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="Instagram IKAPI Jabar">Instagram</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="YouTube IKAPI Jabar">YouTube</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="Facebook IKAPI Jabar">Facebook</a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="X Twitter IKAPI Jabar">X</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CLIENT SCRIPT -->
+  <script>
+    const STORAGE_KEY = 'ikapi_user_profile';
+    const DEFAULT_PROFILE = {
+      fullName: 'Ahmad Hidayat',
+      email: 'ahmad.hidayat@literasi.id',
+      phone: '0812-3456-7890',
+      avatarUrl: null
+    };
+
+    function getStoredProfile() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) return JSON.parse(raw);
+      } catch (e) {}
+      return Object.assign({}, DEFAULT_PROFILE);
+    }
+
+    function getInitials(name) {
+      if (!name) return 'AH';
+      const parts = name.trim().split(/\s+/);
+      if (parts.length === 1) return parts[0].substring(0, 2).toUpperCase();
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    }
+
+    function syncGlobalIdentity(profile) {
+      const initials = getInitials(profile.fullName);
+
+      ['header-user-name', 'dropdown-user-name', 'sidebar-user-name'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = profile.fullName;
+      });
+
+      ['dropdown-user-email', 'sidebar-user-email'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = profile.email;
+      });
+
+      const avatarContainers = [
+        { id: 'header-avatar', initialsId: 'header-avatar-initials' },
+        { id: 'sidebar-avatar', initialsId: 'sidebar-avatar-initials' }
+      ];
+
+      avatarContainers.forEach(t => {
+        const container = document.getElementById(t.id);
+        if (!container) return;
+        if (profile.avatarUrl) {
+          container.innerHTML = `<img src="${profile.avatarUrl}" alt="Avatar" class="w-full h-full object-cover">`;
+        } else {
+          container.innerHTML = `<span id="${t.initialsId}">${initials}</span>`;
+        }
+      });
+    }
+
+    // Realistic Demo Orders Dataset
+    const ordersData = [
+      {
+        id: 'IKP-20261115-081',
+        date: '15 November 2026, 14:20 WIB',
+        status: 'success',
+        statusLabel: 'Pembayaran Berhasil',
+        paymentMethod: 'GoPay / QRIS',
+        books: [
+          {
+            id: 1,
+            title: 'Laskar Aksara Pasundan',
+            author: 'Ayi R. Kurnia',
+            price: 45000,
+            cover: '../../assets/covers/laskar-aksara-pasundan.jpg'
+          }
+        ],
+        subtotal: 45000,
+        total: 45000
+      },
+      {
+        id: 'IKP-20261112-042',
+        date: '12 November 2026, 09:15 WIB',
+        status: 'pending',
+        statusLabel: 'Menunggu Pembayaran',
+        paymentMethod: 'BCA Virtual Account (8801-9238-1029)',
+        books: [
+          {
+            id: 2,
+            title: 'Pendidikan Karakter Sunda',
+            author: 'Dr. Cecep Hidayat',
+            price: 58000,
+            cover: '../../assets/covers/B02.jpg'
+          }
+        ],
+        subtotal: 58000,
+        total: 58000
+      },
+      {
+        id: 'IKP-20261105-019',
+        date: '05 November 2026, 19:40 WIB',
+        status: 'success',
+        statusLabel: 'Pembayaran Berhasil',
+        paymentMethod: 'Mandiri Bill Payment',
+        books: [
+          {
+            id: 3,
+            title: 'Menelusuri Jejak Sejarah Priangan',
+            author: 'Prof. Sobana Hardjasaputra',
+            price: 52000,
+            cover: '../../assets/covers/B03.jpg'
+          },
+          {
+            id: 4,
+            title: 'Antologi Puisi Pasundan Kiwari',
+            author: 'Dadan Sutisna',
+            price: 38000,
+            cover: '../../assets/covers/B05.jpg'
+          }
+        ],
+        subtotal: 90000,
+        total: 90000
+      },
+      {
+        id: 'IKP-20261028-005',
+        date: '28 Oktober 2026, 11:05 WIB',
+        status: 'expired',
+        statusLabel: 'Kedaluwarsa',
+        paymentMethod: 'BNI Virtual Account',
+        books: [
+          {
+            id: 5,
+            title: 'Kearifan Lokal Tatar Sunda',
+            author: 'Tim Budaya Dispusipda',
+            price: 42000,
+            cover: '../../assets/covers/B01.jpg'
+          }
+        ],
+        subtotal: 42000,
+        total: 42000
+      },
+      {
+        id: 'IKP-20261019-002',
+        date: '19 Oktober 2026, 16:30 WIB',
+        status: 'failed',
+        statusLabel: 'Pembayaran Gagal',
+        paymentMethod: 'Kartu Kredit / Debit',
+        books: [
+          {
+            id: 6,
+            title: 'Tata Bahasa Sunda Mutakhir',
+            author: 'Yayat Sudaryat',
+            price: 49000,
+            cover: '../../assets/covers/B04.jpg'
+          }
+        ],
+        subtotal: 49000,
+        total: 49000
+      }
+    ];
+
+    let currentFilter = 'all';
+
+    function formatRupiah(num) {
+      return 'Rp' + num.toLocaleString('id-ID');
+    }
+
+    function getStatusBadgeClass(status) {
+      switch (status) {
+        case 'success':
+          return 'bg-emerald-50 text-emerald-700 border border-emerald-200';
+        case 'pending':
+          return 'bg-amber-50 text-amber-700 border border-amber-200';
+        case 'failed':
+          return 'bg-red-50 text-red-700 border border-red-200';
+        case 'expired':
+          return 'bg-gray-100 text-gray-700 border border-gray-200';
+        default:
+          return 'bg-surface-neutral text-ink-muted border border-border-subtle';
+      }
+    }
+
+    function renderOrders() {
+      const container = document.getElementById('orders-container');
+      const emptyState = document.getElementById('orders-empty-state');
+      if (!container || !emptyState) return;
+
+      const filtered = currentFilter === 'all' 
+        ? ordersData 
+        : ordersData.filter(o => o.status === currentFilter);
+
+      if (filtered.length === 0) {
+        container.classList.add('hidden');
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      emptyState.classList.remove('flex');
+      container.classList.remove('hidden');
+
+      container.innerHTML = filtered.map(order => {
+        const badgeClass = getStatusBadgeClass(order.status);
+        const mainBook = order.books[0];
+        const otherCount = order.books.length - 1;
+
+        return `
+          <article class="order-card bg-white rounded-3xl border border-border-subtle p-5 sm:p-6 shadow-xs hover:border-primary/40 transition-all flex flex-col gap-4">
+            <!-- Top Card Header -->
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-border-subtle text-[13px]">
+              <div class="flex items-center gap-3">
+                <span class="font-bold text-ink-body font-mono">${order.id}</span>
+                <span class="text-ink-muted">${order.date}</span>
+              </div>
+              <span class="px-3 py-1 rounded-full text-[12px] font-bold ${badgeClass}">
+                ${order.statusLabel}
+              </span>
+            </div>
+
+            <!-- Middle Card Body -->
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div class="flex items-center gap-4">
+                <div class="w-16 sm:w-20 aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral border border-border-subtle shrink-0 shadow-xs">
+                  <img src="${mainBook.cover}" alt="${mainBook.title}" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col gap-1 min-w-0">
+                  <h3 class="text-[16px] font-bold text-ink-body leading-snug">
+                    ${mainBook.title}
+                  </h3>
+                  <p class="text-[13px] text-ink-muted">
+                    Penulis: ${mainBook.author}
+                  </p>
+                  ${otherCount > 0 ? `<p class="text-[12px] text-primary font-semibold">+${otherCount} buku lainnya</p>` : ''}
+                </div>
+              </div>
+
+              <!-- Price & Quick Actions -->
+              <div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-2 pt-2 sm:pt-0 border-t sm:border-t-0 border-border-subtle">
+                <div class="text-left sm:text-right">
+                  <span class="text-[11px] text-ink-muted block uppercase tracking-wider">Total Pesanan</span>
+                  <span class="text-[17px] font-bold text-ink-body font-sans">${formatRupiah(order.total)}</span>
+                </div>
+                <div class="flex items-center gap-2 mt-1">
+                  <button type="button" class="h-9 px-4 rounded-xl border border-border-subtle bg-white hover:bg-surface-neutral text-ink-body text-[13px] font-semibold transition-colors" onclick="openOrderDetailModal('${order.id}')">
+                    Lihat Rincian
+                  </button>
+                  ${order.status === 'success' ? `
+                    <a href="perpustakaan_saya_desktop.html" class="h-9 px-4 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold flex items-center gap-1 transition-colors shadow-xs">
+                      <span>Baca E-Book</span>
+                      <span class="material-symbols-outlined text-[16px]">menu_book</span>
+                    </a>
+                  ` : ''}
+                </div>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function filterOrders(status) {
+      currentFilter = status;
+      const tabs = ['all', 'success', 'pending', 'failed', 'expired'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('tab-filter-' + t);
+        if (!btn) return;
+        if (t === status) {
+          btn.className = 'tab-filter-btn px-4 py-2 rounded-xl bg-primary text-white shadow-xs transition-all';
+        } else {
+          btn.className = 'tab-filter-btn px-4 py-2 rounded-xl bg-surface-neutral text-ink-muted hover:text-ink-body hover:bg-surface-soft transition-all';
+        }
+      });
+      renderOrders();
+    }
+
+    // Modal Details Handlers
+    function openOrderDetailModal(orderId) {
+      const order = ordersData.find(o => o.id === orderId);
+      if (!order) return;
+
+      const modal = document.getElementById('modal-order-detail');
+      const idEl = document.getElementById('modal-order-id');
+      const badgeEl = document.getElementById('modal-order-badge');
+      const dateEl = document.getElementById('modal-order-date');
+      const paymentEl = document.getElementById('modal-order-payment');
+      const itemsEl = document.getElementById('modal-order-items');
+      const subtotalEl = document.getElementById('modal-order-subtotal');
+      const totalEl = document.getElementById('modal-order-total');
+      const actionsEl = document.getElementById('modal-order-actions');
+
+      if (idEl) idEl.textContent = order.id;
+      if (dateEl) dateEl.textContent = order.date;
+      if (paymentEl) paymentEl.textContent = order.paymentMethod;
+      if (subtotalEl) subtotalEl.textContent = formatRupiah(order.subtotal);
+      if (totalEl) totalEl.textContent = formatRupiah(order.total);
+
+      if (badgeEl) {
+        badgeEl.textContent = order.statusLabel;
+        badgeEl.className = `px-3 py-1 rounded-full text-[12px] font-bold ${getStatusBadgeClass(order.status)}`;
+      }
+
+      if (itemsEl) {
+        itemsEl.innerHTML = order.books.map(b => `
+          <div class="flex items-center justify-between gap-4 p-3 rounded-2xl bg-surface-neutral border border-border-subtle">
+            <div class="flex items-center gap-3">
+              <div class="w-12 aspect-[2/3] rounded-lg overflow-hidden bg-white border border-border-subtle shrink-0">
+                <img src="${b.cover}" alt="${b.title}" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <p class="text-[14px] font-bold text-ink-body">${b.title}</p>
+                <p class="text-[12px] text-ink-muted">${b.author}</p>
+              </div>
+            </div>
+            <span class="text-[14px] font-bold text-ink-body font-mono">${formatRupiah(b.price)}</span>
+          </div>
+        `).join('');
+      }
+
+      if (actionsEl) {
+        if (order.status === 'success') {
+          actionsEl.innerHTML = `
+            <a href="perpustakaan_saya_desktop.html" class="h-10 px-5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold flex items-center gap-1.5 transition-colors shadow-xs">
+              <span class="material-symbols-outlined text-[18px]">local_library</span>
+              <span>Buka Perpustakaan Saya</span>
+            </a>
+          `;
+        } else if (order.status === 'pending') {
+          actionsEl.innerHTML = `
+            <a href="keranjang_pembayaran_terpadu_desktop.html" class="h-10 px-5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold flex items-center gap-1.5 transition-colors shadow-xs">
+              <span class="material-symbols-outlined text-[18px]">payments</span>
+              <span>Lanjut Pembayaran</span>
+            </a>
+          `;
+        } else {
+          actionsEl.innerHTML = `
+            <a href="katalog_buku_desktop.html" class="h-10 px-5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold flex items-center gap-1.5 transition-colors shadow-xs">
+              <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+              <span>Beli Kembali di Katalog</span>
+            </a>
+          `;
+        }
+      }
+
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeOrderDetailModal() {
+      const modal = document.getElementById('modal-order-detail');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    }
+
+    window.addEventListener('click', (e) => {
+      const modal = document.getElementById('modal-order-detail');
+      if (modal && e.target === modal) closeOrderDetailModal();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeOrderDetailModal();
+    });
+
+    // Account Dropdown Interactions
+    document.addEventListener('DOMContentLoaded', () => {
+      const profile = getStoredProfile();
+      syncGlobalIdentity(profile);
+      renderOrders();
+
+      const toggleBtn = document.getElementById('toggle-dropdown-btn');
+      const dropdownMenu = document.getElementById('header-user-dropdown');
+
+      function openDropdown() {
+        if (!dropdownMenu) return;
+        dropdownMenu.classList.remove('hidden');
+        toggleBtn?.setAttribute('aria-expanded', 'true');
+      }
+
+      function closeDropdown() {
+        if (!dropdownMenu) return;
+        dropdownMenu.classList.add('hidden');
+        toggleBtn?.setAttribute('aria-expanded', 'false');
+      }
+
+      if (toggleBtn && dropdownMenu) {
+        toggleBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isHidden = dropdownMenu.classList.contains('hidden');
+          if (isHidden) openDropdown();
+          else closeDropdown();
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!dropdownMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+            closeDropdown();
+          }
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') closeDropdown();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

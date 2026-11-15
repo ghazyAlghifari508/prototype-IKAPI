@@ -7,13 +7,28 @@
   <title>Bantuan &amp; Rekomendasi Buku — IKAPI Store Jawa Barat</title>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <!-- Typography: DM Sans (Hostinger Design System) & Fallback Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
   <style>
+    :root {
+      --color-primary: #673de6;
+      --color-primary-hover: #5025d1;
+      --color-primary-deep: #2f1c6a;
+      --color-canvas: #ffffff;
+      --color-surface-soft: #f5f6ff;
+      --color-surface-neutral: #f5f5f6;
+      --color-text-primary: #222225;
+      --color-text-secondary: #62636b;
+      --color-border: #e5e7eb;
+    }
     @layer base {
       html, body {
         margin: 0;
         padding: 0;
+        background-color: #ffffff;
+        color: #222225;
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       }
       body {
         overflow-x: clip;
@@ -32,6 +47,20 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+
+    /* Z.ai Inspired User Message Bubble: Sharp bottom-right corner */
+    .ikapi-user-message {
+      width: fit-content;
+      max-width: 85%;
+      padding: 10px 14px;
+      background-color: #673de6;
+      color: #ffffff;
+      border-radius: 18px 18px 4px 18px;
+      font-size: 14px;
+      line-height: 1.5;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
@@ -40,211 +69,161 @@
       theme: {
         extend: {
           colors: {
-            "on-error": "#ffffff",
-            "secondary-fixed": "#ffd9e3",
-            "surface-sky": "#E0F6FC",
-            "feedback-error": "#B42318",
-            "surface-tint": "#4c48dc",
-            "on-surface": "#1b1b25",
-            "on-secondary": "#ffffff",
-            "primary-container": "#5956e9",
-            "primary-fixed-dim": "#c2c1ff",
-            "tertiary": "#745b00",
-            "outline-variant": "#c7c4d7",
-            "on-primary": "#ffffff",
-            "on-error-container": "#93000a",
-            "surface-lilac": "#E5E4FF",
-            "tertiary-fixed": "#ffe08d",
-            "inverse-surface": "#302f3a",
-            "secondary": "#815060",
-            "on-primary-fixed": "#0c006a",
-            "on-tertiary-container": "#4f3d00",
-            "error": "#ba1a1a",
-            "on-secondary-container": "#7a495a",
-            "surface-bright": "#fcf8ff",
-            "surface-dim": "#dbd8e7",
-            "on-tertiary-fixed": "#241a00",
-            "primary": "#3f3ad0",
-            "ink-body": "#191923",
-            "inverse-on-surface": "#f2effe",
-            "on-background": "#1b1b25",
-            "surface-variant": "#e3e1ef",
-            "ink-muted": "#555665",
-            "outline": "#777586",
-            "surface-container-high": "#e9e6f5",
-            "on-secondary-fixed-variant": "#663949",
-            "secondary-fixed-dim": "#f4b5c8",
-            "border-bold": "#CFD0DD",
-            "background": "#fcf8ff",
-            "on-secondary-fixed": "#330e1d",
-            "inverse-primary": "#c2c1ff",
-            "error-container": "#ffdad6",
-            "surface-container-highest": "#e3e1ef",
-            "tertiary-fixed-dim": "#ecc23f",
-            "surface": "#fcf8ff",
-            "surface-soft": "#F8F7FF",
-            "on-primary-container": "#eeeaff",
-            "inverse-deep": "#24233D",
-            "surface-cream": "#FFF1E3",
-            "surface-container": "#efecfb",
-            "surface-paper": "#FFF0E3",
-            "tertiary-container": "#cea623",
-            "on-tertiary-fixed-variant": "#584400",
-            "on-primary-fixed-variant": "#3229c4",
-            "surface-container-low": "#f5f2ff",
-            "on-surface-variant": "#464555",
-            "surface-container-lowest": "#ffffff",
-            "border-subtle": "#E7E7EF",
-            "secondary-container": "#fdbed1",
-            "primary-fixed": "#e2dfff",
-            "on-tertiary": "#ffffff"
-          },
-          borderRadius: {
-            DEFAULT: "0.25rem",
-            lg: "0.5rem",
-            xl: "0.75rem",
-            "2xl": "1rem",
-            full: "9999px"
-          },
-          spacing: {
-            "margin": "2.5rem",
-            "space-xs": "0.25rem",
-            "space-sm": "0.5rem",
-            "space-md": "1rem",
-            "space-lg": "1.5rem",
-            "space-xl": "2rem",
-            "space-2xl": "3rem",
-            "space-3xl": "4.5rem",
-            "gutter": "1.5rem"
+            primary: {
+              DEFAULT: "#673de6",
+              hover: "#5025d1",
+              deep: "#2f1c6a",
+              container: "#673de6",
+              accent: "#9d99ff"
+            },
+            surface: {
+              DEFAULT: "#ffffff",
+              soft: "#f5f6ff",
+              neutral: "#f5f5f6",
+              border: "#e5e7eb"
+            },
+            ink: {
+              body: "#222225",
+              muted: "#62636b",
+              subtle: "#9d9ea4"
+            },
+            "border-subtle": "#e5e7eb",
+            "border-bold": "#d1d5db"
           },
           fontFamily: {
-            "body-base": ["Plus Jakarta Sans", "sans-serif"],
-            "body-small": ["Plus Jakarta Sans", "sans-serif"],
-            "label": ["Plus Jakarta Sans", "sans-serif"],
-            "label-small": ["Plus Jakarta Sans", "sans-serif"],
-            "title-md": ["Plus Jakarta Sans", "sans-serif"],
-            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
-            "headline-lg": ["Plus Jakarta Sans", "sans-serif"]
+            sans: ["'DM Sans'", "sans-serif"],
+            body: ["'DM Sans'", "sans-serif"]
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+            '4xl': '1.75rem'
           }
         }
       }
     };
   </script>
 </head>
-<body class="bg-surface font-body-base text-ink-body antialiased">
+<body class="bg-white font-sans text-ink-body antialiased selection:bg-surface-soft selection:text-primary-deep">
 
   <!-- HEADER (Unified Navigation) -->
-  <header class="fixed top-0 left-0 right-0 z-40 bg-surface-container-lowest shadow-[0_1px_8px_rgba(25,25,35,0.06)]">
-    <div class="h-28 max-w-[1240px] mx-auto px-4 md:px-margin flex flex-col justify-between">
-      <div class="h-16 flex items-center justify-between gap-2 sm:gap-gutter">
-        <div class="flex items-center gap-space-md shrink-0">
-          <a href="beranda_desktop.html" data-path="beranda" class="flex items-center">
+  <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-border-subtle shadow-[0_1px_4px_rgba(34,34,37,0.04)]">
+    <div class="h-28 max-w-[1240px] mx-auto px-4 md:px-8 flex flex-col justify-between">
+      <div class="h-16 flex items-center justify-between gap-4">
+        <!-- Logo -->
+        <div class="flex items-center gap-4 shrink-0">
+          <a href="beranda_desktop.html" data-path="beranda" class="flex items-center" aria-label="Beranda IKAPI Jawa Barat">
             <img alt="Logo IKAPI Jawa Barat" class="h-7 sm:h-8 w-auto object-contain" src="../../assets/logo-ikapi-jabar.png">
           </a>
         </div>
-        <div class="flex-1 max-w-xl mx-2 hidden sm:flex items-center gap-space-xs">
+        <!-- Search Bar -->
+        <div class="flex-1 max-w-xl mx-2 hidden sm:flex items-center">
           <div class="relative w-full">
-            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
-            <input class="w-full h-10 pl-10 pr-space-md rounded-lg bg-surface-container-lowest font-body-small text-[14px] text-ink-body placeholder:text-outline outline-none ring-1 ring-border-bold focus:ring-2 focus:ring-primary transition-all" placeholder="Cari judul, penulis, atau topik buku..." type="text">
+            <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-muted text-[20px]">search</span>
+            <input class="w-full h-10 pl-10 pr-4 rounded-xl bg-surface-neutral text-[14px] text-ink-body placeholder:text-ink-muted outline-none ring-1 ring-border-subtle focus:ring-2 focus:ring-primary focus:bg-white transition-all" placeholder="Cari judul, penulis, atau topik buku..." type="text">
           </div>
         </div>
-        <div class="flex items-center gap-3 sm:gap-space-lg shrink-0">
-          <a class="relative flex items-center text-on-surface-variant hover:text-primary transition-colors" data-path="keranjang" href="keranjang_pembayaran_terpadu_desktop.html" aria-label="Keranjang Belanja">
+        <!-- Right Actions -->
+        <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+          <a class="relative p-2 rounded-xl text-ink-body hover:text-primary hover:bg-surface-soft transition-colors" data-path="keranjang" href="keranjang_pembayaran_terpadu_desktop.html" aria-label="Keranjang Belanja">
             <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
-            <span id="header-cart-badge" class="absolute -top-1.5 -right-2 min-w-[18px] h-[18px] px-1 rounded-full bg-primary-container text-on-primary font-label-small text-[11px] font-bold flex items-center justify-center">2</span>
+            <span id="header-cart-badge" class="absolute top-1 right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-primary text-white text-[11px] font-bold flex items-center justify-center">2</span>
           </a>
           <div class="h-6 w-px bg-border-subtle"></div>
-          <a class="hidden sm:flex h-10 px-space-lg rounded-lg bg-primary text-on-primary font-label text-[14px] font-semibold items-center gap-space-xs hover:bg-surface-tint transition-colors" data-path="login" href="masuk_login_desktop.html">
+          <a class="hidden sm:flex h-10 px-5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[14px] font-semibold items-center gap-2 transition-colors shadow-xs" data-path="login" href="masuk_login_desktop.html">
             <span>Masuk / Akun</span>
           </a>
-          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary">
+          <a href="akun_saya_profil_dropdown_navigasi_desktop.html" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white shadow-xs" aria-label="Akun Saya">
             <span class="material-symbols-outlined text-[18px]">person</span>
-          </div>
+          </a>
         </div>
       </div>
-      <nav class="h-12 flex items-center gap-4 sm:gap-space-xl overflow-x-auto scrollbar-none max-w-full">
-        <a class="h-full flex items-center font-label text-[14px] text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="beranda" href="beranda_desktop.html">Beranda</a>
-        <a class="h-full flex items-center font-label text-[14px] text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a>
-        <a class="h-full flex items-center font-label text-[14px] text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a>
-        <a class="h-full flex items-center font-label text-[14px] text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="kabar-artikel" href="agenda_berita_literasi_desktop.html#section-berita">Kabar &amp; Artikel</a>
-        <a class="h-full flex items-center font-label text-[14px] text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Komunitas Penerbit</a>
+      <!-- Primary Nav Tabs -->
+      <nav class="h-12 flex items-center gap-6 overflow-x-auto scrollbar-none max-w-full">
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="beranda" href="beranda_desktop.html">Beranda</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Komunitas Penerbit</a>
       </nav>
     </div>
   </header>
 
   <!-- MAIN -->
-  <main class="w-full pt-28 bg-surface min-h-[calc(100vh-16rem)]">
+  <main class="w-full pt-28 bg-white min-h-[calc(100vh-16rem)]">
     <div class="flex flex-col w-full">
       
-      <!-- REVIEWER SIMULATION TOOLBAR (Preserved in same HTML) -->
-      <aside aria-label="Interactive Demo Toolbar" class="w-full bg-surface-container-high py-space-xs px-4 md:px-margin border-b border-border-subtle sticky top-28 z-40">
-        <div class="max-w-[1240px] mx-auto flex flex-wrap items-center gap-space-md text-[12px] font-body-small">
-          <div class="flex items-center gap-1.5 text-ink-body font-bold shrink-0">
-            <span class="material-symbols-outlined text-primary text-[18px]">smart_toy</span>
-            <span>Simulasi:</span>
-          </div>
-          <div class="flex flex-wrap items-center gap-1.5" id="state-selector-container">
-            <button id="btn-state-rekomendasi" type="button" class="px-2.5 py-1 rounded-lg bg-primary-container text-on-primary font-medium transition-all shadow-xs" onclick="setDemoScenario('rekomendasi')">
-              Rekomendasi Buku
-            </button>
-            <button id="btn-state-pembayaran" type="button" class="px-2.5 py-1 rounded-lg bg-surface-container-lowest text-ink-body hover:bg-surface-cream font-medium transition-all border border-border-subtle" onclick="setDemoScenario('pembayaran')">
-              Bantuan Pembayaran &amp; Reader
-            </button>
-            <button id="btn-state-eskalasi" type="button" class="px-2.5 py-1 rounded-lg bg-surface-container-lowest text-ink-body hover:bg-surface-cream font-medium transition-all border border-border-subtle" onclick="setDemoScenario('eskalasi')">
-              Layanan CS / Luar Lingkup
-            </button>
-            <button id="btn-state-loading" type="button" class="px-2.5 py-1 rounded-lg bg-surface-container-lowest text-ink-body hover:bg-surface-cream font-medium transition-all border border-border-subtle" onclick="setDemoScenario('loading')">
-              Status Memuat...
-            </button>
-            <button id="btn-state-toggle" type="button" class="px-2.5 py-1 rounded-lg bg-surface-soft text-primary font-bold hover:bg-surface-variant transition-all flex items-center gap-1 border border-border-subtle" onclick="toggleWidgetPanel()">
-              <span class="material-symbols-outlined text-[15px]">visibility</span>
-              <span id="toggle-label-text">Tutup Jendela Chat</span>
-            </button>
-          </div>
-        </div>
-      </aside>
-
       <!-- BACKGROUND CATALOG CONTEXT SHELF -->
-      <div class="max-w-[1240px] w-full mx-auto px-4 md:px-margin py-space-xl">
-        <div class="flex flex-col gap-space-xs mb-space-lg pb-space-sm border-b border-border-subtle">
-          <nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-[13px] font-body-small text-ink-muted">
+      <div class="max-w-[1240px] w-full mx-auto px-4 md:px-8 py-8 flex flex-col gap-6">
+        
+        <!-- Breadcrumb & Compact Collapsible Reviewer Panel -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-[13px] text-ink-muted">
             <a class="hover:text-primary transition-colors" data-path="beranda" href="beranda_desktop.html">Beranda</a>
-            <span class="text-outline-variant">/</span>
+            <span class="text-ink-subtle">/</span>
             <span class="text-ink-body font-semibold">Katalog Buku Digital</span>
           </nav>
-          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm mt-1">
-            <div>
-              <h1 class="font-headline-md md:font-headline-lg text-[26px] md:text-[30px] font-bold text-ink-body tracking-tight">
-                Katalog Buku Digital
-              </h1>
-              <p class="font-body-base text-[14px] text-ink-muted mt-1">
-                Koleksi buku digital resmi dari penerbit anggota IKAPI Jawa Barat.
-              </p>
+
+          <!-- Collapsible Compact Reviewer Panel (Preserved in Same HTML) -->
+          <details id="qa-simulation-panel" class="group bg-surface-neutral border border-border-subtle rounded-xl text-[12px] select-none transition-all">
+            <summary class="px-3.5 py-1.5 cursor-pointer font-medium text-ink-muted hover:text-ink-body flex items-center gap-2 list-none">
+              <span class="material-symbols-outlined text-[16px] text-primary">smart_toy</span>
+              <span>Panel Simulasi Chatbot (4 Mode)</span>
+              <span class="material-symbols-outlined text-[16px] text-ink-muted transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <div class="p-2.5 pt-1.5 flex flex-wrap items-center gap-1.5 border-t border-border-subtle bg-white rounded-b-xl">
+              <button id="btn-state-rekomendasi" type="button" class="px-3 py-1 rounded-lg bg-primary text-white font-medium transition-all shadow-xs" onclick="setDemoScenario('rekomendasi')">
+                Rekomendasi Buku
+              </button>
+              <button id="btn-state-pembayaran" type="button" class="px-3 py-1 rounded-lg bg-surface-neutral text-ink-body hover:bg-surface-soft hover:text-primary font-medium transition-all border border-border-subtle" onclick="setDemoScenario('pembayaran')">
+                Bantuan Pembayaran &amp; Reader
+              </button>
+              <button id="btn-state-eskalasi" type="button" class="px-3 py-1 rounded-lg bg-surface-neutral text-ink-body hover:bg-surface-soft hover:text-primary font-medium transition-all border border-border-subtle" onclick="setDemoScenario('eskalasi')">
+                Layanan CS / Luar Lingkup
+              </button>
+              <button id="btn-state-loading" type="button" class="px-3 py-1 rounded-lg bg-surface-neutral text-ink-body hover:bg-surface-soft hover:text-primary font-medium transition-all border border-border-subtle" onclick="setDemoScenario('loading')">
+                Status Memuat...
+              </button>
+              <button id="btn-state-toggle" type="button" class="px-3 py-1 rounded-lg bg-surface-soft text-primary font-bold hover:bg-surface-neutral transition-all flex items-center gap-1 border border-primary/20" onclick="toggleWidgetPanel()">
+                <span class="material-symbols-outlined text-[15px]">visibility</span>
+                <span id="toggle-label-text">Tutup Jendela Chat</span>
+              </button>
             </div>
-            <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="font-label text-[14px] text-primary hover:text-surface-tint font-bold flex items-center gap-1 transition-colors">
-              <span>Buka Katalog Lengkap</span>
-              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-            </a>
-          </div>
+          </details>
         </div>
 
-        <!-- Catalog Sample Grid -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-gutter mb-space-2xl">
+        <!-- Section Header -->
+        <div class="pb-2 border-b border-border-subtle flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div>
+            <h1 class="text-[28px] md:text-[32px] font-bold text-ink-body tracking-tight leading-tight">
+              Katalog Buku Digital
+            </h1>
+            <p class="text-[15px] text-ink-muted mt-1">
+              Koleksi buku digital resmi dari penerbit anggota IKAPI Jawa Barat.
+            </p>
+          </div>
+          <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="text-[14px] text-primary hover:text-primary-hover font-bold flex items-center gap-1 transition-colors">
+            <span>Buka Katalog Lengkap</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- Catalog Sample Grid (100% Local Images) -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
           <!-- Book 1 -->
-          <article class="group flex flex-col bg-surface-container-lowest rounded-xl p-space-sm border border-border-subtle shadow-xs hover:shadow-md transition-all">
-            <div class="aspect-[2/3] w-full bg-surface-container-high rounded-lg overflow-hidden relative mb-space-sm border border-border-subtle shadow-xs">
+          <article class="group flex flex-col bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all">
+            <div class="aspect-[2/3] w-full bg-surface-neutral rounded-xl overflow-hidden relative mb-3 border border-border-subtle shadow-xs">
               <img src="../../assets/covers/laskar-aksara-pasundan.jpg" alt="Sampul Laskar Aksara Pasundan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
             </div>
             <div class="flex flex-col flex-1 justify-between">
               <div>
-                <h3 class="font-label text-[15px] font-bold text-ink-body line-clamp-1 group-hover:text-primary transition-colors">
+                <h3 class="text-[15px] font-bold text-ink-body line-clamp-1 group-hover:text-primary transition-colors">
                   Laskar Aksara Pasundan
                 </h3>
-                <p class="text-[13px] font-body-small text-ink-muted mt-0.5">Ayi R. Kurnia</p>
+                <p class="text-[13px] text-ink-muted mt-0.5">Ayi R. Kurnia</p>
               </div>
               <div class="pt-3 mt-2 border-t border-border-subtle flex items-center justify-between">
-                <span class="font-label text-[15px] font-bold text-ink-body">Rp 45.000</span>
-                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-8 px-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary text-[12px] font-label font-semibold flex items-center transition-colors">
+                <span class="text-[15px] font-bold text-ink-body">Rp 45.000</span>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-8 px-3 rounded-lg bg-primary hover:bg-primary-hover text-white text-[12px] font-semibold flex items-center transition-colors shadow-xs">
                   Detail
                 </a>
               </div>
@@ -252,20 +231,20 @@
           </article>
 
           <!-- Book 2 -->
-          <article class="group flex flex-col bg-surface-container-lowest rounded-xl p-space-sm border border-border-subtle shadow-xs hover:shadow-md transition-all">
-            <div class="aspect-[2/3] w-full bg-surface-container-high rounded-lg overflow-hidden relative mb-space-sm border border-border-subtle shadow-xs">
-              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFf19AO9EVo6HybkUXmcGuWzMG3MhTKDnjjR9axwV2wBLqpMmsxQNHrkIti_kOfkHy9N6ITdxLpsj1C-Zq9WCrBwUMRPsRpFVU5koCQwuw_OwNxDIl4dDAgQ4NbrFvrcpzrkudcxT1AYpqmf40YA3uUi7xAvB7S0quwMdWe2vRhkFpLaZZAGigKMHz7u243UCPu9Jf-Jqu9M6NUkiakePkvfADeHda3mRK0290hbZO" alt="Sampul Pendidikan Karakter Sunda" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+          <article class="group flex flex-col bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all">
+            <div class="aspect-[2/3] w-full bg-surface-neutral rounded-xl overflow-hidden relative mb-3 border border-border-subtle shadow-xs">
+              <img src="../../assets/covers/B02.jpg" alt="Sampul Pendidikan Karakter Sunda" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
             </div>
             <div class="flex flex-col flex-1 justify-between">
               <div>
-                <h3 class="font-label text-[15px] font-bold text-ink-body line-clamp-1 group-hover:text-primary transition-colors">
+                <h3 class="text-[15px] font-bold text-ink-body line-clamp-1 group-hover:text-primary transition-colors">
                   Pendidikan Karakter Sunda
                 </h3>
-                <p class="text-[13px] font-body-small text-ink-muted mt-0.5">Dr. Cecep Hidayat</p>
+                <p class="text-[13px] text-ink-muted mt-0.5">Dr. Cecep Hidayat</p>
               </div>
               <div class="pt-3 mt-2 border-t border-border-subtle flex items-center justify-between">
-                <span class="font-label text-[15px] font-bold text-ink-body">Rp 58.000</span>
-                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-8 px-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary text-[12px] font-label font-semibold flex items-center transition-colors">
+                <span class="text-[15px] font-bold text-ink-body">Rp 58.000</span>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-8 px-3 rounded-lg bg-primary hover:bg-primary-hover text-white text-[12px] font-semibold flex items-center transition-colors shadow-xs">
                   Detail
                 </a>
               </div>
@@ -273,20 +252,20 @@
           </article>
 
           <!-- Book 3 -->
-          <article class="group flex flex-col bg-surface-container-lowest rounded-xl p-space-sm border border-border-subtle shadow-xs hover:shadow-md transition-all">
-            <div class="aspect-[2/3] w-full bg-surface-container-high rounded-lg overflow-hidden relative mb-space-sm border border-border-subtle shadow-xs">
-              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYwNEDwKw9fXka8nPawuKK7hm2hPPpqAUctFpyUVuvBJncXi2RykqbgnWB4Be8GrXkJrhWqnPjZEvv758JY-HEaYC60H1Sgq7bvuTE_SQ2yntx48YnMsfTELXvUBuCsDc8sBYa0I_hwGfcIMSMJsLEfwQdQggvO1Jyx9DBoO_St9nmlPhYrFQmxvokrUoBImL1El6nZWGHsqyDrJ36xX7Fx7DgXxZBhyV-u_bijW5V" alt="Sampul Bumi Parahyangan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+          <article class="group flex flex-col bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all">
+            <div class="aspect-[2/3] w-full bg-surface-neutral rounded-xl overflow-hidden relative mb-3 border border-border-subtle shadow-xs">
+              <img src="../../assets/covers/B03.jpg" alt="Sampul Bumi Parahyangan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
             </div>
             <div class="flex flex-col flex-1 justify-between">
               <div>
-                <h3 class="font-label text-[15px] font-bold text-ink-body line-clamp-1 group-hover:text-primary transition-colors">
+                <h3 class="text-[15px] font-bold text-ink-body line-clamp-1 group-hover:text-primary transition-colors">
                   Bumi Parahyangan: Narasi Alam
                 </h3>
-                <p class="text-[13px] font-body-small text-ink-muted mt-0.5">Prof. Didi Supardi</p>
+                <p class="text-[13px] text-ink-muted mt-0.5">Prof. Didi Supardi</p>
               </div>
               <div class="pt-3 mt-2 border-t border-border-subtle flex items-center justify-between">
-                <span class="font-label text-[15px] font-bold text-ink-body">Rp 74.000</span>
-                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-8 px-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary text-[12px] font-label font-semibold flex items-center transition-colors">
+                <span class="text-[15px] font-bold text-ink-body">Rp 74.000</span>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-8 px-3 rounded-lg bg-primary hover:bg-primary-hover text-white text-[12px] font-semibold flex items-center transition-colors shadow-xs">
                   Detail
                 </a>
               </div>
@@ -294,20 +273,20 @@
           </article>
 
           <!-- Book 4 -->
-          <article class="group flex flex-col bg-surface-container-lowest rounded-xl p-space-sm border border-border-subtle shadow-xs hover:shadow-md transition-all">
-            <div class="aspect-[2/3] w-full bg-surface-container-high rounded-lg overflow-hidden relative mb-space-sm border border-border-subtle shadow-xs">
-              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyZHkSKaqVFAK9l95PqY7ZhTifwBxYTwZkeH_ucufg9hCUe1dtSAh6gyJqkOAgLOKz5dLCViSgY6K8TnLpngBGHkzD8YyJi8JB8Pg_jVnXOWtDFvhGn_5TQHkxqyvw4oxGZuEFLDuFCf1OcFi3Zvg4GrGkYnm2Y3-SHow42pQCyoVT7VEQbbDvQHlX-hk1aZbLGdun_NxiZkOZObyiIn6ihtm0IwQUrXgMcWL0GuMO" alt="Sampul Antologi Puisi Lembayung Bandung" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+          <article class="group flex flex-col bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all">
+            <div class="aspect-[2/3] w-full bg-surface-neutral rounded-xl overflow-hidden relative mb-3 border border-border-subtle shadow-xs">
+              <img src="../../assets/covers/B04.jpg" alt="Sampul Antologi Puisi Lembayung" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
             </div>
             <div class="flex flex-col flex-1 justify-between">
               <div>
-                <h3 class="font-label text-[15px] font-bold text-ink-body line-clamp-1 group-hover:text-primary transition-colors">
+                <h3 class="text-[15px] font-bold text-ink-body line-clamp-1 group-hover:text-primary transition-colors">
                   Antologi Puisi Lembayung
                 </h3>
-                <p class="text-[13px] font-body-small text-ink-muted mt-0.5">Dewi Sartika Putri</p>
+                <p class="text-[13px] text-ink-muted mt-0.5">Dewi Sartika Putri</p>
               </div>
               <div class="pt-3 mt-2 border-t border-border-subtle flex items-center justify-between">
-                <span class="font-label text-[15px] font-bold text-ink-body">Rp 38.000</span>
-                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-8 px-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary text-[12px] font-label font-semibold flex items-center transition-colors">
+                <span class="text-[15px] font-bold text-ink-body">Rp 38.000</span>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-8 px-3 rounded-lg bg-primary hover:bg-primary-hover text-white text-[12px] font-semibold flex items-center transition-colors shadow-xs">
                   Detail
                 </a>
               </div>
@@ -319,66 +298,71 @@
     </div>
   </main>
 
-  <!-- FLOATING CHATBOT WIDGET -->
-  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+  <!-- FLOATING CHATBOT WIDGET (Z.ai Conversation Experience × Hostinger Design System) -->
+  <div id="ikapi-chat-widget-wrapper" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
     
     <!-- Chat Window Container -->
-    <div id="ikapi-chat-window" class="w-[390px] h-[520px] max-w-[calc(100vw-32px)] max-h-[calc(100vh-140px)] bg-surface-container-lowest rounded-2xl shadow-2xl border border-border-subtle flex flex-col overflow-hidden mb-3 transition-all duration-300 origin-bottom-right" role="dialog" aria-labelledby="chat-header-title">
+    <div id="ikapi-chat-window" class="w-[400px] h-[580px] max-w-[calc(100vw-32px)] max-h-[calc(100vh-120px)] bg-white rounded-3xl shadow-2xl border border-border-subtle flex flex-col overflow-hidden mb-3 transition-all duration-300 origin-bottom-right" role="dialog" aria-labelledby="chat-header-title">
       
-      <!-- Widget Header -->
-      <div class="bg-primary px-space-md py-3 text-on-primary flex items-center justify-between shrink-0 shadow-xs">
-        <div>
-          <h2 id="chat-header-title" class="font-label text-[15px] font-bold text-white tracking-tight leading-none">
-            Bantuan IKAPI
-          </h2>
-          <span class="text-[12px] text-primary-fixed leading-tight block mt-0.5">
-            Asisten untuk buku dan pesanan
-          </span>
+      <!-- Widget Header (Clean White Hostinger-style) -->
+      <div class="bg-white px-5 py-3.5 border-b border-border-subtle flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-surface-soft border border-primary/20 flex items-center justify-center text-primary font-bold text-[14px] shrink-0 shadow-xs">
+            <span class="material-symbols-outlined text-[20px]">smart_toy</span>
+          </div>
+          <div>
+            <h2 id="chat-header-title" class="text-[15px] font-bold text-ink-body tracking-tight leading-tight">
+              Bantuan IKAPI
+            </h2>
+            <span class="text-[12px] text-ink-muted leading-tight block">
+              Asisten buku dan pesanan
+            </span>
+          </div>
         </div>
         <div class="flex items-center gap-1">
-          <button type="button" aria-label="Bersihkan Percakapan" class="w-8 h-8 rounded-lg flex items-center justify-center text-primary-fixed hover:text-white hover:bg-white/10 transition-colors" onclick="resetChatConversation()" title="Bersihkan Percakapan">
+          <button type="button" aria-label="Bersihkan Percakapan" class="w-8 h-8 rounded-xl flex items-center justify-center text-ink-muted hover:text-ink-body hover:bg-surface-neutral transition-colors" onclick="resetChatConversation()" title="Bersihkan Percakapan">
             <span class="material-symbols-outlined text-[18px]">refresh</span>
           </button>
-          <button type="button" aria-label="Tutup Jendela Bantuan" class="w-8 h-8 rounded-lg flex items-center justify-center text-primary-fixed hover:text-white hover:bg-white/10 transition-colors" onclick="toggleWidgetPanel()" title="Tutup Jendela">
-            <span class="material-symbols-outlined text-[20px]">close</span>
+          <button type="button" aria-label="Tutup Jendela Bantuan" class="w-8 h-8 rounded-xl flex items-center justify-center text-ink-muted hover:text-ink-body hover:bg-surface-neutral transition-colors" onclick="toggleWidgetPanel()" title="Tutup Jendela">
+            <span class="material-symbols-outlined text-[18px]">close</span>
           </button>
         </div>
       </div>
 
-      <!-- Chat Body (Scrollable Conversation Thread) -->
-      <div id="chat-body-scrollable" class="flex-1 overflow-y-auto p-4 space-y-3.5 bg-surface-bright" role="log" aria-live="polite">
+      <!-- Chat Body (Scrollable Conversation Thread - Z.ai text-first layout) -->
+      <div id="chat-body-scrollable" class="flex-1 overflow-y-auto p-5 space-y-4 bg-white" role="log" aria-live="polite">
         <!-- Messages rendered dynamically by JS -->
       </div>
 
-      <!-- Quick Question Prompts Container (Anchored above Composer) -->
-      <div id="quick-prompts-wrapper" class="px-4 py-2 bg-surface-container-lowest border-t border-border-subtle shrink-0">
-        <span class="text-[11px] font-label font-bold text-ink-muted uppercase tracking-wider block mb-1.5">
+      <!-- Quick Question Prompts Container (Hidden when initial screen is shown) -->
+      <div id="quick-prompts-wrapper" class="hidden px-4 py-2 bg-white border-t border-border-subtle shrink-0">
+        <span class="text-[11px] font-bold text-ink-muted uppercase tracking-wider block mb-1.5">
           Coba tanyakan:
         </span>
         <div class="flex flex-wrap gap-1.5">
-          <button type="button" class="text-left text-[12px] font-label font-medium px-2.5 py-1 rounded-lg bg-surface-soft hover:bg-surface-container text-ink-body hover:text-primary transition-colors border border-border-subtle" onclick="handleQuickPrompt('Cari buku sejarah Sunda')">
+          <button type="button" class="text-left text-[12px] font-medium px-3 py-1.5 rounded-xl bg-surface-neutral hover:bg-surface-soft hover:text-primary text-ink-body transition-colors border border-border-subtle" onclick="handleQuickPrompt('Cari buku sejarah Sunda')">
             Cari buku sejarah Sunda
           </button>
-          <button type="button" class="text-left text-[12px] font-label font-medium px-2.5 py-1 rounded-lg bg-surface-soft hover:bg-surface-container text-ink-body hover:text-primary transition-colors border border-border-subtle" onclick="handleQuickPrompt('Cara pembayaran')">
+          <button type="button" class="text-left text-[12px] font-medium px-3 py-1.5 rounded-xl bg-surface-neutral hover:bg-surface-soft hover:text-primary text-ink-body transition-colors border border-border-subtle" onclick="handleQuickPrompt('Cara pembayaran')">
             Cara pembayaran
           </button>
-          <button type="button" class="text-left text-[12px] font-label font-medium px-2.5 py-1 rounded-lg bg-surface-soft hover:bg-surface-container text-ink-body hover:text-primary transition-colors border border-border-subtle" onclick="handleQuickPrompt('Cara membaca e-book')">
+          <button type="button" class="text-left text-[12px] font-medium px-3 py-1.5 rounded-xl bg-surface-neutral hover:bg-surface-soft hover:text-primary text-ink-body transition-colors border border-border-subtle" onclick="handleQuickPrompt('Cara membaca e-book')">
             Cara membaca e-book
           </button>
-          <button type="button" class="text-left text-[12px] font-label font-medium px-2.5 py-1 rounded-lg bg-surface-soft hover:bg-surface-container text-ink-body hover:text-primary transition-colors border border-border-subtle" onclick="handleQuickPrompt('Hubungi bantuan')">
+          <button type="button" class="text-left text-[12px] font-medium px-3 py-1.5 rounded-xl bg-surface-neutral hover:bg-surface-soft hover:text-primary text-ink-body transition-colors border border-border-subtle" onclick="handleQuickPrompt('Hubungi bantuan')">
             Hubungi bantuan
           </button>
         </div>
       </div>
 
-      <!-- Composer / Bottom Input Area -->
-      <div class="p-3 bg-surface-container-lowest border-t border-border-subtle shrink-0">
-        <form class="flex items-center gap-2" onsubmit="handleChatSubmit(event)">
+      <!-- Composer / Bottom Input Area (Unified rounded pill with arrow upward submit) -->
+      <div class="p-3 bg-white border-t border-border-subtle shrink-0">
+        <form class="flex items-center gap-2 p-1.5 pl-4 rounded-full bg-surface-neutral border border-border-subtle focus-within:border-primary focus-within:bg-white focus-within:ring-2 focus-within:ring-primary/20 transition-all" onsubmit="handleChatSubmit(event)">
           <div class="relative flex-1">
-            <textarea id="chat-input-field" rows="1" class="w-full resize-none py-2 px-3 rounded-xl bg-surface-soft border border-border-subtle text-ink-body font-body-small text-[13px] placeholder:text-ink-muted focus:outline-none focus:border-primary focus:bg-white transition-all max-h-24" placeholder="Tulis pertanyaan..." onkeydown="handleTextareaKeydown(event)"></textarea>
+            <textarea id="chat-input-field" rows="1" class="w-full resize-none py-1.5 bg-transparent border-0 outline-none text-ink-body text-[14px] placeholder:text-ink-muted leading-relaxed max-h-24" placeholder="Tulis pertanyaan..." onkeydown="handleTextareaKeydown(event)"></textarea>
           </div>
-          <button type="submit" aria-label="Kirim Pesan" class="h-10 w-10 rounded-xl bg-primary hover:bg-surface-tint text-on-primary flex items-center justify-center shrink-0 transition-colors shadow-xs">
-            <span class="material-symbols-outlined text-[19px]">send</span>
+          <button id="chat-send-btn" type="submit" aria-label="Kirim Pesan" class="w-10 h-10 rounded-full bg-primary hover:bg-primary-hover text-white flex items-center justify-center shrink-0 transition-colors shadow-xs cursor-pointer">
+            <span class="material-symbols-outlined text-[20px]">arrow_upward</span>
           </button>
         </form>
       </div>
@@ -386,70 +370,75 @@
     </div>
 
     <!-- Floating Action Button Launcher -->
-    <button id="launcher-button" type="button" aria-expanded="true" aria-controls="ikapi-chat-window" aria-label="Buka Bantuan IKAPI" class="w-13 h-13 p-3.5 rounded-full bg-primary hover:bg-surface-tint text-on-primary shadow-lg flex items-center justify-center transition-all duration-200 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-primary-fixed" onclick="toggleWidgetPanel()">
-      <span id="launcher-icon-chat" class="material-symbols-outlined text-[26px]">chat</span>
-      <span id="launcher-icon-close" class="material-symbols-outlined text-[26px] hidden">close</span>
+    <button id="launcher-button" type="button" aria-expanded="true" aria-controls="ikapi-chat-window" aria-label="Buka Bantuan IKAPI" class="w-14 h-14 rounded-full bg-primary hover:bg-primary-hover text-white shadow-xl flex items-center justify-center transition-all duration-200 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-primary/30" onclick="toggleWidgetPanel()">
+      <span id="launcher-icon-chat" class="material-symbols-outlined text-[26px] hidden">chat</span>
+      <span id="launcher-icon-close" class="material-symbols-outlined text-[26px]">close</span>
     </button>
 
   </div>
 
-  <!-- FOOTER -->
-  <footer class="w-full bg-surface-container-low text-ink-body pt-space-2xl pb-space-xl border-t border-border-subtle">
-    <div class="max-w-[1240px] mx-auto px-4 md:px-margin">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter mb-space-2xl">
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast-notification" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-ink-body text-white shadow-xl text-[14px] font-medium border border-white/10">
+    <span id="toastIcon" class="material-symbols-outlined text-primary-accent text-[20px]">check_circle</span>
+    <span id="toastMessage">Tindakan berhasil dilakukan.</span>
+  </div>
+
+  <!-- FOOTER (Hostinger Deep Purple #2F1C6A Inspired) -->
+  <footer class="w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]">
+    <div class="max-w-[1240px] mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
         <!-- Kolom 1 -->
-        <div class="flex flex-col gap-space-sm">
-          <span class="font-title-md text-[16px] text-ink-body font-bold">Jelajahi</span>
-          <ul class="flex flex-col gap-2 font-body-small text-[14px] text-ink-muted">
-            <li><a class="hover:text-primary transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="kategori" href="katalog_buku_desktop.html">Kategori</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Buku Terbaru</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Buku Terlaris</a></li>
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Jelajahi</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="kategori" href="katalog_buku_desktop.html">Kategori Pilihan</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Buku Rilis Terbaru</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Buku Terlaris</a></li>
           </ul>
         </div>
 
         <!-- Kolom 2 -->
-        <div class="flex flex-col gap-space-sm">
-          <span class="font-title-md text-[16px] text-ink-body font-bold">Informasi Pembelian</span>
-          <ul class="flex flex-col gap-2 font-body-small text-[14px] text-ink-muted">
-            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Cara Pembelian</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Metode Pembayaran</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Panduan Web Reader</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Bantuan &amp; FAQ</a></li>
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Informasi Pembelian</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Cara Pembelian</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Metode Pembayaran</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Panduan Web Reader</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Bantuan &amp; FAQ</a></li>
           </ul>
         </div>
 
         <!-- Kolom 3 -->
-        <div class="flex flex-col gap-space-sm">
-          <span class="font-title-md text-[16px] text-ink-body font-bold">Tentang IKAPI</span>
-          <ul class="flex flex-col gap-2 font-body-small text-[14px] text-ink-muted">
-            <li><a class="hover:text-primary transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Tentang Kami</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Anggota Penerbit</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Kemitraan Perpustakaan</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Hubungi Kami</a></li>
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Tentang IKAPI</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Tentang Kami</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Anggota Penerbit</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Kemitraan Perpustakaan</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Hubungi Kami</a></li>
           </ul>
         </div>
 
         <!-- Kolom 4 -->
-        <div class="flex flex-col gap-space-sm">
-          <span class="font-title-md text-[16px] text-ink-body font-bold">Lainnya</span>
-          <ul class="flex flex-col gap-2 font-body-small text-[14px] text-ink-muted">
-            <li><a class="hover:text-primary transition-colors" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="kabar-artikel" href="agenda_berita_literasi_desktop.html#section-berita">Kabar &amp; Artikel</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Syarat &amp; Ketentuan</a></li>
-            <li><a class="hover:text-primary transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Kebijakan Privasi</a></li>
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Lainnya</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Syarat &amp; Ketentuan</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Kebijakan Privasi</a></li>
           </ul>
         </div>
       </div>
 
-      <div class="pt-space-lg border-t border-border-subtle flex flex-col md:flex-row items-center justify-between gap-space-md text-[13px] font-body-small text-ink-muted">
+      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-[13px] text-[#b8b8bd]">
         <p>© 2026 IKAPI Jawa Barat. Seluruh hak cipta dilindungi undang-undang.</p>
-        <div class="flex flex-wrap items-center gap-3 sm:gap-space-lg">
-          <span class="text-ink-body font-semibold">Media Sosial:</span>
-          <a href="#" class="hover:text-primary transition-colors" aria-label="Instagram IKAPI Jabar">Instagram</a>
-          <a href="#" class="hover:text-primary transition-colors" aria-label="YouTube IKAPI Jabar">YouTube</a>
-          <a href="#" class="hover:text-primary transition-colors" aria-label="Facebook IKAPI Jabar">Facebook</a>
-          <a href="#" class="hover:text-primary transition-colors" aria-label="X Twitter IKAPI Jabar">X</a>
+        <div class="flex flex-wrap items-center gap-4">
+          <span class="text-white/60">Media Sosial:</span>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="Instagram IKAPI Jabar">Instagram</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="YouTube IKAPI Jabar">YouTube</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="Facebook IKAPI Jabar">Facebook</a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="X Twitter IKAPI Jabar">X</a>
         </div>
       </div>
     </div>
@@ -462,86 +451,156 @@
     // True Conversation Thread State
     let conversationHistory = [];
 
+    let toastTimer = null;
+    function showToast(message, icon = 'check_circle') {
+      const toast = document.getElementById('toast-notification');
+      const msg = document.getElementById('toastMessage');
+      const ic = document.getElementById('toastIcon');
+      if (!toast || !msg) return;
+
+      msg.textContent = message;
+      if (ic) ic.textContent = icon;
+      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2500);
+    }
+
+    // Copy to clipboard helper for Z.ai action
+    function copyMessageText(btn, text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast('Pesan berhasil disalin ke papan klip', 'content_copy');
+        }).catch(() => {
+          showToast('Teks siap disalin', 'content_copy');
+        });
+      } else {
+        showToast('Teks siap disalin', 'content_copy');
+      }
+    }
+
     // Helper to sanitize HTML strings
     function escapeHtml(str) {
+      if (!str) return '';
       const div = document.createElement('div');
       div.textContent = str;
       return div.innerHTML;
     }
 
     function initWelcomeConversation() {
-      conversationHistory = [
-        {
-          id: 'msg-welcome',
-          role: 'assistant',
-          type: 'welcome',
-          title: 'Halo! Ada yang bisa dibantu?',
-          content: 'Mau cari buku atau butuh bantuan soal pesanan?'
-        }
-      ];
+      conversationHistory = [];
       renderConversation();
     }
 
     function renderConversation() {
       const body = document.getElementById('chat-body-scrollable');
+      const quickPromptsWrapper = document.getElementById('quick-prompts-wrapper');
       if (!body) return;
 
+      // When conversation is empty, display the clean initial greeting & prompt cards (like Z.ai)
+      if (conversationHistory.length === 0) {
+        if (quickPromptsWrapper) quickPromptsWrapper.classList.add('hidden');
+        body.innerHTML = `
+          <div class="h-full flex flex-col justify-center items-center text-center px-1 py-6 space-y-5 animate-in fade-in duration-300">
+            <!-- Headline & Subtitle -->
+            <div class="space-y-1.5">
+              <h3 class="text-[20px] font-bold text-ink-body tracking-tight leading-snug">
+                Ada yang bisa dibantu?
+              </h3>
+              <p class="text-[13px] text-ink-muted leading-relaxed max-w-xs mx-auto">
+                Tanyakan rekomendasi buku, panduan pembayaran, atau cara membaca e-book di IKAPI Store.
+              </p>
+            </div>
+
+            <!-- Unified Rounded Card Container with 4 rows and 1px dividers (100% matching screenshot) -->
+            <div class="w-full rounded-2xl bg-surface-neutral border border-border-subtle overflow-hidden divide-y divide-border-subtle text-left shadow-xs">
+              <button type="button" class="w-full px-4 py-3.5 flex items-center gap-3.5 hover:bg-surface-soft hover:text-primary text-ink-body transition-colors cursor-pointer group" onclick="handleQuickPrompt('Cari buku sejarah Sunda')">
+                <span class="material-symbols-outlined text-[20px] text-primary shrink-0">auto_stories</span>
+                <span class="text-[13.5px] font-medium group-hover:text-primary transition-colors">Cari buku sejarah Sunda</span>
+              </button>
+
+              <button type="button" class="w-full px-4 py-3.5 flex items-center gap-3.5 hover:bg-surface-soft hover:text-primary text-ink-body transition-colors cursor-pointer group" onclick="handleQuickPrompt('Cara pembayaran')">
+                <span class="material-symbols-outlined text-[20px] text-primary shrink-0">payments</span>
+                <span class="text-[13.5px] font-medium group-hover:text-primary transition-colors">Cara pembayaran</span>
+              </button>
+
+              <button type="button" class="w-full px-4 py-3.5 flex items-center gap-3.5 hover:bg-surface-soft hover:text-primary text-ink-body transition-colors cursor-pointer group" onclick="handleQuickPrompt('Cara membaca e-book')">
+                <span class="material-symbols-outlined text-[20px] text-primary shrink-0">menu_book</span>
+                <span class="text-[13.5px] font-medium group-hover:text-primary transition-colors">Cara membaca e-book</span>
+              </button>
+
+              <button type="button" class="w-full px-4 py-3.5 flex items-center gap-3.5 hover:bg-surface-soft hover:text-primary text-ink-body transition-colors cursor-pointer group" onclick="handleQuickPrompt('Hubungi bantuan')">
+                <span class="material-symbols-outlined text-[20px] text-primary shrink-0">support_agent</span>
+                <span class="text-[13.5px] font-medium group-hover:text-primary transition-colors">Hubungi bantuan</span>
+              </button>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      // If conversation has messages, render conversation thread and show compact prompt row
+      if (quickPromptsWrapper) quickPromptsWrapper.classList.remove('hidden');
       body.innerHTML = conversationHistory.map(msg => {
+        // User Messages: Z.ai right-aligned with sharp bottom-right corner
         if (msg.role === 'user') {
           return `
             <div class="flex justify-end">
-              <div class="max-w-[85%] bg-primary text-on-primary rounded-2xl rounded-br-xs px-3.5 py-2 text-[13px] leading-relaxed shadow-xs">
+              <div class="ikapi-user-message shadow-xs">
                 ${escapeHtml(msg.content)}
               </div>
-            </div>
-          `;
-        }
-
-        // Assistant Messages
-        if (msg.type === 'welcome') {
-          return `
-            <div class="bg-surface-container-lowest p-3.5 rounded-xl border border-border-subtle shadow-xs space-y-1">
-              <p class="font-label text-[14px] font-bold text-ink-body">${escapeHtml(msg.title)}</p>
-              <p class="text-[13px] text-ink-muted">${escapeHtml(msg.content)}</p>
             </div>
           `;
         }
 
         if (msg.type === 'loading') {
           return `
-            <div class="flex flex-col items-start gap-1">
-              <div class="bg-surface-container-low px-3.5 py-2.5 rounded-2xl rounded-tl-xs flex items-center gap-2 border border-border-subtle">
-                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                <span class="w-2 h-2 rounded-full bg-primary animate-pulse [animation-delay:200ms]"></span>
-                <span class="w-2 h-2 rounded-full bg-primary animate-pulse [animation-delay:400ms]"></span>
-                <span class="text-[12px] text-ink-muted ml-1">Menyiapkan jawaban...</span>
-              </div>
+            <div class="flex items-center gap-1.5 py-1.5 text-ink-muted text-[13px] animate-in fade-in duration-200">
+              <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+              <span class="w-2 h-2 rounded-full bg-primary animate-pulse [animation-delay:200ms]"></span>
+              <span class="w-2 h-2 rounded-full bg-primary animate-pulse [animation-delay:400ms]"></span>
+              <span class="ml-1 text-[13px]">Menyiapkan jawaban...</span>
             </div>
           `;
         }
 
         if (msg.type === 'rekomendasi') {
+          const rawCopyText = `${msg.content} Laskar Aksara Pasundan oleh Ayi R. Kurnia - Rp 45.000`;
           return `
-            <div class="flex flex-col items-start gap-1.5 w-full">
-              <div class="max-w-[92%] bg-surface-container-low text-ink-body rounded-2xl rounded-tl-xs px-3.5 py-2.5 text-[13px] leading-relaxed border border-border-subtle">
-                ${escapeHtml(msg.content)}
-              </div>
-              <div class="w-full bg-surface-container-lowest border border-border-subtle rounded-xl p-3 flex gap-3 shadow-xs">
-                <div class="w-16 h-24 bg-surface-container-high rounded-lg overflow-hidden shrink-0 border border-border-subtle">
-                  <img src="../../assets/covers/laskar-aksara-pasundan.jpg" alt="Sampul Laskar Aksara Pasundan" class="w-full h-full object-cover">
+            <div class="flex flex-col items-start gap-1 w-full animate-in fade-in duration-200">
+              <div class="w-full text-[14px] text-ink-body leading-relaxed space-y-3">
+                <p>${escapeHtml(msg.content)}</p>
+                
+                <!-- Recommendation Card -->
+                <div class="w-full bg-surface-neutral hover:bg-surface-soft/60 border border-border-subtle rounded-2xl p-3.5 flex gap-3.5 shadow-xs transition-colors">
+                  <div class="w-16 sm:w-20 aspect-[2/3] bg-white rounded-xl overflow-hidden shrink-0 border border-border-subtle shadow-xs">
+                    <img src="../../assets/covers/laskar-aksara-pasundan.jpg" alt="Sampul Laskar Aksara Pasundan" class="w-full h-full object-cover">
+                  </div>
+                  <div class="flex flex-col justify-between flex-1 min-w-0 py-0.5">
+                    <div>
+                      <h4 class="text-[14px] font-bold text-ink-body leading-tight truncate">Laskar Aksara Pasundan</h4>
+                      <p class="text-[12px] text-ink-muted mt-0.5">Ayi R. Kurnia</p>
+                      <p class="text-[14px] font-bold text-primary mt-1">Rp 45.000</p>
+                    </div>
+                    <div class="pt-1.5">
+                      <a href="detail_buku_desktop.html" data-path="detail-buku" class="inline-flex items-center gap-1 text-[13px] font-bold text-primary hover:text-primary-hover">
+                        <span>Lihat Buku</span>
+                        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <div class="flex flex-col justify-between flex-1 min-w-0 py-0.5">
-                  <div>
-                    <h4 class="font-label text-[14px] font-bold text-ink-body leading-tight truncate">Laskar Aksara Pasundan</h4>
-                    <p class="text-[12px] text-ink-muted mt-0.5">Ayi R. Kurnia</p>
-                    <p class="text-[13px] font-bold text-primary-container mt-1">Rp 45.000</p>
-                  </div>
-                  <div class="pt-1">
-                    <a href="detail_buku_desktop.html" data-path="detail-buku" class="inline-flex items-center gap-1 text-[12px] font-label font-bold text-primary hover:underline">
-                      <span>Lihat Buku</span>
-                      <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
-                    </a>
-                  </div>
+
+                <!-- Copy Action -->
+                <div>
+                  <button type="button" class="inline-flex items-center gap-1.5 text-[12px] text-ink-muted hover:text-primary transition-colors cursor-pointer" onclick="copyMessageText(this, '${escapeHtml(rawCopyText)}')">
+                    <span class="material-symbols-outlined text-[15px]">content_copy</span>
+                    <span>Salin</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -549,21 +608,26 @@
         }
 
         if (msg.type === 'pembayaran') {
+          const rawCopyText = `Cara Membeli & Membayar E-Book: 1. Pilih buku dan tambahkan ke keranjang. 2. Lanjutkan ke konfirmasi pesanan dan pembayaran. 3. Pilih metode pembayaran (QRIS atau Virtual Account). 4. Setelah terverifikasi, buku otomatis masuk ke akun Anda.`;
           return `
-            <div class="flex flex-col items-start gap-1.5 w-full">
-              <div class="max-w-[95%] bg-surface-container-low text-ink-body rounded-2xl rounded-tl-xs p-3.5 text-[13px] leading-relaxed border border-border-subtle space-y-2">
+            <div class="flex flex-col items-start gap-1 w-full animate-in fade-in duration-200">
+              <div class="w-full text-[14px] text-ink-body leading-relaxed space-y-2.5">
                 <p class="font-bold text-ink-body">Cara Membeli &amp; Membayar E-Book:</p>
-                <ol class="list-decimal list-inside space-y-1 text-ink-body text-[13px]">
+                <ol class="list-decimal list-inside space-y-1 text-ink-body text-[13.5px]">
                   <li>Pilih buku dan tambahkan ke keranjang belanja.</li>
                   <li>Lanjutkan ke konfirmasi pesanan dan pembayaran.</li>
                   <li>Pilih metode pembayaran (QRIS atau Virtual Account).</li>
                   <li>Setelah terverifikasi, buku otomatis masuk ke akun Anda.</li>
                 </ol>
-                <div class="pt-2 border-t border-border-subtle flex items-center justify-between">
-                  <a href="perpustakaan_saya_desktop.html" data-path="perpustakaan-saya" class="text-[12px] font-label font-bold text-primary hover:underline inline-flex items-center gap-1">
-                    <span>Cek Perpustakaan Saya</span>
-                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+                <div class="pt-1 flex items-center justify-between">
+                  <a href="perpustakaan_saya_desktop.html" data-path="perpustakaan-saya" class="text-[13px] font-bold text-primary hover:text-primary-hover inline-flex items-center gap-1">
+                    <span>Buka Perpustakaan Saya</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                   </a>
+                  <button type="button" class="inline-flex items-center gap-1.5 text-[12px] text-ink-muted hover:text-primary transition-colors cursor-pointer" onclick="copyMessageText(this, '${escapeHtml(rawCopyText)}')">
+                    <span class="material-symbols-outlined text-[15px]">content_copy</span>
+                    <span>Salin</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -571,21 +635,26 @@
         }
 
         if (msg.type === 'reader') {
+          const rawCopyText = `Cara Membaca E-Book: 1. Masuk ke akun IKAPI Store Anda. 2. Buka menu Perpustakaan Saya. 3. Pilih buku yang telah dibeli, lalu klik Mulai Baca. 4. E-book langsung dibaca di peramban tanpa unduh file.`;
           return `
-            <div class="flex flex-col items-start gap-1.5 w-full">
-              <div class="max-w-[95%] bg-surface-container-low text-ink-body rounded-2xl rounded-tl-xs p-3.5 text-[13px] leading-relaxed border border-border-subtle space-y-2">
+            <div class="flex flex-col items-start gap-1 w-full animate-in fade-in duration-200">
+              <div class="w-full text-[14px] text-ink-body leading-relaxed space-y-2.5">
                 <p class="font-bold text-ink-body">Cara Membaca E-Book:</p>
-                <ol class="list-decimal list-inside space-y-1 text-ink-body text-[13px]">
+                <ol class="list-decimal list-inside space-y-1 text-ink-body text-[13.5px]">
                   <li>Masuk ke akun IKAPI Store Anda.</li>
                   <li>Buka menu <strong>Perpustakaan Saya</strong>.</li>
-                  <li>Pilih buku yang telah dibeli, lalu klik <strong>Mulai Baca</strong> atau <strong>Lanjutkan Membaca</strong>.</li>
-                  <li>E-book langsung dibaca di peramban tanpa unduh file mentah.</li>
+                  <li>Pilih buku yang telah dibeli, lalu klik <strong>Mulai Baca</strong>.</li>
+                  <li>E-book langsung dibaca di peramban tanpa unduh file.</li>
                 </ol>
-                <div class="pt-2 border-t border-border-subtle">
-                  <a href="perpustakaan_saya_desktop.html" data-path="perpustakaan-saya" class="text-[12px] font-label font-bold text-primary hover:underline inline-flex items-center gap-1">
+                <div class="pt-1 flex items-center justify-between">
+                  <a href="perpustakaan_saya_desktop.html" data-path="perpustakaan-saya" class="text-[13px] font-bold text-primary hover:text-primary-hover inline-flex items-center gap-1">
                     <span>Buka Perpustakaan Saya</span>
-                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                   </a>
+                  <button type="button" class="inline-flex items-center gap-1.5 text-[12px] text-ink-muted hover:text-primary transition-colors cursor-pointer" onclick="copyMessageText(this, '${escapeHtml(rawCopyText)}')">
+                    <span class="material-symbols-outlined text-[15px]">content_copy</span>
+                    <span>Salin</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -593,32 +662,44 @@
         }
 
         if (msg.type === 'eskalasi') {
+          const rawCopyText = `Kontak Sekretariat IKAPI Jabar: Email: sekretariat@ikapi-jabar.id | Alamat: Jl. Buah Batu No. 120, Kota Bandung`;
           return `
-            <div class="flex flex-col items-start gap-1.5 w-full">
-              <div class="max-w-[95%] bg-surface-container-low text-ink-body rounded-2xl rounded-tl-xs p-3.5 text-[13px] leading-relaxed border border-border-subtle space-y-2">
+            <div class="flex flex-col items-start gap-1 w-full animate-in fade-in duration-200">
+              <div class="w-full text-[14px] text-ink-body leading-relaxed space-y-2.5">
                 <p class="text-ink-body">
                   Untuk pertanyaan seputar kerja sama penerbit, keanggotaan, atau kendala transaksi khusus, silakan hubungi tim kami:
                 </p>
-                <div class="bg-surface-container-lowest p-2.5 rounded-xl border border-border-subtle text-[12px] space-y-1.5">
-                  <div class="flex items-center gap-2">
-                    <span class="material-symbols-outlined text-[16px] text-primary">mail</span>
+                <div class="bg-surface-neutral p-3 rounded-2xl border border-border-subtle text-[13px] space-y-2">
+                  <div class="flex items-center gap-2.5">
+                    <span class="material-symbols-outlined text-[18px] text-primary">mail</span>
                     <a href="mailto:sekretariat@ikapi-jabar.id" class="text-primary font-medium hover:underline">sekretariat@ikapi-jabar.id</a>
                   </div>
-                  <div class="flex items-center gap-2">
-                    <span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+                  <div class="flex items-center gap-2.5">
+                    <span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
                     <span class="text-ink-body">Jl. Buah Batu No. 120, Kota Bandung</span>
                   </div>
+                </div>
+                <div class="pt-1">
+                  <button type="button" class="inline-flex items-center gap-1.5 text-[12px] text-ink-muted hover:text-primary transition-colors cursor-pointer" onclick="copyMessageText(this, '${escapeHtml(rawCopyText)}')">
+                    <span class="material-symbols-outlined text-[15px]">content_copy</span>
+                    <span>Salin</span>
+                  </button>
                 </div>
               </div>
             </div>
           `;
         }
 
-        // Generic / Fallback Text
+        // Generic Plain Text Assistant Response
+        const plainCopyText = msg.content;
         return `
-          <div class="flex flex-col items-start gap-1">
-            <div class="max-w-[92%] bg-surface-container-low text-ink-body rounded-2xl rounded-tl-xs px-3.5 py-2.5 text-[13px] leading-relaxed border border-border-subtle">
-              ${escapeHtml(msg.content)}
+          <div class="flex flex-col items-start gap-1 w-full animate-in fade-in duration-200">
+            <div class="text-[14px] text-ink-body leading-relaxed space-y-2">
+              <p>${escapeHtml(msg.content)}</p>
+              <button type="button" class="inline-flex items-center gap-1.5 text-[12px] text-ink-muted hover:text-primary transition-colors cursor-pointer" onclick="copyMessageText(this, '${escapeHtml(plainCopyText)}')">
+                <span class="material-symbols-outlined text-[15px]">content_copy</span>
+                <span>Salin</span>
+              </button>
             </div>
           </div>
         `;
@@ -646,14 +727,20 @@
         chatIcon.classList.add('hidden');
         closeIcon.classList.remove('hidden');
         if (toggleLabel) toggleLabel.textContent = 'Tutup Jendela Chat';
-        if (launcherBtn) launcherBtn.setAttribute('aria-expanded', 'true');
+        if (launcherBtn) {
+          launcherBtn.setAttribute('aria-expanded', 'true');
+          launcherBtn.setAttribute('aria-label', 'Tutup Bantuan IKAPI');
+        }
       } else {
         windowEl.classList.add('hidden', 'scale-95', 'opacity-0', 'pointer-events-none');
         windowEl.classList.remove('flex', 'scale-100', 'opacity-100');
         chatIcon.classList.remove('hidden');
         closeIcon.classList.add('hidden');
         if (toggleLabel) toggleLabel.textContent = 'Buka Jendela Chat';
-        if (launcherBtn) launcherBtn.setAttribute('aria-expanded', 'false');
+        if (launcherBtn) {
+          launcherBtn.setAttribute('aria-expanded', 'false');
+          launcherBtn.setAttribute('aria-label', 'Buka Bantuan IKAPI');
+        }
       }
     }
 
@@ -668,6 +755,7 @@
       initWelcomeConversation();
       const input = document.getElementById('chat-input-field');
       if (input) input.value = '';
+      showToast('Percakapan dibersihkan', 'refresh');
     }
 
     // Dispatch Assistant Response by Intent
@@ -766,21 +854,14 @@
         const btn = document.getElementById('btn-state-' + sc);
         if (!btn) return;
         if (sc === scenario) {
-          btn.className = "px-2.5 py-1 rounded-lg bg-primary-container text-on-primary font-medium transition-all shadow-xs";
+          btn.className = "px-3 py-1 rounded-lg bg-primary text-white font-medium transition-all shadow-xs";
         } else {
-          btn.className = "px-2.5 py-1 rounded-lg bg-surface-container-lowest text-ink-body hover:bg-surface-cream font-medium transition-all border border-border-subtle";
+          btn.className = "px-3 py-1 rounded-lg bg-surface-neutral text-ink-body hover:bg-surface-soft hover:text-primary font-medium transition-all border border-border-subtle";
         }
       });
 
       if (scenario === 'rekomendasi') {
         conversationHistory = [
-          {
-            id: 'msg-welcome',
-            role: 'assistant',
-            type: 'welcome',
-            title: 'Halo! Ada yang bisa dibantu?',
-            content: 'Mau cari buku atau butuh bantuan soal pesanan?'
-          },
           {
             id: 'demo-u1',
             role: 'user',
@@ -793,6 +874,7 @@
             content: 'Ada buku yang membahas sejarah dan naskah Sunda. Ini yang paling sesuai dengan pencarianmu:'
           }
         ];
+        showToast('Skenario: Rekomendasi Buku aktif', 'smart_toy');
       } else if (scenario === 'pembayaran') {
         conversationHistory = [
           {
@@ -807,6 +889,7 @@
             content: ''
           }
         ];
+        showToast('Skenario: Panduan Pembayaran aktif', 'payments');
       } else if (scenario === 'eskalasi') {
         conversationHistory = [
           {
@@ -821,6 +904,7 @@
             content: ''
           }
         ];
+        showToast('Skenario: Layanan CS aktif', 'support_agent');
       } else if (scenario === 'loading') {
         conversationHistory = [
           {
@@ -835,12 +919,13 @@
             content: ''
           }
         ];
+        showToast('Skenario: Status Memuat aktif', 'hourglass_top');
       }
 
       renderConversation();
     }
 
-    // Close on Escape if inside chat
+    // Close on Escape if widget is open
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && isWidgetOpen) {
         toggleWidgetPanel();
