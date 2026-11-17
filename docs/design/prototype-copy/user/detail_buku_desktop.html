@@ -128,8 +128,11 @@
             <span id="cart-badge" class="absolute top-1 right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-primary text-white text-[11px] font-bold flex items-center justify-center">2</span>
           </a>
           <div class="h-6 w-px bg-border-subtle"></div>
-          <a class="hidden sm:flex h-10 px-5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[14px] font-semibold items-center gap-2 transition-colors shadow-xs" data-path="login" href="masuk_login_desktop.html">
-            <span>Masuk / Akun</span>
+          <a class="hidden h-10 items-center rounded-xl px-3 text-[14px] font-semibold text-ink-body transition-colors hover:bg-surface-soft sm:flex" data-path="login" href="masuk_login_desktop.html">
+            <span>Masuk</span>
+          </a>
+          <a class="hidden h-10 items-center rounded-xl bg-primary px-5 text-[14px] font-semibold text-white shadow-xs transition-colors hover:bg-primary-hover sm:flex" data-path="register" href="daftar_akun_register_desktop.html">
+            <span>Daftar</span>
           </a>
           <a href="akun_saya_profil_dropdown_navigasi_desktop.html" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white shadow-xs" aria-label="Akun Saya">
             <span class="material-symbols-outlined text-[18px]">person</span>
@@ -141,7 +144,7 @@
         <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="beranda" href="beranda_desktop.html">Beranda</a>
         <a aria-current="page" class="h-full flex items-center transition-colors whitespace-nowrap text-primary font-bold border-b-2 border-primary text-[14px]" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a>
         <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a>
-        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Komunitas Penerbit</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Komunitas Literasi</a>
       </nav>
     </div>
   </header>
@@ -151,14 +154,14 @@
     <div class="flex flex-col w-full">
 
       <!-- Main Product Area (Zero Breadcrumb - Directly to Product Hero) -->
-      <section class="w-full pt-8 pb-12 bg-white">
+      <section id="book-detail" data-book-id="BK-01" class="w-full pt-8 pb-12 bg-white">
         <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
             <!-- Left: Book Cover (5 Cols) -->
             <div class="lg:col-span-5 flex justify-center">
               <div class="w-full max-w-[340px] aspect-[2/3] rounded-2xl overflow-hidden bg-surface-neutral border border-border-subtle shadow-md">
-                <img src="../../assets/covers/laskar-aksara-pasundan.jpg" alt="Sampul Buku Laskar Aksara Pasundan" class="w-full h-full object-cover">
+                <img id="book-cover" src="../../assets/covers/laskar-aksara-pasundan.jpg" alt="Sampul Buku Laskar Aksara Pasundan" class="w-full h-full object-cover">
               </div>
             </div>
 
@@ -167,38 +170,22 @@
               
               <!-- Title, Author & Publisher -->
               <div class="space-y-2">
-                <h1 class="text-[28px] sm:text-[34px] font-bold text-ink-body tracking-tight leading-tight">
+                <h1 id="book-title" class="text-[28px] sm:text-[34px] font-bold text-ink-body tracking-tight leading-tight">
                   Laskar Aksara Pasundan
                 </h1>
                 <p class="text-[16px] text-ink-muted">
-                  Karya <span class="font-bold text-ink-body">Ayi R. Kurnia</span>
+                  Karya <span id="book-author" class="font-bold text-ink-body">Ayi R. Kurnia</span>
                 </p>
                 <div class="flex items-center gap-3 text-[13px] text-ink-muted pt-0.5">
-                  <span class="font-medium text-primary">Penerbit Kiblat Buku Utama</span>
+                  <span id="book-publisher" class="font-medium text-primary">Penerbit Kiblat Buku Utama</span>
                   <span>Tahun Terbit 2024</span>
                 </div>
               </div>
 
               <!-- Compact Supporting Metadata Row -->
               <div class="flex flex-wrap items-center gap-2.5 text-[13px] text-ink-muted">
-                <span class="px-3 py-1 rounded-full bg-surface-soft text-primary font-semibold border border-primary/20">E-Book Resmi</span>
                 <span class="px-3 py-1 rounded-full bg-surface-neutral text-ink-body font-medium border border-border-subtle">Bahasa Indonesia &amp; Sunda</span>
                 <span class="px-3 py-1 rounded-full bg-surface-neutral text-ink-body font-medium border border-border-subtle">268 Halaman</span>
-              </div>
-
-              <!-- Rating Summary Row (Dynamic & Honest) -->
-              <div id="product-rating-summary" class="flex items-center gap-3 pt-1 text-[14px]">
-                <div id="summary-stars" class="flex items-center text-amber-400 text-[18px]">
-                  <span class="material-symbols-outlined text-[19px]">star</span>
-                  <span class="material-symbols-outlined text-[19px]">star</span>
-                  <span class="material-symbols-outlined text-[19px]">star</span>
-                  <span class="material-symbols-outlined text-[19px]">star</span>
-                  <span class="material-symbols-outlined text-[19px]">star_half</span>
-                </div>
-                <span id="summary-rating-text" class="text-ink-body font-bold">4.5 / 5.0</span>
-                <a href="#section-rating" class="text-primary hover:text-primary-hover font-semibold hover:underline" id="summary-rating-cta">
-                  Beri penilaian
-                </a>
               </div>
 
               <!-- Compact Hostinger Purchase Panel -->
@@ -224,6 +211,14 @@
                   </a>
                   <button id="btnWishlist" type="button" aria-label="Tambah ke Favorit" class="h-11 w-11 rounded-xl border border-border-subtle bg-white hover:bg-surface-soft text-ink-muted hover:text-primary flex items-center justify-center transition-colors cursor-pointer">
                     <span id="wishlistIcon" class="material-symbols-outlined text-[20px]">favorite_border</span>
+                  </button>
+                </div>
+
+                <!-- Report book: text button, secondary weight -->
+                <div class="pt-0.5">
+                  <button id="btn-report-book" type="button" aria-haspopup="dialog" class="-ml-2 inline-flex h-11 items-center gap-1.5 rounded-lg px-2 text-[13px] font-semibold text-ink-muted transition-colors hover:bg-surface-soft hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2">
+                    <span class="material-symbols-outlined text-[18px]" aria-hidden="true">flag</span>
+                    <span>Laporkan</span>
                   </button>
                 </div>
               </div>
@@ -295,7 +290,7 @@
       <section id="section-rating" class="w-full py-12 bg-white border-t border-border-subtle">
         <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           
-          <div class="flex items-center justify-between pb-3 border-b border-border-subtle">
+          <div class="flex items-center justify-between pb-1">
             <h2 class="text-[22px] md:text-[24px] font-bold text-ink-body tracking-tight">Ulasan Pembaca</h2>
             <span id="review-count-badge" class="text-[14px] text-ink-muted font-medium">3 ulasan</span>
           </div>
@@ -359,33 +354,65 @@
           <!-- Existing Reviews List -->
           <div class="bg-white rounded-3xl p-6 sm:p-8 border border-border-subtle shadow-sm divide-y divide-border-subtle" id="reviews-list-container">
             <!-- Review 1 -->
-            <article class="py-4 first:pt-0 last:pb-0 flex flex-col gap-1.5">
-              <div class="flex items-center justify-between">
-                <span class="text-[14px] font-bold text-ink-body">Gilang Nugraha</span>
-                <time class="text-[12px] text-ink-muted" datetime="2025-01-12">12 Januari 2025</time>
+            <article class="review-item py-4 first:pt-0 last:pb-0 flex flex-col gap-2" data-comment-id="CMT-2026-101">
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex min-w-0 flex-col gap-0.5">
+                  <span class="review-author text-[14px] font-bold text-ink-body">Gilang Nugraha</span>
+                  <time class="text-[12px] text-ink-muted" datetime="2025-01-12">12 Januari 2025</time>
+                </div>
+                <button type="button" class="comment-menu-btn -mr-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg text-ink-muted transition-colors hover:bg-surface-neutral hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40" aria-label="Aksi untuk komentar Gilang Nugraha" aria-haspopup="menu" aria-expanded="false">
+                  <span class="material-symbols-outlined text-[20px]" aria-hidden="true">more_horiz</span>
+                </button>
               </div>
-              <p class="text-[14px] text-ink-body leading-relaxed">
+              <p class="review-body text-[14px] text-ink-body leading-relaxed">
                 Pembahasan mengenai naskah kuno Priangan disampaikan secara mengalir. Gaya bahasanya mudah dinikmati dan memberikan wawasan baru tentang kekayaan tradisi tulisan Pasundan.
               </p>
+              <span class="review-reaction hidden items-center gap-1 text-[12px] font-semibold text-primary" role="status">
+                <span class="material-symbols-outlined text-[15px]" data-reaction-icon aria-hidden="true">thumb_up</span>
+                <span data-reaction-label>Suka</span>
+              </span>
             </article>
 
             <!-- Review 2 -->
-            <article class="py-4 last:pb-0 flex flex-col gap-1.5">
-              <div class="flex items-center justify-between">
-                <span class="text-[14px] font-bold text-ink-body">Ratih Wulandari</span>
-                <time class="text-[12px] text-ink-muted" datetime="2024-12-28">28 Desember 2024</time>
+            <article class="review-item py-4 first:pt-0 last:pb-0 flex flex-col gap-2" data-comment-id="CMT-2026-102">
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex min-w-0 flex-col gap-0.5">
+                  <span class="review-author text-[14px] font-bold text-ink-body">Ratih Wulandari</span>
+                  <time class="text-[12px] text-ink-muted" datetime="2024-12-28">28 Desember 2024</time>
+                </div>
+                <button type="button" class="comment-menu-btn -mr-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg text-ink-muted transition-colors hover:bg-surface-neutral hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40" aria-label="Aksi untuk komentar Ratih Wulandari" aria-haspopup="menu" aria-expanded="false">
+                  <span class="material-symbols-outlined text-[20px]" aria-hidden="true">more_horiz</span>
+                </button>
               </div>
-              <p class="text-[14px] text-ink-body leading-relaxed">
+              <p class="review-body text-[14px] text-ink-body leading-relaxed">
                 Penjelasan filosofis tentang lambang aksara Sunda Kuna pada bab pertengahan sangat menarik. Buku ini cocok menjadi referensi bacaan bagi pegiat literasi daerah.
               </p>
+              <span class="review-reaction hidden items-center gap-1 text-[12px] font-semibold text-primary" role="status">
+                <span class="material-symbols-outlined text-[15px]" data-reaction-icon aria-hidden="true">thumb_up</span>
+                <span data-reaction-label>Suka</span>
+              </span>
             </article>
 
             <!-- Review 3 -->
-            <article class="py-4 last:pb-0 flex flex-col gap-1.5">
-              <div class="flex items-center justify-between">
-                <span class="text-[14px] font-bold text-ink-body">Fajar Ashari</span>
-                <time class="text-[12px] text-ink-muted" datetime="2024-12-19">19 Desember 2024</time>
+            <article class="review-item py-4 first:pt-0 last:pb-0 flex flex-col gap-2" data-comment-id="CMT-2026-103">
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex min-w-0 flex-col gap-0.5">
+                  <span class="review-author text-[14px] font-bold text-ink-body">Fajar Ashari</span>
+                  <time class="text-[12px] text-ink-muted" datetime="2024-12-19">19 Desember 2024</time>
+                </div>
+                <button type="button" class="comment-menu-btn -mr-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg text-ink-muted transition-colors hover:bg-surface-neutral hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40" aria-label="Aksi untuk komentar Fajar Ashari" aria-haspopup="menu" aria-expanded="false">
+                  <span class="material-symbols-outlined text-[20px]" aria-hidden="true">more_horiz</span>
+                </button>
               </div>
+              <p class="review-body text-[14px] text-ink-body leading-relaxed">
+                Penceritaan sejarah lokal yang dikemas dalam bentuk narasi fiksi membuat topik filologi menjadi lebih memikat dan relevan untuk dibaca hari ini.
+              </p>
+              <span class="review-reaction hidden items-center gap-1 text-[12px] font-semibold text-primary" role="status">
+                <span class="material-symbols-outlined text-[15px]" data-reaction-icon aria-hidden="true">thumb_up</span>
+                <span data-reaction-label>Suka</span>
+              </span>
+            </article>
+
               <p class="text-[14px] text-ink-body leading-relaxed">
                 Penceritaan sejarah lokal yang dikemas dalam bentuk narasi fiksi membuat topik filologi menjadi lebih memikat dan relevan untuk dibaca hari ini.
               </p>
@@ -505,6 +532,70 @@
     <span id="toast-message">Tindakan berhasil diproses</span>
   </div>
 
+  <!-- Comment action menu: single portaled instance so it never clips inside the review card -->
+  <div id="comment-menu" role="menu" aria-label="Aksi komentar" class="fixed z-[80] hidden w-[190px] rounded-xl border border-border-subtle bg-white p-1.5 shadow-[0_12px_32px_rgba(34,34,37,0.14)]">
+    <button type="button" role="menuitemcheckbox" aria-checked="false" data-action="like" class="comment-menu-item flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-left text-[13.5px] font-medium text-ink-body transition-colors hover:bg-surface-neutral focus-visible:outline-none focus-visible:bg-surface-neutral">
+      <span class="material-symbols-outlined text-[18px] text-ink-muted" data-icon aria-hidden="true">thumb_up</span>
+      <span>Suka</span>
+      <span class="material-symbols-outlined ml-auto hidden text-[16px] text-primary" data-check aria-hidden="true">check</span>
+    </button>
+    <button type="button" role="menuitemcheckbox" aria-checked="false" data-action="dislike" class="comment-menu-item flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-left text-[13.5px] font-medium text-ink-body transition-colors hover:bg-surface-neutral focus-visible:outline-none focus-visible:bg-surface-neutral">
+      <span class="material-symbols-outlined text-[18px] text-ink-muted" data-icon aria-hidden="true">thumb_down</span>
+      <span>Tidak Suka</span>
+      <span class="material-symbols-outlined ml-auto hidden text-[16px] text-primary" data-check aria-hidden="true">check</span>
+    </button>
+    <div class="my-1 h-px bg-border-subtle"></div>
+    <button type="button" role="menuitem" data-action="report" class="comment-menu-item flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-left text-[13.5px] font-medium text-ink-body transition-colors hover:bg-surface-neutral focus-visible:outline-none focus-visible:bg-surface-neutral">
+      <span class="material-symbols-outlined text-[18px] text-ink-muted" data-icon aria-hidden="true">flag</span>
+      <span>Laporkan</span>
+    </button>
+  </div>
+
+  <!-- Report comment modal -->
+  <div id="report-modal" class="fixed inset-0 z-[90] hidden" role="dialog" aria-modal="true" aria-labelledby="report-title" aria-describedby="report-desc">
+    <div id="report-scrim" class="absolute inset-0 bg-[#222225]/50"></div>
+    <div class="relative flex h-full items-end justify-center sm:items-center sm:p-4">
+      <div class="flex h-full w-full flex-col overflow-hidden bg-white sm:h-auto sm:max-h-[calc(100vh-48px)] sm:max-w-[500px] sm:rounded-2xl sm:border sm:border-border-subtle sm:shadow-[0_24px_64px_rgba(34,34,37,0.22)]">
+        <header class="flex items-start justify-between gap-4 border-b border-border-subtle px-5 py-4">
+          <div class="min-w-0">
+            <h2 id="report-title" class="text-[17px] font-bold tracking-tight text-ink-body">Laporkan Komentar</h2>
+            <p id="report-desc" class="mt-0.5 text-[13px] text-ink-muted">Mengapa kamu melaporkan komentar ini?</p>
+          </div>
+          <button type="button" id="report-close" aria-label="Tutup" class="-mr-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg text-ink-muted transition-colors hover:bg-surface-neutral hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40">
+            <span class="material-symbols-outlined text-[18px]">close</span>
+          </button>
+        </header>
+
+        <div class="flex-1 space-y-5 overflow-y-auto px-5 py-4">
+          <div class="rounded-xl border border-border-subtle bg-surface-neutral px-3.5 py-3">
+            <p class="text-[13px] font-bold text-ink-body" id="report-author">-</p>
+            <p class="mt-1 line-clamp-3 text-[13px] leading-relaxed text-ink-muted" id="report-preview">-</p>
+            <p class="mt-2 text-[12px] text-ink-muted" id="report-book">-</p>
+          </div>
+
+          <fieldset>
+            <legend class="text-[13px] font-bold text-ink-body">Pilih alasan</legend>
+            <div class="mt-1.5 -ml-2 space-y-0.5" id="report-reasons"></div>
+          </fieldset>
+
+          <div>
+            <div class="flex items-baseline justify-between gap-3">
+              <label for="report-details" id="report-details-label" class="text-[13px] font-bold text-ink-body">Keterangan tambahan (opsional)</label>
+              <span id="report-counter" class="text-[12px] tabular-nums text-ink-muted">0/500</span>
+            </div>
+            <textarea id="report-details" rows="3" maxlength="500" class="mt-1.5 w-full resize-none rounded-xl border border-border-subtle bg-white p-3 text-[13.5px] leading-relaxed text-ink-body placeholder:text-ink-muted focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Jelaskan masalah pada komentar ini..."></textarea>
+            <p id="report-error" role="alert" class="mt-1.5 hidden text-[12.5px] font-medium text-[#B42318]"></p>
+          </div>
+        </div>
+
+        <footer class="flex items-center justify-end gap-2 border-t border-border-subtle px-5 py-3.5">
+          <button type="button" id="report-cancel" class="h-10 rounded-xl border border-border-subtle px-4 text-[13.5px] font-semibold text-ink-body transition-colors hover:bg-surface-neutral focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40">Batal</button>
+          <button type="button" id="report-submit" disabled class="h-10 rounded-xl bg-primary px-4 text-[13.5px] font-semibold text-white transition-colors hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2">Kirim Laporan</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER (Hostinger Deep Purple #2F1C6A Inspired) -->
   <footer class="w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]">
     <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -535,10 +626,10 @@
         <div class="flex flex-col gap-3">
           <span class="text-[16px] text-white font-bold tracking-tight">Tentang IKAPI</span>
           <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
-            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Tentang Kami</a></li>
-            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Anggota Penerbit</a></li>
-            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Kemitraan Perpustakaan</a></li>
-            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Hubungi Kami</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Tentang Kami</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Anggota Penerbit</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Kemitraan Perpustakaan</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Hubungi Kami</a></li>
           </ul>
         </div>
 
@@ -642,6 +733,12 @@
       const summaryText = document.getElementById('summary-rating-text');
       const summaryCta = document.getElementById('summary-rating-cta');
       const reviewBadge = document.getElementById('review-count-badge');
+
+      /* The counter lives in the Ulasan header, so update it before the optional
+         summary row is checked. */
+      if (reviewBadge) {
+        reviewBadge.textContent = selectedRating === 0 ? '3 ulasan' : '4 ulasan (termasuk kamu)';
+      }
 
       if (!summaryStars || !summaryText) return;
 
@@ -843,6 +940,960 @@
         });
       }
     });
+  </script>
+  <script>
+    /* Comment actions: reactions (Suka / Tidak Suka) and comment reporting.
+       Prototype boundary: state is kept in localStorage for this browser only.
+       No request is sent, so a report never reaches the administrator queue
+       from this page. The stored record mirrors the moderation record shape
+       used by admin/moderasi_ulasan_dan_komentar_desktop.html (commentId,
+       reporterUserId, category, details, createdAt, status) so a real endpoint
+       can reuse it without remapping. */
+    (function () {
+      'use strict';
+
+      var REPORTER_USER_ID = 'USR-PMB-0042';
+      var REACTION_KEY = 'ikapi_comment_reactions_demo';
+      var REPORT_KEY = 'ikapi_comment_reports_demo';
+      var DETAIL_LIMIT = 500;
+
+      /* Buyer-facing reasons mapped to the moderation taxonomy. */
+      var REASONS = [
+        { id: 'spam', label: 'Spam atau promosi', category: 'Spam & Promosi Eksternal' },
+        { id: 'abuse', label: 'Kata kasar atau pelecehan', category: 'Kata Kasar & Provokasi' },
+        { id: 'hate', label: 'Ujaran kebencian atau diskriminasi', category: 'Ujaran Kebencian' },
+        { id: 'privacy', label: 'Membagikan informasi pribadi', category: 'Informasi Pribadi' },
+        { id: 'other', label: 'Alasan lainnya', category: 'Lainnya' }
+      ];
+
+      var $ = function (id) { return document.getElementById(id); };
+      var menu = $('comment-menu');
+      var modal = $('report-modal');
+      var reasonWrap = $('report-reasons');
+      var detailsField = $('report-details');
+      var counter = $('report-counter');
+      var errorEl = $('report-error');
+      var submitBtn = $('report-submit');
+      var detailsLabel = $('report-details-label');
+
+      var reactions = readStore(REACTION_KEY, {});
+      var reports = readStore(REPORT_KEY, []);
+      var menuTrigger = null;
+      var activeComment = null;
+      var returnFocus = null;
+      var busy = false;
+      var scrollY = 0;
+
+      function readStore(key, fallback) {
+        try {
+          var raw = window.localStorage.getItem(key);
+          if (!raw) return fallback;
+          var parsed = JSON.parse(raw);
+          return parsed && typeof parsed === 'object' ? parsed : fallback;
+        } catch (e) { return fallback; }
+      }
+
+      function writeStore(key, value) {
+        try { window.localStorage.setItem(key, JSON.stringify(value)); } catch (e) {}
+      }
+
+      function articleById(id) {
+        return document.querySelector('.review-item[data-comment-id="' + id + '"]');
+      }
+
+      function commentFromTrigger(trigger) {
+        var article = trigger.closest('.review-item');
+        if (!article) return null;
+        var author = article.querySelector('.review-author');
+        var body = article.querySelector('.review-body');
+        return {
+          id: article.getAttribute('data-comment-id'),
+          author: author ? author.textContent.trim() : '',
+          text: body ? body.textContent.trim() : ''
+        };
+      }
+
+      function bookName() {
+        var h1 = document.querySelector('h1');
+        return h1 ? h1.textContent.replace(/\s+/g, ' ').trim() : '';
+      }
+
+      function hasPendingReport(commentId) {
+        return reports.some(function (r) {
+          return r.commentId === commentId &&
+            r.reporterUserId === REPORTER_USER_ID &&
+            r.status === 'pending';
+        });
+      }
+
+      /* ---------------- reactions ---------------- */
+
+      function paintReaction(id) {
+        var article = articleById(id);
+        if (!article) return;
+        var entry = reactions[id];
+        var chip = article.querySelector('.review-reaction');
+        var icon = article.querySelector('[data-reaction-icon]');
+        var label = article.querySelector('[data-reaction-label]');
+        if (!chip || !icon || !label) return;
+
+        if (!entry) {
+          chip.classList.add('hidden');
+          chip.classList.remove('inline-flex');
+          return;
+        }
+        icon.textContent = entry === 'like' ? 'thumb_up' : 'thumb_down';
+        label.textContent = entry === 'like' ? 'Suka' : 'Tidak Suka';
+        chip.classList.remove('hidden');
+        chip.classList.add('inline-flex');
+      }
+
+      function setReaction(id, kind) {
+        if (reactions[id] === kind) delete reactions[id];
+        else reactions[id] = kind;
+        writeStore(REACTION_KEY, reactions);
+        paintReaction(id);
+      }
+
+      /* ---------------- dropdown ---------------- */
+
+      function menuItems() {
+        return Array.prototype.slice.call(menu.querySelectorAll('.comment-menu-item'));
+      }
+
+      function paintMenu(id) {
+        var entry = reactions[id];
+        var reported = hasPendingReport(id);
+
+        menuItems().forEach(function (item) {
+          var action = item.getAttribute('data-action');
+          var isReaction = action === 'like' || action === 'dislike';
+          var checked = isReaction && entry === action;
+          var check = item.querySelector('[data-check]');
+          var icon = item.querySelector('[data-icon]');
+
+          item.classList.toggle('bg-surface-soft', checked);
+          item.classList.toggle('text-primary', checked);
+          if (isReaction) item.setAttribute('aria-checked', checked ? 'true' : 'false');
+          /* The report item has no check mark, so both nodes are optional. */
+          if (check) check.classList.toggle('hidden', !checked);
+          if (icon) {
+            icon.classList.toggle('text-primary', checked);
+            icon.classList.toggle('text-ink-muted', !checked);
+          }
+
+          if (action === 'report') {
+            item.setAttribute('aria-disabled', reported ? 'true' : 'false');
+            item.classList.toggle('text-ink-muted', reported);
+            item.title = reported ? 'Komentar ini sudah kamu laporkan' : '';
+          }
+        });
+      }
+
+      function positionMenu(trigger) {
+        var rect = trigger.getBoundingClientRect();
+        var width = menu.offsetWidth;
+        var height = menu.offsetHeight;
+        var left = Math.min(rect.right - width, window.innerWidth - width - 8);
+        left = Math.max(8, left);
+        var top = rect.bottom + 6;
+        if (top + height > window.innerHeight - 8) top = Math.max(8, rect.top - height - 6);
+        menu.style.left = left + 'px';
+        menu.style.top = top + 'px';
+      }
+
+      function openMenu(trigger) {
+        closeMenu(false);
+        var comment = commentFromTrigger(trigger);
+        if (!comment) return;
+        menuTrigger = trigger;
+        paintMenu(comment.id);
+        menu.classList.remove('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+        positionMenu(trigger);
+        var first = menuItems()[0];
+        if (first) first.focus();
+      }
+
+      function closeMenu(restoreFocus) {
+        if (menu.classList.contains('hidden')) return;
+        menu.classList.add('hidden');
+        if (menuTrigger) {
+          menuTrigger.setAttribute('aria-expanded', 'false');
+          if (restoreFocus !== false) menuTrigger.focus();
+        }
+        menuTrigger = null;
+      }
+
+      document.addEventListener('click', function (e) {
+        var trigger = e.target.closest ? e.target.closest('.comment-menu-btn') : null;
+        if (trigger) {
+          e.preventDefault();
+          if (menuTrigger === trigger) closeMenu(true);
+          else openMenu(trigger);
+          return;
+        }
+        if (menu.contains(e.target)) return;
+        if (!menu.classList.contains('hidden')) closeMenu(false);
+      });
+
+      menu.addEventListener('click', function (e) {
+        var item = e.target.closest ? e.target.closest('.comment-menu-item') : null;
+        if (!item) return;
+        var trigger = menuTrigger;
+        if (!trigger) return;
+        var comment = commentFromTrigger(trigger);
+        if (!comment) return;
+        var action = item.getAttribute('data-action');
+
+        if (action === 'like' || action === 'dislike') {
+          setReaction(comment.id, action);
+          closeMenu(true);
+          return;
+        }
+
+        if (action === 'report') {
+          if (hasPendingReport(comment.id)) {
+            closeMenu(true);
+            showToast('Komentar ini sudah kamu laporkan.');
+            return;
+          }
+          closeMenu(false);
+          openReport(comment, trigger);
+        }
+      });
+
+      menu.addEventListener('keydown', function (e) {
+        var items = menuItems();
+        var index = items.indexOf(document.activeElement);
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          items[(index + 1) % items.length].focus();
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          items[(index - 1 + items.length) % items.length].focus();
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          items[0].focus();
+        } else if (e.key === 'End') {
+          e.preventDefault();
+          items[items.length - 1].focus();
+        } else if (e.key === 'Escape') {
+          e.preventDefault();
+          e.stopPropagation();
+          closeMenu(true);
+        } else if (e.key === 'Tab') {
+          closeMenu(false);
+        }
+      });
+
+      /* Keep the portaled menu anchored to its trigger instead of closing it,
+         otherwise the focus() on the first item can scroll and dismiss the menu. */
+      function repositionMenu() {
+        if (menu.classList.contains('hidden') || !menuTrigger) return;
+        positionMenu(menuTrigger);
+      }
+      window.addEventListener('resize', repositionMenu);
+      window.addEventListener('scroll', repositionMenu, { passive: true });
+
+      /* ---------------- report modal ---------------- */
+
+      function buildReasons() {
+        REASONS.forEach(function (reason) {
+          var label = document.createElement('label');
+          label.className = 'flex cursor-pointer items-start gap-2.5 rounded-lg px-2 py-2 hover:bg-surface-neutral';
+
+          var input = document.createElement('input');
+          input.type = 'radio';
+          input.name = 'report-reason';
+          input.value = reason.id;
+          input.className = 'mt-0.5 h-4 w-4 accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40';
+
+          var text = document.createElement('span');
+          text.className = 'text-[13.5px] leading-snug text-ink-body';
+          text.textContent = reason.label;
+
+          label.appendChild(input);
+          label.appendChild(text);
+          reasonWrap.appendChild(label);
+        });
+      }
+
+      function selectedReason() {
+        var checked = reasonWrap.querySelector('input[name="report-reason"]:checked');
+        return checked ? checked.value : '';
+      }
+
+      function reasonById(id) {
+        for (var i = 0; i < REASONS.length; i++) {
+          if (REASONS[i].id === id) return REASONS[i];
+        }
+        return null;
+      }
+
+      function showError(message) {
+        errorEl.textContent = message;
+        errorEl.classList.remove('hidden');
+      }
+
+      function hideError() {
+        errorEl.textContent = '';
+        errorEl.classList.add('hidden');
+      }
+
+      function refreshState() {
+        var reason = selectedReason();
+        var details = detailsField.value.trim();
+        var needsDetails = reason === 'other';
+        detailsLabel.textContent = needsDetails
+          ? 'Keterangan tambahan (wajib)'
+          : 'Keterangan tambahan (opsional)';
+        counter.textContent = detailsField.value.length + '/' + DETAIL_LIMIT;
+        submitBtn.disabled = !reason || (needsDetails && !details) || busy;
+      }
+
+      function lockScroll(on) {
+        if (on) {
+          scrollY = window.scrollY;
+          document.body.style.position = 'fixed';
+          document.body.style.top = -scrollY + 'px';
+          document.body.style.left = '0';
+          document.body.style.right = '0';
+          document.body.style.width = '100%';
+        } else {
+          document.body.style.position = '';
+          document.body.style.top = '';
+          document.body.style.left = '';
+          document.body.style.right = '';
+          document.body.style.width = '';
+          window.scrollTo(0, scrollY);
+        }
+      }
+
+      function openReport(comment, trigger) {
+        activeComment = comment;
+        returnFocus = trigger || null;
+        busy = false;
+        submitBtn.textContent = 'Kirim Laporan';
+
+        $('report-author').textContent = comment.author;
+        $('report-preview').textContent = comment.text;
+        var book = bookName();
+        $('report-book').textContent = book ? 'Ulasan pada ' + book : 'Ulasan pembaca';
+
+        var checked = reasonWrap.querySelector('input[name="report-reason"]:checked');
+        if (checked) checked.checked = false;
+        detailsField.value = '';
+        hideError();
+        refreshState();
+
+        modal.classList.remove('hidden');
+        lockScroll(true);
+        detailsField.blur();
+        var firstReason = reasonWrap.querySelector('input[name="report-reason"]');
+        if (firstReason) firstReason.focus();
+      }
+
+      function closeReport() {
+        if (modal.classList.contains('hidden')) return;
+        modal.classList.add('hidden');
+        lockScroll(false);
+        activeComment = null;
+        detailsField.value = '';
+        var checked = reasonWrap.querySelector('input[name="report-reason"]:checked');
+        if (checked) checked.checked = false;
+        hideError();
+        if (returnFocus) {
+          returnFocus.focus();
+          returnFocus = null;
+        }
+      }
+
+      function submitReport() {
+        if (busy || !activeComment) return;
+
+        var reason = reasonById(selectedReason());
+        if (!reason) {
+          showError('Pilih alasan pelaporan terlebih dahulu.');
+          return;
+        }
+
+        var details = detailsField.value.trim();
+        if (reason.id === 'other' && !details) {
+          showError('Keterangan wajib diisi untuk alasan lainnya.');
+          detailsField.focus();
+          return;
+        }
+        if (details.length > DETAIL_LIMIT) {
+          showError('Keterangan maksimal ' + DETAIL_LIMIT + ' karakter.');
+          return;
+        }
+        if (hasPendingReport(activeComment.id)) {
+          closeReport();
+          showToast('Komentar ini sudah kamu laporkan.');
+          return;
+        }
+
+        var commentId = activeComment.id;
+        busy = true;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Mengirim...';
+        hideError();
+
+        window.setTimeout(function () {
+          try {
+            reports.push({
+              reportId: 'RPT-DEMO-' + String(reports.length + 1).padStart(3, '0'),
+              commentId: commentId,
+              reporterUserId: REPORTER_USER_ID,
+              reasonId: reason.id,
+              reasonLabel: reason.label,
+              moderationCategory: reason.category,
+              details: details,
+              createdAt: new Date().toISOString(),
+              status: 'pending'
+            });
+            writeStore(REPORT_KEY, reports);
+
+            busy = false;
+            submitBtn.textContent = 'Kirim Laporan';
+            closeReport();
+            showToast('Simulasi laporan berhasil dikirim');
+          } catch (err) {
+            busy = false;
+            submitBtn.textContent = 'Kirim Laporan';
+            refreshState();
+            showError('Terjadi kendala. Coba lagi.', 'Laporan belum dapat dikirim');
+          }
+        }, 600);
+      }
+
+      $('report-close').addEventListener('click', function () { if (!busy) closeReport(); });
+      $('report-cancel').addEventListener('click', function () { if (!busy) closeReport(); });
+      $('report-scrim').addEventListener('click', function () { if (!busy) closeReport(); });
+      submitBtn.addEventListener('click', submitReport);
+
+      reasonWrap.addEventListener('change', function () {
+        hideError();
+        refreshState();
+      });
+
+      detailsField.addEventListener('input', function () {
+        if (detailsField.value.length > DETAIL_LIMIT) {
+          detailsField.value = detailsField.value.slice(0, DETAIL_LIMIT);
+        }
+        refreshState();
+      });
+
+      modal.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          if (!busy) closeReport();
+          return;
+        }
+        if (e.key !== 'Tab') return;
+
+        var focusables = Array.prototype.filter.call(
+          modal.querySelectorAll('button:not([disabled]), input, textarea'),
+          function (el) { return el.offsetParent !== null; }
+        );
+        if (!focusables.length) return;
+        var first = focusables[0];
+        var last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+          closeMenu(true);
+        }
+      });
+
+      document.addEventListener('DOMContentLoaded', function () {
+        buildReasons();
+        Array.prototype.forEach.call(document.querySelectorAll('.review-item'), function (article) {
+          paintReaction(article.getAttribute('data-comment-id'));
+        });
+        refreshState();
+      });
+    })();
+  </script>
+  <!-- Report book modal -->
+  <div id="book-report-modal" class="fixed inset-0 z-[95] hidden" role="dialog" aria-modal="true" aria-labelledby="book-report-title" aria-describedby="book-report-desc">
+    <div id="book-report-scrim" class="absolute inset-0 bg-[#222225]/50"></div>
+    <div class="relative flex h-full items-end justify-center sm:items-center sm:p-4">
+      <div class="flex h-full w-full flex-col overflow-hidden bg-white sm:h-auto sm:max-h-[calc(100vh-48px)] sm:max-w-[520px] sm:rounded-2xl sm:border sm:border-border-subtle sm:shadow-[0_24px_64px_rgba(34,34,37,0.22)]">
+        <header class="flex items-start justify-between gap-4 border-b border-border-subtle px-5 py-4">
+          <div class="min-w-0">
+            <h2 id="book-report-title" class="text-[17px] font-bold tracking-tight text-ink-body">Laporkan Buku</h2>
+            <p id="book-report-desc" class="mt-0.5 text-[13px] text-ink-muted">Apa masalah yang kamu temukan pada buku ini?</p>
+          </div>
+          <button type="button" id="book-report-close" aria-label="Tutup" class="-mr-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg text-ink-muted transition-colors hover:bg-surface-neutral hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40">
+            <span class="material-symbols-outlined text-[18px]" aria-hidden="true">close</span>
+          </button>
+        </header>
+
+        <div class="flex-1 space-y-5 overflow-y-auto px-5 py-4">
+          <div class="flex items-start gap-3 rounded-xl border border-border-subtle bg-surface-neutral px-3 py-3">
+            <img id="book-report-cover" src="" alt="" class="h-[74px] w-[50px] shrink-0 rounded border border-border-subtle object-cover">
+            <div class="min-w-0">
+              <p id="book-report-book-title" class="line-clamp-2 text-[13.5px] font-bold leading-snug text-ink-body"></p>
+              <p id="book-report-book-author" class="mt-0.5 text-[12.5px] text-ink-muted"></p>
+              <p id="book-report-book-publisher" class="mt-0.5 text-[12.5px] text-ink-muted"></p>
+            </div>
+          </div>
+
+          <fieldset>
+            <legend class="text-[13px] font-bold text-ink-body">Jenis masalah</legend>
+            <div class="mt-1.5 -ml-2 space-y-0.5" id="book-report-types"></div>
+          </fieldset>
+
+          <div id="book-report-section-field" class="hidden">
+            <label for="book-report-section" class="block text-[13px] font-bold text-ink-body">Bagian atau halaman yang bermasalah (opsional)</label>
+            <input id="book-report-section" type="text" maxlength="80" placeholder="Contoh: Halaman 42-48 atau Bab 4" class="mt-1.5 h-10 w-full rounded-xl border border-border-subtle bg-white px-3 text-[13.5px] text-ink-body placeholder:text-ink-muted focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20">
+          </div>
+
+          <div id="book-report-details-field">
+            <div class="flex items-baseline justify-between gap-3">
+              <label for="book-report-details" id="book-report-details-label" class="text-[13px] font-bold text-ink-body">Jelaskan kendalanya (opsional)</label>
+              <span id="book-report-counter" class="text-[12px] tabular-nums text-ink-muted">0/500</span>
+            </div>
+            <textarea id="book-report-details" rows="3" maxlength="500" placeholder="Contoh: Halaman 42 tidak bisa dibuka di Web Reader." class="mt-1.5 w-full resize-none rounded-xl border border-border-subtle bg-white p-3 text-[13.5px] leading-relaxed text-ink-body placeholder:text-ink-muted focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"></textarea>
+          </div>
+
+          <p id="book-report-notice" class="hidden text-[12.5px] font-medium text-ink-muted"></p>
+          <div id="book-report-error" role="alert" class="hidden">
+            <p id="book-report-error-title" class="hidden text-[12.5px] font-bold text-[#B42318]"></p>
+            <p id="book-report-error-text" class="mt-0.5 text-[12.5px] leading-relaxed text-[#B42318]"></p>
+          </div>
+        </div>
+
+        <footer class="flex items-center justify-end gap-2 border-t border-border-subtle px-5 py-3.5">
+          <button type="button" id="book-report-cancel" class="h-10 rounded-xl border border-border-subtle px-4 text-[13.5px] font-semibold text-ink-body transition-colors hover:bg-surface-neutral focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40">Batal</button>
+          <button type="button" id="book-report-submit" disabled class="h-10 rounded-xl bg-primary px-4 text-[13.5px] font-semibold text-white transition-colors hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2">Kirim Laporan</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <script>
+    /* Report book: flag button + modal on the Detail Buku page.
+       Prototype boundary: the report record is stored in localStorage for this
+       browser only. No request is sent, so nothing reaches Pengawasan Katalog
+       automatically. The record shape follows the administrator report record
+       (id, book, author, publisher, type, notes, reportStatus) so a real
+       endpoint can reuse it; the publication statuspublikasi is never touched. */
+    (function () {
+      'use strict';
+
+      var REPORTER_USER_ID = 'USR-PMB-0042';
+      var REPORT_KEY = 'ikapi_book_reports_demo';
+      var DETAIL_LIMIT = 500;
+      var SECTION_LIMIT = 80;
+
+      /* Buyer categories mapped to the administrator report types. */
+      var REASONS = [
+        {
+          id: 'file', label: 'File e-book bermasalah',
+          desc: 'Buku sulit dibuka atau tampilannya bermasalah.',
+          adminType: 'Berkas E-Book Bermasalah',
+          section: true, required: false,
+          detailsLabel: 'Jelaskan kendalanya (opsional)',
+          detailsPlaceholder: 'Contoh: Halaman 42 tidak bisa dibuka di Web Reader.'
+        },
+        {
+          id: 'metadata', label: 'Informasi buku tidak sesuai',
+          desc: 'Judul, penulis, sampul, atau deskripsi keliru.',
+          adminType: 'Metadata Tidak Sesuai',
+          section: false, required: false,
+          detailsLabel: 'Informasi apa yang tidak sesuai? (opsional)',
+          detailsPlaceholder: 'Contoh: Nama penulis berbeda dengan yang tertera di sampul.'
+        },
+        {
+          id: 'copyright', label: 'Dugaan pelanggaran hak cipta',
+          desc: 'Ada dugaan buku diterbitkan tanpa izin yang sesuai.',
+          adminType: 'Dugaan Hak Cipta',
+          section: false, required: true,
+          detailsLabel: 'Jelaskan dugaan pelanggarannya',
+          detailsPlaceholder: 'Jelaskan materi atau karya yang diduga digunakan tanpa izin.'
+        },
+        {
+          id: 'other', label: 'Masalah lainnya',
+          desc: 'Masalah buku yang tidak termasuk pilihan di atas.',
+          adminType: 'Lainnya',
+          section: false, required: true,
+          detailsLabel: 'Jelaskan masalahnya',
+          detailsPlaceholder: 'Ceritakan masalah yang kamu temukan.'
+        }
+      ];
+
+      var $ = function (id) { return document.getElementById(id); };
+      var trigger = $('btn-report-book');
+      var modal = $('book-report-modal');
+      var typeWrap = $('book-report-types');
+      var sectionField = $('book-report-section-field');
+      var sectionInput = $('book-report-section');
+      var detailsField = $('book-report-details');
+      var detailsLabel = $('book-report-details-label');
+      var counter = $('book-report-counter');
+      var errorEl = $('book-report-error');
+      var noticeEl = $('book-report-notice');
+      var submitBtn = $('book-report-submit');
+
+      var reports = readStore();
+      var busy = false;
+      var scrollY = 0;
+
+      function readStore() {
+        try {
+          var raw = window.localStorage.getItem(REPORT_KEY);
+          if (!raw) return [];
+          var parsed = JSON.parse(raw);
+          return Array.isArray(parsed) ? parsed : [];
+        } catch (e) { return []; }
+      }
+
+      /* Returns false when the browser refuses to persist, so the UI never
+         reports a success that was not stored. */
+      function writeStore() {
+        try {
+          window.localStorage.setItem(REPORT_KEY, JSON.stringify(reports));
+          return true;
+        } catch (e) { return false; }
+      }
+
+      /* Book identity comes from the page that is open, never from a constant. */
+      function readBook() {
+        var section = $('book-detail');
+        var title = $('book-title');
+        var author = $('book-author');
+        var publisher = $('book-publisher');
+        var cover = $('book-cover');
+        if (!section || !title || !section.getAttribute('data-book-id')) return null;
+        return {
+          id: section.getAttribute('data-book-id'),
+          title: title.textContent.replace(/\s+/g, ' ').trim(),
+          author: author ? author.textContent.replace(/\s+/g, ' ').trim() : '',
+          publisher: publisher ? publisher.textContent.replace(/\s+/g, ' ').trim() : '',
+          cover: cover ? cover.getAttribute('src') : ''
+        };
+      }
+      /* Resolved on every modal open so the modal always describes the book
+         that is actually on screen. */
+      var book = null;
+
+      function reasonById(id) {
+        for (var i = 0; i < REASONS.length; i++) if (REASONS[i].id === id) return REASONS[i];
+        return null;
+      }
+
+      function selectedReason() {
+        var checked = typeWrap.querySelector('input[name="book-report-type"]:checked');
+        return checked ? checked.value : '';
+      }
+
+      function hasOpenReport(reasonId, bookId) {
+        if (!bookId) return false;
+        return reports.some(function (r) {
+          return r.bookId === bookId &&
+            r.reporterUserId === REPORTER_USER_ID &&
+            r.reportTypeId === reasonId &&
+            r.reportStatus === 'baru';
+        });
+      }
+
+      function buildTypes() {
+        REASONS.forEach(function (reason) {
+          var label = document.createElement('label');
+          label.className = 'flex cursor-pointer items-start gap-2.5 rounded-lg px-2 py-2 hover:bg-surface-neutral';
+
+          var input = document.createElement('input');
+          input.type = 'radio';
+          input.name = 'book-report-type';
+          input.value = reason.id;
+          input.className = 'mt-0.5 h-4 w-4 accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40';
+
+          var text = document.createElement('span');
+          text.className = 'min-w-0';
+          var strong = document.createElement('span');
+          strong.className = 'block text-[13.5px] font-semibold leading-snug text-ink-body';
+          strong.textContent = reason.label;
+          var small = document.createElement('span');
+          small.className = 'mt-0.5 block text-[12.5px] leading-snug text-ink-muted';
+          small.textContent = reason.desc;
+          text.appendChild(strong);
+          text.appendChild(small);
+
+          label.appendChild(input);
+          label.appendChild(text);
+          typeWrap.appendChild(label);
+        });
+      }
+
+      function showError(message, title) {
+        var titleEl = $('book-report-error-title');
+        var textEl = $('book-report-error-text');
+        titleEl.textContent = title || '';
+        titleEl.classList.toggle('hidden', !title);
+        textEl.textContent = message;
+        errorEl.classList.remove('hidden');
+      }
+
+      function hideError() {
+        var titleEl = $('book-report-error-title');
+        var textEl = $('book-report-error-text');
+        if (titleEl) titleEl.textContent = '';
+        if (textEl) textEl.textContent = '';
+        errorEl.classList.add('hidden');
+      }
+
+      function hideNotice() {
+        noticeEl.textContent = '';
+        noticeEl.classList.add('hidden');
+      }
+
+      var currentReasonId = '';
+
+      function applyReason(reason) {
+        /* Switching category clears the previous answers, so a report never
+           carries text typed for a different category. Re-selecting the same
+           category keeps what the user already typed. */
+        var nextId = reason ? reason.id : '';
+        var changed = nextId !== currentReasonId;
+        currentReasonId = nextId;
+        if (changed) {
+          detailsField.value = '';
+          sectionInput.value = '';
+        }
+
+        if (!reason) {
+          sectionField.classList.add('hidden');
+          sectionInput.value = '';
+          detailsLabel.textContent = 'Keterangan tambahan';
+          detailsField.placeholder = 'Jelaskan masalah pada buku ini...';
+          detailsField.value = '';
+          hideNotice();
+          refreshState();
+          return;
+        }
+
+        sectionField.classList.toggle('hidden', !reason.section);
+        if (!reason.section) sectionInput.value = '';
+
+        detailsLabel.textContent = reason.detailsLabel;
+        detailsField.placeholder = reason.detailsPlaceholder;
+
+        var duplicate = hasOpenReport(reason.id, book ? book.id : '');
+        if (duplicate) {
+          noticeEl.textContent = 'Buku ini sudah kamu laporkan untuk masalah tersebut.';
+          noticeEl.classList.remove('hidden');
+        } else {
+          hideNotice();
+        }
+        refreshState();
+      }
+
+      function refreshState() {
+        counter.textContent = detailsField.value.length + '/' + DETAIL_LIMIT;
+        var reason = reasonById(selectedReason());
+        var details = detailsField.value.trim();
+        var valid = !!reason && (!reason.required || details.length > 0) &&
+          !hasOpenReport(reason.id, book ? book.id : '');
+        submitBtn.disabled = !valid || busy;
+      }
+
+      function lockScroll(on) {
+        if (on) {
+          scrollY = window.scrollY;
+          document.body.style.position = 'fixed';
+          document.body.style.top = -scrollY + 'px';
+          document.body.style.left = '0';
+          document.body.style.right = '0';
+          document.body.style.width = '100%';
+        } else {
+          document.body.style.position = '';
+          document.body.style.top = '';
+          document.body.style.left = '';
+          document.body.style.right = '';
+          document.body.style.width = '';
+          window.scrollTo(0, scrollY);
+        }
+      }
+
+      function openModal() {
+        book = readBook();
+        if (!book) return;
+        busy = false;
+        submitBtn.textContent = 'Kirim Laporan';
+
+        $('book-report-book-title').textContent = book.title;
+        $('book-report-book-author').textContent = book.author;
+        $('book-report-book-publisher').textContent = book.publisher;
+        var coverEl = $('book-report-cover');
+        coverEl.src = book.cover;
+        coverEl.alt = book.title ? 'Sampul ' + book.title : '';
+
+        var checked = typeWrap.querySelector('input[name="book-report-type"]:checked');
+        if (checked) checked.checked = false;
+        sectionInput.value = '';
+        detailsField.value = '';
+        hideError();
+        hideNotice();
+        applyReason(null);
+
+        modal.classList.remove('hidden');
+        lockScroll(true);
+        var firstType = typeWrap.querySelector('input[name="book-report-type"]');
+        if (firstType) firstType.focus();
+      }
+
+      function closeModal() {
+        if (modal.classList.contains('hidden')) return;
+        modal.classList.add('hidden');
+        lockScroll(false);
+        if (trigger) trigger.focus();
+      }
+
+      function submitReport() {
+        if (busy || !book) return;
+
+        var reason = reasonById(selectedReason());
+        if (!reason) {
+          showError('Pilih jenis masalah terlebih dahulu.');
+          return;
+        }
+
+        var details = detailsField.value.trim();
+        var section = reason.section ? sectionInput.value.trim() : '';
+
+        if (reason.required && !details) {
+          showError('Keterangan wajib diisi untuk masalah ini.');
+          detailsField.focus();
+          return;
+        }
+        if (details.length > DETAIL_LIMIT) {
+          showError('Keterangan maksimal ' + DETAIL_LIMIT + ' karakter.');
+          return;
+        }
+        if (section.length > SECTION_LIMIT) {
+          showError('Bagian atau halaman maksimal ' + SECTION_LIMIT + ' karakter.');
+          return;
+        }
+        if (hasOpenReport(reason.id, book.id)) {
+          showError('Buku ini sudah kamu laporkan untuk masalah tersebut.');
+          return;
+        }
+
+        busy = true;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Mengirim...';
+        hideError();
+
+        window.setTimeout(function () {
+          try {
+            reports.push({
+              reportId: 'LPR-DEMO-' + String(reports.length + 1).padStart(3, '0'),
+              bookId: book.id,
+              book: book.title,
+              author: book.author,
+              publisher: book.publisher,
+              cover: book.cover,
+              reporterUserId: REPORTER_USER_ID,
+              reportType: reason.adminType,
+              reportTypeId: reason.id,
+              affectedSection: section,
+              description: details,
+              createdAt: new Date().toISOString(),
+              reportStatus: 'baru'
+            });
+            if (!writeStore()) {
+              reports.pop();
+              busy = false;
+              submitBtn.textContent = 'Kirim Laporan';
+              refreshState();
+              showError('Terjadi kendala. Coba lagi.', 'Laporan belum dapat dikirim');
+              return;
+            }
+
+            busy = false;
+            submitBtn.textContent = 'Kirim Laporan';
+            closeModal();
+            showToast('Simulasi laporan berhasil dikirim');
+          } catch (err) {
+            busy = false;
+            submitBtn.textContent = 'Kirim Laporan';
+            refreshState();
+            showError('Terjadi kendala. Coba lagi.');
+          }
+        }, 600);
+      }
+
+      typeWrap.addEventListener('change', function () {
+        hideError();
+        applyReason(reasonById(selectedReason()));
+      });
+
+      detailsField.addEventListener('input', function () {
+        if (detailsField.value.length > DETAIL_LIMIT) {
+          detailsField.value = detailsField.value.slice(0, DETAIL_LIMIT);
+        }
+        refreshState();
+      });
+
+      sectionInput.addEventListener('input', function () {
+        if (sectionInput.value.length > SECTION_LIMIT) {
+          sectionInput.value = sectionInput.value.slice(0, SECTION_LIMIT);
+        }
+      });
+
+      $('book-report-close').addEventListener('click', function () { if (!busy) closeModal(); });
+      $('book-report-cancel').addEventListener('click', function () { if (!busy) closeModal(); });
+      $('book-report-scrim').addEventListener('click', function () { if (!busy) closeModal(); });
+      submitBtn.addEventListener('click', submitReport);
+
+      modal.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          if (!busy) closeModal();
+          return;
+        }
+        if (e.key !== 'Tab') return;
+        var focusables = Array.prototype.filter.call(
+          modal.querySelectorAll('button:not([disabled]), input, textarea'),
+          function (el) { return el.offsetParent !== null; }
+        );
+        if (!focusables.length) return;
+        var first = focusables[0];
+        var last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      });
+
+      if (trigger) {
+        trigger.addEventListener('click', function (e) {
+          e.preventDefault();
+          openModal();
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        buildTypes();
+        if (!readBook()) {
+          /* No stable book identity on the page: do not offer a report action. */
+          if (trigger) trigger.classList.add('hidden');
+        }
+      });
+    })();
   </script>
 </body>
 </html>

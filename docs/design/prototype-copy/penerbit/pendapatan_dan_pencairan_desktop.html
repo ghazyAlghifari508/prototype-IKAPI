@@ -1,810 +1,966 @@
-<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error-container": "#93000a", "on-background": "#1b1b25", "on-tertiary": "#ffffff", "inverse-surface": "#302f3a", "ink-body": "#191923", "outline-variant": "#c7c4d7", "error": "#ba1a1a", "surface-variant": "#e3e1ef", "surface-container-highest": "#e3e1ef", "tertiary-fixed-dim": "#ecc23f", "ink-muted": "#555665", "tertiary-container": "#cea623", "tertiary-fixed": "#ffe08d", "feedback-error": "#B42318", "on-tertiary-fixed": "#241a00", "surface-paper": "#FFF0E3", "surface-container-low": "#f5f2ff", "on-tertiary-fixed-variant": "#584400", "secondary-fixed": "#ffd9e3", "surface-container-high": "#e9e6f5", "border-bold": "#CFD0DD", "surface-tint": "#F0EFFF", "inverse-primary": "#c2c1ff", "on-surface": "#1b1b25", "on-primary-fixed": "#0c006a", "surface-sky": "#E0F6FC", "surface-container": "#efecfb", "on-secondary-container": "#7a495a", "on-tertiary-container": "#4f3d00", "surface": "#fcf8ff", "inverse-deep": "#24233D", "on-error": "#ffffff", "surface-dim": "#dbd8e7", "tertiary": "#745b00", "primary": "#3f3ad0", "primary-container": "#5956e9", "on-secondary-fixed-variant": "#663949", "on-secondary-fixed": "#330e1d", "outline": "#777586", "secondary": "#815060", "border-subtle": "#E7E7EF", "on-secondary": "#ffffff", "surface-cream": "#FFF1E3", "secondary-fixed-dim": "#f4b5c8", "primary-fixed": "#e2dfff", "on-surface-variant": "#464555", "inverse-on-surface": "#f2effe", "on-primary": "#ffffff", "background": "#fcf8ff", "surface-container-lowest": "#ffffff", "surface-soft": "#F8F7FF", "surface-bright": "#fcf8ff", "error-container": "#ffdad6", "surface-lilac": "#E5E4FF", "secondary-container": "#fdbed1", "on-primary-fixed-variant": "#3229c4", "primary-fixed-dim": "#c2c1ff", "on-primary-container": "#eeeaff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter": "1.5rem", "space-xl": "2rem", "margin": "2.5rem", "space-2xl": "3rem", "space-3xl": "4.5rem", "space-md": "1rem", "space-lg": "1.5rem", "gutter-mobile": "1.25rem", "margin-mobile": "1.25rem", "space-xs": "0.25rem" }, "fontFamily": { "display-md": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "label-small": [ "Plus Jakarta Sans" ], "title-md": [ "Plus Jakarta Sans" ], "body-small": [ "Plus Jakarta Sans" ], "label": [ "Plus Jakarta Sans" ], "display-lg-mobile": [ "Plus Jakarta Sans" ], "body-base": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "display-lg": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "display-md-mobile": [ "Plus Jakarta Sans" ] }, "fontSize": { "display-md": [ "44px", { "lineHeight": "1.12", "letterSpacing": "-0.035em", "fontWeight": "800" } ], "headline-md": [ "28px", { "lineHeight": "1.22", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "label-small": [ "12px", { "lineHeight": "1.3", "letterSpacing": "0.02em", "fontWeight": "600" } ], "title-md": [ "18px", { "lineHeight": "1.35", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-small": [ "14px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" } ], "label": [ "14px", { "lineHeight": "1.35", "letterSpacing": "0", "fontWeight": "600" } ], "display-lg-mobile": [ "34px", { "lineHeight": "1.15", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "body-base": [ "16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "1.25", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "display-lg": [ "56px", { "lineHeight": "1.08", "letterSpacing": "-0.04em", "fontWeight": "800" } ], "headline-lg": [ "36px", { "lineHeight": "1.18", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "display-md-mobile": [ "28px", { "lineHeight": "1.2", "letterSpacing": "-0.025em", "fontWeight": "800" } ] } } } };</script></head><body class="bg-background font-body-base text-ink-body"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-lg px-space-md"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-sm"><img alt="logo-ikapu.png" class="h-8 w-auto object-contain" src="../../assets/logo-ikapi-jabar.png"><div class="flex flex-col"></div></div><div class="px-space-sm"><span class="font-label-small text-label-small text-ink-muted uppercase tracking-wider">Menu Penerbit</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-label text-label"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="kelola-buku" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>Kelola Buku</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="pesanan-masuk" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span>Pesanan Masuk</span></div><span class="bg-surface-lilac text-primary font-label-small text-label-small px-space-xs py-0.5 rounded">12</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary-container font-label text-label" data-path="pendapatan-dan-pencairan" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span>Pendapatan &amp; Pencairan</span></div></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ulasan-pembeli" href="#"><span class="material-symbols-outlined text-[20px]">rate_review</span><span>Ulasan Pembeli</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="pengaturan-profil" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Pengaturan Profil</span></a></nav></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(25,25,35,0.04)]"><div class="h-16 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><button class="w-9 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center relative transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-feedback-error"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right"></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 flex-1 bg-surface-soft"><div class="max-w-7xl mx-auto p-gutter"><div class="flex flex-col w-full">
-<!-- Interactive State Simulator Tool Bar -->
-<aside aria-label="Interactive State Simulator" class="mb-space-lg p-space-sm bg-surface-container rounded-lg flex flex-col gap-space-xs shadow-sm">
-<div class="flex items-center justify-between px-space-xs">
-<div class="flex items-center gap-space-xs text-ink-muted">
-<span class="material-symbols-outlined text-[18px] text-primary">tune</span>
-<span class="font-label-small text-label-small uppercase tracking-wider text-ink-muted font-bold">Simulator Status (UC-36 &amp; UC-37)</span>
-</div>
-
-</div>
-<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
-<button class="state-btn px-space-sm py-1 rounded bg-primary text-on-primary font-label-small text-label-small transition-all" id="btn-state-A" onclick="setState('A')" type="button">
-        State A: Saldo Tersedia (Default)
-      </button>
-<button class="state-btn px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high font-label-small text-label-small transition-all" id="btn-state-B" onclick="setState('B')" type="button">
-        State B: Saldo Kosong (Rp 0)
-      </button>
-<button class="state-btn px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high font-label-small text-label-small transition-all" id="btn-state-C" onclick="setState('C')" type="button">
-        State C: Rekening Belum Ada
-      </button>
-<button class="state-btn px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high font-label-small text-label-small transition-all" id="btn-state-D" onclick="setState('D')" type="button">
-        State D: Validasi Error
-      </button>
-<button class="state-btn px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high font-label-small text-label-small transition-all" id="btn-state-E" onclick="setState('E')" type="button">
-        State E: Sedang Mengajukan
-      </button>
-<button class="state-btn px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high font-label-small text-label-small transition-all" id="btn-state-F" onclick="setState('F')" type="button">
-        State F: Sukses Konfirmasi
-      </button>
-<button class="state-btn px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high font-label-small text-label-small transition-all" id="btn-state-G" onclick="setState('G')" type="button">
-        State G: Modal Bukti (Selesai)
-      </button>
-<button class="state-btn px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high font-label-small text-label-small transition-all" id="btn-state-H" onclick="setState('H')" type="button">
-        State H: Bukti Dalam Proses
-      </button>
-<button class="state-btn px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high font-label-small text-label-small transition-all" id="btn-state-I" onclick="setState('I')" type="button">
-        State I: Gagal Memuat
-      </button>
-</div>
-</aside>
-<!-- Error Failure View (State I) -->
-<section class="hidden flex-col items-center justify-center p-space-2xl bg-surface-container-lowest rounded-xl shadow-sm text-center my-space-lg" id="view-error-state">
-<div class="w-14 h-14 rounded-full bg-error-container text-on-error-container flex items-center justify-center mb-space-md">
-<span class="material-symbols-outlined text-[32px]">cloud_off</span>
-</div>
-<h2 class="font-headline-md text-headline-md text-ink-body mb-space-xs">Gagal Memuat Data Saldo</h2>
-<p class="font-body-base text-body-base text-ink-muted max-w-lg mb-space-lg">
-      Koneksi ke sistem kliring perbankan IKAPI Jawa Barat mengalami kendala sementara. Silakan segarkan halaman atau hubungi layanan bantuan penerbit.
-    </p>
-<div class="flex items-center gap-space-sm">
-<button class="px-space-md py-space-sm bg-primary text-on-primary font-label text-label rounded-lg hover:bg-primary-container transition-colors flex items-center gap-space-xs" onclick="setState('A')" type="button">
-<span class="material-symbols-outlined text-[20px]">refresh</span>
-        Coba Muat Ulang
-      </button>
-<a class="px-space-md py-space-sm bg-surface-container text-on-surface font-label text-label rounded-lg hover:bg-surface-container-high transition-colors" href="#">
-        Hubungi Sekretariat
-      </a>
-</div>
-</section>
-<!-- Main Content Container -->
-<div class="flex flex-col w-full gap-space-xl" id="view-main-content">
-<!-- Header Section -->
-<header class="flex flex-col gap-space-sm">
-
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
-<div>
-<h1 class="font-headline-lg text-headline-lg text-ink-body tracking-tight">Pendapatan &amp; Pencairan</h1>
-<p class="font-body-base text-body-base text-ink-muted mt-space-xs">
-            Kelola saldo royalti penjualan e-book dan ajukan permohonan pencairan dana ke rekening terdaftar.
-          </p>
-</div>
-<div class="flex items-center gap-space-xs">
-<button class="px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-label text-label hover:bg-surface-container shadow-sm flex items-center gap-space-xs transition-colors" onclick="alert('Laporan rekapitulasi royalti diunduh (PDF/XLS).')" type="button">
-<span class="material-symbols-outlined text-[20px]">download</span>
-<span>Ekspor Rekap Royalti</span>
-</button>
-</div>
-</div>
-</header>
-<!-- Ringkasan Saldo (3 Kolom Sejajar Stripe Express Inspiration) -->
-<section aria-label="Ringkasan Saldo Rekening" class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
-<!-- Card 1: Saldo Bersih -->
-<article class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
-<div class="flex items-center justify-between mb-space-sm">
-<span class="font-label text-label text-ink-muted">Total Pendapatan Neto</span>
-<span class="material-symbols-outlined text-ink-muted text-[20px]">receipt_long</span>
-</div>
-<div class="flex flex-col gap-space-xs">
-<div class="flex items-baseline gap-1">
-<span class="font-title-md text-title-md text-ink-muted">Rp</span>
-<span class="font-display-md text-display-md text-ink-body tracking-tight" id="val-saldo-bersih">1.485.000</span>
-</div>
-<span class="font-body-small text-body-small text-ink-muted">
-            Total akumulasi penjualan buku bersih setelah potongan administrasi platform 10%.
-          </span>
-</div>
-<div class="mt-space-md pt-space-sm bg-surface-soft -mx-space-lg -mb-space-lg px-space-lg py-space-xs rounded-b-xl flex items-center justify-between text-ink-muted">
-<span class="font-label-small text-label-small">Periode Buku Aktif 2026</span>
-<span class="font-label-small text-label-small text-primary font-semibold">14 Transaksi</span>
-</div>
-</article>
-<!-- Card 2: Saldo Tersedia (Visual Focus Accent) -->
-<article class="bg-surface-tint p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
-<div class="flex items-center justify-between mb-space-sm">
-<div class="flex items-center gap-space-xs">
-<span class="font-label text-label text-primary font-bold">Saldo Tersedia</span>
-<span class="px-space-xs py-0.5 rounded bg-surface-lilac text-primary font-label-small text-label-small">Siap Cair</span>
-</div>
-<span class="material-symbols-outlined text-primary text-[22px]">account_balance_wallet</span>
-</div>
-<div class="flex flex-col gap-space-xs">
-<div class="flex items-baseline gap-1">
-<span class="font-title-md text-title-md text-primary font-bold">Rp</span>
-<span class="font-display-md text-display-md text-primary tracking-tight" id="val-saldo-tersedia">840.000</span>
-</div>
-<span class="font-body-small text-body-small text-on-surface-variant">
-            Dana aktif yang dapat Anda ajukan pencairannya ke rekening bank saat ini.
-          </span>
-</div>
-<div class="mt-space-md pt-space-sm bg-surface-lilac -mx-space-lg -mb-space-lg px-space-lg py-space-xs rounded-b-xl flex items-center justify-between text-primary font-semibold">
-<span class="font-label-small text-label-small flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]">verified_user</span> Bebas Biaya Kliring IKAPI
-          </span>
-<span class="font-label-small text-label-small underline cursor-pointer" onclick="document.getElementById('input-nominal').value = '840.000'; validateNominal();">Tarik Semua</span>
-</div>
-</article>
-<!-- Card 3: Dalam Proses -->
-<article class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
-<div class="flex items-center justify-between mb-space-sm">
-<span class="font-label text-label text-ink-muted">Dalam Proses Transfer</span>
-<span class="material-symbols-outlined text-tertiary-container text-[22px]">pending_actions</span>
-</div>
-<div class="flex flex-col gap-space-xs">
-<div class="flex items-baseline gap-1">
-<span class="font-title-md text-title-md text-ink-muted">Rp</span>
-<span class="font-display-md text-display-md text-ink-body tracking-tight" id="val-saldo-proses">645.000</span>
-</div>
-<span class="font-body-small text-body-small text-ink-muted">
-            Sedang diverifikasi oleh bendahara DPD IKAPI Jabar dalam batch antrean mingguan.
-          </span>
-</div>
-<div class="mt-space-md pt-space-sm bg-surface-soft -mx-space-lg -mb-space-lg px-space-lg py-space-xs rounded-b-xl flex items-center justify-between text-ink-muted">
-<span class="font-label-small text-label-small">Batch Penyaluran: Jumat</span>
-<span class="font-label-small text-label-small font-semibold text-tertiary">1 Pengajuan Antre</span>
-</div>
-</article>
-</section>
-<!-- Sesi Interaktif 2 Kolom (60/40 Layout) -->
-<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
-<!-- Left Column (60%): Formulir Ajukan Pencairan Dana (UC-36) -->
-<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg">
-<div>
-<div class="flex items-center justify-between">
-<h2 class="font-title-md text-title-md text-ink-body">Ajukan Pencairan Dana</h2>
-
-</div>
-<p class="font-body-small text-body-small text-ink-muted mt-space-xs">
-            Pengajuan akan diproses oleh Administrator IKAPI sebelum dana ditransfer ke rekening tujuan.
-          </p>
-</div>
-<form class="flex flex-col gap-space-md" id="form-pencairan" onsubmit="handlePengajuan(event)">
-<!-- Input Nominal -->
-<div class="flex flex-col gap-space-xs">
-<label class="font-label text-label text-ink-body" for="input-nominal">
-              Nominal Pencairan <span class="text-feedback-error">*</span>
-</label>
-<div class="relative flex items-center">
-<span class="absolute left-space-md font-title-md text-title-md text-ink-muted font-bold select-none">Rp</span>
-<input class="w-full pl-12 pr-space-md py-space-sm rounded-lg bg-surface text-ink-body font-title-md text-title-md font-bold focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="input-nominal" name="nominal" oninput="validateNominal()" placeholder="0" type="text" value="500.000">
-</div>
-<div class="flex items-center justify-between text-ink-muted font-body-small text-body-small pt-1">
-<span id="helper-maksimal">Maksimal pencairan: <strong class="text-ink-body">Rp 840.000</strong> (Saldo Tersedia)</span>
-<button class="text-primary font-label-small text-label-small hover:underline" onclick="setNominalMaksimal()" type="button">Gunakan Maksimum</button>
-</div>
-</div>
-<!-- Alert Error Box (Validation) -->
-<div class="hidden p-space-sm rounded-lg bg-error-container text-on-error-container flex items-start gap-space-sm" id="alert-error-box">
-<span class="material-symbols-outlined text-[20px] text-feedback-error flex-shrink-0 mt-0.5">error</span>
-<div class="flex flex-col">
-<span class="font-label text-label font-bold text-feedback-error">Pengajuan Tidak Memenuhi Syarat</span>
-<span class="font-body-small text-body-small text-on-error-container" id="alert-error-msg">
-                Nominal melebihi saldo tersedia atau rekening bank belum terdaftar.
-              </span>
-</div>
-</div>
-<!-- Alert Empty Balance Box -->
-<div class="hidden p-space-sm rounded-lg bg-surface-paper text-ink-body flex items-start gap-space-sm" id="alert-empty-balance">
-<span class="material-symbols-outlined text-[20px] text-tertiary flex-shrink-0 mt-0.5">info</span>
-<div class="flex flex-col">
-<span class="font-label text-label font-bold">Saldo Aktif Saat Ini Kosong</span>
-<span class="font-body-small text-body-small text-ink-muted">
-                Pencairan hanya dapat dilakukan jika Anda memiliki saldo royalti yang telah diselesaikan pelanggannya.
-              </span>
-</div>
-</div>
-<!-- Checkbox WAJIB UC-36 -->
-<div class="p-space-sm bg-surface-container-low rounded-lg flex items-start gap-space-sm">
-<input checked="" class="w-5 h-5 mt-0.5 rounded accent-primary text-primary focus:ring-primary cursor-pointer" id="check-rekening-valid" name="konfirmasi_rekening" onchange="checkFormValidity()" type="checkbox">
-<label class="font-label text-label text-ink-body cursor-pointer select-none" for="check-rekening-valid">
-              Data rekening tujuan sudah benar dan sesuai dengan buku rekening resmi perusahaan penerbit.
-              <span class="block font-body-small text-body-small text-ink-muted font-normal mt-0.5">
-                DPD IKAPI Jabar tidak bertanggung jawab atas kegagalan atau kesalahan transfer akibat data bank yang kedaluwarsa.
-              </span>
-</label>
-</div>
-<!-- Action Button -->
-<div class="flex items-center gap-space-md pt-space-xs">
-<button class="w-full sm:w-auto px-space-xl py-space-sm rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label text-label font-bold shadow-sm transition-all flex items-center justify-center gap-space-sm" id="btn-submit-pencairan" type="submit">
-<span class="material-symbols-outlined text-[20px]">send</span>
-<span id="btn-submit-label">Ajukan Pencairan</span>
-</button>
-<span class="hidden sm:inline-block font-label-small text-label-small text-ink-muted">
-              Biaya transfer bank: <strong class="text-ink-body">Rp 0</strong> (Ditanggung IKAPI)
-            </span>
-</div>
-<!-- Informational Footer Note -->
-
-</form>
-</div>
-<!-- Right Column (40%): Rekening Bank Tujuan (UC-30) -->
-<div class="lg:col-span-5 flex flex-col gap-space-md">
-<!-- Rekening Card Active -->
-<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between gap-space-md" id="card-rekening-aktif">
-<div class="flex items-center justify-between">
-<span class="font-label-small text-label-small uppercase tracking-wider text-ink-muted font-bold">Rekening Bank Tujuan</span>
-
-</div>
-<!-- Bank Graphic / Identity Plate -->
-<div class="p-space-md rounded-lg bg-surface-soft flex flex-col gap-space-md">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-space-sm">
-<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary font-title-md font-extrabold shadow-sm">
-                  BCA
-                </div>
-<div class="flex flex-col">
-<span class="font-title-md text-title-md text-ink-body leading-none">Bank Central Asia</span>
-<span class="font-label-small text-label-small text-ink-muted">KCP Bandung Dago</span>
-</div>
-</div>
-<span class="material-symbols-outlined text-ink-muted text-[24px]">account_balance</span>
-</div>
-<div class="flex flex-col gap-1">
-<span class="font-label-small text-label-small text-ink-muted">Nomor Rekening Terdaftar</span>
-<div class="flex items-center gap-space-sm">
-<span class="font-headline-md text-headline-md text-ink-body tracking-wider font-mono">•••• •••• 4892</span>
-<span class="material-symbols-outlined text-ink-muted text-[18px] cursor-pointer" title="Nomor disamarkan untuk keamanan">lock</span>
-</div>
-</div>
-<div class="flex flex-col gap-0.5">
-<span class="font-label-small text-label-small text-ink-muted">Atas Nama Rekening Perusahaan</span>
-<span class="font-label text-label text-ink-body font-bold uppercase tracking-tight">PT KIBLAT BUKU UTAMA</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs text-body-small">
-<a class="font-label text-label text-primary hover:text-primary-container font-semibold flex items-center gap-1" href="#">
-              Ubah di Pengaturan Profil <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-
-</div>
-</div>
-<!-- Rekening Card Empty (Hidden by default, used in State C) -->
-<div class="hidden bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex-col gap-space-md text-center items-center justify-center py-space-2xl" id="card-rekening-kosong">
-<div class="w-12 h-12 rounded-full bg-error-container text-on-error-container flex items-center justify-center">
-<span class="material-symbols-outlined text-[24px]">account_balance</span>
-</div>
-<div class="flex flex-col gap-1 max-w-xs">
-<h3 class="font-title-md text-title-md text-ink-body">Rekening Belum Terdaftar</h3>
-<p class="font-body-small text-body-small text-ink-muted">
-              Anda belum menghubungkan rekening bank operasional penerbit. Pengajuan pencairan tidak dapat diproses.
-            </p>
-</div>
-<a class="px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label text-label font-bold flex items-center gap-space-xs shadow-sm" href="#">
-<span class="material-symbols-outlined text-[18px]">add_link</span>
-            Daftarkan Rekening Bank Sekarang
-          </a>
-</div>
-<!-- Catatan Kebijakan IKAPI -->
-<div class="bg-surface-cream rounded-xl p-space-md shadow-sm flex flex-col gap-space-xs">
-<div class="flex items-center gap-space-xs text-on-secondary-fixed">
-<span class="material-symbols-outlined text-[20px]">format_image_left</span>
-<span class="font-label text-label font-bold">Kebijakan Pencairan Royalti IKAPI</span>
-</div>
-<ul class="font-body-small text-body-small text-ink-body list-disc pl-5 flex flex-col gap-1 mt-1">
-<li>Batas minimum pencairan adalah <strong>Rp 100.000</strong>.</li>
-<li>Pengajuan di atas <strong>Rp 5.000.000</strong> memerlukan verifikasi dua mata dari Dewan Pengurus IKAPI Jabar.</li>
-<li>Bukti transfer bank resmi akan diunggah paling lambat <strong>2x24 jam kerja</strong> setelah disetujui.</li>
-</ul>
-</div>
-</div>
-</section>
-<!-- Tabel Riwayat Pencairan (Shopify Payments Inspiration) -->
-<section class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
-<div class="p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
-<div>
-<div class="flex items-center gap-space-xs">
-<h2 class="font-title-md text-title-md text-ink-body">Riwayat Pengajuan Pencairan</h2>
-
-</div>
-<p class="font-body-small text-body-small text-ink-muted mt-0.5">
-            Daftar pengajuan pencairan dana dan arsip bukti transfer resmi dari Administrator IKAPI.
-          </p>
-</div>
-<!-- Filter bar -->
-<div class="flex items-center gap-space-xs">
-<div class="relative">
-<span class="material-symbols-outlined absolute left-space-xs top-2 text-[18px] text-ink-muted">search</span>
-<input class="pl-8 pr-space-sm py-1.5 rounded-lg bg-surface text-ink-body font-body-small text-body-small focus:outline-none focus:ring-1 focus:ring-primary w-48 shadow-sm" placeholder="Cari No. Pengajuan..." type="text">
-</div>
-<select class="px-space-sm py-1.5 rounded-lg bg-surface text-ink-body font-body-small text-body-small focus:outline-none focus:ring-1 focus:ring-primary shadow-sm cursor-pointer">
-<option>Semua Status</option>
-<option>Dalam Proses</option>
-<option>Selesai</option>
-</select>
-</div>
-</div>
-<!-- Table responsive wrapper -->
-<div class="overflow-x-auto w-full">
-<table class="w-full text-left font-body-small text-body-small">
-<thead class="bg-surface-soft text-ink-muted font-label-small text-label-small uppercase tracking-wider">
-<tr>
-<th class="py-space-sm px-space-lg" scope="col">No. Pengajuan / Tanggal</th>
-<th class="py-space-sm px-space-md" scope="col">Nominal Pencairan</th>
-<th class="py-space-sm px-space-md" scope="col">Rekening Tujuan</th>
-<th class="py-space-sm px-space-md" scope="col">Status</th>
-<th class="py-space-sm px-space-lg text-right" scope="col">Aksi</th>
-</tr>
-</thead>
-<tbody class="text-ink-body divide-y divide-surface-container">
-<!-- Row 1: WDR-2026-0042 (Dalam Proses) -->
-<tr class="hover:bg-surface transition-colors">
-<td class="py-space-md px-space-lg">
-<div class="flex flex-col">
-<span class="font-label text-label font-bold text-ink-body">WDR-2026-0042</span>
-<span class="text-ink-muted font-label-small text-label-small">14 Nov 2026, 10:15 WIB</span>
-</div>
-</td>
-<td class="py-space-md px-space-md font-label text-label font-bold text-ink-body">
-                Rp 645.000
-              </td>
-<td class="py-space-md px-space-md">
-<div class="flex items-center gap-space-xs">
-<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-small text-label-small font-bold">BCA</span>
-<span class="text-ink-muted">•••• 4892</span>
-</div>
-</td>
-<td class="py-space-md px-space-md">
-<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-paper text-tertiary font-label-small text-label-small font-bold">
-<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span>
-                  Dalam Proses
-                </span>
-</td>
-<td class="py-space-md px-space-lg text-right">
-<button class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-small text-label-small font-semibold transition-colors" onclick="openDalamProsesToast()" type="button">
-<span class="material-symbols-outlined text-[16px]">info</span>
-<span>Lihat Status / Bukti</span>
-</button>
-</td>
-</tr>
-<!-- Row 2: WDR-2026-0038 (Selesai with Modal UC-37) -->
-<tr class="hover:bg-surface transition-colors">
-<td class="py-space-md px-space-lg">
-<div class="flex flex-col">
-<span class="font-label text-label font-bold text-ink-body">WDR-2026-0038</span>
-<span class="text-ink-muted font-label-small text-label-small">28 Okt 2026, 14:20 WIB</span>
-</div>
-</td>
-<td class="py-space-md px-space-md font-label text-label font-bold text-ink-body">
-                Rp 1.250.000
-              </td>
-<td class="py-space-md px-space-md">
-<div class="flex items-center gap-space-xs">
-<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-small text-label-small font-bold">BCA</span>
-<span class="text-ink-muted">•••• 4892</span>
-</div>
-</td>
-<td class="py-space-md px-space-md">
-<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-sky text-primary font-label-small text-label-small font-bold">
-<span class="material-symbols-outlined text-[14px]">check_circle</span>
-                  Selesai
-                </span>
-</td>
-<td class="py-space-md px-space-lg text-right">
-<button class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-primary-container text-on-primary-container font-label-small text-label-small font-semibold hover:bg-primary hover:text-on-primary transition-all shadow-sm" onclick="openModalBuktiTransfer('WDR-2026-0038', '28 Oktober 2026', 'Rp 1.250.000', 'TRF-IKP-8829103')" type="button">
-<span class="material-symbols-outlined text-[16px]">visibility</span>
-<span>Lihat Bukti Transfer</span>
-</button>
-</td>
-</tr>
-<!-- Row 3: WDR-2026-0029 (Selesai with Modal UC-37) -->
-<tr class="hover:bg-surface transition-colors">
-<td class="py-space-md px-space-lg">
-<div class="flex flex-col">
-<span class="font-label text-label font-bold text-ink-body">WDR-2026-0029</span>
-<span class="text-ink-muted font-label-small text-label-small">15 Sep 2026, 09:40 WIB</span>
-</div>
-</td>
-<td class="py-space-md px-space-md font-label text-label font-bold text-ink-body">
-                Rp 850.000
-              </td>
-<td class="py-space-md px-space-md">
-<div class="flex items-center gap-space-xs">
-<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-small text-label-small font-bold">BCA</span>
-<span class="text-ink-muted">•••• 4892</span>
-</div>
-</td>
-<td class="py-space-md px-space-md">
-<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-sky text-primary font-label-small text-label-small font-bold">
-<span class="material-symbols-outlined text-[14px]">check_circle</span>
-                  Selesai
-                </span>
-</td>
-<td class="py-space-md px-space-lg text-right">
-<button class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-primary-container text-on-primary-container font-label-small text-label-small font-semibold hover:bg-primary hover:text-on-primary transition-all shadow-sm" onclick="openModalBuktiTransfer('WDR-2026-0029', '15 September 2026', 'Rp 850.000', 'TRF-IKP-7718290')" type="button">
-<span class="material-symbols-outlined text-[16px]">visibility</span>
-<span>Lihat Bukti Transfer</span>
-</button>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<!-- Pagination / History summary footer -->
-<div class="p-space-md bg-surface-soft flex items-center justify-between text-ink-muted font-body-small text-body-small">
-<span>Menampilkan 3 dari 3 transaksi pencairan dana tahun berjalan</span>
-<div class="flex items-center gap-space-xs">
-<button class="px-space-sm py-1 rounded bg-surface-container-high opacity-50 cursor-not-allowed" disabled="" type="button">Sebelumnya</button>
-<button class="px-space-sm py-1 rounded bg-surface-container-high opacity-50 cursor-not-allowed" disabled="" type="button">Selanjutnya</button>
-</div>
-</div>
-</section>
-</div>
-<!-- Modal Dialog Bukti Transfer (UC-37) -->
-<div class="fixed inset-0 z-50 hidden items-center justify-center bg-inverse-deep/60 backdrop-blur-sm p-space-md" id="modal-bukti-transfer">
-<div class="relative w-full max-w-xl bg-surface-container-lowest rounded-xl shadow-xl overflow-hidden flex flex-col max-h-[90vh]">
-<!-- Modal Header -->
-<div class="p-space-lg bg-surface-soft flex items-start justify-between">
-<div class="flex flex-col">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-primary text-[22px]">verified</span>
-<h3 class="font-title-md text-title-md text-ink-body">Bukti Transfer Pencairan Dana</h3>
-</div>
-<p class="font-body-small text-body-small text-ink-muted mt-1" id="modal-bukti-subtitle">
-            No. Pengajuan: WDR-2026-0038 · Tanggal Transfer: 28 Oktober 2026
-          </p>
-</div>
-<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-ink-muted hover:text-ink-body flex items-center justify-center transition-colors" onclick="closeModalBuktiTransfer()" type="button">
-<span class="material-symbols-outlined text-[20px]">close</span>
-</button>
-</div>
-<!-- Modal Body (Transfer Proof Voucher Area) -->
-<div class="p-space-lg overflow-y-auto flex flex-col gap-space-md">
-<div class="bg-surface-lilac/30 p-space-sm rounded-lg flex items-center gap-space-xs text-primary font-label-small text-label-small">
-<span class="material-symbols-outlined text-[18px]">verified_user</span>
-<span>Dokumen resmi diunggah oleh: <strong>Administrator IKAPI Jawa Barat</strong> (Bendahara Sekretariat)</span>
-</div>
-<!-- Realistic Simulated Banking Slip Slip -->
-<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm font-sans flex flex-col gap-space-md">
-<div class="flex items-center justify-between pb-space-sm bg-surface-soft -mx-space-lg -mt-space-lg p-space-lg rounded-t-xl">
-<div class="flex items-center gap-space-xs">
-<div class="w-8 h-8 rounded bg-primary text-on-primary font-bold text-center flex items-center justify-center text-[12px]">BCA</div>
-<span class="font-label text-label font-bold text-ink-body">KlikBCA Bisnis / Corporate</span>
-</div>
-<span class="px-space-xs py-0.5 rounded bg-surface-sky text-primary font-label-small text-label-small font-bold flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">check_circle</span> TRANSFER BERHASIL
-            </span>
-</div>
-<div class="grid grid-cols-2 gap-y-space-sm text-body-small">
-<div>
-<span class="font-label-small text-label-small text-ink-muted block">Tanggal &amp; Waktu Eksekusi</span>
-<span class="font-label text-label font-bold text-ink-body" id="slip-tanggal">28/10/2026 · 14:22:10 WIB</span>
-</div>
-<div>
-<span class="font-label-small text-label-small text-ink-muted block">Nomor Referensi Bank</span>
-<span class="font-label text-label font-mono font-bold text-primary" id="slip-ref">TRF-IKP-8829103</span>
-</div>
-<div class="col-span-2 pt-space-xs">
-<span class="font-label-small text-label-small text-ink-muted block">Rekening Pengirim (Debet)</span>
-<span class="font-label text-label text-ink-body">DPD IKAPI JAWA BARAT</span>
-<span class="text-ink-muted font-mono block text-label-small">BCA - 008-992-1100</span>
-</div>
-<div class="col-span-2 pt-space-xs">
-<span class="font-label-small text-label-small text-ink-muted block">Rekening Penerima (Kredit)</span>
-<span class="font-label text-label font-bold text-ink-body">PT KIBLAT BUKU UTAMA</span>
-<span class="text-ink-muted font-mono block text-label-small">BCA - •••• •••• 4892</span>
-</div>
-<div class="col-span-2 pt-space-sm bg-surface-soft p-space-sm rounded-lg flex items-center justify-between">
-<span class="font-label text-label font-bold text-ink-body">Jumlah Dana Ditransfer</span>
-<span class="font-headline-md text-headline-md font-bold text-primary" id="slip-nominal">Rp 1.250.000</span>
-</div>
-<div class="col-span-2 text-ink-muted font-label-small text-label-small">
-              Berita Transfer: <span class="italic text-ink-body">"Penyaluran royalti buku digital IKAPI Store Jabar Q3"</span>
-</div>
-</div>
-</div>
-<p class="font-label-small text-label-small text-ink-muted text-center">
-          Tanda bukti ini sah dan diakui sebagai konfirmasi resmi penyelesaian kewajiban royalti IKAPI Jawa Barat.
-        </p>
-</div>
-<!-- Modal Footer -->
-<div class="p-space-md bg-surface-soft flex items-center justify-between">
-<button class="px-space-md py-space-sm rounded-lg bg-surface-container text-on-surface font-label text-label hover:bg-surface-container-high transition-colors" onclick="closeModalBuktiTransfer()" type="button">
-          Tutup
-        </button>
-<button class="px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label text-label font-bold hover:bg-primary-container transition-colors flex items-center gap-space-xs shadow-sm" onclick="alert('Mengunduh salinan gambar bukti transfer...')" type="button">
-<span class="material-symbols-outlined text-[18px]">download</span>
-          Unduh Bukti Gambar
-        </button>
-</div>
-</div>
-</div>
-<!-- Modal Konfirmasi Sukses (UC-36) -->
-<div class="fixed inset-0 z-50 hidden items-center justify-center bg-inverse-deep/60 backdrop-blur-sm p-space-md" id="modal-sukses-pengajuan">
-<div class="relative w-full max-w-md bg-surface-container-lowest rounded-xl shadow-xl p-space-xl flex flex-col items-center text-center gap-space-md">
-<div class="w-16 h-16 rounded-full bg-surface-sky text-primary flex items-center justify-center">
-<span class="material-symbols-outlined text-[36px]">check_circle</span>
-</div>
-<div class="flex flex-col gap-space-xs">
-<h3 class="font-title-md text-title-md text-ink-body">Pengajuan Berhasil Dikirim</h3>
-<p class="font-body-small text-body-small text-ink-muted">
-          Permohonan pencairan dana sejumlah <strong class="text-ink-body" id="sukses-nominal-modal">Rp 500.000</strong> telah diterima oleh sistem dan sedang menunggu verifikasi transfer dari Administrator IKAPI Jawa Barat.
-        </p>
-</div>
-<div class="w-full p-space-sm bg-surface-soft rounded-lg text-ink-muted font-label-small text-label-small text-left flex flex-col gap-1">
-<div class="flex justify-between">
-<span>ID Pengajuan:</span>
-<span class="font-bold text-ink-body">WDR-2026-0043</span>
-</div>
-<div class="flex justify-between">
-<span>Estimasi Proses:</span>
-<span class="font-semibold text-primary">1 - 2 Hari Kerja</span>
-</div>
-</div>
-<button class="w-full py-space-sm rounded-lg bg-primary text-on-primary font-label text-label font-bold hover:bg-primary-container transition-colors shadow-sm" onclick="closeModalSukses()" type="button">
-        Selesai &amp; Tutup
-      </button>
-</div>
-</div>
-<!-- In-app Floating Toast / Notification -->
-<div class="fixed bottom-6 right-6 z-50 hidden items-center gap-space-sm p-space-md rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl max-w-md transition-all" id="toast-notification">
-<span class="material-symbols-outlined text-[20px] text-tertiary-fixed" id="toast-icon">info</span>
-<span class="font-body-small text-body-small flex-1" id="toast-text">Pencairan masih diproses, bukti transfer belum tersedia.</span>
-<button class="text-inverse-on-surface hover:opacity-75" onclick="hideToast()" type="button">
-<span class="material-symbols-outlined text-[18px]">close</span>
-</button>
-</div>
-</div>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pendapatan &amp; Pencairan — Portal Penerbit IKAPI Jawa Barat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
 <script>
-  let currentState = 'A';
-  let availableBalance = 840000;
-  let hasBankAccount = true;
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#673DE6',
+        'primary-hover': '#5025D1',
+        'primary-deep': '#2F1C6A',
+        canvas: '#FFFFFF',
+        soft: '#F5F6FF',
+        neutral: '#F5F5F6',
+        ink: '#222225',
+        muted: '#62636B',
+        border: '#E5E7EB',
+        divider: '#EFEFF2',
+      },
+      fontFamily: { sans: ['DM Sans', 'system-ui', 'sans-serif'] },
+      borderRadius: { xl: '12px', '2xl': '16px', '3xl': '20px' },
+    }
+  }
+}
+</script>
+<style>
+  :root { --topbar-h: 64px; --sidebar-w: 248px; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', system-ui, sans-serif; background: #FFFFFF; color: #222225; }
+  .shell-main { margin-left: 0; }
+  @media (min-width: 1024px) { .shell-main { margin-left: var(--sidebar-w); } }
+  .banner-bleed { margin-left: 0; }
+  @media (min-width: 1024px) { .banner-bleed { margin-left: calc(-1 * var(--sidebar-w)); } }
+  #publisher-sidebar { top: var(--topbar-h); }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .num { font-variant-numeric: tabular-nums; }
+  .focus-ring:focus-visible { outline: 2px solid #673DE6; outline-offset: 2px; }
+  .focus-ring-light:focus-visible { outline: 2px solid #FFFFFF; outline-offset: 2px; }
+  #publisher-sidebar { transform: translateX(-100%); transition: transform .22s ease; }
+  #publisher-sidebar.is-open { transform: translateX(0); }
+  @media (min-width: 1024px) { #publisher-sidebar { transform: none; transition: none; } }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-thumb { background: #DCDCE2; border-radius: 9999px; }
+</style>
+  <script src="access-guard.js"></script>
+</head>
+<body class="bg-canvas text-ink antialiased">
 
-  function setState(state) {
-    currentState = state;
+<a href="#workspace" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focus:bg-primary focus:px-4 focus:py-2 focus:text-white focus:text-sm focus:font-semibold">Lewati ke konten utama</a>
 
-    // Reset simulator button highlight
-    const allBtns = document.querySelectorAll('.state-btn');
-    allBtns.forEach(btn => {
-      btn.className = "state-btn px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high font-label-small text-label-small transition-all";
+<!-- TOP UTILITY BAR -->
+<header class="absolute inset-x-0 top-0 z-50 h-16">
+  <div class="flex h-16 items-center justify-between gap-3 px-4 sm:px-6">
+    <div class="flex items-center gap-3">
+      <button type="button" id="sidebar-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="publisher-sidebar"
+        class="focus-ring-light grid h-10 w-10 place-items-center rounded-xl text-white hover:bg-white/10 lg:hidden">
+        <span class="material-symbols-outlined text-[22px]">menu</span>
+      </button>
+      <a href="dashboard_penerbit_desktop.html" class="focus-ring-light flex items-center rounded-xl">
+        <img src="../../assets/logo-ikapi-jabar.png" alt="IKAPI Jawa Barat" class="h-7 w-auto object-contain drop-shadow-[0_1px_3px_rgba(0,0,0,0.35)]">
+      </a>
+    </div>
+    <div class="flex items-center gap-1.5">
+      <div class="relative">
+        <button type="button" id="btn-notif" aria-label="Notifikasi" aria-haspopup="true" aria-expanded="false"
+          class="focus-ring-light relative grid h-10 w-10 place-items-center rounded-xl text-white hover:bg-white/10">
+          <span class="material-symbols-outlined text-[22px]">notifications</span>
+        </button>
+        <div id="notif-panel" class="absolute right-0 top-12 hidden w-72 rounded-2xl border border-border bg-white p-4 shadow-[0_16px_40px_rgba(34,34,37,0.12)]">
+          <div class="mb-1.5 text-[13px] font-bold text-ink">Notifikasi</div>
+          <p class="text-[13px] leading-relaxed text-muted">Tidak ada notifikasi baru.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<div id="sidebar-scrim" class="fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden"></div>
+<aside id="publisher-sidebar" class="fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgba(34,34,37,0.07)] lg:translate-x-0">
+  <nav aria-label="Navigasi dashboard penerbit" class="flex flex-1 flex-col gap-1 overflow-y-auto px-3 pb-4 pt-7">
+    <a href="dashboard_penerbit_desktop.html" data-path="dashboard"
+      class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">space_dashboard</span><span>Dashboard</span>
+    </a>
+    <a href="kelola_buku_desktop.html" data-path="kelola-buku"
+      class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">menu_book</span><span>Kelola Buku</span>
+    </a>
+    <a href="pesanan_masuk_desktop.html" data-path="pesanan-masuk"
+      class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">inbox</span><span>Pesanan Masuk</span>
+    </a>
+    <a href="pendapatan_dan_pencairan_desktop.html" aria-current="page" data-path="pendapatan-dan-pencairan"
+      class="focus-ring flex items-center gap-3 rounded-xl bg-primary px-3 py-2.5 text-[14px] font-semibold text-white">
+      <span class="material-symbols-outlined text-[20px]">payments</span><span>Pendapatan &amp; Pencairan</span>
+    </a>
+    <a href="ulasan_pembeli_desktop.html" data-path="ulasan-pembeli"
+      class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">reviews</span><span>Ulasan Pembeli</span>
+    </a>
+    <a href="pengaturan_profil_desktop.html" data-path="pengaturan-profil"
+      class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">tune</span><span>Pengaturan Profil</span>
+    </a>
+  </nav>
+  <div class="flex items-center gap-2 border-t border-divider p-3">
+    <a href="pengaturan_profil_desktop.html" class="focus-ring flex min-w-0 flex-1 items-center gap-3 rounded-xl px-2 py-2 hover:bg-neutral">
+      <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary text-white">
+        <span class="material-symbols-outlined text-[18px]">storefront</span>
+      </span>
+      <span class="min-w-0 text-left leading-tight">
+        <span class="block truncate text-[13px] font-semibold text-ink">Akun Penerbit</span>
+        <span class="block truncate text-[11px] text-muted">IKAPI Jawa Barat</span>
+      </span>
+    </a>
+    <a href="masuk_portal_penerbit_desktop.html" data-path="keluar-akun" aria-label="Keluar Akun" title="Keluar Akun"
+      class="focus-ring grid h-10 w-10 shrink-0 place-items-center rounded-xl text-[#B42318] transition-colors hover:bg-[#FEF3F2]">
+      <span class="material-symbols-outlined text-[20px]">logout</span>
+    </a>
+  </div>
+</aside>
+
+<!-- MAIN COLUMN -->
+<div class="shell-main">
+
+  <!-- GEOMETRIC BANNER (reused from Dashboard Penerbit) -->
+  <div aria-hidden="true" class="banner-bleed relative h-[232px] overflow-hidden bg-primary-deep sm:h-[260px] lg:h-[276px]">
+    <svg class="absolute inset-0 h-full w-full" viewBox="0 0 1440 212" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="topScrim" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2F1C6A" stop-opacity="0.96"></stop>
+          <stop offset="100%" stop-color="#2F1C6A" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="212" fill="#2F1C6A"></rect>
+      <polygon points="418,0 612,0 470,212 276,212" fill="#4B2CBA"></polygon>
+      <polygon points="648,0 706,0 564,212 506,212" fill="#825CF1"></polygon>
+      <polygon points="748,0 1002,0 860,212 606,212" fill="#673DE6"></polygon>
+      <polygon points="1042,0 1084,0 942,212 900,212" fill="#4475D8"></polygon>
+      <polygon points="1124,0 1290,0 1148,212 982,212" fill="#4B2CBA"></polygon>
+      <polygon points="1342,0 1440,0 1440,212 1200,212" fill="#825CF1"></polygon>
+      <polygon points="1420,0 1440,0 1440,212 1378,212" fill="#4475D8"></polygon>
+      <rect width="1440" height="58" fill="url(#topScrim)"></rect>
+    </svg>
+  </div>
+
+  <main id="workspace" class="relative z-10 -mt-20 rounded-t-[20px] border-t border-border bg-white lg:ml-6">
+    <div class="mx-auto w-full max-w-[1560px] px-4 pb-16 pt-6 sm:px-6 lg:px-10 lg:pt-8">
+
+      <!-- Heading + actions -->
+      <div class="mb-6 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+        <div class="min-w-0">
+          <h1 class="text-[26px] font-bold leading-tight tracking-tight text-ink lg:text-[30px]">Pendapatan &amp; Pencairan</h1>
+          <p class="mt-1 text-[14px] text-muted">Pantau pendapatan dan ajukan pencairan ke rekening terdaftar.</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <button type="button" id="btn-export"
+            class="focus-ring inline-flex h-10 items-center gap-2 rounded-xl border border-border px-4 text-[14px] font-semibold text-ink transition-colors hover:bg-neutral">
+            <span class="material-symbols-outlined text-[18px]">download</span>
+            <span>Ekspor Rekap Royalti</span>
+          </button>
+          <div class="relative">
+            <button type="button" id="demo-toggle" aria-expanded="false" aria-haspopup="true"
+              class="focus-ring inline-flex h-10 items-center gap-1.5 rounded-xl border border-dashed border-border px-3 text-[13px] font-semibold text-muted transition-colors hover:bg-neutral hover:text-ink">
+              <span class="material-symbols-outlined text-[17px]">tune</span>
+              <span>Mode Demo</span>
+              <span class="material-symbols-outlined text-[17px]">expand_more</span>
+            </button>
+            <div id="demo-menu" class="absolute right-0 top-12 z-30 hidden w-64 rounded-2xl border border-border bg-white p-1.5 shadow-[0_16px_40px_rgba(34,34,37,0.12)]" role="menu" aria-label="Pilih skenario demo">
+              <button type="button" data-demo="A" role="menuitemradio" aria-checked="true" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl bg-soft px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Saldo Tersedia (Default)</span><span class="material-symbols-outlined demo-check text-[17px] text-primary">check</span></button>
+              <button type="button" data-demo="B" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Saldo Kosong</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+              <button type="button" data-demo="C" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Rekening Belum Ada</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+              <button type="button" data-demo="D" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Validasi Error</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+              <button type="button" data-demo="E" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Sedang Mengajukan</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+              <button type="button" data-demo="F" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Sukses Konfirmasi</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+              <button type="button" data-demo="G" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Detail Pencairan (Selesai)</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+              <button type="button" data-demo="H" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Detail Pencairan (Proses)</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+              <button type="button" data-demo="I" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Gagal Memuat</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+              <p class="px-3 pb-1.5 pt-2 text-[11px] leading-relaxed text-muted">Peralihan status hanya simulasi prototype.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p id="page-note" role="status" class="mb-3 hidden text-[12.5px] text-muted"></p>
+
+      <!-- Loading skeleton -->
+      <div id="view-loading" class="hidden" aria-hidden="true">
+        <div class="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <div class="h-[132px] animate-pulse rounded-2xl border border-border p-5"><div class="h-3.5 w-28 rounded bg-neutral"></div><div class="mt-4 h-8 w-32 rounded bg-neutral"></div><div class="mt-4 h-3 w-40 rounded bg-neutral"></div></div>
+          <div class="h-[132px] animate-pulse rounded-2xl border border-border p-5"><div class="h-3.5 w-24 rounded bg-neutral"></div><div class="mt-4 h-8 w-28 rounded bg-neutral"></div><div class="mt-4 h-3 w-36 rounded bg-neutral"></div></div>
+          <div class="h-[132px] animate-pulse rounded-2xl border border-border p-5"><div class="h-3.5 w-32 rounded bg-neutral"></div><div class="mt-4 h-8 w-24 rounded bg-neutral"></div><div class="mt-4 h-3 w-44 rounded bg-neutral"></div></div>
+        </div>
+        <div class="mb-6 grid grid-cols-1 gap-4 lg:grid-cols-3">
+          <div class="h-[300px] animate-pulse rounded-2xl border border-border p-5 lg:col-span-2"><div class="h-4 w-40 rounded bg-neutral"></div><div class="mt-6 h-10 w-full rounded bg-neutral"></div><div class="mt-3 h-4 w-32 rounded bg-neutral"></div><div class="mt-10 h-10 w-full rounded bg-neutral"></div></div>
+          <div class="h-[300px] animate-pulse rounded-2xl border border-border p-5"><div class="h-4 w-32 rounded bg-neutral"></div><div class="mt-5 space-y-3"><div class="h-3 w-full rounded bg-neutral"></div><div class="h-3 w-4/5 rounded bg-neutral"></div><div class="h-3 w-3/5 rounded bg-neutral"></div></div></div>
+        </div>
+        <div class="animate-pulse rounded-2xl border border-border p-5"><div class="h-4 w-52 rounded bg-neutral"></div><div class="mt-5 h-9 w-full rounded bg-neutral"></div><div class="mt-2 h-11 w-full rounded bg-neutral"></div><div class="mt-2 h-11 w-full rounded bg-neutral"></div></div>
+      </div>
+
+      <!-- Error state (State I) -->
+      <div id="view-error" class="hidden rounded-2xl border border-border p-6">
+        <div class="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div class="flex items-start gap-3">
+            <span class="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-full border border-border bg-neutral text-ink">
+              <span class="material-symbols-outlined text-[18px]">cloud_off</span>
+            </span>
+            <div>
+              <h2 class="text-[16px] font-bold text-ink">Data Belum Dapat Dimuat</h2>
+              <p class="mt-1 max-w-xl text-[13px] leading-relaxed text-muted">Terjadi kendala saat memuat informasi pencairan.</p>
+            </div>
+          </div>
+          <button type="button" id="btn-retry"
+            class="focus-ring inline-flex h-10 shrink-0 items-center gap-2 rounded-xl bg-primary px-4 text-[14px] font-semibold text-white hover:bg-primary-hover">
+            <span class="material-symbols-outlined text-[18px]">refresh</span><span>Coba Lagi</span>
+          </button>
+        </div>
+        <p id="retry-note" class="mt-3 hidden text-[12px] leading-relaxed text-muted">Pemuatan ulang disimulasikan pada prototype ini.</p>
+      </div>
+
+      <!-- MAIN DATA VIEW -->
+      <div id="view-main">
+
+        <!-- KPI -->
+        <div class="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <div class="rounded-2xl border border-border bg-white p-5">
+            <p class="text-[11px] font-bold uppercase tracking-[0.12em] text-muted">Total Pendapatan Neto</p>
+            <p class="num mt-3 whitespace-nowrap text-[26px] font-bold leading-none tracking-tight text-ink" id="kpi-net">Rp 1.485.000</p>
+            <p class="mt-3 text-[13px] leading-snug text-muted">Akumulasi pendapatan neto penerbit</p>
+          </div>
+          <div class="rounded-2xl border border-border bg-white p-5">
+            <p class="text-[11px] font-bold uppercase tracking-[0.12em] text-muted">Saldo Tersedia</p>
+            <p class="num mt-3 whitespace-nowrap text-[26px] font-bold leading-none tracking-tight text-primary-deep" id="kpi-available">Rp 840.000</p>
+            <p class="mt-3 text-[13px] leading-snug text-muted">Dapat diajukan untuk pencairan</p>
+          </div>
+          <div class="rounded-2xl border border-border bg-white p-5">
+            <p class="text-[11px] font-bold uppercase tracking-[0.12em] text-muted">Dalam Proses Transfer</p>
+            <p class="num mt-3 whitespace-nowrap text-[26px] font-bold leading-none tracking-tight text-ink" id="kpi-pending">Rp 645.000</p>
+            <p class="mt-3 text-[13px] leading-snug text-muted">Pengajuan yang sedang diproses</p>
+          </div>
+        </div>
+
+        <!-- Form + bank account -->
+        <div class="mb-6 grid grid-cols-1 gap-4 lg:grid-cols-3">
+
+          <!-- Withdrawal form -->
+          <section aria-labelledby="form-title" class="rounded-2xl border border-border bg-white p-5 lg:col-span-2 lg:p-6">
+            <h2 id="form-title" class="text-[17px] font-bold tracking-tight text-ink">Ajukan Pencairan Dana</h2>
+            <p class="mt-0.5 text-[13px] text-muted">Masukkan nominal yang ingin dicairkan.</p>
+
+            <form id="withdraw-form" class="mt-4 space-y-4" novalidate>
+              <div>
+                <label for="input-nominal" class="mb-1.5 block text-[12.5px] font-semibold text-ink">Nominal Pencairan</label>
+                <div class="relative flex items-center">
+                  <span class="pointer-events-none absolute left-3.5 text-[14px] font-medium text-muted">Rp</span>
+                  <input id="input-nominal" type="text" inputmode="numeric" autocomplete="off" placeholder="0"
+                    aria-describedby="nominal-error"
+                    class="num h-11 w-full rounded-xl border border-border bg-white pl-10 pr-3 text-[14px] text-ink outline-none transition-colors placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary/15">
+                </div>
+                <p id="nominal-error" class="mt-1 hidden text-[12px] text-[#B42318]"></p>
+              </div>
+
+              <div class="rounded-xl border border-border bg-white px-3.5 py-3">
+                <div class="flex items-start justify-between gap-3">
+                  <div class="min-w-0">
+                    <p class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Rekening tujuan</p>
+                    <p class="mt-1 text-[13px] font-semibold text-ink" id="bank-summary">Bank Central Asia (BCA), PT Kiblat Buku Utama, •••• 4892</p>
+                  </div>
+                  <a href="pengaturan_profil_desktop.html" class="focus-ring shrink-0 rounded text-[12.5px] font-semibold text-primary hover:text-primary-hover">Ubah</a>
+                </div>
+                <p id="bank-empty" class="mt-1 hidden text-[12.5px] text-muted">Rekening bank belum terdaftar. Tambahkan rekening pada Pengaturan Profil sebelum mengajukan pencairan.</p>
+              </div>
+
+              <label class="flex items-start gap-2.5 select-none">
+                <input id="confirm-check" type="checkbox" class="mt-0.5 h-4 w-4 cursor-pointer rounded border-border accent-primary text-primary">
+                <span class="text-[13px] leading-relaxed text-ink">Saya telah memeriksa nominal dan rekening tujuan.</span>
+              </label>
+              <p id="confirm-error" class="hidden text-[12px] text-[#B42318]">Konfirmasi pemeriksaan wajib dicentang.</p>
+
+              <button type="submit" id="btn-review"
+                class="focus-ring flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-primary text-[14px] font-semibold text-white transition-colors hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-60">
+                <span id="review-label">Tinjau Pengajuan</span>
+              </button>
+            </form>
+          </section>
+
+          <!-- Bank + policy -->
+          <section aria-labelledby="bank-title" class="rounded-2xl border border-border bg-white p-5 lg:p-6">
+            <h2 id="bank-title" class="text-[17px] font-bold tracking-tight text-ink">Rekening Penerima</h2>
+            <div id="bank-card-active" class="mt-3 space-y-1">
+              <p class="text-[13.5px] font-semibold text-ink">Bank Central Asia (BCA)</p>
+              <p class="text-[13px] text-muted">PT Kiblat Buku Utama</p>
+              <p class="num text-[13px] text-muted">•••• 4892</p>
+              <a href="pengaturan_profil_desktop.html" class="focus-ring mt-2 inline-flex items-center gap-1 rounded text-[12.5px] font-semibold text-primary hover:text-primary-hover">
+                <span>Ubah Rekening</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+            <div id="bank-card-empty" class="mt-3 hidden">
+              <p class="text-[13.5px] font-semibold text-ink">Rekening Bank Belum Terdaftar</p>
+              <p class="mt-1 text-[13px] leading-relaxed text-muted">Tambahkan rekening penerbit sebelum mengajukan pencairan.</p>
+              <a href="pengaturan_profil_desktop.html"
+                class="focus-ring mt-3 inline-flex h-10 items-center rounded-xl border border-border px-3.5 text-[13px] font-semibold text-ink hover:bg-neutral">
+                Tambahkan Rekening
+              </a>
+            </div>
+
+            <div class="mt-5 border-t border-divider pt-4">
+              <h3 class="text-[12px] font-bold uppercase tracking-[0.08em] text-muted">Ketentuan pencairan</h3>
+              <ul class="mt-2 space-y-1.5 text-[12.5px] leading-relaxed text-muted">
+                <li>Minimum pencairan Rp 100.000.</li>
+                <li>Pengajuan di atas Rp 5.000.000 memerlukan verifikasi tambahan.</li>
+                <li>Ketentuan pada prototype ini adalah data simulasi.</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <!-- History -->
+        <section aria-labelledby="history-title" class="rounded-2xl border border-border bg-white">
+          <div class="flex flex-col gap-3 border-b border-divider p-5 lg:px-6">
+            <h2 id="history-title" class="text-[17px] font-bold tracking-tight text-ink">Riwayat Pengajuan Pencairan</h2>
+            <div class="flex flex-col gap-2 sm:flex-row sm:items-center">
+              <div class="relative w-full sm:max-w-[280px]">
+                <span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-muted">search</span>
+                <label for="history-search" class="sr-only">Cari nomor pengajuan</label>
+                <input id="history-search" type="search" autocomplete="off" placeholder="Cari nomor pengajuan..."
+                  class="h-10 w-full rounded-xl border border-border bg-white pl-9 pr-3 text-[13.5px] text-ink outline-none placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary/15">
+              </div>
+              <label for="history-filter" class="sr-only">Filter status</label>
+              <select id="history-filter"
+                class="h-10 rounded-xl border border-border bg-white px-3 text-[13.5px] font-medium text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+                <option value="all">Semua Status</option>
+                <option value="proses">Dalam Proses</option>
+                <option value="selesai">Selesai</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full min-w-[760px] border-collapse text-left">
+              <caption class="sr-only">Riwayat pengajuan pencairan penerbit</caption>
+              <thead>
+                <tr class="border-b border-border bg-white text-[11px] uppercase tracking-[0.1em] text-muted">
+                  <th scope="col" class="px-5 py-3 font-bold lg:px-6">Pengajuan</th>
+                  <th scope="col" class="w-36 px-4 py-3 text-right font-bold">Nominal</th>
+                  <th scope="col" class="w-32 px-4 py-3 font-bold">Rekening</th>
+                  <th scope="col" class="w-32 px-4 py-3 font-bold">Status</th>
+                  <th scope="col" class="w-24 px-4 py-3 pr-5 text-right font-bold lg:pr-6">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="history-rows" class="text-[13px]"></tbody>
+            </table>
+          </div>
+
+          <div id="history-empty" class="hidden px-5 py-12 text-center">
+            <p class="text-[15px] font-semibold text-ink">Pengajuan Tidak Ditemukan</p>
+            <p class="mx-auto mt-1.5 max-w-sm text-[13px] leading-relaxed text-muted">Tidak ada pengajuan yang cocok dengan pencarian atau filter ini.</p>
+            <button type="button" id="btn-reset-filter"
+              class="focus-ring mt-4 inline-flex h-10 items-center rounded-xl border border-border px-4 text-[13px] font-semibold text-ink hover:bg-neutral">
+              Reset Pencarian &amp; Filter
+            </button>
+          </div>
+
+          <div class="flex flex-col gap-3 border-t border-border px-5 py-3 sm:flex-row sm:items-center sm:justify-between lg:px-6">
+            <p class="text-[12.5px] text-muted" id="history-count">Menampilkan 0 dari 0 pengajuan</p>
+            <div class="flex items-center gap-1.5">
+              <button type="button" id="page-prev" aria-label="Halaman sebelumnya"
+                class="focus-ring grid h-8 w-8 place-items-center rounded-lg border border-border text-ink hover:bg-neutral disabled:cursor-not-allowed disabled:opacity-40">
+                <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+              </button>
+              <span class="num min-w-8 rounded-lg bg-primary px-2 py-1 text-center text-[12.5px] font-bold text-white" id="page-current">1</span>
+              <button type="button" id="page-next" aria-label="Halaman berikutnya"
+                class="focus-ring grid h-8 w-8 place-items-center rounded-lg border border-border text-ink hover:bg-neutral disabled:cursor-not-allowed disabled:opacity-40">
+                <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- ============ CONFIRM MODAL ============ -->
+<div id="modal-confirm" class="fixed inset-0 z-[70] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-confirm></div>
+  <div class="relative mx-auto mt-20 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[440px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:p-6"
+    role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+    <div class="mb-3 flex items-start justify-between gap-4">
+      <h2 id="confirm-title" class="text-[18px] font-bold tracking-tight text-ink">Konfirmasi Pencairan</h2>
+      <button type="button" data-close-confirm aria-label="Tutup" class="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+    <dl class="space-y-2.5 text-[13px]">
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Nominal pencairan</dt><dd class="num font-semibold text-ink" id="confirm-amount">-</dd></div>
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Rekening tujuan</dt><dd class="text-ink" id="confirm-bank">-</dd></div>
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Penerima</dt><dd class="text-ink">PT Kiblat Buku Utama</dd></div>
+    </dl>
+    <p class="mt-4 text-[12px] leading-relaxed text-muted">Pengajuan pada prototype ini tidak dikirim ke sistem perbankan.</p>
+    <div class="mt-5 flex items-center justify-end gap-2 border-t border-divider pt-4">
+      <button type="button" data-close-confirm
+        class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">Kembali</button>
+      <button type="button" id="btn-submit"
+        class="focus-ring inline-flex h-10 items-center gap-2 rounded-xl bg-primary px-4 text-[14px] font-semibold text-white hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-60">
+        <span id="submit-label">Ajukan Pencairan</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SUCCESS MODAL ============ -->
+<div id="modal-success" class="fixed inset-0 z-[70] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-success></div>
+  <div class="relative mx-auto mt-24 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[420px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:p-6"
+    role="dialog" aria-modal="true" aria-labelledby="success-title">
+    <h2 id="success-title" class="text-[18px] font-bold tracking-tight text-ink">Pengajuan Diterima</h2>
+    <p class="mt-1 text-[13px] leading-relaxed text-muted">Pengajuan pencairan telah tercatat pada prototype ini dan menunggu proses berikutnya.</p>
+    <dl class="mt-4 space-y-2.5 text-[13px]">
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">No. pengajuan</dt><dd class="num font-semibold text-ink" id="success-number">-</dd></div>
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Nominal</dt><dd class="num font-semibold text-ink" id="success-amount">-</dd></div>
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Status</dt><dd class="font-semibold text-ink">Dalam Proses</dd></div>
+    </dl>
+    <div class="mt-5 flex items-center justify-end gap-2 border-t border-divider pt-4">
+      <button type="button" data-close-success
+        class="focus-ring inline-flex h-10 items-center rounded-xl bg-primary px-4 text-[14px] font-semibold text-white hover:bg-primary-hover">Lihat Riwayat</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ DETAIL MODAL ============ -->
+<div id="modal-detail" class="fixed inset-0 z-[70] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-detail></div>
+  <div class="relative mx-auto mt-20 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[460px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:p-6"
+    role="dialog" aria-modal="true" aria-labelledby="detail-title">
+    <div class="mb-3 flex items-start justify-between gap-4">
+      <h2 id="detail-title" class="text-[18px] font-bold tracking-tight text-ink">Detail Pencairan</h2>
+      <button type="button" data-close-detail aria-label="Tutup" class="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+    <dl class="space-y-2.5 text-[13px]">
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">No. pengajuan</dt><dd class="num font-semibold text-ink" id="detail-number">-</dd></div>
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Status</dt><dd class="font-semibold text-ink" id="detail-status">-</dd></div>
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Tanggal</dt><dd class="text-ink" id="detail-date">-</dd></div>
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Nominal</dt><dd class="num font-semibold text-ink" id="detail-amount">-</dd></div>
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Rekening</dt><dd class="text-ink" id="detail-bank">-</dd></div>
+    </dl>
+    <div class="mt-4 rounded-xl border border-border p-3.5">
+      <p class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Bukti transfer</p>
+      <p class="mt-1 text-[13px] leading-relaxed text-ink" id="detail-proof">Belum tersedia dalam prototype ini.</p>
+    </div>
+    <div class="mt-5 flex items-center justify-end gap-2 border-t border-divider pt-4">
+      <button type="button" data-close-detail
+        class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">Tutup</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var $ = function (id) { return document.getElementById(id); };
+  var rupiah = function (n) { return 'Rp ' + Number(n).toLocaleString('id-ID'); };
+  var MIN_WITHDRAWAL = 100000;
+  var VERIFY_THRESHOLD = 5000000;
+
+  /* Baseline demo data preserved from the existing page. */
+  var BASE = {
+    net: 1485000,
+    available: 840000,
+    pending: 645000,
+    bank: 'BCA',
+    bankName: 'Bank Central Asia (BCA)',
+    holder: 'PT Kiblat Buku Utama',
+    masked: '•••• 4892',
+    withdrawals: [
+      { id: 'WDR-2026-0042', date: '2026-11-12', amount: 645000, status: 'proses' },
+      { id: 'WDR-2026-0038', date: '2026-10-28', amount: 1250000, status: 'selesai' },
+      { id: 'WDR-2026-0029', date: '2026-10-14', amount: 850000, status: 'selesai' }
+    ]
+  };
+
+  var state = { net: BASE.net, available: BASE.available, pending: BASE.pending, hasBank: true };
+  var withdrawals = BASE.withdrawals.slice();
+  var ui = { query: '', filter: 'all', page: 1, pageSize: 5, demo: 'A' };
+  var pendingAmount = 0;
+  var submitting = false;
+  var requestId = 0;
+  var counter = 43;
+
+  /* ---------- helpers ---------- */
+  function fmtDate(iso) {
+    var d = new Date(iso + 'T00:00:00+07:00');
+    return new Intl.DateTimeFormat('id-ID', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Jakarta' }).format(d);
+  }
+  function note(text) { var el = $('page-note'); el.textContent = text || ''; el.classList.toggle('hidden', !text); }
+  function parseAmount(str) { return Number(String(str).replace(/[^\d]/g, '')) || 0; }
+  function formatInput(digits) { return digits ? Number(digits).toLocaleString('id-ID') : ''; }
+  function statusLabel(s) { return s === 'selesai' ? 'Selesai' : (s === 'proses' ? 'Dalam Proses' : 'Gagal'); }
+  function statusClass(s) {
+    return s === 'selesai'
+      ? 'text-[12px] font-semibold text-[#0F7B4F]'
+      : 'text-[12px] font-semibold text-muted';
+  }
+
+  /* ---------- KPI + bank ---------- */
+  function paintSummary() {
+    $('kpi-net').textContent = rupiah(state.net);
+    $('kpi-available').textContent = rupiah(state.available);
+    $('kpi-pending').textContent = rupiah(state.pending);
+
+    $('bank-card-active').classList.toggle('hidden', !state.hasBank);
+    $('bank-card-empty').classList.toggle('hidden', state.hasBank);
+    $('bank-summary').textContent = state.hasBank ? BASE.bankName + ', ' + BASE.holder + ', ' + BASE.masked : '';
+    $('bank-empty').classList.toggle('hidden', state.hasBank);
+    $('bank-summary').classList.toggle('hidden', !state.hasBank);
+
+    /* Withdrawal is blocked while no bank account is registered. */
+    var blocked = !state.hasBank;
+    $('btn-review').disabled = blocked;
+    $('btn-review').classList.toggle('opacity-60', blocked);
+    $('btn-review').classList.toggle('cursor-not-allowed', blocked);
+    $('input-nominal').disabled = blocked;
+    $('input-nominal').classList.toggle('bg-neutral', blocked);
+    $('confirm-check').disabled = blocked;
+  }
+
+  /* ---------- history ---------- */
+  function filteredWithdrawals() {
+    var q = ui.query.trim().toLowerCase();
+    return withdrawals.filter(function (w) {
+      var okSearch = !q || w.id.toLowerCase().indexOf(q) !== -1;
+      var okStatus = ui.filter === 'all' || w.status === ui.filter;
+      return okSearch && okStatus;
     });
-    const currentBtn = document.getElementById('btn-state-' + state);
-    if (currentBtn) {
-      currentBtn.className = "state-btn px-space-sm py-1 rounded bg-primary text-on-primary font-label-small text-label-small transition-all shadow-sm";
-    }
-
-    // Modal resets
-    closeModalBuktiTransfer();
-    closeModalSukses();
-    hideToast();
-
-    // Elements
-    const viewMain = document.getElementById('view-main-content');
-    const viewError = document.getElementById('view-error-state');
-    const valSaldoBersih = document.getElementById('val-saldo-bersih');
-    const valSaldoTersedia = document.getElementById('val-saldo-tersedia');
-    const inputNominal = document.getElementById('input-nominal');
-    const alertErrorBox = document.getElementById('alert-error-box');
-    const alertErrorMsg = document.getElementById('alert-error-msg');
-    const alertEmptyBalance = document.getElementById('alert-empty-balance');
-    const btnSubmit = document.getElementById('btn-submit-pencairan');
-    const btnSubmitLabel = document.getElementById('btn-submit-label');
-    const cardRekeningAktif = document.getElementById('card-rekening-aktif');
-    const cardRekeningKosong = document.getElementById('card-rekening-kosong');
-    const checkRekening = document.getElementById('check-rekening-valid');
-
-    // Default visibilities
-    viewMain.classList.remove('hidden');
-    viewError.classList.add('hidden');
-    alertErrorBox.classList.add('hidden');
-    alertEmptyBalance.classList.add('hidden');
-    btnSubmit.disabled = false;
-    btnSubmit.classList.remove('opacity-50', 'cursor-not-allowed');
-    btnSubmitLabel.textContent = "Ajukan Pencairan";
-
-    if (state === 'A') {
-      // Default Normal
-      availableBalance = 840000;
-      hasBankAccount = true;
-      valSaldoBersih.textContent = "1.485.000";
-      valSaldoTersedia.textContent = "840.000";
-      inputNominal.value = "500.000";
-      cardRekeningAktif.classList.remove('hidden');
-      cardRekeningKosong.classList.add('hidden');
-      checkRekening.checked = true;
-      validateNominal();
-    } else if (state === 'B') {
-      // Saldo Kosong
-      availableBalance = 0;
-      hasBankAccount = true;
-      valSaldoBersih.textContent = "645.000";
-      valSaldoTersedia.textContent = "0";
-      inputNominal.value = "0";
-      cardRekeningAktif.classList.remove('hidden');
-      cardRekeningKosong.classList.add('hidden');
-      alertEmptyBalance.classList.remove('hidden');
-      btnSubmit.disabled = true;
-      btnSubmit.classList.add('opacity-50', 'cursor-not-allowed');
-    } else if (state === 'C') {
-      // Rekening Belum Ada
-      availableBalance = 840000;
-      hasBankAccount = false;
-      valSaldoBersih.textContent = "1.485.000";
-      valSaldoTersedia.textContent = "840.000";
-      cardRekeningAktif.classList.add('hidden');
-      cardRekeningKosong.classList.remove('hidden');
-      cardRekeningKosong.classList.add('flex');
-      alertErrorBox.classList.remove('hidden');
-      alertErrorMsg.textContent = "Rekening bank penerbit belum terdaftar. Silakan hubungkan rekening di profil terlebih dahulu.";
-      btnSubmit.disabled = true;
-      btnSubmit.classList.add('opacity-50', 'cursor-not-allowed');
-    } else if (state === 'D') {
-      // Validasi Error (Melebihi saldo)
-      availableBalance = 840000;
-      hasBankAccount = true;
-      cardRekeningAktif.classList.remove('hidden');
-      cardRekeningKosong.classList.add('hidden');
-      inputNominal.value = "1.500.000";
-      alertErrorBox.classList.remove('hidden');
-      alertErrorMsg.textContent = "Nominal pencairan (Rp 1.500.000) melebihi saldo tersedia (Rp 840.000).";
-      btnSubmit.disabled = true;
-      btnSubmit.classList.add('opacity-50', 'cursor-not-allowed');
-    } else if (state === 'E') {
-      // Sedang Mengajukan (Loading state)
-      availableBalance = 840000;
-      hasBankAccount = true;
-      cardRekeningAktif.classList.remove('hidden');
-      cardRekeningKosong.classList.add('hidden');
-      inputNominal.value = "500.000";
-      btnSubmit.disabled = true;
-      btnSubmit.classList.add('opacity-75');
-      btnSubmitLabel.textContent = "Mengirim Pengajuan...";
-      showToast("Mengirimkan permohonan ke server kliring IKAPI...", "sync");
-    } else if (state === 'F') {
-      // Sukses Konfirmasi
-      availableBalance = 840000;
-      hasBankAccount = true;
-      cardRekeningAktif.classList.remove('hidden');
-      cardRekeningKosong.classList.add('hidden');
-      document.getElementById('sukses-nominal-modal').textContent = "Rp " + inputNominal.value;
-      document.getElementById('modal-sukses-pengajuan').classList.remove('hidden');
-      document.getElementById('modal-sukses-pengajuan').classList.add('flex');
-    } else if (state === 'G') {
-      // Modal Bukti Transfer (Selesai)
-      availableBalance = 840000;
-      hasBankAccount = true;
-      openModalBuktiTransfer('WDR-2026-0038', '28 Oktober 2026', 'Rp 1.250.000', 'TRF-IKP-8829103');
-    } else if (state === 'H') {
-      // Bukti Dalam Proses
-      availableBalance = 840000;
-      hasBankAccount = true;
-      openDalamProsesToast();
-    } else if (state === 'I') {
-      // Gagal Memuat
-      viewMain.classList.add('hidden');
-      viewError.classList.remove('hidden');
-      viewError.classList.add('flex');
-    }
   }
 
-  function validateNominal() {
-    if (currentState === 'B' || currentState === 'C' || currentState === 'I') return;
+  function renderHistory() {
+    var list = filteredWithdrawals();
+    var pages = Math.max(1, Math.ceil(list.length / ui.pageSize));
+    if (ui.page > pages) ui.page = pages;
+    var start = (ui.page - 1) * ui.pageSize;
+    var visible = list.slice(start, start + ui.pageSize);
 
-    const input = document.getElementById('input-nominal');
-    const rawVal = input.value.replace(/\D/g, '');
-    const num = parseInt(rawVal, 10) || 0;
-    const alertErrorBox = document.getElementById('alert-error-box');
-    const alertErrorMsg = document.getElementById('alert-error-msg');
-    const btnSubmit = document.getElementById('btn-submit-pencairan');
-    const checkRekening = document.getElementById('check-rekening-valid');
+    var tbody = $('history-rows');
+    tbody.innerHTML = '';
 
-    // Reformat to Indonesian thousand separators
-    if (rawVal) {
-      input.value = new Intl.NumberFormat('id-ID').format(num);
-    }
+    visible.forEach(function (w) {
+      var tr = document.createElement('tr');
+      tr.className = 'border-b border-divider transition-colors hover:bg-soft';
 
-    if (!hasBankAccount) {
-      alertErrorBox.classList.remove('hidden');
-      alertErrorMsg.textContent = "Rekening bank penerbit belum terdaftar.";
-      btnSubmit.disabled = true;
-      btnSubmit.classList.add('opacity-50', 'cursor-not-allowed');
-      return;
-    }
+      var tdId = document.createElement('td');
+      tdId.className = 'px-5 py-3.5 lg:px-6';
+      var idEl = document.createElement('span');
+      idEl.className = 'num block font-semibold text-ink';
+      idEl.textContent = w.id;
+      var dateEl = document.createElement('span');
+      dateEl.className = 'block text-[12px] text-muted';
+      dateEl.textContent = fmtDate(w.date);
+      tdId.appendChild(idEl);
+      tdId.appendChild(dateEl);
 
-    if (num > availableBalance) {
-      alertErrorBox.classList.remove('hidden');
-      alertErrorMsg.textContent = "Nominal pencairan (Rp " + new Intl.NumberFormat('id-ID').format(num) + ") melebihi saldo tersedia (Rp " + new Intl.NumberFormat('id-ID').format(availableBalance) + ").";
-      btnSubmit.disabled = true;
-      btnSubmit.classList.add('opacity-50', 'cursor-not-allowed');
-    } else if (num < 100000) {
-      alertErrorBox.classList.remove('hidden');
-      alertErrorMsg.textContent = "Batas minimum pengajuan pencairan adalah Rp 100.000.";
-      btnSubmit.disabled = true;
-      btnSubmit.classList.add('opacity-50', 'cursor-not-allowed');
-    } else if (!checkRekening.checked) {
-      alertErrorBox.classList.remove('hidden');
-      alertErrorMsg.textContent = "Harap centang konfirmasi bahwa data rekening tujuan sudah benar.";
-      btnSubmit.disabled = true;
-      btnSubmit.classList.add('opacity-50', 'cursor-not-allowed');
+      var tdAmount = document.createElement('td');
+      tdAmount.className = 'num whitespace-nowrap px-4 py-3.5 text-right font-semibold text-ink';
+      tdAmount.textContent = rupiah(w.amount);
+
+      var tdBank = document.createElement('td');
+      tdBank.className = 'num px-4 py-3.5 text-muted';
+      tdBank.textContent = state.hasBank ? BASE.masked : '—';
+
+      var tdStatus = document.createElement('td');
+      tdStatus.className = 'px-4 py-3.5';
+      var chip = document.createElement('span');
+      chip.className = statusClass(w.status);
+      chip.textContent = statusLabel(w.status);
+      tdStatus.appendChild(chip);
+
+      var tdAction = document.createElement('td');
+      tdAction.className = 'px-4 py-3.5 pr-5 text-right lg:pr-6';
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'focus-ring grid h-8 w-8 place-items-center rounded-lg text-muted transition-colors hover:bg-neutral hover:text-ink';
+      btn.setAttribute('aria-label', 'Lihat detail pengajuan ' + w.id);
+      btn.setAttribute('data-detail', w.id);
+      btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">visibility</span>';
+      tdAction.appendChild(btn);
+
+      tr.appendChild(tdId); tr.appendChild(tdAmount); tr.appendChild(tdBank); tr.appendChild(tdStatus); tr.appendChild(tdAction);
+      tbody.appendChild(tr);
+    });
+
+    var empty = list.length === 0;
+    $('history-empty').classList.toggle('hidden', !empty);
+    tbody.closest('table').classList.toggle('hidden', empty);
+    $('history-count').textContent = 'Menampilkan ' + visible.length + ' dari ' + list.length + ' pengajuan';
+    $('page-current').textContent = String(ui.page);
+    $('page-prev').disabled = ui.page <= 1;
+    $('page-next').disabled = ui.page >= pages;
+  }
+
+  /* ---------- validation ---------- */
+  function showNominalError(msg) {
+    var el = $('nominal-error');
+    el.textContent = msg || '';
+    el.classList.toggle('hidden', !msg);
+    $('input-nominal').setAttribute('aria-invalid', msg ? 'true' : 'false');
+  }
+
+  function validate() {
+    var amount = parseAmount($('input-nominal').value);
+    showNominalError('');
+    $('confirm-error').classList.add('hidden');
+
+    if (!state.hasBank) { note('Rekening bank belum terdaftar. Tambahkan rekening pada Pengaturan Profil.'); return null; }
+    if (!amount) { showNominalError('Nominal pencairan wajib diisi.'); $('input-nominal').focus(); return null; }
+    if (amount < MIN_WITHDRAWAL) { showNominalError('Minimum pencairan ' + rupiah(MIN_WITHDRAWAL) + '.'); $('input-nominal').focus(); return null; }
+    if (amount > state.available) { showNominalError('Nominal melebihi saldo tersedia.'); $('input-nominal').focus(); return null; }
+    if (!$('confirm-check').checked) { $('confirm-error').classList.remove('hidden'); $('confirm-check').focus(); return null; }
+    if (submitting) return null;
+
+    if (amount > VERIFY_THRESHOLD) {
+      note('Pengajuan di atas ' + rupiah(VERIFY_THRESHOLD) + ' memerlukan verifikasi tambahan (simulasi prototype).');
     } else {
-      alertErrorBox.classList.add('hidden');
-      btnSubmit.disabled = false;
-      btnSubmit.classList.remove('opacity-50', 'cursor-not-allowed');
+      note('');
     }
+    return amount;
   }
 
-  function checkFormValidity() {
-    validateNominal();
+  /* ---------- modals ---------- */
+  var lastTrigger = null;
+
+  function openModal(id, trigger) {
+    lastTrigger = trigger || null;
+    $(id).classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    var focusable = $(id).querySelector('input, button');
+    if (focusable) focusable.focus();
+  }
+  function closeModal(id) {
+    $(id).classList.add('hidden');
+    document.body.style.overflow = '';
+    if (lastTrigger && document.contains(lastTrigger)) lastTrigger.focus();
+    lastTrigger = null;
   }
 
-  function setNominalMaksimal() {
-    if (availableBalance <= 0) return;
-    document.getElementById('input-nominal').value = new Intl.NumberFormat('id-ID').format(availableBalance);
-    validateNominal();
-  }
+  /* ---------- nominal input ---------- */
+  $('input-nominal').addEventListener('input', function (e) {
+    var digits = e.target.value.replace(/[^\d]/g, '');
+    e.target.value = formatInput(digits);
+    showNominalError('');
+  });
 
-  function handlePengajuan(e) {
+  /* ---------- review -> confirm -> submit ---------- */
+  $('withdraw-form').addEventListener('submit', function (e) {
     e.preventDefault();
-    if (!hasBankAccount) {
-      alert('Rekening bank belum terdaftar!');
+    if (submitting) return;
+    var amount = validate();
+    if (!amount) return;
+    pendingAmount = amount;
+    $('confirm-amount').textContent = rupiah(amount);
+    $('confirm-bank').textContent = BASE.bankName + ' ' + BASE.masked;
+    openModal('modal-confirm', $('btn-review'));
+  });
+
+  document.querySelectorAll('[data-close-confirm]').forEach(function (el) {
+    el.addEventListener('click', function () { closeModal('modal-confirm'); });
+  });
+
+  $('btn-submit').addEventListener('click', function () {
+    if (submitting) return;
+    /* Re-validate at final submit: never trust the earlier pass. */
+    var amount = parseAmount($('input-nominal').value);
+    if (!amount || amount < MIN_WITHDRAWAL || amount > state.available || !state.hasBank) {
+      closeModal('modal-confirm');
+      showNominalError('Periksa kembali nominal pencairan.');
       return;
     }
-    const input = document.getElementById('input-nominal');
-    const num = parseInt(input.value.replace(/\D/g, ''), 10) || 0;
-    if (num > availableBalance) {
-      setState('D');
-      return;
-    }
-    // Simulate submission
-    setState('E');
-    setTimeout(() => {
-      setState('F');
+
+    submitting = true;
+    var myRequest = ++requestId;
+    var btn = $('btn-submit');
+    btn.disabled = true;
+    $('submit-label').textContent = 'Memproses...';
+
+    window.setTimeout(function () {
+      if (myRequest !== requestId) return;   /* demo state changed meanwhile */
+      submitting = false;
+      btn.disabled = false;
+      $('submit-label').textContent = 'Ajukan Pencairan';
+
+      var id = 'WDR-2026-00' + (counter++);
+      withdrawals.unshift({ id: id, date: '2026-11-16', amount: amount, status: 'proses' });
+      state.available -= amount;
+      state.pending += amount;
+      ui.page = 1;
+
+      closeModal('modal-confirm');
+      $('success-number').textContent = id;
+      $('success-amount').textContent = rupiah(amount);
+      openModal('modal-success', $('btn-review'));
+
+      $('input-nominal').value = '';
+      $('confirm-check').checked = false;
+      paintSummary();
+      renderHistory();
     }, 900);
+  });
+
+  document.querySelectorAll('[data-close-success]').forEach(function (el) {
+    el.addEventListener('click', function () { closeModal('modal-success'); });
+  });
+
+  /* ---------- detail ---------- */
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-detail]');
+    if (!btn) return;
+    var id = btn.getAttribute('data-detail');
+    var w = withdrawals.filter(function (x) { return x.id === id; })[0];
+    if (!w) return;
+    $('detail-number').textContent = w.id;
+    $('detail-status').textContent = statusLabel(w.status);
+    $('detail-date').textContent = fmtDate(w.date);
+    $('detail-amount').textContent = rupiah(w.amount);
+    $('detail-bank').textContent = state.hasBank ? BASE.bankName + ' ' + BASE.masked : '—';
+    $('detail-proof').textContent = w.status === 'selesai'
+      ? 'Belum tersedia dalam prototype ini.'
+      : 'Belum tersedia selama pengajuan masih diproses.';
+    openModal('modal-detail', btn);
+  });
+
+  document.querySelectorAll('[data-close-detail]').forEach(function (el) {
+    el.addEventListener('click', function () { closeModal('modal-detail'); });
+  });
+
+  /* ---------- search / filter / pagination ---------- */
+  $('history-search').addEventListener('input', function (e) {
+    ui.query = e.target.value;
+    ui.page = 1;
+    renderHistory();
+  });
+  $('history-filter').addEventListener('change', function (e) {
+    ui.filter = e.target.value;
+    ui.page = 1;
+    renderHistory();
+  });
+  $('btn-reset-filter').addEventListener('click', function () {
+    ui.query = '';
+    ui.filter = 'all';
+    ui.page = 1;
+    $('history-search').value = '';
+    $('history-filter').value = 'all';
+    renderHistory();
+  });
+  $('page-prev').addEventListener('click', function () { if (ui.page > 1) { ui.page--; renderHistory(); } });
+  $('page-next').addEventListener('click', function () { ui.page++; renderHistory(); });
+
+  /* ---------- export (real CSV from the data in this page) ---------- */
+  $('btn-export').addEventListener('click', function () {
+    var rows = [['No. Pengajuan', 'Tanggal', 'Nominal', 'Rekening', 'Status']];
+    withdrawals.forEach(function (w) {
+      rows.push([w.id, w.date, w.amount, state.hasBank ? BASE.masked : '-', statusLabel(w.status)]);
+    });
+    rows.push([]);
+    rows.push(['Total Pendapatan Neto', '', state.net]);
+    rows.push(['Saldo Tersedia', '', state.available]);
+    rows.push(['Dalam Proses Transfer', '', state.pending]);
+
+    var csv = rows.map(function (r) { return r.join(';'); }).join('\r\n');
+    var blob = new Blob(['\ufeff' + csv], { type: 'text/csv;charset=utf-8;' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'rekap-royalti-ikapi.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    note('Rekap CSV dibuat dari data pada halaman ini.');
+  });
+
+  /* ---------- demo states A–I ---------- */
+  var demoToggle = $('demo-toggle'), demoMenu = $('demo-menu');
+  function closeDemo() { demoMenu.classList.add('hidden'); demoToggle.setAttribute('aria-expanded', 'false'); }
+
+  function syncDemoMenu() {
+    document.querySelectorAll('.demo-item').forEach(function (b) {
+      var on = b.getAttribute('data-demo') === ui.demo;
+      b.setAttribute('aria-checked', on ? 'true' : 'false');
+      b.classList.toggle('bg-soft', on);
+      var check = b.querySelector('.demo-check');
+      if (check) check.classList.toggle('hidden', !on);
+    });
   }
 
-  function openModalBuktiTransfer(noPengajuan, tgl, nominal, ref) {
-    document.getElementById('modal-bukti-subtitle').textContent = "No. Pengajuan: " + noPengajuan + " · Tanggal Transfer: " + tgl + " · Diunggah oleh: Administrator IKAPI Jawa Barat";
-    document.getElementById('slip-tanggal').textContent = tgl + " · 14:22 WIB";
-    document.getElementById('slip-ref').textContent = ref;
-    document.getElementById('slip-nominal').textContent = nominal;
-    const modal = document.getElementById('modal-bukti-transfer');
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
+  function applyDemo(s) {
+    ui.demo = s;
+    /* Invalidate any in-flight submission so no stale timer can fire. */
+    requestId++;
+    submitting = false;
+    $('btn-submit').disabled = false;
+    $('submit-label').textContent = 'Ajukan Pencairan';
+
+    closeModal('modal-confirm'); closeModal('modal-success'); closeModal('modal-detail');
+    $('view-error').classList.add('hidden');
+    $('view-loading').classList.add('hidden');
+    $('view-main').classList.remove('hidden');
+    note('');
+
+    withdrawals = BASE.withdrawals.slice();
+    state.net = BASE.net;
+    state.pending = BASE.pending;
+    state.available = BASE.available;
+    state.hasBank = true;
+    $('input-nominal').value = '';
+    $('confirm-check').checked = false;
+    showNominalError('');
+    $('confirm-error').classList.add('hidden');
+
+    if (s === 'B') {
+      state.available = 0;
+    } else if (s === 'C') {
+      state.hasBank = false;
+    } else if (s === 'D') {
+      $('input-nominal').value = formatInput(String(BASE.available + 250000));
+      showNominalError('Nominal melebihi saldo tersedia.');
+    } else if (s === 'E') {
+      $('input-nominal').value = '500.000';
+      $('confirm-check').checked = true;
+      $('confirm-amount').textContent = rupiah(500000);
+      $('confirm-bank').textContent = BASE.bankName + ' ' + BASE.masked;
+      submitting = true;
+      $('btn-submit').disabled = true;
+      $('submit-label').textContent = 'Memproses...';
+      openModal('modal-confirm', $('btn-review'));
+      submitting = false;
+    } else if (s === 'F') {
+      $('success-number').textContent = 'WDR-2026-00' + counter;
+      $('success-amount').textContent = rupiah(500000);
+      openModal('modal-success', $('btn-review'));
+    } else if (s === 'G' || s === 'H') {
+      var target = withdrawals.filter(function (w) {
+        return w.status === (s === 'G' ? 'selesai' : 'proses');
+      })[0];
+      if (target) {
+        $('detail-number').textContent = target.id;
+        $('detail-status').textContent = statusLabel(target.status);
+        $('detail-date').textContent = fmtDate(target.date);
+        $('detail-amount').textContent = rupiah(target.amount);
+        $('detail-bank').textContent = BASE.bankName + ' ' + BASE.masked;
+        $('detail-proof').textContent = s === 'G'
+          ? 'Belum tersedia dalam prototype ini.'
+          : 'Belum tersedia selama pengajuan masih diproses.';
+        openModal('modal-detail', $('demo-toggle'));
+      }
+    } else if (s === 'I') {
+      $('view-main').classList.add('hidden');
+      $('view-error').classList.remove('hidden');
+      $('retry-note').classList.add('hidden');
+    }
+
+    paintSummary();
+    renderHistory();
+    syncDemoMenu();
   }
 
-  function closeModalBuktiTransfer() {
-    const modal = document.getElementById('modal-bukti-transfer');
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
-  }
+  demoToggle.addEventListener('click', function () {
+    var open = demoMenu.classList.contains('hidden');
+    demoMenu.classList.toggle('hidden', !open);
+    demoToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  demoMenu.addEventListener('click', function (e) {
+    var btn = e.target.closest('.demo-item');
+    if (!btn) return;
+    closeDemo();
+    applyDemo(btn.getAttribute('data-demo'));
+  });
 
-  function closeModalSukses() {
-    const modal = document.getElementById('modal-sukses-pengajuan');
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
-  }
+  $('btn-retry').addEventListener('click', function () {
+    var btn = $('btn-retry');
+    btn.disabled = true;
+    $('view-error').classList.add('hidden');
+    $('view-loading').classList.remove('hidden');
+    window.setTimeout(function () {
+      btn.disabled = false;
+      $('view-loading').classList.add('hidden');
+      $('view-main').classList.remove('hidden');
+      $('retry-note').classList.add('hidden');
+      note('Data ditampilkan kembali menggunakan data demo prototype.');
+      ui.demo = 'A';
+      paintSummary();
+      renderHistory();
+      syncDemoMenu();
+    }, 900);
+  });
 
-  function openDalamProsesToast() {
-    showToast("Pencairan dana masih dalam tahap verifikasi antrean transfer. Bukti transfer belum tersedia.", "schedule");
-  }
+  /* ---------- notifications / sidebar / keyboard ---------- */
+  var notifBtn = $('btn-notif'), notifPanel = $('notif-panel');
+  notifBtn.addEventListener('click', function () {
+    var open = notifPanel.classList.contains('hidden');
+    notifPanel.classList.toggle('hidden', !open);
+    notifBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
 
-  function showToast(msg, icon) {
-    const toast = document.getElementById('toast-notification');
-    const toastText = document.getElementById('toast-text');
-    const toastIcon = document.getElementById('toast-icon');
-    toastText.textContent = msg;
-    if (icon) toastIcon.textContent = icon;
-    toast.classList.remove('hidden');
-    toast.classList.add('flex');
-    setTimeout(() => {
-      hideToast();
-    }, 4500);
-  }
-
-  function hideToast() {
-    const toast = document.getElementById('toast-notification');
-    toast.classList.add('hidden');
-    toast.classList.remove('flex');
-  }
-
-  // Keyboard escape listeners for modals
-  document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-      closeModalBuktiTransfer();
-      closeModalSukses();
-      hideToast();
+  document.addEventListener('click', function (e) {
+    if (!demoMenu.contains(e.target) && !demoToggle.contains(e.target)) closeDemo();
+    if (!notifPanel.contains(e.target) && !notifBtn.contains(e.target)) {
+      notifPanel.classList.add('hidden');
+      notifBtn.setAttribute('aria-expanded', 'false');
     }
   });
-</script></div></main></div>
 
-</body></html>
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (!$('modal-confirm').classList.contains('hidden')) { closeModal('modal-confirm'); return; }
+    if (!$('modal-success').classList.contains('hidden')) { closeModal('modal-success'); return; }
+    if (!$('modal-detail').classList.contains('hidden')) { closeModal('modal-detail'); return; }
+    closeDemo();
+    notifPanel.classList.add('hidden');
+    notifBtn.setAttribute('aria-expanded', 'false');
+    closeSidebar();
+  });
+
+  var sidebar = $('publisher-sidebar'), scrim = $('sidebar-scrim'), toggle = $('sidebar-toggle');
+  function openSidebar() {
+    sidebar.classList.add('is-open');
+    scrim.classList.remove('hidden');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    var first = sidebar.querySelector('a');
+    if (first) first.focus();
+  }
+  function closeSidebar() {
+    if (!sidebar.classList.contains('is-open')) return;
+    sidebar.classList.remove('is-open');
+    scrim.classList.add('hidden');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    toggle.focus();
+  }
+  toggle.addEventListener('click', function () {
+    sidebar.classList.contains('is-open') ? closeSidebar() : openSidebar();
+  });
+  scrim.addEventListener('click', closeSidebar);
+  sidebar.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeSidebar); });
+
+  /* ---------- init ---------- */
+  paintSummary();
+  renderHistory();
+  syncDemoMenu();
+})();
+</script>
+</body>
+</html>

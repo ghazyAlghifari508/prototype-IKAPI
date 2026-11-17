@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <title>Detail Agenda — IKAPI Store Jawa Barat</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <!-- Typography: DM Sans (Hostinger Design System) & Fallback Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #673de6;
+      --color-primary-hover: #5025d1;
+      --color-primary-deep: #2f1c6a;
+      --color-canvas: #ffffff;
+      --color-surface-soft: #f5f6ff;
+      --color-surface-neutral: #f5f5f6;
+      --color-text-primary: #222225;
+      --color-text-secondary: #62636b;
+      --color-border: #e5e7eb;
+    }
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        color: #222225;
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+      body {
+        overflow-x: clip;
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    .scrollbar-none::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-none {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: "#673de6",
+              hover: "#5025d1",
+              deep: "#2f1c6a",
+              container: "#673de6",
+              accent: "#9d99ff"
+            },
+            surface: {
+              DEFAULT: "#ffffff",
+              soft: "#f5f6ff",
+              neutral: "#f5f5f6",
+              border: "#e5e7eb"
+            },
+            ink: {
+              body: "#222225",
+              muted: "#62636b",
+              subtle: "#9d9ea4"
+            },
+            "border-subtle": "#e5e7eb",
+            "border-bold": "#d1d5db"
+          },
+          fontFamily: {
+            sans: ["'DM Sans'", "sans-serif"],
+            body: ["'DM Sans'", "sans-serif"]
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+            '4xl': '1.75rem'
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-white font-sans text-ink-body antialiased selection:bg-primary-soft selection:text-primary-deep">
+
+  <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-border-subtle shadow-[0_1px_4px_rgba(34,34,37,0.04)]">
+    <div class="h-28 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between">
+      <div class="h-16 flex items-center justify-between gap-4">
+        <!-- Logo -->
+        <div class="flex items-center gap-4 shrink-0">
+          <a href="beranda_desktop.html" data-path="beranda" class="flex items-center" aria-label="Beranda IKAPI Jawa Barat">
+            <img alt="Logo IKAPI Jawa Barat" class="h-7 sm:h-8 w-auto object-contain" src="../../assets/logo-ikapi-jabar.png">
+          </a>
+        </div>
+        <!-- Search Bar -->
+        <div class="flex-1 max-w-xl mx-2 hidden sm:flex items-center">
+          <div class="relative w-full">
+            <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-muted text-[20px]">search</span>
+            <input class="w-full h-10 pl-10 pr-4 rounded-xl bg-surface-neutral text-[14px] text-ink-body placeholder:text-ink-muted outline-none ring-1 ring-border-subtle focus:ring-2 focus:ring-primary focus:bg-white transition-all" placeholder="Cari judul buku, lokakarya, atau artikel..." type="text">
+          </div>
+        </div>
+        <!-- Right Actions -->
+        <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+          <a class="relative p-2 rounded-xl text-ink-body hover:text-primary hover:bg-surface-soft transition-colors" data-path="keranjang" href="keranjang_pembayaran_terpadu_desktop.html" aria-label="Keranjang Belanja">
+            <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+            <span id="header-cart-badge" class="absolute 1 top-1 right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-primary text-white text-[11px] font-bold flex items-center justify-center">2</span>
+          </a>
+          <div class="h-6 w-px bg-border-subtle"></div>
+          <a class="hidden h-10 items-center rounded-xl px-3 text-[14px] font-semibold text-ink-body transition-colors hover:bg-surface-soft sm:flex" data-path="login" href="masuk_login_desktop.html">
+            <span>Masuk</span>
+          </a>
+          <a class="hidden h-10 items-center rounded-xl bg-primary px-5 text-[14px] font-semibold text-white shadow-xs transition-colors hover:bg-primary-hover sm:flex" data-path="register" href="daftar_akun_register_desktop.html">
+            <span>Daftar</span>
+          </a>
+        </div>
+      </div>
+      <!-- Primary Nav Tabs -->
+      <nav class="h-12 flex items-center gap-6 overflow-x-auto scrollbar-none max-w-full">
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="beranda" href="beranda_desktop.html">Beranda</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a>
+        <a aria-current="page" class="h-full flex items-center transition-colors whitespace-nowrap text-primary font-bold border-b-2 border-primary" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Komunitas Literasi</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="w-full pt-28 bg-white min-h-[calc(100vh-16rem)]">
+
+    <!-- Breadcrumb / back -->
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+      <a href="agenda_berita_literasi_desktop.html" data-path="agenda-literasi"
+        class="inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-ink-muted transition-colors hover:text-primary">
+        <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_back</span>
+        <span>Kembali ke Agenda Literasi</span>
+      </a>
+    </div>
+
+    <section class="w-full pt-5 pb-12">
+      <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10 items-start">
+
+          <!-- Article -->
+          <div class="lg:col-span-8">
+            <div class="relative w-full aspect-[16/9] overflow-hidden rounded-2xl border border-border-subtle bg-surface-neutral">
+              <img id="event-cover" src="" alt="" class="h-full w-full object-cover">
+            </div>
+
+            <div class="mt-5 flex flex-wrap items-center gap-2 text-[12.5px] text-ink-muted">
+              <span id="event-category" class="font-bold text-primary"></span>
+              <span aria-hidden="true" class="h-3 w-px bg-border-subtle"></span>
+              <span id="event-format"></span>
+            </div>
+
+            <h1 id="event-title" class="mt-2 text-[26px] font-bold leading-tight tracking-tight text-ink-body sm:text-[32px]"></h1>
+
+            <dl class="mt-5 grid grid-cols-1 gap-3 border-y border-border-subtle py-4 text-[13.5px] sm:grid-cols-3">
+              <div class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-[18px] text-primary" aria-hidden="true">calendar_month</span>
+                <div><dt class="text-ink-muted">Tanggal</dt><dd id="event-date" class="font-semibold text-ink-body"></dd></div>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-[18px] text-primary" aria-hidden="true">schedule</span>
+                <div><dt class="text-ink-muted">Waktu</dt><dd id="event-time" class="font-semibold text-ink-body"></dd></div>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-[18px] text-primary" aria-hidden="true">location_on</span>
+                <div><dt class="text-ink-muted">Lokasi</dt><dd id="event-location" class="font-semibold text-ink-body"></dd></div>
+              </div>
+            </dl>
+
+            <div class="mt-7 space-y-3">
+              <h2 class="text-[18px] font-bold tracking-tight text-ink-body">Tentang kegiatan</h2>
+              <div id="event-description" class="space-y-3 text-[15px] leading-relaxed text-ink-body"></div>
+            </div>
+
+            <div class="mt-8">
+              <h2 class="text-[18px] font-bold tracking-tight text-ink-body">Susunan acara</h2>
+              <ol id="event-rundown" class="mt-3 divide-y divide-border-subtle border-y border-border-subtle"></ol>
+            </div>
+
+            <div class="mt-8">
+              <h2 class="text-[18px] font-bold tracking-tight text-ink-body">Narasumber</h2>
+              <ul id="event-speakers" class="mt-3 space-y-3"></ul>
+            </div>
+
+            <div class="mt-8">
+              <h2 class="text-[18px] font-bold tracking-tight text-ink-body">Informasi peserta</h2>
+              <ul id="event-notes" class="mt-2.5 list-disc space-y-1.5 pl-5 text-[14px] leading-relaxed text-ink-body"></ul>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="lg:col-span-4 lg:sticky lg:top-28">
+            <div class="rounded-2xl border border-border-subtle bg-white p-5 shadow-xs">
+              <p class="text-[11px] font-bold uppercase tracking-[0.08em] text-ink-muted">Penyelenggara</p>
+              <p id="event-organizer" class="mt-1 text-[15px] font-bold text-ink-body"></p>
+
+              <dl class="mt-4 space-y-2.5 border-t border-border-subtle pt-4 text-[13.5px]">
+                <div class="flex items-start justify-between gap-4">
+                  <dt class="text-ink-muted">Kategori</dt>
+                  <dd id="event-side-category" class="text-right font-semibold text-ink-body"></dd>
+                </div>
+                <div class="flex items-start justify-between gap-4">
+                  <dt class="text-ink-muted">Format</dt>
+                  <dd id="event-side-format" class="text-right font-semibold text-ink-body"></dd>
+                </div>
+                <div class="flex items-start justify-between gap-4">
+                  <dt class="text-ink-muted">Biaya</dt>
+                  <dd id="event-side-fee" class="text-right font-semibold text-ink-body"></dd>
+                </div>
+              </dl>
+
+              <button type="button" id="event-save" class="mt-5 flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-primary text-[14px] font-bold text-white transition-colors hover:bg-primary-hover">
+                <span class="material-symbols-outlined text-[19px]" aria-hidden="true">calendar_add_on</span>
+                <span>Simpan ke Kalender</span>
+              </button>
+              <a href="agenda_berita_literasi_desktop.html" data-path="agenda-literasi"
+                class="mt-2 flex h-11 w-full items-center justify-center rounded-xl border border-border-subtle text-[14px] font-semibold text-ink-body transition-colors hover:bg-surface-neutral">
+                Lihat agenda lain
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Not found -->
+    <section id="event-not-found" class="hidden">
+      <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <div class="rounded-2xl border border-border-subtle bg-white px-6 py-14 text-center">
+          <img src="../../assets/ilustration/notfoundil.png" alt="" aria-hidden="true" class="mx-auto h-28 w-auto">
+          <h1 class="mt-3 text-[18px] font-bold text-ink-body">Agenda tidak ditemukan</h1>
+          <p class="mx-auto mt-1.5 max-w-sm text-[13.5px] leading-relaxed text-ink-muted">Agenda yang kamu buka tidak tersedia. Pilih kegiatan lain dari daftar agenda literasi.</p>
+          <a href="agenda_berita_literasi_desktop.html" class="mt-4 inline-flex h-10 items-center rounded-xl bg-primary px-4 text-[13.5px] font-semibold text-white hover:bg-primary-hover">Kembali ke Agenda</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (Hostinger Deep Purple #2F1C6A Inspired) -->
+  <footer class="w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        
+        <!-- Kolom 1: Jelajahi -->
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Jelajahi</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="kategori" href="katalog_buku_desktop.html">Kategori Pilihan</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Buku Rilis Terbaru</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="katalog-buku" href="katalog_buku_desktop.html">Buku Terlaris</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 2: Informasi Pembelian -->
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Informasi Pembelian</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Cara Pembelian</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Metode Pembayaran</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Panduan Web Reader</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Bantuan &amp; FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3: Tentang IKAPI -->
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Tentang IKAPI</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Tentang Kami</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Anggota Penerbit</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Kemitraan Perpustakaan</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Hubungi Kami</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 4: Lainnya -->
+        <div class="flex flex-col gap-3">
+          <span class="text-[16px] text-white font-bold tracking-tight">Lainnya</span>
+          <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
+            <li><a class="hover:text-white transition-colors" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Syarat &amp; Ketentuan</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="bantuan" href="chatbot_bantuan_rekomendasi_desktop.html">Kebijakan Privasi</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-[13px] text-[#b8b8bd]">
+        <p>© 2026 IKAPI Jawa Barat. Seluruh hak cipta dilindungi undang-undang.</p>
+        <div class="flex flex-wrap items-center gap-4">
+          <span class="text-white/60">Media Sosial:</span>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="Instagram IKAPI Jabar">Instagram</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="YouTube IKAPI Jabar">YouTube</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="Facebook IKAPI Jabar">Facebook</a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="X Twitter IKAPI Jabar">X</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* Detail agenda. The three entries mirror the cards on agenda_berita_literasi_desktop.html
+       so the listing and the detail page never disagree. */
+    (function () {
+      'use strict';
+
+      var EVENTS = {
+        'ev-1': {
+          title: 'Lokakarya Filologi Populer: Mengalihaksarakan Naskah Sunda Kuno',
+          category: 'Lokakarya',
+          format: 'Tatap muka',
+          dateText: 'Rabu, 18 November 2026',
+          dateIcs: ['20261118T100000', '20261118T123000'],
+          time: '10:00 - 12:30 WIB',
+          location: 'Ruang Seminar Graha IKAPI Jabar, Bandung',
+          organizer: 'Kiblat Buku',
+          fee: 'Gratis, kuota 40 peserta',
+          cover: '../../assets/events/event-community.jpg',
+          description: [
+            'Lokakarya ini membuka cara membaca dan mengalihaksarakan naskah Sunda kuno bagi pembaca umum. Peserta dikenalkan pada bentuk aksara, kaidah penulisan, serta langkah praktis memindahkan teks dari lembar naskah ke huruf Latin.',
+            'Materi disusun untuk peserta tanpa latar belakang filologi. Setiap sesi disertai latihan terbimbing menggunakan lembar kerja yang disediakan panitia.'
+          ],
+          rundown: [
+            ['10:00', 'Registrasi dan pembukaan'],
+            ['10:15', 'Pengenalan aksara Sunda kuno'],
+            ['11:00', 'Latihan alih aksara terbimbing'],
+            ['12:00', 'Diskusi dan penutup']
+          ],
+          speakers: [
+            ['Ayi R. Kurnia', 'Penulis dan peneliti naskah Sunda, Kiblat Buku'],
+            ['Ratih Wulandari', 'Pengajar filologi, Universitas Padjadjaran']
+          ],
+          notes: [
+            'Peserta membawa laptop atau buku catatan.',
+            'Lembar kerja naskah disediakan panitia.',
+            'Tidak diperlukan kemampuan membaca aksara sebelumnya.'
+          ]
+        },
+        'ev-2': {
+          title: 'Bedah Buku & Diskusi Publik: Pendidikan Karakter Berbasis Kearifan Lokal',
+          category: 'Diskusi Publik',
+          format: 'Tatap muka',
+          dateText: 'Minggu, 22 November 2026',
+          dateIcs: ['20261122T133000', '20261122T160000'],
+          time: '13:30 - 16:00 WIB',
+          location: 'Aula Pusat Studi Sunda, Bandung',
+          organizer: 'UPI Press',
+          fee: 'Gratis, kuota 80 peserta',
+          cover: '../../assets/events/event-children-story.jpg',
+          description: [
+            'Diskusi publik ini membahas buku Pendidikan Karakter Sunda dan cara nilai kearifan lokal dipakai di ruang kelas. Pembahasan diarahkan pada praktik pembelajaran, bukan hanya gagasan.',
+            'Sesi tanya jawab dibuka untuk guru, mahasiswa, dan pengelola komunitas literasi.'
+          ],
+          rundown: [
+            ['13:30', 'Registrasi dan pembukaan'],
+            ['13:45', 'Paparan penulis'],
+            ['14:45', 'Tanggapan penanggap'],
+            ['15:30', 'Tanya jawab dan penutup']
+          ],
+          speakers: [
+            ['Dr. Cecep Hidayat', 'Penulis, UPI Press'],
+            ['Fajar Ashari', 'Praktisi pendidikan dasar, Bandung']
+          ],
+          notes: [
+            'Terbuka untuk umum tanpa pendaftaran berkelompok.',
+            'Diskusi direkam untuk dokumentasi penyelenggara.'
+          ]
+        },
+        'ev-3': {
+          title: 'Sarasehan Editor & Penulis: Standarisasi E-Book Berlisensi',
+          category: 'Webinar',
+          format: 'Daring (Zoom)',
+          dateText: 'Sabtu, 28 November 2026',
+          dateIcs: ['20261128T090000', '20261128T120000'],
+          time: '09:00 - 12:00 WIB',
+          location: 'Daring via Zoom / Hybrid IKAPI Jabar',
+          organizer: 'IKAPI Jabar',
+          fee: 'Gratis untuk anggota IKAPI Jabar',
+          cover: '../../assets/events/event-webinar.jpg',
+          description: [
+            'Sarasehan ini membahas standar berkas e-book yang siap dipasarkan: struktur metadata, penamaan berkas, dan kelengkapan lisensi penerbit.',
+            'Materi ditujukan bagi editor dan penulis yang menyiapkan naskah untuk katalog digital.'
+          ],
+          rundown: [
+            ['09:00', 'Pembukaan dan pengantar'],
+            ['09:20', 'Standar metadata e-book'],
+            ['10:30', 'Pemeriksaan berkas dan lisensi'],
+            ['11:30', 'Tanya jawab']
+          ],
+          speakers: [
+            ['H. Asep Ridwan, M.Hum', 'Ketua IKAPI Jawa Barat'],
+            ['Dr. Encep Kosasih', 'Editor, Flora Priangan: Arsip Hayati']
+          ],
+          notes: [
+            'Tautan Zoom dikirim melalui email terdaftar pada hari kegiatan.',
+            'Rekaman tersedia terbatas untuk peserta.'
+          ]
+        }
+      };
+
+      var $ = function (id) { return document.getElementById(id); };
+      var params = new URLSearchParams(window.location.search);
+      var key = params.get('id');
+      var event = EVENTS[key];
+
+      function fill() {
+        if (!event) {
+          document.querySelector('main > section').classList.add('hidden');
+          $('event-not-found').classList.remove('hidden');
+          return;
+        }
+
+        document.title = event.title + ' — IKAPI Store Jawa Barat';
+        var cover = $('event-cover');
+        cover.src = event.cover;
+        cover.alt = 'Foto kegiatan ' + event.title;
+
+        $('event-category').textContent = event.category;
+        $('event-format').textContent = event.format;
+        $('event-title').textContent = event.title;
+        $('event-date').textContent = event.dateText;
+        $('event-time').textContent = event.time;
+        $('event-location').textContent = event.location;
+        $('event-organizer').textContent = event.organizer;
+        $('event-side-category').textContent = event.category;
+        $('event-side-format').textContent = event.format;
+        $('event-side-fee').textContent = event.fee;
+
+        var description = $('event-description');
+        description.textContent = '';
+        event.description.forEach(function (paragraph) {
+          var p = document.createElement('p');
+          p.textContent = paragraph;
+          description.appendChild(p);
+        });
+
+        var rundown = $('event-rundown');
+        rundown.textContent = '';
+        event.rundown.forEach(function (row) {
+          var li = document.createElement('li');
+          li.className = 'flex items-start gap-4 py-3 text-[14px]';
+          var time = document.createElement('span');
+          time.className = 'w-14 shrink-0 font-bold tabular-nums text-ink-body';
+          time.textContent = row[0];
+          var text = document.createElement('span');
+          text.className = 'text-ink-body';
+          text.textContent = row[1];
+          li.appendChild(time);
+          li.appendChild(text);
+          rundown.appendChild(li);
+        });
+
+        var speakers = $('event-speakers');
+        speakers.textContent = '';
+        event.speakers.forEach(function (person) {
+          var li = document.createElement('li');
+          li.className = 'flex items-start gap-3 rounded-xl border border-border-subtle bg-white px-4 py-3';
+          var icon = document.createElement('span');
+          icon.className = 'material-symbols-outlined text-[18px] text-primary';
+          icon.setAttribute('aria-hidden', 'true');
+          icon.textContent = 'person';
+          var wrap = document.createElement('div');
+          var name = document.createElement('p');
+          name.className = 'text-[14px] font-bold text-ink-body';
+          name.textContent = person[0];
+          var role = document.createElement('p');
+          role.className = 'mt-0.5 text-[13px] text-ink-muted';
+          role.textContent = person[1];
+          wrap.appendChild(name);
+          wrap.appendChild(role);
+          li.appendChild(icon);
+          li.appendChild(wrap);
+          speakers.appendChild(li);
+        });
+
+        var notes = $('event-notes');
+        notes.textContent = '';
+        event.notes.forEach(function (note) {
+          var li = document.createElement('li');
+          li.textContent = note;
+          notes.appendChild(li);
+        });
+      }
+
+      /* Same iCalendar writer used by the agenda list. */
+      function downloadIcsFile(title, startISO, endISO, location, description) {
+        var cleanSummary = title.replace(/([,;])/g, '\\$1');
+        var cleanLocation = location.replace(/([,;])/g, '\\$1');
+        var cleanDesc = description.replace(/([,;])/g, '\\$1');
+
+        var icsData = [
+          'BEGIN:VCALENDAR',
+          'VERSION:2.0',
+          'PRODID:-//IKAPI Jawa Barat//Agenda Literasi//ID',
+          'CALSCALE:GREGORIAN',
+          'METHOD:PUBLISH',
+          'BEGIN:VEVENT',
+          'SUMMARY:' + cleanSummary,
+          'DESCRIPTION:' + cleanDesc,
+          'LOCATION:' + cleanLocation,
+          'DTSTART:' + startISO,
+          'DTEND:' + endISO,
+          'STATUS:CONFIRMED',
+          'END:VEVENT',
+          'END:VCALENDAR'
+        ].join('\r\n');
+
+        var blob = new Blob([icsData], { type: 'text/calendar;charset=utf-8' });
+        var url = URL.createObjectURL(blob);
+        var link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', title.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '.ics');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      }
+
+      $('event-save').addEventListener('click', function () {
+        if (!event) return;
+        downloadIcsFile(event.title, event.dateIcs[0], event.dateIcs[1], event.location, event.title + ' - ' + event.category + ' IKAPI Jabar.');
+      });
+
+      fill();
+    })();
+  </script>
+
+<script src="chatbot-widget.js" defer></script>
+</body>
+</html>

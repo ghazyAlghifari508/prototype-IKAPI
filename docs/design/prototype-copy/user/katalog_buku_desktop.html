@@ -116,8 +116,11 @@
             <span id="cart-badge" class="absolute top-1 right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-primary text-white text-[11px] font-bold flex items-center justify-center">2</span>
           </a>
           <div class="h-6 w-px bg-border-subtle"></div>
-          <a class="hidden sm:flex h-10 px-5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[14px] font-semibold items-center gap-2 transition-colors shadow-xs" data-path="login" href="masuk_login_desktop.html">
-            <span>Masuk / Akun</span>
+          <a class="hidden h-10 items-center rounded-xl px-3 text-[14px] font-semibold text-ink-body transition-colors hover:bg-surface-soft sm:flex" data-path="login" href="masuk_login_desktop.html">
+            <span>Masuk</span>
+          </a>
+          <a class="hidden h-10 items-center rounded-xl bg-primary px-5 text-[14px] font-semibold text-white shadow-xs transition-colors hover:bg-primary-hover sm:flex" data-path="register" href="daftar_akun_register_desktop.html">
+            <span>Daftar</span>
           </a>
           <a href="akun_saya_profil_dropdown_navigasi_desktop.html" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white shadow-xs" aria-label="Akun Saya">
             <span class="material-symbols-outlined text-[18px]">person</span>
@@ -129,7 +132,7 @@
         <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="beranda" href="beranda_desktop.html">Beranda</a>
         <a aria-current="page" class="h-full flex items-center transition-colors whitespace-nowrap text-primary font-bold border-b-2 border-primary text-[14px]" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a>
         <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a>
-        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Komunitas Penerbit</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Komunitas Literasi</a>
       </nav>
     </div>
   </header>
@@ -365,7 +368,7 @@
   </main>
 
   <!-- TOAST NOTIFICATION -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-ink-body text-white shadow-xl text-[14px] font-medium border border-white/10">
+  <div id="toast" class="fixed bottom-24 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-ink-body text-white shadow-xl text-[14px] font-medium border border-white/10">
     <span class="material-symbols-outlined text-primary-accent text-[20px]">check_circle</span>
     <span id="toast-message">Item berhasil ditambahkan ke keranjang</span>
   </div>
@@ -400,10 +403,10 @@
         <div class="flex flex-col gap-3">
           <span class="text-[16px] text-white font-bold tracking-tight">Tentang IKAPI</span>
           <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
-            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Tentang Kami</a></li>
-            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Anggota Penerbit</a></li>
-            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Kemitraan Perpustakaan</a></li>
-            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Hubungi Kami</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Tentang Kami</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Anggota Penerbit</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Kemitraan Perpustakaan</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Hubungi Kami</a></li>
           </ul>
         </div>
 
@@ -903,5 +906,8 @@
       }
     });
   </script>
+
+<script src="chatbot-widget.js" defer></script>
+
 </body>
 </html>

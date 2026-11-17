@@ -1,582 +1,1089 @@
 <!DOCTYPE html>
-
-<html lang="id" style="width: 1280px; height: 1256px; overflow: hidden; position: relative;"><head>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-base text-ink-body"><svg aria-hidden="true" class="inline-defs-container" style="position:absolute;width:0;height:0;overflow:hidden"></svg><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
-  darkMode: "class",
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelola Buku — Portal Penerbit IKAPI Jawa Barat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
   theme: {
     extend: {
-      "colors": {
-        "surface-lilac": "#E5E4FF",
-        "surface-container-highest": "#e3e1ef",
-        "surface-bright": "#fcf8ff",
-        "surface-variant": "#e3e1ef",
-        "surface-dim": "#dbd8e7",
-        "on-surface": "#1b1b25",
-        "on-tertiary": "#ffffff",
-        "background": "#fcf8ff",
-        "secondary-fixed-dim": "#f4b5c8",
-        "outline-variant": "#c7c4d7",
-        "on-background": "#1b1b25",
-        "surface-sky": "#E0F6FC",
-        "surface-container-high": "#e9e6f5",
-        "on-error": "#ffffff",
-        "surface-container-low": "#f5f2ff",
-        "inverse-primary": "#c2c1ff",
-        "surface-tint": "#4c48dc",
-        "on-tertiary-fixed": "#241a00",
-        "tertiary-container": "#cea623",
-        "on-secondary-container": "#7a495a",
-        "on-secondary-fixed-variant": "#663949",
-        "primary-container": "#5956e9",
-        "surface-soft": "#F8F7FF",
-        "on-primary": "#ffffff",
-        "surface-container": "#efecfb",
-        "on-secondary": "#ffffff",
-        "ink-body": "#191923",
-        "on-primary-container": "#eeeaff",
-        "inverse-on-surface": "#f2effe",
-        "on-primary-fixed": "#0c006a",
-        "inverse-surface": "#302f3a",
-        "surface-cream": "#FFF1E3",
-        "feedback-error": "#B42318",
-        "error-container": "#ffdad6",
-        "tertiary": "#745b00",
-        "outline": "#777586",
-        "primary": "#3f3ad0",
-        "secondary-fixed": "#ffd9e3",
-        "surface-container-lowest": "#ffffff",
-        "on-primary-fixed-variant": "#3229c4",
-        "secondary-container": "#fdbed1",
-        "surface-paper": "#FFF0E3",
-        "on-secondary-fixed": "#330e1d",
-        "primary-fixed": "#e2dfff",
-        "on-tertiary-fixed-variant": "#584400",
-        "error": "#ba1a1a",
-        "on-surface-variant": "#464555",
-        "tertiary-fixed-dim": "#ecc23f",
-        "primary-fixed-dim": "#c2c1ff",
-        "inverse-deep": "#24233D",
-        "border-bold": "#CFD0DD",
-        "surface": "#fcf8ff",
-        "on-error-container": "#93000a",
-        "secondary": "#815060",
-        "on-tertiary-container": "#4f3d00",
-        "tertiary-fixed": "#ffe08d",
-        "border-subtle": "#E7E7EF",
-        "ink-muted": "#555665"
+      colors: {
+        primary: '#673DE6',
+        'primary-hover': '#5025D1',
+        'primary-deep': '#2F1C6A',
+        canvas: '#FFFFFF',
+        soft: '#F5F6FF',
+        neutral: '#F5F5F6',
+        ink: '#222225',
+        muted: '#62636B',
+        border: '#E5E7EB',
+        divider: '#EFEFF2',
       },
-      "borderRadius": {
-        "DEFAULT": "0.25rem",
-        "lg": "0.5rem",
-        "xl": "0.75rem",
-        "full": "9999px"
-      },
-      "spacing": {
-        "gutter": "1.5rem",
-        "space-sm": "0.5rem",
-        "space-md": "1rem",
-        "space-xs": "0.25rem",
-        "margin-mobile": "1.25rem",
-        "space-3xl": "4.5rem",
-        "space-lg": "1.5rem",
-        "space-xl": "2rem",
-        "space-2xl": "3rem",
-        "gutter-mobile": "1.25rem",
-        "margin": "2.5rem"
-      },
-      "fontFamily": {
-        "display-md-mobile": ["Plus Jakarta Sans"],
-        "label-small": ["Plus Jakarta Sans"],
-        "display-lg-mobile": ["Plus Jakarta Sans"],
-        "body-base": ["Plus Jakarta Sans"],
-        "display-md": ["Plus Jakarta Sans"],
-        "body-small": ["Plus Jakarta Sans"],
-        "headline-lg-mobile": ["Plus Jakarta Sans"],
-        "headline-lg": ["Plus Jakarta Sans"],
-        "headline-md": ["Plus Jakarta Sans"],
-        "title-md": ["Plus Jakarta Sans"],
-        "display-lg": ["Plus Jakarta Sans"],
-        "label": ["Plus Jakarta Sans"]
-      },
-      "fontSize": {
-        "display-md-mobile": ["28px", {"lineHeight": "1.2", "letterSpacing": "-0.025em", "fontWeight": "800"}],
-        "label-small": ["12px", {"lineHeight": "1.3", "letterSpacing": "0.02em", "fontWeight": "600"}],
-        "display-lg-mobile": ["34px", {"lineHeight": "1.15", "letterSpacing": "-0.03em", "fontWeight": "800"}],
-        "body-base": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
-        "display-md": ["44px", {"lineHeight": "1.12", "letterSpacing": "-0.035em", "fontWeight": "800"}],
-        "body-small": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
-        "headline-lg-mobile": ["24px", {"lineHeight": "1.25", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-        "headline-lg": ["36px", {"lineHeight": "1.18", "letterSpacing": "-0.03em", "fontWeight": "700"}],
-        "headline-md": ["28px", {"lineHeight": "1.22", "letterSpacing": "-0.025em", "fontWeight": "700"}],
-        "title-md": ["18px", {"lineHeight": "1.35", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-        "display-lg": ["56px", {"lineHeight": "1.08", "letterSpacing": "-0.04em", "fontWeight": "800"}],
-        "label": ["14px", {"lineHeight": "1.35", "letterSpacing": "0", "fontWeight": "600"}]
-      }
+      fontFamily: { sans: ['DM Sans', 'system-ui', 'sans-serif'] },
+      borderRadius: { xl: '12px', '2xl': '16px', '3xl': '20px' },
     }
   }
-}</script><aside class="fixed left-0 top-0 h-full w-[240px] bg-surface-soft z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="logo-ikapu.png" class="h-8 w-auto object-contain" src="../../assets/logo-ikapi-jabar.png"/><div class="flex flex-col min-w-0"></div></div><div class="px-space-md py-space-sm"></div><nav class="flex flex-col gap-1 px-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label text-label" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label text-label" data-path="kelola-buku" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>Kelola Buku</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label text-label" data-path="pesanan-masuk" href="#"><span class="material-symbols-outlined text-[20px]">inbox</span><span>Pesanan Masuk</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label text-label" data-path="pendapatan-dan-pencairan" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span>Pendapatan &amp; Pencairan</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label text-label" data-path="ulasan-pembeli" href="#"><span class="material-symbols-outlined text-[20px]">reviews</span><span>Ulasan Pembeli</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label text-label" data-path="pengaturan-profil" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span>Pengaturan Profil</span></a></nav></div></aside><div class="pl-[240px]"><header class="fixed top-0 left-[240px] right-0 h-16 bg-surface-bright/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"></div><div class="flex items-center gap-space-md"><button aria-label="Notifikasi" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-feedback-error"></span></button><div class="flex items-center gap-space-sm pl-space-sm py-1"><div class="flex flex-col items-end min-w-0 hidden md:flex"><div class="flex items-center gap-1"></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
-<!-- Interactive State Simulator Ribbon -->
-<div class="bg-inverse-deep text-on-primary px-space-lg py-2.5 flex items-center justify-between shadow-sm z-30">
-<div class="flex items-center gap-space-sm text-label-small font-label-small tracking-wider uppercase opacity-85">
-<span class="material-symbols-outlined text-[16px] text-surface-lilac">tune</span>
-<span>Simulator Status Halaman:</span>
-</div>
-<div class="flex items-center gap-2 overflow-x-auto text-label-small font-label-small">
-<button class="px-2.5 py-1 rounded bg-primary-container text-on-primary transition-all" id="btn-state-populated" onclick="setState('populated')">State A: Katalog Berisi</button>
-<button class="px-2.5 py-1 rounded bg-inverse-surface text-surface-dim hover:text-on-primary transition-all" id="btn-state-empty" onclick="setState('empty')">State B: Katalog Kosong</button>
-<button class="px-2.5 py-1 rounded bg-inverse-surface text-surface-dim hover:text-on-primary transition-all" id="btn-state-no-search" onclick="setState('no-search')">State C: Cari Nihil</button>
-<button class="px-2.5 py-1 rounded bg-inverse-surface text-surface-dim hover:text-on-primary transition-all" id="btn-state-draft-filter" onclick="setState('draft-filter')">State D: Filter Draft</button>
-<button class="px-2.5 py-1 rounded bg-inverse-surface text-surface-dim hover:text-on-primary transition-all" id="btn-state-modal" onclick="openModal()">State E: Modal Unpublish</button>
-<button class="px-2.5 py-1 rounded bg-inverse-surface text-surface-dim hover:text-on-primary transition-all" id="btn-state-skeleton" onclick="setState('skeleton')">State F: Sedang Memuat</button>
-</div>
-</div>
-<div class="p-space-lg space-y-space-lg max-w-[1240px] w-full mx-auto">
-<!-- Header Section (No decorative KPI clutter) -->
-<section class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pt-space-xs">
-<div>
-<div class="flex items-center gap-2">
-<h1 class="font-headline-md text-headline-md text-ink-body">Kelola Buku</h1>
-<span class="px-2.5 py-0.5 rounded-full text-label-small font-label-small bg-surface-lilac text-primary">PT Kiblat Buku Utama</span>
-</div>
-<p class="font-body-small text-body-small text-ink-muted mt-1">Kelola katalog e-book, pantau status publikasi, dan perbarui rincian buku penerbit Anda.</p>
-</div>
-<div class="flex items-center gap-3">
-<button class="bg-primary-container hover:bg-primary text-on-primary font-label text-label px-4 py-2.5 rounded-lg flex items-center gap-2 transition-colors shadow-sm" type="button">
-<span class="material-symbols-outlined text-[18px]">add</span>
-<span>Tambah Buku Baru</span>
-</button>
-</div>
-</section>
-<!-- Main Container Card -->
-<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
-<!-- Search & Status Segment Filter Bar -->
-<div class="p-space-md bg-surface-container-lowest flex flex-col md:flex-row md:items-center justify-between gap-space-md">
-<!-- Search Field -->
-<div class="relative w-full md:w-80">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-ink-muted">search</span>
-<input class="w-full pl-9 pr-3 py-2 bg-surface-soft text-ink-body text-body-small font-body-small rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="book-search-input" oninput="handleSearch(this.value)" placeholder="Cari judul atau penulis..." type="text"/>
-</div>
-<!-- Filter Segment Tabs -->
-<div class="flex items-center gap-1 bg-surface-soft p-1 rounded-lg self-start md:self-auto">
-<button class="px-3.5 py-1.5 rounded-md font-label text-label transition-all bg-surface-container-lowest text-primary shadow-xs font-semibold" id="tab-all" onclick="filterTab('all')">
-            Semua <span class="ml-1 text-label-small text-ink-muted">(5)</span>
-</button>
-<button class="px-3.5 py-1.5 rounded-md font-label text-label text-ink-muted hover:text-ink-body transition-all" id="tab-published" onclick="filterTab('published')">
-            Terbit <span class="ml-1 text-label-small text-ink-muted">(4)</span>
-</button>
-<button class="px-3.5 py-1.5 rounded-md font-label text-label text-ink-muted hover:text-ink-body transition-all" id="tab-draft" onclick="filterTab('draft')">
-            Draft <span class="ml-1 text-label-small text-ink-muted">(1)</span>
-</button>
-</div>
-</div>
-<!-- State Views Container -->
-<div class="relative w-full overflow-x-auto">
-<!-- 1. POPULATED TABLE VIEW -->
-<table class="w-full text-left font-body-small text-body-small" id="view-populated">
-<thead>
-<tr class="bg-surface-soft text-ink-muted font-label-small text-label-small uppercase tracking-wider">
-<th class="py-3 px-space-md w-96" scope="col">Buku</th>
-<th class="py-3 px-space-md" scope="col">Harga</th>
-<th class="py-3 px-space-md" scope="col">Diskon</th>
-<th class="py-3 px-space-md" scope="col">Terjual</th>
-<th class="py-3 px-space-md" scope="col">Status</th>
-<th class="py-3 px-space-md text-right" scope="col">Aksi</th>
-</tr>
-</thead>
-<tbody class="text-ink-body divide-y divide-surface-soft">
-<!-- Row 1 -->
-<tr class="hover:bg-surface-soft/60 transition-colors group book-row" data-author="Ayi R. Kurnia" data-status="published" data-title="Laskar Aksara Pasundan">
-<td class="py-3.5 px-space-md">
-<div class="flex items-center gap-3">
-<div class="w-10 h-14 bg-surface-container rounded shrink-0 overflow-hidden shadow-xs">
-<img class="w-full h-full object-cover" data-alt="Cover buku Laskar Aksara Pasundan bernuansa literatur sejarah lokal Jawa Barat dengan tipografi anggun dan motif aksara Sunda kuno berlatar warna nila periwinkle dan krem." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDELbeldryjCMj_fDIStfjnuKcqOLbIyFqatrAFb9OTw3lJsA5_fWPjgoA779bNgD5S7ZjopRXPXyBcp3EETJDbTTgFG5pTsttS7TE7Fw21uYQeB5knImJcHRFOnQNbEelgJWtyDx6T76x2gCDMxFZOIMlTVUa2kbxc-VAzu3HIAOkpgmTPXGCjs7ru7F7pmJpZRu2oy1-yEFNjD3cXX3osOXsGOf15vrSmoi1XnEX8"/>
-</div>
-<div class="min-w-0">
-<h3 class="font-label text-label text-ink-body group-hover:text-primary transition-colors truncate">Laskar Aksara Pasundan</h3>
-<p class="font-body-small text-body-small text-ink-muted truncate">Ayi R. Kurnia</p>
-</div>
-</div>
-</td>
-<td class="py-3.5 px-space-md font-medium text-ink-body">Rp 45.000</td>
-<td class="py-3.5 px-space-md">
-<span class="inline-flex items-center px-2 py-0.5 rounded text-label-small font-label-small bg-secondary-fixed text-on-secondary-fixed">10%</span>
-</td>
-<td class="py-3.5 px-space-md text-ink-muted font-label text-label">42 eks</td>
-<td class="py-3.5 px-space-md">
-<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-small font-label-small bg-surface-sky text-on-background">
-<span class="w-2 h-2 rounded-full bg-primary-container"></span>
-<span>Terbit</span>
-</span>
-</td>
-<td class="py-3.5 px-space-md text-right">
-<div class="inline-flex items-center gap-3">
-<button class="inline-flex items-center gap-1 font-label text-label text-primary hover:text-on-primary-fixed-variant transition-colors" type="button">
-<span class="material-symbols-outlined text-[16px]">edit</span>
-<span>Edit Buku</span>
-</button>
-<span class="text-surface-dim font-light">|</span>
-<button class="font-label text-label text-feedback-error hover:opacity-80 transition-colors" onclick="openModal('Laskar Aksara Pasundan')" type="button">
-                    Unpublish
-                  </button>
-</div>
-</td>
-</tr>
-<!-- Row 2 -->
-<tr class="hover:bg-surface-soft/60 transition-colors group book-row" data-author="Dr. Cecep Hidayat" data-status="published" data-title="Pendidikan Karakter Sunda">
-<td class="py-3.5 px-space-md">
-<div class="flex items-center gap-3">
-<div class="w-10 h-14 bg-surface-container rounded shrink-0 overflow-hidden shadow-xs">
-<img class="w-full h-full object-cover" data-alt="Cover buku Pendidikan Karakter Sunda bertema filsafat pedagogi etika Pasundan dengan ilustrasi minimalis dan tata letak editorial modern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsTfqSTCHvfomLEcSA0XIPsz2Al_Y5sxPuasQXcBT7sMf1ZI1XivB_V9kUq3VuCM-Jw7b7Blv-Cy7goUYli1gMWM0a9_l69NVJM0Lk462V95vbi0hf6IyaKv1DjJDY_vTQrtw4xqWLn7QXsRWgYMh3KkEBcCURxy22fhBWh7cMGnf-X8o8VL9keJ6cn66BVQElFkv9gGSq_x2kO8s_dNDklB5nDY6c3U2PHen62X6i"/>
-</div>
-<div class="min-w-0">
-<h3 class="font-label text-label text-ink-body group-hover:text-primary transition-colors truncate">Pendidikan Karakter Sunda</h3>
-<p class="font-body-small text-body-small text-ink-muted truncate">Dr. Cecep Hidayat</p>
-</div>
-</div>
-</td>
-<td class="py-3.5 px-space-md font-medium text-ink-body">Rp 52.000</td>
-<td class="py-3.5 px-space-md text-ink-muted">-</td>
-<td class="py-3.5 px-space-md text-ink-muted font-label text-label">28 eks</td>
-<td class="py-3.5 px-space-md">
-<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-small font-label-small bg-surface-sky text-on-background">
-<span class="w-2 h-2 rounded-full bg-primary-container"></span>
-<span>Terbit</span>
-</span>
-</td>
-<td class="py-3.5 px-space-md text-right">
-<div class="inline-flex items-center gap-3">
-<button class="inline-flex items-center gap-1 font-label text-label text-primary hover:text-on-primary-fixed-variant transition-colors" type="button">
-<span class="material-symbols-outlined text-[16px]">edit</span>
-<span>Edit Buku</span>
-</button>
-<span class="text-surface-dim font-light">|</span>
-<button class="font-label text-label text-feedback-error hover:opacity-80 transition-colors" onclick="openModal('Pendidikan Karakter Sunda')" type="button">
-                    Unpublish
-                  </button>
-</div>
-</td>
-</tr>
-<!-- Row 3 -->
-<tr class="hover:bg-surface-soft/60 transition-colors group book-row" data-author="T. Bachtiar" data-status="published" data-title="Bumi Parahyangan: Jejak Purba">
-<td class="py-3.5 px-space-md">
-<div class="flex items-center gap-3">
-<div class="w-10 h-14 bg-surface-container rounded shrink-0 overflow-hidden shadow-xs">
-<img class="w-full h-full object-cover" data-alt="Cover buku Bumi Parahyangan Jejak Purba memperlihatkan siluet geologi danau Bandung purba dalam sapuan warna terra cotta dan biru periwinkle gelap." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCFy_mMm5IT0njAeF4CUvyOeW7lg86mbgdDauOsdvNnaxDeqzYles36Y8xuucf6BoQIiXhQoMN-JUncCQGCC9omkZ2GWEC43EmyWFlVe84LCK4oTls65iwZpA0JY0CKZZvG8Cijd-7ivWOoqUjxLoqCeXXZqaW35uGh8h2K3O3-noeKQiuB4ve4C9yrPr_DAoeU_3PgHJ1pdbbBSKq9BvAXd07H5d3NvXI3kvGxdql"/>
-</div>
-<div class="min-w-0">
-<h3 class="font-label text-label text-ink-body group-hover:text-primary transition-colors truncate">Bumi Parahyangan: Jejak Purba</h3>
-<p class="font-body-small text-body-small text-ink-muted truncate">T. Bachtiar</p>
-</div>
-</div>
-</td>
-<td class="py-3.5 px-space-md font-medium text-ink-body">Rp 65.000</td>
-<td class="py-3.5 px-space-md">
-<span class="inline-flex items-center px-2 py-0.5 rounded text-label-small font-label-small bg-secondary-fixed text-on-secondary-fixed">15%</span>
-</td>
-<td class="py-3.5 px-space-md text-ink-muted font-label text-label">19 eks</td>
-<td class="py-3.5 px-space-md">
-<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-small font-label-small bg-surface-sky text-on-background">
-<span class="w-2 h-2 rounded-full bg-primary-container"></span>
-<span>Terbit</span>
-</span>
-</td>
-<td class="py-3.5 px-space-md text-right">
-<div class="inline-flex items-center gap-3">
-<button class="inline-flex items-center gap-1 font-label text-label text-primary hover:text-on-primary-fixed-variant transition-colors" type="button">
-<span class="material-symbols-outlined text-[16px]">edit</span>
-<span>Edit Buku</span>
-</button>
-<span class="text-surface-dim font-light">|</span>
-<button class="font-label text-label text-feedback-error hover:opacity-80 transition-colors" onclick="openModal('Bumi Parahyangan: Jejak Purba')" type="button">
-                    Unpublish
-                  </button>
-</div>
-</td>
-</tr>
-<!-- Row 4 -->
-<tr class="hover:bg-surface-soft/60 transition-colors group book-row" data-author="Dr. Encep Kosasih" data-status="published" data-title="Flora Priangan: Arsip Hayati">
-<td class="py-3.5 px-space-md">
-<div class="flex items-center gap-3">
-<div class="w-10 h-14 bg-surface-container rounded shrink-0 overflow-hidden shadow-xs">
-<img class="w-full h-full object-cover" data-alt="Cover buku botani Flora Priangan Arsip Hayati dengan ilustrasi botani klasik tanaman teh dan kina di atas kertas bertekstur vintage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwkY-Fmhz6sORwlk0FMYewwVpgWy-86KuQgrPfuA7emWN_sYY8FCSJr0nk_FHXAnIQiYey29odPwaa_SYwHhfD2jpmLiQkKA7O2HsFaZ5hedHdlriH15oIyemo6V20zcMgDwv8BQuN3kUmJM6kE6fkin8soNn6a53X1mGJDmdUdc5d8G7UCcF4m_S3IiKbuhfNXYDu2-Vv7xiEwIFoJPbyregpwVjibmzVSU2eTARU"/>
-</div>
-<div class="min-w-0">
-<h3 class="font-label text-label text-ink-body group-hover:text-primary transition-colors truncate">Flora Priangan: Arsip Hayati</h3>
-<p class="font-body-small text-body-small text-ink-muted truncate">Dr. Encep Kosasih</p>
-</div>
-</div>
-</td>
-<td class="py-3.5 px-space-md font-medium text-ink-body">Rp 48.000</td>
-<td class="py-3.5 px-space-md text-ink-muted">-</td>
-<td class="py-3.5 px-space-md text-ink-muted font-label text-label">14 eks</td>
-<td class="py-3.5 px-space-md">
-<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-small font-label-small bg-surface-sky text-on-background">
-<span class="w-2 h-2 rounded-full bg-primary-container"></span>
-<span>Terbit</span>
-</span>
-</td>
-<td class="py-3.5 px-space-md text-right">
-<div class="inline-flex items-center gap-3">
-<button class="inline-flex items-center gap-1 font-label text-label text-primary hover:text-on-primary-fixed-variant transition-colors" type="button">
-<span class="material-symbols-outlined text-[16px]">edit</span>
-<span>Edit Buku</span>
-</button>
-<span class="text-surface-dim font-light">|</span>
-<button class="font-label text-label text-feedback-error hover:opacity-80 transition-colors" onclick="openModal('Flora Priangan: Arsip Hayati')" type="button">
-                    Unpublish
-                  </button>
-</div>
-</td>
-</tr>
-<!-- Row 5 (Draft) -->
-<tr class="hover:bg-surface-soft/60 transition-colors group book-row" data-author="Prof. Dr. Iskandar" data-status="draft" data-title="Tata Bahasa &amp; Morfologi Sunda Modern">
-<td class="py-3.5 px-space-md">
-<div class="flex items-center gap-3">
-<div class="w-10 h-14 bg-surface-container rounded shrink-0 overflow-hidden shadow-xs">
-<img class="w-full h-full object-cover" data-alt="Cover buku akademik Tata Bahasa dan Morfologi Sunda Modern dengan tata letak minimalis terstruktur warna monokrom dan aksen ungu keabuan." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn9QTWICYwrjFfY86L07if2zuhBdu7YiVWw2UQ0r40n6DUw3jgbUdwtNueI-4zrxP9d0sphnXUsBi3q-4es7LPIDITZ3ljz6JvHdkpz1tobG513TyJ29e7JvC11ZMhig0G5PYUgF7eV6iK1YSnEf8LyTm1sUFf9E8xPnct60h9nBnHEN5fOHBz-hcPrS1eCQFtHw8q38ktUPujNbQ6Lt-GEoTj_UlGKNrmOAczIVYQ"/>
-</div>
-<div class="min-w-0">
-<h3 class="font-label text-label text-ink-body group-hover:text-primary transition-colors truncate">Tata Bahasa &amp; Morfologi Sunda Modern</h3>
-<p class="font-body-small text-body-small text-ink-muted truncate">Prof. Dr. Iskandar</p>
-</div>
-</div>
-</td>
-<td class="py-3.5 px-space-md font-medium text-ink-body">Rp 58.000</td>
-<td class="py-3.5 px-space-md text-ink-muted">-</td>
-<td class="py-3.5 px-space-md text-ink-muted font-label text-label">0 eks</td>
-<td class="py-3.5 px-space-md">
-<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-small font-label-small bg-surface-cream text-tertiary">
-<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
-<span>Draft</span>
-</span>
-</td>
-<td class="py-3.5 px-space-md text-right">
-<div class="inline-flex items-center gap-3">
-<button class="inline-flex items-center gap-1 font-label text-label text-primary hover:text-on-primary-fixed-variant transition-colors" type="button">
-<span class="material-symbols-outlined text-[16px]">edit</span>
-<span>Edit Buku</span>
-</button>
-<span class="text-surface-dim font-light">|</span>
-<button class="font-label text-label text-primary font-semibold hover:underline transition-colors" type="button">
-                    Terbitkan
-                  </button>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-<!-- 2. EMPTY STATE VIEW (State B) -->
-<div class="hidden p-space-2xl text-center flex-col items-center justify-center" id="view-empty">
-<div class="w-16 h-16 rounded-full bg-surface-cream flex items-center justify-center text-tertiary mb-space-md">
-<span class="material-symbols-outlined text-[32px]">auto_stories</span>
-</div>
-<h2 class="font-headline-md text-headline-md text-ink-body mb-1">Mulai Terbitkan Katalog Anda</h2>
-<p class="font-body-small text-body-small text-ink-muted max-w-md mx-auto mb-space-lg">
-            Penerbit Anda belum memiliki judul terdaftar. Unggah naskah digital atau file e-book ePUB/PDF untuk menjangkau pembaca di seluruh Indonesia.
-          </p>
-<button class="bg-primary-container text-on-primary font-label text-label px-5 py-2.5 rounded-lg flex items-center gap-2 shadow-sm" type="button">
-<span class="material-symbols-outlined text-[18px]">add</span>
-<span>Unggah Buku Pertama</span>
-</button>
-</div>
-<!-- 3. SEARCH ZERO RESULT VIEW (State C) -->
-<div class="hidden p-space-2xl text-center flex-col items-center justify-center" id="view-no-search">
-<div class="w-14 h-14 rounded-full bg-surface-soft flex items-center justify-center text-ink-muted mb-space-md">
-<span class="material-symbols-outlined text-[28px]">search_off</span>
-</div>
-<h2 class="font-title-md text-title-md text-ink-body mb-1">Buku Tidak Ditemukan</h2>
-<p class="font-body-small text-body-small text-ink-muted max-w-sm mx-auto mb-space-md">
-            Tidak ada judul atau penulis yang cocok dengan kata kunci pencarian Anda. Silakan periksa kembali ejaan.
-          </p>
-<button class="text-primary font-label text-label hover:underline" onclick="resetSearch()" type="button">
-            Bersihkan Pencarian
+}
+</script>
+<style>
+  :root { --topbar-h: 64px; --sidebar-w: 248px; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', system-ui, sans-serif; background: #FFFFFF; color: #222225; }
+  .shell-main { margin-left: 0; }
+  @media (min-width: 1024px) { .shell-main { margin-left: var(--sidebar-w); } }
+  .banner-bleed { margin-left: 0; }
+  @media (min-width: 1024px) { .banner-bleed { margin-left: calc(-1 * var(--sidebar-w)); } }
+  #publisher-sidebar { top: var(--topbar-h); }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .num { font-variant-numeric: tabular-nums; }
+  .focus-ring:focus-visible { outline: 2px solid #673DE6; outline-offset: 2px; }
+  .focus-ring-light:focus-visible { outline: 2px solid #FFFFFF; outline-offset: 2px; }
+  #publisher-sidebar { transform: translateX(-100%); transition: transform .22s ease; }
+  #publisher-sidebar.is-open { transform: translateX(0); }
+  @media (min-width: 1024px) { #publisher-sidebar { transform: none; transition: none; } }
+  .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-thumb { background: #DCDCE2; border-radius: 9999px; }
+</style>
+  <script src="access-guard.js"></script>
+</head>
+<body class="bg-canvas text-ink antialiased">
+
+<a href="#workspace" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focus:bg-primary focus:px-4 focus:py-2 focus:text-white focus:text-sm focus:font-semibold">Lewati ke konten utama</a>
+
+<!-- ============ TOP UTILITY BAR ============ -->
+<header class="absolute inset-x-0 top-0 z-50 h-16">
+  <div class="flex h-16 items-center justify-between gap-3 px-4 sm:px-6">
+    <div class="flex items-center gap-3">
+      <button type="button" id="sidebar-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="publisher-sidebar"
+        class="focus-ring-light grid h-10 w-10 place-items-center rounded-xl text-white hover:bg-white/10 lg:hidden">
+        <span class="material-symbols-outlined text-[22px]">menu</span>
+      </button>
+      <a href="dashboard_penerbit_desktop.html" class="focus-ring-light flex items-center rounded-xl">
+        <img src="../../assets/logo-ikapi-jabar.png" alt="IKAPI Jawa Barat" class="h-7 w-auto object-contain drop-shadow-[0_1px_3px_rgba(0,0,0,0.35)]">
+      </a>
+    </div>
+    <div class="flex items-center gap-1.5">
+      <div class="relative">
+        <button type="button" id="btn-notif" aria-label="Notifikasi" aria-haspopup="true" aria-expanded="false"
+          class="focus-ring-light relative grid h-10 w-10 place-items-center rounded-xl text-white hover:bg-white/10">
+          <span class="material-symbols-outlined text-[22px]">notifications</span>
+        </button>
+        <div id="notif-panel" class="absolute right-0 top-12 hidden w-72 rounded-2xl border border-border bg-white p-4 shadow-[0_16px_40px_rgba(34,34,37,0.12)]">
+          <div class="mb-1.5 text-[13px] font-bold text-ink">Notifikasi</div>
+          <p class="text-[13px] leading-relaxed text-muted">Tidak ada notifikasi baru.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ SIDEBAR ============ -->
+<div id="sidebar-scrim" class="fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden"></div>
+
+<aside id="publisher-sidebar" class="fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgba(34,34,37,0.07)] lg:translate-x-0">
+  <nav aria-label="Navigasi dashboard penerbit" class="flex flex-1 flex-col gap-1 overflow-y-auto px-3 pb-4 pt-7">
+    <a href="dashboard_penerbit_desktop.html" data-path="dashboard"
+      class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">space_dashboard</span>
+      <span>Dashboard</span>
+    </a>
+    <a href="kelola_buku_desktop.html" aria-current="page" data-path="kelola-buku"
+      class="focus-ring flex items-center gap-3 rounded-xl bg-primary px-3 py-2.5 text-[14px] font-semibold text-white">
+      <span class="material-symbols-outlined text-[20px]">menu_book</span>
+      <span>Kelola Buku</span>
+    </a>
+    <a href="pesanan_masuk_desktop.html" data-path="pesanan-masuk"
+      class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">inbox</span>
+      <span>Pesanan Masuk</span>
+    </a>
+    <a href="pendapatan_dan_pencairan_desktop.html" data-path="pendapatan-dan-pencairan"
+      class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">payments</span>
+      <span>Pendapatan &amp; Pencairan</span>
+    </a>
+    <a href="ulasan_pembeli_desktop.html" data-path="ulasan-pembeli"
+      class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">reviews</span>
+      <span>Ulasan Pembeli</span>
+    </a>
+    <a href="pengaturan_profil_desktop.html" data-path="pengaturan-profil"
+      class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">tune</span>
+      <span>Pengaturan Profil</span>
+    </a>
+  </nav>
+
+  <div class="flex items-center gap-2 border-t border-divider p-3">
+    <a href="pengaturan_profil_desktop.html" class="focus-ring flex min-w-0 flex-1 items-center gap-3 rounded-xl px-2 py-2 hover:bg-neutral">
+      <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary text-white">
+        <span class="material-symbols-outlined text-[18px]">storefront</span>
+      </span>
+      <span class="min-w-0 text-left leading-tight">
+        <span class="block truncate text-[13px] font-semibold text-ink">Akun Penerbit</span>
+        <span class="block truncate text-[11px] text-muted">IKAPI Jawa Barat</span>
+      </span>
+    </a>
+    <a href="masuk_portal_penerbit_desktop.html" data-path="keluar-akun" aria-label="Keluar Akun" title="Keluar Akun"
+      class="focus-ring grid h-10 w-10 shrink-0 place-items-center rounded-xl text-[#B42318] transition-colors hover:bg-[#FEF3F2]">
+      <span class="material-symbols-outlined text-[20px]">logout</span>
+    </a>
+  </div>
+</aside>
+
+<!-- ============ MAIN COLUMN ============ -->
+<div class="shell-main">
+
+  <!-- GEOMETRIC BANNER (same pattern as Dashboard Penerbit) -->
+  <div aria-hidden="true" class="banner-bleed relative h-[232px] overflow-hidden bg-primary-deep sm:h-[260px] lg:h-[276px]">
+    <svg class="absolute inset-0 h-full w-full" viewBox="0 0 1440 212" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="topScrim" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2F1C6A" stop-opacity="0.96"></stop>
+          <stop offset="100%" stop-color="#2F1C6A" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="212" fill="#2F1C6A"></rect>
+      <polygon points="418,0 612,0 470,212 276,212" fill="#4B2CBA"></polygon>
+      <polygon points="648,0 706,0 564,212 506,212" fill="#825CF1"></polygon>
+      <polygon points="748,0 1002,0 860,212 606,212" fill="#673DE6"></polygon>
+      <polygon points="1042,0 1084,0 942,212 900,212" fill="#4475D8"></polygon>
+      <polygon points="1124,0 1290,0 1148,212 982,212" fill="#4B2CBA"></polygon>
+      <polygon points="1342,0 1440,0 1440,212 1200,212" fill="#825CF1"></polygon>
+      <polygon points="1420,0 1440,0 1440,212 1378,212" fill="#4475D8"></polygon>
+      <rect width="1440" height="58" fill="url(#topScrim)"></rect>
+    </svg>
+  </div>
+
+  <!-- WORKSPACE -->
+  <main id="workspace" class="relative z-10 -mt-20 rounded-t-[20px] border-t border-border bg-white lg:ml-6">
+    <div class="mx-auto w-full max-w-[1560px] px-4 pb-16 pt-6 sm:px-6 lg:px-10 lg:pt-8">
+
+      <!-- Heading + actions -->
+      <div class="mb-6 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+        <div class="min-w-0">
+          <h1 class="text-[26px] font-bold leading-tight tracking-tight text-ink lg:text-[30px]">Kelola Buku</h1>
+          <p class="mt-1 text-[14px] text-muted">Kelola katalog e-book dan status publikasinya.</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <button type="button" id="btn-add"
+            class="focus-ring inline-flex h-10 items-center gap-2 rounded-xl bg-primary px-4 text-[14px] font-semibold text-white transition-colors hover:bg-primary-hover">
+            <span class="material-symbols-outlined text-[20px]">add</span>
+            <span>Tambah Buku Baru</span>
           </button>
+          <div class="relative">
+            <button type="button" id="demo-toggle" aria-expanded="false" aria-haspopup="true"
+              class="focus-ring inline-flex h-10 items-center gap-1.5 rounded-xl border border-dashed border-border px-3 text-[13px] font-semibold text-muted transition-colors hover:bg-neutral hover:text-ink">
+              <span class="material-symbols-outlined text-[17px]">tune</span>
+              <span>Mode Demo</span>
+              <span class="material-symbols-outlined text-[17px]">expand_more</span>
+            </button>
+            <div id="demo-menu" class="absolute right-0 top-12 z-30 hidden w-60 rounded-2xl border border-border bg-white p-1.5 shadow-[0_16px_40px_rgba(34,34,37,0.12)]" role="menu" aria-label="Pilih skenario demo">
+              <button type="button" data-demo="filled" role="menuitemradio" aria-checked="true"
+                class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl bg-soft px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral">
+                <span>Katalog Berisi</span><span class="material-symbols-outlined demo-check text-[17px] text-primary">check</span>
+              </button>
+              <button type="button" data-demo="empty" role="menuitemradio" aria-checked="false"
+                class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral">
+                <span>Katalog Kosong</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span>
+              </button>
+              <button type="button" data-demo="noresults" role="menuitemradio" aria-checked="false"
+                class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral">
+                <span>Pencarian Nihil</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span>
+              </button>
+              <button type="button" data-demo="draft" role="menuitemradio" aria-checked="false"
+                class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral">
+                <span>Filter Draft</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span>
+              </button>
+              <button type="button" data-demo="unpublish" role="menuitemradio" aria-checked="false"
+                class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral">
+                <span>Modal Hentikan Publikasi</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span>
+              </button>
+              <button type="button" data-demo="loading" role="menuitemradio" aria-checked="false"
+                class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral">
+                <span>Sedang Memuat</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toolbar: search + status filter -->
+      <div class="mb-4 flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+        <div class="relative w-full lg:max-w-[360px]">
+          <span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[19px] text-muted">search</span>
+          <label for="book-search" class="sr-only">Cari judul atau penulis</label>
+          <input id="book-search" type="search" autocomplete="off" placeholder="Cari judul atau penulis..."
+            class="h-10 w-full rounded-xl border border-border bg-white pl-10 pr-10 text-[14px] text-ink placeholder:text-muted outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/15">
+          <button type="button" id="btn-clear-search" aria-label="Bersihkan pencarian"
+            class="focus-ring absolute right-1.5 top-1/2 hidden h-7 w-7 -translate-y-1/2 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+            <span class="material-symbols-outlined text-[17px]">close</span>
+          </button>
+        </div>
+
+        <div role="group" aria-label="Filter status publikasi" class="flex w-fit items-center gap-1 rounded-xl border border-border bg-neutral p-1" id="filter-group">
+          <button type="button" data-filter="all" aria-pressed="true"
+            class="filter-btn focus-ring rounded-lg bg-white px-3 py-1.5 text-[12.5px] font-bold text-primary shadow-sm">
+            Semua <span class="filter-count num ml-0.5 font-semibold text-muted">(5)</span>
+          </button>
+          <button type="button" data-filter="published" aria-pressed="false"
+            class="filter-btn focus-ring rounded-lg px-3 py-1.5 text-[12.5px] font-semibold text-muted hover:text-ink">
+            Terbit <span class="filter-count num ml-0.5 font-semibold">(4)</span>
+          </button>
+          <button type="button" data-filter="draft" aria-pressed="false"
+            class="filter-btn focus-ring rounded-lg px-3 py-1.5 text-[12.5px] font-semibold text-muted hover:text-ink">
+            Draft <span class="filter-count num ml-0.5 font-semibold">(1)</span>
+          </button>
+        </div>
+      </div>
+
+      <p id="page-note" role="status" class="mb-3 hidden text-[12.5px] text-muted"></p>
+
+      <!-- Loading skeleton -->
+      <div id="view-loading" class="hidden" aria-hidden="true">
+        <div class="overflow-hidden rounded-2xl border border-border">
+          <div class="h-11 animate-pulse border-b border-border bg-neutral"></div>
+          <div class="divide-y divide-divider">
+            <div class="flex items-center gap-4 p-4"><div class="h-14 w-10 animate-pulse rounded bg-neutral"></div><div class="flex-1 space-y-2"><div class="h-3.5 w-48 animate-pulse rounded bg-neutral"></div><div class="h-3 w-28 animate-pulse rounded bg-neutral"></div></div><div class="h-3.5 w-16 animate-pulse rounded bg-neutral"></div><div class="h-3.5 w-12 animate-pulse rounded bg-neutral"></div></div>
+            <div class="flex items-center gap-4 p-4"><div class="h-14 w-10 animate-pulse rounded bg-neutral"></div><div class="flex-1 space-y-2"><div class="h-3.5 w-56 animate-pulse rounded bg-neutral"></div><div class="h-3 w-28 animate-pulse rounded bg-neutral"></div></div><div class="h-3.5 w-16 animate-pulse rounded bg-neutral"></div><div class="h-3.5 w-12 animate-pulse rounded bg-neutral"></div></div>
+            <div class="flex items-center gap-4 p-4"><div class="h-14 w-10 animate-pulse rounded bg-neutral"></div><div class="flex-1 space-y-2"><div class="h-3.5 w-44 animate-pulse rounded bg-neutral"></div><div class="h-3 w-28 animate-pulse rounded bg-neutral"></div></div><div class="h-3.5 w-16 animate-pulse rounded bg-neutral"></div><div class="h-3.5 w-12 animate-pulse rounded bg-neutral"></div></div>
+            <div class="flex items-center gap-4 p-4"><div class="h-14 w-10 animate-pulse rounded bg-neutral"></div><div class="flex-1 space-y-2"><div class="h-3.5 w-52 animate-pulse rounded bg-neutral"></div><div class="h-3 w-28 animate-pulse rounded bg-neutral"></div></div><div class="h-3.5 w-16 animate-pulse rounded bg-neutral"></div><div class="h-3.5 w-12 animate-pulse rounded bg-neutral"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div id="view-table" class="overflow-hidden rounded-2xl border border-border">
+        <div class="overflow-x-auto">
+          <table class="w-full min-w-[820px] border-collapse text-left">
+            <caption class="sr-only">Daftar e-book penerbit beserta harga, diskon, jumlah terjual, status publikasi, dan aksi</caption>
+            <thead>
+              <tr class="border-b border-border bg-white text-[11px] uppercase tracking-[0.1em] text-muted">
+                <th scope="col" class="px-4 py-3 font-bold lg:px-5">Buku</th>
+                <th scope="col" class="w-32 px-4 py-3 text-right font-bold">Harga</th>
+                <th scope="col" class="w-24 px-4 py-3 text-right font-bold">Diskon</th>
+                <th scope="col" class="w-24 px-4 py-3 text-right font-bold">Terjual</th>
+                <th scope="col" class="w-28 px-4 py-3 font-bold">Status</th>
+                <th scope="col" class="w-[120px] px-4 py-3 pr-5 text-right font-bold lg:pr-6">Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="book-rows" class="text-[13px]">
+              <tr class="border-b border-divider align-middle transition-colors hover:bg-soft" data-id="BK-01" data-title="Laskar Aksara Pasundan" data-author="Ayi R. Kurnia" data-price="45000" data-discount="10" data-sold="42" data-status="published" data-cover="../../assets/covers/laskar-aksara-pasundan.jpg">
+                <td class="px-4 py-3 lg:px-5">
+                  <div class="flex items-start gap-3">
+                    <img src="../../assets/covers/laskar-aksara-pasundan.jpg" alt="Sampul Laskar Aksara Pasundan" class="h-14 w-10 shrink-0 rounded border border-border object-cover">
+                    <div class="min-w-0">
+                      <p data-cell="title" class="line-clamp-2 text-[13.5px] font-semibold leading-snug text-ink">Laskar Aksara Pasundan</p>
+                      <p data-cell="author" class="mt-0.5 text-[12px] text-muted">Ayi R. Kurnia</p>
+                    </div>
+                  </div>
+                </td>
+                <td data-cell="price" class="num px-4 py-3 text-right font-medium text-ink">Rp 45,000".replace(",",".")</td>
+                <td data-cell="discount" class="num px-4 py-3 text-right text-muted">10%</td>
+                <td data-cell="sold" class="num px-4 py-3 text-right text-ink">42</td>
+                <td data-cell="status" class="px-4 py-3"><span class="text-[12px] font-semibold text-[#0F7B4F]">Terbit</span></td>
+                <td data-cell="actions" class="px-4 py-3 pr-5 text-right lg:pr-6">
+                  <div class="flex items-center justify-end gap-1.5">
+                    <button type="button" class="focus-ring grid h-8 w-8 place-items-center rounded-lg text-muted transition-colors hover:bg-neutral hover:text-ink" aria-label="Aksi untuk Laskar Aksara Pasundan" aria-haspopup="menu" aria-expanded="false" data-more="BK-01"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="border-b border-divider align-middle transition-colors hover:bg-soft" data-id="BK-02" data-title="Pendidikan Karakter Sunda" data-author="Dr. Cecep Hidayat" data-price="52000" data-discount="15" data-sold="28" data-status="published" data-cover="../../assets/covers/B02.jpg">
+                <td class="px-4 py-3 lg:px-5">
+                  <div class="flex items-start gap-3">
+                    <img src="../../assets/covers/B02.jpg" alt="Sampul Pendidikan Karakter Sunda" class="h-14 w-10 shrink-0 rounded border border-border object-cover">
+                    <div class="min-w-0">
+                      <p data-cell="title" class="line-clamp-2 text-[13.5px] font-semibold leading-snug text-ink">Pendidikan Karakter Sunda</p>
+                      <p data-cell="author" class="mt-0.5 text-[12px] text-muted">Dr. Cecep Hidayat</p>
+                    </div>
+                  </div>
+                </td>
+                <td data-cell="price" class="num px-4 py-3 text-right font-medium text-ink">Rp 52,000".replace(",",".")</td>
+                <td data-cell="discount" class="num px-4 py-3 text-right text-muted">15%</td>
+                <td data-cell="sold" class="num px-4 py-3 text-right text-ink">28</td>
+                <td data-cell="status" class="px-4 py-3"><span class="text-[12px] font-semibold text-[#0F7B4F]">Terbit</span></td>
+                <td data-cell="actions" class="px-4 py-3 pr-5 text-right lg:pr-6">
+                  <div class="flex items-center justify-end gap-1.5">
+                    <button type="button" class="focus-ring grid h-8 w-8 place-items-center rounded-lg text-muted transition-colors hover:bg-neutral hover:text-ink" aria-label="Aksi untuk Pendidikan Karakter Sunda" aria-haspopup="menu" aria-expanded="false" data-more="BK-02"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="border-b border-divider align-middle transition-colors hover:bg-soft" data-id="BK-03" data-title="Bumi Parahyangan: Jejak Purba" data-author="T. Bachtiar" data-price="65000" data-discount="0" data-sold="19" data-status="published" data-cover="../../assets/covers/B03.jpg">
+                <td class="px-4 py-3 lg:px-5">
+                  <div class="flex items-start gap-3">
+                    <img src="../../assets/covers/B03.jpg" alt="Sampul Bumi Parahyangan: Jejak Purba" class="h-14 w-10 shrink-0 rounded border border-border object-cover">
+                    <div class="min-w-0">
+                      <p data-cell="title" class="line-clamp-2 text-[13.5px] font-semibold leading-snug text-ink">Bumi Parahyangan: Jejak Purba</p>
+                      <p data-cell="author" class="mt-0.5 text-[12px] text-muted">T. Bachtiar</p>
+                    </div>
+                  </div>
+                </td>
+                <td data-cell="price" class="num px-4 py-3 text-right font-medium text-ink">Rp 65,000".replace(",",".")</td>
+                <td data-cell="discount" class="num px-4 py-3 text-right text-muted">—</td>
+                <td data-cell="sold" class="num px-4 py-3 text-right text-ink">19</td>
+                <td data-cell="status" class="px-4 py-3"><span class="text-[12px] font-semibold text-[#0F7B4F]">Terbit</span></td>
+                <td data-cell="actions" class="px-4 py-3 pr-5 text-right lg:pr-6">
+                  <div class="flex items-center justify-end gap-1.5">
+                    <button type="button" class="focus-ring grid h-8 w-8 place-items-center rounded-lg text-muted transition-colors hover:bg-neutral hover:text-ink" aria-label="Aksi untuk Bumi Parahyangan: Jejak Purba" aria-haspopup="menu" aria-expanded="false" data-more="BK-03"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="border-b border-divider align-middle transition-colors hover:bg-soft" data-id="BK-04" data-title="Flora Priangan: Arsip Hayati" data-author="Dr. Encep Kosasih" data-price="48000" data-discount="0" data-sold="14" data-status="published" data-cover="../../assets/covers/B05.jpg">
+                <td class="px-4 py-3 lg:px-5">
+                  <div class="flex items-start gap-3">
+                    <img src="../../assets/covers/B05.jpg" alt="Sampul Flora Priangan: Arsip Hayati" class="h-14 w-10 shrink-0 rounded border border-border object-cover">
+                    <div class="min-w-0">
+                      <p data-cell="title" class="line-clamp-2 text-[13.5px] font-semibold leading-snug text-ink">Flora Priangan: Arsip Hayati</p>
+                      <p data-cell="author" class="mt-0.5 text-[12px] text-muted">Dr. Encep Kosasih</p>
+                    </div>
+                  </div>
+                </td>
+                <td data-cell="price" class="num px-4 py-3 text-right font-medium text-ink">Rp 48,000".replace(",",".")</td>
+                <td data-cell="discount" class="num px-4 py-3 text-right text-muted">—</td>
+                <td data-cell="sold" class="num px-4 py-3 text-right text-ink">14</td>
+                <td data-cell="status" class="px-4 py-3"><span class="text-[12px] font-semibold text-[#0F7B4F]">Terbit</span></td>
+                <td data-cell="actions" class="px-4 py-3 pr-5 text-right lg:pr-6">
+                  <div class="flex items-center justify-end gap-1.5">
+                    <button type="button" class="focus-ring grid h-8 w-8 place-items-center rounded-lg text-muted transition-colors hover:bg-neutral hover:text-ink" aria-label="Aksi untuk Flora Priangan: Arsip Hayati" aria-haspopup="menu" aria-expanded="false" data-more="BK-04"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="border-b border-divider align-middle transition-colors hover:bg-soft" data-id="BK-05" data-title="Tata Bahasa &amp; Morfologi Sunda Modern" data-author="Prof. Dr. Iskandar" data-price="58000" data-discount="0" data-sold="0" data-status="draft" data-cover="../../assets/covers/B08.jpg">
+                <td class="px-4 py-3 lg:px-5">
+                  <div class="flex items-start gap-3">
+                    <img src="../../assets/covers/B08.jpg" alt="Sampul Tata Bahasa & Morfologi Sunda Modern" class="h-14 w-10 shrink-0 rounded border border-border object-cover">
+                    <div class="min-w-0">
+                      <p data-cell="title" class="line-clamp-2 text-[13.5px] font-semibold leading-snug text-ink">Tata Bahasa &amp; Morfologi Sunda Modern</p>
+                      <p data-cell="author" class="mt-0.5 text-[12px] text-muted">Prof. Dr. Iskandar</p>
+                    </div>
+                  </div>
+                </td>
+                <td data-cell="price" class="num px-4 py-3 text-right font-medium text-ink">Rp 58,000".replace(",",".")</td>
+                <td data-cell="discount" class="num px-4 py-3 text-right text-muted">—</td>
+                <td data-cell="sold" class="num px-4 py-3 text-right text-ink">0</td>
+                <td data-cell="status" class="px-4 py-3"><span class="text-[12px] font-semibold text-muted">Draft</span></td>
+                <td data-cell="actions" class="px-4 py-3 pr-5 text-right lg:pr-6">
+                  <div class="flex items-center justify-end gap-1.5">
+                    <button type="button" class="focus-ring grid h-8 w-8 place-items-center rounded-lg text-muted transition-colors hover:bg-neutral hover:text-ink" aria-label="Aksi untuk Tata Bahasa & Morfologi Sunda Modern" aria-haspopup="menu" aria-expanded="false" data-more="BK-05"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Empty states -->
+        <div id="state-empty" class="hidden px-5 py-14 text-center">
+          <img src="../../assets/ilustration/notfoundil.png" alt="" class="mx-auto h-28 w-auto" aria-hidden="true">
+          <p class="text-[15px] font-semibold text-ink">Belum Ada Buku</p>
+          <p class="mx-auto mt-1.5 max-w-sm text-[13px] leading-relaxed text-muted">Mulai tambahkan buku untuk mengelola katalog penerbit Anda.</p>
+          <button type="button" data-action="add"
+            class="focus-ring mt-4 inline-flex h-10 items-center gap-2 rounded-xl bg-primary px-4 text-[14px] font-semibold text-white hover:bg-primary-hover">
+            <span class="material-symbols-outlined text-[18px]">add</span>
+            <span>Tambah Buku Baru</span>
+          </button>
+        </div>
+
+        <div id="state-noresults" class="hidden px-5 py-14 text-center">
+          <img src="../../assets/ilustration/notfoundil.png" alt="" class="mx-auto h-28 w-auto" aria-hidden="true">
+          <p class="text-[15px] font-semibold text-ink">Buku Tidak Ditemukan</p>
+          <p class="mx-auto mt-1.5 max-w-sm text-[13px] leading-relaxed text-muted">Tidak ada buku yang cocok dengan pencarian atau filter yang dipilih.</p>
+          <button type="button" id="btn-clear-all"
+            class="focus-ring mt-4 inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">
+            Bersihkan Pencarian &amp; Filter
+          </button>
+        </div>
+
+        <div id="state-draft-empty" class="hidden px-5 py-14 text-center">
+          <img src="../../assets/ilustration/notfoundil.png" alt="" class="mx-auto h-28 w-auto" aria-hidden="true">
+          <p class="text-[15px] font-semibold text-ink">Tidak Ada Buku Draft</p>
+          <p class="mx-auto mt-1.5 max-w-sm text-[13px] leading-relaxed text-muted">Semua buku sudah diterbitkan. Buku baru akan muncul di sini sebagai draft.</p>
+        </div>
+
+        <!-- Pagination footer -->
+        <div id="table-footer" class="flex flex-col gap-3 border-t border-border px-4 py-3 sm:flex-row sm:items-center sm:justify-between lg:px-5">
+          <p class="text-[12.5px] text-muted" id="result-summary">Menampilkan 0 dari 0 buku</p>
+          <div class="flex items-center gap-1.5">
+            <button type="button" id="page-prev" aria-label="Halaman sebelumnya"
+              class="focus-ring grid h-8 w-8 place-items-center rounded-lg border border-border text-ink transition-colors hover:bg-neutral disabled:cursor-not-allowed disabled:opacity-40">
+              <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+            </button>
+            <span class="num min-w-8 rounded-lg bg-primary px-2 py-1 text-center text-[12.5px] font-bold text-white" id="page-current">1</span>
+            <button type="button" id="page-next" aria-label="Halaman berikutnya"
+              class="focus-ring grid h-8 w-8 place-items-center rounded-lg border border-border text-ink transition-colors hover:bg-neutral disabled:cursor-not-allowed disabled:opacity-40">
+              <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </div>
-<!-- 4. SKELETON VIEW (State F) -->
-<div class="hidden p-space-md space-y-4 animate-pulse" id="view-skeleton">
-<div class="h-10 bg-surface-soft rounded-lg w-full"></div>
-<div class="space-y-3">
-<div class="h-16 bg-surface-soft/80 rounded-lg w-full"></div>
-<div class="h-16 bg-surface-soft/80 rounded-lg w-full"></div>
-<div class="h-16 bg-surface-soft/80 rounded-lg w-full"></div>
-<div class="h-16 bg-surface-soft/80 rounded-lg w-full"></div>
+
+<!-- ============ ROW ACTION MENU (fixed, no clipping) ============ -->
+<div id="row-menu" class="fixed z-[60] hidden w-56 rounded-2xl border border-border bg-white p-1.5 shadow-[0_16px_40px_rgba(34,34,37,0.14)]" role="menu" aria-label="Aksi buku">
+  <button type="button" id="menu-detail" role="menuitem"
+    class="focus-ring flex w-full items-center gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral">
+    <span class="material-symbols-outlined text-[18px] text-muted">visibility</span>
+    <span>Lihat Detail</span>
+  </button>
+  <button type="button" id="menu-edit" role="menuitem"
+    class="focus-ring flex w-full items-center gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral">
+    <span class="material-symbols-outlined text-[18px] text-muted">edit</span>
+    <span>Edit Buku</span>
+  </button>
+  <button type="button" id="menu-publish" role="menuitem"
+    class="focus-ring flex w-full items-center gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral">
+    <span class="material-symbols-outlined text-[18px] text-muted">publish</span>
+    <span>Terbitkan</span>
+  </button>
+  <button type="button" id="menu-unpublish" role="menuitem"
+    class="focus-ring flex w-full items-center gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral">
+    <span class="material-symbols-outlined text-[18px] text-muted">visibility_off</span>
+    <span>Hentikan Publikasi</span>
+  </button>
 </div>
+
+<!-- ============ BOOK DETAIL MODAL ============ -->
+<div id="modal-detail" class="fixed inset-0 z-[70] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-detail></div>
+  <div class="relative mx-auto mt-20 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[460px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:p-6"
+    role="dialog" aria-modal="true" aria-labelledby="modal-detail-title">
+    <div class="mb-4 flex items-start justify-between gap-4">
+      <h2 id="modal-detail-title" class="text-[18px] font-bold tracking-tight text-ink">Detail Buku</h2>
+      <button type="button" data-close-detail aria-label="Tutup"
+        class="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+
+    <div class="flex items-start gap-4">
+      <img id="det-cover" src="" alt="" class="h-28 w-20 shrink-0 rounded border border-border object-cover">
+      <div class="min-w-0">
+        <p id="det-title" class="text-[15px] font-semibold leading-snug text-ink"></p>
+        <p id="det-author" class="mt-0.5 text-[12.5px] text-muted"></p>
+        <p id="det-status" class="mt-2 text-[12px] font-semibold text-muted"></p>
+      </div>
+    </div>
+
+    <dl class="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 border-t border-divider pt-4 text-[13px]">
+      <div>
+        <dt class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">ID Buku</dt>
+        <dd id="det-id" class="num mt-0.5 font-medium text-ink"></dd>
+      </div>
+      <div>
+        <dt class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Terjual</dt>
+        <dd id="det-sold" class="num mt-0.5 font-medium text-ink"></dd>
+      </div>
+      <div>
+        <dt class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Harga</dt>
+        <dd id="det-price" class="num mt-0.5 font-medium text-ink"></dd>
+      </div>
+      <div>
+        <dt class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Diskon</dt>
+        <dd id="det-discount" class="num mt-0.5 font-medium text-ink"></dd>
+      </div>
+      <div class="col-span-2">
+        <dt class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Harga setelah diskon</dt>
+        <dd id="det-final" class="num mt-0.5 text-[14px] font-semibold text-ink"></dd>
+      </div>
+    </dl>
+
+    <div class="mt-5 flex items-center justify-end gap-2 border-t border-divider pt-4">
+      <button type="button" data-close-detail
+        class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">Tutup</button>
+      <button type="button" id="det-edit"
+        class="focus-ring inline-flex h-10 items-center rounded-xl bg-primary px-4 text-[14px] font-semibold text-white hover:bg-primary-hover">Edit Buku</button>
+    </div>
+  </div>
 </div>
+
+<!-- ============ BOOK FORM MODAL ============ -->
+<div id="modal-book" class="fixed inset-0 z-[70] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-book></div>
+  <div class="relative mx-auto mt-16 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[520px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:mt-24 sm:p-6"
+    role="dialog" aria-modal="true" aria-labelledby="modal-book-title">
+    <div class="mb-4 flex items-start justify-between gap-4">
+      <div>
+        <h2 id="modal-book-title" class="text-[18px] font-bold tracking-tight text-ink">Tambah Buku Baru</h2>
+        <p class="mt-0.5 text-[13px] text-muted">Metadata katalog. Unggah berkas e-book tidak termasuk pada prototype ini.</p>
+      </div>
+      <button type="button" data-close-book aria-label="Tutup"
+        class="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+
+    <form id="book-form" novalidate class="space-y-3.5">
+      <div>
+        <label for="f-title" class="mb-1 block text-[12.5px] font-semibold text-ink">Judul buku</label>
+        <input id="f-title" name="title" type="text" required maxlength="120"
+          class="h-10 w-full rounded-xl border border-border px-3 text-[14px] text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+        <p class="mt-1 hidden text-[12px] text-[#B42318]" data-error="title">Judul buku wajib diisi.</p>
+      </div>
+      <div>
+        <label for="f-author" class="mb-1 block text-[12.5px] font-semibold text-ink">Penulis</label>
+        <input id="f-author" name="author" type="text" required maxlength="80"
+          class="h-10 w-full rounded-xl border border-border px-3 text-[14px] text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+        <p class="mt-1 hidden text-[12px] text-[#B42318]" data-error="author">Nama penulis wajib diisi.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label for="f-price" class="mb-1 block text-[12.5px] font-semibold text-ink">Harga (Rp)</label>
+          <input id="f-price" name="price" type="number" min="1000" step="500" required
+            class="num h-10 w-full rounded-xl border border-border px-3 text-[14px] text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+          <p class="mt-1 hidden text-[12px] text-[#B42318]" data-error="price">Harga minimal Rp 1.000.</p>
+        </div>
+        <div>
+          <label for="f-discount" class="mb-1 block text-[12.5px] font-semibold text-ink">Diskon (%)</label>
+          <input id="f-discount" name="discount" type="number" min="0" max="90" step="1" value="0"
+            class="num h-10 w-full rounded-xl border border-border px-3 text-[14px] text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+        </div>
+      </div>
+      <label class="flex items-center gap-2.5 rounded-xl border border-border px-3 py-2.5">
+        <input id="f-published" name="published" type="checkbox" class="h-4 w-4 rounded border-border text-primary focus:ring-primary/30">
+        <span class="text-[13px] text-ink">Terbitkan langsung ke katalog</span>
+      </label>
+
+      <div class="mt-1 flex items-center justify-end gap-2 border-t border-divider pt-4">
+        <button type="button" data-close-book
+          class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">Batal</button>
+        <button type="submit"
+          class="focus-ring inline-flex h-10 items-center rounded-xl bg-primary px-4 text-[14px] font-semibold text-white hover:bg-primary-hover">Simpan</button>
+      </div>
+    </form>
+  </div>
 </div>
-<!-- Pagination Footer -->
-<div class="px-space-md py-3.5 bg-surface-soft flex items-center justify-between font-body-small text-body-small text-ink-muted" id="table-pagination">
-<span>Menampilkan <strong>5</strong> dari <strong>5</strong> buku</span>
-<div class="flex items-center gap-2">
-<button class="p-1.5 rounded bg-surface-container-lowest text-surface-dim cursor-not-allowed" disabled="">
-<span class="material-symbols-outlined text-[18px] leading-none">chevron_left</span>
-</button>
-<span class="px-2 font-label text-label text-ink-body">1</span>
-<button class="p-1.5 rounded bg-surface-container-lowest text-surface-dim cursor-not-allowed" disabled="">
-<span class="material-symbols-outlined text-[18px] leading-none">chevron_right</span>
-</button>
+
+<!-- ============ UNPUBLISH MODAL ============ -->
+<div id="modal-unpublish" class="fixed inset-0 z-[70] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-unpublish></div>
+  <div class="relative mx-auto mt-24 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[460px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:p-6"
+    role="dialog" aria-modal="true" aria-labelledby="modal-unpublish-title">
+    <div class="mb-3 flex items-start justify-between gap-4">
+      <h2 id="modal-unpublish-title" class="text-[18px] font-bold tracking-tight text-ink">Hentikan Publikasi Buku?</h2>
+      <button type="button" data-close-unpublish aria-label="Tutup"
+        class="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+    <p class="text-[13.5px] leading-relaxed text-ink" id="unpublish-body">Buku tidak akan ditampilkan dalam katalog publik.</p>
+    <p class="mt-2 text-[13px] leading-relaxed text-muted">Pembeli yang sudah memiliki buku tetap dapat mengaksesnya.</p>
+    <div class="mt-5 flex items-center justify-end gap-2 border-t border-divider pt-4">
+      <button type="button" data-close-unpublish
+        class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">Batal</button>
+      <button type="button" id="btn-confirm-unpublish"
+        class="focus-ring inline-flex h-10 items-center rounded-xl bg-[#B42318] px-4 text-[14px] font-semibold text-white hover:bg-[#971B13]">Hentikan Publikasi</button>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
-<!-- Unpublish Confirmation Modal (State E) -->
-<div class="fixed inset-0 z-50 bg-inverse-deep/50 backdrop-blur-xs flex items-center justify-center p-4 hidden" id="unpublish-modal">
-<div class="bg-surface-container-lowest rounded-xl max-w-md w-full p-space-lg shadow-xl relative animate-in fade-in zoom-in-95 duration-150">
-<div class="w-12 h-12 rounded-full bg-error-container text-feedback-error flex items-center justify-center mb-space-md">
-<span class="material-symbols-outlined text-[24px]">visibility_off</span>
-</div>
-<h2 class="font-title-md text-title-md text-ink-body mb-2">Hentikan Publikasi Buku?</h2>
-<p class="font-body-small text-body-small text-ink-muted leading-relaxed mb-space-lg">
-        Buku <span class="font-semibold text-ink-body" id="modal-book-title">"Laskar Aksara Pasundan"</span> tidak akan ditampilkan dalam katalog publik sampai diterbitkan kembali. Pembeli yang telah memiliki hak baca tetap dapat mengakses buku di Perpustakaan Saya.
-      </p>
-<div class="flex items-center justify-end gap-3">
-<button class="px-4 py-2 rounded-lg font-label text-label text-ink-muted hover:bg-surface-soft transition-colors" onclick="closeModal()" type="button">
-          Batal
-        </button>
-<button class="px-4 py-2 rounded-lg font-label text-label bg-feedback-error text-on-error hover:opacity-90 transition-opacity" onclick="confirmUnpublish()" type="button">
-          Unpublish Buku
-        </button>
-</div>
-</div>
-</div>
-<!-- Interactive Logic -->
+
 <script>
-    let activeFilter = 'all';
+(function () {
+  'use strict';
 
-    function setTabStyles(tabId) {
-      const tabs = ['tab-all', 'tab-published', 'tab-draft'];
-      tabs.forEach(t => {
-        const el = document.getElementById(t);
-        if (t === tabId) {
-          el.className = 'px-3.5 py-1.5 rounded-md font-label text-label transition-all bg-surface-container-lowest text-primary shadow-xs font-semibold';
-        } else {
-          el.className = 'px-3.5 py-1.5 rounded-md font-label text-label text-ink-muted hover:text-ink-body transition-all';
-        }
-      });
+  var state = { query: '', filter: 'all', page: 1, pageSize: 5, demo: 'filled' };
+  var demoQuery = '';
+  var pendingUnpublishId = null;
+  var editingId = null;
+  var lastTrigger = null;
+
+  var $ = function (id) { return document.getElementById(id); };
+  var rupiah = function (n) { return 'Rp ' + Number(n).toLocaleString('id-ID'); };
+  var allRows = function () { return Array.prototype.slice.call(document.querySelectorAll('#book-rows tr[data-id]')); };
+  var findRow = function (id) { return document.querySelector('#book-rows tr[data-id="' + id + '"]'); };
+
+  var CHIP = {
+    published: 'text-[12px] font-semibold text-[#0F7B4F]',
+    draft: 'text-[12px] font-semibold text-muted'
+  };
+  var BTN_ICON = 'focus-ring grid h-8 w-8 place-items-center rounded-lg text-muted transition-colors hover:bg-neutral hover:text-ink';
+
+  function data(tr) {
+    return {
+      id: tr.getAttribute('data-id'),
+      title: tr.getAttribute('data-title'),
+      author: tr.getAttribute('data-author'),
+      price: Number(tr.getAttribute('data-price')),
+      discount: Number(tr.getAttribute('data-discount')),
+      sold: Number(tr.getAttribute('data-sold')),
+      status: tr.getAttribute('data-status'),
+      cover: tr.getAttribute('data-cover')
+    };
+  }
+
+  function cell(tr, name) { return tr.querySelector('[data-cell="' + name + '"]'); }
+
+  function paintRow(tr) {
+    var d = data(tr);
+    cell(tr, 'title').textContent = d.title;
+    cell(tr, 'author').textContent = d.author;
+    cell(tr, 'price').textContent = rupiah(d.price);
+    cell(tr, 'discount').textContent = d.discount > 0 ? d.discount + '%' : '\u2014';
+    cell(tr, 'sold').textContent = String(d.sold);
+
+    var statusCell = cell(tr, 'status');
+    statusCell.innerHTML = '';
+    var chip = document.createElement('span');
+    chip.className = CHIP[d.status] || CHIP.draft;
+    chip.textContent = d.status === 'published' ? 'Terbit' : 'Draft';
+    statusCell.appendChild(chip);
+
+    var wrap = cell(tr, 'actions').firstElementChild;
+    wrap.innerHTML = '';
+
+    var more = document.createElement('button');
+    more.type = 'button';
+    more.className = BTN_ICON;
+    more.setAttribute('aria-label', 'Aksi untuk ' + d.title);
+    more.setAttribute('aria-haspopup', 'menu');
+    more.setAttribute('aria-expanded', 'false');
+    more.setAttribute('data-more', d.id);
+    more.innerHTML = '<span class="material-symbols-outlined text-[18px]">more_vert</span>';
+    wrap.appendChild(more);
+  }
+
+  function buildRow(d) {
+    var tr = document.createElement('tr');
+    tr.className = 'border-b border-divider align-middle transition-colors hover:bg-soft';
+    tr.setAttribute('data-id', d.id);
+    tr.setAttribute('data-title', d.title);
+    tr.setAttribute('data-author', d.author);
+    tr.setAttribute('data-price', d.price);
+    tr.setAttribute('data-discount', d.discount);
+    tr.setAttribute('data-sold', d.sold);
+    tr.setAttribute('data-status', d.status);
+    tr.setAttribute('data-cover', d.cover);
+    tr.innerHTML =
+      '<td class="px-4 py-3 lg:px-5">' +
+        '<div class="flex items-start gap-3">' +
+          '<img src="' + d.cover + '" alt="Sampul buku" class="h-14 w-10 shrink-0 rounded border border-border object-cover">' +
+          '<div class="min-w-0">' +
+            '<p data-cell="title" class="line-clamp-2 text-[13.5px] font-semibold leading-snug text-ink"></p>' +
+            '<p data-cell="author" class="mt-0.5 text-[12px] text-muted"></p>' +
+          '</div>' +
+        '</div>' +
+      '</td>' +
+      '<td data-cell="price" class="num px-4 py-3 text-right font-medium text-ink"></td>' +
+      '<td data-cell="discount" class="num px-4 py-3 text-right text-muted"></td>' +
+      '<td data-cell="sold" class="num px-4 py-3 text-right text-ink"></td>' +
+      '<td data-cell="status" class="px-4 py-3"></td>' +
+      '<td data-cell="actions" class="px-4 py-3 pr-5 text-right lg:pr-6">' +
+        '<div class="flex items-center justify-end gap-1.5"></div>' +
+      '</td>';
+    paintRow(tr);
+    return tr;
+  }
+
+  function syncDemoMenu() {
+    document.querySelectorAll('.demo-item').forEach(function (b) {
+      var on = b.getAttribute('data-demo') === state.demo;
+      b.setAttribute('aria-checked', on ? 'true' : 'false');
+      b.classList.toggle('bg-soft', on);
+      var check = b.querySelector('.demo-check');
+      if (check) check.classList.toggle('hidden', !on);
+    });
+  }
+
+  function note(text) {
+    var el = $('page-note');
+    el.textContent = text;
+    el.classList.toggle('hidden', !text);
+  }
+
+  function render() {
+    var rows = allRows();
+    var catalogEmpty = state.demo === 'empty' || rows.length === 0;
+    var query = (state.demo === 'noresults' ? demoQuery : state.query).trim().toLowerCase();
+
+    var matches = catalogEmpty ? [] : rows.filter(function (tr) {
+      var d = data(tr);
+      var okSearch = !query || d.title.toLowerCase().indexOf(query) !== -1 || d.author.toLowerCase().indexOf(query) !== -1;
+      var okStatus = state.filter === 'all' || d.status === state.filter;
+      return okSearch && okStatus;
+    });
+
+    var total = matches.length;
+    var pages = Math.max(1, Math.ceil(total / state.pageSize));
+    if (state.page > pages) state.page = pages;
+    var start = (state.page - 1) * state.pageSize;
+    var visible = matches.slice(start, start + state.pageSize);
+
+    rows.forEach(function (tr) { tr.classList.add('hidden'); });
+    visible.forEach(function (tr) { tr.classList.remove('hidden'); });
+    rows.forEach(paintRow);
+
+    var counts = { all: catalogEmpty ? 0 : rows.length, published: 0, draft: 0 };
+    if (!catalogEmpty) rows.forEach(function (tr) { counts[data(tr).status]++; });
+    document.querySelectorAll('.filter-btn').forEach(function (btn) {
+      var f = btn.getAttribute('data-filter');
+      btn.querySelector('.filter-count').textContent = '(' + counts[f] + ')';
+      var on = f === state.filter;
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      btn.className = 'filter-btn focus-ring rounded-lg px-3 py-1.5 text-[12.5px] ' +
+        (on ? 'bg-white font-bold text-primary shadow-sm' : 'font-semibold text-muted hover:text-ink');
+    });
+
+    var isDraftFilter = state.filter === 'draft' && !query;
+    var showDraftEmpty = !catalogEmpty && isDraftFilter && total === 0;
+    var showNoResults = !catalogEmpty && !showDraftEmpty && total === 0;
+
+    $('view-table').classList.toggle('hidden', state.demo === 'loading');
+    $('view-loading').classList.toggle('hidden', state.demo !== 'loading');
+    $('state-empty').classList.toggle('hidden', !catalogEmpty);
+    $('state-draft-empty').classList.toggle('hidden', !showDraftEmpty);
+    $('state-noresults').classList.toggle('hidden', !showNoResults);
+    $('table-footer').classList.toggle('hidden', catalogEmpty);
+
+    $('result-summary').textContent = 'Menampilkan ' + visible.length + ' dari ' + total + ' buku';
+    $('page-current').textContent = String(state.page);
+    $('page-prev').disabled = state.page <= 1;
+    $('page-next').disabled = state.page >= pages;
+
+    $('btn-clear-search').classList.toggle('hidden', !state.query);
+    $('btn-clear-search').classList.toggle('grid', !!state.query);
+
+    syncDemoMenu();
+  }
+
+  /* ---------------- Search & filter ---------------- */
+  $('book-search').addEventListener('input', function (e) {
+    state.query = e.target.value;
+    if (state.demo === 'noresults') state.demo = 'filled';
+    state.page = 1;
+    render();
+  });
+
+  $('btn-clear-search').addEventListener('click', function () {
+    state.query = '';
+    $('book-search').value = '';
+    state.page = 1;
+    render();
+  });
+
+  $('btn-clear-all').addEventListener('click', function () {
+    state.query = '';
+    state.filter = 'all';
+    state.demo = 'filled';
+    $('book-search').value = '';
+    state.page = 1;
+    render();
+  });
+
+  document.querySelectorAll('.filter-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      state.filter = btn.getAttribute('data-filter');
+      state.page = 1;
+      render();
+    });
+  });
+
+  /* ---------------- Pagination ---------------- */
+  $('page-prev').addEventListener('click', function () { if (state.page > 1) { state.page--; render(); } });
+  $('page-next').addEventListener('click', function () { state.page++; render(); });
+
+  /* ---------------- Row action menu (fixed positioning) ---------------- */
+  var rowMenu = $('row-menu');
+  var menuBookId = null;
+
+  function closeRowMenu() {
+    rowMenu.classList.add('hidden');
+    document.querySelectorAll('[data-more]').forEach(function (b) { b.setAttribute('aria-expanded', 'false'); });
+  }
+
+  document.addEventListener('click', function (e) {
+    var more = e.target.closest('[data-more]');
+    if (more) {
+      e.preventDefault();
+      var id = more.getAttribute('data-more');
+      if (menuBookId === id && !rowMenu.classList.contains('hidden')) { closeRowMenu(); return; }
+      menuBookId = id;
+      var r = more.getBoundingClientRect();
+      rowMenu.classList.remove('hidden');
+      var menuW = 224, menuH = 44;
+      rowMenu.style.left = Math.min(window.innerWidth - menuW - 12, Math.max(12, r.right - menuW)) + 'px';
+      rowMenu.style.top = (r.bottom + menuH + 16 > window.innerHeight ? r.top - menuH - 8 : r.bottom + 6) + 'px';
+      more.setAttribute('aria-expanded', 'true');
+      var row = findRow(id);
+      var draft = row && row.getAttribute('data-status') === 'draft';
+      $('menu-publish').classList.toggle('hidden', !draft);
+      $('menu-unpublish').classList.toggle('hidden', !!draft);
+      return;
     }
 
-    function filterTab(type) {
-      activeFilter = type;
-      setTabStyles('tab-' + type);
-      const rows = document.querySelectorAll('.book-row');
-      rows.forEach(row => {
-        const status = row.getAttribute('data-status');
-        if (type === 'all' || status === type) {
-          row.classList.remove('hidden');
-        } else {
-          row.classList.add('hidden');
-        }
-      });
+    var addBtn = e.target.closest('[data-action="add"]');
+    if (addBtn) { openBookModal(null); return; }
+
+    if (!rowMenu.contains(e.target)) closeRowMenu();
+  });
+
+  function currentMenuRow() { return findRow(menuBookId); }
+
+  $('menu-detail').addEventListener('click', function () {
+    var tr = currentMenuRow();
+    closeRowMenu();
+    if (!tr) return;
+    openDetail(tr);
+  });
+
+  $('menu-edit').addEventListener('click', function () {
+    var id = menuBookId;
+    closeRowMenu();
+    if (id) openBookModal(id);
+  });
+
+  $('menu-publish').addEventListener('click', function () {
+    var tr = currentMenuRow();
+    closeRowMenu();
+    if (!tr) return;
+    tr.setAttribute('data-status', 'published');
+    note('\u201c' + data(tr).title + '\u201d sekarang berstatus Terbit.');
+    render();
+  });
+
+  $('menu-unpublish').addEventListener('click', function () {
+    var tr = currentMenuRow();
+    closeRowMenu();
+    if (!tr) return;
+    pendingUnpublishId = menuBookId;
+    lastTrigger = document.querySelector('[data-more="' + menuBookId + '"]');
+    $('unpublish-body').textContent = data(tr).title + ' tidak akan ditampilkan dalam katalog publik.';
+    openModal('modal-unpublish');
+  });
+
+  /* ---------------- Book detail ---------------- */
+  function openDetail(tr) {
+    var d = data(tr);
+    var final = d.discount > 0 ? Math.round(d.price * (1 - d.discount / 100)) : d.price;
+    $('det-cover').src = d.cover;
+    $('det-cover').alt = 'Sampul ' + d.title;
+    $('det-title').textContent = d.title;
+    $('det-author').textContent = d.author;
+    $('det-status').className = d.status === 'published'
+      ? 'mt-2 text-[12px] font-semibold text-[#0F7B4F]'
+      : 'mt-2 text-[12px] font-semibold text-muted';
+    $('det-status').textContent = d.status === 'published' ? 'Terbit' : 'Draft';
+    $('det-id').textContent = d.id;
+    $('det-sold').textContent = d.sold + ' eks';
+    $('det-price').textContent = rupiah(d.price);
+    $('det-discount').textContent = d.discount > 0 ? d.discount + '%' : '\u2014';
+    $('det-final').textContent = rupiah(final);
+    lastTrigger = document.querySelector('[data-more="' + d.id + '"]');
+    editingId = d.id;
+    openModal('modal-detail');
+  }
+
+  document.querySelectorAll('[data-close-detail]').forEach(function (el) {
+    el.addEventListener('click', function () { closeModal('modal-detail'); });
+  });
+
+  $('det-edit').addEventListener('click', function () {
+    var id = editingId;
+    closeModal('modal-detail');
+    if (id) openBookModal(id);
+  });
+
+  /* ---------------- Modals ---------------- */
+  function openModal(id) {
+    var m = $(id);
+    m.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    var focusable = m.querySelector('input:not([type="hidden"]), button');
+    if (focusable) focusable.focus();
+  }
+
+  function closeModal(id) {
+    $(id).classList.add('hidden');
+    document.body.style.overflow = '';
+    if (lastTrigger && document.contains(lastTrigger)) lastTrigger.focus();
+    lastTrigger = null;
+  }
+
+  document.querySelectorAll('[data-close-unpublish]').forEach(function (el) {
+    el.addEventListener('click', function () { closeModal('modal-unpublish'); pendingUnpublishId = null; });
+  });
+
+  $('btn-confirm-unpublish').addEventListener('click', function () {
+    var tr = findRow(pendingUnpublishId);
+    if (tr) {
+      tr.setAttribute('data-status', 'draft');
+      note('\u201c' + data(tr).title + '\u201d dihentikan dari publikasi dan sekarang berstatus Draft.');
     }
+    pendingUnpublishId = null;
+    closeModal('modal-unpublish');
+    render();
+  });
 
-    function handleSearch(keyword) {
-      const q = keyword.toLowerCase().trim();
-      const rows = document.querySelectorAll('.book-row');
-      let matches = 0;
+  var form = $('book-form');
 
-      rows.forEach(row => {
-        const title = row.getAttribute('data-title').toLowerCase();
-        const author = row.getAttribute('data-author').toLowerCase();
-        const status = row.getAttribute('data-status');
-        const matchesFilter = (activeFilter === 'all' || status === activeFilter);
+  function openBookModal(id) {
+    editingId = id;
+    lastTrigger = id ? document.querySelector('[data-more="' + id + '"]') : $('btn-add');
+    var tr = id ? findRow(id) : null;
+    var d = tr ? data(tr) : null;
+    $('modal-book-title').textContent = d ? 'Edit Buku' : 'Tambah Buku Baru';
+    $('f-title').value = d ? d.title : '';
+    $('f-author').value = d ? d.author : '';
+    $('f-price').value = d ? d.price : '';
+    $('f-discount').value = d ? d.discount : 0;
+    $('f-published').checked = d ? d.status === 'published' : false;
+    form.querySelectorAll('[data-error]').forEach(function (p) { p.classList.add('hidden'); });
+    openModal('modal-book');
+    $('f-title').focus();
+  }
 
-        if ((title.includes(q) || author.includes(q)) && matchesFilter) {
-          row.classList.remove('hidden');
-          matches++;
-        } else {
-          row.classList.add('hidden');
-        }
-      });
+  document.querySelectorAll('[data-close-book]').forEach(function (el) {
+    el.addEventListener('click', function () { closeModal('modal-book'); });
+  });
 
-      const popView = document.getElementById('view-populated');
-      const noSearchView = document.getElementById('view-no-search');
-      const pag = document.getElementById('table-pagination');
+  $('btn-add').addEventListener('click', function () { openBookModal(null); });
 
-      if (matches === 0 && q.length > 0) {
-        popView.classList.add('hidden');
-        noSearchView.classList.remove('hidden');
-        noSearchView.classList.add('flex');
-        pag.classList.add('hidden');
-      } else {
-        popView.classList.remove('hidden');
-        noSearchView.classList.add('hidden');
-        noSearchView.classList.remove('flex');
-        pag.classList.remove('hidden');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var title = $('f-title').value.trim();
+    var author = $('f-author').value.trim();
+    var price = Number($('f-price').value);
+    var discount = Math.min(90, Math.max(0, Number($('f-discount').value) || 0));
+    var published = $('f-published').checked;
+
+    var ok = true;
+    form.querySelectorAll('[data-error]').forEach(function (p) { p.classList.add('hidden'); });
+    if (!title) { form.querySelector('[data-error="title"]').classList.remove('hidden'); ok = false; }
+    if (!author) { form.querySelector('[data-error="author"]').classList.remove('hidden'); ok = false; }
+    if (!price || price < 1000) { form.querySelector('[data-error="price"]').classList.remove('hidden'); ok = false; }
+    if (!ok) return;
+
+    if (editingId) {
+      var tr = findRow(editingId);
+      if (tr) {
+        tr.setAttribute('data-title', title);
+        tr.setAttribute('data-author', author);
+        tr.setAttribute('data-price', price);
+        tr.setAttribute('data-discount', discount);
+        tr.setAttribute('data-status', published ? 'published' : 'draft');
+      }
+      note('Perubahan \u201c' + title + '\u201d disimpan pada prototype ini.');
+    } else {
+      $('book-rows').appendChild(buildRow({
+        id: 'BK-NEW-' + Date.now().toString().slice(-4),
+        title: title, author: author, price: price, discount: discount, sold: 0,
+        status: published ? 'published' : 'draft',
+        cover: '../../assets/covers/B04.jpg'
+      }));
+      note('\u201c' + title + '\u201d ditambahkan ke katalog prototype.');
+      state.query = '';
+      state.filter = 'all';
+      $('book-search').value = '';
+      state.page = 1;
+    }
+    closeModal('modal-book');
+    render();
+  });
+
+  /* ---------------- Mode Demo ---------------- */
+  var demoToggle = $('demo-toggle'), demoMenu = $('demo-menu');
+
+  function closeDemo() { demoMenu.classList.add('hidden'); demoToggle.setAttribute('aria-expanded', 'false'); }
+
+  demoToggle.addEventListener('click', function () {
+    var open = demoMenu.classList.contains('hidden');
+    demoMenu.classList.toggle('hidden', !open);
+    demoToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  demoMenu.addEventListener('click', function (e) {
+    var btn = e.target.closest('.demo-item');
+    if (!btn) return;
+    var scenario = btn.getAttribute('data-demo');
+    state.demo = scenario;
+    state.page = 1;
+
+    if (scenario === 'noresults') { demoQuery = 'zz'; state.query = 'zz'; $('book-search').value = 'zz'; state.filter = 'all'; }
+    if (scenario === 'draft') { state.filter = 'draft'; state.query = ''; $('book-search').value = ''; }
+    if (scenario === 'filled' || scenario === 'empty' || scenario === 'loading') { state.filter = 'all'; state.query = ''; $('book-search').value = ''; }
+
+    closeDemo();
+    render();
+
+    if (scenario === 'unpublish') {
+      var target = null;
+      allRows().forEach(function (tr) { if (!target && data(tr).status === 'published') target = tr; });
+      if (target) {
+        pendingUnpublishId = target.getAttribute('data-id');
+        lastTrigger = document.querySelector('[data-more="' + pendingUnpublishId + '"]');
+        $('unpublish-body').textContent = data(target).title + ' tidak akan ditampilkan dalam katalog publik.';
+        openModal('modal-unpublish');
       }
     }
+  });
 
-    function resetSearch() {
-      const searchInput = document.getElementById('book-search-input');
-      searchInput.value = '';
-      handleSearch('');
+  /* ---------------- Notifications & sidebar ---------------- */
+  var notifBtn = $('btn-notif'), notifPanel = $('notif-panel');
+  notifBtn.addEventListener('click', function () {
+    var open = notifPanel.classList.contains('hidden');
+    notifPanel.classList.toggle('hidden', !open);
+    notifBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!demoMenu.contains(e.target) && !demoToggle.contains(e.target)) closeDemo();
+    if (!notifPanel.contains(e.target) && !notifBtn.contains(e.target)) {
+      notifPanel.classList.add('hidden');
+      notifBtn.setAttribute('aria-expanded', 'false');
     }
+  });
 
-    function setState(state) {
-      // Simulator Buttons visual toggle
-      const states = ['populated', 'empty', 'no-search', 'draft-filter', 'skeleton'];
-      states.forEach(s => {
-        const btn = document.getElementById('btn-state-' + s);
-        if (btn) {
-          if (s === state) {
-            btn.className = 'px-2.5 py-1 rounded bg-primary-container text-on-primary transition-all';
-          } else {
-            btn.className = 'px-2.5 py-1 rounded bg-inverse-surface text-surface-dim hover:text-on-primary transition-all';
-          }
-        }
-      });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    closeDemo();
+    closeRowMenu();
+    notifPanel.classList.add('hidden');
+    notifBtn.setAttribute('aria-expanded', 'false');
+    if (!$('modal-unpublish').classList.contains('hidden')) { closeModal('modal-unpublish'); pendingUnpublishId = null; }
+    if (!$('modal-book').classList.contains('hidden')) closeModal('modal-book');
+    if (!$('modal-detail').classList.contains('hidden')) closeModal('modal-detail');
+    closeSidebar();
+  });
 
-      const popView = document.getElementById('view-populated');
-      const emptyView = document.getElementById('view-empty');
-      const noSearchView = document.getElementById('view-no-search');
-      const skeletonView = document.getElementById('view-skeleton');
-      const pag = document.getElementById('table-pagination');
+  window.addEventListener('resize', closeRowMenu);
+  window.addEventListener('scroll', closeRowMenu, { passive: true });
 
-      // Reset visibility
-      popView.classList.add('hidden');
-      emptyView.classList.add('hidden');
-      emptyView.classList.remove('flex');
-      noSearchView.classList.add('hidden');
-      noSearchView.classList.remove('flex');
-      skeletonView.classList.add('hidden');
-      pag.classList.remove('hidden');
+  var sidebar = $('publisher-sidebar'), scrim = $('sidebar-scrim'), toggle = $('sidebar-toggle');
 
-      if (state === 'populated') {
-        popView.classList.remove('hidden');
-        filterTab('all');
-        resetSearch();
-      } else if (state === 'empty') {
-        emptyView.classList.remove('hidden');
-        emptyView.classList.add('flex');
-        pag.classList.add('hidden');
-      } else if (state === 'no-search') {
-        noSearchView.classList.remove('hidden');
-        noSearchView.classList.add('flex');
-        pag.classList.add('hidden');
-      } else if (state === 'draft-filter') {
-        popView.classList.remove('hidden');
-        filterTab('draft');
-      } else if (state === 'skeleton') {
-        skeletonView.classList.remove('hidden');
-        pag.classList.add('hidden');
-      }
-    }
+  function openSidebar() {
+    sidebar.classList.add('is-open');
+    scrim.classList.remove('hidden');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    var first = sidebar.querySelector('a');
+    if (first) first.focus();
+  }
+  function closeSidebar() {
+    if (!sidebar.classList.contains('is-open')) return;
+    sidebar.classList.remove('is-open');
+    scrim.classList.add('hidden');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    toggle.focus();
+  }
+  toggle.addEventListener('click', function () {
+    sidebar.classList.contains('is-open') ? closeSidebar() : openSidebar();
+  });
+  scrim.addEventListener('click', closeSidebar);
+  sidebar.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeSidebar); });
 
-    function openModal(title) {
-      if (title) {
-        document.getElementById('modal-book-title').innerText = '"' + title + '"';
-      }
-      document.getElementById('unpublish-modal').classList.remove('hidden');
-    }
-
-    function closeModal() {
-      document.getElementById('unpublish-modal').classList.add('hidden');
-    }
-
-    function confirmUnpublish() {
-      closeModal();
-      // Visual feedback demo
-      alert('Status buku berhasil diubah ke Non-Aktif / Draft.');
-    }
-  </script>
-</div></main></div>
-</body></html>
+  render();
+})();
+</script>
+</body>
+</html>

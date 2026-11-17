@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moderasi Diskusi Komunitas - Portal Administrator IKAPI Jawa Barat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#673DE6', 'primary-hover': '#5025D1', 'primary-deep': '#2F1C6A',
+        canvas: '#FFFFFF', soft: '#F5F6FF', neutral: '#F5F5F6',
+        ink: '#222225', muted: '#62636B', border: '#E5E7EB', divider: '#EFEFF2',
+      },
+      fontFamily: { sans: ['DM Sans', 'system-ui', 'sans-serif'] },
+      borderRadius: { xl: '12px', '2xl': '16px', '3xl': '20px' },
+    }
+  }
+}
+</script>
+<style>
+  :root { --topbar-h: 64px; --sidebar-w: 248px; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', system-ui, sans-serif; background: #FFFFFF; color: #222225; }
+  .shell-main { margin-left: 0; }
+  @media (min-width: 1024px) { .shell-main { margin-left: var(--sidebar-w); } }
+  .banner-bleed { margin-left: 0; }
+  @media (min-width: 1024px) { .banner-bleed { margin-left: calc(-1 * var(--sidebar-w)); } }
+  #publisher-sidebar { top: var(--topbar-h); }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .num { font-variant-numeric: tabular-nums; }
+  .focus-ring:focus-visible { outline: 2px solid #673DE6; outline-offset: 2px; }
+  .focus-ring-light:focus-visible { outline: 2px solid #FFFFFF; outline-offset: 2px; }
+  .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  #publisher-sidebar { transform: translateX(-100%); transition: transform .22s ease; }
+  #publisher-sidebar.is-open { transform: translateX(0); }
+  @media (min-width: 1024px) { #publisher-sidebar { transform: none; transition: none; } }
+  #user-drawer { transform: translateX(100%); transition: transform .24s ease; }
+  #user-drawer.is-open { transform: translateX(0); }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-thumb { background: #DCDCE2; border-radius: 9999px; }
+</style>
+  <script src="admin-guard.js"></script>
+</head>
+<body class="bg-canvas text-ink antialiased">
+
+<a href="#workspace" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focus:bg-primary focus:px-4 focus:py-2 focus:text-white focus:text-sm focus:font-semibold">Lewati ke konten utama</a>
+
+<!-- TOP UTILITY BAR -->
+<header class="absolute inset-x-0 top-0 z-50 h-16">
+  <div class="flex h-16 items-center justify-between gap-3 px-4 sm:px-6">
+    <div class="flex items-center gap-3">
+      <button type="button" id="sidebar-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="publisher-sidebar"
+        class="focus-ring-light grid h-10 w-10 place-items-center rounded-xl text-white hover:bg-white/10 lg:hidden">
+        <span class="material-symbols-outlined text-[22px]">menu</span>
+      </button>
+      <a href="dashboard_administrasi_utama_desktop.html" class="focus-ring-light flex items-center rounded-xl">
+        <img src="../../assets/logo-ikapi-jabar.png" alt="IKAPI Jawa Barat" class="h-7 w-auto object-contain drop-shadow-[0_1px_3px_rgba(0,0,0,0.35)]">
+      </a>
+    </div>
+    <div class="flex items-center gap-1.5">
+      <div class="relative">
+        <button type="button" id="btn-notif" aria-label="Notifikasi" aria-haspopup="true" aria-expanded="false"
+          class="focus-ring-light relative grid h-10 w-10 place-items-center rounded-xl text-white hover:bg-white/10">
+          <span class="material-symbols-outlined text-[22px]">notifications</span>
+        </button>
+        <div id="notif-panel" class="absolute right-0 top-12 hidden w-72 rounded-2xl border border-border bg-white p-4 shadow-[0_16px_40px_rgba(34,34,37,0.12)]">
+          <div class="mb-1.5 text-[13px] font-bold text-ink">Notifikasi</div>
+          <p class="text-[13px] leading-relaxed text-muted">Tidak ada notifikasi baru.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<div id="sidebar-scrim" class="fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden"></div>
+<aside id="publisher-sidebar" class="fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgba(34,34,37,0.07)] lg:translate-x-0">
+  <nav aria-label="Navigasi dashboard administrator" class="flex flex-1 flex-col gap-1 overflow-y-auto px-3 pb-4 pt-7">
+    <a href="dashboard_administrasi_utama_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">space_dashboard</span><span>Dashboard</span>
+    </a>
+    <p class="mt-3 px-3 text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Manajemen</p>
+    <a href="kelola_pengguna_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">group</span><span>Kelola Pengguna</span>
+    </a>
+    <a href="pengawasan_katalog_buku_global_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">menu_book</span><span>Pengawasan Katalog</span>
+    </a>
+    <a href="moderasi_ulasan_dan_komentar_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">reviews</span><span>Moderasi Ulasan</span>
+    </a>
+    <a href="kelola_komunitas_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">groups</span><span>Kelola Komunitas</span>
+    </a>
+    <a href="moderasi_diskusi_komunitas_desktop.html" aria-current="page" class="focus-ring flex items-center gap-3 rounded-xl bg-primary px-3 py-2.5 text-[14px] font-semibold text-white">
+      <span class="material-symbols-outlined text-[20px]">forum</span><span>Moderasi Diskusi</span>
+    </a>
+    <p class="mt-3 px-3 text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Keuangan &amp; Monitoring</p>
+    <a href="monitoring_global_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">monitoring</span><span>Monitoring Global</span>
+    </a>
+    <a href="kelola_pencairan_dana_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">payments</span><span>Kelola Pencairan Dana</span>
+    </a>
+  </nav>
+  <div class="flex items-center gap-2 border-t border-divider p-3">
+    <a href="login_administrator_desktop.html" class="focus-ring flex min-w-0 flex-1 items-center gap-3 rounded-xl px-2 py-2 hover:bg-neutral">
+      <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary text-white">
+        <span class="material-symbols-outlined text-[18px]">shield_person</span>
+      </span>
+      <span class="min-w-0 text-left leading-tight">
+        <span class="block truncate text-[13px] font-semibold text-ink">Administrator</span>
+        <span class="block truncate text-[11px] text-muted">Portal Administrator</span>
+      </span>
+    </a>
+    <a href="login_administrator_desktop.html" aria-label="Keluar" title="Keluar"
+      class="focus-ring grid h-10 w-10 shrink-0 place-items-center rounded-xl text-[#B42318] transition-colors hover:bg-[#FEF3F2]">
+      <span class="material-symbols-outlined text-[20px]">logout</span>
+    </a>
+  </div>
+</aside>
+
+<!-- MAIN COLUMN -->
+<div class="shell-main">
+  <div aria-hidden="true" class="banner-bleed relative h-[232px] overflow-hidden bg-primary-deep sm:h-[260px] lg:h-[276px]">
+    <svg class="absolute inset-0 h-full w-full" viewBox="0 0 1440 212" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="topScrim" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2F1C6A" stop-opacity="0.96"></stop>
+          <stop offset="100%" stop-color="#2F1C6A" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="212" fill="#2F1C6A"></rect>
+      <polygon points="418,0 612,0 470,212 276,212" fill="#4B2CBA"></polygon>
+      <polygon points="648,0 706,0 564,212 506,212" fill="#825CF1"></polygon>
+      <polygon points="748,0 1002,0 860,212 606,212" fill="#673DE6"></polygon>
+      <polygon points="1042,0 1084,0 942,212 900,212" fill="#4475D8"></polygon>
+      <polygon points="1124,0 1290,0 1148,212 982,212" fill="#4B2CBA"></polygon>
+      <polygon points="1342,0 1440,0 1440,212 1200,212" fill="#825CF1"></polygon>
+      <polygon points="1420,0 1440,0 1440,212 1378,212" fill="#4475D8"></polygon>
+      <rect width="1440" height="58" fill="url(#topScrim)"></rect>
+    </svg>
+  </div>
+
+  <main id="workspace" class="relative z-10 -mt-20 rounded-t-[20px] border-t border-border bg-white lg:ml-6">
+    <div class="mx-auto w-full max-w-[1560px] px-4 pb-16 pt-6 sm:px-6 lg:px-10 lg:pt-8">
+
+      <div class="mb-4 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+        <div class="min-w-0">
+          <h1 class="text-[26px] font-bold leading-tight tracking-tight text-ink lg:text-[30px]">Moderasi Diskusi Komunitas</h1>
+          <p class="mt-1 text-[14px] text-muted">Tinjau laporan topik dan balasan diskusi komunitas literasi.</p>
+        </div>
+        <div class="relative">
+          <button type="button" id="demo-toggle" aria-expanded="false" aria-haspopup="true"
+            class="focus-ring inline-flex h-10 items-center gap-1.5 rounded-xl border border-dashed border-border px-3 text-[13px] font-semibold text-muted transition-colors hover:bg-neutral hover:text-ink">
+            <span class="material-symbols-outlined text-[17px]">tune</span>
+            <span>Mode Demo</span>
+            <span class="material-symbols-outlined text-[17px]">expand_more</span>
+          </button>
+          <div id="demo-menu" class="absolute right-0 top-12 z-30 hidden w-72 rounded-2xl border border-border bg-white p-1.5 shadow-[0_16px_40px_rgba(34,34,37,0.12)]" role="menu" aria-label="Pilih skenario demo">
+            <button type="button" data-demo="seed" role="menuitem" class="focus-ring flex w-full items-center rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral">Muat contoh laporan demo</button>
+            <button type="button" data-demo="clear" role="menuitem" class="focus-ring flex w-full items-center rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral">Kosongkan laporan demo</button>
+            <p class="px-3 pb-1.5 pt-2 text-[11px] leading-relaxed text-muted">Laporan asli dari halaman komunitas muncul di sini karena data demo disimpan di browser ini.</p>
+          </div>
+        </div>
+      </div>
+
+      <p id="page-note" role="status" class="mb-3 hidden text-[12.5px] text-muted"></p>
+
+      <div class="mb-3 flex flex-wrap items-center justify-between gap-3">
+        <div class="inline-flex items-center gap-1 rounded-xl border border-border bg-white p-1" role="tablist" aria-label="Filter status laporan">
+          <button type="button" id="tab-pending" role="tab" aria-selected="true"
+            class="tab-btn focus-ring rounded-lg bg-primary px-3 py-1.5 text-[12.5px] font-semibold text-white">
+            Menunggu Ditinjau <span class="num" id="count-pending">(0)</span>
+          </button>
+          <button type="button" id="tab-all" role="tab" aria-selected="false"
+            class="tab-btn focus-ring rounded-lg px-3 py-1.5 text-[12.5px] font-semibold text-muted hover:text-ink">
+            Semua Laporan <span class="num" id="count-all">(0)</span>
+          </button>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2">
+          <div class="relative min-w-[200px]">
+            <label for="report-search" class="sr-only">Cari laporan</label>
+            <span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-muted">search</span>
+            <input id="report-search" type="search" placeholder="Cari laporan..."
+              class="h-10 w-full rounded-xl border border-border bg-white pl-9 pr-3 text-[13.5px] text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+          </div>
+          <label for="type-filter" class="sr-only">Filter jenis konten</label>
+          <select id="type-filter"
+            class="h-10 rounded-xl border border-border bg-white px-3 text-[13.5px] font-medium text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+            <option value="all">Semua Jenis Konten</option>
+            <option value="topic">Topik</option>
+            <option value="reply">Balasan</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-border bg-white">
+        <table class="w-full min-w-[860px] border-collapse text-left">
+          <thead>
+            <tr class="border-b border-divider bg-white text-[11px] uppercase tracking-[0.06em] text-muted">
+              <th scope="col" class="px-4 py-3 font-bold">Konten</th>
+              <th scope="col" class="px-4 py-3 font-bold">Komunitas</th>
+              <th scope="col" class="px-4 py-3 font-bold">Alasan</th>
+              <th scope="col" class="px-4 py-3 font-bold">Pelapor</th>
+              <th scope="col" class="px-4 py-3 font-bold">Status</th>
+              <th scope="col" class="px-4 py-3 pr-5 text-right font-bold">Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="report-rows" class="text-[13px]"></tbody>
+        </table>
+      </div>
+
+      <p id="table-summary" class="mt-3 text-[12.5px] text-muted"></p>
+
+      <div id="state-empty" class="mt-3 hidden rounded-2xl border border-border bg-white px-5 py-14 text-center">
+        <p class="text-[15px] font-semibold text-ink">Tidak Ada Laporan</p>
+        <p class="mx-auto mt-1.5 max-w-md text-[13px] leading-relaxed text-muted">Laporan topik atau balasan komunitas akan muncul di sini setelah dikirim oleh pembeli.</p>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+
+  var notifBtn = $('btn-notif'), notifPanel = $('notif-panel');
+  notifBtn.addEventListener('click', function () {
+    var open = notifPanel.classList.contains('hidden');
+    notifPanel.classList.toggle('hidden', !open);
+    notifBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  var sidebar = $('publisher-sidebar'), scrim = $('sidebar-scrim'), toggle = $('sidebar-toggle');
+  function openSidebar() {
+    sidebar.classList.add('is-open');
+    scrim.classList.remove('hidden');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    var first = sidebar.querySelector('a');
+    if (first) first.focus();
+  }
+  function closeSidebar() {
+    if (!sidebar.classList.contains('is-open')) return;
+    sidebar.classList.remove('is-open');
+    scrim.classList.add('hidden');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    toggle.focus();
+  }
+  toggle.addEventListener('click', function () {
+    sidebar.classList.contains('is-open') ? closeSidebar() : openSidebar();
+  });
+  scrim.addEventListener('click', closeSidebar);
+  sidebar.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeSidebar); });
+
+  document.addEventListener('click', function (e) {
+    if (!notifPanel.contains(e.target) && !notifBtn.contains(e.target)) {
+      notifPanel.classList.add('hidden');
+      notifBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>
+
+<!-- ============ REVIEW DRAWER ============ -->
+<div id="drawer-scrim" class="fixed inset-0 z-[60] hidden bg-[#222225]/45"></div>
+<aside id="review-drawer" class="fixed right-0 top-0 z-[70] flex h-full w-full max-w-full flex-col border-l border-border bg-white shadow-[-16px_0_40px_rgba(34,34,37,0.12)] sm:max-w-[540px]"
+  role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+  <header class="flex items-start justify-between gap-4 border-b border-divider px-5 py-4">
+    <div class="min-w-0">
+      <h2 id="drawer-title" class="text-[17px] font-bold tracking-tight text-ink">Tinjau Laporan</h2>
+      <p class="num mt-0.5 text-[12.5px] text-muted" id="drawer-id">-</p>
+    </div>
+    <button type="button" id="drawer-close" aria-label="Tutup detail" class="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[18px]">close</span>
+    </button>
+  </header>
+
+  <div class="flex-1 space-y-5 overflow-y-auto px-5 py-4">
+    <section>
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Konteks</h3>
+      <dl class="mt-2 space-y-2 text-[13px]">
+        <div class="flex justify-between gap-3"><dt class="text-muted">Komunitas</dt><dd class="text-right font-medium text-ink" id="detail-community">-</dd></div>
+        <div class="flex justify-between gap-3"><dt class="text-muted">Jenis konten</dt><dd class="text-right font-medium text-ink" id="detail-type">-</dd></div>
+        <div class="flex justify-between gap-3"><dt class="text-muted">Topik</dt><dd class="text-right font-medium text-ink" id="detail-topic">-</dd></div>
+        <div class="flex justify-between gap-3"><dt class="text-muted">Penulis</dt><dd class="text-right font-medium text-ink" id="detail-author">-</dd></div>
+        <div class="flex justify-between gap-3"><dt class="text-muted">Dilaporkan</dt><dd class="num text-right text-ink" id="detail-time">-</dd></div>
+        <div class="flex justify-between gap-3"><dt class="text-muted">Status laporan</dt><dd class="text-right font-semibold text-ink" id="detail-status">-</dd></div>
+        <div class="flex justify-between gap-3"><dt class="text-muted">Jumlah laporan konten ini</dt><dd class="num text-right text-ink" id="detail-report-count">-</dd></div>
+      </dl>
+    </section>
+
+    <section class="border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Konten yang dilaporkan</h3>
+      <p class="review-text mt-2 rounded-xl border border-border p-3.5 text-[13.5px] leading-relaxed text-ink" id="detail-content">-</p>
+      <p id="detail-content-note" class="mt-1.5 hidden text-[12px] text-[#B42318]"></p>
+    </section>
+
+    <section id="context-block" class="hidden border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Konteks diskusi</h3>
+      <p class="mt-1.5 text-[13px] font-semibold text-ink" id="context-topic-title">-</p>
+      <p class="mt-1 line-clamp-4 text-[13px] leading-relaxed text-muted" id="context-topic-body">-</p>
+      <div id="context-parent-reply" class="mt-2.5 hidden rounded-lg border border-border bg-neutral p-2.5 text-[12.5px] leading-relaxed">
+        <span class="block font-semibold text-ink" id="context-parent-author">-</span>
+        <span class="mt-0.5 block text-muted" id="context-parent-body">-</span>
+      </div>
+      <p class="mt-2 text-[12px] text-muted" id="context-other-replies"></p>
+    </section>
+
+    <section class="border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Alasan pelaporan</h3>
+      <p class="mt-1.5 text-[13.5px] font-semibold text-ink" id="detail-reason">-</p>
+      <p class="mt-1.5 text-[13px] leading-relaxed text-muted" id="detail-details">Tidak ada keterangan tambahan.</p>
+      <p class="mt-2 text-[12px] leading-relaxed text-muted">Alasan laporan bukan keputusan akhir. Periksa konteks sebelum menetapkan tindakan.</p>
+    </section>
+
+    <section class="border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Keputusan</h3>
+      <p class="mt-1.5 text-[13px] leading-relaxed text-ink" id="detail-decision">Belum ada keputusan.</p>
+    </section>
+  </div>
+
+  <footer class="flex items-center justify-end gap-2 border-t border-divider px-5 py-3.5">
+    <button type="button" id="btn-keep" class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[13.5px] font-semibold text-ink hover:bg-neutral disabled:cursor-not-allowed disabled:opacity-50">Pertahankan</button>
+    <button type="button" id="btn-remove" class="focus-ring inline-flex h-10 items-center rounded-xl bg-[#B42318] px-4 text-[13.5px] font-semibold text-white hover:bg-[#971B13] disabled:cursor-not-allowed disabled:opacity-50">Hapus Konten</button>
+  </footer>
+</aside>
+
+<!-- TOAST -->
+<div id="toast" role="status" class="pointer-events-none fixed bottom-6 left-1/2 z-[95] hidden -translate-x-1/2 rounded-xl border border-border bg-white px-4 py-2.5 text-[13px] font-semibold text-ink shadow-[0_12px_32px_rgba(34,34,37,0.14)]">
+  <span id="toast-text"></span>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var $ = function (id) { return document.getElementById(id); };
+
+  var REPORT_KEY = 'ikapi_discussion_reports_demo';
+  var TOPIC_KEY = 'ikapi_community_topics_demo';
+  var REPLY_KEY = 'ikapi_community_replies_demo';
+  var COMMUNITY_KEY = 'ikapi_communities_demo';
+
+  var COMMUNITY_NAMES = {
+    'community-filologi': 'Komunitas Filologi Pasundan',
+    'community-klub-buku': 'Klub Buku Priangan (KBP)',
+    'community-sejarah': 'Masyarakat Sejarah & Budaya Sunda'
+  };
+
+  var STATUS_LABEL = { pending: 'Menunggu', kept: 'Ditolak laporannya', removed: 'Konten dihapus' };
+
+  var ui = { tab: 'pending', query: '', type: 'all', selectedId: null, lastTrigger: null };
+
+  function readJSON(key, fallback) {
+    try {
+      var raw = window.localStorage.getItem(key);
+      if (!raw) return fallback;
+      var parsed = JSON.parse(raw);
+      return parsed && typeof parsed === 'object' ? parsed : fallback;
+    } catch (e) { return fallback; }
+  }
+
+  function writeJSON(key, value) {
+    try { window.localStorage.setItem(key, JSON.stringify(value)); return true; }
+    catch (e) { return false; }
+  }
+
+  function reports() { return readJSON(REPORT_KEY, []) || []; }
+  function topics() { return readJSON(TOPIC_KEY, []) || []; }
+  function replies() { return readJSON(REPLY_KEY, []) || []; }
+  function saveReports(list) { return writeJSON(REPORT_KEY, list); }
+  function saveTopics(list) { return writeJSON(TOPIC_KEY, list); }
+  function saveReplies(list) { return writeJSON(REPLY_KEY, list); }
+
+  function communityName(id) {
+    var list = readJSON(COMMUNITY_KEY, []);
+    if (Array.isArray(list)) {
+      var found = list.filter(function (c) { return c.id === id; })[0];
+      if (found) return found.name;
+    }
+    return COMMUNITY_NAMES[id] || 'Komunitas';
+  }
+
+  function targetOf(report) {
+    if (report.targetType === 'topic') {
+      var topic = topics().filter(function (t) { return t.id === report.targetId; })[0];
+      return topic || null;
+    }
+    var reply = replies().filter(function (r) { return r.id === report.targetId; })[0];
+    return reply || null;
+  }
+
+  function parentTopicOf(reply) {
+    if (!reply) return null;
+    return topics().filter(function (t) { return t.id === reply.topicId; })[0] || null;
+  }
+
+  function reportCountFor(targetType, targetId) {
+    return reports().filter(function (r) {
+      return r.targetType === targetType && r.targetId === targetId;
+    }).length;
+  }
+
+  function note(text) {
+    var el = $('page-note');
+    el.textContent = text || '';
+    el.classList.toggle('hidden', !text);
+  }
+
+  function toast(text) {
+    $('toast-text').textContent = text;
+    $('toast').classList.remove('hidden');
+    window.clearTimeout(toast.timer);
+    toast.timer = window.setTimeout(function () { $('toast').classList.add('hidden'); }, 2600);
+  }
+
+  function filtered() {
+    var list = reports();
+    if (ui.tab === 'pending') list = list.filter(function (r) { return r.status === 'pending'; });
+    if (ui.type !== 'all') list = list.filter(function (r) { return r.targetType === ui.type; });
+
+    var q = ui.query.trim().toLowerCase();
+    if (q) {
+      list = list.filter(function (r) {
+        var target = targetOf(r);
+        var haystack = [
+          r.id, r.reasonLabel, r.details,
+          target ? (target.title || target.body || '') : '',
+          target ? (target.authorName || '') : '',
+          communityName(r.communityId)
+        ].join(' ').toLowerCase();
+        return haystack.indexOf(q) !== -1;
+      });
+    }
+
+    return list.sort(function (a, b) {
+      return new Date(b.createdAt) - new Date(a.createdAt);
+    });
+  }
+
+  function render() {
+    var all = reports();
+    var pending = all.filter(function (r) { return r.status === 'pending'; }).length;
+    $('count-pending').textContent = '(' + pending + ')';
+    $('count-all').textContent = '(' + all.length + ')';
+
+    var pendingTab = ui.tab === 'pending';
+    $('tab-pending').setAttribute('aria-selected', pendingTab ? 'true' : 'false');
+    $('tab-pending').className = 'tab-btn focus-ring rounded-lg px-3 py-1.5 text-[12.5px] font-semibold ' +
+      (pendingTab ? 'bg-primary text-white' : 'text-muted hover:text-ink');
+    $('tab-all').setAttribute('aria-selected', pendingTab ? 'false' : 'true');
+    $('tab-all').className = 'tab-btn focus-ring rounded-lg px-3 py-1.5 text-[12.5px] font-semibold ' +
+      (pendingTab ? 'text-muted hover:text-ink' : 'bg-primary text-white');
+
+    var list = filtered();
+    var tbody = $('report-rows');
+    tbody.textContent = '';
+    $('table-summary').textContent = list.length + ' laporan ditampilkan';
+    $('state-empty').classList.toggle('hidden', list.length > 0);
+
+    list.forEach(function (report) {
+      var target = targetOf(report);
+      var tr = document.createElement('tr');
+      tr.className = 'border-b border-divider transition-colors hover:bg-soft';
+
+      var contentCell = document.createElement('td');
+      contentCell.className = 'px-4 py-3';
+      var type = document.createElement('span');
+      type.className = 'block text-[11px] font-bold uppercase tracking-[0.06em] text-primary';
+      type.textContent = report.targetType === 'topic' ? 'Topik' : 'Balasan';
+      var preview = document.createElement('p');
+      preview.className = 'mt-0.5 line-clamp-2 max-w-[320px] text-[13px] font-medium leading-snug text-ink';
+      preview.textContent = target ? (target.title || target.body) : 'Konten tidak ditemukan';
+      contentCell.appendChild(type);
+      contentCell.appendChild(preview);
+
+      var communityCell = document.createElement('td');
+      communityCell.className = 'px-4 py-3 text-[12.5px] text-muted';
+      communityCell.textContent = communityName(report.communityId);
+
+      var reasonCell = document.createElement('td');
+      reasonCell.className = 'px-4 py-3 text-[12.5px] text-ink';
+      reasonCell.textContent = report.reasonLabel;
+
+      var reporterCell = document.createElement('td');
+      reporterCell.className = 'num px-4 py-3 text-[12px] text-muted';
+      reporterCell.textContent = report.reporterUserId;
+
+      var statusCell = document.createElement('td');
+      statusCell.className = 'px-4 py-3';
+      var status = document.createElement('span');
+      status.className = report.status === 'pending'
+        ? 'text-[12px] font-semibold text-muted'
+        : report.status === 'removed'
+          ? 'text-[12px] font-semibold text-[#B42318]'
+          : 'text-[12px] font-semibold text-[#0F7B4F]';
+      status.textContent = STATUS_LABEL[report.status] || report.status;
+      statusCell.appendChild(status);
+
+      var actionCell = document.createElement('td');
+      actionCell.className = 'px-4 py-3 pr-5 text-right';
+      var button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'focus-ring inline-flex h-8 items-center rounded-lg border border-border px-3 text-[12.5px] font-semibold text-ink hover:bg-neutral';
+      button.textContent = 'Tinjau';
+      button.addEventListener('click', function () { openDrawer(report.id, button); });
+      actionCell.appendChild(button);
+
+      tr.appendChild(contentCell);
+      tr.appendChild(communityCell);
+      tr.appendChild(reasonCell);
+      tr.appendChild(reporterCell);
+      tr.appendChild(statusCell);
+      tr.appendChild(actionCell);
+      tbody.appendChild(tr);
+    });
+  }
+
+  function paintToggleButtons(report) {
+    var decided = report.status !== 'pending';
+    $('btn-keep').disabled = decided;
+    $('btn-remove').disabled = decided;
+    $('btn-keep').textContent = report.status === 'kept' ? 'Sudah Dipertahankan' : 'Pertahankan';
+    $('btn-remove').textContent = report.status === 'removed' ? 'Konten Sudah Dihapus' : 'Hapus Konten';
+  }
+
+  function openDrawer(reportId, trigger) {
+    var report = reports().filter(function (r) { return r.id === reportId; })[0];
+    if (!report) return;
+
+    ui.selectedId = report.id;
+    ui.lastTrigger = trigger || null;
+
+    var target = targetOf(report);
+    var topic = report.targetType === 'topic' ? target : parentTopicOf(target);
+
+    $('drawer-id').textContent = report.id;
+    $('detail-community').textContent = communityName(report.communityId);
+    $('detail-type').textContent = report.targetType === 'topic' ? 'Topik' : 'Balasan';
+    $('detail-topic').textContent = topic ? topic.title : 'Topik tidak ditemukan';
+    $('detail-author').textContent = target ? target.authorName || '-' : '-';
+    $('detail-time').textContent = new Date(report.createdAt).toLocaleString('id-ID', {
+      day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit'
+    });
+    $('detail-status').textContent = STATUS_LABEL[report.status] || report.status;
+    $('detail-report-count').textContent = reportCountFor(report.targetType, report.targetId) + ' laporan';
+    $('detail-content').textContent = target ? (target.body || '') : 'Konten tidak tersedia.';
+    $('detail-reason').textContent = report.reasonLabel;
+    $('detail-details').textContent = report.details ? report.details : 'Tidak ada keterangan tambahan.';
+
+    var contentNote = $('detail-content-note');
+    if (target && target.removed) {
+      contentNote.textContent = 'Konten ini sudah tidak ditampilkan kepada anggota komunitas.';
+      contentNote.classList.remove('hidden');
+    } else {
+      contentNote.classList.add('hidden');
+    }
+
+    var contextBlock = $('context-block');
+    var parentReplyBlock = $('context-parent-reply');
+    if (report.targetType === 'reply' && topic) {
+      contextBlock.classList.remove('hidden');
+      $('context-topic-title').textContent = 'Topik: ' + topic.title;
+      $('context-topic-body').textContent = topic.body;
+
+      if (target && target.parentReplyId) {
+        var parentReply = replies().filter(function (r) { return r.id === target.parentReplyId; })[0];
+        if (parentReply) {
+          parentReplyBlock.classList.remove('hidden');
+          $('context-parent-author').textContent = 'Membalas ' + parentReply.authorName + ':';
+          $('context-parent-body').textContent = parentReply.removed ? 'Komentar telah dihapus' : parentReply.body;
+        } else {
+          parentReplyBlock.classList.add('hidden');
+        }
+      } else {
+        parentReplyBlock.classList.add('hidden');
+      }
+
+      var siblings = replies().filter(function (r) {
+        return r.topicId === topic.id && r.id !== report.targetId && !r.removed;
+      });
+      $('context-other-replies').textContent = siblings.length
+        ? siblings.length + ' balasan lain pada topik ini.'
+        : 'Belum ada balasan lain pada topik ini.';
+    } else {
+      contextBlock.classList.add('hidden');
+      if (parentReplyBlock) parentReplyBlock.classList.add('hidden');
+    }
+
+    if (report.status === 'kept') {
+      $('detail-decision').textContent = 'Laporan ditutup. Konten tetap ditampilkan.';
+    } else if (report.status === 'removed') {
+      $('detail-decision').textContent = 'Konten dihapus dari tampilan publik dan laporan ditutup.';
+    } else {
+      $('detail-decision').textContent = 'Belum ada keputusan. Laporan tidak otomatis menghapus konten.';
+    }
+
+    paintToggleButtons(report);
+
+    $('review-drawer').classList.add('is-open');
+    $('review-drawer').setAttribute('aria-hidden', 'false');
+    $('drawer-scrim').classList.remove('hidden');
+    $('drawer-close').focus();
+  }
+
+  function closeDrawer() {
+    var drawer = $('review-drawer');
+    if (!drawer.classList.contains('is-open')) return;
+    drawer.classList.remove('is-open');
+    drawer.setAttribute('aria-hidden', 'true');
+    $('drawer-scrim').classList.add('hidden');
+    if (ui.lastTrigger) ui.lastTrigger.focus();
+  }
+
+  function keepReport() {
+    var list = reports();
+    var report = list.filter(function (r) { return r.id === ui.selectedId; })[0];
+    if (!report || report.status !== 'pending') return;
+
+    report.status = 'kept';
+    report.reviewedAt = new Date().toISOString();
+
+    if (!saveReports(list)) { toast('Keputusan belum tersimpan. Coba lagi.'); return; }
+
+    note('Laporan ' + report.id + ' ditutup. Konten tetap ditampilkan.');
+    toast('Laporan dipertahankan.');
+    render();
+    openDrawer(report.id, ui.lastTrigger);
+  }
+
+  function removeReport() {
+    var list = reports();
+    var report = list.filter(function (r) { return r.id === ui.selectedId; })[0];
+    if (!report || report.status !== 'pending') return;
+
+    var target = targetOf(report);
+    if (!target) { toast('Konten tidak ditemukan.'); return; }
+
+    /* Only the reported target is affected; the rest of the thread stays. */
+    if (report.targetType === 'topic') {
+      var topicList = topics();
+      var topic = topicList.filter(function (t) { return t.id === report.targetId; })[0];
+      if (!topic) { toast('Topik tidak ditemukan.'); return; }
+      topic.removed = true;
+      topic.removedAt = new Date().toISOString();
+      if (!saveTopics(topicList)) { toast('Keputusan belum tersimpan. Coba lagi.'); return; }
+    } else {
+      var replyList = replies();
+      var reply = replyList.filter(function (r) { return r.id === report.targetId; })[0];
+      if (!reply) { toast('Balasan tidak ditemukan.'); return; }
+      reply.removed = true;
+      reply.removedAt = new Date().toISOString();
+      if (!saveReplies(replyList)) { toast('Keputusan belum tersimpan. Coba lagi.'); return; }
+    }
+
+    /* Every pending report for the same target is closed, records stay. */
+    var now = new Date().toISOString();
+    list.forEach(function (entry) {
+      if (entry.targetType === report.targetType && entry.targetId === report.targetId && entry.status === 'pending') {
+        entry.status = 'removed';
+        entry.reviewedAt = now;
+      }
+    });
+
+    if (!saveReports(list)) { toast('Keputusan belum tersimpan. Coba lagi.'); return; }
+
+    note('Konten ' + (report.targetType === 'topic' ? 'topik' : 'balasan') + ' ' + report.targetId + ' dihapus dari tampilan publik.');
+    toast('Konten dihapus dan laporan ditutup.');
+    render();
+    openDrawer(report.id, ui.lastTrigger);
+  }
+
+  /* ---------- demo data ---------- */
+  function hoursAgo(h) { return new Date(Date.now() - h * 3600 * 1000).toISOString(); }
+
+  function ensureDemoTopics() {
+    var topicList = topics();
+    if (topicList.length) return topicList;
+
+    topicList = [
+      { id: 'TPC-2026-101', communityId: 'community-klub-buku', title: 'Novel apa yang menarik untuk dibahas bersama?',
+        body: 'Lagi cari novel dengan karakter dan konflik menarik untuk diskusi klub baca bulan ini.',
+        authorId: 'USR-DEMO-NADIA', authorName: 'Nadia', createdAt: hoursAgo(30), updatedAt: null, removed: false },
+      { id: 'TPC-2026-102', communityId: 'community-klub-buku', title: 'Bagaimana kalian memilih buku berikutnya?',
+        body: 'Penasaran bagaimana anggota klub baca menentukan bacaan untuk diskusi bulanan.',
+        authorId: 'USR-DEMO-RAKA', authorName: 'Raka', createdAt: hoursAgo(20), updatedAt: null, removed: false },
+      { id: 'TPC-2026-103', communityId: 'community-filologi', title: 'E-book naskah kuno: versi digital atau cetak yang lebih nyaman?',
+        body: 'Untuk menelaah naskah panjang, saya lebih nyaman membaca e-book karena bisa memperbesar bagian tulisan.',
+        authorId: 'USR-DEMO-DINA', authorName: 'Dina', createdAt: hoursAgo(70), updatedAt: null, removed: false },
+      { id: 'TPC-2026-105', communityId: 'community-sejarah', title: 'Buku sejarah lokal apa yang paling berkesan tahun ini?',
+        body: 'Bagikan satu judul buku sejarah Priangan yang menurutmu paling berkesan.',
+        authorId: 'USR-DEMO-RAKA', authorName: 'Raka', createdAt: hoursAgo(26), updatedAt: null, removed: false }
+    ];
+    saveTopics(topicList);
+
+    var replyList = replies();
+    if (!replyList.length) {
+      saveReplies([
+        { id: 'RPL-2026-201', topicId: 'TPC-2026-101', communityId: 'community-klub-buku',
+          body: 'Menurutku novel dengan banyak sudut pandang akan menarik untuk dibahas bersama.',
+          authorId: 'USR-DEMO-DINA', authorName: 'Dina', createdAt: hoursAgo(28), updatedAt: null, removed: false },
+        { id: 'RPL-2026-205', topicId: 'TPC-2026-105', communityId: 'community-sejarah',
+          body: 'Bumi Parahyangan: Jejak Purba cukup berkesan karena menghubungkan bentang alam dengan cerita warga.',
+          authorId: 'USR-DEMO-NADIA', authorName: 'Nadia', createdAt: hoursAgo(20), updatedAt: null, removed: false }
+      ]);
+    }
+
+    return topicList;
+  }
+
+  function seedDemoReports() {
+    ensureDemoTopics();
+
+    var list = reports();
+    var existingIds = list.map(function (r) { return r.id; });
+    var seeds = [
+      { id: 'DRPT-DEMO-01', targetType: 'topic', targetId: 'TPC-2026-102', communityId: 'community-klub-buku',
+        reporterUserId: 'USR-DEMO-NADIA', reasonId: 'spam', reasonLabel: 'Spam atau promosi',
+        details: 'Judulnya terasa seperti promosi berulang, bukan pembahasan buku.', createdAt: hoursAgo(5), status: 'pending' },
+      { id: 'DRPT-DEMO-02', targetType: 'reply', targetId: 'RPL-2026-201', communityId: 'community-klub-buku',
+        reporterUserId: 'USR-DEMO-RAKA', reasonId: 'abuse', reasonLabel: 'Kata kasar atau pelecehan',
+        details: 'Balasan menyebut anggota lain dengan kata yang tidak pantas.', createdAt: hoursAgo(3), status: 'pending' }
+    ];
+
+    seeds.forEach(function (seed) {
+      if (existingIds.indexOf(seed.id) === -1) list.push(seed);
+    });
+
+    if (!saveReports(list)) { toast('Contoh laporan tidak dapat dimuat.'); return; }
+    note('Contoh laporan demo dimuat. Data ini hanya tersimpan di browser ini.');
+    toast('Contoh laporan dimuat.');
+    render();
+  }
+
+  function clearDemoReports() {
+    if (!saveReports([])) { toast('Laporan demo tidak dapat dikosongkan.'); return; }
+    note('Semua laporan demo dikosongkan.');
+    toast('Laporan demo dikosongkan.');
+    render();
+  }
+
+  var demoToggle = $('demo-toggle'), demoMenu = $('demo-menu');
+  function closeDemo() {
+    demoMenu.classList.add('hidden');
+    demoToggle.setAttribute('aria-expanded', 'false');
+  }
+  demoToggle.addEventListener('click', function () {
+    var open = demoMenu.classList.contains('hidden');
+    demoMenu.classList.toggle('hidden', !open);
+    demoToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  demoMenu.addEventListener('click', function (e) {
+    var item = e.target.closest('[data-demo]');
+    if (!item) return;
+    closeDemo();
+    if (item.getAttribute('data-demo') === 'seed') seedDemoReports();
+    else clearDemoReports();
+  });
+
+  $('tab-pending').addEventListener('click', function () { ui.tab = 'pending'; render(); });
+  $('tab-all').addEventListener('click', function () { ui.tab = 'all'; render(); });
+  $('report-search').addEventListener('input', function (e) { ui.query = e.target.value; render(); });
+  $('type-filter').addEventListener('change', function (e) { ui.type = e.target.value; render(); });
+  $('btn-keep').addEventListener('click', keepReport);
+  $('btn-remove').addEventListener('click', removeReport);
+  $('drawer-close').addEventListener('click', closeDrawer);
+  $('drawer-scrim').addEventListener('click', closeDrawer);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (!$('demo-menu').classList.contains('hidden')) { closeDemo(); return; }
+    closeDrawer();
+  });
+  document.addEventListener('click', function (e) {
+    if (!demoMenu.contains(e.target) && !demoToggle.contains(e.target)) closeDemo();
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

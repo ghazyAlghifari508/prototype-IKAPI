@@ -1,780 +1,876 @@
 <!DOCTYPE html>
-
-<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"error-container":"#ffdad6","secondary-fixed":"#ffd9e3","on-tertiary-fixed-variant":"#584400","surface-cream":"#FFF1E3","surface-variant":"#e3e1ef","inverse-surface":"#302f3a","on-background":"#1b1b25","on-secondary-fixed-variant":"#663949","tertiary-fixed":"#ffe08d","on-surface-variant":"#464555","surface-paper":"#FFF0E3","inverse-primary":"#c2c1ff","on-primary-fixed-variant":"#3229c4","surface-container-lowest":"#ffffff","on-error":"#ffffff","tertiary-fixed-dim":"#ecc23f","on-primary-fixed":"#0c006a","border-subtle":"#E7E7EF","surface-soft":"#F8F7FF","on-secondary-fixed":"#330e1d","surface-tint":"#4c48dc","on-tertiary":"#ffffff","surface":"#fcf8ff","surface-sky":"#E0F6FC","primary":"#3f3ad0","error":"#ba1a1a","border-bold":"#CFD0DD","surface-container-low":"#f5f2ff","on-error-container":"#93000a","ink-body":"#191923","primary-fixed":"#e2dfff","outline-variant":"#c7c4d7","on-secondary-container":"#7a495a","on-tertiary-fixed":"#241a00","primary-fixed-dim":"#c2c1ff","on-secondary":"#ffffff","surface-container-highest":"#e3e1ef","tertiary":"#745b00","on-tertiary-container":"#4f3d00","feedback-error":"#B42318","secondary-container":"#fdbed1","on-primary-container":"#eeeaff","surface-bright":"#fcf8ff","surface-container-high":"#e9e6f5","primary-container":"#5956e9","inverse-on-surface":"#f2effe","secondary":"#815060","tertiary-container":"#cea623","secondary-fixed-dim":"#f4b5c8","surface-lilac":"#E5E4FF","inverse-deep":"#24233D","ink-muted":"#555665","surface-container":"#efecfb","outline":"#777586","on-primary":"#ffffff","on-surface":"#1b1b25","surface-dim":"#dbd8e7","background":"#fcf8ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","gutter-mobile":"1.25rem","space-md":"1rem","margin-mobile":"1.25rem","space-3xl":"4.5rem","space-sm":"0.5rem","margin":"2.5rem","space-lg":"1.5rem","space-xl":"2rem","space-xs":"0.25rem","space-2xl":"3rem"},"fontFamily":{"headline-lg-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-small":["Plus Jakarta Sans"],"display-md":["Plus Jakarta Sans"],"label":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"body-base":["Plus Jakarta Sans"],"display-md-mobile":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-small":["Plus Jakarta Sans"]},"fontSize":{"headline-lg-mobile":["24px",{"lineHeight":"1.25","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["36px",{"lineHeight":"1.18","letterSpacing":"-0.03em","fontWeight":"700"}],"label-small":["12px",{"lineHeight":"1.3","letterSpacing":"0.02em","fontWeight":"600"}],"display-md":["44px",{"lineHeight":"1.12","letterSpacing":"-0.035em","fontWeight":"800"}],"label":["14px",{"lineHeight":"1.35","letterSpacing":"0","fontWeight":"600"}],"display-lg-mobile":["34px",{"lineHeight":"1.15","letterSpacing":"-0.03em","fontWeight":"800"}],"display-lg":["56px",{"lineHeight":"1.08","letterSpacing":"-0.04em","fontWeight":"800"}],"body-base":["16px",{"lineHeight":"1.6","letterSpacing":"0","fontWeight":"400"}],"display-md-mobile":["28px",{"lineHeight":"1.2","letterSpacing":"-0.025em","fontWeight":"800"}],"title-md":["18px",{"lineHeight":"1.35","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-md":["28px",{"lineHeight":"1.22","letterSpacing":"-0.025em","fontWeight":"700"}],"body-small":["14px",{"lineHeight":"1.5","letterSpacing":"0","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-base text-body-base text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center gap-space-sm bg-surface-container-low"><div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-display-md text-title-md font-bold tracking-tight shadow-sm">IK</div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface tracking-tight leading-none">IKAPI Store</span><span class="font-label-small text-label-small text-ink-muted uppercase tracking-wider mt-1">Portal Admin</span></div></div><nav class="px-space-md py-space-sm space-y-space-md overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-label text-label"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-small text-label-small text-ink-muted uppercase tracking-wider">Utama</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-small text-label-small text-ink-muted uppercase tracking-wider">Manajemen</div><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg transition-colors bg-primary-container text-on-primary-container font-label text-label" data-path="kelola-pengguna" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Kelola Pengguna</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="pengawasan-katalog" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span>Pengawasan Katalog</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="moderasi-ulasan" href="#"><span class="material-symbols-outlined text-[20px]">rate_review</span><span>Moderasi Ulasan</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-small text-label-small text-ink-muted uppercase tracking-wider">Keuangan &amp; Monitoring</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="monitoring-global" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span>Monitoring Global</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="kelola-pencairan-dana" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span>Kelola Pencairan Dana</span></a></div></nav></div><div class="p-space-md"><a class="w-full flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-label text-label text-error hover:bg-error-container hover:text-on-error-container transition-colors" data-path="logout" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span>Keluar Portal</span></a></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container text-on-surface-variant font-label text-label"><span class="material-symbols-outlined text-[18px]">calendar_today</span><span>Kamis, 24 Oktober 2024</span></div></div><div class="flex items-center gap-space-lg"><button aria-label="Notifikasi" class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label text-label text-on-surface leading-snug">Budi Hartanto</span><span class="font-label-small text-label-small text-ink-muted leading-tight">Super Administrator</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-20 bg-surface flex-1 px-space-lg py-space-lg"><div class="flex flex-col w-full">
-<!-- Interactive State Simulator Toolbar -->
-<aside aria-label="Interactive State Simulator" class="mb-space-lg bg-surface-container-high rounded-xl p-space-sm flex flex-wrap items-center justify-between gap-space-sm shadow-sm">
-<div class="flex items-center gap-space-xs text-on-surface-variant">
-<span class="material-symbols-outlined text-[18px] text-primary">tune</span>
-<span class="font-label-small text-label-small uppercase tracking-wider font-bold">Simulator Status:</span>
-</div>
-<div class="flex flex-wrap items-center gap-space-xs">
-<button class="px-space-sm py-1 rounded bg-primary text-on-primary font-label-small text-label-small transition-colors" id="sim-btn-tab1" onclick="switchMainTab('pending')">
-        Tab: Menunggu Persetujuan
-      </button>
-<button class="px-space-sm py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-small text-label-small transition-colors" id="sim-btn-tab2" onclick="switchMainTab('all')">
-        Tab: Semua Pengguna
-      </button>
-<button class="px-space-sm py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-small text-label-small transition-colors" id="sim-btn-drawer" onclick="toggleDrawer()">
-        Drawer: Tinjau Detail
-      </button>
-<button class="px-space-sm py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-small text-label-small transition-colors" onclick="openApproveModal()">
-        Modal: Setujui
-      </button>
-<button class="px-space-sm py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-small text-label-small transition-colors" onclick="openRejectModal()">
-        Modal: Tolak (Alasan)
-      </button>
-<button class="px-space-sm py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-small text-label-small transition-colors" onclick="openDeactivateModal()">
-        Modal: Nonaktifkan
-      </button>
-<button class="px-space-sm py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-small text-label-small transition-colors" onclick="showNotification('Status akun berhasil diperbarui')">
-        Toast: Sukses
-      </button>
-</div>
-</aside>
-<!-- Page Header -->
-<header class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
-<div>
-<div class="flex items-center gap-space-xs font-label-small text-label-small text-ink-muted uppercase tracking-wider mb-1">
-<span>Manajemen Akun</span>
-<span>/</span>
-<span class="text-primary font-semibold">Verifikasi Penerbit</span>
-</div>
-<h1 class="font-headline-lg text-headline-lg text-on-surface">Kelola Pengguna</h1>
-<p class="font-body-base text-body-base text-ink-muted mt-1">
-        Tinjau pendaftaran penerbit dan kelola status akun pengguna marketplace secara tersentralisasi.
-      </p>
-</div>
-<div class="flex items-center gap-space-sm">
-<div class="bg-surface-cream px-space-md py-space-xs rounded-xl flex items-center gap-space-sm">
-<span class="material-symbols-outlined text-tertiary text-[22px]">verified_user</span>
-<div class="flex flex-col">
-<span class="font-label-small text-label-small text-on-tertiary-fixed-variant leading-none">Standar Kurasi IKAPI</span>
-<span class="font-label text-label text-ink-body font-bold leading-tight">Protokol UC-40 &amp; UC-28</span>
-</div>
-</div>
-</div>
-</header>
-<!-- Navigation Tabs (Stripe-Connect Style Pill Tabs) -->
-<nav aria-label="Tab Pengguna" class="flex items-center gap-space-xs bg-surface-container-high p-1 rounded-xl w-fit mb-space-lg">
-<button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-lowest text-primary font-label text-label shadow-sm transition-all" id="tab-nav-pending" onclick="switchMainTab('pending')">
-<span>Menunggu Persetujuan</span>
-<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-small text-label-small font-bold">2</span>
-</button>
-<button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface font-label text-label transition-all" id="tab-nav-all" onclick="switchMainTab('all')">
-<span>Semua Pengguna</span>
-<span class="px-2 py-0.5 rounded-full bg-surface-variant text-on-surface-variant font-label-small text-label-small">34</span>
-</button>
-</nav>
-<!-- Search & Filter Controls -->
-<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-lg flex flex-col lg:flex-row items-center justify-between gap-space-md">
-<div class="relative w-full lg:w-96">
-<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
-<input class="w-full h-11 pl-10 pr-4 bg-surface rounded-lg font-body-small text-body-small text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary-container" id="tableSearchInput" oninput="filterTableLive()" placeholder="Cari nama penerbit, penanggung jawab, atau email..." type="text"/>
-</div>
-<div class="flex flex-wrap items-center gap-space-sm w-full lg:w-auto justify-end">
-<!-- Role Filter -->
-<div class="flex items-center gap-2">
-<label class="font-label-small text-label-small text-ink-muted" for="filterRole">Peran:</label>
-<select class="h-11 px-space-md bg-surface text-on-surface rounded-lg font-label text-label focus:outline-none focus:ring-2 focus:ring-primary-container" id="filterRole" onchange="filterTableLive()">
-<option value="ALL">Semua Jenis</option>
-<option selected="" value="PENERBIT">Penerbit (Publisher)</option>
-<option value="PEMBELI">Pembeli Retail</option>
-</select>
-</div>
-<!-- Status Filter -->
-<div class="flex items-center gap-2">
-<label class="font-label-small text-label-small text-ink-muted" for="filterStatus">Status:</label>
-<select class="h-11 px-space-md bg-surface text-on-surface rounded-lg font-label text-label focus:outline-none focus:ring-2 focus:ring-primary-container" id="filterStatus" onchange="filterTableLive()">
-<option value="ALL">Semua Status</option>
-<option selected="" value="PENDING">Menunggu Approval</option>
-<option value="APPROVED">Disetujui</option>
-<option value="REJECTED">Ditolak</option>
-<option value="ACTIVE">Aktif</option>
-<option value="SUSPENDED">Nonaktif</option>
-</select>
-</div>
-<!-- Refresh / Reset -->
-<button class="h-11 px-space-sm bg-surface hover:bg-surface-container text-on-surface-variant hover:text-on-surface rounded-lg transition-colors flex items-center justify-center" onclick="resetFilters()" title="Muat Ulang Data">
-<span class="material-symbols-outlined text-[20px]">refresh</span>
-</button>
-</div>
-</section>
-<!-- Main Split Content: Master Table + Side Drawer Reviewer -->
-<div class="flex flex-col lg:flex-row items-start gap-space-lg relative">
-<!-- LEFT SIDE: Catalog / List Workspace -->
-<main class="w-full transition-all duration-300 min-w-0" id="table-container">
-<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
-<!-- Table Information Header -->
-<div class="px-space-lg py-space-md bg-surface-soft flex items-center justify-between">
-<div class="flex items-center gap-space-sm">
-<span class="material-symbols-outlined text-primary text-[20px]">domain_verification</span>
-<span class="font-label text-label text-on-surface font-bold" id="tableSectionTitle">Daftar Pengajuan Penerbit Tertunda</span>
-</div>
-<span class="font-label-small text-label-small text-ink-muted" id="rowCountDisplay">Menampilkan 4 data permohonan</span>
-</div>
-<div class="overflow-x-auto">
-<table class="w-full text-left font-body-small text-body-small">
-<thead>
-<tr class="bg-surface-container-low text-ink-muted font-label-small text-label-small uppercase tracking-wider">
-<th class="py-space-md px-space-lg">Penerbit</th>
-<th class="py-space-md px-space-md">Penanggung Jawab</th>
-<th class="py-space-md px-space-md">Tanggal Daftar</th>
-<th class="py-space-md px-space-md">Status Pendaftaran</th>
-<th class="py-space-md px-space-lg text-right">Aksi</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-surface-container" id="publisherTableBody">
-<!-- Row 1 (Selected Row) -->
-<tr class="cursor-pointer transition-colors bg-surface-lilac/30 hover:bg-surface-lilac/50" id="row-mizan" onclick="selectPublisher('mizan')">
-<td class="py-space-md px-space-lg">
-<div class="flex items-center gap-space-sm">
-<div class="w-10 h-10 rounded-lg bg-surface-cream text-tertiary flex items-center justify-center font-title-md text-title-md font-bold shrink-0">
-                      MZ
-                    </div>
-<div class="flex flex-col min-w-0">
-<span class="font-title-md text-body-base font-bold text-on-surface truncate">PT Mizan Pustaka Utama</span>
-<span class="font-label-small text-label-small text-ink-muted truncate">Bandung, Jawa Barat</span>
-</div>
-</div>
-</td>
-<td class="py-space-md px-space-md">
-<div class="flex flex-col">
-<span class="font-label text-label text-on-surface font-semibold">Ahmad Fuadi, M.Hum</span>
-<span class="font-label-small text-label-small text-ink-muted">ahmad.fuadi@mizan.co.id</span>
-</div>
-</td>
-<td class="py-space-md px-space-md text-on-surface-variant font-label text-label">
-                  14 Nov 2026, 09:30
-                </td>
-<td class="py-space-md px-space-md">
-<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-small text-label-small font-bold">
-<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
-                    Menunggu Approval
-                  </span>
-</td>
-<td class="py-space-md px-space-lg text-right">
-<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label text-label hover:bg-primary transition-colors shadow-sm" onclick="event.stopPropagation(); selectPublisher('mizan');" type="button">
-                    Tinjau
-                  </button>
-</td>
-</tr>
-<!-- Row 2 -->
-<tr class="cursor-pointer transition-colors hover:bg-surface-container-low" id="row-angkasa" onclick="selectPublisher('angkasa')">
-<td class="py-space-md px-space-lg">
-<div class="flex items-center gap-space-sm">
-<div class="w-10 h-10 rounded-lg bg-surface-sky text-primary flex items-center justify-center font-title-md text-title-md font-bold shrink-0">
-                      AK
-                    </div>
-<div class="flex flex-col min-w-0">
-<span class="font-title-md text-body-base font-bold text-on-surface truncate">CV Angkasa Bandung</span>
-<span class="font-label-small text-label-small text-ink-muted truncate">Bandung, Jawa Barat</span>
-</div>
-</div>
-</td>
-<td class="py-space-md px-space-md">
-<div class="flex flex-col">
-<span class="font-label text-label text-on-surface font-semibold">Dra. Ratna Juwita</span>
-<span class="font-label-small text-label-small text-ink-muted">ratna.j@angkasabandung.com</span>
-</div>
-</td>
-<td class="py-space-md px-space-md text-on-surface-variant font-label text-label">
-                  13 Nov 2026, 16:15
-                </td>
-<td class="py-space-md px-space-md">
-<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-small text-label-small font-bold">
-<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
-                    Menunggu Approval
-                  </span>
-</td>
-<td class="py-space-md px-space-lg text-right">
-<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface font-label text-label hover:bg-surface-container-high transition-colors" onclick="event.stopPropagation(); selectPublisher('angkasa');" type="button">
-                    Tinjau
-                  </button>
-</td>
-</tr>
-<!-- Row 3 -->
-<tr class="cursor-pointer transition-colors hover:bg-surface-container-low" id="row-kautsar" onclick="selectPublisher('kautsar')">
-<td class="py-space-md px-space-lg">
-<div class="flex items-center gap-space-sm">
-<div class="w-10 h-10 rounded-lg bg-surface-variant text-on-surface-variant flex items-center justify-center font-title-md text-title-md font-bold shrink-0">
-                      AG
-                    </div>
-<div class="flex flex-col min-w-0">
-<span class="font-title-md text-body-base font-bold text-on-surface truncate">Penerbit Al-Kautsar Grafika</span>
-<span class="font-label-small text-label-small text-ink-muted truncate">Jakarta Timur, DKI Jakarta</span>
-</div>
-</div>
-</td>
-<td class="py-space-md px-space-md">
-<div class="flex flex-col">
-<span class="font-label text-label text-on-surface font-semibold">Ir. H. Syarif Hidayat</span>
-<span class="font-label-small text-label-small text-ink-muted">syarif@alkautsar.id</span>
-</div>
-</td>
-<td class="py-space-md px-space-md text-on-surface-variant font-label text-label">
-                  11 Nov 2026, 11:20
-                </td>
-<td class="py-space-md px-space-md">
-<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-small text-label-small font-bold">
-<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span>
-                    Disetujui
-                  </span>
-</td>
-<td class="py-space-md px-space-lg text-right">
-<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface font-label text-label hover:bg-surface-container-high transition-colors" onclick="event.stopPropagation(); selectPublisher('kautsar');" type="button">
-                    Detail
-                  </button>
-</td>
-</tr>
-<!-- Row 4 -->
-<tr class="cursor-pointer transition-colors hover:bg-surface-container-low" id="row-pelangi" onclick="selectPublisher('pelangi')">
-<td class="py-space-md px-space-lg">
-<div class="flex items-center gap-space-sm">
-<div class="w-10 h-10 rounded-lg bg-error-container text-on-error-container flex items-center justify-center font-title-md text-title-md font-bold shrink-0">
-                      PA
-                    </div>
-<div class="flex flex-col min-w-0">
-<span class="font-title-md text-body-base font-bold text-on-surface truncate">CV Pelangi Aksara Digital</span>
-<span class="font-label-small text-label-small text-ink-muted truncate">Yogyakarta, DI Yogyakarta</span>
-</div>
-</div>
-</td>
-<td class="py-space-md px-space-md">
-<div class="flex flex-col">
-<span class="font-label text-label text-on-surface font-semibold">Dedi Kurniawan</span>
-<span class="font-label-small text-label-small text-ink-muted">dedi@pelangiaksara.com</span>
-</div>
-</td>
-<td class="py-space-md px-space-md text-on-surface-variant font-label text-label">
-                  08 Nov 2026, 14:00
-                </td>
-<td class="py-space-md px-space-md">
-<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-small text-label-small font-bold">
-<span class="material-symbols-outlined text-[14px] text-error">cancel</span>
-                    Ditolak
-                  </span>
-</td>
-<td class="py-space-md px-space-lg text-right">
-<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface font-label text-label hover:bg-surface-container-high transition-colors" onclick="event.stopPropagation(); selectPublisher('pelangi');" type="button">
-                    Detail
-                  </button>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<!-- Table Footer / Pagination -->
-<footer class="p-space-md bg-surface-container-lowest flex items-center justify-between">
-<span class="font-label-small text-label-small text-ink-muted">
-            Halaman 1 dari 1 (Total 4 entri permohonan)
-          </span>
-<div class="flex items-center gap-space-xs">
-<button class="px-space-sm py-1 rounded bg-surface-container-low text-ink-muted font-label-small text-label-small opacity-50 cursor-not-allowed" disabled="">
-              Sebelumnya
-            </button>
-<button class="px-space-sm py-1 rounded bg-primary-container text-on-primary-container font-label-small text-label-small font-bold">
-              1
-            </button>
-<button class="px-space-sm py-1 rounded bg-surface-container-low text-ink-muted font-label-small text-label-small opacity-50 cursor-not-allowed" disabled="">
-              Berikutnya
-            </button>
-</div>
-</footer>
-</div>
-</main>
-<!-- RIGHT SIDE: Side Drawer Reviewer (~480px width) -->
-<aside class="w-full lg:w-[480px] shrink-0 bg-surface-container-lowest rounded-xl shadow-md overflow-hidden flex flex-col transition-all duration-300" id="side-drawer">
-<!-- Drawer Header -->
-<div class="p-space-lg bg-surface-container-low flex items-start justify-between">
-<div>
-<div class="flex items-center gap-2 mb-1">
-<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-small text-label-small font-bold" id="drawerBadge">
-              Menunggu Approval
-            </span>
-<span class="font-label-small text-label-small text-ink-muted">ID: REG-2026-088</span>
-</div>
-<h2 class="font-title-md text-title-md text-on-surface" id="drawerTitle">Detail Pendaftaran Penerbit</h2>
-</div>
-<button class="p-1 rounded-lg text-ink-muted hover:text-on-surface hover:bg-surface-container transition-colors" onclick="toggleDrawer()" title="Tutup Drawer">
-<span class="material-symbols-outlined text-[20px]">close</span>
-</button>
-</div>
-<!-- Drawer Body Content: Strict UC-28 Specifications (NO Password) -->
-<div class="p-space-lg space-y-space-lg overflow-y-auto max-h-[calc(100vh-280px)]">
-<!-- Publisher Brand Banner Card -->
-<div class="bg-surface-cream p-space-md rounded-xl flex items-center gap-space-md">
-<div class="w-14 h-18 rounded bg-surface-container-lowest p-2 shadow-sm flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-primary text-[32px]">menu_book</span>
-</div>
-<div>
-<h3 class="font-title-md text-title-md text-on-surface leading-tight" id="drawerPublisherName">PT Mizan Pustaka Utama</h3>
-<span class="font-label-small text-label-small text-on-tertiary-fixed-variant block mt-0.5">Anggota Reguler IKAPI Jawa Barat</span>
-<div class="flex items-center gap-1 text-ink-muted font-label-small text-label-small mt-1">
-<span class="material-symbols-outlined text-[14px]">event</span>
-<span id="drawerSubmittedDate">Diajukan: 14 Nov 2026, 09:30 WIB</span>
-</div>
-</div>
-</div>
-<!-- Section: Informasi Penerbit -->
-<div>
-<div class="flex items-center justify-between mb-space-sm">
-<span class="font-label-small text-label-small text-ink-muted uppercase tracking-wider font-bold">Informasi Penerbit (UC-28)</span>
-<span class="material-symbols-outlined text-ink-muted text-[16px]">info</span>
-</div>
-<div class="bg-surface rounded-xl p-space-md space-y-space-md">
-<div>
-<span class="font-label-small text-label-small text-ink-muted block">Nama Lembaga Penerbit</span>
-<span class="font-body-base text-body-base font-semibold text-on-surface" id="drawerFieldNama">PT Mizan Pustaka Utama</span>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
-<div>
-<span class="font-label-small text-label-small text-ink-muted block">Penanggung Jawab</span>
-<span class="font-label text-label font-semibold text-on-surface" id="drawerFieldPJ">Ahmad Fuadi, M.Hum</span>
-</div>
-<div>
-<span class="font-label-small text-label-small text-ink-muted block">Nomor Telepon</span>
-<span class="font-label text-label font-semibold text-on-surface" id="drawerFieldTelp">+62 22 7834 1120</span>
-</div>
-</div>
-<div>
-<span class="font-label-small text-label-small text-ink-muted block">Email Terdaftar</span>
-<div class="flex items-center gap-1.5 mt-0.5">
-<span class="material-symbols-outlined text-primary text-[16px]">mail</span>
-<span class="font-label text-label font-semibold text-primary underline" id="drawerFieldEmail">ahmad.fuadi@mizan.co.id</span>
-</div>
-</div>
-<div>
-<span class="font-label-small text-label-small text-ink-muted block">Alamat Operasional Kantor</span>
-<p class="font-body-small text-body-small text-on-surface-variant mt-0.5" id="drawerFieldAlamat">
-                Jl. Cinambo No. 135, Cisaranten Wetan, Cinambo, Kota Bandung, Jawa Barat 40294
-              </p>
-</div>
-<div class="p-space-sm bg-surface-container rounded-lg">
-<span class="font-label-small text-label-small text-ink-muted block">Nomor Anggota IKAPI</span>
-<div class="flex items-center justify-between mt-1">
-<span class="font-title-md text-body-base font-bold text-on-surface" id="drawerFieldIkapi">042/JBA/2018</span>
-<span class="px-2 py-0.5 rounded bg-surface-sky text-on-surface font-label-small text-label-small font-semibold">Tercatat di Formulir</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Verification Checklist Prompt -->
-<div class="bg-surface-soft p-space-md rounded-xl space-y-2">
-<span class="font-label-small text-label-small font-bold text-ink-body uppercase tracking-wider block">Kelayakan Persetujuan:</span>
-<div class="flex items-center gap-2 text-body-small font-body-small text-on-surface">
-<span class="material-symbols-outlined text-primary text-[18px]">check_box</span>
-<span>Kesesuaian identitas penanggung jawab &amp; surat kuasa</span>
-</div>
-<div class="flex items-center gap-2 text-body-small font-body-small text-on-surface">
-<span class="material-symbols-outlined text-primary text-[18px]">check_box</span>
-<span>Verifikasi nomor keanggotaan IKAPI aktif</span>
-</div>
-</div>
-</div>
-<!-- Action Footer (UC-40 explicit actions) -->
-<div class="p-space-md bg-surface-container-low flex items-center justify-end gap-space-sm mt-auto" id="drawerActionFooter">
-<button class="px-space-md py-2.5 rounded-lg bg-surface text-error hover:bg-error-container hover:text-on-error-container font-label text-label font-bold transition-all" onclick="openRejectModal()" type="button">
-          Tolak Pendaftaran
-        </button>
-<button class="px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label text-label font-bold transition-all shadow-sm" onclick="openApproveModal()" type="button">
-          Setujui Penerbit
-        </button>
-</div>
-</aside>
-</div>
-<!-- MODAL: Tolak Pendaftaran (UC-40 Mandatory Reason Form) -->
-<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-center justify-center p-space-md" id="modal-reject">
-<div class="bg-surface-container-lowest rounded-xl max-w-lg w-full p-space-xl shadow-xl flex flex-col gap-space-md">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-space-sm">
-<div class="w-10 h-10 rounded-full bg-error-container text-on-error-container flex items-center justify-center">
-<span class="material-symbols-outlined text-[22px]">gavel</span>
-</div>
-<div>
-<h3 class="font-title-md text-title-md text-on-surface">Tolak Pendaftaran Penerbit</h3>
-<span class="font-label-small text-label-small text-ink-muted">Aksi Administrasi Verifikasi (UC-40)</span>
-</div>
-</div>
-<button class="text-ink-muted hover:text-on-surface" onclick="closeRejectModal()">
-<span class="material-symbols-outlined text-[20px]">close</span>
-</button>
-</div>
-<div class="bg-surface-soft p-space-sm rounded-lg">
-<span class="font-label-small text-label-small text-ink-muted block">Entitas Terpilih:</span>
-<span class="font-label text-label font-bold text-on-surface" id="rejectTargetPublisher">PT Mizan Pustaka Utama</span>
-</div>
-<form class="space-y-space-md" id="rejectForm" onsubmit="handleRejectSubmit(event)">
-<div>
-<label class="font-label text-label text-on-surface font-semibold block mb-1" for="rejectReason">
-            Alasan Penolakan <span class="text-error">*</span>
-</label>
-<textarea class="w-full p-space-sm bg-surface rounded-lg font-body-small text-body-small text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-error" id="rejectReason" placeholder="Jelaskan alasan penolakan secara jelas (mis. nomor anggota IKAPI tidak valid atau data penanggung jawab tidak sesuai)..." required="" rows="4"></textarea>
-<span class="font-label-small text-label-small text-ink-muted block mt-1">
-            Alasan ini akan dikirimkan otomatis melalui email resmi pemberitahuan penolakan kepada penerbit.
-          </span>
-</div>
-<div class="flex items-center justify-end gap-space-sm pt-space-xs">
-<button class="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label text-label" onclick="closeRejectModal()" type="button">
-            Batal
-          </button>
-<button class="px-space-lg py-2 rounded-lg bg-error text-on-error hover:bg-feedback-error font-label text-label font-bold transition-all shadow-sm flex items-center gap-1.5" type="submit">
-<span class="material-symbols-outlined text-[18px]">send</span>
-            Kirim Penolakan
-          </button>
-</div>
-</form>
-</div>
-</div>
-<!-- MODAL: Setujui Pendaftaran (UC-40) -->
-<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-center justify-center p-space-md" id="modal-approve">
-<div class="bg-surface-container-lowest rounded-xl max-w-md w-full p-space-xl shadow-xl flex flex-col gap-space-md text-center">
-<div class="w-14 h-14 rounded-full bg-surface-lilac text-primary flex items-center justify-center mx-auto">
-<span class="material-symbols-outlined text-[32px]">check_circle</span>
-</div>
-<div>
-<h3 class="font-headline-md text-title-md text-on-surface">Konfirmasi Persetujuan</h3>
-<p class="font-body-small text-body-small text-ink-muted mt-1">
-          Anda akan menyetujui akun penerbit <strong class="text-on-surface font-semibold" id="approveTargetPublisher">PT Mizan Pustaka Utama</strong>. Sistem akan langsung mengirimkan kredensial akses dan mengaktifkan etalase toko.
-        </p>
-</div>
-<div class="flex items-center justify-center gap-space-sm pt-space-sm">
-<button class="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label text-label" onclick="closeApproveModal()" type="button">
-          Batal
-        </button>
-<button class="px-space-lg py-2 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label text-label font-bold transition-all shadow-sm" onclick="confirmApproval()" type="button">
-          Ya, Setujui Penerbit
-        </button>
-</div>
-</div>
-</div>
-<!-- MODAL: Nonaktifkan Akun Pengguna -->
-<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-center justify-center p-space-md" id="modal-deactivate">
-<div class="bg-surface-container-lowest rounded-xl max-w-md w-full p-space-xl shadow-xl flex flex-col gap-space-md text-center">
-<div class="w-14 h-14 rounded-full bg-error-container text-on-error-container flex items-center justify-center mx-auto">
-<span class="material-symbols-outlined text-[32px]">lock_person</span>
-</div>
-<div>
-<h3 class="font-headline-md text-title-md text-on-surface">Nonaktifkan Akun Pengguna?</h3>
-<p class="font-body-small text-body-small text-ink-muted mt-1">
-          Akun terpilih tidak akan dapat mengakses portal katalog IKAPI Store hingga status diaktifkan kembali.
-        </p>
-</div>
-<div class="flex items-center justify-center gap-space-sm pt-space-sm">
-<button class="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label text-label" onclick="closeDeactivateModal()" type="button">
-          Batal
-        </button>
-<button class="px-space-lg py-2 rounded-lg bg-error text-on-error hover:bg-feedback-error font-label text-label font-bold transition-all shadow-sm" onclick="confirmDeactivation()" type="button">
-          Nonaktifkan Sekarang
-        </button>
-</div>
-</div>
-</div>
-<!-- TOAST NOTIFICATION CONTAINER -->
-<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="toast-banner">
-<div class="bg-inverse-deep text-inverse-on-surface px-space-lg py-space-sm rounded-xl shadow-xl flex items-center gap-space-sm pointer-events-auto">
-<span class="material-symbols-outlined text-surface-sky text-[22px]">check_circle</span>
-<span class="font-label text-label" id="toast-message">Status akun berhasil diperbarui</span>
-<button class="ml-space-sm text-surface-variant hover:text-surface-lowest" onclick="dismissToast()">
-<span class="material-symbols-outlined text-[16px]">close</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Interactive Client-side Scripting -->
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelola Pengguna - Portal Administrator IKAPI Jawa Barat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
 <script>
-  // Publisher mock repository
-  const publisherData = {
-    mizan: {
-      id: "REG-2026-088",
-      nama: "PT Mizan Pustaka Utama",
-      inisial: "MZ",
-      pj: "Ahmad Fuadi, M.Hum",
-      email: "ahmad.fuadi@mizan.co.id",
-      telp: "+62 22 7834 1120",
-      alamat: "Jl. Cinambo No. 135, Cisaranten Wetan, Bandung, Jawa Barat 40294",
-      ikapi: "042/JBA/2018",
-      tanggal: "14 Nov 2026, 09:30 WIB",
-      status: "Menunggu Approval",
-      statusBadgeClass: "bg-tertiary-fixed text-on-tertiary-fixed",
-      isPending: true
-    },
-    angkasa: {
-      id: "REG-2026-087",
-      nama: "CV Angkasa Bandung",
-      inisial: "AK",
-      pj: "Dra. Ratna Juwita",
-      email: "ratna.j@angkasabandung.com",
-      telp: "+62 22 420 5450",
-      alamat: "Jl. Merdeka No. 42, Babakan Ciamis, Sumur Bandung, Bandung 40117",
-      ikapi: "018/JBA/2012",
-      tanggal: "13 Nov 2026, 16:15 WIB",
-      status: "Menunggu Approval",
-      statusBadgeClass: "bg-tertiary-fixed text-on-tertiary-fixed",
-      isPending: true
-    },
-    kautsar: {
-      id: "REG-2026-079",
-      nama: "Penerbit Al-Kautsar Grafika",
-      inisial: "AG",
-      pj: "Ir. H. Syarif Hidayat",
-      email: "syarif@alkautsar.id",
-      telp: "+62 21 8591 2244",
-      alamat: "Jl. Cipinang Muara III No. 49, Jatinegara, Jakarta Timur 13420",
-      ikapi: "105/DKI/2005",
-      tanggal: "11 Nov 2026, 11:20 WIB",
-      status: "Disetujui",
-      statusBadgeClass: "bg-surface-container-high text-on-surface",
-      isPending: false
-    },
-    pelangi: {
-      id: "REG-2026-064",
-      nama: "CV Pelangi Aksara Digital",
-      inisial: "PA",
-      pj: "Dedi Kurniawan",
-      email: "dedi@pelangiaksara.com",
-      telp: "+62 274 553 118",
-      alamat: "Jl. Gejayan No. 12A, Sleman, DI Yogyakarta 55281",
-      ikapi: "091/DIY/2021",
-      tanggal: "08 Nov 2026, 14:00 WIB",
-      status: "Ditolak",
-      statusBadgeClass: "bg-secondary-fixed text-on-secondary-fixed",
-      isPending: false
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#673DE6', 'primary-hover': '#5025D1', 'primary-deep': '#2F1C6A',
+        canvas: '#FFFFFF', soft: '#F5F6FF', neutral: '#F5F5F6',
+        ink: '#222225', muted: '#62636B', border: '#E5E7EB', divider: '#EFEFF2',
+      },
+      fontFamily: { sans: ['DM Sans', 'system-ui', 'sans-serif'] },
+      borderRadius: { xl: '12px', '2xl': '16px', '3xl': '20px' },
     }
-  };
+  }
+}
+</script>
+<style>
+  :root { --topbar-h: 64px; --sidebar-w: 248px; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', system-ui, sans-serif; background: #FFFFFF; color: #222225; }
+  .shell-main { margin-left: 0; }
+  @media (min-width: 1024px) { .shell-main { margin-left: var(--sidebar-w); } }
+  .banner-bleed { margin-left: 0; }
+  @media (min-width: 1024px) { .banner-bleed { margin-left: calc(-1 * var(--sidebar-w)); } }
+  #publisher-sidebar { top: var(--topbar-h); }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .num { font-variant-numeric: tabular-nums; }
+  .focus-ring:focus-visible { outline: 2px solid #673DE6; outline-offset: 2px; }
+  .focus-ring-light:focus-visible { outline: 2px solid #FFFFFF; outline-offset: 2px; }
+  .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  #publisher-sidebar { transform: translateX(-100%); transition: transform .22s ease; }
+  #publisher-sidebar.is-open { transform: translateX(0); }
+  @media (min-width: 1024px) { #publisher-sidebar { transform: none; transition: none; } }
+  #user-drawer { transform: translateX(100%); transition: transform .24s ease; }
+  #user-drawer.is-open { transform: translateX(0); }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-thumb { background: #DCDCE2; border-radius: 9999px; }
+</style>
+  <script src="admin-guard.js"></script>
+</head>
+<body class="bg-canvas text-ink antialiased">
 
-  let currentSelectedKey = 'mizan';
-  let drawerOpen = true;
+<a href="#workspace" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focus:bg-primary focus:px-4 focus:py-2 focus:text-white focus:text-sm focus:font-semibold">Lewati ke konten utama</a>
 
-  function selectPublisher(key) {
-    currentSelectedKey = key;
-    const data = publisherData[key];
-    if (!data) return;
+<!-- TOP UTILITY BAR -->
+<header class="absolute inset-x-0 top-0 z-50 h-16">
+  <div class="flex h-16 items-center justify-between gap-3 px-4 sm:px-6">
+    <div class="flex items-center gap-3">
+      <button type="button" id="sidebar-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="publisher-sidebar"
+        class="focus-ring-light grid h-10 w-10 place-items-center rounded-xl text-white hover:bg-white/10 lg:hidden">
+        <span class="material-symbols-outlined text-[22px]">menu</span>
+      </button>
+      <a href="dashboard_administrasi_utama_desktop.html" class="focus-ring-light flex items-center rounded-xl">
+        <img src="../../assets/logo-ikapi-jabar.png" alt="IKAPI Jawa Barat" class="h-7 w-auto object-contain drop-shadow-[0_1px_3px_rgba(0,0,0,0.35)]">
+      </a>
+    </div>
+    <div class="flex items-center gap-1.5">
+      <div class="relative">
+        <button type="button" id="btn-notif" aria-label="Notifikasi" aria-haspopup="true" aria-expanded="false"
+          class="focus-ring-light relative grid h-10 w-10 place-items-center rounded-xl text-white hover:bg-white/10">
+          <span class="material-symbols-outlined text-[22px]">notifications</span>
+        </button>
+        <div id="notif-panel" class="absolute right-0 top-12 hidden w-72 rounded-2xl border border-border bg-white p-4 shadow-[0_16px_40px_rgba(34,34,37,0.12)]">
+          <div class="mb-1.5 text-[13px] font-bold text-ink">Notifikasi</div>
+          <p class="text-[13px] leading-relaxed text-muted">Tidak ada notifikasi baru.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 
-    // Highlight row
-    ['mizan', 'angkasa', 'kautsar', 'pelangi'].forEach(k => {
-      const el = document.getElementById('row-' + k);
-      if (el) {
-        if (k === key) {
-          el.className = "cursor-pointer transition-colors bg-surface-lilac/30 hover:bg-surface-lilac/50";
-        } else {
-          el.className = "cursor-pointer transition-colors hover:bg-surface-container-low";
-        }
-      }
+<!-- SIDEBAR -->
+<div id="sidebar-scrim" class="fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden"></div>
+<aside id="publisher-sidebar" class="fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgba(34,34,37,0.07)] lg:translate-x-0">
+  <nav aria-label="Navigasi dashboard administrator" class="flex flex-1 flex-col gap-1 overflow-y-auto px-3 pb-4 pt-7">
+    <a href="dashboard_administrasi_utama_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">space_dashboard</span><span>Dashboard</span>
+    </a>
+    <p class="mt-3 px-3 text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Manajemen</p>
+    <a href="kelola_pengguna_desktop.html" aria-current="page" class="focus-ring flex items-center gap-3 rounded-xl bg-primary px-3 py-2.5 text-[14px] font-semibold text-white">
+      <span class="material-symbols-outlined text-[20px]">group</span><span>Kelola Pengguna</span>
+    </a>
+    <a href="pengawasan_katalog_buku_global_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">menu_book</span><span>Pengawasan Katalog</span>
+    </a>
+    <a href="moderasi_ulasan_dan_komentar_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">reviews</span><span>Moderasi Ulasan</span>
+    </a>
+    <a href="kelola_komunitas_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">groups</span><span>Kelola Komunitas</span>
+    </a>
+    <a href="moderasi_diskusi_komunitas_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">forum</span><span>Moderasi Diskusi</span>
+    </a>
+    <p class="mt-3 px-3 text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Keuangan &amp; Monitoring</p>
+    <a href="monitoring_global_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">monitoring</span><span>Monitoring Global</span>
+    </a>
+    <a href="kelola_pencairan_dana_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">payments</span><span>Kelola Pencairan Dana</span>
+    </a>
+  </nav>
+  <div class="flex items-center gap-2 border-t border-divider p-3">
+    <a href="login_administrator_desktop.html" class="focus-ring flex min-w-0 flex-1 items-center gap-3 rounded-xl px-2 py-2 hover:bg-neutral">
+      <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary text-white">
+        <span class="material-symbols-outlined text-[18px]">shield_person</span>
+      </span>
+      <span class="min-w-0 text-left leading-tight">
+        <span class="block truncate text-[13px] font-semibold text-ink">Administrator</span>
+        <span class="block truncate text-[11px] text-muted">Portal Administrator</span>
+      </span>
+    </a>
+    <a href="login_administrator_desktop.html" aria-label="Keluar" title="Keluar"
+      class="focus-ring grid h-10 w-10 shrink-0 place-items-center rounded-xl text-[#B42318] transition-colors hover:bg-[#FEF3F2]">
+      <span class="material-symbols-outlined text-[20px]">logout</span>
+    </a>
+  </div>
+</aside>
+
+<!-- MAIN COLUMN -->
+<div class="shell-main">
+  <div aria-hidden="true" class="banner-bleed relative h-[232px] overflow-hidden bg-primary-deep sm:h-[260px] lg:h-[276px]">
+    <svg class="absolute inset-0 h-full w-full" viewBox="0 0 1440 212" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="topScrim" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2F1C6A" stop-opacity="0.96"></stop>
+          <stop offset="100%" stop-color="#2F1C6A" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="212" fill="#2F1C6A"></rect>
+      <polygon points="418,0 612,0 470,212 276,212" fill="#4B2CBA"></polygon>
+      <polygon points="648,0 706,0 564,212 506,212" fill="#825CF1"></polygon>
+      <polygon points="748,0 1002,0 860,212 606,212" fill="#673DE6"></polygon>
+      <polygon points="1042,0 1084,0 942,212 900,212" fill="#4475D8"></polygon>
+      <polygon points="1124,0 1290,0 1148,212 982,212" fill="#4B2CBA"></polygon>
+      <polygon points="1342,0 1440,0 1440,212 1200,212" fill="#825CF1"></polygon>
+      <polygon points="1420,0 1440,0 1440,212 1378,212" fill="#4475D8"></polygon>
+      <rect width="1440" height="58" fill="url(#topScrim)"></rect>
+    </svg>
+  </div>
+
+  <main id="workspace" class="relative z-10 -mt-20 rounded-t-[20px] border-t border-border bg-white lg:ml-6">
+    <div class="mx-auto w-full max-w-[1560px] px-4 pb-16 pt-6 sm:px-6 lg:px-10 lg:pt-8">
+
+      <!-- Heading -->
+      <div class="mb-4 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+        <div class="min-w-0">
+          <h1 class="text-[26px] font-bold leading-tight tracking-tight text-ink lg:text-[30px]">Kelola Pengguna</h1>
+          <p class="mt-1 text-[14px] text-muted">Tinjau pendaftaran penerbit dan kelola akun pengguna.</p>
+        </div>
+        <div class="relative">
+          <button type="button" id="demo-toggle" aria-expanded="false" aria-haspopup="true"
+            class="focus-ring inline-flex h-10 items-center gap-1.5 rounded-xl border border-dashed border-border px-3 text-[13px] font-semibold text-muted transition-colors hover:bg-neutral hover:text-ink">
+            <span class="material-symbols-outlined text-[17px]">tune</span>
+            <span>Mode Demo</span>
+            <span class="material-symbols-outlined text-[17px]">expand_more</span>
+          </button>
+          <div id="demo-menu" class="absolute right-0 top-12 z-30 hidden w-64 rounded-2xl border border-border bg-white p-1.5 shadow-[0_16px_40px_rgba(34,34,37,0.12)]" role="menu" aria-label="Pilih skenario demo">
+            <button type="button" data-demo="A" role="menuitemradio" aria-checked="true" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl bg-soft px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Menunggu Persetujuan</span><span class="material-symbols-outlined demo-check text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="B" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Semua Pengguna</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="C" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Detail Penerbit</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="D" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Konfirmasi Persetujuan</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="E" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Konfirmasi Penolakan</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="F" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Konfirmasi Nonaktifkan</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="G" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Notifikasi Sukses</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <p class="px-3 pb-1.5 pt-2 text-[11px] leading-relaxed text-muted">Peralihan status hanya simulasi prototype.</p>
+          </div>
+        </div>
+      </div>
+
+      <p id="page-note" role="status" class="mb-3 hidden text-[12.5px] text-muted"></p>
+
+      <!-- Tabs -->
+      <div role="tablist" aria-label="Kategori pengguna" class="mb-3 flex w-fit items-center gap-1 rounded-xl border border-border bg-neutral p-1">
+        <button type="button" role="tab" data-tab="pending" aria-selected="true"
+          class="tab-btn focus-ring rounded-lg bg-white px-3 py-1.5 text-[12.5px] font-bold text-primary shadow-sm">
+          Menunggu Persetujuan <span class="tab-count num ml-0.5 font-semibold text-muted">(2)</span>
+        </button>
+        <button type="button" role="tab" data-tab="all" aria-selected="false"
+          class="tab-btn focus-ring rounded-lg px-3 py-1.5 text-[12.5px] font-semibold text-muted hover:text-ink">
+          Semua Pengguna <span class="tab-count num ml-0.5 font-semibold">(4)</span>
+        </button>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="mb-4 flex flex-col gap-2 lg:flex-row lg:items-center">
+        <div class="relative w-full lg:max-w-[320px]">
+          <span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[19px] text-muted">search</span>
+          <label for="user-search" class="sr-only">Cari nama penerbit, penanggung jawab, atau email</label>
+          <input id="user-search" type="search" autocomplete="off" placeholder="Cari penerbit, penanggung jawab, atau email..."
+            class="h-10 w-full rounded-xl border border-border bg-white pl-10 pr-9 text-[14px] text-ink outline-none placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary/15">
+          <button type="button" id="btn-clear-search" aria-label="Bersihkan pencarian"
+            class="focus-ring absolute right-1.5 top-1/2 hidden h-7 w-7 -translate-y-1/2 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+            <span class="material-symbols-outlined text-[17px]">close</span>
+          </button>
+        </div>
+        <label for="role-filter" class="sr-only">Filter peran</label>
+        <select id="role-filter"
+          class="h-10 rounded-xl border border-border bg-white px-3 text-[13.5px] font-medium text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+          <option value="all">Semua Peran</option>
+          <option value="penerbit">Penerbit</option>
+          <option value="pembeli" disabled>Pembeli (belum tersedia)</option>
+        </select>
+        <label for="status-filter" class="sr-only">Filter status</label>
+        <select id="status-filter"
+          class="h-10 rounded-xl border border-border bg-white px-3 text-[13.5px] font-medium text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+          <option value="all">Semua Status</option>
+          <option value="pending">Menunggu Persetujuan</option>
+          <option value="approved">Disetujui</option>
+          <option value="rejected">Ditolak</option>
+        </select>
+      </div>
+      <p id="filter-hint" class="mb-3 hidden text-[12px] leading-relaxed text-muted">Pada tab Menunggu Persetujuan, daftar hanya memuat pendaftaran yang belum ditinjau.</p>
+
+      <!-- Table -->
+      <div class="overflow-hidden rounded-2xl border border-border">
+        <div class="overflow-x-auto">
+          <table class="w-full min-w-[900px] border-collapse text-left">
+            <caption class="sr-only">Daftar pengguna dan pendaftaran penerbit</caption>
+            <thead>
+              <tr class="border-b border-border bg-white text-[11px] uppercase tracking-[0.1em] text-muted">
+                <th scope="col" class="px-5 py-3 font-bold lg:px-6">Penerbit</th>
+                <th scope="col" class="w-56 px-4 py-3 font-bold">Penanggung Jawab</th>
+                <th scope="col" class="w-36 px-4 py-3 font-bold">Tanggal Daftar</th>
+                <th scope="col" class="w-40 px-4 py-3 font-bold">Status</th>
+                <th scope="col" class="w-32 px-4 py-3 pr-5 text-right font-bold lg:pr-6">Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="user-rows" class="text-[13px]"></tbody>
+          </table>
+        </div>
+
+        <div id="state-empty" class="hidden px-5 py-14 text-center">
+          <p class="text-[15px] font-semibold text-ink" id="state-empty-title">Tidak Ada Pendaftaran Menunggu</p>
+          <p class="mx-auto mt-1.5 max-w-sm text-[13px] leading-relaxed text-muted" id="state-empty-desc">Belum ada pengajuan penerbit yang perlu ditinjau.</p>
+        </div>
+
+        <div id="state-noresults" class="hidden px-5 py-12 text-center">
+          <img src="../../assets/ilustration/notfoundil.png" alt="" aria-hidden="true" class="mx-auto h-28 w-auto">
+          <p class="mt-3 text-[15px] font-semibold text-ink">Pengguna Tidak Ditemukan</p>
+          <p class="mx-auto mt-1.5 max-w-sm text-[13px] leading-relaxed text-muted">Tidak ada pengguna yang cocok dengan pencarian atau filter.</p>
+          <button type="button" id="btn-reset-filter"
+            class="focus-ring mt-4 inline-flex h-10 items-center rounded-xl border border-border px-4 text-[13.5px] font-semibold text-ink hover:bg-neutral">Bersihkan Filter</button>
+        </div>
+
+        <div class="flex flex-col gap-3 border-t border-border px-5 py-3 sm:flex-row sm:items-center sm:justify-between lg:px-6">
+          <p class="text-[12.5px] text-muted" id="result-summary">Menampilkan 0 dari 0 pengguna</p>
+          <div class="flex items-center gap-1.5">
+            <button type="button" id="page-prev" aria-label="Halaman sebelumnya"
+              class="focus-ring grid h-8 w-8 place-items-center rounded-lg border border-border text-ink hover:bg-neutral disabled:cursor-not-allowed disabled:opacity-40">
+              <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+            </button>
+            <span class="num min-w-8 rounded-lg bg-primary px-2 py-1 text-center text-[12.5px] font-bold text-white" id="page-current">1</span>
+            <button type="button" id="page-next" aria-label="Halaman berikutnya"
+              class="focus-ring grid h-8 w-8 place-items-center rounded-lg border border-border text-ink hover:bg-neutral disabled:cursor-not-allowed disabled:opacity-40">
+              <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- ============ DETAIL DRAWER ============ -->
+<div id="drawer-scrim" class="fixed inset-0 z-[60] hidden bg-[#222225]/45"></div>
+<aside id="user-drawer" class="fixed right-0 top-0 z-[70] flex h-full w-full max-w-full flex-col border-l border-border bg-white shadow-[-16px_0_40px_rgba(34,34,37,0.12)] sm:max-w-[520px]"
+  role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+  <header class="flex items-start justify-between gap-4 border-b border-divider px-5 py-4">
+    <div class="min-w-0">
+      <h2 id="drawer-title" class="text-[17px] font-bold tracking-tight text-ink">Detail Pendaftaran</h2>
+      <p class="num mt-0.5 text-[12.5px] text-muted" id="drawer-reg">-</p>
+    </div>
+    <button type="button" id="drawer-close" aria-label="Tutup detail" class="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[18px]">close</span>
+    </button>
+  </header>
+
+  <div class="flex-1 space-y-5 overflow-y-auto px-5 py-4">
+    <section>
+      <p class="text-[15px] font-semibold leading-snug text-ink" id="drawer-name">-</p>
+      <div class="mt-2 flex flex-wrap items-center gap-2">
+        <span id="drawer-status" class="text-[12px] font-semibold text-muted">-</span>
+        <span id="drawer-account" class="text-[12px] font-semibold text-muted">-</span>
+      </div>
+      <p class="mt-2 text-[12.5px] text-muted">Diajukan <span id="drawer-date">-</span></p>
+    </section>
+
+    <section class="border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Informasi Penerbit</h3>
+      <dl class="mt-2 space-y-2 text-[13px]">
+        <div class="flex flex-wrap justify-between gap-2"><dt class="text-muted">Penanggung jawab</dt><dd class="text-right font-medium text-ink" id="drawer-pj">-</dd></div>
+        <div class="flex flex-wrap justify-between gap-2"><dt class="text-muted">Email</dt><dd class="text-right text-ink" id="drawer-email">-</dd></div>
+        <div class="flex flex-wrap justify-between gap-2"><dt class="text-muted">Telepon</dt><dd class="num text-right text-ink" id="drawer-phone">-</dd></div>
+        <div class="flex flex-wrap justify-between gap-2"><dt class="text-muted">Alamat</dt><dd class="max-w-[62%] text-right text-ink" id="drawer-address">-</dd></div>
+        <div class="flex flex-wrap justify-between gap-2"><dt class="text-muted">Nomor anggota IKAPI</dt><dd class="num text-right text-ink" id="drawer-ikapi">-</dd></div>
+      </dl>
+      <p class="mt-2 text-[12px] leading-relaxed text-muted">Nomor anggota tercatat pada formulir pendaftaran dan belum diverifikasi otomatis.</p>
+    </section>
+
+    <section class="border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Hasil Pemeriksaan</h3>
+      <p class="mt-1.5 text-[13px] leading-relaxed text-muted">Periksa kesesuaian identitas penanggung jawab dan nomor keanggotaan IKAPI sebelum menyetujui pendaftaran.</p>
+    </section>
+
+    <section id="reject-reason-block" class="hidden border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Alasan Penolakan</h3>
+      <p class="mt-1 text-[13px] leading-relaxed text-ink" id="drawer-reason">-</p>
+    </section>
+  </div>
+
+  <footer class="border-t border-divider px-5 py-3">
+    <div id="drawer-actions" class="flex flex-wrap items-center justify-end gap-2"></div>
+  </footer>
+</aside>
+
+<!-- ============ APPROVE MODAL ============ -->
+<div id="modal-approve" class="fixed inset-0 z-[80] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-approve></div>
+  <div class="relative mx-auto mt-20 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[440px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:p-6"
+    role="dialog" aria-modal="true" aria-labelledby="approve-title">
+    <h2 id="approve-title" class="text-[18px] font-bold tracking-tight text-ink">Setujui Pendaftaran?</h2>
+    <p class="mt-1 text-[13px] leading-relaxed text-muted">Pastikan informasi penerbit telah diperiksa sebelum menyetujui pengajuan.</p>
+    <dl class="mt-3 space-y-2 text-[13px]">
+      <div class="flex justify-between gap-3"><dt class="text-muted">Penerbit</dt><dd class="text-right font-semibold text-ink" id="approve-name">-</dd></div>
+      <div class="flex justify-between gap-3"><dt class="text-muted">No. pendaftaran</dt><dd class="num text-ink" id="approve-reg">-</dd></div>
+    </dl>
+    <p class="mt-3 text-[12px] leading-relaxed text-muted">Status diperbarui pada state prototype ini saja, tanpa pengiriman email atau aktivasi akun nyata.</p>
+    <div class="mt-5 flex items-center justify-end gap-2 border-t border-divider pt-4">
+      <button type="button" data-close-approve class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">Batal</button>
+      <button type="button" id="btn-confirm-approve" class="focus-ring inline-flex h-10 items-center rounded-xl bg-primary px-4 text-[14px] font-semibold text-white hover:bg-primary-hover">Setujui</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ REJECT MODAL ============ -->
+<div id="modal-reject" class="fixed inset-0 z-[80] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-reject></div>
+  <div class="relative mx-auto mt-20 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[460px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:p-6"
+    role="dialog" aria-modal="true" aria-labelledby="reject-title">
+    <h2 id="reject-title" class="text-[18px] font-bold tracking-tight text-ink">Tolak Pendaftaran</h2>
+    <p class="mt-1 text-[13px] text-ink" id="reject-name">-</p>
+    <p class="num text-[12.5px] text-muted" id="reject-reg">-</p>
+    <label for="reject-reason" class="mt-3 block text-[12.5px] font-semibold text-ink">Alasan Penolakan <span class="text-red-500">*</span></label>
+    <textarea id="reject-reason" rows="3" placeholder="Jelaskan alasan penolakan..."
+      class="mt-1.5 w-full rounded-xl border border-border bg-white px-3 py-2.5 text-[13.5px] leading-relaxed text-ink outline-none placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary/15"></textarea>
+    <p id="reject-error" class="mt-1 hidden text-[12px] text-[#B42318]">Alasan penolakan wajib diisi.</p>
+    <div class="mt-5 flex items-center justify-end gap-2 border-t border-divider pt-4">
+      <button type="button" data-close-reject class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">Batal</button>
+      <button type="button" id="btn-confirm-reject" class="focus-ring inline-flex h-10 items-center rounded-xl bg-[#B42318] px-4 text-[14px] font-semibold text-white hover:bg-[#971B13]">Tolak Pendaftaran</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ DEACTIVATE MODAL ============ -->
+<div id="modal-deactivate" class="fixed inset-0 z-[80] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-deactivate></div>
+  <div class="relative mx-auto mt-24 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[440px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:p-6"
+    role="dialog" aria-modal="true" aria-labelledby="deactivate-title">
+    <h2 id="deactivate-title" class="text-[18px] font-bold tracking-tight text-ink">Nonaktifkan Akun?</h2>
+    <p class="mt-1 text-[13px] leading-relaxed text-muted">Akun tidak dapat mengakses portal sampai diaktifkan kembali.</p>
+    <p class="mt-2 text-[13px] font-semibold text-ink" id="deactivate-name">-</p>
+    <div class="mt-5 flex items-center justify-end gap-2 border-t border-divider pt-4">
+      <button type="button" data-close-deactivate class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">Batal</button>
+      <button type="button" id="btn-confirm-deactivate" class="focus-ring inline-flex h-10 items-center rounded-xl bg-[#B42318] px-4 text-[14px] font-semibold text-white hover:bg-[#971B13]">Nonaktifkan</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast" role="status" class="pointer-events-none fixed bottom-6 left-1/2 z-[95] hidden -translate-x-1/2 rounded-xl border border-border bg-white px-4 py-2.5 text-[13px] font-semibold text-ink shadow-[0_12px_32px_rgba(34,34,37,0.14)]">
+  <span id="toast-text"></span>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var $ = function (id) { return document.getElementById(id); };
+
+  /* Demo dataset carried over from the existing page. No buyer accounts exist in the repo. */
+  var BASE_USERS = [
+    {
+      key: 'mizan', reg: 'REG-2026-088', name: 'PT Mizan Pustaka Utama', role: 'penerbit',
+      pj: 'Ahmad Fuadi, M.Hum', email: 'ahmad.fuadi@mizan.co.id', phone: '+62 22 7834 1120',
+      address: 'Jl. Cinambo No. 135, Cisaranten Wetan, Bandung, Jawa Barat 40294',
+      ikapi: '042/JBA/2018', date: '2026-11-14', dateText: '14 Nov 2026, 09:30 WIB',
+      registration: 'pending', account: 'active', reason: ''
+    },
+    {
+      key: 'angkasa', reg: 'REG-2026-087', name: 'CV Angkasa Bandung', role: 'penerbit',
+      pj: 'Dra. Ratna Juwita', email: 'ratna.j@angkasabandung.com', phone: '+62 22 420 5450',
+      address: 'Jl. Merdeka No. 42, Babakan Ciamis, Sumur Bandung, Bandung 40117',
+      ikapi: '018/JBA/2012', date: '2026-11-13', dateText: '13 Nov 2026, 16:15 WIB',
+      registration: 'pending', account: 'active', reason: ''
+    },
+    {
+      key: 'kautsar', reg: 'REG-2026-079', name: 'Penerbit Al-Kautsar Grafika', role: 'penerbit',
+      pj: 'Ir. H. Syarif Hidayat', email: 'syarif@alkautsar.id', phone: '+62 21 8591 2244',
+      address: 'Jl. Cipinang Muara III No. 49, Jatinegara, Jakarta Timur 13420',
+      ikapi: '105/DKI/2005', date: '2026-11-11', dateText: '11 Nov 2026, 11:20 WIB',
+      registration: 'approved', account: 'active', reason: ''
+    },
+    {
+      key: 'pelangi', reg: 'REG-2026-064', name: 'CV Pelangi Aksara Digital', role: 'penerbit',
+      pj: 'Dedi Kurniawan', email: 'dedi@pelangiaksara.com', phone: '+62 274 553 118',
+      address: 'Jl. Gejayan No. 12A, Sleman, DI Yogyakarta 55281',
+      ikapi: '091/DIY/2021', date: '2026-11-08', dateText: '08 Nov 2026, 14:00 WIB',
+      registration: 'rejected', account: 'inactive', reason: 'Nomor anggota IKAPI belum sesuai dengan data keanggotaan.'
+    }
+  ];
+
+  var users = BASE_USERS.map(function (u) { return Object.assign({}, u); });
+  var ui = { tab: 'pending', query: '', role: 'all', status: 'all', page: 1, pageSize: 10, demo: 'A' };
+  var selectedKey = null;
+  var lastTrigger = null;
+
+  var REG_LABEL = { pending: 'Menunggu Persetujuan', approved: 'Disetujui', rejected: 'Ditolak' };
+  var ACC_LABEL = { active: 'Akun Aktif', inactive: 'Akun Nonaktif', none: 'Akun Belum Aktif' };
+
+  function regClass(r) {
+    if (r === 'approved') return 'text-[12px] font-semibold text-[#0F7B4F]';
+    if (r === 'rejected') return 'text-[12px] font-semibold text-[#B42318]';
+    return 'text-[12px] font-semibold text-muted';
+  }
+
+  function note(t) { var el = $('page-note'); el.textContent = t || ''; el.classList.toggle('hidden', !t); }
+  function toast(t) {
+    $('toast-text').textContent = t;
+    $('toast').classList.remove('hidden');
+    window.clearTimeout(toast.t);
+    toast.t = window.setTimeout(function () { $('toast').classList.add('hidden'); }, 2800);
+  }
+  function paintRejectMeta(name, reg) {
+    $('reject-name').textContent = name;
+    $('reject-reg').textContent = reg;
+  }
+
+  /* ---------- filtering ---------- */
+  function inTab(u) { return ui.tab === 'pending' ? u.registration === 'pending' : true; }
+
+  function filtered() {
+    var q = ui.query.trim().toLowerCase();
+    return users.filter(function (u) {
+      if (!inTab(u)) return false;
+      if (ui.role !== 'all' && u.role !== ui.role) return false;
+      if (ui.status !== 'all' && u.registration !== ui.status) return false;
+      if (!q) return true;
+      return (u.name + ' ' + u.pj + ' ' + u.email + ' ' + u.reg).toLowerCase().indexOf(q) !== -1;
+    });
+  }
+
+  /* ---------- actions matrix ---------- */
+  function actionsFor(u) {
+    var actions = [];
+    if (u.registration === 'pending') {
+      actions.push({ id: 'approve', label: 'Setujui', kind: 'primary' });
+      actions.push({ id: 'reject', label: 'Tolak', kind: 'ghost' });
+    } else if (u.registration === 'approved' && u.account === 'active') {
+      actions.push({ id: 'deactivate', label: 'Nonaktifkan', kind: 'ghost' });
+    }
+    /* Rejected and inactive accounts only expose their detail information. */
+    return actions;
+  }
+
+  function paintTabs() {
+    var pending = users.filter(function (u) { return u.registration === 'pending'; }).length;
+    document.querySelectorAll('.tab-btn').forEach(function (btn) {
+      var t = btn.getAttribute('data-tab');
+      var n = t === 'pending' ? pending : users.length;
+      btn.querySelector('.tab-count').textContent = '(' + n + ')';
+      var on = t === ui.tab;
+      btn.setAttribute('aria-selected', on ? 'true' : 'false');
+      btn.className = 'tab-btn focus-ring rounded-lg px-3 py-1.5 text-[12.5px] ' +
+        (on ? 'bg-white font-bold text-primary shadow-sm' : 'font-semibold text-muted hover:text-ink');
+    });
+    $('filter-hint').classList.toggle('hidden', ui.tab !== 'pending');
+  }
+
+  /* ---------- table ---------- */
+  function render() {
+    var list = filtered();
+    var pages = Math.max(1, Math.ceil(list.length / ui.pageSize));
+    if (ui.page > pages) ui.page = pages;
+    var start = (ui.page - 1) * ui.pageSize;
+    var visible = list.slice(start, start + ui.pageSize);
+
+    var tbody = $('user-rows');
+    tbody.innerHTML = '';
+
+    visible.forEach(function (u) {
+      var tr = document.createElement('tr');
+      tr.className = 'border-b border-divider align-middle transition-colors hover:bg-soft';
+      tr.setAttribute('data-user', u.key);
+
+      var tdPub = document.createElement('td');
+      tdPub.className = 'px-5 py-3.5 lg:px-6';
+      var name = document.createElement('p');
+      name.className = 'line-clamp-2 text-[13.5px] font-semibold leading-snug text-ink';
+      name.textContent = u.name;
+      var mail = document.createElement('p');
+      mail.className = 'mt-0.5 break-words text-[12px] text-muted';
+      mail.textContent = u.email;
+      tdPub.appendChild(name);
+      tdPub.appendChild(mail);
+
+      var tdPj = document.createElement('td');
+      tdPj.className = 'px-4 py-3.5 text-ink';
+      tdPj.textContent = u.pj;
+
+      var tdDate = document.createElement('td');
+      tdDate.className = 'num px-4 py-3.5 text-muted';
+      tdDate.textContent = u.dateText.replace(', ' + u.dateText.split(', ')[1], '');
+
+      var tdStatus = document.createElement('td');
+      tdStatus.className = 'px-4 py-3.5';
+      var chip = document.createElement('span');
+      chip.className = regClass(u.registration);
+      chip.textContent = REG_LABEL[u.registration];
+      tdStatus.appendChild(chip);
+
+      var tdAction = document.createElement('td');
+      tdAction.className = 'px-4 py-3.5 pr-5 text-right lg:pr-6';
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'focus-ring rounded-lg px-2.5 py-1.5 text-[12.5px] font-semibold text-primary transition-colors hover:bg-soft';
+      btn.textContent = u.registration === 'pending' ? 'Tinjau' : 'Lihat Detail';
+      btn.setAttribute('data-open', u.key);
+      tdAction.appendChild(btn);
+
+      tr.appendChild(tdPub); tr.appendChild(tdPj); tr.appendChild(tdDate);
+      tr.appendChild(tdStatus); tr.appendChild(tdAction);
+      tbody.appendChild(tr);
     });
 
-    // Populate drawer elements
-    document.getElementById('drawerPublisherName').innerText = data.nama;
-    document.getElementById('drawerSubmittedDate').innerText = 'Diajukan: ' + data.tanggal;
-    document.getElementById('drawerFieldNama').innerText = data.nama;
-    document.getElementById('drawerFieldPJ').innerText = data.pj;
-    document.getElementById('drawerFieldTelp').innerText = data.telp;
-    document.getElementById('drawerFieldEmail').innerText = data.email;
-    document.getElementById('drawerFieldAlamat').innerText = data.alamat;
-    document.getElementById('drawerFieldIkapi').innerText = data.ikapi;
+    var datasetEmpty = list.length === 0 && !ui.query && ui.role === 'all' && ui.status === 'all';
+    var noResults = !datasetEmpty && list.length === 0;
 
-    const badge = document.getElementById('drawerBadge');
-    badge.innerText = data.status;
-    badge.className = `px-2.5 py-0.5 rounded-full font-label-small text-label-small font-bold ${data.statusBadgeClass}`;
+    tbody.closest('table').classList.toggle('hidden', list.length === 0);
+    $('state-empty').classList.toggle('hidden', !datasetEmpty);
+    $('state-noresults').classList.toggle('hidden', !noResults);
+    $('state-empty-title').textContent = ui.tab === 'pending' ? 'Tidak Ada Pendaftaran Menunggu' : 'Belum Ada Data Pengguna';
+    $('state-empty-desc').textContent = ui.tab === 'pending'
+      ? 'Belum ada pengajuan penerbit yang perlu ditinjau.'
+      : 'Belum ada data pengguna pada dataset prototype ini.';
 
-    // Target modal labels
-    document.getElementById('rejectTargetPublisher').innerText = data.nama;
-    document.getElementById('approveTargetPublisher').innerText = data.nama;
+    $('result-summary').textContent = 'Menampilkan ' + visible.length + ' dari ' + list.length + ' pengguna';
+    $('page-current').textContent = String(ui.page);
+    $('page-prev').disabled = ui.page <= 1;
+    $('page-next').disabled = ui.page >= pages;
 
-    // Manage Drawer action buttons based on status
-    const footer = document.getElementById('drawerActionFooter');
-    if (data.isPending) {
-      footer.innerHTML = `
-        <button onclick="openRejectModal()" type="button" class="px-space-md py-2.5 rounded-lg bg-surface text-error hover:bg-error-container hover:text-on-error-container font-label text-label font-bold transition-all">
-          Tolak Pendaftaran
-        </button>
-        <button onclick="openApproveModal()" type="button" class="px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label text-label font-bold transition-all shadow-sm">
-          Setujui Penerbit
-        </button>
-      `;
-    } else {
-      footer.innerHTML = `
-        <button onclick="openDeactivateModal()" type="button" class="px-space-md py-2.5 rounded-lg bg-surface text-error hover:bg-error-container hover:text-on-error-container font-label text-label font-bold transition-all">
-          Nonaktifkan Akun
-        </button>
-        <button onclick="showNotification('Informasi pendaftaran diunduh')" type="button" class="px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label text-label font-bold transition-all">
-          Cetak Berkas
-        </button>
-      `;
-    }
+    $('btn-clear-search').classList.toggle('hidden', !ui.query);
+    $('btn-clear-search').classList.toggle('grid', !!ui.query);
 
-    if (!drawerOpen) {
-      toggleDrawer();
-    }
+    paintTabs();
+    syncDemoMenu();
   }
 
-  function toggleDrawer() {
-    const drawer = document.getElementById('side-drawer');
-    const tableCont = document.getElementById('table-container');
-    if (!drawer) return;
+  /* ---------- drawer ---------- */
+  function byKey(k) { return users.filter(function (u) { return u.key === k; })[0]; }
 
-    if (drawerOpen) {
-      drawer.classList.add('hidden');
-      tableCont.classList.remove('lg:w-[calc(100%-504px)]');
-      drawerOpen = false;
-    } else {
-      drawer.classList.remove('hidden');
-      tableCont.classList.add('lg:w-[calc(100%-504px)]');
-      drawerOpen = true;
-    }
-  }
+  function openDrawer(u, trigger) {
+    selectedKey = u.key;
+    lastTrigger = trigger || null;
 
-  function switchMainTab(type) {
-    const tabPending = document.getElementById('tab-nav-pending');
-    const tabAll = document.getElementById('tab-nav-all');
-    const simTab1 = document.getElementById('sim-btn-tab1');
-    const simTab2 = document.getElementById('sim-btn-tab2');
-    const tableTitle = document.getElementById('tableSectionTitle');
-    const rowCount = document.getElementById('rowCountDisplay');
-    const statusSelect = document.getElementById('filterStatus');
+    $('drawer-reg').textContent = u.reg;
+    $('drawer-name').textContent = u.name;
+    $('drawer-status').textContent = REG_LABEL[u.registration];
+    $('drawer-status').className = regClass(u.registration);
+    $('drawer-account').textContent = u.registration === 'pending' ? ACC_LABEL.none : ACC_LABEL[u.account];
+    $('drawer-date').textContent = u.dateText;
+    $('drawer-pj').textContent = u.pj;
+    $('drawer-email').textContent = u.email;
+    $('drawer-phone').textContent = u.phone;
+    $('drawer-address').textContent = u.address;
+    $('drawer-ikapi').textContent = u.ikapi;
 
-    if (type === 'pending') {
-      tabPending.className = "flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-lowest text-primary font-label text-label shadow-sm transition-all";
-      tabAll.className = "flex items-center gap-space-xs px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface font-label text-label transition-all";
-      
-      simTab1.className = "px-space-sm py-1 rounded bg-primary text-on-primary font-label-small text-label-small transition-colors";
-      simTab2.className = "px-space-sm py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-small text-label-small transition-colors";
+    var rejected = u.registration === 'rejected';
+    $('reject-reason-block').classList.toggle('hidden', !rejected);
+    if (rejected) $('drawer-reason').textContent = u.reason || 'Tidak ada alasan tercatat.';
 
-      tableTitle.innerText = "Daftar Pengajuan Penerbit Tertunda";
-      rowCount.innerText = "Menampilkan 2 data permohonan menunggu";
-      statusSelect.value = "PENDING";
-      
-      // Filter rows
-      document.getElementById('row-mizan').style.display = "";
-      document.getElementById('row-angkasa').style.display = "";
-      document.getElementById('row-kautsar').style.display = "none";
-      document.getElementById('row-pelangi').style.display = "none";
-      selectPublisher('mizan');
-    } else {
-      tabAll.className = "flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-lowest text-primary font-label text-label shadow-sm transition-all";
-      tabPending.className = "flex items-center gap-space-xs px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface font-label text-label transition-all";
-
-      simTab2.className = "px-space-sm py-1 rounded bg-primary text-on-primary font-label-small text-label-small transition-colors";
-      simTab1.className = "px-space-sm py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-small text-label-small transition-colors";
-
-      tableTitle.innerText = "Semua Akun Pengguna Marketplace";
-      rowCount.innerText = "Menampilkan 4 entri aktif";
-      statusSelect.value = "ALL";
-
-      document.getElementById('row-mizan').style.display = "";
-      document.getElementById('row-angkasa').style.display = "";
-      document.getElementById('row-kautsar').style.display = "";
-      document.getElementById('row-pelangi').style.display = "";
-    }
-  }
-
-  function filterTableLive() {
-    const query = document.getElementById('tableSearchInput').value.toLowerCase();
-    const rows = ['mizan', 'angkasa', 'kautsar', 'pelangi'];
-
-    rows.forEach(k => {
-      const data = publisherData[k];
-      const match = data.nama.toLowerCase().includes(query) ||
-                    data.pj.toLowerCase().includes(query) ||
-                    data.email.toLowerCase().includes(query);
-      const rowEl = document.getElementById('row-' + k);
-      if (rowEl) {
-        rowEl.style.display = match ? "" : "none";
-      }
+    var wrap = $('drawer-actions');
+    wrap.innerHTML = '';
+    actionsFor(u).forEach(function (a) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = a.kind === 'primary'
+        ? 'focus-ring inline-flex h-10 items-center rounded-xl bg-primary px-4 text-[13.5px] font-semibold text-white hover:bg-primary-hover'
+        : 'focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[13.5px] font-semibold text-ink hover:bg-neutral';
+      b.textContent = a.label;
+      b.setAttribute('data-action', a.id);
+      wrap.appendChild(b);
     });
-  }
-
-  function resetFilters() {
-    document.getElementById('tableSearchInput').value = "";
-    document.getElementById('filterRole').value = "ALL";
-    document.getElementById('filterStatus').value = "ALL";
-    ['mizan', 'angkasa', 'kautsar', 'pelangi'].forEach(k => {
-      const row = document.getElementById('row-' + k);
-      if (row) row.style.display = "";
-    });
-    showNotification('Filter daftar telah direset');
-  }
-
-  // Modals Controller
-  function openRejectModal() {
-    document.getElementById('modal-reject').classList.remove('hidden');
-    document.getElementById('modal-reject').classList.add('flex');
-  }
-  function closeRejectModal() {
-    document.getElementById('modal-reject').classList.add('hidden');
-    document.getElementById('modal-reject').classList.remove('flex');
-  }
-
-  function openApproveModal() {
-    document.getElementById('modal-approve').classList.remove('hidden');
-    document.getElementById('modal-approve').classList.add('flex');
-  }
-  function closeApproveModal() {
-    document.getElementById('modal-approve').classList.add('hidden');
-    document.getElementById('modal-approve').classList.remove('flex');
-  }
-
-  function openDeactivateModal() {
-    document.getElementById('modal-deactivate').classList.remove('hidden');
-    document.getElementById('modal-deactivate').classList.add('flex');
-  }
-  function closeDeactivateModal() {
-    document.getElementById('modal-deactivate').classList.add('hidden');
-    document.getElementById('modal-deactivate').classList.remove('flex');
-  }
-
-  function handleRejectSubmit(e) {
-    e.preventDefault();
-    closeRejectModal();
-    showNotification('Pendaftaran berhasil ditolak & notifikasi email terkirim');
-    if (publisherData[currentSelectedKey]) {
-      publisherData[currentSelectedKey].status = "Ditolak";
-      publisherData[currentSelectedKey].isPending = false;
-      selectPublisher(currentSelectedKey);
+    if (!wrap.childElementCount) {
+      var info = document.createElement('p');
+      info.className = 'text-[12.5px] text-muted';
+      info.textContent = rejected ? 'Pendaftaran ditolak. Tidak ada tindakan lanjutan yang tersedia.' : 'Tidak ada tindakan tersedia untuk akun ini.';
+      wrap.appendChild(info);
     }
+
+    $('drawer-scrim').classList.remove('hidden');
+    $('user-drawer').classList.add('is-open');
+    $('user-drawer').setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    $('drawer-close').focus();
   }
 
-  function confirmApproval() {
-    closeApproveModal();
-    showNotification('Status akun berhasil diperbarui');
-    if (publisherData[currentSelectedKey]) {
-      publisherData[currentSelectedKey].status = "Disetujui";
-      publisherData[currentSelectedKey].isPending = false;
-      selectPublisher(currentSelectedKey);
+  function closeDrawer() {
+    $('user-drawer').classList.remove('is-open');
+    $('user-drawer').setAttribute('aria-hidden', 'true');
+    $('drawer-scrim').classList.add('hidden');
+    document.body.style.overflow = '';
+    if (lastTrigger && document.contains(lastTrigger)) lastTrigger.focus();
+    lastTrigger = null;
+  }
+
+  $('drawer-close').addEventListener('click', closeDrawer);
+  $('drawer-scrim').addEventListener('click', closeDrawer);
+
+  document.addEventListener('click', function (e) {
+    var open = e.target.closest('[data-open]');
+    if (open) {
+      var u = byKey(open.getAttribute('data-open'));
+      if (u) openDrawer(u, open);
+      return;
     }
-  }
-
-  function confirmDeactivation() {
-    closeDeactivateModal();
-    showNotification('Akun pengguna dinonaktifkan');
-  }
-
-  // Toast System
-  let toastTimer;
-  function showNotification(msg) {
-    const banner = document.getElementById('toast-banner');
-    const label = document.getElementById('toast-message');
-    if (!banner || !label) return;
-
-    label.innerText = msg;
-    banner.classList.remove('translate-y-24', 'opacity-0');
-    banner.classList.add('translate-y-0', 'opacity-100');
-
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => {
-      dismissToast();
-    }, 4500);
-  }
-
-  function dismissToast() {
-    const banner = document.getElementById('toast-banner');
-    if (!banner) return;
-    banner.classList.add('translate-y-24', 'opacity-0');
-    banner.classList.remove('translate-y-0', 'opacity-100');
-  }
-
-  // Initialize
-  document.addEventListener('DOMContentLoaded', () => {
-    selectPublisher('mizan');
+    var act = e.target.closest('[data-action]');
+    if (!act) return;
+    var kind = act.getAttribute('data-action');
+    var sel = byKey(selectedKey);
+    if (!sel) return;
+    if (kind === 'approve') {
+      $('approve-name').textContent = sel.name;
+      $('approve-reg').textContent = sel.reg;
+      $('modal-approve').classList.remove('hidden');
+    } else if (kind === 'reject') {
+      paintRejectMeta(sel.name, sel.reg);
+      $('reject-reason').value = '';
+      $('reject-error').classList.add('hidden');
+      $('modal-reject').classList.remove('hidden');
+      $('reject-reason').focus();
+    } else if (kind === 'deactivate') {
+      $('deactivate-name').textContent = sel.name;
+      $('modal-deactivate').classList.remove('hidden');
+    }
   });
-</script></main></div></body></html>
+
+  /* ---------- modals ---------- */
+  document.querySelectorAll('[data-close-approve]').forEach(function (el) {
+    el.addEventListener('click', function () { $('modal-approve').classList.add('hidden'); });
+  });
+  document.querySelectorAll('[data-close-reject]').forEach(function (el) {
+    el.addEventListener('click', function () { $('modal-reject').classList.add('hidden'); });
+  });
+  document.querySelectorAll('[data-close-deactivate]').forEach(function (el) {
+    el.addEventListener('click', function () { $('modal-deactivate').classList.add('hidden'); });
+  });
+
+  $('btn-confirm-approve').addEventListener('click', function () {
+    var u = byKey(selectedKey);
+    if (!u) return;
+    u.registration = 'approved';
+    u.account = 'active';
+    $('modal-approve').classList.add('hidden');
+    refreshSelectedAndList(u);
+    toast('Pendaftaran disetujui pada state prototype ini.');
+  });
+
+  $('btn-confirm-reject').addEventListener('click', function () {
+    var reason = $('reject-reason').value.trim();
+    if (!reason) {
+      $('reject-error').classList.remove('hidden');
+      $('reject-reason').focus();
+      return;
+    }
+    $('reject-error').classList.add('hidden');
+    var u = byKey(selectedKey);
+    if (!u) return;
+    u.registration = 'rejected';
+    u.account = 'inactive';
+    u.reason = reason;
+    $('modal-reject').classList.add('hidden');
+    refreshSelectedAndList(u);
+    toast('Pendaftaran ditolak pada state prototype ini.');
+  });
+
+  $('btn-confirm-deactivate').addEventListener('click', function () {
+    var u = byKey(selectedKey);
+    if (!u) return;
+    u.account = 'inactive';
+    $('modal-deactivate').classList.add('hidden');
+    refreshSelectedAndList(u);
+    toast('Akun dinonaktifkan pada state prototype ini.');
+  });
+
+  function refreshSelectedAndList(u) {
+    render();
+    /* Keep the drawer in sync only if the record is still inside the active view. */
+    var stillVisible = filtered().some(function (x) { return x.key === u.key; });
+    if (stillVisible) openDrawer(u, null);
+    else closeDrawer();
+  }
+
+  /* ---------- toolbar ---------- */
+  document.querySelectorAll('.tab-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      ui.tab = btn.getAttribute('data-tab');
+      ui.page = 1;
+      if (ui.tab === 'pending') { ui.status = 'all'; $('status-filter').value = 'all'; }
+      render();
+    });
+  });
+  $('user-search').addEventListener('input', function (e) {
+    ui.query = e.target.value;
+    ui.page = 1;
+    render();
+  });
+  $('btn-clear-search').addEventListener('click', function () {
+    ui.query = '';
+    $('user-search').value = '';
+    ui.page = 1;
+    render();
+  });
+  $('role-filter').addEventListener('change', function (e) {
+    ui.role = e.target.value;
+    ui.page = 1;
+    render();
+  });
+  $('status-filter').addEventListener('change', function (e) {
+    ui.status = e.target.value;
+    ui.page = 1;
+    render();
+  });
+  $('btn-reset-filter').addEventListener('click', function () {
+    ui.query = ''; ui.role = 'all'; ui.status = 'all'; ui.page = 1;
+    $('user-search').value = ''; $('role-filter').value = 'all'; $('status-filter').value = 'all';
+    render();
+  });
+  $('page-prev').addEventListener('click', function () { if (ui.page > 1) { ui.page--; render(); } });
+  $('page-next').addEventListener('click', function () { ui.page++; render(); });
+
+  /* ---------- demo scenarios ---------- */
+  var demoToggle = $('demo-toggle'), demoMenu = $('demo-menu');
+  function closeDemo() { demoMenu.classList.add('hidden'); demoToggle.setAttribute('aria-expanded', 'false'); }
+  function syncDemoMenu() {
+    document.querySelectorAll('.demo-item').forEach(function (b) {
+      var on = b.getAttribute('data-demo') === ui.demo;
+      b.setAttribute('aria-checked', on ? 'true' : 'false');
+      b.classList.toggle('bg-soft', on);
+      var c = b.querySelector('.demo-check');
+      if (c) c.classList.toggle('hidden', !on);
+    });
+  }
+
+  function resetAll() {
+    closeDrawer();
+    ['modal-approve', 'modal-reject', 'modal-deactivate'].forEach(function (id) { $(id).classList.add('hidden'); });
+    $('toast').classList.add('hidden');
+    note('');
+    users = BASE_USERS.map(function (u) { return Object.assign({}, u); });
+    ui.query = ''; ui.role = 'all'; ui.status = 'all'; ui.page = 1;
+    $('user-search').value = ''; $('role-filter').value = 'all'; $('status-filter').value = 'all';
+  }
+
+  function applyDemo(s) {
+    ui.demo = s;
+    resetAll();
+
+    if (s === 'A') { ui.tab = 'pending'; render(); }
+    else if (s === 'B') { ui.tab = 'all'; render(); }
+    else if (s === 'C') { ui.tab = 'all'; render(); openDrawer(byKey('kautsar'), $('demo-toggle')); }
+    else if (s === 'D') {
+      ui.tab = 'pending'; render();
+      openDrawer(byKey('mizan'), $('demo-toggle'));
+      $('approve-name').textContent = 'PT Mizan Pustaka Utama';
+      $('approve-reg').textContent = 'REG-2026-088';
+      $('modal-approve').classList.remove('hidden');
+    } else if (s === 'E') {
+      ui.tab = 'pending'; render();
+      openDrawer(byKey('angkasa'), $('demo-toggle'));
+      paintRejectMeta('CV Angkasa Bandung', 'REG-2026-087');
+      $('reject-reason').value = '';
+      $('reject-error').classList.add('hidden');
+      $('modal-reject').classList.remove('hidden');
+      $('reject-reason').focus();
+    } else if (s === 'F') {
+      ui.tab = 'all'; render();
+      openDrawer(byKey('kautsar'), $('demo-toggle'));
+      $('deactivate-name').textContent = 'Penerbit Al-Kautsar Grafika';
+      $('modal-deactivate').classList.remove('hidden');
+    } else if (s === 'G') {
+      ui.tab = 'pending'; render();
+      toast('Pendaftaran disetujui pada state prototype ini.');
+    }
+  }
+
+  demoToggle.addEventListener('click', function () {
+    var open = demoMenu.classList.contains('hidden');
+    demoMenu.classList.toggle('hidden', !open);
+    demoToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  demoMenu.addEventListener('click', function (e) {
+    var btn = e.target.closest('.demo-item');
+    if (!btn) return;
+    closeDemo();
+    applyDemo(btn.getAttribute('data-demo'));
+  });
+
+  /* ---------- notifications / sidebar / keyboard ---------- */
+  var notifBtn = $('btn-notif'), notifPanel = $('notif-panel');
+  notifBtn.addEventListener('click', function () {
+    var open = notifPanel.classList.contains('hidden');
+    notifPanel.classList.toggle('hidden', !open);
+    notifBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!demoMenu.contains(e.target) && !demoToggle.contains(e.target)) closeDemo();
+    if (!notifPanel.contains(e.target) && !notifBtn.contains(e.target)) {
+      notifPanel.classList.add('hidden');
+      notifBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (!$('modal-deactivate').classList.contains('hidden')) { $('modal-deactivate').classList.add('hidden'); return; }
+    if (!$('modal-reject').classList.contains('hidden')) { $('modal-reject').classList.add('hidden'); return; }
+    if (!$('modal-approve').classList.contains('hidden')) { $('modal-approve').classList.add('hidden'); return; }
+    if ($('user-drawer').classList.contains('is-open')) { closeDrawer(); return; }
+    closeDemo();
+    notifPanel.classList.add('hidden');
+    notifBtn.setAttribute('aria-expanded', 'false');
+    closeSidebar();
+  });
+
+  var sidebar = $('publisher-sidebar'), scrim = $('sidebar-scrim'), toggle = $('sidebar-toggle');
+  function openSidebar() {
+    sidebar.classList.add('is-open');
+    scrim.classList.remove('hidden');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    var first = sidebar.querySelector('a');
+    if (first) first.focus();
+  }
+  function closeSidebar() {
+    if (!sidebar.classList.contains('is-open')) return;
+    sidebar.classList.remove('is-open');
+    scrim.classList.add('hidden');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    toggle.focus();
+  }
+  toggle.addEventListener('click', function () {
+    sidebar.classList.contains('is-open') ? closeSidebar() : openSidebar();
+  });
+  scrim.addEventListener('click', closeSidebar);
+  sidebar.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeSidebar); });
+
+  /* ---------- init (tab Menunggu Persetujuan) ---------- */
+  render();
+})();
+</script>
+</body>
+</html>

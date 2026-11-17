@@ -1,740 +1,1056 @@
 <!DOCTYPE html>
-
-<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-container": "#5956e9", "inverse-surface": "#302f3a", "on-surface": "#1b1b25", "surface-lilac": "#E5E4FF", "surface-paper": "#FFF0E3", "surface-dim": "#dbd8e7", "tertiary-fixed": "#ffe08d", "border-bold": "#CFD0DD", "error-container": "#ffdad6", "on-surface-variant": "#464555", "secondary-container": "#fdbed1", "secondary": "#815060", "surface-sky": "#E0F6FC", "surface-container-high": "#e9e6f5", "inverse-primary": "#c2c1ff", "on-primary-fixed": "#0c006a", "on-tertiary-fixed-variant": "#584400", "ink-muted": "#555665", "on-primary-fixed-variant": "#3229c4", "on-secondary": "#ffffff", "surface-soft": "#F8F7FF", "background": "#fcf8ff", "on-background": "#1b1b25", "surface-tint": "#4c48dc", "surface-bright": "#fcf8ff", "feedback-error": "#B42318", "surface-variant": "#e3e1ef", "inverse-deep": "#24233D", "surface-container": "#efecfb", "primary-fixed-dim": "#c2c1ff", "surface-cream": "#FFF1E3", "on-secondary-fixed-variant": "#663949", "on-error-container": "#93000a", "surface-container-low": "#f5f2ff", "secondary-fixed-dim": "#f4b5c8", "surface-container-highest": "#e3e1ef", "tertiary-container": "#cea623", "primary": "#3f3ad0", "tertiary": "#745b00", "on-primary": "#ffffff", "on-tertiary-fixed": "#241a00", "primary-fixed": "#e2dfff", "error": "#ba1a1a", "outline-variant": "#c7c4d7", "on-secondary-container": "#7a495a", "on-primary-container": "#eeeaff", "ink-body": "#191923", "outline": "#777586", "on-secondary-fixed": "#330e1d", "on-error": "#ffffff", "secondary-fixed": "#ffd9e3", "tertiary-fixed-dim": "#ecc23f", "surface-container-lowest": "#ffffff", "inverse-on-surface": "#f2effe", "on-tertiary-container": "#4f3d00", "on-tertiary": "#ffffff", "surface": "#fcf8ff", "border-subtle": "#E7E7EF" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "gutter": "1.5rem", "space-md": "1rem", "space-xl": "2rem", "space-3xl": "4.5rem", "margin": "2.5rem", "margin-mobile": "1.25rem", "space-sm": "0.5rem", "space-2xl": "3rem", "gutter-mobile": "1.25rem", "space-lg": "1.5rem" }, fontFamily: { "label-small": ["Plus Jakarta Sans"], "display-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-base": ["Plus Jakarta Sans"], "label": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "display-md-mobile": ["Plus Jakarta Sans"], "body-small": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"] }, fontSize: { "label-small": ["12px", { lineHeight: "1.3", letterSpacing: "0.02em", fontWeight: "600" }], "display-md": ["44px", { lineHeight: "1.12", letterSpacing: "-0.035em", fontWeight: "800" }], "display-lg": ["56px", { lineHeight: "1.08", letterSpacing: "-0.04em", fontWeight: "800" }], "headline-lg-mobile": ["24px", { lineHeight: "1.25", letterSpacing: "-0.02em", fontWeight: "700" }], "body-base": ["16px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }], "label": ["14px", { lineHeight: "1.35", letterSpacing: "0", fontWeight: "600" }], "title-md": ["18px", { lineHeight: "1.35", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-md": ["28px", { lineHeight: "1.22", letterSpacing: "-0.025em", fontWeight: "700" }], "headline-lg": ["36px", { lineHeight: "1.18", letterSpacing: "-0.03em", fontWeight: "700" }], "display-md-mobile": ["28px", { lineHeight: "1.2", letterSpacing: "-0.025em", fontWeight: "800" }], "body-small": ["14px", { lineHeight: "1.5", letterSpacing: "0", fontWeight: "400" }], "display-lg-mobile": ["34px", { lineHeight: "1.15", letterSpacing: "-0.03em", fontWeight: "800" }] } } } };</script></head><body class="bg-background font-body-base text-body-base text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-lg px-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-sm"><img alt="logo-ikapu.png" class="h-8 w-auto object-contain" src="../../assets/logo-ikapi-jabar.png"/><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface tracking-tight leading-tight">IKAPI Store</span><span class="font-label-small text-label-small text-ink-muted uppercase tracking-wider">Jawa Barat Admin</span></div></div><div class="flex flex-col gap-space-md mt-space-sm"><div class="flex flex-col"><span class="font-label-small text-label-small text-ink-muted uppercase tracking-wider px-space-sm mb-space-xs">Utama</span><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label rounded-lg shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></a></nav></div><div class="flex flex-col"><span class="font-label-small text-label-small text-ink-muted uppercase tracking-wider px-space-sm mb-space-xs">Manajemen</span><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label rounded-lg shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="kelola-pengguna" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Kelola Pengguna</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm transition-colors bg-primary-container text-on-primary font-label rounded-lg shadow-sm" data-path="pengawasan-katalog" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>Pengawasan Katalog</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="moderasi-ulasan" href="#"><span class="material-symbols-outlined text-[20px]">rate_review</span><span>Moderasi Ulasan</span></a></nav></div><div class="flex flex-col"><span class="font-label-small text-label-small text-ink-muted uppercase tracking-wider px-space-sm mb-space-xs">Keuangan &amp; Monitoring</span><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label rounded-lg shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="monitoring-global" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span>Monitoring Global</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg font-label text-label text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="kelola-pencairan-dana" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span>Kelola Pencairan Dana</span></a></nav></div></div></div><div class="px-space-sm py-space-sm rounded-lg bg-surface-container flex items-center justify-between"><div class="flex flex-col"><span class="font-label-small text-label-small text-on-surface font-bold">IKAPI Jawa Barat</span><span class="font-label-small text-label-small text-ink-muted">v2.4 Editorial Core</span></div><span class="material-symbols-outlined text-ink-muted text-[18px]">verified</span></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="logo-ikapu.png" class="h-8 w-auto object-contain" src="../../assets/logo-ikapi-jabar.png"/><div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high rounded-full"><span class="material-symbols-outlined text-ink-muted text-[16px]">calendar_today</span><span class="font-label-small text-label-small text-on-surface-variant">Rabu, 24 Mei 2024</span></div></div><div class="flex items-center gap-space-lg"><button class="relative p-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary"></span></button><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right"><span class="font-label text-label text-on-surface leading-tight">Admin Pusat</span><span class="font-label-small text-label-small text-ink-muted leading-tight">Operational Lead</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full min-h-screen bg-background"><div class="flex flex-col w-full">
-<!-- Simulation Strip (Sticky prototype controller) -->
-<div class="sticky top-0 z-30 w-full bg-surface-container-high/95 backdrop-blur-md px-space-xl py-space-sm flex flex-wrap items-center justify-between gap-space-sm shadow-sm">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-[18px] text-primary">science</span>
-<span class="font-label-small text-label-small text-on-surface uppercase tracking-wider font-bold">Simulator Alur UC-41</span>
-</div>
-<div class="flex flex-wrap items-center gap-space-xs text-xs">
-<button class="px-space-sm py-1 rounded bg-primary-container text-on-primary font-label-small text-label-small transition-colors" id="sim-tab-reports" type="button">
-        Tab: Laporan Buku (2)
-      </button>
-<button class="px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-small text-label-small hover:bg-surface-dim transition-colors" id="sim-tab-catalog" type="button">
-        Tab: Seluruh Katalog (56)
-      </button>
-<button class="px-space-sm py-1 rounded bg-surface-lilac text-on-primary-fixed-variant font-label-small text-label-small hover:opacity-90 transition-opacity" id="sim-drawer-toggle" type="button">
-        Drawer: Tinjau Laporan PDF
-      </button>
-<button class="px-space-sm py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-small text-label-small hover:opacity-90 transition-opacity" id="sim-modal-takedown" type="button">
-        Modal: Take Down
-      </button>
-<button class="px-space-sm py-1 rounded bg-surface-container-highest text-on-surface font-label-small text-label-small hover:bg-surface-dim transition-colors" id="sim-modal-ignore" type="button">
-        Modal: Abaikan Laporan
-      </button>
-<button class="px-space-sm py-1 rounded bg-surface-sky text-ink-body font-label-small text-label-small hover:opacity-90 transition-opacity" id="sim-toast" type="button">
-        Toast: Sukses
-      </button>
-<button class="px-space-sm py-1 rounded bg-surface-container-highest text-ink-muted font-label-small text-label-small hover:bg-surface-dim transition-colors" id="sim-empty-state" type="button">
-        State: Laporan Kosong
-      </button>
-</div>
-</div>
-<!-- Main Work Surface -->
-<div class="w-full px-space-xl py-space-xl flex flex-col gap-space-lg">
-<!-- Breadcrumb & Header -->
-<div class="flex flex-col gap-space-xs">
-<div class="flex items-center gap-space-xs text-ink-muted">
-<span class="font-label-small text-label-small">Manajemen</span>
-<span class="material-symbols-outlined text-[14px]">chevron_right</span>
-<span class="font-label-small text-label-small text-primary font-bold">Pengawasan Katalog Buku Global</span>
-</div>
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mt-1">
-<div>
-<h1 class="font-headline-lg text-headline-lg text-ink-body tracking-tight">Pengawasan Katalog Buku Global</h1>
-<p class="font-body-base text-body-base text-ink-muted mt-1 max-w-3xl">
-            Tinjau laporan kendala e-book, verifikasi kelayakan publikasi berkas, dan pantau status kepatuhan hak cipta dari seluruh penerbit terdaftar.
-          </p>
-</div>
-<div class="flex items-center gap-space-xs self-start md:self-auto">
-<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-soft shadow-sm">
-<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container animate-pulse"></span>
-<span class="font-label-small text-label-small text-ink-body font-bold">2 Laporan Terbuka</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Navigation Tabs -->
-<div class="flex items-center gap-space-md border-b-2 border-surface-container-high">
-<button class="flex items-center gap-space-xs pb-3 border-b-2 border-primary text-primary font-title-md text-title-md transition-all" id="tab-btn-reports" type="button">
-<span>Laporan Masalah Buku</span>
-<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-small text-label-small" id="tab-reports-badge">2 Perlu Tindakan</span>
-</button>
-<button class="flex items-center gap-space-xs pb-3 border-b-2 border-transparent text-ink-muted hover:text-ink-body font-title-md text-title-md transition-all" id="tab-btn-catalog" type="button">
-<span>Seluruh Katalog Penerbit</span>
-<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-small text-label-small">56 Judul</span>
-</button>
-</div>
-<!-- Filter & Search Toolbar -->
-<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
-<!-- Search Input -->
-<div class="relative flex-1 min-w-[280px]">
-<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-muted text-[20px]">search</span>
-<input class="w-full h-12 pl-11 pr-14 rounded-lg bg-surface-soft text-ink-body placeholder:text-ink-muted font-body-base text-body-base outline-none focus:bg-surface-container-lowest shadow-[inset_0_1px_2px_rgba(0,0,0,0.03)] focus:ring-2 focus:ring-primary-container transition-all" id="global-search" placeholder="Cari judul buku, penulis, ISBN, atau nama penerbit..." type="text"/>
-<div class="absolute right-3.5 top-1/2 -translate-y-1/2 flex items-center justify-center w-6 h-6 rounded bg-surface-container-high font-label-small text-label-small text-ink-muted">
-          /
-        </div>
-</div>
-<!-- Filter Controls -->
-<div class="flex flex-wrap items-center gap-space-sm">
-<!-- Filter Jenis Masalah -->
-<div class="relative">
-<select class="appearance-none h-12 pl-4 pr-10 rounded-lg bg-surface-soft text-ink-body font-label text-label cursor-pointer shadow-sm hover:bg-surface-container transition-colors focus:ring-2 focus:ring-primary-container outline-none">
-<option>Semua Jenis Masalah</option>
-<option selected="">Berkas PDF Rusak (1)</option>
-<option>Dugaan Hak Cipta (1)</option>
-<option>Metadata / Cover Tidak Sesuai</option>
-</select>
-<span class="material-symbols-outlined pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-ink-muted text-[18px]">expand_more</span>
-</div>
-<!-- Filter Penerbit -->
-<div class="relative">
-<select class="appearance-none h-12 pl-4 pr-10 rounded-lg bg-surface-soft text-ink-body font-label text-label cursor-pointer shadow-sm hover:bg-surface-container transition-colors focus:ring-2 focus:ring-primary-container outline-none">
-<option>Semua Penerbit IKAPI</option>
-<option>PT Mizan Pustaka Utama</option>
-<option>CV Angkasa Publishing</option>
-<option>Penerbit Al-Kautsar</option>
-</select>
-<span class="material-symbols-outlined pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-ink-muted text-[18px]">expand_more</span>
-</div>
-<!-- Filter Urutan -->
-<div class="relative">
-<select class="appearance-none h-12 pl-4 pr-10 rounded-lg bg-surface-soft text-ink-body font-label text-label cursor-pointer shadow-sm hover:bg-surface-container transition-colors focus:ring-2 focus:ring-primary-container outline-none">
-<option>Urutan: Laporan Terbaru</option>
-<option>Urutan: Prioritas Kritis</option>
-<option>Urutan: Judul A-Z</option>
-</select>
-<span class="material-symbols-outlined pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-ink-muted text-[18px]">sort</span>
-</div>
-</div>
-</div>
-<!-- Active Filter Indicators -->
-<div class="flex items-center gap-space-xs text-xs">
-<span class="font-label-small text-label-small text-ink-muted mr-1">Filter Aktif:</span>
-<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-cream text-tertiary font-label-small text-label-small">
-<span class="material-symbols-outlined text-[14px]">warning</span>
-        1 Berkas PDF Rusak
-      </span>
-<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-small text-label-small">
-<span class="material-symbols-outlined text-[14px]">gavel</span>
-        1 Dugaan Hak Cipta
-      </span>
-<button class="font-label-small text-label-small text-primary hover:underline ml-2" type="button">Reset Filter</button>
-</div>
-<!-- Layout Workspace: Table & Drawer Container -->
-<div class="relative w-full flex items-start gap-space-lg">
-<!-- Main Table Card -->
-<div class="flex-1 min-w-0 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all duration-300" id="table-container">
-<!-- Reports View (Tab 1) -->
-<div class="flex flex-col" id="view-reports">
-<div class="overflow-x-auto">
-<table class="w-full text-left border-collapse">
-<thead>
-<tr class="bg-surface-container-low text-ink-muted font-label-small text-label-small uppercase tracking-wider">
-<th class="py-3.5 px-space-md">Buku (Sampul &amp; Judul)</th>
-<th class="py-3.5 px-space-md">Penerbit Resmi</th>
-<th class="py-3.5 px-space-md">Jenis Laporan</th>
-<th class="py-3.5 px-space-md">Tanggal Lapor</th>
-<th class="py-3.5 px-space-md">Status Publikasi</th>
-<th class="py-3.5 px-space-md text-right">Tindakan Admin</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-surface-container" id="table-reports-body">
-<!-- Row 1: Target Review -->
-<tr class="hover:bg-surface-soft/80 transition-colors group bg-surface-lilac/10" id="row-report-1">
-<td class="py-space-md px-space-md">
-<div class="flex items-center gap-space-md">
-<div class="w-12 h-18 w-12 flex-shrink-0 aspect-[2/3] rounded bg-inverse-deep overflow-hidden shadow-sm relative">
-<img class="w-full h-full object-cover" data-alt="Book jacket for Sang Pemimpi by Andrea Hirata. Dark deep navy cover design with poetic celestial stars, typography, minimal clean aesthetic, contemporary Indonesian literature, 2:3 aspect ratio vertical book mockup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB83N1__fk9WNIzGaZGa7uomvTQ9IIkb-X-fcA8bdvE3LJjV9F04uUjK4LosYa6tpmad-943H_maWeXrNYx873XNPY0WN-A3N4Q0DXVRhLAVBjlZuEPYHLncxV5MQE1VEsznfnwx01stVFSFDhM10hzYtjAY0BBnf0iIM5iiJ2_CFkiwrvFD4YhjYJTpdluZ8-zveyD_VhITV86vKe8Rv3BM8yR-YShKWOUkxP8BuCD"/>
-</div>
-<div class="flex flex-col min-w-0">
-<span class="font-title-md text-title-md text-ink-body font-bold truncate group-hover:text-primary transition-colors">
-                          Sang Pemimpi
-                        </span>
-<span class="font-body-small text-body-small text-ink-muted">Andrea Hirata</span>
-<div class="flex items-center gap-2 mt-1">
-<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-small text-label-small text-on-surface-variant">ISBN: 978-602-291-001-5</span>
-<span class="font-label-small text-label-small text-ink-muted">PDF • 14.2 MB</span>
-</div>
-</div>
-</div>
-</td>
-<td class="py-space-md px-space-md">
-<div class="flex flex-col">
-<span class="font-label text-label text-ink-body font-bold">PT Mizan Pustaka Utama</span>
-<span class="font-body-small text-body-small text-ink-muted">Kota Bandung, JABAR</span>
-<span class="font-label-small text-label-small text-primary mt-0.5">IKAPI #042/JBA/2018</span>
-</div>
-</td>
-<td class="py-space-md px-space-md">
-<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-paper text-tertiary">
-<span class="material-symbols-outlined text-[16px] text-tertiary-container">broken_image</span>
-<span class="font-label-small text-label-small font-bold">Berkas PDF Rusak</span>
-</div>
-<p class="font-body-small text-body-small text-ink-muted line-clamp-1 mt-1 max-w-[200px]">
-                      Halaman 42-48 freeze saat render.
-                    </p>
-</td>
-<td class="py-space-md px-space-md">
-<div class="flex flex-col">
-<span class="font-label text-label text-ink-body">14 Nov 2026</span>
-<span class="font-label-small text-label-small text-ink-muted">11:20 WIB</span>
-</div>
-</td>
-<td class="py-space-md px-space-md">
-<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-sky text-ink-body font-label-small text-label-small font-bold">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
-                      Publish
-                    </span>
-</td>
-<td class="py-space-md px-space-md text-right">
-<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label text-label transition-colors shadow-sm" onclick="openReviewDrawer('LPR-2026-041')" type="button">
-<span class="material-symbols-outlined text-[18px]">policy</span>
-<span>Tinjau Laporan</span>
-</button>
-</td>
-</tr>
-<!-- Row 2 -->
-<tr class="hover:bg-surface-soft/80 transition-colors group" id="row-report-2">
-<td class="py-space-md px-space-md">
-<div class="flex items-center gap-space-md">
-<div class="w-12 h-18 w-12 flex-shrink-0 aspect-[2/3] rounded bg-inverse-deep overflow-hidden shadow-sm relative">
-<img class="w-full h-full object-cover" data-alt="Book jacket for Aroma Karsa by Dee Lestari. Rich emerald green botanical floral illustration with gold foil accents, Indonesian literary contemporary art, 2:3 vertical book aspect ratio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFGflB3OLjxPlo4_L0exHwKeNEJbYXiBF-iJFcKbg7hZsDbG61VQdZl24826P6VsFDbEaJT2hNLjc_H3PP9oGeEjd8y1SCLMkBwQy_fohOHtw3vtjJ3q6QCrc_27QnkAISeDlMTvflPPyw6o3bRb_MiGuhEMdIWdvoCKcPoxAmu1x8dWyXeokV7-8nN_FMErLjFKOIjppEPg5DtK32nwqoaOTDvl5z1qsX8x9ltVZG"/>
-</div>
-<div class="flex flex-col min-w-0">
-<span class="font-title-md text-title-md text-ink-body font-bold truncate group-hover:text-primary transition-colors">
-                          Aroma Karsa
-                        </span>
-<span class="font-body-small text-body-small text-ink-muted">Dee Lestari</span>
-<div class="flex items-center gap-2 mt-1">
-<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-small text-label-small text-on-surface-variant">ISBN: 978-602-424-694-5</span>
-<span class="font-label-small text-label-small text-ink-muted">EPUB • 8.6 MB</span>
-</div>
-</div>
-</div>
-</td>
-<td class="py-space-md px-space-md">
-<div class="flex flex-col">
-<span class="font-label text-label text-ink-body font-bold">CV Angkasa Publishing</span>
-<span class="font-body-small text-body-small text-ink-muted">Kota Bandung, JABAR</span>
-<span class="font-label-small text-label-small text-primary mt-0.5">IKAPI #019/JBA/2012</span>
-</div>
-</td>
-<td class="py-space-md px-space-md">
-<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container">
-<span class="material-symbols-outlined text-[16px] text-secondary">copyright</span>
-<span class="font-label-small text-label-small font-bold">Dugaan Hak Cipta</span>
-</div>
-<p class="font-body-small text-body-small text-ink-muted line-clamp-1 mt-1 max-w-[200px]">
-                      Klaim lisensi hak terbit dari pemegang hak asal.
-                    </p>
-</td>
-<td class="py-space-md px-space-md">
-<div class="flex flex-col">
-<span class="font-label text-label text-ink-body">13 Nov 2026</span>
-<span class="font-label-small text-label-small text-ink-muted">16:45 WIB</span>
-</div>
-</td>
-<td class="py-space-md px-space-md">
-<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-sky text-ink-body font-label-small text-label-small font-bold">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
-                      Publish
-                    </span>
-</td>
-<td class="py-space-md px-space-md text-right">
-<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-soft hover:bg-surface-container text-ink-body font-label text-label transition-colors shadow-sm" onclick="openReviewDrawer('LPR-2026-042')" type="button">
-<span class="material-symbols-outlined text-[18px]">visibility</span>
-<span>Tinjau Laporan</span>
-</button>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<!-- Empty State (Hidden by default, triggered by simulator) -->
-<div class="hidden flex-col items-center justify-center p-space-3xl text-center" id="reports-empty-state">
-<div class="w-16 h-16 rounded-full bg-surface-sky flex items-center justify-center mb-space-md">
-<span class="material-symbols-outlined text-[32px] text-primary">verified</span>
-</div>
-<h3 class="font-title-md text-title-md text-ink-body font-bold">Semua Laporan Telah Selesai Ditinjau</h3>
-<p class="font-body-small text-body-small text-ink-muted max-w-md mt-1">
-              Tidak ada antrean laporan buku dari pembeli maupun pemegang hak cipta saat ini. Katalog buku IKAPI beroperasi normal.
-            </p>
-<button class="mt-space-md px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label text-label transition-colors" onclick="resetDemoData()" type="button">
-              Muat Ulang Data Simulasi
-            </button>
-</div>
-<!-- Pagination Bar -->
-<div class="flex items-center justify-between px-space-md py-space-sm bg-surface-soft font-label-small text-label-small text-ink-muted">
-<span>Menampilkan 1-2 dari 2 laporan menunggu verifikasi</span>
-<div class="flex items-center gap-2">
-<button class="p-1 rounded hover:bg-surface-container text-ink-muted disabled:opacity-40" disabled="">
-<span class="material-symbols-outlined text-[18px]">chevron_left</span>
-</button>
-<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary">1</span>
-<button class="p-1 rounded hover:bg-surface-container text-ink-muted disabled:opacity-40" disabled="">
-<span class="material-symbols-outlined text-[18px]">chevron_right</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Catalog View (Tab 2 - Hidden by default) -->
-<div class="hidden flex-col" id="view-catalog">
-<div class="overflow-x-auto">
-<table class="w-full text-left border-collapse">
-<thead>
-<tr class="bg-surface-container-low text-ink-muted font-label-small text-label-small uppercase tracking-wider">
-<th class="py-3.5 px-space-md">Katalog Buku</th>
-<th class="py-3.5 px-space-md">Penerbit</th>
-<th class="py-3.5 px-space-md">Format &amp; Ukuran</th>
-<th class="py-3.5 px-space-md">Harga &amp; Terjual</th>
-<th class="py-3.5 px-space-md">Status Katalog</th>
-<th class="py-3.5 px-space-md text-right">Opsi</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-surface-container">
-<!-- Catalog Row 1 -->
-<tr class="hover:bg-surface-soft/80 transition-colors">
-<td class="py-space-md px-space-md">
-<div class="flex items-center gap-space-md">
-<div class="w-10 h-15 flex-shrink-0 aspect-[2/3] rounded bg-inverse-deep overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="Book cover of Pulang by Leila S. Chudori, vintage Paris and Jakarta artistic illustration, editorial Indonesian novel, vibrant yellow and deep navy accents, 2:3 aspect ratio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM50nVUxod4Ckx-s3oJXNdPF_dGV3ES-CXBUfiTOjbhzpyrRArZNdSS62XC-K6Bfwv2vOqQ7blyiUJKKcX1KPDX-SKKGpPIrAIjFMR1aMxTHHIlraibY2jYA-KX3dsTDgN-AcR3b8Fze2rRm-d3kxZzhufITb-6QGozic0w2fkU6MNMDp7R1SmaCqrqVnAOGixH8qRVm4LCmxaN5t841-DJgHFz9ynsYnG2F_Uogdc"/>
-</div>
-<div class="flex flex-col">
-<span class="font-label text-label text-ink-body font-bold">Pulang</span>
-<span class="font-body-small text-body-small text-ink-muted">Leila S. Chudori</span>
-</div>
-</div>
-</td>
-<td class="py-space-md px-space-md font-body-small text-body-small text-ink-body">Kepustakaan Populer Gramedia</td>
-<td class="py-space-md px-space-md font-body-small text-body-small text-ink-muted">EPUB • 5.1 MB</td>
-<td class="py-space-md px-space-md">
-<div class="font-label text-label text-ink-body font-bold">Rp 89.000</div>
-<span class="font-label-small text-label-small text-ink-muted">842 Transaksi</span>
-</td>
-<td class="py-space-md px-space-md">
-<span class="px-2.5 py-1 rounded-full bg-surface-sky text-ink-body font-label-small text-label-small font-bold">Publish</span>
-</td>
-<td class="py-space-md px-space-md text-right">
-<button class="px-3 py-1.5 rounded bg-surface-soft hover:bg-surface-container text-ink-body font-label-small text-label-small transition-colors">
-                      Detail
-                    </button>
-</td>
-</tr>
-<!-- Catalog Row 2 -->
-<tr class="hover:bg-surface-soft/80 transition-colors">
-<td class="py-space-md px-space-md">
-<div class="flex items-center gap-space-md">
-<div class="w-10 h-15 flex-shrink-0 aspect-[2/3] rounded bg-inverse-deep overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="Book jacket of Cantik Itu Luka by Eka Kurniawan, magical realism art, floral gothic novel illustration, Indonesian literature, 2:3 book ratio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0DwlyEHpntlgF55JZ0YhQz-RM9cAvTKPGCHLnW_1JyteZqhIu2W34LpGPPhnuDsJBGVRgbqmxYPmgYbND4pxVajZBHODkKLjU-H7EBsxSKCWIgGiTwjOXBgnuF5p4Svvdtbzv7O8ssNuh5LD6b9QV1k2taxy3wmRhkvLtab3Ea_RnwFpqoo-csvIae-BpZhiAW_eaUg221Skt5TOq7L5msakouae22Vfl5T42A_zk"/>
-</div>
-<div class="flex flex-col">
-<span class="font-label text-label text-ink-body font-bold">Cantik Itu Luka</span>
-<span class="font-body-small text-body-small text-ink-muted">Eka Kurniawan</span>
-</div>
-</div>
-</td>
-<td class="py-space-md px-space-md font-body-small text-body-small text-ink-body">Gramedia Pustaka Utama</td>
-<td class="py-space-md px-space-md font-body-small text-body-small text-ink-muted">PDF • 18.4 MB</td>
-<td class="py-space-md px-space-md">
-<div class="font-label text-label text-ink-body font-bold">Rp 105.000</div>
-<span class="font-label-small text-label-small text-ink-muted">1.412 Transaksi</span>
-</td>
-<td class="py-space-md px-space-md">
-<span class="px-2.5 py-1 rounded-full bg-surface-sky text-ink-body font-label-small text-label-small font-bold">Publish</span>
-</td>
-<td class="py-space-md px-space-md text-right">
-<button class="px-3 py-1.5 rounded bg-surface-soft hover:bg-surface-container text-ink-body font-label-small text-label-small transition-colors">
-                      Detail
-                    </button>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="flex items-center justify-between px-space-md py-space-sm bg-surface-soft font-label-small text-label-small text-ink-muted">
-<span>Menampilkan 1-2 dari 56 buku terbitan resmi IKAPI Jabar</span>
-<div class="flex items-center gap-2">
-<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary">1</span>
-<span class="px-2 py-0.5 rounded text-ink-muted">2</span>
-<span class="px-2 py-0.5 rounded text-ink-muted">3</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Right Review Drawer (Slide-in / Expandable Side Panel) -->
-<aside class="w-[500px] flex-shrink-0 bg-surface-container-lowest rounded-xl shadow-xl flex flex-col overflow-hidden transition-all duration-300" id="review-drawer">
-<!-- Drawer Header -->
-<div class="p-space-md bg-surface-container-low flex items-center justify-between border-b border-surface-container">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
-<div>
-<h2 class="font-title-md text-title-md text-ink-body font-bold leading-tight">Detail Pemeriksaan Laporan</h2>
-<span class="font-label-small text-label-small text-ink-muted">ID Laporan: <strong class="text-on-surface">LPR-2026-041</strong></span>
-</div>
-</div>
-<button class="w-8 h-8 rounded-full flex items-center justify-center text-ink-muted hover:bg-surface-container-high hover:text-ink-body transition-colors" onclick="closeReviewDrawer()" type="button">
-<span class="material-symbols-outlined text-[18px]">close</span>
-</button>
-</div>
-<!-- Drawer Scrollable Body -->
-<div class="p-space-md flex flex-col gap-space-md overflow-y-auto max-h-[calc(100vh-280px)]">
-<!-- Book Hero Unit -->
-<div class="p-space-md rounded-xl bg-surface-soft flex gap-space-md items-start">
-<div class="w-24 flex-shrink-0 aspect-[2/3] rounded bg-inverse-deep overflow-hidden shadow-md">
-<img class="w-full h-full object-cover" data-alt="Book jacket for Sang Pemimpi by Andrea Hirata. Dark deep navy cover design with poetic celestial stars, typography, minimal clean aesthetic, contemporary Indonesian literature, 2:3 aspect ratio vertical book mockup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIf-nbKrdhDenoqtegxETQNK0Uc6Sf2aAMP4eC0Ra-E9lOppunPREGi7Xi9jtBya9VHxThnZxiOanX1BBDhjbSYJxCjqkHj8dDK5GYmF-enYaudrcuCHblUFstsJZ3tbjgLo2a_aSL31KKB0MrEGX0iV6R44noRT4WYu-_qVDxviHQanTOTjvL1sjNRqmNuCZop_wUpbBZca0k7m0EVilc1x-Ms3xm0KppTbqyfqaW"/>
-</div>
-<div class="flex flex-col min-w-0">
-<div class="inline-flex items-center gap-1 self-start px-2 py-0.5 rounded bg-surface-sky text-ink-body font-label-small text-label-small font-bold mb-1">
-<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                Publish (Aktif di Katalog)
-              </div>
-<h3 class="font-title-md text-title-md text-ink-body font-bold leading-tight">Sang Pemimpi</h3>
-<p class="font-body-small text-body-small text-ink-muted">Penulis: Andrea Hirata</p>
-<div class="grid grid-cols-2 gap-2 mt-3 text-xs">
-<div>
-<span class="font-label-small text-label-small text-ink-muted block">Kategori</span>
-<span class="font-label-small text-label-small text-ink-body font-bold">Sastra &amp; Fiksi</span>
-</div>
-<div>
-<span class="font-label-small text-label-small text-ink-muted block">Jumlah Hal.</span>
-<span class="font-label-small text-label-small text-ink-body font-bold">292 Halaman</span>
-</div>
-<div>
-<span class="font-label-small text-label-small text-ink-muted block">ISBN</span>
-<span class="font-label-small text-label-small text-ink-body font-bold">978-602-291-001-5</span>
-</div>
-<div>
-<span class="font-label-small text-label-small text-ink-muted block">Ukuran File</span>
-<span class="font-label-small text-label-small text-ink-body font-bold">14.2 MB (PDF)</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Publisher Entity Card -->
-<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
-<span class="font-label-small text-label-small text-ink-muted uppercase tracking-wider font-bold">Informasi Penerbit Resmi</span>
-<div class="flex items-center justify-between">
-<span class="font-title-md text-title-md text-ink-body font-bold">PT Mizan Pustaka Utama</span>
-<span class="px-2 py-0.5 rounded bg-surface-lilac text-on-primary-fixed-variant font-label-small text-label-small font-bold">Anggota Aktif</span>
-</div>
-<div class="flex flex-col gap-1 text-xs text-ink-muted mt-1">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[15px]">badge</span>
-<span>ID Anggota: IKAPI #042/JBA/2018</span>
-</div>
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[15px]">person</span>
-<span>Penanggung Jawab: Ahmad Fuadi, M.Hum</span>
-</div>
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[15px]">mail</span>
-<span class="text-primary font-medium">kontak@mizan.com</span>
-</div>
-</div>
-</div>
-<!-- Laporan Masalah Card (Amber Tone) -->
-<div class="p-space-md rounded-xl bg-surface-cream text-on-tertiary-container flex flex-col gap-space-sm shadow-sm">
-<div class="flex items-center justify-between">
-<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-container/30 text-ink-body font-label-small text-label-small font-bold">
-<span class="material-symbols-outlined text-[15px]">broken_image</span>
-                Berkas PDF Rusak / Render Freeze
-              </span>
-<span class="font-label-small text-label-small text-ink-muted">14 Nov 2026, 11:20 WIB</span>
-</div>
-<div class="flex flex-col gap-1">
-<span class="font-label-small text-label-small text-ink-muted font-bold">Keterangan Pelapor (Pembeli Terverifikasi):</span>
-<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 text-ink-body font-body-small text-body-small italic">
-                “Halaman 42 s/d 48 berkas PDF buram dan tidak dapat dimuat di Web Reader. Pembeli mengalami freeze total saat membuka Bab 4.”
-              </div>
-</div>
-<div class="p-space-sm rounded-lg bg-surface-paper flex flex-col gap-1 text-xs">
-<span class="font-label-small text-label-small text-ink-body font-bold flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px] text-tertiary">analytics</span>
-                Diagnostik Validasi Berkas Sistem:
-              </span>
-<span class="text-ink-muted font-mono text-[11px]">
-                File: rev_20261102.pdf (14.2 MB)<br/>
-                Checksum: SHA256: 8a7c1b... gagal parse xref table stream pada byte offset 0x4B3A0.
-              </span>
-</div>
-</div>
-</div>
-<!-- Decision Action Footer -->
-<div class="p-space-md bg-surface-container-low border-t border-surface-container flex items-center justify-between gap-space-sm mt-auto">
-<button class="flex-1 px-space-md py-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-ink-body font-label text-label transition-colors text-center shadow-sm" onclick="openIgnoreModal()" type="button">
-            Abaikan Laporan
-          </button>
-<button class="flex-1 px-space-md py-2.5 rounded-lg bg-feedback-error text-on-error hover:bg-feedback-error/90 font-label text-label transition-colors text-center shadow-sm flex items-center justify-center gap-1.5" onclick="openTakedownModal()" type="button">
-<span class="material-symbols-outlined text-[18px]">unpublished</span>
-<span>Take Down / Nonaktifkan</span>
-</button>
-</div>
-</aside>
-</div>
-</div>
-<!-- Modal: Take Down / Nonaktifkan Buku -->
-<div class="fixed inset-0 z-50 hidden items-center justify-center bg-inverse-deep/60 backdrop-blur-sm p-space-md" id="modal-takedown">
-<div class="w-full max-w-lg bg-surface-container-lowest rounded-2xl shadow-2xl overflow-hidden flex flex-col animate-[fadeIn_0.15s_ease-out]">
-<!-- Modal Header -->
-<div class="p-space-lg bg-surface-soft border-b border-surface-container flex items-start justify-between">
-<div class="flex items-center gap-space-sm">
-<div class="w-10 h-10 rounded-full bg-error-container text-feedback-error flex items-center justify-center">
-<span class="material-symbols-outlined text-[24px]">gavel</span>
-</div>
-<div>
-<h3 class="font-title-md text-title-md text-ink-body font-bold">Nonaktifkan Buku dari Katalog</h3>
-<p class="font-body-small text-body-small text-ink-muted">Tindakan administratif pencabutan sementara</p>
-</div>
-</div>
-<button class="text-ink-muted hover:text-ink-body" onclick="closeTakedownModal()" type="button">
-<span class="material-symbols-outlined text-[20px]">close</span>
-</button>
-</div>
-<!-- Modal Body -->
-<div class="p-space-lg flex flex-col gap-space-md">
-<!-- Target Info Pill -->
-<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between text-xs">
-<div>
-<span class="font-label-small text-label-small text-ink-muted">Buku Sasaran:</span>
-<span class="font-label text-label text-ink-body font-bold ml-1">Sang Pemimpi</span>
-</div>
-<span class="font-label-small text-label-small text-ink-muted">PT Mizan Pustaka Utama</span>
-</div>
-<!-- Warning Notice -->
-<div class="p-space-md rounded-xl bg-error-container text-on-error-container flex items-start gap-space-sm">
-<span class="material-symbols-outlined text-feedback-error text-[20px] flex-shrink-0 mt-0.5">info</span>
-<p class="font-body-small text-body-small text-feedback-error leading-relaxed">
-            Buku ini akan <strong>dinonaktifkan dari etalase publik</strong> IKAPI Store. Pembeli lama tetap dapat membaca di Web Reader mereka, namun buku tidak dapat dibeli lagi oleh pengguna baru hingga penerbit memperbarui berkas.
-          </p>
-</div>
-<!-- Reason Input -->
-<div class="flex flex-col gap-space-xs">
-<label class="font-label text-label text-ink-body font-bold flex items-center justify-between">
-<span>Alasan Pencabutan / Catatan Resmi *</span>
-<span class="font-label-small text-label-small text-feedback-error">Wajib Diisi</span>
-</label>
-<textarea class="w-full p-space-sm rounded-lg bg-surface-soft font-body-base text-body-base text-ink-body placeholder:text-ink-muted focus:ring-2 focus:ring-primary-container outline-none" id="takedown-reason-input" placeholder="Contoh: Berkas PDF mengalami kerusakan struktural pada Bab 4 (halaman 42-48). Mohon unggah ulang berkas PDF edisi revisi melalui menu Kelola Buku di Portal Penerbit." rows="4">Berkas PDF mengalami kerusakan rendering pada Bab 4 (halaman 42 s/d 48). Mohon unggah ulang berkas PDF versi revisi yang valid melalui portal penerbit IKAPI.</textarea>
-<span class="font-label-small text-label-small text-ink-muted">
-            Catatan resmi ini akan otomatis dikirimkan ke email penanggung jawab penerbit: <strong>kontak@mizan.com</strong>
-</span>
-</div>
-</div>
-<!-- Modal Footer -->
-<div class="p-space-md bg-surface-soft border-t border-surface-container flex items-center justify-end gap-space-sm">
-<button class="px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-dim text-ink-body font-label text-label transition-colors" onclick="closeTakedownModal()" type="button">
-          Batal
-        </button>
-<button class="px-space-md py-2 rounded-lg bg-feedback-error hover:bg-feedback-error/90 text-on-error font-label text-label font-bold transition-colors flex items-center gap-1.5 shadow-sm" onclick="executeTakedown()" type="button">
-<span class="material-symbols-outlined text-[18px]">check_circle</span>
-<span>Nonaktifkan Buku Sekarang</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Modal: Abaikan Laporan -->
-<div class="fixed inset-0 z-50 hidden items-center justify-center bg-inverse-deep/60 backdrop-blur-sm p-space-md" id="modal-ignore">
-<div class="w-full max-w-md bg-surface-container-lowest rounded-2xl shadow-2xl overflow-hidden flex flex-col">
-<div class="p-space-lg flex flex-col items-center text-center gap-space-sm">
-<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-ink-muted">
-<span class="material-symbols-outlined text-[28px]">mark_chat_read</span>
-</div>
-<h3 class="font-title-md text-title-md text-ink-body font-bold">Abaikan Laporan Buku?</h3>
-<p class="font-body-small text-body-small text-ink-muted">
-          Laporan ini akan ditandai sebagai diselesaikan tanpa tindakan pencabutan. Buku akan tetap berstatus <strong>Publish</strong> di katalog publik IKAPI Store.
-        </p>
-</div>
-<div class="p-space-md bg-surface-soft border-t border-surface-container flex items-center justify-end gap-space-sm">
-<button class="px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-dim text-ink-body font-label text-label transition-colors" onclick="closeIgnoreModal()" type="button">
-          Batal
-        </button>
-<button class="px-space-md py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label text-label font-bold transition-colors shadow-sm" onclick="executeIgnoreReport()" type="button">
-          Ya, Abaikan Laporan
-        </button>
-</div>
-</div>
-</div>
-<!-- Floating Success Toast Notification -->
-<div class="fixed bottom-6 right-6 z-50 hidden items-center gap-space-sm px-space-lg py-space-md rounded-xl bg-inverse-surface text-inverse-on-surface shadow-2xl transition-all duration-300" id="toast-notification">
-<div class="w-7 h-7 rounded-full bg-surface-sky text-ink-body flex items-center justify-center font-bold text-xs">
-      ✓
-    </div>
-<div class="flex flex-col text-left">
-<span class="font-label text-label font-bold" id="toast-title">Buku berhasil dinonaktifkan dari katalog publik</span>
-<span class="font-label-small text-label-small text-surface-container-high" id="toast-desc">Notifikasi teguran dan laporan teknis telah dikirim ke penerbit.</span>
-</div>
-<button class="ml-space-md text-surface-container-high hover:text-white" onclick="hideToast()" type="button">
-<span class="material-symbols-outlined text-[18px]">close</span>
-</button>
-</div>
-</div>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pengawasan Katalog - Portal Administrator IKAPI Jawa Barat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
 <script>
-  // Tab Switching Logic
-  const tabBtnReports = document.getElementById('tab-btn-reports');
-  const tabBtnCatalog = document.getElementById('tab-btn-catalog');
-  const viewReports = document.getElementById('view-reports');
-  const viewCatalog = document.getElementById('view-catalog');
-  const reviewDrawer = document.getElementById('review-drawer');
-
-  function showReportsTab() {
-    tabBtnReports.className = "flex items-center gap-space-xs pb-3 border-b-2 border-primary text-primary font-title-md text-title-md transition-all";
-    tabBtnCatalog.className = "flex items-center gap-space-xs pb-3 border-b-2 border-transparent text-ink-muted hover:text-ink-body font-title-md text-title-md transition-all";
-    viewReports.classList.remove('hidden');
-    viewCatalog.classList.add('hidden');
-  }
-
-  function showCatalogTab() {
-    tabBtnCatalog.className = "flex items-center gap-space-xs pb-3 border-b-2 border-primary text-primary font-title-md text-title-md transition-all";
-    tabBtnReports.className = "flex items-center gap-space-xs pb-3 border-b-2 border-transparent text-ink-muted hover:text-ink-body font-title-md text-title-md transition-all";
-    viewCatalog.classList.remove('hidden');
-    viewReports.classList.add('hidden');
-    closeReviewDrawer();
-  }
-
-  tabBtnReports.addEventListener('click', showReportsTab);
-  tabBtnCatalog.addEventListener('click', showCatalogTab);
-
-  // Drawer Control
-  function openReviewDrawer(reportId) {
-    showReportsTab();
-    reviewDrawer.classList.remove('hidden');
-    reviewDrawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
-
-  function closeReviewDrawer() {
-    reviewDrawer.classList.add('hidden');
-  }
-
-  // Modals Control
-  const modalTakedown = document.getElementById('modal-takedown');
-  const modalIgnore = document.getElementById('modal-ignore');
-
-  function openTakedownModal() {
-    modalTakedown.classList.remove('hidden');
-    modalTakedown.classList.add('flex');
-  }
-
-  function closeTakedownModal() {
-    modalTakedown.classList.add('hidden');
-    modalTakedown.classList.remove('flex');
-  }
-
-  function openIgnoreModal() {
-    modalIgnore.classList.remove('hidden');
-    modalIgnore.classList.add('flex');
-  }
-
-  function closeIgnoreModal() {
-    modalIgnore.classList.add('hidden');
-    modalIgnore.classList.remove('flex');
-  }
-
-  // Toast Notification Control
-  let toastTimer;
-  function showToast(title, desc) {
-    const toast = document.getElementById('toast-notification');
-    if (title) document.getElementById('toast-title').textContent = title;
-    if (desc) document.getElementById('toast-desc').textContent = desc;
-    toast.classList.remove('hidden');
-    toast.classList.add('flex');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => {
-      hideToast();
-    }, 4500);
-  }
-
-  function hideToast() {
-    const toast = document.getElementById('toast-notification');
-    toast.classList.add('hidden');
-    toast.classList.remove('flex');
-  }
-
-  // Decision Execution Actions
-  function executeTakedown() {
-    closeTakedownModal();
-    closeReviewDrawer();
-    
-    // Animate removal of Row 1
-    const row1 = document.getElementById('row-report-1');
-    if (row1) {
-      row1.style.opacity = '0.4';
-      row1.style.pointerEvents = 'none';
-      setTimeout(() => {
-        row1.remove();
-        updateRemainingReportCounts();
-      }, 400);
-    }
-
-    showToast(
-      'Buku berhasil dinonaktifkan dari katalog publik',
-      'Surat teguran teknis resmi telah dikirim ke PT Mizan Pustaka Utama.'
-    );
-  }
-
-  function executeIgnoreReport() {
-    closeIgnoreModal();
-    closeReviewDrawer();
-    
-    const row1 = document.getElementById('row-report-1');
-    if (row1) {
-      row1.style.opacity = '0.4';
-      setTimeout(() => {
-        row1.remove();
-        updateRemainingReportCounts();
-      }, 300);
-    }
-
-    showToast(
-      'Laporan ditandai selesai (Diabaikan)',
-      'Buku Sang Pemimpi tetap berstatus aktif di etalase pembeli.'
-    );
-  }
-
-  function updateRemainingReportCounts() {
-    const remainingRows = document.querySelectorAll('#table-reports-body tr');
-    const badge = document.getElementById('tab-reports-badge');
-    if (remainingRows.length === 0) {
-      document.getElementById('reports-empty-state').classList.remove('hidden');
-      document.getElementById('reports-empty-state').classList.add('flex');
-      if (badge) badge.textContent = '0 Perlu Tindakan';
-    } else {
-      if (badge) badge.textContent = remainingRows.length + ' Perlu Tindakan';
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#673DE6', 'primary-hover': '#5025D1', 'primary-deep': '#2F1C6A',
+        canvas: '#FFFFFF', soft: '#F5F6FF', neutral: '#F5F5F6',
+        ink: '#222225', muted: '#62636B', border: '#E5E7EB', divider: '#EFEFF2',
+      },
+      fontFamily: { sans: ['DM Sans', 'system-ui', 'sans-serif'] },
+      borderRadius: { xl: '12px', '2xl': '16px', '3xl': '20px' },
     }
   }
+}
+</script>
+<style>
+  :root { --topbar-h: 64px; --sidebar-w: 248px; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', system-ui, sans-serif; background: #FFFFFF; color: #222225; }
+  .shell-main { margin-left: 0; }
+  @media (min-width: 1024px) { .shell-main { margin-left: var(--sidebar-w); } }
+  .banner-bleed { margin-left: 0; }
+  @media (min-width: 1024px) { .banner-bleed { margin-left: calc(-1 * var(--sidebar-w)); } }
+  #publisher-sidebar { top: var(--topbar-h); }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .num { font-variant-numeric: tabular-nums; }
+  .focus-ring:focus-visible { outline: 2px solid #673DE6; outline-offset: 2px; }
+  .focus-ring-light:focus-visible { outline: 2px solid #FFFFFF; outline-offset: 2px; }
+  .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .review-text { white-space: pre-line; overflow-wrap: anywhere; }
+  #publisher-sidebar { transform: translateX(-100%); transition: transform .22s ease; }
+  #publisher-sidebar.is-open { transform: translateX(0); }
+  @media (min-width: 1024px) { #publisher-sidebar { transform: none; transition: none; } }
+  #catalog-drawer { transform: translateX(100%); transition: transform .24s ease; }
+  #catalog-drawer.is-open { transform: translateX(0); }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-thumb { background: #DCDCE2; border-radius: 9999px; }
+</style>
+  <script src="admin-guard.js"></script>
+</head>
+<body class="bg-canvas text-ink antialiased">
 
-  function resetDemoData() {
-    location.reload();
+<a href="#workspace" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focus:bg-primary focus:px-4 focus:py-2 focus:text-white focus:text-sm focus:font-semibold">Lewati ke konten utama</a>
+
+<!-- TOP UTILITY BAR -->
+<header class="absolute inset-x-0 top-0 z-50 h-16">
+  <div class="flex h-16 items-center justify-between gap-3 px-4 sm:px-6">
+    <div class="flex items-center gap-3">
+      <button type="button" id="sidebar-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="publisher-sidebar"
+        class="focus-ring-light grid h-10 w-10 place-items-center rounded-xl text-white hover:bg-white/10 lg:hidden">
+        <span class="material-symbols-outlined text-[22px]">menu</span>
+      </button>
+      <a href="dashboard_administrasi_utama_desktop.html" class="focus-ring-light flex items-center rounded-xl">
+        <img src="../../assets/logo-ikapi-jabar.png" alt="IKAPI Jawa Barat" class="h-7 w-auto object-contain drop-shadow-[0_1px_3px_rgba(0,0,0,0.35)]">
+      </a>
+    </div>
+    <div class="flex items-center gap-1.5">
+      <div class="relative">
+        <button type="button" id="btn-notif" aria-label="Notifikasi" aria-haspopup="true" aria-expanded="false"
+          class="focus-ring-light relative grid h-10 w-10 place-items-center rounded-xl text-white hover:bg-white/10">
+          <span class="material-symbols-outlined text-[22px]">notifications</span>
+        </button>
+        <div id="notif-panel" class="absolute right-0 top-12 hidden w-72 rounded-2xl border border-border bg-white p-4 shadow-[0_16px_40px_rgba(34,34,37,0.12)]">
+          <div class="mb-1.5 text-[13px] font-bold text-ink">Notifikasi</div>
+          <p class="text-[13px] leading-relaxed text-muted">Tidak ada notifikasi baru.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<div id="sidebar-scrim" class="fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden"></div>
+<aside id="publisher-sidebar" class="fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgba(34,34,37,0.07)] lg:translate-x-0">
+  <nav aria-label="Navigasi dashboard administrator" class="flex flex-1 flex-col gap-1 overflow-y-auto px-3 pb-4 pt-7">
+    <a href="dashboard_administrasi_utama_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">space_dashboard</span><span>Dashboard</span>
+    </a>
+    <p class="mt-3 px-3 text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Manajemen</p>
+    <a href="kelola_pengguna_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">group</span><span>Kelola Pengguna</span>
+    </a>
+    <a href="pengawasan_katalog_buku_global_desktop.html" aria-current="page" class="focus-ring flex items-center gap-3 rounded-xl bg-primary px-3 py-2.5 text-[14px] font-semibold text-white">
+      <span class="material-symbols-outlined text-[20px]">menu_book</span><span>Pengawasan Katalog</span>
+    </a>
+    <a href="moderasi_ulasan_dan_komentar_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">reviews</span><span>Moderasi Ulasan</span>
+    </a>
+    <a href="kelola_komunitas_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">groups</span><span>Kelola Komunitas</span>
+    </a>
+    <a href="moderasi_diskusi_komunitas_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">forum</span><span>Moderasi Diskusi</span>
+    </a>
+    <p class="mt-3 px-3 text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Keuangan &amp; Monitoring</p>
+    <a href="monitoring_global_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">monitoring</span><span>Monitoring Global</span>
+    </a>
+    <a href="kelola_pencairan_dana_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">payments</span><span>Kelola Pencairan Dana</span>
+    </a>
+  </nav>
+  <div class="flex items-center gap-2 border-t border-divider p-3">
+    <a href="login_administrator_desktop.html" class="focus-ring flex min-w-0 flex-1 items-center gap-3 rounded-xl px-2 py-2 hover:bg-neutral">
+      <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary text-white">
+        <span class="material-symbols-outlined text-[18px]">shield_person</span>
+      </span>
+      <span class="min-w-0 text-left leading-tight">
+        <span class="block truncate text-[13px] font-semibold text-ink">Administrator</span>
+        <span class="block truncate text-[11px] text-muted">Portal Administrator</span>
+      </span>
+    </a>
+    <a href="login_administrator_desktop.html" aria-label="Keluar" title="Keluar"
+      class="focus-ring grid h-10 w-10 shrink-0 place-items-center rounded-xl text-[#B42318] transition-colors hover:bg-[#FEF3F2]">
+      <span class="material-symbols-outlined text-[20px]">logout</span>
+    </a>
+  </div>
+</aside>
+
+<!-- MAIN COLUMN -->
+<div class="shell-main">
+  <div aria-hidden="true" class="banner-bleed relative h-[232px] overflow-hidden bg-primary-deep sm:h-[260px] lg:h-[276px]">
+    <svg class="absolute inset-0 h-full w-full" viewBox="0 0 1440 212" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="topScrim" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2F1C6A" stop-opacity="0.96"></stop>
+          <stop offset="100%" stop-color="#2F1C6A" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="212" fill="#2F1C6A"></rect>
+      <polygon points="418,0 612,0 470,212 276,212" fill="#4B2CBA"></polygon>
+      <polygon points="648,0 706,0 564,212 506,212" fill="#825CF1"></polygon>
+      <polygon points="748,0 1002,0 860,212 606,212" fill="#673DE6"></polygon>
+      <polygon points="1042,0 1084,0 942,212 900,212" fill="#4475D8"></polygon>
+      <polygon points="1124,0 1290,0 1148,212 982,212" fill="#4B2CBA"></polygon>
+      <polygon points="1342,0 1440,0 1440,212 1200,212" fill="#825CF1"></polygon>
+      <polygon points="1420,0 1440,0 1440,212 1378,212" fill="#4475D8"></polygon>
+      <rect width="1440" height="58" fill="url(#topScrim)"></rect>
+    </svg>
+  </div>
+
+  <main id="workspace" class="relative z-10 -mt-20 rounded-t-[20px] border-t border-border bg-white lg:ml-6">
+    <div class="mx-auto w-full max-w-[1560px] px-4 pb-16 pt-6 sm:px-6 lg:px-10 lg:pt-8">
+
+      <!-- Heading -->
+      <div class="mb-4 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+        <div class="min-w-0">
+          <h1 class="text-[26px] font-bold leading-tight tracking-tight text-ink lg:text-[30px]">Pengawasan Katalog</h1>
+          <p class="mt-1 text-[14px] text-muted">Tinjau laporan buku dan kelola status publikasi katalog.</p>
+        </div>
+        <div class="relative">
+          <button type="button" id="demo-toggle" aria-expanded="false" aria-haspopup="true"
+            class="focus-ring inline-flex h-10 items-center gap-1.5 rounded-xl border border-dashed border-border px-3 text-[13px] font-semibold text-muted transition-colors hover:bg-neutral hover:text-ink">
+            <span class="material-symbols-outlined text-[17px]">tune</span>
+            <span>Mode Demo</span>
+            <span class="material-symbols-outlined text-[17px]">expand_more</span>
+          </button>
+          <div id="demo-menu" class="absolute right-0 top-12 z-30 hidden w-64 rounded-2xl border border-border bg-white p-1.5 shadow-[0_16px_40px_rgba(34,34,37,0.12)]" role="menu" aria-label="Pilih skenario demo">
+            <button type="button" data-demo="A" role="menuitemradio" aria-checked="true" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl bg-soft px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Laporan Buku</span><span class="material-symbols-outlined demo-check text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="B" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Seluruh Katalog</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="C" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Detail Laporan</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="D" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Konfirmasi Nonaktifkan</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="E" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Konfirmasi Tutup Laporan</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="F" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Notifikasi Sukses</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="G" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Antrean Kosong</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <p class="px-3 pb-1.5 pt-2 text-[11px] leading-relaxed text-muted">Peralihan status hanya simulasi prototype.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="num mb-4 text-[13px] text-muted" id="report-counter">2 laporan perlu ditinjau</p>
+      <p id="page-note" role="status" class="mb-3 hidden text-[12.5px] text-muted"></p>
+
+      <!-- Tabs -->
+      <div role="tablist" aria-label="Kategori pengawasan" class="mb-3 flex w-fit items-center gap-1 rounded-xl border border-border bg-neutral p-1">
+        <button type="button" role="tab" data-tab="reports" aria-selected="true"
+          class="tab-btn focus-ring rounded-lg bg-white px-3 py-1.5 text-[12.5px] font-bold text-primary shadow-sm">
+          Laporan Masalah Buku <span class="tab-count num ml-0.5 font-semibold text-muted">(2)</span>
+        </button>
+        <button type="button" role="tab" data-tab="catalog" aria-selected="false"
+          class="tab-btn focus-ring rounded-lg px-3 py-1.5 text-[12.5px] font-semibold text-muted hover:text-ink">
+          Seluruh Katalog Penerbit <span class="tab-count num ml-0.5 font-semibold">(2)</span>
+        </button>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="mb-4 flex flex-col gap-2 lg:flex-row lg:items-center">
+        <div class="relative w-full lg:max-w-[320px]">
+          <span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[19px] text-muted">search</span>
+          <label for="cat-search" class="sr-only">Cari judul, penulis, ISBN, atau penerbit</label>
+          <input id="cat-search" type="search" autocomplete="off" placeholder="Cari judul, penulis, ISBN, atau penerbit..."
+            class="h-10 w-full rounded-xl border border-border bg-white pl-10 pr-9 text-[14px] text-ink outline-none placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary/15">
+          <button type="button" id="btn-clear-search" aria-label="Bersihkan pencarian"
+            class="focus-ring absolute right-1.5 top-1/2 hidden h-7 w-7 -translate-y-1/2 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+            <span class="material-symbols-outlined text-[17px]">close</span>
+          </button>
+        </div>
+        <label for="type-filter" class="sr-only">Filter jenis laporan</label>
+        <select id="type-filter"
+          class="h-10 rounded-xl border border-border bg-white px-3 text-[13.5px] font-medium text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+          <option value="all">Semua Jenis Laporan</option>
+        </select>
+        <label for="publisher-filter" class="sr-only">Filter penerbit</label>
+        <select id="publisher-filter"
+          class="h-10 rounded-xl border border-border bg-white px-3 text-[13.5px] font-medium text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+          <option value="all">Semua Penerbit</option>
+        </select>
+        <label for="sort-order" class="sr-only">Urutan</label>
+        <select id="sort-order"
+          class="h-10 rounded-xl border border-border bg-white px-3 text-[13.5px] font-medium text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+          <option value="newest">Laporan Terbaru</option>
+          <option value="oldest">Laporan Terlama</option>
+          <option value="title">Judul A-Z</option>
+        </select>
+        <button type="button" id="btn-reset"
+          class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[13.5px] font-semibold text-ink hover:bg-neutral">Reset Filter</button>
+      </div>
+
+      <!-- Reports table -->
+      <div id="view-reports">
+        <div class="overflow-hidden rounded-2xl border border-border">
+          <div class="overflow-x-auto">
+            <table class="w-full min-w-[940px] border-collapse text-left">
+              <caption class="sr-only">Daftar laporan masalah buku</caption>
+              <thead>
+                <tr class="border-b border-border bg-white text-[11px] uppercase tracking-[0.1em] text-muted">
+                  <th scope="col" class="px-5 py-3 font-bold lg:px-6">Buku</th>
+                  <th scope="col" class="w-52 px-4 py-3 font-bold">Penerbit</th>
+                  <th scope="col" class="w-44 px-4 py-3 font-bold">Jenis Laporan</th>
+                  <th scope="col" class="w-32 px-4 py-3 font-bold">Tanggal</th>
+                  <th scope="col" class="w-32 px-4 py-3 font-bold">Status</th>
+                  <th scope="col" class="w-28 px-4 py-3 pr-5 text-right font-bold lg:pr-6">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="report-rows" class="text-[13px]"></tbody>
+            </table>
+          </div>
+
+          <div id="reports-empty" class="hidden px-5 py-14 text-center">
+            <p class="text-[15px] font-semibold text-ink">Tidak Ada Laporan Menunggu</p>
+            <p class="mx-auto mt-1.5 max-w-sm text-[13px] leading-relaxed text-muted">Semua laporan buku pada antrean ini telah ditinjau.</p>
+          </div>
+
+          <div id="reports-noresults" class="hidden px-5 py-12 text-center">
+            <img src="../../assets/ilustration/notfoundil.png" alt="" aria-hidden="true" class="mx-auto h-28 w-auto">
+            <p class="mt-3 text-[15px] font-semibold text-ink">Laporan Tidak Ditemukan</p>
+            <p class="mx-auto mt-1.5 max-w-sm text-[13px] leading-relaxed text-muted">Tidak ada laporan yang cocok dengan pencarian atau filter.</p>
+            <button type="button" id="btn-reset-empty"
+              class="focus-ring mt-4 inline-flex h-10 items-center rounded-xl border border-border px-4 text-[13.5px] font-semibold text-ink hover:bg-neutral">Bersihkan Filter</button>
+          </div>
+
+          <div class="flex flex-col gap-3 border-t border-border px-5 py-3 sm:flex-row sm:items-center sm:justify-between lg:px-6">
+            <p class="text-[12.5px] text-muted" id="reports-count">Menampilkan 0 dari 0 laporan</p>
+            <div class="flex items-center gap-1.5">
+              <button type="button" id="rep-prev" aria-label="Halaman sebelumnya"
+                class="focus-ring grid h-8 w-8 place-items-center rounded-lg border border-border text-ink hover:bg-neutral disabled:cursor-not-allowed disabled:opacity-40">
+                <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+              </button>
+              <span class="num min-w-8 rounded-lg bg-primary px-2 py-1 text-center text-[12.5px] font-bold text-white" id="rep-page">1</span>
+              <button type="button" id="rep-next" aria-label="Halaman berikutnya"
+                class="focus-ring grid h-8 w-8 place-items-center rounded-lg border border-border text-ink hover:bg-neutral disabled:cursor-not-allowed disabled:opacity-40">
+                <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Catalog table -->
+      <div id="view-catalog" class="hidden">
+        <div class="overflow-hidden rounded-2xl border border-border">
+          <div class="overflow-x-auto">
+            <table class="w-full min-w-[940px] border-collapse text-left">
+              <caption class="sr-only">Katalog buku pada platform</caption>
+              <thead>
+                <tr class="border-b border-border bg-white text-[11px] uppercase tracking-[0.1em] text-muted">
+                  <th scope="col" class="px-5 py-3 font-bold lg:px-6">Katalog Buku</th>
+                  <th scope="col" class="w-52 px-4 py-3 font-bold">Penerbit</th>
+                  <th scope="col" class="w-40 px-4 py-3 font-bold">Format &amp; Ukuran</th>
+                  <th scope="col" class="w-40 px-4 py-3 text-right font-bold">Harga &amp; Terjual</th>
+                  <th scope="col" class="w-32 px-4 py-3 font-bold">Status Katalog</th>
+                  <th scope="col" class="w-24 px-4 py-3 pr-5 text-right font-bold lg:pr-6">Opsi</th>
+                </tr>
+              </thead>
+              <tbody id="catalog-rows" class="text-[13px]"></tbody>
+            </table>
+          </div>
+
+          <div id="catalog-empty" class="hidden px-5 py-14 text-center">
+            <p class="text-[15px] font-semibold text-ink">Data Katalog Belum Tersedia</p>
+            <p class="mx-auto mt-1.5 max-w-sm text-[13px] leading-relaxed text-muted">Belum ada buku pada cakupan katalog ini.</p>
+          </div>
+
+          <div class="flex flex-col gap-3 border-t border-border px-5 py-3 sm:flex-row sm:items-center sm:justify-between lg:px-6">
+            <p class="text-[12.5px] text-muted" id="catalog-count">Menampilkan 0 dari 0 buku</p>
+            <div class="flex items-center gap-1.5">
+              <button type="button" id="cat-prev" aria-label="Halaman sebelumnya"
+                class="focus-ring grid h-8 w-8 place-items-center rounded-lg border border-border text-ink hover:bg-neutral disabled:cursor-not-allowed disabled:opacity-40">
+                <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+              </button>
+              <span class="num min-w-8 rounded-lg bg-primary px-2 py-1 text-center text-[12.5px] font-bold text-white" id="cat-page">1</span>
+              <button type="button" id="cat-next" aria-label="Halaman berikutnya"
+                class="focus-ring grid h-8 w-8 place-items-center rounded-lg border border-border text-ink hover:bg-neutral disabled:cursor-not-allowed disabled:opacity-40">
+                <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- ============ INSPECTION DRAWER ============ -->
+<div id="drawer-scrim" class="fixed inset-0 z-[60] hidden bg-[#222225]/45"></div>
+<aside id="catalog-drawer" class="fixed right-0 top-0 z-[70] flex h-full w-full max-w-full flex-col border-l border-border bg-white shadow-[-16px_0_40px_rgba(34,34,37,0.12)] sm:max-w-[540px]"
+  role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+  <header class="flex items-start justify-between gap-4 border-b border-divider px-5 py-4">
+    <div class="min-w-0">
+      <h2 id="drawer-title" class="text-[17px] font-bold tracking-tight text-ink">Detail Laporan Buku</h2>
+      <p class="num mt-0.5 text-[12.5px] text-muted" id="drawer-id">-</p>
+    </div>
+    <button type="button" id="drawer-close" aria-label="Tutup detail" class="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[18px]">close</span>
+    </button>
+  </header>
+
+  <div class="flex-1 space-y-5 overflow-y-auto px-5 py-4">
+    <section>
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Informasi Buku</h3>
+      <div class="mt-2 flex items-start gap-3">
+        <div class="grid h-20 w-14 shrink-0 place-items-center rounded border border-border bg-neutral">
+          <span class="material-symbols-outlined text-[20px] text-muted">menu_book</span>
+        </div>
+        <div class="min-w-0">
+          <p class="text-[14px] font-semibold leading-snug text-ink" id="drawer-book">-</p>
+          <p class="mt-0.5 text-[12.5px] text-muted" id="drawer-author">-</p>
+          <p class="num mt-0.5 text-[12.5px] text-muted" id="drawer-isbn">-</p>
+          <p class="mt-1 text-[12.5px] font-semibold text-ink" id="drawer-pub-status">-</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Penerbit</h3>
+      <p class="mt-1.5 text-[13.5px] font-semibold text-ink" id="drawer-publisher">-</p>
+      <p class="mt-0.5 text-[12.5px] text-muted" id="drawer-publisher-meta">-</p>
+    </section>
+
+    <section class="border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Detail Laporan</h3>
+      <dl class="mt-2 space-y-2 text-[13px]">
+        <div class="flex justify-between gap-3"><dt class="text-muted">Jenis laporan</dt><dd class="text-right font-medium text-ink" id="drawer-type">-</dd></div>
+        <div class="flex justify-between gap-3"><dt class="text-muted">Dilaporkan</dt><dd class="num text-right text-ink" id="drawer-date">-</dd></div>
+        <div class="flex justify-between gap-3"><dt class="text-muted">Format berkas</dt><dd class="num text-right text-ink" id="drawer-format">-</dd></div>
+        <div class="hidden justify-between gap-3" id="drawer-section-row"><dt class="text-muted">Bagian bermasalah</dt><dd class="num text-right text-ink" id="drawer-section">-</dd></div>
+      </dl>
+      <p class="mt-2 text-[12px] font-semibold text-muted">Keterangan pelapor</p>
+      <p class="review-text mt-1 rounded-xl border border-border p-3.5 text-[13.5px] leading-relaxed text-ink" id="drawer-notes">-</p>
+    </section>
+
+    <section class="border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Hasil Pemeriksaan</h3>
+      <p class="mt-1.5 text-[13px] leading-relaxed text-muted">Periksa kesesuaian berkas e-book dan hak cipta pada laporan ini sebelum menutup laporan atau menonaktifkan buku.</p>
+      <p id="drawer-decision" class="mt-2 hidden text-[13px] font-semibold text-ink">-</p>
+    </section>
+  </div>
+
+  <footer class="border-t border-divider px-5 py-3">
+    <div class="flex flex-wrap items-center justify-end gap-2">
+      <button type="button" id="btn-close-report"
+        class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[13.5px] font-semibold text-ink hover:bg-neutral disabled:cursor-not-allowed disabled:opacity-40">Tutup Laporan</button>
+      <button type="button" id="btn-takedown"
+        class="focus-ring inline-flex h-10 items-center rounded-xl bg-[#B42318] px-4 text-[13.5px] font-semibold text-white hover:bg-[#971B13] disabled:cursor-not-allowed disabled:opacity-40">Nonaktifkan Buku</button>
+    </div>
+  </footer>
+</aside>
+
+<!-- ============ TAKEDOWN MODAL ============ -->
+<div id="modal-takedown" class="fixed inset-0 z-[80] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-takedown></div>
+  <div class="relative mx-auto mt-20 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[460px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:p-6"
+    role="dialog" aria-modal="true" aria-labelledby="takedown-title">
+    <h2 id="takedown-title" class="text-[18px] font-bold tracking-tight text-ink">Nonaktifkan Buku?</h2>
+    <p class="mt-1 text-[13px] leading-relaxed text-muted">Buku ini akan dinonaktifkan dari katalog publik setelah tindakan dikonfirmasi.</p>
+    <p class="mt-3 text-[13.5px] font-semibold text-ink" id="takedown-book">-</p>
+    <p class="text-[12.5px] text-muted" id="takedown-publisher">-</p>
+    <label for="takedown-reason" class="mt-3 block text-[12.5px] font-semibold text-ink">Alasan Penonaktifan <span class="text-red-500">*</span></label>
+    <textarea id="takedown-reason" rows="3" placeholder="Jelaskan alasan penonaktifan..."
+      class="mt-1.5 w-full rounded-xl border border-border bg-white px-3 py-2.5 text-[13.5px] leading-relaxed text-ink outline-none placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary/15"></textarea>
+    <p id="takedown-error" class="mt-1 hidden text-[12px] text-[#B42318]">Alasan penonaktifan wajib diisi.</p>
+    <div class="mt-5 flex items-center justify-end gap-2 border-t border-divider pt-4">
+      <button type="button" data-close-takedown class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">Batal</button>
+      <button type="button" id="btn-confirm-takedown"
+        class="focus-ring inline-flex h-10 items-center rounded-xl bg-[#B42318] px-4 text-[14px] font-semibold text-white hover:bg-[#971B13] disabled:cursor-not-allowed disabled:opacity-60">
+        <span id="takedown-label">Nonaktifkan Buku</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CLOSE REPORT MODAL ============ -->
+<div id="modal-close-report" class="fixed inset-0 z-[80] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-report></div>
+  <div class="relative mx-auto mt-24 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[440px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:p-6"
+    role="dialog" aria-modal="true" aria-labelledby="close-report-title">
+    <h2 id="close-report-title" class="text-[18px] font-bold tracking-tight text-ink">Tutup Laporan?</h2>
+    <p class="mt-1 text-[13px] leading-relaxed text-muted">Laporan ini akan ditandai selesai tanpa perubahan pada status publikasi buku.</p>
+    <p class="mt-3 text-[13px] font-semibold text-ink" id="close-book">-</p>
+    <p class="num text-[12.5px] text-muted" id="close-reg">-</p>
+    <div class="mt-5 flex items-center justify-end gap-2 border-t border-divider pt-4">
+      <button type="button" data-close-report class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">Batal</button>
+      <button type="button" id="btn-confirm-close-report"
+        class="focus-ring inline-flex h-10 items-center rounded-xl bg-primary px-4 text-[14px] font-semibold text-white hover:bg-primary-hover">Tutup Laporan</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast" role="status" class="pointer-events-none fixed bottom-6 left-1/2 z-[95] hidden -translate-x-1/2 rounded-xl border border-border bg-white px-4 py-2.5 text-[13px] font-semibold text-ink shadow-[0_12px_32px_rgba(34,34,37,0.14)]">
+  <span id="toast-text"></span>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var $ = function (id) { return document.getElementById(id); };
+  var rupiah = function (n) { return 'Rp ' + Number(n).toLocaleString('id-ID'); };
+
+  /* Demo dataset carried over from the existing page. Titles are not present in the
+     local asset folder, so covers render as a neutral placeholder. */
+  var BASE_REPORTS = [
+    {
+      id: 'LPR-2026-041', book: 'Sang Pemimpi', author: 'Andrea Hirata', isbn: '978-602-291-001-5',
+      publisher: 'PT Mizan Pustaka Utama', publisherMeta: 'Anggota IKAPI Jawa Barat',
+      type: 'Berkas PDF Rusak', date: '2026-11-14', dateText: '14 Nov 2026', format: 'PDF - 14.2 MB',
+      notes: 'Beberapa halaman tidak dapat dimuat dan berkas terasa berat saat dibuka di web reader.',
+      section: 'Halaman 42-48',
+      pubStatus: 'terbit', reportStatus: 'baru', decision: ''
+    },
+    {
+      id: 'LPR-2026-042', book: 'Aroma Karsa', author: 'Dee Lestari', isbn: '978-602-424-694-5',
+      publisher: 'CV Angkasa Publishing', publisherMeta: 'Kota Bandung, Jawa Barat',
+      type: 'Dugaan Hak Cipta', date: '2026-11-13', dateText: '13 Nov 2026', format: 'EPUB - 8.6 MB',
+      notes: 'Berkas diduga disebarkan tanpa izin pemegang hak cipta. Mohon diperiksa kelengkapan lisensinya.',
+      pubStatus: 'terbit', reportStatus: 'baru', decision: ''
+    }
+  ];
+
+  var BASE_CATALOG = [
+    { id: 'BK-101', book: 'Pulang', author: 'Leila S. Chudori', publisher: 'Kepustakaan Populer Gramedia', format: 'EPUB - 5.1 MB', price: 89000, sold: 842, status: 'terbit' },
+    { id: 'BK-102', book: 'Cantik Itu Luka', author: 'Eka Kurniawan', publisher: 'Gramedia Pustaka Utama', format: 'PDF - 18.4 MB', price: 105000, sold: 1412, status: 'terbit' }
+  ];
+
+  var reports = BASE_REPORTS.map(function (r) { return Object.assign({}, r); });
+  var catalog = BASE_CATALOG.map(function (c) { return Object.assign({}, c); });
+  var ui = { tab: 'reports', query: '', type: 'all', publisher: 'all', sort: 'newest', repPage: 1, catPage: 1, pageSize: 5, demo: 'A' };
+  var selectedId = null;
+  var lastTrigger = null;
+  var takedownBusy = false;
+
+  function note(t) { var el = $('page-note'); el.textContent = t || ''; el.classList.toggle('hidden', !t); }
+  function toast(t) {
+    $('toast-text').textContent = t;
+    $('toast').classList.remove('hidden');
+    window.clearTimeout(toast.t);
+    toast.t = window.setTimeout(function () { $('toast').classList.add('hidden'); }, 2800);
+  }
+  function openReports() { return reports.filter(function (r) { return r.reportStatus === 'baru'; }); }
+  function byId(id) { return reports.filter(function (r) { return r.id === id; })[0]; }
+
+  /* ---------- filtering ---------- */
+  function filterReports() {
+    var q = ui.query.trim().toLowerCase();
+    var list = reports.filter(function (r) {
+      if (ui.type !== 'all' && r.type !== ui.type) return false;
+      if (ui.publisher !== 'all' && r.publisher !== ui.publisher) return false;
+      if (!q) return true;
+      return (r.book + ' ' + r.author + ' ' + r.isbn + ' ' + r.publisher + ' ' + r.notes).toLowerCase().indexOf(q) !== -1;
+    });
+    return list.sort(function (a, b) {
+      if (ui.sort === 'title') return a.book.localeCompare(b.book);
+      return ui.sort === 'oldest' ? (a.date < b.date ? -1 : 1) : (a.date > b.date ? -1 : 1);
+    });
   }
 
-  // Simulator Toolbar Binding
-  document.getElementById('sim-tab-reports').addEventListener('click', showReportsTab);
-  document.getElementById('sim-tab-catalog').addEventListener('click', showCatalogTab);
-  document.getElementById('sim-drawer-toggle').addEventListener('click', () => {
-    if (reviewDrawer.classList.contains('hidden')) {
-      openReviewDrawer('LPR-2026-041');
-    } else {
-      closeReviewDrawer();
+  function filterCatalog() {
+    var q = ui.query.trim().toLowerCase();
+    return catalog.filter(function (c) {
+      if (ui.publisher !== 'all' && c.publisher !== ui.publisher) return false;
+      if (!q) return true;
+      return (c.book + ' ' + c.author + ' ' + c.publisher + ' ' + c.format).toLowerCase().indexOf(q) !== -1;
+    });
+  }
+
+  function paintTabs() {
+    var counts = { reports: reports.length, catalog: catalog.length };
+    document.querySelectorAll('.tab-btn').forEach(function (btn) {
+      var t = btn.getAttribute('data-tab');
+      btn.querySelector('.tab-count').textContent = '(' + counts[t] + ')';
+      var on = t === ui.tab;
+      btn.setAttribute('aria-selected', on ? 'true' : 'false');
+      btn.className = 'tab-btn focus-ring rounded-lg px-3 py-1.5 text-[12.5px] ' +
+        (on ? 'bg-white font-bold text-primary' : 'font-semibold text-muted hover:text-ink');
+      if (on) btn.classList.add('shadow-sm');
+    });
+    var pending = openReports().length;
+    $('report-counter').textContent = pending + ' laporan perlu ditinjau';
+  }
+
+  /* Canonical report types. Buyer reports (detail_buku_desktop.html) map their
+     categories onto these values, so the filter lists them even before a matching
+     record exists in this dataset. */
+  var CANONICAL_REPORT_TYPES = [
+    'Berkas E-Book Bermasalah',
+    'Metadata Tidak Sesuai',
+    'Dugaan Hak Cipta',
+    'Lainnya'
+  ];
+
+  function paintOptions() {
+    var typeSel = $('type-filter');
+    var types = [];
+    reports.forEach(function (r) { if (types.indexOf(r.type) === -1) types.push(r.type); });
+    CANONICAL_REPORT_TYPES.forEach(function (t) { if (types.indexOf(t) === -1) types.push(t); });
+    typeSel.innerHTML = '';
+    var all1 = document.createElement('option'); all1.value = 'all'; all1.textContent = 'Semua Jenis Laporan'; typeSel.appendChild(all1);
+    types.forEach(function (t) { var o = document.createElement('option'); o.value = t; o.textContent = t; typeSel.appendChild(o); });
+    typeSel.value = types.indexOf(ui.type) !== -1 ? ui.type : 'all';
+    if (typeSel.value !== ui.type) ui.type = 'all';
+
+    var pubSel = $('publisher-filter');
+    var pubs = [];
+    reports.forEach(function (r) { if (pubs.indexOf(r.publisher) === -1) pubs.push(r.publisher); });
+    catalog.forEach(function (c) { if (pubs.indexOf(c.publisher) === -1) pubs.push(c.publisher); });
+    pubSel.innerHTML = '';
+    var all2 = document.createElement('option'); all2.value = 'all'; all2.textContent = 'Semua Penerbit'; pubSel.appendChild(all2);
+    pubs.forEach(function (p) { var o = document.createElement('option'); o.value = p; o.textContent = p; pubSel.appendChild(o); });
+    pubSel.value = pubs.indexOf(ui.publisher) !== -1 ? ui.publisher : 'all';
+    if (pubSel.value !== ui.publisher) ui.publisher = 'all';
+  }
+
+  /* ---------- tables ---------- */
+  function statusChip(text, kind) {
+    var s = document.createElement('span');
+    s.className = kind === 'success'
+      ? 'text-[12px] font-semibold text-[#0F7B4F]'
+      : 'text-[12px] font-semibold text-muted';
+    s.textContent = text;
+    return s;
+  }
+
+  function renderReports() {
+    var list = filterReports();
+    var pages = Math.max(1, Math.ceil(list.length / ui.pageSize));
+    if (ui.repPage > pages) ui.repPage = pages;
+    var start = (ui.repPage - 1) * ui.pageSize;
+    var visible = list.slice(start, start + ui.pageSize);
+
+    var tbody = $('report-rows');
+    tbody.innerHTML = '';
+    visible.forEach(function (r) {
+      var tr = document.createElement('tr');
+      tr.className = 'border-b border-divider align-middle transition-colors hover:bg-soft';
+
+      var tdBook = document.createElement('td');
+      tdBook.className = 'px-5 py-3.5 lg:px-6';
+      var wrap = document.createElement('div');
+      wrap.className = 'flex items-start gap-3';
+      var cover = document.createElement('div');
+      cover.className = 'grid h-14 w-10 shrink-0 place-items-center rounded border border-border bg-neutral';
+      var ci = document.createElement('span'); ci.className = 'material-symbols-outlined text-[18px] text-muted'; ci.textContent = 'menu_book';
+      cover.appendChild(ci);
+      var box = document.createElement('div');
+      box.className = 'min-w-0';
+      var t = document.createElement('p');
+      t.className = 'line-clamp-2 text-[13.5px] font-semibold leading-snug text-ink';
+      t.textContent = r.book;
+      var a = document.createElement('p');
+      a.className = 'mt-0.5 text-[12px] text-muted';
+      a.textContent = r.author;
+      var isbn = document.createElement('p');
+      isbn.className = 'num mt-0.5 text-[12px] text-muted';
+      isbn.textContent = 'ISBN ' + r.isbn;
+      box.appendChild(t); box.appendChild(a); box.appendChild(isbn);
+      wrap.appendChild(cover); wrap.appendChild(box);
+      tdBook.appendChild(wrap);
+
+      var tdPub = document.createElement('td');
+      tdPub.className = 'px-4 py-3.5 text-ink';
+      tdPub.textContent = r.publisher;
+
+      var tdType = document.createElement('td');
+      tdType.className = 'px-4 py-3.5 text-ink';
+      tdType.textContent = r.type;
+
+      var tdDate = document.createElement('td');
+      tdDate.className = 'num whitespace-nowrap px-4 py-3.5 text-muted';
+      tdDate.textContent = r.dateText;
+
+      var tdStatus = document.createElement('td');
+      tdStatus.className = 'px-4 py-3.5';
+      tdStatus.appendChild(statusChip(r.pubStatus === 'terbit' ? 'Terbit' : 'Nonaktif', r.pubStatus === 'terbit' ? 'success' : 'muted'));
+
+      var tdAction = document.createElement('td');
+      tdAction.className = 'px-4 py-3.5 pr-5 text-right lg:pr-6';
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'focus-ring rounded-lg px-2.5 py-1.5 text-[12.5px] font-semibold text-primary transition-colors hover:bg-soft';
+      btn.textContent = r.reportStatus === 'baru' ? 'Tinjau' : 'Lihat Detail';
+      btn.setAttribute('data-open-report', r.id);
+      tdAction.appendChild(btn);
+
+      tr.appendChild(tdBook); tr.appendChild(tdPub); tr.appendChild(tdType);
+      tr.appendChild(tdDate); tr.appendChild(tdStatus); tr.appendChild(tdAction);
+      tbody.appendChild(tr);
+    });
+
+    var empty = openReports().length === 0 && list.length === 0 && !ui.query && ui.type === 'all' && ui.publisher === 'all';
+    var noResults = !empty && list.length === 0;
+    tbody.closest('table').classList.toggle('hidden', list.length === 0);
+    $('reports-empty').classList.toggle('hidden', !empty);
+    $('reports-noresults').classList.toggle('hidden', !noResults);
+
+    $('reports-count').textContent = 'Menampilkan ' + visible.length + ' dari ' + list.length + ' laporan';
+    $('rep-page').textContent = String(ui.repPage);
+    $('rep-prev').disabled = ui.repPage <= 1;
+    $('rep-next').disabled = ui.repPage >= pages;
+  }
+
+  function renderCatalog() {
+    var list = filterCatalog();
+    var pages = Math.max(1, Math.ceil(list.length / ui.pageSize));
+    if (ui.catPage > pages) ui.catPage = pages;
+    var start = (ui.catPage - 1) * ui.pageSize;
+    var visible = list.slice(start, start + ui.pageSize);
+
+    var tbody = $('catalog-rows');
+    tbody.innerHTML = '';
+    visible.forEach(function (c) {
+      var tr = document.createElement('tr');
+      tr.className = 'border-b border-divider align-middle transition-colors hover:bg-soft';
+
+      var tdBook = document.createElement('td');
+      tdBook.className = 'px-5 py-3.5 lg:px-6';
+      var wrap = document.createElement('div');
+      wrap.className = 'flex items-start gap-3';
+      var cover = document.createElement('div');
+      cover.className = 'grid h-14 w-10 shrink-0 place-items-center rounded border border-border bg-neutral';
+      var ci = document.createElement('span'); ci.className = 'material-symbols-outlined text-[18px] text-muted'; ci.textContent = 'menu_book';
+      cover.appendChild(ci);
+      var box = document.createElement('div');
+      box.className = 'min-w-0';
+      var t = document.createElement('p'); t.className = 'line-clamp-2 text-[13.5px] font-semibold leading-snug text-ink'; t.textContent = c.book;
+      var a = document.createElement('p'); a.className = 'mt-0.5 text-[12px] text-muted'; a.textContent = c.author;
+      box.appendChild(t); box.appendChild(a);
+      wrap.appendChild(cover); wrap.appendChild(box);
+      tdBook.appendChild(wrap);
+
+      var tdPub = document.createElement('td');
+      tdPub.className = 'px-4 py-3.5 text-ink';
+      tdPub.textContent = c.publisher;
+
+      var tdFormat = document.createElement('td');
+      tdFormat.className = 'num px-4 py-3.5 text-muted';
+      tdFormat.textContent = c.format;
+
+      var tdPrice = document.createElement('td');
+      tdPrice.className = 'px-4 py-3.5 text-right';
+      var p = document.createElement('p'); p.className = 'num whitespace-nowrap font-semibold text-ink'; p.textContent = rupiah(c.price);
+      var s = document.createElement('p'); s.className = 'num mt-0.5 text-[12px] text-muted'; s.textContent = c.sold.toLocaleString('id-ID') + ' terjual';
+      tdPrice.appendChild(p); tdPrice.appendChild(s);
+
+      var tdStatus = document.createElement('td');
+      tdStatus.className = 'px-4 py-3.5';
+      tdStatus.appendChild(statusChip(c.status === 'terbit' ? 'Terbit' : 'Nonaktif', c.status === 'terbit' ? 'success' : 'muted'));
+
+      var tdAction = document.createElement('td');
+      tdAction.className = 'px-4 py-3.5 pr-5 text-right lg:pr-6';
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'focus-ring rounded-lg px-2.5 py-1.5 text-[12.5px] font-semibold text-primary transition-colors hover:bg-soft';
+      btn.textContent = 'Detail';
+      btn.setAttribute('data-open-catalog', c.id);
+      tdAction.appendChild(btn);
+
+      tr.appendChild(tdBook); tr.appendChild(tdPub); tr.appendChild(tdFormat);
+      tr.appendChild(tdPrice); tr.appendChild(tdStatus); tr.appendChild(tdAction);
+      tbody.appendChild(tr);
+    });
+
+    var empty = catalog.length === 0;
+    tbody.closest('table').classList.toggle('hidden', list.length === 0);
+    $('catalog-empty').classList.toggle('hidden', !empty);
+    $('catalog-count').textContent = 'Menampilkan ' + visible.length + ' dari ' + list.length + ' buku';
+    $('cat-page').textContent = String(ui.catPage);
+    $('cat-prev').disabled = ui.catPage <= 1;
+    $('cat-next').disabled = ui.catPage >= pages;
+  }
+
+  function render() {
+    renderReports();
+    renderCatalog();
+    paintTabs();
+    $('btn-clear-search').classList.toggle('hidden', !ui.query);
+    $('btn-clear-search').classList.toggle('grid', !!ui.query);
+    syncDemoMenu();
+  }
+
+  /* ---------- drawer ---------- */
+  function openReportDrawer(r, trigger) {
+    selectedId = r.id;
+    lastTrigger = trigger || null;
+
+    $('drawer-title').textContent = 'Detail Laporan Buku';
+    $('drawer-id').textContent = r.id;
+    $('drawer-book').textContent = r.book;
+    $('drawer-author').textContent = r.author;
+    $('drawer-isbn').textContent = 'ISBN ' + r.isbn;
+    $('drawer-pub-status').textContent = 'Status publikasi: ' + (r.pubStatus === 'terbit' ? 'Terbit' : 'Nonaktif');
+    $('drawer-publisher').textContent = r.publisher;
+    $('drawer-publisher-meta').textContent = r.publisherMeta;
+    $('drawer-type').textContent = r.type;
+    $('drawer-date').textContent = r.dateText;
+    $('drawer-format').textContent = r.format;
+    $('drawer-notes').textContent = r.notes;
+
+    var section = r.section || r.affectedSection || '';
+    var sectionRow = $('drawer-section-row');
+    sectionRow.classList.toggle('hidden', !section);
+    sectionRow.classList.toggle('flex', !!section);
+    $('drawer-section').textContent = section || '-';
+
+    var closed = r.reportStatus !== 'baru';
+    $('drawer-decision').classList.toggle('hidden', !closed);
+    if (closed) $('drawer-decision').textContent = r.decision;
+    $('btn-close-report').disabled = closed;
+    $('btn-takedown').disabled = closed || r.pubStatus !== 'terbit';
+
+    openDrawerShell();
+  }
+
+  function openCatalogDrawer(c, trigger) {
+    selectedId = c.id;
+    lastTrigger = trigger || null;
+
+    $('drawer-title').textContent = 'Detail Katalog Buku';
+    $('drawer-id').textContent = c.id;
+    $('drawer-book').textContent = c.book;
+    $('drawer-author').textContent = c.author;
+    $('drawer-isbn').textContent = c.format;
+    $('drawer-pub-status').textContent = 'Harga ' + rupiah(c.price) + ' - ' + c.sold.toLocaleString('id-ID') + ' terjual';
+    $('drawer-publisher').textContent = c.publisher;
+    $('drawer-publisher-meta').textContent = 'Penerbit pada katalog platform';
+    $('drawer-type').textContent = '-';
+    $('drawer-date').textContent = '-';
+    $('drawer-format').textContent = c.format;
+    $('drawer-notes').textContent = 'Tidak ada laporan masalah untuk buku ini.';
+    $('drawer-decision').classList.add('hidden');
+    $('btn-close-report').disabled = true;
+    $('btn-takedown').disabled = c.status !== 'terbit';
+
+    openDrawerShell();
+  }
+
+  function openDrawerShell() {
+    $('drawer-scrim').classList.remove('hidden');
+    $('catalog-drawer').classList.add('is-open');
+    $('catalog-drawer').setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    $('drawer-close').focus();
+  }
+
+  function closeDrawer() {
+    $('catalog-drawer').classList.remove('is-open');
+    $('catalog-drawer').setAttribute('aria-hidden', 'true');
+    $('drawer-scrim').classList.add('hidden');
+    document.body.style.overflow = '';
+    if (lastTrigger && document.contains(lastTrigger)) lastTrigger.focus();
+    lastTrigger = null;
+  }
+
+  $('drawer-close').addEventListener('click', closeDrawer);
+  $('drawer-scrim').addEventListener('click', closeDrawer);
+
+  document.addEventListener('click', function (e) {
+    var rep = e.target.closest('[data-open-report]');
+    if (rep) {
+      var r = byId(rep.getAttribute('data-open-report'));
+      if (r) openReportDrawer(r, rep);
+      return;
+    }
+    var cat = e.target.closest('[data-open-catalog]');
+    if (cat) {
+      var id = cat.getAttribute('data-open-catalog');
+      var c = catalog.filter(function (x) { return x.id === id; })[0];
+      if (c) openCatalogDrawer(c, cat);
     }
   });
-  document.getElementById('sim-modal-takedown').addEventListener('click', openTakedownModal);
-  document.getElementById('sim-modal-ignore').addEventListener('click', openIgnoreModal);
-  document.getElementById('sim-toast').addEventListener('click', () => {
-    showToast('Simulasi Berhasil', 'Pemberitahuan administratif aktif dan responsif.');
-  });
-  document.getElementById('sim-empty-state').addEventListener('click', () => {
-    showReportsTab();
-    closeReviewDrawer();
-    document.querySelectorAll('#table-reports-body tr').forEach(r => r.remove());
-    updateRemainingReportCounts();
+
+  /* ---------- takedown ---------- */
+  $('btn-takedown').addEventListener('click', function () {
+    var r = byId(selectedId);
+    var c = catalog.filter(function (x) { return x.id === selectedId; })[0];
+    var book = r ? r.book : (c ? c.book : null);
+    var pub = r ? r.publisher : (c ? c.publisher : '');
+    if (!book) return;
+    $('takedown-book').textContent = book;
+    $('takedown-publisher').textContent = pub;
+    $('takedown-reason').value = '';
+    $('takedown-error').classList.add('hidden');
+    $('modal-takedown').classList.remove('hidden');
+    $('takedown-reason').focus();
   });
 
-  // Global shortcut '/' to focus search
-  window.addEventListener('keydown', (e) => {
-    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
-      e.preventDefault();
-      document.getElementById('global-search').focus();
+  document.querySelectorAll('[data-close-takedown]').forEach(function (el) {
+    el.addEventListener('click', function () { $('modal-takedown').classList.add('hidden'); });
+  });
+
+  $('btn-confirm-takedown').addEventListener('click', function () {
+    if (takedownBusy) return;
+    var reason = $('takedown-reason').value.trim();
+    if (!reason) {
+      $('takedown-error').classList.remove('hidden');
+      $('takedown-reason').focus();
+      return;
+    }
+    $('takedown-error').classList.add('hidden');
+
+    takedownBusy = true;
+    var btn = $('btn-confirm-takedown');
+    btn.disabled = true;
+    $('takedown-label').textContent = 'Memproses...';
+
+    window.setTimeout(function () {
+      takedownBusy = false;
+      btn.disabled = false;
+      $('takedown-label').textContent = 'Nonaktifkan Buku';
+
+      var r = byId(selectedId);
+      if (r) { r.pubStatus = 'nonaktif'; r.reportStatus = 'ditutup'; r.decision = 'Buku dinonaktifkan. Alasan: ' + reason; }
+      var c = catalog.filter(function (x) { return x.id === selectedId; })[0];
+      if (c) c.status = 'nonaktif';
+
+      $('modal-takedown').classList.add('hidden');
+      render();
+      closeDrawer();
+      toast('Status publikasi buku diperbarui pada state prototype ini.');
+    }, 600);
+  });
+
+  /* ---------- close report ---------- */
+  $('btn-close-report').addEventListener('click', function () {
+    var r = byId(selectedId);
+    if (!r || r.reportStatus !== 'baru') return;
+    $('close-book').textContent = r.book;
+    $('close-reg').textContent = r.id;
+    $('modal-close-report').classList.remove('hidden');
+  });
+
+  document.querySelectorAll('[data-close-report]').forEach(function (el) {
+    el.addEventListener('click', function () { $('modal-close-report').classList.add('hidden'); });
+  });
+
+  $('btn-confirm-close-report').addEventListener('click', function () {
+    var r = byId(selectedId);
+    if (!r) { $('modal-close-report').classList.add('hidden'); return; }
+    r.reportStatus = 'ditutup';
+    r.decision = 'Laporan ditutup tanpa perubahan status publikasi.';
+    $('modal-close-report').classList.add('hidden');
+    render();
+    closeDrawer();
+    toast('Laporan ditandai selesai pada state prototype ini.');
+  });
+
+  /* ---------- toolbar ---------- */
+  document.querySelectorAll('.tab-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      ui.tab = btn.getAttribute('data-tab');
+      $('view-reports').classList.toggle('hidden', ui.tab !== 'reports');
+      $('view-catalog').classList.toggle('hidden', ui.tab !== 'catalog');
+      render();
+    });
+  });
+  $('cat-search').addEventListener('input', function (e) {
+    ui.query = e.target.value;
+    render();
+  });
+  $('btn-clear-search').addEventListener('click', function () {
+    ui.query = '';
+    $('cat-search').value = '';
+    render();
+  });
+  $('type-filter').addEventListener('change', function (e) { ui.type = e.target.value; render(); });
+  $('publisher-filter').addEventListener('change', function (e) { ui.publisher = e.target.value; render(); });
+  $('sort-order').addEventListener('change', function (e) { ui.sort = e.target.value; render(); });
+
+  function doReset() {
+    ui.query = ''; ui.type = 'all'; ui.publisher = 'all'; ui.sort = 'newest'; ui.repPage = 1; ui.catPage = 1;
+    $('cat-search').value = ''; $('type-filter').value = 'all'; $('publisher-filter').value = 'all'; $('sort-order').value = 'newest';
+    render();
+  }
+  $('btn-reset').addEventListener('click', doReset);
+  $('btn-reset-empty').addEventListener('click', doReset);
+
+  $('rep-prev').addEventListener('click', function () { if (ui.repPage > 1) { ui.repPage--; render(); } });
+  $('rep-next').addEventListener('click', function () { ui.repPage++; render(); });
+  $('cat-prev').addEventListener('click', function () { if (ui.catPage > 1) { ui.catPage--; render(); } });
+  $('cat-next').addEventListener('click', function () { ui.catPage++; render(); });
+
+
+  /* ---------- demo scenarios ---------- */
+  var demoToggle = $('demo-toggle'), demoMenu = $('demo-menu');
+  function closeDemo() { demoMenu.classList.add('hidden'); demoToggle.setAttribute('aria-expanded', 'false'); }
+  function syncDemoMenu() {
+    document.querySelectorAll('.demo-item').forEach(function (b) {
+      var on = b.getAttribute('data-demo') === ui.demo;
+      b.setAttribute('aria-checked', on ? 'true' : 'false');
+      b.classList.toggle('bg-soft', on);
+      var c = b.querySelector('.demo-check');
+      if (c) c.classList.toggle('hidden', !on);
+    });
+  }
+
+  function resetAll() {
+    closeDrawer();
+    $('modal-takedown').classList.add('hidden');
+    $('modal-close-report').classList.add('hidden');
+    $('toast').classList.add('hidden');
+    note('');
+    reports = BASE_REPORTS.map(function (r) { return Object.assign({}, r); });
+    catalog = BASE_CATALOG.map(function (c) { return Object.assign({}, c); });
+    ui.query = ''; ui.type = 'all'; ui.publisher = 'all'; ui.sort = 'newest'; ui.repPage = 1; ui.catPage = 1;
+    $('cat-search').value = ''; $('sort-order').value = 'newest';
+    paintOptions();
+  }
+
+  function showTab(tab) {
+    ui.tab = tab;
+    $('view-reports').classList.toggle('hidden', tab !== 'reports');
+    $('view-catalog').classList.toggle('hidden', tab !== 'catalog');
+  }
+
+  function applyDemo(s) {
+    ui.demo = s;
+    resetAll();
+
+    if (s === 'A') { showTab('reports'); render(); }
+    else if (s === 'B') { showTab('catalog'); render(); }
+    else if (s === 'C') { showTab('reports'); render(); openReportDrawer(byId('LPR-2026-041'), $('demo-toggle')); }
+    else if (s === 'D') {
+      showTab('reports'); render();
+      openReportDrawer(byId('LPR-2026-041'), $('demo-toggle'));
+      $('takedown-book').textContent = 'Sang Pemimpi';
+      $('takedown-publisher').textContent = 'PT Mizan Pustaka Utama';
+      $('takedown-reason').value = '';
+      $('takedown-error').classList.add('hidden');
+      $('modal-takedown').classList.remove('hidden');
+    } else if (s === 'E') {
+      showTab('reports'); render();
+      openReportDrawer(byId('LPR-2026-042'), $('demo-toggle'));
+      $('close-book').textContent = 'Aroma Karsa';
+      $('close-reg').textContent = 'LPR-2026-042';
+      $('modal-close-report').classList.remove('hidden');
+    } else if (s === 'F') {
+      showTab('reports'); render();
+      toast('Status publikasi buku diperbarui pada state prototype ini.');
+    } else if (s === 'G') {
+      reports.forEach(function (r) { r.reportStatus = 'ditutup'; r.decision = 'Laporan ditutup tanpa perubahan status publikasi.'; });
+      showTab('reports');
+      render();
+    }
+  }
+
+  demoToggle.addEventListener('click', function () {
+    var open = demoMenu.classList.contains('hidden');
+    demoMenu.classList.toggle('hidden', !open);
+    demoToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  demoMenu.addEventListener('click', function (e) {
+    var btn = e.target.closest('.demo-item');
+    if (!btn) return;
+    closeDemo();
+    applyDemo(btn.getAttribute('data-demo'));
+  });
+
+  /* ---------- notifications / sidebar / keyboard ---------- */
+  var notifBtn = $('btn-notif'), notifPanel = $('notif-panel');
+  notifBtn.addEventListener('click', function () {
+    var open = notifPanel.classList.contains('hidden');
+    notifPanel.classList.toggle('hidden', !open);
+    notifBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!demoMenu.contains(e.target) && !demoToggle.contains(e.target)) closeDemo();
+    if (!notifPanel.contains(e.target) && !notifBtn.contains(e.target)) {
+      notifPanel.classList.add('hidden');
+      notifBtn.setAttribute('aria-expanded', 'false');
     }
   });
-</script></main></div></body></html>
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (!$('modal-close-report').classList.contains('hidden')) { $('modal-close-report').classList.add('hidden'); return; }
+    if (!$('modal-takedown').classList.contains('hidden')) { $('modal-takedown').classList.add('hidden'); return; }
+    if ($('catalog-drawer').classList.contains('is-open')) { closeDrawer(); return; }
+    closeDemo();
+    notifPanel.classList.add('hidden');
+    notifBtn.setAttribute('aria-expanded', 'false');
+    closeSidebar();
+  });
+
+  var sidebar = $('publisher-sidebar'), scrim = $('sidebar-scrim'), toggle = $('sidebar-toggle');
+  function openSidebar() {
+    sidebar.classList.add('is-open');
+    scrim.classList.remove('hidden');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    var first = sidebar.querySelector('a');
+    if (first) first.focus();
+  }
+  function closeSidebar() {
+    if (!sidebar.classList.contains('is-open')) return;
+    sidebar.classList.remove('is-open');
+    scrim.classList.add('hidden');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    toggle.focus();
+  }
+  toggle.addEventListener('click', function () {
+    sidebar.classList.contains('is-open') ? closeSidebar() : openSidebar();
+  });
+  scrim.addEventListener('click', closeSidebar);
+  sidebar.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeSidebar); });
+
+  /* ---------- init ---------- */
+  paintOptions();
+  render();
+})();
+</script>
+</body>
+</html>

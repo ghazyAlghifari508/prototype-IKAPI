@@ -156,7 +156,7 @@
 
             <!-- Bottom Links: Back to Login & Need Help -->
             <div class="pt-2 flex flex-col items-center gap-2 text-[13.5px]">
-              <a href="masuk_login_desktop.html" data-path="login" class="text-primary hover:text-primary-hover font-semibold inline-flex items-center gap-1.5 hover:underline">
+              <a id="back-to-login" href="masuk_login_desktop.html?role=buyer" data-path="login" class="text-primary hover:text-primary-hover font-semibold inline-flex items-center gap-1.5 hover:underline">
                 <span class="material-symbols-outlined text-[16px]">arrow_back</span>
                 <span>Kembali ke Masuk</span>
               </a>
@@ -236,6 +236,13 @@
 
       return false;
     }
+  </script>
+  <script>
+    (function () {
+      var role = new URLSearchParams(window.location.search).get('role') === 'publisher' ? 'publisher' : 'buyer';
+      var back = document.getElementById('back-to-login');
+      if (back) back.setAttribute('href', 'masuk_login_desktop.html?role=' + role);
+    })();
   </script>
 </body>
 </html>

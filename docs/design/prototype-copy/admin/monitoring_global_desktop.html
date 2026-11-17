@@ -1,665 +1,781 @@
-<!DOCTYPE html><html lang="id"><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"background":"#fcf8ff","on-tertiary-container":"#4f3d00","border-bold":"#CFD0DD","on-secondary-fixed-variant":"#663949","tertiary-fixed-dim":"#ecc23f","surface-container":"#efecfb","surface-paper":"#FFF0E3","surface-dim":"#dbd8e7","on-primary-fixed":"#0c006a","tertiary-container":"#cea623","on-tertiary-fixed-variant":"#584400","surface-container-highest":"#e3e1ef","inverse-primary":"#c2c1ff","secondary-container":"#fdbed1","ink-body":"#191923","secondary-fixed":"#ffd9e3","tertiary-fixed":"#ffe08d","primary-fixed-dim":"#c2c1ff","surface-tint":"#4c48dc","on-secondary-container":"#7a495a","surface-lilac":"#E5E4FF","on-error":"#ffffff","surface-soft":"#F8F7FF","inverse-on-surface":"#f2effe","on-primary-fixed-variant":"#3229c4","surface-variant":"#e3e1ef","inverse-surface":"#302f3a","surface-container-high":"#e9e6f5","surface-container-lowest":"#ffffff","error":"#ba1a1a","primary":"#3f3ad0","primary-fixed":"#e2dfff","error-container":"#ffdad6","secondary-fixed-dim":"#f4b5c8","surface-bright":"#fcf8ff","on-primary":"#ffffff","primary-container":"#5956e9","on-tertiary-fixed":"#241a00","ink-muted":"#555665","surface-cream":"#FFF1E3","on-tertiary":"#ffffff","on-surface-variant":"#464555","secondary":"#815060","tertiary":"#745b00","on-secondary-fixed":"#330e1d","on-secondary":"#ffffff","inverse-deep":"#24233D","feedback-error":"#B42318","on-background":"#1b1b25","surface-container-low":"#f5f2ff","outline":"#777586","border-subtle":"#E7E7EF","on-primary-container":"#eeeaff","on-error-container":"#93000a","on-surface":"#1b1b25","surface-sky":"#E0F6FC","outline-variant":"#c7c4d7","surface":"#fcf8ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-mobile":"1.25rem","space-2xl":"3rem","margin":"2.5rem","space-xl":"2rem","gutter-mobile":"1.25rem","space-sm":"0.5rem","space-md":"1rem","space-3xl":"4.5rem","space-xs":"0.25rem","gutter":"1.5rem","space-lg":"1.5rem"},"fontFamily":{"body-small":["Plus Jakarta Sans"],"body-base":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"display-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"display-md-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"label":["Plus Jakarta Sans"],"label-small":["Plus Jakarta Sans"]},"fontSize":{"body-small":["14px",{"lineHeight":"1.5","letterSpacing":"0","fontWeight":"400"}],"body-base":["16px",{"lineHeight":"1.6","letterSpacing":"0","fontWeight":"400"}],"headline-lg":["36px",{"lineHeight":"1.18","letterSpacing":"-0.03em","fontWeight":"700"}],"display-md":["44px",{"lineHeight":"1.12","letterSpacing":"-0.035em","fontWeight":"800"}],"display-lg":["56px",{"lineHeight":"1.08","letterSpacing":"-0.04em","fontWeight":"800"}],"display-md-mobile":["28px",{"lineHeight":"1.2","letterSpacing":"-0.025em","fontWeight":"800"}],"headline-md":["28px",{"lineHeight":"1.22","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"1.25","letterSpacing":"-0.02em","fontWeight":"700"}],"title-md":["18px",{"lineHeight":"1.35","letterSpacing":"-0.01em","fontWeight":"700"}],"display-lg-mobile":["34px",{"lineHeight":"1.15","letterSpacing":"-0.03em","fontWeight":"800"}],"label":["14px",{"lineHeight":"1.35","letterSpacing":"0","fontWeight":"600"}],"label-small":["12px",{"lineHeight":"1.3","letterSpacing":"0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-base text-body-base text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-md font-bold tracking-tight">IK</div><div class="flex flex-col"><span class="font-headline-md text-headline-lg-mobile font-bold tracking-tight text-on-surface">IKAPI Store</span><span class="font-label-small text-label-small text-ink-muted uppercase tracking-wider">Portal Administrator</span></div></div><div class="px-space-md py-space-sm"></div><nav class="flex flex-col gap-space-xs px-space-md mt-space-sm" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="px-space-sm pt-space-xs pb-space-xs font-label-small text-label-small uppercase tracking-wider text-ink-muted font-bold">UTAMA</div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label text-label" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><div class="px-space-sm pt-space-md pb-space-xs font-label-small text-label-small uppercase tracking-wider text-ink-muted font-bold">MANAJEMEN</div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label text-label" data-path="kelola-pengguna" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Kelola Pengguna</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label text-label" data-path="pengawasan-katalog" href="#"><span class="material-symbols-outlined text-[20px]">library_books</span><span>Pengawasan Katalog</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label text-label" data-path="moderasi-ulasan" href="#"><span class="material-symbols-outlined text-[20px]">rate_review</span><span>Moderasi Ulasan</span></a><div class="px-space-sm pt-space-md pb-space-xs font-label-small text-label-small uppercase tracking-wider text-ink-muted font-bold">KEUANGAN &amp; MONITORING</div><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary-container text-on-primary font-bold rounded-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-path="monitoring-global" href="#"><span class="material-symbols-outlined text-[20px]">query_stats</span><span>Monitoring Global</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label text-label" data-path="kelola-pencairan-dana" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span>Kelola Pencairan Dana</span></a></nav></div><div class="p-space-md"><div class="bg-surface-container rounded-lg p-space-sm flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-label text-label text-on-surface leading-tight">Admin Pusat</span><span class="font-label-small text-label-small text-ink-muted leading-tight">Operational Lead</span></div></div><a class="text-ink-muted hover:text-feedback-error transition-colors" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40"><div class="h-20 w-full px-space-margin flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-sm rounded-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)] w-80"><span class="material-symbols-outlined text-ink-muted text-[20px]">search</span><input class="bg-transparent border-0 outline-none font-body-small text-body-small text-ink-body w-full placeholder:text-ink-muted" placeholder="Cari ISBN, judul, atau penerbit..." type="text"></div></div><div class="flex items-center gap-space-md"><button class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[20px]">notifications</span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
-<!-- Prototype Simulator Toolbar -->
-<div class="bg-surface-container px-space-margin py-space-sm border-b border-border-subtle flex items-center justify-between gap-space-md flex-wrap">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-[18px] text-primary">science</span>
-<span class="font-label-small text-label-small text-ink-muted uppercase tracking-wider font-bold">Simulator State (UC-43):</span>
-</div>
-<div class="flex items-center gap-space-xs flex-wrap" id="sim-toolbar">
-<button class="px-space-sm py-1 rounded-full text-label-small font-label-small transition-all bg-primary-container text-on-primary font-bold shadow-sm" id="btn-state-default" onclick="setPrototypeState('default')">
-        Default: 14 Hari (Semua Penerbit)
-      </button>
-<button class="px-space-sm py-1 rounded-full text-label-small font-label-small transition-all bg-surface-container-lowest text-ink-body hover:bg-surface-cream" id="btn-state-7days" onclick="setPrototypeState('7days')">
-        Filter: 7 Hari Terakhir
-      </button>
-<button class="px-space-sm py-1 rounded-full text-label-small font-label-small transition-all bg-surface-container-lowest text-ink-body hover:bg-surface-cream" id="btn-state-mizan" onclick="setPrototypeState('mizan')">
-        Filter: Penerbit Mizan
-      </button>
-<button class="px-space-sm py-1 rounded-full text-label-small font-label-small transition-all bg-surface-container-lowest text-ink-body hover:bg-surface-cream" id="btn-state-empty" onclick="setPrototypeState('empty')">
-        State: Kosong (Nihil)
-      </button>
-<button class="px-space-sm py-1 rounded-full text-label-small font-label-small transition-all bg-error-container text-error hover:opacity-90 font-semibold" id="btn-state-error" onclick="setPrototypeState('error')">
-        State: Gagal Muat (Error UC-43)
-      </button>
-</div>
-</div>
-<div class="px-space-margin py-space-xl flex flex-col gap-space-xl max-w-[1240px] mx-auto w-full">
-<!-- Breadcrumb & Header -->
-<div class="flex flex-col gap-space-xs">
-<div class="flex items-center gap-space-xs font-label-small text-label-small text-ink-muted">
-<span>Keuangan &amp; Monitoring</span>
-<span class="material-symbols-outlined text-[14px]">chevron_right</span>
-<span class="text-primary font-semibold">Monitoring Global</span>
-</div>
-<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mt-space-xs">
-<div>
-<h1 class="font-headline-lg text-headline-lg text-ink-body tracking-tight">Monitoring Global</h1>
-<p class="font-body-small text-body-small text-ink-muted mt-space-xs max-w-2xl">
-            Pantau transaksi marketplace, pergerakan omzet penjualan, dan performa penerbit terdaftar secara tersentralisasi.
-          </p>
-</div>
-
-</div>
-</div>
-<!-- Error State Alert Banner (Toggled via JS/Simulator) -->
-<div class="hidden bg-error-container text-on-error-container p-space-md rounded-xl flex items-center justify-between gap-space-md" id="error-banner">
-<div class="flex items-center gap-space-sm">
-<span class="material-symbols-outlined text-feedback-error text-[24px]">error</span>
-<div>
-<div class="font-label text-label font-bold text-feedback-error">Gagal Memuat Data Monitoring</div>
-<div class="font-body-small text-body-small text-on-error-container">Gagal memuat data transaksi &amp; aktivitas global, silakan muat ulang sistem.</div>
-</div>
-</div>
-<button class="px-space-md py-space-xs bg-feedback-error text-on-error rounded-lg font-label text-label font-bold hover:opacity-90 flex items-center gap-1 transition-opacity" onclick="setPrototypeState('default')">
-<span class="material-symbols-outlined text-[16px]">refresh</span> Muat Ulang
-      </button>
-</div>
-<!-- Global Filter Toolbar (Metabase Model) -->
-<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm border border-border-subtle flex flex-col gap-space-md">
-<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
-<!-- Group 1: Date Range -->
-<div class="flex flex-col gap-space-xs flex-1">
-<span class="font-label-small text-label-small text-ink-muted font-bold uppercase tracking-wider">Rentang Waktu Analitik</span>
-<div class="flex items-center gap-space-xs flex-wrap sm:flex-nowrap">
-<div class="flex items-center bg-surface-soft px-space-md py-2.5 rounded-lg border border-border-subtle w-full sm:w-auto">
-<span class="material-symbols-outlined text-ink-muted text-[18px] mr-2">calendar_today</span>
-<input class="bg-transparent font-label text-label text-ink-body outline-none w-56 font-semibold" id="filter-date-input" readonly="" type="text" value="01/11/2026 — 14/11/2026">
-</div>
-<div class="flex items-center bg-surface-soft p-1 rounded-lg border border-border-subtle overflow-x-auto">
-<button class="px-space-sm py-1.5 rounded text-label-small font-label-small text-ink-muted hover:text-ink-body font-semibold transition-colors" id="preset-7" onclick="applyDatePreset('7')">7 Hari</button>
-<button class="px-space-sm py-1.5 rounded text-label-small font-label-small bg-primary-container text-on-primary font-bold shadow-sm transition-colors" id="preset-14" onclick="applyDatePreset('14')">14 Hari</button>
-<button class="px-space-sm py-1.5 rounded text-label-small font-label-small text-ink-muted hover:text-ink-body font-semibold transition-colors" id="preset-30" onclick="applyDatePreset('30')">30 Hari</button>
-<button class="px-space-sm py-1.5 rounded text-label-small font-label-small text-ink-muted hover:text-ink-body font-semibold transition-colors" id="preset-month" onclick="applyDatePreset('month')">Bulan Ini</button>
-</div>
-</div>
-</div>
-<!-- Group 2: Publisher Dropdown -->
-<div class="flex flex-col gap-space-xs w-full lg:w-72">
-<label class="font-label-small text-label-small text-ink-muted font-bold uppercase tracking-wider" for="publisher-select">Mitra Penerbit</label>
-<div class="relative">
-<select class="w-full bg-surface-soft px-space-md py-2.5 rounded-lg border border-border-subtle font-label text-label text-ink-body font-semibold outline-none focus:border-primary-container appearance-none pr-10 cursor-pointer" id="publisher-select" onchange="handlePublisherChange(this.value)">
-<option value="all">Semua Penerbit (12 Mitra)</option>
-<option value="mizan">PT Mizan Pustaka Utama</option>
-<option value="bentang">PT Bentang Pustaka</option>
-<option value="angkasa">CV Angkasa Publishing</option>
-<option value="alkautsar">Penerbit Al-Kautsar</option>
-<option value="pelangi">CV Pelangi Aksara</option>
-</select>
-<span class="material-symbols-outlined text-ink-muted text-[20px] absolute right-3 top-2.5 pointer-events-none">expand_more</span>
-</div>
-</div>
-<!-- Action Buttons -->
-<div class="flex items-center gap-space-xs pt-2 lg:pt-0">
-<button class="px-space-md py-2.5 rounded-lg border border-border-bold text-ink-body font-label text-label font-semibold hover:bg-surface-container transition-colors flex items-center gap-1.5" onclick="resetFilters()">
-<span class="material-symbols-outlined text-[18px]">restart_alt</span>
-            Reset Filter
-          </button>
-<button class="px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary font-label text-label font-bold hover:bg-primary transition-all shadow-sm flex items-center gap-1.5" onclick="applyCurrentFilters()">
-<span class="material-symbols-outlined text-[18px]">filter_alt</span>
-            Terapkan Filter
-          </button>
-</div>
-</div>
-<!-- Scope Status Feedback Bar -->
-<div class="pt-space-xs border-t border-border-subtle flex items-center justify-between text-ink-muted font-body-small text-body-small flex-wrap gap-space-xs">
-
-
-</div>
-</div>
-<!-- Main Content Area: Switchable between Normal, Empty, and Error views -->
-<div class="flex flex-col gap-space-xl" id="monitoring-data-container">
-<!-- 4 Summary Metric Cards (Stripe Financial Clarity + Metabase Scope Awareness) -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
-<!-- Card 1: Omzet Penjualan -->
-<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm border border-border-subtle flex flex-col justify-between relative overflow-hidden">
-<div class="absolute top-0 left-0 right-0 h-1 bg-primary-container"></div>
-<div>
-<div class="flex items-center justify-between mb-space-xs">
-<span class="font-label text-label text-ink-muted font-semibold">Omzet Penjualan</span>
-<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
-</div>
-<div class="font-headline-md text-headline-md text-ink-body font-bold tracking-tight" id="metric-turnover">Rp 18.450.000</div>
-</div>
-<div class="mt-space-md pt-space-xs border-t border-border-subtle flex flex-col gap-1">
-<div class="flex items-center justify-between font-label-small text-label-small">
-<span class="text-ink-muted">Cakupan Data</span>
-<span class="px-1.5 py-0.5 rounded bg-surface-lilac text-primary font-bold">Periode Terpilih</span>
-</div>
-<p class="font-label-small text-label-small text-ink-muted leading-tight">Akumulasi penjualan e-book tervalidasi via Midtrans</p>
-</div>
-</div>
-<!-- Card 2: Pembayaran Berhasil -->
-<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm border border-border-subtle flex flex-col justify-between relative overflow-hidden">
-<div class="absolute top-0 left-0 right-0 h-1 bg-emerald-500"></div>
-<div>
-<div class="flex items-center justify-between mb-space-xs">
-<span class="font-label text-label text-ink-muted font-semibold">Pembayaran Berhasil</span>
-<span class="material-symbols-outlined text-emerald-600 text-[20px]">check_circle</span>
-</div>
-<div class="font-headline-md text-headline-md text-ink-body font-bold tracking-tight" id="metric-transactions">142 Transaksi</div>
-</div>
-<div class="mt-space-md pt-space-xs border-t border-border-subtle flex flex-col gap-1">
-<div class="flex items-center justify-between font-label-small text-label-small">
-<span class="text-ink-muted">Tingkat Berhasil</span>
-<span class="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 font-bold">100% Lunas</span>
-</div>
-<p class="font-label-small text-label-small text-ink-muted leading-tight">Semua transaksi sukses diselesaikan pembaca</p>
-</div>
-</div>
-<!-- Card 3: Buku Aktif -->
-<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm border border-border-subtle flex flex-col justify-between relative overflow-hidden">
-<div class="absolute top-0 left-0 right-0 h-1 bg-amber-500"></div>
-<div>
-<div class="flex items-center justify-between mb-space-xs">
-<span class="font-label text-label text-ink-muted font-semibold">Buku Aktif</span>
-<span class="material-symbols-outlined text-amber-600 text-[20px]">auto_stories</span>
-</div>
-<div class="font-headline-md text-headline-md text-ink-body font-bold tracking-tight" id="metric-books">56 Judul</div>
-</div>
-<div class="mt-space-md pt-space-xs border-t border-border-subtle flex flex-col gap-1">
-<div class="flex items-center justify-between font-label-small text-label-small">
-<span class="text-ink-muted">Cakupan Data</span>
-<span class="px-1.5 py-0.5 rounded bg-surface-cream text-tertiary font-bold">Total Platform</span>
-</div>
-<p class="font-label-small text-label-small text-ink-muted leading-tight">Katalog aktif dapat dibeli publik secara resmi</p>
-</div>
-</div>
-<!-- Card 4: Penerbit Terdaftar -->
-<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm border border-border-subtle flex flex-col justify-between relative overflow-hidden">
-<div class="absolute top-0 left-0 right-0 h-1 bg-sky-500"></div>
-<div>
-<div class="flex items-center justify-between mb-space-xs">
-<span class="font-label text-label text-ink-muted font-semibold">Penerbit Terdaftar</span>
-<span class="material-symbols-outlined text-sky-600 text-[20px]">corporate_fare</span>
-</div>
-<div class="font-headline-md text-headline-md text-ink-body font-bold tracking-tight" id="metric-publishers">12 Penerbit</div>
-</div>
-<div class="mt-space-md pt-space-xs border-t border-border-subtle flex flex-col gap-1">
-<div class="flex items-center justify-between font-label-small text-label-small">
-<span class="text-ink-muted">Status DPD</span>
-<span class="px-1.5 py-0.5 rounded bg-surface-sky text-ink-body font-bold">Mitra Resmi IKAPI</span>
-</div>
-<p class="font-label-small text-label-small text-ink-muted leading-tight">Penerbit daerah terverifikasi keanggotaannya</p>
-</div>
-</div>
-</div>
-<!-- Primary Chart: Tren Omzet Penjualan (Shopify Analytics Style) -->
-<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm border border-border-subtle flex flex-col gap-space-md">
-<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm border-b border-border-subtle">
-<div>
-<div class="flex items-center gap-space-xs">
-<h2 class="font-title-md text-title-md text-ink-body font-bold">Tren Omzet Penjualan</h2>
-<span class="px-2 py-0.5 rounded-full bg-surface-cream text-tertiary font-label-small text-label-small font-bold" id="chart-peak-badge">Puncak: Rp 2.450.000 (10 Nov)</span>
-</div>
-<p class="font-body-small text-body-small text-ink-muted mt-0.5">
-              Akumulasi omzet harian berdasarkan periode dan penerbit yang dipilih
-            </p>
-</div>
-<div class="flex items-center gap-space-sm">
-<div class="flex items-center gap-1.5 font-label-small text-label-small text-ink-body font-semibold">
-<span class="w-3 h-3 rounded-sm bg-primary-container inline-block"></span>
-<span>Omzet Terverifikasi (IDR)</span>
-</div>
-</div>
-</div>
-<!-- SVG Line Chart with Area Gradient & Axis Labels -->
-<div class="w-full overflow-x-auto">
-<div class="min-w-[640px] h-72 relative flex flex-col justify-between py-2">
-<!-- Background Grid Lines -->
-<div class="absolute inset-0 flex flex-col justify-between pointer-events-none pr-6 pl-14 py-4">
-<div class="border-b border-border-subtle w-full flex items-center justify-between text-ink-muted font-label-small text-[11px]">
-<span class="-ml-14 w-12 text-right">Rp 2.5jt</span>
-</div>
-<div class="border-b border-border-subtle w-full flex items-center justify-between text-ink-muted font-label-small text-[11px]">
-<span class="-ml-14 w-12 text-right">Rp 2.0jt</span>
-</div>
-<div class="border-b border-border-subtle w-full flex items-center justify-between text-ink-muted font-label-small text-[11px]">
-<span class="-ml-14 w-12 text-right">Rp 1.5jt</span>
-</div>
-<div class="border-b border-border-subtle w-full flex items-center justify-between text-ink-muted font-label-small text-[11px]">
-<span class="-ml-14 w-12 text-right">Rp 1.0jt</span>
-</div>
-<div class="border-b border-border-subtle w-full flex items-center justify-between text-ink-muted font-label-small text-[11px]">
-<span class="-ml-14 w-12 text-right">Rp 500rb</span>
-</div>
-<div class="border-b border-border-bold w-full flex items-center justify-between text-ink-muted font-label-small text-[11px]">
-<span class="-ml-14 w-12 text-right">Rp 0</span>
-</div>
-</div>
-<!-- Vector SVG Line & Area -->
-<div class="absolute inset-0 pl-14 pr-6 py-4">
-<svg class="w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 700 220">
-<defs>
-<linearGradient id="salesGradient" x1="0" x2="0" y1="0" y2="1">
-<stop offset="0%" stop-color="#5956E9" stop-opacity="0.22"></stop>
-<stop offset="100%" stop-color="#5956E9" stop-opacity="0.00"></stop>
-</linearGradient>
-</defs>
-<!-- Area Fill -->
-<path d="M 0,170 Q 50,160 100,140 T 200,120 T 300,90 T 400,60 T 500,20 T 600,80 T 700,50 L 700,220 L 0,220 Z" fill="url(#salesGradient)" id="chart-area"></path>
-<!-- Line Path -->
-<path d="M 0,170 Q 50,160 100,140 T 200,120 T 300,90 T 400,60 T 500,20 T 600,80 T 700,50" fill="none" id="chart-line" stroke="#5956E9" stroke-linecap="round" stroke-width="3"></path>
-<!-- Plot Nodes -->
-<circle cx="100" cy="140" fill="#FFFFFF" r="4" stroke="#5956E9" stroke-width="2.5"></circle>
-<circle cx="200" cy="120" fill="#FFFFFF" r="4" stroke="#5956E9" stroke-width="2.5"></circle>
-<circle cx="300" cy="90" fill="#FFFFFF" r="4" stroke="#5956E9" stroke-width="2.5"></circle>
-<circle cx="400" cy="60" fill="#FFFFFF" r="4" stroke="#5956E9" stroke-width="2.5"></circle>
-<!-- Peak Point with active halo -->
-<circle class="cursor-pointer" cx="500" cy="20" fill="#5956E9" r="6" stroke="#FFFFFF" stroke-width="2"></circle>
-<circle cx="600" cy="80" fill="#FFFFFF" r="4" stroke="#5956E9" stroke-width="2.5"></circle>
-<circle cx="700" cy="50" fill="#FFFFFF" r="4" stroke="#5956E9" stroke-width="2.5"></circle>
-</svg>
-<!-- Interactive Floating Tooltip on Peak (10 Nov) -->
-<div class="absolute top-2 left-[67%] -translate-x-1/2 bg-inverse-deep text-on-primary px-space-sm py-1.5 rounded-lg shadow-xl text-center pointer-events-none z-10 transition-transform" id="chart-tooltip">
-<div class="font-label-small text-[11px] font-bold text-inverse-primary">10 Nov 2026</div>
-<div class="font-label text-label font-bold text-on-primary">Rp 2.450.000</div>
-<div class="font-label-small text-[10px] text-surface-container-highest">19 Transaksi Berhasil</div>
-<!-- Little arrow -->
-<div class="w-2 h-2 bg-inverse-deep rotate-45 mx-auto -mb-1 mt-1"></div>
-</div>
-</div>
-<!-- X Axis Dates -->
-<div class="w-full flex justify-between pl-14 pr-6 pt-2 font-label-small text-[11px] text-ink-muted border-t border-transparent z-10 mt-auto">
-<span>01 Nov</span>
-<span>03 Nov</span>
-<span>05 Nov</span>
-<span>07 Nov</span>
-<span>09 Nov</span>
-<span class="font-bold text-primary">10 Nov</span>
-<span>12 Nov</span>
-<span>14 Nov</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Transaction Monitoring Table (Stripe Dashboard Clarity) -->
-<div class="bg-surface-container-lowest rounded-xl shadow-sm border border-border-subtle overflow-hidden flex flex-col">
-<div class="p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm border-b border-border-subtle">
-<div>
-<div class="flex items-center gap-space-xs">
-<h2 class="font-title-md text-title-md text-ink-body font-bold">Monitoring Transaksi Terakhir</h2>
-<span class="px-2 py-0.5 rounded-full bg-surface-soft text-ink-body font-label-small text-label-small font-bold" id="table-tx-count">Menampilkan 6 dari 142 Transaksi</span>
-</div>
-<p class="font-body-small text-body-small text-ink-muted mt-0.5">
-              Catatan transaksi lunas sesuai periode dan filter penerbit yang aktif
-            </p>
-</div>
-<div class="flex items-center gap-space-xs">
-<button class="px-space-md py-1.5 rounded-lg bg-surface-soft text-ink-body font-label text-label font-semibold hover:bg-surface-container flex items-center gap-1 transition-colors">
-<span class="material-symbols-outlined text-[18px]">download</span>
-              Ekspor CSV
-            </button>
-</div>
-</div>
-<!-- Table View -->
-<div class="w-full overflow-x-auto">
-<table class="w-full text-left border-collapse">
-<thead>
-<tr class="bg-surface-soft border-b border-border-subtle font-label-small text-label-small text-ink-muted uppercase tracking-wider">
-<th class="py-space-sm px-space-lg font-bold">Tanggal &amp; Waktu</th>
-<th class="py-space-sm px-space-md font-bold">ID Transaksi</th>
-<th class="py-space-sm px-space-md font-bold">Buku &amp; Penerbit</th>
-<th class="py-space-sm px-space-md font-bold">Metode Bayar</th>
-<th class="py-space-sm px-space-md font-bold text-right">Nominal</th>
-<th class="py-space-sm px-space-lg font-bold text-center">Status</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-border-subtle font-body-small text-body-small text-ink-body" id="transaction-rows">
-<!-- Row 1 -->
-<tr class="hover:bg-surface-soft/60 transition-colors">
-<td class="py-space-md px-space-lg whitespace-nowrap">
-<span class="font-semibold text-ink-body">14 Nov 2026</span>
-<span class="block text-label-small text-ink-muted">14:22 WIB</span>
-</td>
-<td class="py-space-md px-space-md font-mono text-label-small font-semibold text-primary whitespace-nowrap">
-                  #ORD-2026-0891
-                </td>
-<td class="py-space-md px-space-md">
-<div class="font-semibold text-ink-body line-clamp-1">Sang Pemimpi</div>
-<div class="text-label-small text-ink-muted">PT Mizan Pustaka Utama</div>
-</td>
-<td class="py-space-md px-space-md whitespace-nowrap">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-ink-muted text-[18px]">qr_code_scanner</span>
-<span>QRIS Gopay</span>
-</div>
-</td>
-<td class="py-space-md px-space-md text-right font-bold text-ink-body whitespace-nowrap">
-                  Rp 145.000
-                </td>
-<td class="py-space-md px-space-lg text-center whitespace-nowrap">
-<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-small text-label-small font-bold">
-<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Berhasil
-                  </span>
-</td>
-</tr>
-<!-- Row 2 -->
-<tr class="hover:bg-surface-soft/60 transition-colors">
-<td class="py-space-md px-space-lg whitespace-nowrap">
-<span class="font-semibold text-ink-body">14 Nov 2026</span>
-<span class="block text-label-small text-ink-muted">13:40 WIB</span>
-</td>
-<td class="py-space-md px-space-md font-mono text-label-small font-semibold text-primary whitespace-nowrap">
-                  #ORD-2026-0890
-                </td>
-<td class="py-space-md px-space-md">
-<div class="font-semibold text-ink-body line-clamp-1">Laskar Pelangi</div>
-<div class="text-label-small text-ink-muted">PT Bentang Pustaka</div>
-</td>
-<td class="py-space-md px-space-md whitespace-nowrap">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-ink-muted text-[18px]">account_balance</span>
-<span>BCA Virtual Account</span>
-</div>
-</td>
-<td class="py-space-md px-space-md text-right font-bold text-ink-body whitespace-nowrap">
-                  Rp 85.000
-                </td>
-<td class="py-space-md px-space-lg text-center whitespace-nowrap">
-<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-small text-label-small font-bold">
-<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Berhasil
-                  </span>
-</td>
-</tr>
-<!-- Row 3 -->
-<tr class="hover:bg-surface-soft/60 transition-colors">
-<td class="py-space-md px-space-lg whitespace-nowrap">
-<span class="font-semibold text-ink-body">14 Nov 2026</span>
-<span class="block text-label-small text-ink-muted">11:15 WIB</span>
-</td>
-<td class="py-space-md px-space-md font-mono text-label-small font-semibold text-primary whitespace-nowrap">
-                  #ORD-2026-0889
-                </td>
-<td class="py-space-md px-space-md">
-<div class="font-semibold text-ink-body line-clamp-1">Aroma Karsa</div>
-<div class="text-label-small text-ink-muted">CV Angkasa Publishing</div>
-</td>
-<td class="py-space-md px-space-md whitespace-nowrap">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-ink-muted text-[18px]">account_balance_wallet</span>
-<span>Mandiri Bill</span>
-</div>
-</td>
-<td class="py-space-md px-space-md text-right font-bold text-ink-body whitespace-nowrap">
-                  Rp 120.000
-                </td>
-<td class="py-space-md px-space-lg text-center whitespace-nowrap">
-<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-small text-label-small font-bold">
-<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Berhasil
-                  </span>
-</td>
-</tr>
-<!-- Row 4 -->
-<tr class="hover:bg-surface-soft/60 transition-colors">
-<td class="py-space-md px-space-lg whitespace-nowrap">
-<span class="font-semibold text-ink-body">14 Nov 2026</span>
-<span class="block text-label-small text-ink-muted">09:30 WIB</span>
-</td>
-<td class="py-space-md px-space-md font-mono text-label-small font-semibold text-primary whitespace-nowrap">
-                  #ORD-2026-0888
-                </td>
-<td class="py-space-md px-space-md">
-<div class="font-semibold text-ink-body line-clamp-1">Hujan di Bulan Juni</div>
-<div class="text-label-small text-ink-muted">PT Mizan Pustaka Utama</div>
-</td>
-<td class="py-space-md px-space-md whitespace-nowrap">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-ink-muted text-[18px]">account_balance</span>
-<span>BNI Virtual Account</span>
-</div>
-</td>
-<td class="py-space-md px-space-md text-right font-bold text-ink-body whitespace-nowrap">
-                  Rp 95.000
-                </td>
-<td class="py-space-md px-space-lg text-center whitespace-nowrap">
-<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-small text-label-small font-bold">
-<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Berhasil
-                  </span>
-</td>
-</tr>
-<!-- Row 5 -->
-<tr class="hover:bg-surface-soft/60 transition-colors">
-<td class="py-space-md px-space-lg whitespace-nowrap">
-<span class="font-semibold text-ink-body">13 Nov 2026</span>
-<span class="block text-label-small text-ink-muted">21:05 WIB</span>
-</td>
-<td class="py-space-md px-space-md font-mono text-label-small font-semibold text-primary whitespace-nowrap">
-                  #ORD-2026-0887
-                </td>
-<td class="py-space-md px-space-md">
-<div class="font-semibold text-ink-body line-clamp-1">Bumi Manusia</div>
-<div class="text-label-small text-ink-muted">PT Bentang Pustaka</div>
-</td>
-<td class="py-space-md px-space-md whitespace-nowrap">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-ink-muted text-[18px]">account_balance_wallet</span>
-<span>ShopeePay</span>
-</div>
-</td>
-<td class="py-space-md px-space-md text-right font-bold text-ink-body whitespace-nowrap">
-                  Rp 110.000
-                </td>
-<td class="py-space-md px-space-lg text-center whitespace-nowrap">
-<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-small text-label-small font-bold">
-<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Berhasil
-                  </span>
-</td>
-</tr>
-<!-- Row 6 -->
-<tr class="hover:bg-surface-soft/60 transition-colors">
-<td class="py-space-md px-space-lg whitespace-nowrap">
-<span class="font-semibold text-ink-body">13 Nov 2026</span>
-<span class="block text-label-small text-ink-muted">18:40 WIB</span>
-</td>
-<td class="py-space-md px-space-md font-mono text-label-small font-semibold text-primary whitespace-nowrap">
-                  #ORD-2026-0886
-                </td>
-<td class="py-space-md px-space-md">
-<div class="font-semibold text-ink-body line-clamp-1">Cantik Itu Luka</div>
-<div class="text-label-small text-ink-muted">CV Pelangi Aksara</div>
-</td>
-<td class="py-space-md px-space-md whitespace-nowrap">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-ink-muted text-[18px]">account_balance</span>
-<span>BRI Virtual Account</span>
-</div>
-</td>
-<td class="py-space-md px-space-md text-right font-bold text-ink-body whitespace-nowrap">
-                  Rp 135.000
-                </td>
-<td class="py-space-md px-space-lg text-center whitespace-nowrap">
-<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-small text-label-small font-bold">
-<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Berhasil
-                  </span>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<!-- Table Footer / Pagination -->
-<div class="p-space-md bg-surface-soft flex items-center justify-between border-t border-border-subtle flex-wrap gap-space-sm">
-<span class="font-body-small text-body-small text-ink-muted" id="pagination-label">
-            Menampilkan <span class="font-semibold text-ink-body">1 - 6</span> dari <span class="font-semibold text-ink-body">142</span> transaksi terverifikasi
-          </span>
-<div class="flex items-center gap-space-xs">
-<button class="px-space-sm py-1.5 rounded-lg border border-border-bold bg-surface-container-lowest text-ink-muted hover:text-ink-body font-label-small text-label-small font-bold disabled:opacity-40" disabled="">
-              Sebelumnya
-            </button>
-<div class="flex items-center gap-1">
-<button class="w-8 h-8 rounded-lg bg-primary-container text-on-primary font-label-small text-label-small font-bold shadow-sm">1</button>
-<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-ink-body hover:bg-surface-container font-label-small text-label-small font-bold">2</button>
-<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-ink-body hover:bg-surface-container font-label-small text-label-small font-bold">3</button>
-<span class="text-ink-muted px-1">...</span>
-<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-ink-body hover:bg-surface-container font-label-small text-label-small font-bold">24</button>
-</div>
-<button class="px-space-sm py-1.5 rounded-lg border border-border-bold bg-surface-container-lowest text-ink-body hover:bg-surface-container font-label-small text-label-small font-bold">
-              Berikutnya
-            </button>
-</div>
-</div>
-</div>
-</div>
-<!-- Empty State View (Toggled via Simulator/Filter) -->
-<div class="hidden bg-surface-container-lowest p-space-3xl rounded-xl shadow-sm border border-border-subtle flex-col items-center justify-center text-center" id="empty-state-view">
-<div class="w-16 h-16 rounded-full bg-surface-cream flex items-center justify-center text-tertiary mb-space-md">
-<span class="material-symbols-outlined text-[32px]">manage_search</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-ink-body font-bold">Tidak Ada Transaksi Ditemukan</h3>
-<p class="font-body-small text-body-small text-ink-muted max-w-md mt-space-xs mb-space-lg">
-        Tidak ada transaksi yang tercatat pada kombinasi rentang waktu dan filter penerbit yang dipilih.
-      </p>
-<button class="px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary font-label text-label font-bold hover:bg-primary transition-colors flex items-center gap-1.5 shadow-sm" onclick="resetFilters()">
-<span class="material-symbols-outlined text-[18px]">restart_alt</span>
-        Reset ke Default
-      </button>
-</div>
-<!-- Security & Compliance Micro Footnote -->
-<div class="flex items-center justify-between text-ink-muted font-label-small text-label-small px-space-xs pb-space-lg">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
-<span>Data keuangan diverifikasi real-time via Payment Gateway Midtrans &amp; Core Platform IKAPI.</span>
-</div>
-<span>UC-43 Audit Ready • Log ID: #IKAPI-MON-99214</span>
-</div>
-</div>
-</div>
-<!-- Simulator Script for interactive prototype state transitions -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monitoring Global - Portal Administrator IKAPI Jawa Barat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
 <script>
-  function setSimBtnActive(activeId) {
-    const btns = ['btn-state-default', 'btn-state-7days', 'btn-state-mizan', 'btn-state-empty', 'btn-state-error'];
-    btns.forEach(id => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      if (id === activeId) {
-        el.className = "px-space-sm py-1 rounded-full text-label-small font-label-small transition-all bg-primary-container text-on-primary font-bold shadow-sm";
-      } else if (id === 'btn-state-error') {
-        el.className = "px-space-sm py-1 rounded-full text-label-small font-label-small transition-all bg-error-container text-error hover:opacity-90 font-semibold";
-      } else {
-        el.className = "px-space-sm py-1 rounded-full text-label-small font-label-small transition-all bg-surface-container-lowest text-ink-body hover:bg-surface-cream";
-      }
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#673DE6', 'primary-hover': '#5025D1', 'primary-deep': '#2F1C6A',
+        canvas: '#FFFFFF', soft: '#F5F6FF', neutral: '#F5F5F6',
+        ink: '#222225', muted: '#62636B', border: '#E5E7EB', divider: '#EFEFF2',
+      },
+      fontFamily: { sans: ['DM Sans', 'system-ui', 'sans-serif'] },
+      borderRadius: { xl: '12px', '2xl': '16px', '3xl': '20px' },
+    }
+  }
+}
+</script>
+<style>
+  :root { --topbar-h: 64px; --sidebar-w: 248px; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', system-ui, sans-serif; background: #FFFFFF; color: #222225; }
+  .shell-main { margin-left: 0; }
+  @media (min-width: 1024px) { .shell-main { margin-left: var(--sidebar-w); } }
+  .banner-bleed { margin-left: 0; }
+  @media (min-width: 1024px) { .banner-bleed { margin-left: calc(-1 * var(--sidebar-w)); } }
+  #publisher-sidebar { top: var(--topbar-h); }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .num { font-variant-numeric: tabular-nums; }
+  .focus-ring:focus-visible { outline: 2px solid #673DE6; outline-offset: 2px; }
+  .focus-ring-light:focus-visible { outline: 2px solid #FFFFFF; outline-offset: 2px; }
+  #publisher-sidebar { transform: translateX(-100%); transition: transform .22s ease; }
+  #publisher-sidebar.is-open { transform: translateX(0); }
+  @media (min-width: 1024px) { #publisher-sidebar { transform: none; transition: none; } }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-thumb { background: #DCDCE2; border-radius: 9999px; }
+</style>
+  <script src="admin-guard.js"></script>
+</head>
+<body class="bg-canvas text-ink antialiased">
+
+<a href="#workspace" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focus:bg-primary focus:px-4 focus:py-2 focus:text-white focus:text-sm focus:font-semibold">Lewati ke konten utama</a>
+
+<!-- TOP UTILITY BAR -->
+<header class="absolute inset-x-0 top-0 z-50 h-16">
+  <div class="flex h-16 items-center justify-between gap-3 px-4 sm:px-6">
+    <div class="flex items-center gap-3">
+      <button type="button" id="sidebar-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="publisher-sidebar"
+        class="focus-ring-light grid h-10 w-10 place-items-center rounded-xl text-white hover:bg-white/10 lg:hidden">
+        <span class="material-symbols-outlined text-[22px]">menu</span>
+      </button>
+      <a href="dashboard_administrasi_utama_desktop.html" class="focus-ring-light flex items-center rounded-xl">
+        <img src="../../assets/logo-ikapi-jabar.png" alt="IKAPI Jawa Barat" class="h-7 w-auto object-contain drop-shadow-[0_1px_3px_rgba(0,0,0,0.35)]">
+      </a>
+    </div>
+    <div class="flex items-center gap-1.5">
+      <div class="relative">
+        <button type="button" id="btn-notif" aria-label="Notifikasi" aria-haspopup="true" aria-expanded="false"
+          class="focus-ring-light relative grid h-10 w-10 place-items-center rounded-xl text-white hover:bg-white/10">
+          <span class="material-symbols-outlined text-[22px]">notifications</span>
+        </button>
+        <div id="notif-panel" class="absolute right-0 top-12 hidden w-72 rounded-2xl border border-border bg-white p-4 shadow-[0_16px_40px_rgba(34,34,37,0.12)]">
+          <div class="mb-1.5 text-[13px] font-bold text-ink">Notifikasi</div>
+          <p class="text-[13px] leading-relaxed text-muted">Tidak ada notifikasi baru.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<div id="sidebar-scrim" class="fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden"></div>
+<aside id="publisher-sidebar" class="fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgba(34,34,37,0.07)] lg:translate-x-0">
+  <nav aria-label="Navigasi dashboard administrator" class="flex flex-1 flex-col gap-1 overflow-y-auto px-3 pb-4 pt-7">
+    <a href="dashboard_administrasi_utama_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">space_dashboard</span><span>Dashboard</span>
+    </a>
+    <p class="mt-3 px-3 text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Manajemen</p>
+    <a href="kelola_pengguna_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">group</span><span>Kelola Pengguna</span>
+    </a>
+    <a href="pengawasan_katalog_buku_global_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">menu_book</span><span>Pengawasan Katalog</span>
+    </a>
+    <a href="moderasi_ulasan_dan_komentar_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">reviews</span><span>Moderasi Ulasan</span>
+    </a>
+    <a href="kelola_komunitas_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">groups</span><span>Kelola Komunitas</span>
+    </a>
+    <a href="moderasi_diskusi_komunitas_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">forum</span><span>Moderasi Diskusi</span>
+    </a>
+    <p class="mt-3 px-3 text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Keuangan &amp; Monitoring</p>
+    <a href="monitoring_global_desktop.html" aria-current="page" class="focus-ring flex items-center gap-3 rounded-xl bg-primary px-3 py-2.5 text-[14px] font-semibold text-white">
+      <span class="material-symbols-outlined text-[20px]">monitoring</span><span>Monitoring Global</span>
+    </a>
+    <a href="kelola_pencairan_dana_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">payments</span><span>Kelola Pencairan Dana</span>
+    </a>
+  </nav>
+  <div class="flex items-center gap-2 border-t border-divider p-3">
+    <a href="login_administrator_desktop.html" class="focus-ring flex min-w-0 flex-1 items-center gap-3 rounded-xl px-2 py-2 hover:bg-neutral">
+      <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary text-white">
+        <span class="material-symbols-outlined text-[18px]">shield_person</span>
+      </span>
+      <span class="min-w-0 text-left leading-tight">
+        <span class="block truncate text-[13px] font-semibold text-ink">Administrator</span>
+        <span class="block truncate text-[11px] text-muted">Portal Administrator</span>
+      </span>
+    </a>
+    <a href="login_administrator_desktop.html" aria-label="Keluar" title="Keluar"
+      class="focus-ring grid h-10 w-10 shrink-0 place-items-center rounded-xl text-[#B42318] transition-colors hover:bg-[#FEF3F2]">
+      <span class="material-symbols-outlined text-[20px]">logout</span>
+    </a>
+  </div>
+</aside>
+
+<!-- MAIN COLUMN -->
+<div class="shell-main">
+  <div aria-hidden="true" class="banner-bleed relative h-[232px] overflow-hidden bg-primary-deep sm:h-[260px] lg:h-[276px]">
+    <svg class="absolute inset-0 h-full w-full" viewBox="0 0 1440 212" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="topScrim" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2F1C6A" stop-opacity="0.96"></stop>
+          <stop offset="100%" stop-color="#2F1C6A" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="212" fill="#2F1C6A"></rect>
+      <polygon points="418,0 612,0 470,212 276,212" fill="#4B2CBA"></polygon>
+      <polygon points="648,0 706,0 564,212 506,212" fill="#825CF1"></polygon>
+      <polygon points="748,0 1002,0 860,212 606,212" fill="#673DE6"></polygon>
+      <polygon points="1042,0 1084,0 942,212 900,212" fill="#4475D8"></polygon>
+      <polygon points="1124,0 1290,0 1148,212 982,212" fill="#4B2CBA"></polygon>
+      <polygon points="1342,0 1440,0 1440,212 1200,212" fill="#825CF1"></polygon>
+      <polygon points="1420,0 1440,0 1440,212 1378,212" fill="#4475D8"></polygon>
+      <rect width="1440" height="58" fill="url(#topScrim)"></rect>
+    </svg>
+  </div>
+
+  <main id="workspace" class="relative z-10 -mt-20 rounded-t-[20px] border-t border-border bg-white lg:ml-6">
+    <div class="mx-auto w-full max-w-[1560px] px-4 pb-16 pt-6 sm:px-6 lg:px-10 lg:pt-8">
+
+      <!-- Heading -->
+      <div class="mb-4 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+        <div class="min-w-0">
+          <h1 class="text-[26px] font-bold leading-tight tracking-tight text-ink lg:text-[30px]">Monitoring Global</h1>
+          <p class="mt-1 text-[14px] text-muted">Pantau omzet, transaksi, dan aktivitas penerbit IKAPI Store.</p>
+        </div>
+        <div class="relative">
+          <button type="button" id="demo-toggle" aria-expanded="false" aria-haspopup="true"
+            class="focus-ring inline-flex h-10 items-center gap-1.5 rounded-xl border border-dashed border-border px-3 text-[13px] font-semibold text-muted transition-colors hover:bg-neutral hover:text-ink">
+            <span class="material-symbols-outlined text-[17px]">tune</span>
+            <span>Mode Demo</span>
+            <span class="material-symbols-outlined text-[17px]">expand_more</span>
+          </button>
+          <div id="demo-menu" class="absolute right-0 top-12 z-30 hidden w-64 rounded-2xl border border-border bg-white p-1.5 shadow-[0_16px_40px_rgba(34,34,37,0.12)]" role="menu" aria-label="Pilih skenario demo">
+            <button type="button" data-demo="A" role="menuitemradio" aria-checked="true" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl bg-soft px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Default: 14 Hari</span><span class="material-symbols-outlined demo-check text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="B" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Filter: 7 Hari</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="C" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Filter: PT Mizan</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="D" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Data Kosong</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="E" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Gagal Memuat</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <p class="px-3 pb-1.5 pt-2 text-[11px] leading-relaxed text-muted">Peralihan status hanya simulasi prototype.</p>
+          </div>
+        </div>
+      </div>
+
+      <p id="page-note" role="status" class="mb-3 hidden text-[12.5px] text-muted"></p>
+
+      <!-- Filters -->
+      <section aria-labelledby="filter-title" class="mb-4 rounded-2xl border border-border bg-white p-5">
+        <h2 id="filter-title" class="text-[15px] font-bold tracking-tight text-ink">Periode &amp; Filter</h2>
+        <div class="mt-3 flex flex-wrap items-end gap-3">
+          <div>
+            <p class="mb-1.5 text-[12px] font-semibold text-muted">Rentang waktu</p>
+            <div role="group" aria-label="Preset rentang waktu" class="flex items-center gap-1 rounded-xl border border-border bg-neutral p-1">
+              <button type="button" data-preset="7" class="preset-btn focus-ring rounded-lg px-3 py-1.5 text-[12.5px] font-semibold text-muted hover:text-ink">7 Hari</button>
+              <button type="button" data-preset="14" aria-pressed="true" class="preset-btn focus-ring rounded-lg bg-white px-3 py-1.5 text-[12.5px] font-bold text-primary shadow-sm">14 Hari</button>
+              <button type="button" data-preset="30" class="preset-btn focus-ring rounded-lg px-3 py-1.5 text-[12.5px] font-semibold text-muted hover:text-ink">30 Hari</button>
+              <button type="button" data-preset="month" class="preset-btn focus-ring rounded-lg px-3 py-1.5 text-[12.5px] font-semibold text-muted hover:text-ink">Bulan Ini</button>
+            </div>
+          </div>
+          <div>
+            <p class="mb-1.5 text-[12px] font-semibold text-muted">Tanggal</p>
+            <p class="num h-10 rounded-xl border border-border bg-neutral px-3 text-[13px] leading-10 text-ink" id="date-range">01 Nov 2026 - 14 Nov 2026</p>
+          </div>
+          <div>
+            <label for="publisher-filter" class="mb-1.5 block text-[12px] font-semibold text-muted">Penerbit</label>
+            <select id="publisher-filter"
+              class="h-10 rounded-xl border border-border bg-white px-3 text-[13.5px] font-medium text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+              <option value="all">Semua Penerbit</option>
+            </select>
+          </div>
+          <button type="button" id="btn-reset"
+            class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[13.5px] font-semibold text-ink hover:bg-neutral">Reset</button>
+        </div>
+        <p class="mt-3 text-[12px] leading-relaxed text-muted">Filter periode dan penerbit langsung memperbarui ringkasan, grafik, dan tabel di bawah.</p>
+      </section>
+
+      <!-- Error state -->
+      <div id="view-error" class="mb-4 hidden rounded-2xl border border-border p-6">
+        <div class="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div class="flex items-start gap-3">
+            <span class="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-full border border-border bg-neutral text-ink">
+              <span class="material-symbols-outlined text-[18px]">cloud_off</span>
+            </span>
+            <div>
+              <h2 class="text-[16px] font-bold text-ink">Data Monitoring Tidak Dapat Dimuat</h2>
+              <p class="mt-1 max-w-xl text-[13px] leading-relaxed text-muted">Terjadi kendala saat mengambil data. Coba muat ulang.</p>
+            </div>
+          </div>
+          <button type="button" id="btn-retry"
+            class="focus-ring inline-flex h-10 shrink-0 items-center gap-2 rounded-xl bg-primary px-4 text-[14px] font-semibold text-white hover:bg-primary-hover">
+            <span class="material-symbols-outlined text-[18px]">refresh</span><span>Coba Lagi</span>
+          </button>
+        </div>
+        <p id="retry-note" class="mt-3 hidden text-[12px] leading-relaxed text-muted">Pemuatan ulang disimulasikan pada prototype ini.</p>
+      </div>
+
+      <div id="view-data">
+
+        <!-- KPI -->
+        <div class="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <div class="rounded-2xl border border-border bg-white p-5">
+            <p class="text-[11px] font-bold uppercase tracking-[0.12em] text-muted">Omzet</p>
+            <p class="num mt-3 whitespace-nowrap text-[24px] font-bold leading-none tracking-tight text-ink" id="kpi-revenue">Rp 0</p>
+            <p class="mt-3 text-[13px] text-muted" id="kpi-revenue-sub">Dari transaksi demo terfilter</p>
+          </div>
+          <div class="rounded-2xl border border-border bg-white p-5">
+            <p class="text-[11px] font-bold uppercase tracking-[0.12em] text-muted">Transaksi</p>
+            <p class="num mt-3 text-[28px] font-bold leading-none tracking-tight text-ink" id="kpi-count">0</p>
+            <p class="mt-3 text-[13px] text-muted">Baris transaksi demo terfilter</p>
+          </div>
+          <div class="rounded-2xl border border-border bg-white p-5">
+            <p class="text-[11px] font-bold uppercase tracking-[0.12em] text-muted">Buku Aktif</p>
+            <p class="num mt-3 text-[28px] font-bold leading-none tracking-tight text-ink" id="kpi-books">56</p>
+            <p class="mt-3 text-[13px] text-muted">Snapshot katalog, tidak mengikuti filter</p>
+          </div>
+          <div class="rounded-2xl border border-border bg-white p-5">
+            <p class="text-[11px] font-bold uppercase tracking-[0.12em] text-muted">Penerbit Terdaftar</p>
+            <p class="num mt-3 text-[28px] font-bold leading-none tracking-tight text-ink" id="kpi-publishers">12</p>
+            <p class="mt-3 text-[13px] text-muted">Snapshot akun, tidak mengikuti filter</p>
+          </div>
+        </div>
+
+        <!-- Chart -->
+        <section aria-labelledby="chart-title" class="mb-4 rounded-2xl border border-border bg-white p-5 lg:p-6">
+          <div class="flex flex-wrap items-start justify-between gap-2">
+            <div>
+              <h2 id="chart-title" class="text-[17px] font-bold tracking-tight text-ink">Tren Omzet Penjualan</h2>
+              <p class="mt-0.5 text-[13px] text-muted">Perkembangan omzet berdasarkan periode dan penerbit terpilih.</p>
+            </div>
+            <p class="num text-[12.5px] text-muted" id="chart-peak"></p>
+          </div>
+          <div class="relative mt-4">
+            <svg id="revenue-chart" viewBox="0 0 720 260" class="h-[260px] w-full" role="img" aria-labelledby="chart-title chart-desc"></svg>
+            <div id="chart-tooltip" class="pointer-events-none absolute hidden rounded-xl border border-border bg-white px-3 py-2 text-[12px] shadow-[0_8px_24px_rgba(34,34,37,0.12)]">
+              <p class="num font-semibold text-ink" id="tip-date">-</p>
+              <p class="num mt-0.5 text-muted">Omzet <span class="font-semibold text-ink" id="tip-revenue">-</span></p>
+              <p class="num text-muted">Transaksi <span class="font-semibold text-ink" id="tip-count">-</span></p>
+            </div>
+            <p id="chart-empty" class="absolute inset-0 hidden place-items-center text-center">
+              <span class="text-[13px] text-muted">Tidak ada data omzet pada filter ini.</span>
+            </p>
+          </div>
+          <p id="chart-desc" class="sr-only">Grafik garis omzet harian berdasarkan transaksi demo yang tersedia.</p>
+        </section>
+
+        <!-- Table -->
+        <section aria-labelledby="table-title" class="rounded-2xl border border-border bg-white">
+          <div class="flex flex-col gap-2 border-b border-divider p-5 sm:flex-row sm:items-center sm:justify-between lg:px-6">
+            <div>
+              <h2 id="table-title" class="text-[17px] font-bold tracking-tight text-ink">Monitoring Transaksi Terakhir</h2>
+              <p class="mt-0.5 text-[13px] text-muted" id="table-sub">Transaksi demo yang tersedia</p>
+            </div>
+            <button type="button" id="btn-export"
+              class="focus-ring inline-flex h-10 items-center gap-2 rounded-xl border border-border px-4 text-[13.5px] font-semibold text-ink transition-colors hover:bg-neutral">
+              <span class="material-symbols-outlined text-[18px]">download</span>
+              <span>Ekspor CSV</span>
+            </button>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full min-w-[900px] border-collapse text-left">
+              <caption class="sr-only">Daftar transaksi penjualan sesuai filter aktif</caption>
+              <thead>
+                <tr class="border-b border-border bg-white text-[11px] uppercase tracking-[0.1em] text-muted">
+                  <th scope="col" class="px-5 py-3 font-bold lg:px-6">Tanggal &amp; Waktu</th>
+                  <th scope="col" class="w-40 px-4 py-3 font-bold">ID Transaksi</th>
+                  <th scope="col" class="px-4 py-3 font-bold">Buku &amp; Penerbit</th>
+                  <th scope="col" class="w-44 px-4 py-3 font-bold">Metode Bayar</th>
+                  <th scope="col" class="w-32 px-4 py-3 text-right font-bold">Nominal</th>
+                  <th scope="col" class="w-28 px-4 py-3 pr-5 font-bold lg:pr-6">Status</th>
+                </tr>
+              </thead>
+              <tbody id="tx-rows" class="text-[13px]"></tbody>
+            </table>
+          </div>
+
+          <div id="state-empty" class="hidden px-5 py-14 text-center">
+            <p class="text-[15px] font-semibold text-ink">Tidak Ada Transaksi Ditemukan</p>
+            <p class="mx-auto mt-1.5 max-w-sm text-[13px] leading-relaxed text-muted">Tidak ada transaksi yang sesuai dengan filter yang dipilih.</p>
+            <button type="button" id="btn-reset-empty"
+              class="focus-ring mt-4 inline-flex h-10 items-center rounded-xl border border-border px-4 text-[13.5px] font-semibold text-ink hover:bg-neutral">Reset Filter</button>
+          </div>
+
+          <div class="flex flex-col gap-3 border-t border-border px-5 py-3 sm:flex-row sm:items-center sm:justify-between lg:px-6">
+            <p class="text-[12.5px] text-muted" id="table-count">Menampilkan 0 dari 0 transaksi</p>
+            <div class="flex items-center gap-1.5">
+              <button type="button" id="page-prev" aria-label="Halaman sebelumnya"
+                class="focus-ring grid h-8 w-8 place-items-center rounded-lg border border-border text-ink hover:bg-neutral disabled:cursor-not-allowed disabled:opacity-40">
+                <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+              </button>
+              <span class="num min-w-8 rounded-lg bg-primary px-2 py-1 text-center text-[12.5px] font-bold text-white" id="page-current">1</span>
+              <button type="button" id="page-next" aria-label="Halaman berikutnya"
+                class="focus-ring grid h-8 w-8 place-items-center rounded-lg border border-border text-ink hover:bg-neutral disabled:cursor-not-allowed disabled:opacity-40">
+                <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var $ = function (id) { return document.getElementById(id); };
+  var rupiah = function (n) { return 'Rp ' + Number(n).toLocaleString('id-ID'); };
+
+  /* Demo dataset: the six transactions available in the existing page.
+     Snapshot figures (books, publishers) are marked as snapshot in the UI. */
+  var BASE_TX = [
+    { id: 'ORD-2026-0891', at: '2026-11-14T14:22:00+07:00', date: '2026-11-14', dateText: '14 Nov 2026, 14:22 WIB', book: 'Sang Pemimpi', publisher: 'PT Mizan Pustaka Utama', method: 'QRIS Gopay', amount: 145000, status: 'Berhasil' },
+    { id: 'ORD-2026-0890', at: '2026-11-14T13:40:00+07:00', date: '2026-11-14', dateText: '14 Nov 2026, 13:40 WIB', book: 'Laskar Pelangi', publisher: 'PT Bentang Pustaka', method: 'BCA Virtual Account', amount: 85000, status: 'Berhasil' },
+    { id: 'ORD-2026-0889', at: '2026-11-14T11:15:00+07:00', date: '2026-11-14', dateText: '14 Nov 2026, 11:15 WIB', book: 'Aroma Karsa', publisher: 'CV Angkasa Publishing', method: 'Mandiri Bill', amount: 120000, status: 'Berhasil' },
+    { id: 'ORD-2026-0888', at: '2026-11-14T09:30:00+07:00', date: '2026-11-14', dateText: '14 Nov 2026, 09:30 WIB', book: 'Hujan di Bulan Juni', publisher: 'PT Mizan Pustaka Utama', method: 'BNI Virtual Account', amount: 95000, status: 'Berhasil' },
+    { id: 'ORD-2026-0887', at: '2026-11-13T21:05:00+07:00', date: '2026-11-13', dateText: '13 Nov 2026, 21:05 WIB', book: 'Bumi Manusia', publisher: 'PT Bentang Pustaka', method: 'ShopeePay', amount: 110000, status: 'Berhasil' },
+    { id: 'ORD-2026-0886', at: '2026-11-13T18:40:00+07:00', date: '2026-11-13', dateText: '13 Nov 2026, 18:40 WIB', book: 'Cantik Itu Luka', publisher: 'CV Pelangi Aksara', method: 'BRI Virtual Account', amount: 135000, status: 'Berhasil' },
+    { id: 'ORD-2026-0879', at: '2026-11-12T10:05:00+07:00', date: '2026-11-12', dateText: '12 Nov 2026, 10:05 WIB', book: 'Laskar Aksara Pasundan', publisher: 'PT Kiblat Buku Utama', method: 'BCA Virtual Account', amount: 118000, status: 'Berhasil' },
+    { id: 'ORD-2026-0863', at: '2026-11-06T16:20:00+07:00', date: '2026-11-06', dateText: '06 Nov 2026, 16:20 WIB', book: 'Pendidikan Karakter Sunda', publisher: 'UPI Press', method: 'Mandiri Bill', amount: 96000, status: 'Berhasil' },
+    { id: 'ORD-2026-0852', at: '2026-11-05T09:48:00+07:00', date: '2026-11-05', dateText: '05 Nov 2026, 09:48 WIB', book: 'Flora Priangan: Arsip Hayati', publisher: 'Bumi Aksara', method: 'BNI Virtual Account', amount: 88000, status: 'Berhasil' },
+    { id: 'ORD-2026-0841', at: '2026-11-03T13:12:00+07:00', date: '2026-11-03', dateText: '03 Nov 2026, 13:12 WIB', book: 'Bumi Parahyangan: Jejak Purba', publisher: 'ITB Press', method: 'QRIS Gopay', amount: 132000, status: 'Berhasil' }
+  ];
+
+  var SNAPSHOT_END = '2026-11-14';   /* last date covered by the demo dataset */
+  var SNAPSHOT_BOOKS = 56;
+  var SNAPSHOT_PUBLISHERS = 12;
+  var PAGE_SIZE = 5;
+
+  var tx = BASE_TX.slice();
+  var ui = { preset: '14', publisher: 'all', page: 1, demo: 'A' };
+  var applied = { preset: '14', publisher: 'all' };
+
+  function note(t) { var el = $('page-note'); el.textContent = t || ''; el.classList.toggle('hidden', !t); }
+
+  function presetRange(preset) {
+    var end = new Date(SNAPSHOT_END + 'T00:00:00+07:00');
+    var start = new Date(end.getTime());
+    if (preset === '7') start.setDate(end.getDate() - 6);
+    else if (preset === '14') start.setDate(end.getDate() - 13);
+    else if (preset === '30') start.setDate(end.getDate() - 29);
+    else start = new Date('2026-11-01T00:00:00+07:00');
+    return { start: start, end: end };
+  }
+
+  function fmtShort(d) {
+    return new Intl.DateTimeFormat('id-ID', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'Asia/Jakarta' }).format(d);
+  }
+
+  function scopedRows() {
+    if (!tx.length) return [];
+    var r = presetRange(applied.preset);
+    return tx.filter(function (t) {
+      var d = new Date(t.date + 'T00:00:00+07:00');
+      var inRange = d >= r.start && d <= r.end;
+      var inPub = applied.publisher === 'all' || t.publisher === applied.publisher;
+      return inRange && inPub;
+    }).sort(function (a, b) { return new Date(b.at) - new Date(a.at); });
+  }
+
+  function series(rows) {
+    var map = {};
+    rows.forEach(function (t) {
+      if (!map[t.date]) map[t.date] = { date: t.date, revenue: 0, count: 0 };
+      map[t.date].revenue += t.amount;
+      map[t.date].count += 1;
+    });
+    return Object.keys(map).sort().map(function (k) { return map[k]; });
+  }
+
+  /* ---------- chart ---------- */
+  var activePoint = null;
+
+  function renderChart(points) {
+    var svg = $('revenue-chart');
+    svg.innerHTML = '';
+    $('chart-tooltip').classList.add('hidden');
+    $('chart-peak').textContent = '';
+
+    if (!points.length) {
+      $('chart-empty').classList.remove('hidden');
+      $('chart-empty').classList.add('grid');
+      return;
+    }
+    $('chart-empty').classList.add('hidden');
+    $('chart-empty').classList.remove('grid');
+
+    var W = 720, H = 260, padL = 64, padR = 20, padT = 20, padB = 42;
+    var maxV = Math.max.apply(null, points.map(function (p) { return p.revenue; }));
+    var top = maxV * 1.15;
+    var innerW = W - padL - padR;
+    var innerH = H - padT - padB;
+    var stepX = points.length > 1 ? innerW / (points.length - 1) : 0;
+
+    var xOf = function (i) { return points.length > 1 ? padL + stepX * i : padL + innerW / 2; };
+    var yOf = function (v) { return padT + innerH * (1 - v / top); };
+
+    var NS = 'http://www.w3.org/2000/svg';
+    function add(tag, attrs, text) {
+      var el = document.createElementNS(NS, tag);
+      Object.keys(attrs).forEach(function (k) { el.setAttribute(k, attrs[k]); });
+      if (text !== undefined) el.textContent = text;
+      svg.appendChild(el);
+      return el;
+    }
+
+    /* grid + y labels */
+    [0, 0.5, 1].forEach(function (f) {
+      var v = top * f;
+      var y = yOf(v);
+      add('line', { x1: padL, x2: W - padR, y1: y, y2: y, stroke: '#EFEFF2', 'stroke-width': 1 });
+      add('text', { x: padL - 10, y: y + 4, 'font-size': 11, fill: '#62636B', 'text-anchor': 'end' },
+        'Rp ' + Math.round(v).toLocaleString('id-ID'));
+    });
+
+    /* area + line */
+    var linePts = points.map(function (p, i) { return xOf(i) + ',' + yOf(p.revenue); }).join(' ');
+    var areaPts = padL + ',' + yOf(0) + ' ' + linePts + ' ' + xOf(points.length - 1) + ',' + yOf(0);
+    add('polygon', { points: areaPts, fill: '#673DE6', 'fill-opacity': 0.10 });
+    add('polyline', { points: linePts, fill: 'none', stroke: '#673DE6', 'stroke-width': 2.5, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' });
+
+    /* x labels */
+    points.forEach(function (p, i) {
+      add('text', { x: xOf(i), y: H - 14, 'font-size': 11, fill: '#62636B', 'text-anchor': 'middle' },
+        new Intl.DateTimeFormat('id-ID', { day: '2-digit', month: 'short', timeZone: 'Asia/Jakarta' }).format(new Date(p.date + 'T00:00:00+07:00')));
+    });
+
+    /* points (keyboard focusable) */
+    points.forEach(function (p, i) {
+      var g = document.createElementNS(NS, 'g');
+      g.setAttribute('tabindex', '0');
+      g.setAttribute('role', 'button');
+      g.setAttribute('aria-label', fmtShort(new Date(p.date + 'T00:00:00+07:00')) + ', omzet ' + rupiah(p.revenue) + ', ' + p.count + ' transaksi');
+      g.setAttribute('data-point', String(i));
+      g.style.cursor = 'pointer';
+
+      var dot = document.createElementNS(NS, 'circle');
+      dot.setAttribute('cx', xOf(i)); dot.setAttribute('cy', yOf(p.revenue)); dot.setAttribute('r', 4);
+      dot.setAttribute('fill', '#FFFFFF'); dot.setAttribute('stroke', '#673DE6'); dot.setAttribute('stroke-width', 2);
+      g.appendChild(dot);
+      svg.appendChild(g);
+
+      function show() { showTip(p, xOf(i), yOf(p.revenue)); activePoint = i; }
+      g.addEventListener('mouseenter', show);
+      g.addEventListener('focus', show);
+      g.addEventListener('click', show);
+      g.addEventListener('mouseleave', function () { if (activePoint !== i) hideTip(); });
+      g.addEventListener('blur', hideTip);
+    });
+
+    /* dynamic peak */
+    var peak = points.reduce(function (a, b) { return b.revenue > a.revenue ? b : a; }, points[0]);
+    $('chart-peak').textContent = 'Puncak ' + fmtShort(new Date(peak.date + 'T00:00:00+07:00')) + ', ' + rupiah(peak.revenue);
+  }
+
+  function showTip(p, x, y) {
+    var tip = $('chart-tooltip');
+    $('tip-date').textContent = fmtShort(new Date(p.date + 'T00:00:00+07:00'));
+    $('tip-revenue').textContent = rupiah(p.revenue);
+    $('tip-count').textContent = String(p.count);
+    tip.classList.remove('hidden');
+    var svg = $('revenue-chart');
+    var ratio = svg.clientWidth / 720 || 1;
+    tip.style.left = Math.min(Math.max(x * ratio - 60, 0), (svg.clientWidth - 170)) + 'px';
+    tip.style.top = Math.max(y * ratio - 76, 0) + 'px';
+  }
+  function hideTip() { $('chart-tooltip').classList.add('hidden'); activePoint = null; }
+
+  /* ---------- table ---------- */
+  function render() {
+    var rows = scopedRows();
+    var points = series(rows);
+
+    var revenue = rows.reduce(function (a, t) { return a + t.amount; }, 0);
+    $('kpi-revenue').textContent = rupiah(revenue);
+    $('kpi-count').textContent = String(rows.length);
+    $('kpi-revenue-sub').textContent = applied.publisher === 'all'
+      ? 'Dari transaksi demo terfilter'
+      : 'Dari transaksi ' + applied.publisher;
+    $('kpi-books').textContent = String(SNAPSHOT_BOOKS);
+    $('kpi-publishers').textContent = String(SNAPSHOT_PUBLISHERS);
+
+    renderChart(points);
+
+    var pages = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
+    if (ui.page > pages) ui.page = pages;
+    var start = (ui.page - 1) * PAGE_SIZE;
+    var visible = rows.slice(start, start + PAGE_SIZE);
+
+    var tbody = $('tx-rows');
+    tbody.innerHTML = '';
+    visible.forEach(function (t) {
+      var tr = document.createElement('tr');
+      tr.className = 'border-b border-divider align-middle transition-colors hover:bg-soft';
+
+      var tdWhen = document.createElement('td');
+      tdWhen.className = 'num whitespace-nowrap px-5 py-3.5 text-muted lg:px-6';
+      tdWhen.textContent = t.dateText;
+
+      var tdId = document.createElement('td');
+      tdId.className = 'num whitespace-nowrap px-4 py-3.5 font-semibold text-ink';
+      tdId.textContent = '#' + t.id;
+
+      var tdBook = document.createElement('td');
+      tdBook.className = 'px-4 py-3.5';
+      var b = document.createElement('p');
+      b.className = 'font-semibold text-ink';
+      b.textContent = t.book;
+      var p = document.createElement('p');
+      p.className = 'mt-0.5 text-[12px] text-muted';
+      p.textContent = t.publisher;
+      tdBook.appendChild(b);
+      tdBook.appendChild(p);
+
+      var tdMethod = document.createElement('td');
+      tdMethod.className = 'px-4 py-3.5 text-ink';
+      tdMethod.textContent = t.method;
+
+      var tdAmount = document.createElement('td');
+      tdAmount.className = 'num whitespace-nowrap px-4 py-3.5 text-right font-semibold text-ink';
+      tdAmount.textContent = rupiah(t.amount);
+
+      var tdStatus = document.createElement('td');
+      tdStatus.className = 'px-4 py-3.5 pr-5 lg:pr-6';
+      var chip = document.createElement('span');
+      chip.className = 'text-[12px] font-semibold text-[#0F7B4F]';
+      chip.textContent = t.status;
+      tdStatus.appendChild(chip);
+
+      tr.appendChild(tdWhen); tr.appendChild(tdId); tr.appendChild(tdBook);
+      tr.appendChild(tdMethod); tr.appendChild(tdAmount); tr.appendChild(tdStatus);
+      tbody.appendChild(tr);
+    });
+
+    var empty = rows.length === 0;
+    tbody.closest('table').classList.toggle('hidden', empty);
+    $('state-empty').classList.toggle('hidden', !empty);
+    $('btn-export').disabled = empty;
+    $('btn-export').classList.toggle('opacity-40', empty);
+    $('btn-export').classList.toggle('cursor-not-allowed', empty);
+
+    $('table-count').textContent = 'Menampilkan ' + visible.length + ' dari ' + rows.length + ' transaksi';
+    $('table-sub').textContent = applied.publisher === 'all'
+      ? 'Transaksi demo pada periode terpilih'
+      : 'Transaksi ' + applied.publisher + ' pada periode terpilih';
+    $('page-current').textContent = String(ui.page);
+    $('page-prev').disabled = ui.page <= 1;
+    $('page-next').disabled = ui.page >= pages;
+
+    var r = presetRange(applied.preset);
+    $('date-range').textContent = fmtShort(r.start) + ' - ' + fmtShort(r.end);
+    paintPresets();
+    syncDemoMenu();
+  }
+
+  function paintPresets() {
+    document.querySelectorAll('.preset-btn').forEach(function (b) {
+      var on = b.getAttribute('data-preset') === ui.preset;
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      b.className = 'preset-btn focus-ring rounded-lg px-3 py-1.5 text-[12.5px] ' +
+        (on ? 'bg-white font-bold text-primary shadow-sm' : 'font-semibold text-muted hover:text-ink');
     });
   }
 
-  function applyDatePreset(days) {
-    const presets = ['preset-7', 'preset-14', 'preset-30', 'preset-month'];
-    presets.forEach(p => {
-      const btn = document.getElementById(p);
-      if (!btn) return;
-      btn.className = "px-space-sm py-1.5 rounded text-label-small font-label-small text-ink-muted hover:text-ink-body font-semibold transition-colors";
+  /* ---------- filters ---------- */
+  document.querySelectorAll('.preset-btn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      ui.preset = b.getAttribute('data-preset');
+      paintPresets();
     });
-    const activeBtn = document.getElementById('preset-' + days);
-    if (activeBtn) {
-      activeBtn.className = "px-space-sm py-1.5 rounded text-label-small font-label-small bg-primary-container text-on-primary font-bold shadow-sm transition-colors";
-    }
+  });
 
-    const dateInput = document.getElementById('filter-date-input');
-    const scopeLabel = document.getElementById('header-scope-label');
-    const feedback = document.getElementById('filter-feedback-text');
-
-    if (days === '7') {
-      dateInput.value = '08/11/2026 — 14/11/2026';
-      scopeLabel.innerText = '08 Nov 2026 – 14 Nov 2026 (7 Hari)';
-      feedback.innerHTML = 'Menampilkan metrik dari <strong>08 Nov 2026 — 14 Nov 2026</strong> untuk penerbit aktif.';
-      setPrototypeState('7days');
-    } else if (days === '14') {
-      dateInput.value = '01/11/2026 — 14/11/2026';
-      scopeLabel.innerText = '01 Nov 2026 – 14 Nov 2026 (14 Hari)';
-      feedback.innerHTML = 'Menampilkan metrik dari <strong>01 Nov 2026 — 14 Nov 2026</strong> untuk penerbit aktif.';
-      setPrototypeState('default');
-    } else if (days === '30') {
-      dateInput.value = '15/10/2026 — 14/11/2026';
-      scopeLabel.innerText = '15 Okt 2026 – 14 Nov 2026 (30 Hari)';
-      feedback.innerHTML = 'Menampilkan metrik dari <strong>15 Okt 2026 — 14 Nov 2026</strong> untuk penerbit aktif.';
-      document.getElementById('metric-turnover').innerText = 'Rp 39.820.000';
-      document.getElementById('metric-transactions').innerText = '308 Transaksi';
-    } else if (days === 'month') {
-      dateInput.value = '01/11/2026 — 30/11/2026';
-      scopeLabel.innerText = 'Bulan Berjalan (November 2026)';
-      feedback.innerHTML = 'Menampilkan metrik akumulatif <strong>November 2026</strong>.';
-    }
+  function paintPublishers() {
+    var sel = $('publisher-filter');
+    var list = [];
+    tx.forEach(function (t) { if (list.indexOf(t.publisher) === -1) list.push(t.publisher); });
+    sel.innerHTML = '';
+    var all = document.createElement('option');
+    all.value = 'all'; all.textContent = 'Semua Penerbit';
+    sel.appendChild(all);
+    list.forEach(function (p) {
+      var o = document.createElement('option');
+      o.value = p; o.textContent = p;
+      sel.appendChild(o);
+    });
+    sel.value = list.indexOf(ui.publisher) !== -1 ? ui.publisher : 'all';
+    ui.publisher = sel.value;
   }
 
-  function handlePublisherChange(pubVal) {
-    if (pubVal === 'mizan') {
-      setPrototypeState('mizan');
-    } else if (pubVal === 'all') {
-      setPrototypeState('default');
+  $('publisher-filter').addEventListener('change', function (e) {
+    ui.publisher = e.target.value;
+  });
+
+  function doReset() {
+    ui.preset = '14'; ui.publisher = 'all';
+    applied.preset = '14'; applied.publisher = 'all';
+    ui.page = 1;
+    tx = BASE_TX.slice();
+    paintPublishers();
+    note('');
+    render();
+  }
+  $('btn-reset').addEventListener('click', doReset);
+  $('btn-reset-empty').addEventListener('click', doReset);
+
+  $('page-prev').addEventListener('click', function () { if (ui.page > 1) { ui.page--; render(); } });
+  $('page-next').addEventListener('click', function () { ui.page++; render(); });
+
+  /* ---------- CSV export ---------- */
+  $('btn-export').addEventListener('click', function () {
+    var rows = scopedRows();
+    if (!rows.length) return;
+    var out = [['Tanggal', 'ID Transaksi', 'Buku', 'Penerbit', 'Metode Bayar', 'Nominal', 'Status']];
+    rows.forEach(function (t) { out.push([t.dateText, t.id, t.book, t.publisher, t.method, t.amount, t.status]); });
+    out.push([]);
+    out.push(['Total omzet', '', '', '', '', rows.reduce(function (a, t) { return a + t.amount; }, 0), '']);
+    var csv = out.map(function (r) { return r.join(';'); }).join('\r\n');
+    var blob = new Blob(['\ufeff' + csv], { type: 'text/csv;charset=utf-8;' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'monitoring-transaksi-ikapi.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    note('CSV dibuat dari ' + rows.length + ' transaksi yang tampil saat ini.');
+  });
+
+  /* ---------- demo scenarios ---------- */
+  var demoToggle = $('demo-toggle'), demoMenu = $('demo-menu');
+  function closeDemo() { demoMenu.classList.add('hidden'); demoToggle.setAttribute('aria-expanded', 'false'); }
+  function syncDemoMenu() {
+    document.querySelectorAll('.demo-item').forEach(function (b) {
+      var on = b.getAttribute('data-demo') === ui.demo;
+      b.setAttribute('aria-checked', on ? 'true' : 'false');
+      b.classList.toggle('bg-soft', on);
+      var c = b.querySelector('.demo-check');
+      if (c) c.classList.toggle('hidden', !on);
+    });
+  }
+
+  function applyDemo(s) {
+    ui.demo = s;
+    $('view-error').classList.add('hidden');
+    $('view-data').classList.remove('hidden');
+    $('retry-note').classList.add('hidden');
+    note('');
+
+    tx = BASE_TX.slice();
+    ui.publisher = 'all';
+    ui.page = 1;
+
+    if (s === 'B') { ui.preset = '7'; }
+    else if (s === 'C') { ui.preset = '14'; ui.publisher = 'PT Mizan Pustaka Utama'; }
+    else if (s === 'D') { tx = []; ui.preset = '14'; }
+    else if (s === 'E') {
+      $('view-data').classList.add('hidden');
+      $('view-error').classList.remove('hidden');
+    } else { ui.preset = '14'; }
+
+    applied.preset = ui.preset;
+    applied.publisher = ui.publisher;
+    paintPublishers();
+    render();
+  }
+
+  demoToggle.addEventListener('click', function () {
+    var open = demoMenu.classList.contains('hidden');
+    demoMenu.classList.toggle('hidden', !open);
+    demoToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  demoMenu.addEventListener('click', function (e) {
+    var btn = e.target.closest('.demo-item');
+    if (!btn) return;
+    closeDemo();
+    applyDemo(btn.getAttribute('data-demo'));
+  });
+
+  $('btn-retry').addEventListener('click', function () {
+    var btn = $('btn-retry');
+    btn.disabled = true;
+    window.setTimeout(function () {
+      btn.disabled = false;
+      $('view-error').classList.add('hidden');
+      $('view-data').classList.remove('hidden');
+      $('retry-note').classList.remove('hidden');
+      applyDemo('A');
+      note('Data ditampilkan kembali menggunakan dataset demo prototype.');
+    }, 700);
+  });
+
+  /* ---------- notifications / sidebar / keyboard ---------- */
+  var notifBtn = $('btn-notif'), notifPanel = $('notif-panel');
+  notifBtn.addEventListener('click', function () {
+    var open = notifPanel.classList.contains('hidden');
+    notifPanel.classList.toggle('hidden', !open);
+    notifBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!demoMenu.contains(e.target) && !demoToggle.contains(e.target)) closeDemo();
+    if (!notifPanel.contains(e.target) && !notifBtn.contains(e.target)) {
+      notifPanel.classList.add('hidden');
+      notifBtn.setAttribute('aria-expanded', 'false');
     }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    closeDemo();
+    notifPanel.classList.add('hidden');
+    notifBtn.setAttribute('aria-expanded', 'false');
+    closeSidebar();
+  });
+
+  var sidebar = $('publisher-sidebar'), scrim = $('sidebar-scrim'), toggle = $('sidebar-toggle');
+  function openSidebar() {
+    sidebar.classList.add('is-open');
+    scrim.classList.remove('hidden');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    var first = sidebar.querySelector('a');
+    if (first) first.focus();
   }
-
-  function applyCurrentFilters() {
-    const sel = document.getElementById('publisher-select').value;
-    if (sel === 'mizan') {
-      setPrototypeState('mizan');
-    } else {
-      setPrototypeState('default');
-    }
+  function closeSidebar() {
+    if (!sidebar.classList.contains('is-open')) return;
+    sidebar.classList.remove('is-open');
+    scrim.classList.add('hidden');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    toggle.focus();
   }
+  toggle.addEventListener('click', function () {
+    sidebar.classList.contains('is-open') ? closeSidebar() : openSidebar();
+  });
+  scrim.addEventListener('click', closeSidebar);
+  sidebar.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeSidebar); });
 
-  function resetFilters() {
-    document.getElementById('publisher-select').value = 'all';
-    applyDatePreset('14');
-    setPrototypeState('default');
-  }
+  window.addEventListener('resize', function () { hideTip(); });
 
-  function setPrototypeState(state) {
-    const dataContainer = document.getElementById('monitoring-data-container');
-    const emptyView = document.getElementById('empty-state-view');
-    const errorBanner = document.getElementById('error-banner');
-    
-    // Reset state views
-    dataContainer.classList.remove('hidden');
-    emptyView.classList.add('hidden');
-    emptyView.classList.remove('flex');
-    errorBanner.classList.add('hidden');
-
-    if (state === 'default') {
-      setSimBtnActive('btn-state-default');
-      document.getElementById('publisher-select').value = 'all';
-      document.getElementById('metric-turnover').innerText = 'Rp 18.450.000';
-      document.getElementById('metric-transactions').innerText = '142 Transaksi';
-      document.getElementById('metric-books').innerText = '56 Judul';
-      document.getElementById('metric-publishers').innerText = '12 Penerbit';
-      document.getElementById('chart-peak-badge').innerText = 'Puncak: Rp 2.450.000 (10 Nov)';
-      document.getElementById('table-tx-count').innerText = 'Menampilkan 6 dari 142 Transaksi';
-      document.getElementById('pagination-label').innerHTML = 'Menampilkan <span class="font-semibold text-ink-body">1 - 6</span> dari <span class="font-semibold text-ink-body">142</span> transaksi terverifikasi';
-      document.getElementById('filter-feedback-text').innerHTML = 'Menampilkan metrik dari <strong>01 Nov 2026 — 14 Nov 2026</strong> untuk <strong>Semua Penerbit (12 Mitra)</strong>.';
-      document.getElementById('header-scope-label').innerText = '01 Nov 2026 – 14 Nov 2026 (14 Hari)';
-    } else if (state === '7days') {
-      setSimBtnActive('btn-state-7days');
-      document.getElementById('metric-turnover').innerText = 'Rp 9.120.000';
-      document.getElementById('metric-transactions').innerText = '68 Transaksi';
-      document.getElementById('metric-books').innerText = '56 Judul';
-      document.getElementById('metric-publishers').innerText = '12 Penerbit';
-      document.getElementById('chart-peak-badge').innerText = 'Puncak: Rp 2.450.000 (10 Nov)';
-      document.getElementById('table-tx-count').innerText = 'Menampilkan 6 dari 68 Transaksi';
-      document.getElementById('pagination-label').innerHTML = 'Menampilkan <span class="font-semibold text-ink-body">1 - 6</span> dari <span class="font-semibold text-ink-body">68</span> transaksi terverifikasi';
-      document.getElementById('filter-date-input').value = '08/11/2026 — 14/11/2026';
-      document.getElementById('filter-feedback-text').innerHTML = 'Menampilkan metrik <strong>7 Hari Terakhir</strong> untuk Semua Penerbit.';
-      document.getElementById('header-scope-label').innerText = '08 Nov 2026 – 14 Nov 2026 (7 Hari)';
-    } else if (state === 'mizan') {
-      setSimBtnActive('btn-state-mizan');
-      document.getElementById('publisher-select').value = 'mizan';
-      document.getElementById('metric-turnover').innerText = 'Rp 6.840.000';
-      document.getElementById('metric-transactions').innerText = '49 Transaksi';
-      document.getElementById('metric-books').innerText = '18 Judul';
-      document.getElementById('metric-publishers').innerText = '1 Penerbit (Mizan)';
-      document.getElementById('chart-peak-badge').innerText = 'Puncak Mizan: Rp 1.150.000 (10 Nov)';
-      document.getElementById('table-tx-count').innerText = 'Menampilkan 2 dari 49 Transaksi';
-      document.getElementById('pagination-label').innerHTML = 'Menampilkan <span class="font-semibold text-ink-body">1 - 2</span> dari <span class="font-semibold text-ink-body">49</span> transaksi Mizan';
-      document.getElementById('filter-feedback-text').innerHTML = 'Filter aktif: <strong>PT Mizan Pustaka Utama</strong> (01 Nov — 14 Nov 2026).';
-    } else if (state === 'empty') {
-      setSimBtnActive('btn-state-empty');
-      dataContainer.classList.add('hidden');
-      emptyView.classList.remove('hidden');
-      emptyView.classList.add('flex');
-      document.getElementById('filter-feedback-text').innerHTML = 'Tidak ditemukan transaksi pada parameter yang dipilih.';
-    } else if (state === 'error') {
-      setSimBtnActive('btn-state-error');
-      errorBanner.classList.remove('hidden');
-    }
-  }
-</script></main></div>
-
-</body></html>
+  /* ---------- init ---------- */
+  paintPublishers();
+  render();
+})();
+</script>
+</body>
+</html>

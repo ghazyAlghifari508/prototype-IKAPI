@@ -116,9 +116,11 @@
             <span id="header-cart-badge" class="absolute 1 top-1 right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-primary text-white text-[11px] font-bold flex items-center justify-center">2</span>
           </a>
           <div class="h-6 w-px bg-border-subtle"></div>
-          <a class="hidden sm:flex h-10 px-5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[14px] font-semibold items-center gap-2 transition-colors shadow-xs" data-path="login" href="masuk_login_desktop.html">
-            <span class="material-symbols-outlined text-[18px]">person</span>
-            <span>Masuk / Akun</span>
+          <a class="hidden h-10 items-center rounded-xl px-3 text-[14px] font-semibold text-ink-body transition-colors hover:bg-surface-soft sm:flex" data-path="login" href="masuk_login_desktop.html">
+            <span>Masuk</span>
+          </a>
+          <a class="hidden h-10 items-center rounded-xl bg-primary px-5 text-[14px] font-semibold text-white shadow-xs transition-colors hover:bg-primary-hover sm:flex" data-path="register" href="daftar_akun_register_desktop.html">
+            <span>Daftar</span>
           </a>
         </div>
       </div>
@@ -127,7 +129,7 @@
         <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="beranda" href="beranda_desktop.html">Beranda</a>
         <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a>
         <a aria-current="page" class="h-full flex items-center transition-colors whitespace-nowrap text-primary font-bold border-b-2 border-primary" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a>
-        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Komunitas Penerbit</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Komunitas Literasi</a>
       </nav>
     </div>
   </header>
@@ -284,7 +286,8 @@
               <div id="events-container" class="flex flex-col gap-4">
                 
                 <!-- Event 1 (18 Nov) -->
-                <article class="event-card group bg-white hover:bg-surface-soft/40 rounded-2xl p-4 sm:p-5 border border-border-subtle hover:border-primary/40 transition-all shadow-xs flex flex-col sm:flex-row gap-5 items-start sm:items-center" data-event-id="ev-1" data-date="2026-11-18">
+                <article class="event-card group relative bg-white hover:bg-surface-soft/40 rounded-2xl p-4 sm:p-5 border border-border-subtle hover:border-primary/40 transition-all shadow-xs flex flex-col sm:flex-row gap-5 items-start sm:items-center" data-event-id="ev-1" data-date="2026-11-18">
+                  <a href="detail_agenda_desktop.html?id=ev-1" class="absolute inset-0 z-0 rounded-2xl" aria-label="Lihat detail agenda: Lokakarya Filologi Populer: Mengalihaksarakan Naskah Sunda Kuno"></a>
                   <div class="w-full sm:w-48 h-36 rounded-xl overflow-hidden shrink-0 relative bg-surface-neutral border border-border-subtle">
                     <img src="../../assets/events/event-community.jpg" alt="Lokakarya Filologi Populer" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                     <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-md bg-[#222225]/85 backdrop-blur-xs text-white text-[11px] font-bold">
@@ -308,7 +311,7 @@
                     </div>
                     <div class="mt-4 pt-2.5 border-t border-border-subtle flex items-center justify-between">
                       <span class="text-[12px] text-ink-muted">Penyelenggara: <strong class="text-ink-body font-semibold">Kiblat Buku</strong></span>
-                      <button type="button" class="h-8 px-3.5 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white font-semibold text-[13px] flex items-center gap-1.5 transition-colors border border-primary/20 hover:border-transparent" onclick="downloadIcsFile('Lokakarya Filologi Populer', '20261118T100000', '20261118T123000', 'Graha IKAPI Jabar, Bandung', 'Lokakarya Filologi Populer.')">
+                      <button type="button" class="relative z-10 h-8 px-3.5 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white font-semibold text-[13px] flex items-center gap-1.5 transition-colors border border-primary/20 hover:border-transparent" onclick="downloadIcsFile('Lokakarya Filologi Populer', '20261118T100000', '20261118T123000', 'Graha IKAPI Jabar, Bandung', 'Lokakarya Filologi Populer.')">
                         <span class="material-symbols-outlined text-[16px]">calendar_add_on</span>
                         <span>Simpan</span>
                       </button>
@@ -317,7 +320,8 @@
                 </article>
 
                 <!-- Event 2 (22 Nov) -->
-                <article class="event-card group bg-white hover:bg-surface-soft/40 rounded-2xl p-4 sm:p-5 border border-border-subtle hover:border-primary/40 transition-all shadow-xs flex flex-col sm:flex-row gap-5 items-start sm:items-center" data-event-id="ev-2" data-date="2026-11-22">
+                <article class="event-card group relative bg-white hover:bg-surface-soft/40 rounded-2xl p-4 sm:p-5 border border-border-subtle hover:border-primary/40 transition-all shadow-xs flex flex-col sm:flex-row gap-5 items-start sm:items-center" data-event-id="ev-2" data-date="2026-11-22">
+                  <a href="detail_agenda_desktop.html?id=ev-2" class="absolute inset-0 z-0 rounded-2xl" aria-label="Lihat detail agenda: Bedah Buku & Diskusi Publik: Pendidikan Karakter Berbasis Kearifan Lokal"></a>
                   <div class="w-full sm:w-48 h-36 rounded-xl overflow-hidden shrink-0 relative bg-surface-neutral border border-border-subtle">
                     <img src="../../assets/events/event-children-story.jpg" alt="Bedah Buku & Diskusi Publik" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                     <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-md bg-[#222225]/85 backdrop-blur-xs text-white text-[11px] font-bold">
@@ -341,7 +345,7 @@
                     </div>
                     <div class="mt-4 pt-2.5 border-t border-border-subtle flex items-center justify-between">
                       <span class="text-[12px] text-ink-muted">Penyelenggara: <strong class="text-ink-body font-semibold">UPI Press</strong></span>
-                      <button type="button" class="h-8 px-3.5 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white font-semibold text-[13px] flex items-center gap-1.5 transition-colors border border-primary/20 hover:border-transparent" onclick="downloadIcsFile('Bedah Buku Pendidikan Karakter Sunda', '20261122T133000', '20261122T160000', 'Aula Pusat Studi Sunda, Bandung', 'Bedah Buku.')">
+                      <button type="button" class="relative z-10 h-8 px-3.5 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white font-semibold text-[13px] flex items-center gap-1.5 transition-colors border border-primary/20 hover:border-transparent" onclick="downloadIcsFile('Bedah Buku Pendidikan Karakter Sunda', '20261122T133000', '20261122T160000', 'Aula Pusat Studi Sunda, Bandung', 'Bedah Buku.')">
                         <span class="material-symbols-outlined text-[16px]">calendar_add_on</span>
                         <span>Simpan</span>
                       </button>
@@ -350,7 +354,8 @@
                 </article>
 
                 <!-- Event 3 (28 Nov) -->
-                <article class="event-card group bg-white hover:bg-surface-soft/40 rounded-2xl p-4 sm:p-5 border border-border-subtle hover:border-primary/40 transition-all shadow-xs flex flex-col sm:flex-row gap-5 items-start sm:items-center" data-event-id="ev-3" data-date="2026-11-28">
+                <article class="event-card group relative bg-white hover:bg-surface-soft/40 rounded-2xl p-4 sm:p-5 border border-border-subtle hover:border-primary/40 transition-all shadow-xs flex flex-col sm:flex-row gap-5 items-start sm:items-center" data-event-id="ev-3" data-date="2026-11-28">
+                  <a href="detail_agenda_desktop.html?id=ev-3" class="absolute inset-0 z-0 rounded-2xl" aria-label="Lihat detail agenda: Sarasehan Editor & Penulis: Standarisasi E-Book Berlisensi"></a>
                   <div class="w-full sm:w-48 h-36 rounded-xl overflow-hidden shrink-0 relative bg-surface-neutral border border-border-subtle">
                     <img src="../../assets/events/event-webinar.jpg" alt="Sarasehan Editor & Penulis" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                     <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-md bg-[#222225]/85 backdrop-blur-xs text-white text-[11px] font-bold">
@@ -374,7 +379,7 @@
                     </div>
                     <div class="mt-4 pt-2.5 border-t border-border-subtle flex items-center justify-between">
                       <span class="text-[12px] text-ink-muted">Penyelenggara: <strong class="text-ink-body font-semibold">IKAPI Jabar</strong></span>
-                      <button type="button" class="h-8 px-3.5 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white font-semibold text-[13px] flex items-center gap-1.5 transition-colors border border-primary/20 hover:border-transparent" onclick="downloadIcsFile('Sarasehan Editor & Penulis', '20261128T090000', '20261128T120000', 'Daring Zoom / Hybrid', 'Sarasehan Editor.')">
+                      <button type="button" class="relative z-10 h-8 px-3.5 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white font-semibold text-[13px] flex items-center gap-1.5 transition-colors border border-primary/20 hover:border-transparent" onclick="downloadIcsFile('Sarasehan Editor & Penulis', '20261128T090000', '20261128T120000', 'Daring Zoom / Hybrid', 'Sarasehan Editor.')">
                         <span class="material-symbols-outlined text-[16px]">calendar_add_on</span>
                         <span>Simpan</span>
                       </button>
@@ -703,10 +708,10 @@
         <div class="flex flex-col gap-3">
           <span class="text-[16px] text-white font-bold tracking-tight">Tentang IKAPI</span>
           <ul class="flex flex-col gap-2.5 text-[14px] text-[#b8b8bd]">
-            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Tentang Kami</a></li>
-            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Anggota Penerbit</a></li>
-            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Kemitraan Perpustakaan</a></li>
-            <li><a class="hover:text-white transition-colors" data-path="komunitas-penerbit" href="komunitas_literasi_desktop.html">Hubungi Kami</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Tentang Kami</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Anggota Penerbit</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Kemitraan Perpustakaan</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Hubungi Kami</a></li>
           </ul>
         </div>
 
@@ -1186,5 +1191,8 @@
       renderFilteredEvents();
     });
   </script>
+
+<script src="chatbot-widget.js" defer></script>
+
 </body>
 </html>

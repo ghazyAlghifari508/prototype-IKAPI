@@ -4,214 +4,262 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="web_standard" name="shell-type">
-  <title>Daftar Akun — IKAPI Store Jawa Barat</title>
+  <title>Daftar Akun — IKAPI Jawa Barat</title>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-  <!-- Typography: DM Sans (Hostinger Design System) & Fallback Plus Jakarta Sans -->
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-  <style>
-    :root {
-      --color-primary: #673de6;
-      --color-primary-hover: #5025d1;
-      --color-primary-deep: #2f1c6a;
-      --color-canvas: #ffffff;
-      --color-surface-soft: #f5f6ff;
-      --color-surface-neutral: #f5f5f6;
-      --color-text-primary: #222225;
-      --color-text-secondary: #62636b;
-      --color-border: #e5e7eb;
-    }
-    @layer base {
-      html, body {
-        margin: 0;
-        padding: 0;
-        background-color: #f5f5f6;
-        color: #222225;
-        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      }
-      body {
-        overflow-x: clip;
-      }
-      main > :first-child {
-        margin-top: 0 !important;
-      }
-      main > :last-child {
-        margin-bottom: 0 !important;
-      }
-    }
-    .scrollbar-none::-webkit-scrollbar {
-      display: none;
-    }
-    .scrollbar-none {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-  </style>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script id="tailwind-config">
+  <script>
     tailwind.config = {
-      darkMode: "class",
       theme: {
         extend: {
           colors: {
-            primary: {
-              DEFAULT: "#673de6",
-              hover: "#5025d1",
-              deep: "#2f1c6a",
-              container: "#673de6",
-              accent: "#9d99ff"
-            },
-            surface: {
-              DEFAULT: "#ffffff",
-              soft: "#f5f6ff",
-              neutral: "#f5f5f6",
-              border: "#e5e7eb"
-            },
-            ink: {
-              body: "#222225",
-              muted: "#62636b",
-              subtle: "#9d9ea4"
-            },
-            "border-subtle": "#e5e7eb",
-            "border-bold": "#d1d5db"
+            primary: { DEFAULT: '#673de6', hover: '#5025d1', deep: '#2f1c6a' },
+            surface: { DEFAULT: '#ffffff', soft: '#f5f6ff', neutral: '#f5f5f6' },
+            ink: { body: '#222225', muted: '#62636b' },
+            'border-subtle': '#e5e7eb'
           },
-          fontFamily: {
-            sans: ["'DM Sans'", "sans-serif"],
-            body: ["'DM Sans'", "sans-serif"]
-          },
-          borderRadius: {
-            '2xl': '1rem',
-            '3xl': '1.5rem',
-            '4xl': '1.75rem'
-          }
+          fontFamily: { sans: ["'DM Sans'", 'sans-serif'] }
         }
       }
     };
   </script>
+  <style>
+    html, body { margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; overflow-x: clip; }
+    .focus-ring:focus-visible { outline: 2px solid #673de6; outline-offset: 2px; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+  </style>
 </head>
-<body class="bg-surface-neutral font-sans text-ink-body antialiased selection:bg-surface-soft selection:text-primary-deep min-h-screen flex items-center justify-center p-4 sm:p-6">
+<body class="min-h-screen bg-surface-neutral text-ink-body antialiased flex items-center justify-center p-4 sm:p-6">
 
-  <!-- MAIN CONTAINER -->
   <main class="w-full max-w-6xl mx-auto py-4">
-    <div class="w-full">
-      
-      <!-- Unified Split-Screen Register Card (Hostinger Rounded Composition) -->
-      <div class="w-full grid grid-cols-1 lg:grid-cols-12 rounded-3xl overflow-hidden shadow-xl bg-white border border-border-subtle">
-        
-        <!-- Left Illustration Showcase (5 Cols) with User's Reading Illustration -->
-        <div class="hidden lg:flex lg:col-span-5 bg-white p-8 xl:p-12 items-center justify-center relative overflow-hidden">
-          <div class="relative w-full max-w-[380px] flex items-center justify-center">
-            <img src="../../assets/ilustration/auth_register_reading.png" alt="Ilustrasi Membaca E-Book IKAPI Store" class="w-full h-auto max-h-[460px] object-contain drop-shadow-sm select-none">
-          </div>
-        </div>
+    <div class="w-full grid grid-cols-1 lg:grid-cols-12 rounded-3xl overflow-hidden shadow-xl bg-white border border-border-subtle">
 
-        <!-- Right Form Panel (7 Cols) with Compact & Balanced Typography -->
-        <div class="col-span-1 lg:col-span-7 p-6 sm:p-10 lg:p-12 flex flex-col justify-center bg-white">
-          <div class="max-w-lg w-full mx-auto space-y-6">
-            
-            <!-- Form Header -->
-            <div class="space-y-1">
-              <h1 class="text-[24px] sm:text-[26px] font-bold text-ink-body tracking-tight leading-snug">
-                Buat Akun
-              </h1>
-              <p class="text-[14px] text-ink-muted">
-                Daftar untuk membeli dan membaca e-book di IKAPI Store.
-              </p>
+      <!-- Shared illustration panel (identical for both roles) -->
+      <div class="hidden lg:flex lg:col-span-5 bg-white p-8 xl:p-12 items-center justify-center overflow-hidden">
+        <img src="../../assets/ilustration/auth_register_reading.png" alt="Ilustrasi membaca e-book IKAPI Store"
+          class="w-full max-w-[380px] h-auto max-h-[460px] object-contain select-none">
+      </div>
+
+      <div class="col-span-1 lg:col-span-7 bg-white p-6 sm:p-10 lg:p-12 flex flex-col justify-center">
+        <div class="w-full max-w-lg mx-auto space-y-5">
+
+          <!-- Role tabs -->
+          <div class="flex items-center gap-1 rounded-xl border border-border-subtle bg-surface-neutral p-1" role="tablist" aria-label="Pilih jenis akun">
+            <button type="button" id="tab-buyer" role="tab" aria-selected="true" aria-controls="buyer-panel"
+              class="role-tab focus-ring flex-1 rounded-lg bg-white px-3 py-2 text-[13px] font-bold text-primary shadow-sm">Pembeli</button>
+            <button type="button" id="tab-publisher" role="tab" aria-selected="false" aria-controls="publisher-panel"
+              class="role-tab focus-ring flex-1 rounded-lg px-3 py-2 text-[13px] font-semibold text-ink-muted hover:text-ink-body">Penerbit</button>
+          </div>
+
+          <div class="space-y-1">
+            <h1 id="auth-heading" class="text-[24px] sm:text-[26px] font-bold tracking-tight leading-snug text-ink-body">Buat Akun</h1>
+            <p id="auth-description" class="text-[14px] text-ink-muted">Daftar untuk membeli dan membaca e-book di IKAPI Store.</p>
+          </div>
+
+          <!-- Error banner -->
+          <div id="validation-banner" class="hidden items-start gap-2.5 rounded-xl border border-red-200 bg-red-50 p-3.5 text-red-700" role="alert">
+            <span class="material-symbols-outlined mt-0.5 shrink-0 text-[20px]">error</span>
+            <p class="flex-1 text-[13px] font-semibold" id="error-title">Periksa kembali formulir</p>
+            <button type="button" class="focus-ring rounded text-ink-muted hover:text-ink-body" aria-label="Tutup pesan" onclick="hideBanner()">
+              <span class="material-symbols-outlined text-[18px]">close</span>
+            </button>
+          </div>
+
+          <!-- Information banner (non-error feedback) -->
+          <div id="info-banner" class="hidden items-start gap-2.5 rounded-xl border border-border-subtle bg-surface-soft p-3.5" role="status">
+            <span class="material-symbols-outlined mt-0.5 shrink-0 text-[20px] text-primary">info</span>
+            <p class="flex-1 text-[13px] font-semibold text-ink-body" id="info-text"></p>
+            <button type="button" class="focus-ring rounded text-ink-muted hover:text-ink-body" aria-label="Tutup pesan" onclick="hideInfo()">
+              <span class="material-symbols-outlined text-[18px]">close</span>
+            </button>
+          </div>
+
+          <!-- ============ BUYER FORM (preserved from existing) ============ -->
+          <form id="buyer-form" class="space-y-4" novalidate>
+            <div class="space-y-1.5">
+              <label class="block text-[13px] font-bold text-ink-body" for="fullName">Nama Lengkap <span class="text-red-500">*</span></label>
+              <input id="fullName" name="fullName" type="text" required placeholder="Contoh: Ahmad Hidayat"
+                class="h-11 w-full rounded-xl border border-border-subtle bg-surface-neutral px-4 text-[14px] text-ink-body outline-none transition-all placeholder:text-ink-muted focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20">
+              <p class="hidden text-[12px] text-red-600" data-err="fullName">Nama lengkap wajib diisi.</p>
             </div>
 
-            <!-- Registration Form -->
-            <form class="space-y-4" id="registrationForm" onsubmit="handleRegistrationSubmit(event)">
-              
-              <!-- Full Name (Full Width) -->
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div class="space-y-1.5">
-                <label class="block text-[13px] font-bold text-ink-body" for="fullName">
-                  Nama Lengkap <span class="text-red-500">*</span>
-                </label>
-                <input class="w-full h-11 px-4 rounded-xl bg-surface-neutral text-ink-body text-[14px] outline-none border border-border-subtle transition-all placeholder:text-ink-muted focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20" id="fullName" name="fullName" placeholder="Contoh: Ahmad Hidayat" required type="text">
+                <label class="block text-[13px] font-bold text-ink-body" for="buyerEmail">Alamat Email <span class="text-red-500">*</span></label>
+                <input id="buyerEmail" name="email" type="email" required placeholder="nama@email.com"
+                  class="h-11 w-full rounded-xl border border-border-subtle bg-surface-neutral px-4 text-[14px] text-ink-body outline-none transition-all placeholder:text-ink-muted focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20">
+                <p class="hidden text-[12px] text-red-600" data-err="buyerEmail">Masukkan format email yang benar.</p>
+              </div>
+              <div class="space-y-1.5">
+                <label class="block text-[13px] font-bold text-ink-body" for="buyerPhone">Nomor WhatsApp / HP <span class="text-red-500">*</span></label>
+                <input id="buyerPhone" name="phone" type="tel" required placeholder="0812-3456-7890"
+                  class="h-11 w-full rounded-xl border border-border-subtle bg-surface-neutral px-4 text-[14px] text-ink-body outline-none transition-all placeholder:text-ink-muted focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20">
+                <p class="hidden text-[12px] text-red-600" data-err="buyerPhone">Nomor WhatsApp / HP wajib diisi.</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div class="space-y-1.5">
+                <label class="block text-[13px] font-bold text-ink-body" for="buyerPassword">Kata Sandi <span class="text-red-500">*</span></label>
+                <div class="relative flex items-center">
+                  <input id="buyerPassword" name="password" type="password" required minlength="8" placeholder="Minimal 8 karakter"
+                    class="h-11 w-full rounded-xl border border-border-subtle bg-surface-neutral pl-4 pr-10 text-[14px] text-ink-body outline-none transition-all placeholder:text-ink-muted focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20">
+                  <button type="button" data-toggle-pw="buyerPassword" aria-label="Tampilkan kata sandi"
+                    class="focus-ring absolute right-2.5 rounded p-1 text-ink-muted transition-colors hover:text-ink-body">
+                    <span class="material-symbols-outlined text-[19px]">visibility</span>
+                  </button>
+                </div>
+                <p class="hidden text-[12px] text-red-600" data-err="buyerPassword">Kata sandi minimal 8 karakter.</p>
+              </div>
+              <div class="space-y-1.5">
+                <label class="block text-[13px] font-bold text-ink-body" for="buyerPasswordConfirm">Konfirmasi Kata Sandi <span class="text-red-500">*</span></label>
+                <div class="relative flex items-center">
+                  <input id="buyerPasswordConfirm" name="passwordConfirm" type="password" required minlength="8" placeholder="Ulangi kata sandi"
+                    class="h-11 w-full rounded-xl border border-border-subtle bg-surface-neutral pl-4 pr-10 text-[14px] text-ink-body outline-none transition-all placeholder:text-ink-muted focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20">
+                  <button type="button" data-toggle-pw="buyerPasswordConfirm" aria-label="Tampilkan konfirmasi kata sandi"
+                    class="focus-ring absolute right-2.5 rounded p-1 text-ink-muted transition-colors hover:text-ink-body">
+                    <span class="material-symbols-outlined text-[19px]">visibility</span>
+                  </button>
+                </div>
+                <p class="hidden text-[12px] text-red-600" data-err="buyerPasswordConfirm">Konfirmasi kata sandi tidak sama.</p>
+              </div>
+            </div>
+
+            <label class="flex items-start gap-2.5 select-none">
+              <input id="buyerTerms" type="checkbox" required class="mt-0.5 h-4 w-4 cursor-pointer rounded border-border-subtle accent-primary text-primary">
+              <span class="text-[13px] leading-relaxed text-ink-muted">
+                Saya menyetujui <span class="font-semibold text-ink-body">Ketentuan Layanan</span> &amp;
+                <span class="font-semibold text-ink-body">Kebijakan Privasi</span> IKAPI Store.
+              </span>
+            </label>
+            <p class="hidden text-[12px] text-red-600" data-err="buyerTerms">Persetujuan ketentuan wajib dicentang.</p>
+
+            <button type="submit" id="buyer-submit"
+              class="focus-ring flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-primary text-[14px] font-bold text-white transition-colors hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-70">
+              <span data-btn-label>Daftar</span>
+              <span class="material-symbols-outlined text-[18px]" data-btn-icon>arrow_forward</span>
+            </button>
+          </form>
+
+          <!-- ============ PUBLISHER FORM (3 steps) ============ -->
+          <form id="publisher-form" class="hidden space-y-4" novalidate>
+            <div>
+              <p class="text-[12px] font-semibold text-ink-muted" id="step-label">Langkah 1 dari 3</p>
+              <p class="mt-0.5 text-[14px] font-bold text-ink-body" id="step-title">Informasi Penerbit</p>
+              <div class="mt-2.5 flex items-center gap-1.5" role="progressbar" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1" aria-label="Kemajuan pendaftaran penerbit" id="step-track">
+                <span class="h-1.5 flex-1 rounded-full bg-surface-neutral" data-step-bar="1"></span>
+                <span class="h-1.5 flex-1 rounded-full bg-surface-neutral" data-step-bar="2"></span>
+                <span class="h-1.5 flex-1 rounded-full bg-surface-neutral" data-step-bar="3"></span>
+              </div>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="space-y-4" data-step="1">
+              <div class="space-y-1.5">
+                <label class="block text-[13px] font-bold text-ink-body" for="pubName">Nama Penerbit <span class="text-red-500">*</span></label>
+                <input id="pubName" type="text" placeholder="Contoh: PT Penerbit Nusantara"
+                  class="h-11 w-full rounded-xl border border-border-subtle bg-surface-neutral px-4 text-[14px] text-ink-body outline-none transition-all placeholder:text-ink-muted focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20">
+                <p class="hidden text-[12px] text-red-600" data-err="pubName">Nama penerbit wajib diisi.</p>
+              </div>
+              <div class="space-y-1.5">
+                <label class="block text-[13px] font-bold text-ink-body" for="pubMember">Nomor Anggota IKAPI <span class="text-red-500">*</span></label>
+                <input id="pubMember" type="text" placeholder="Contoh: 041/JBA/2020"
+                  class="h-11 w-full rounded-xl border border-border-subtle bg-surface-neutral px-4 text-[14px] text-ink-body outline-none transition-all placeholder:text-ink-muted focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20">
+                <p class="hidden text-[12px] text-red-600" data-err="pubMember">Nomor anggota IKAPI wajib diisi.</p>
+                <p class="text-[12px] text-ink-muted">Nomor anggota diperiksa oleh Sekretariat IKAPI, tidak diverifikasi otomatis.</p>
+              </div>
+              <div class="space-y-1.5">
+                <label class="block text-[13px] font-bold text-ink-body" for="pubAddress">Alamat Penerbit <span class="text-red-500">*</span></label>
+                <textarea id="pubAddress" rows="3" placeholder="Alamat kantor redaksi atau operasional penerbit lengkap dengan kota dan kode pos"
+                  class="w-full rounded-xl border border-border-subtle bg-surface-neutral px-4 py-3 text-[14px] text-ink-body outline-none transition-all placeholder:text-ink-muted focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20"></textarea>
+                <p class="hidden text-[12px] text-red-600" data-err="pubAddress">Alamat penerbit wajib diisi.</p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="hidden space-y-4" data-step="2">
+              <div class="space-y-1.5">
+                <label class="block text-[13px] font-bold text-ink-body" for="pubPic">Nama Penanggung Jawab <span class="text-red-500">*</span></label>
+                <input id="pubPic" type="text" placeholder="Nama lengkap pimpinan atau perwakilan resmi"
+                  class="h-11 w-full rounded-xl border border-border-subtle bg-surface-neutral px-4 text-[14px] text-ink-body outline-none transition-all placeholder:text-ink-muted focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20">
+                <p class="hidden text-[12px] text-red-600" data-err="pubPic">Nama penanggung jawab wajib diisi.</p>
+              </div>
+              <div class="space-y-1.5">
+                <label class="block text-[13px] font-bold text-ink-body" for="pubEmail">Email Kantor / Redaksi <span class="text-red-500">*</span></label>
+                <input id="pubEmail" type="email" placeholder="redaksi@penerbit.co.id"
+                  class="h-11 w-full rounded-xl border border-border-subtle bg-surface-neutral px-4 text-[14px] text-ink-body outline-none transition-all placeholder:text-ink-muted focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20">
+                <p class="hidden text-[12px] text-red-600" data-err="pubEmail">Masukkan format email yang benar.</p>
+              </div>
+              <div class="space-y-1.5">
+                <label class="block text-[13px] font-bold text-ink-body" for="pubPhone">Nomor WhatsApp / HP <span class="text-red-500">*</span></label>
+                <input id="pubPhone" type="tel" placeholder="Contoh: 081234567890 atau 022-7204819"
+                  class="h-11 w-full rounded-xl border border-border-subtle bg-surface-neutral px-4 text-[14px] text-ink-body outline-none transition-all placeholder:text-ink-muted focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20">
+                <p class="hidden text-[12px] text-red-600" data-err="pubPhone">Nomor WhatsApp / HP wajib diisi.</p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="hidden space-y-4" data-step="3">
+              <div class="space-y-1.5">
+                <label class="block text-[13px] font-bold text-ink-body" for="pubPassword">Kata Sandi Portal <span class="text-red-500">*</span></label>
+                <div class="relative flex items-center">
+                  <input id="pubPassword" type="password" placeholder="Minimal 8 karakter"
+                    class="h-11 w-full rounded-xl border border-border-subtle bg-surface-neutral pl-4 pr-10 text-[14px] text-ink-body outline-none transition-all placeholder:text-ink-muted focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20">
+                  <button type="button" data-toggle-pw="pubPassword" aria-label="Tampilkan kata sandi"
+                    class="focus-ring absolute right-2.5 rounded p-1 text-ink-muted transition-colors hover:text-ink-body">
+                    <span class="material-symbols-outlined text-[19px]">visibility</span>
+                  </button>
+                </div>
+                <p class="hidden text-[12px] text-red-600" data-err="pubPassword">Kata sandi minimal 8 karakter.</p>
+              </div>
+              <div class="space-y-1.5">
+                <label class="block text-[13px] font-bold text-ink-body" for="pubPasswordConfirm">Konfirmasi Kata Sandi <span class="text-red-500">*</span></label>
+                <div class="relative flex items-center">
+                  <input id="pubPasswordConfirm" type="password" placeholder="Ulangi kata sandi"
+                    class="h-11 w-full rounded-xl border border-border-subtle bg-surface-neutral pl-4 pr-10 text-[14px] text-ink-body outline-none transition-all placeholder:text-ink-muted focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20">
+                  <button type="button" data-toggle-pw="pubPasswordConfirm" aria-label="Tampilkan konfirmasi kata sandi"
+                    class="focus-ring absolute right-2.5 rounded p-1 text-ink-muted transition-colors hover:text-ink-body">
+                    <span class="material-symbols-outlined text-[19px]">visibility</span>
+                  </button>
+                </div>
+                <p class="hidden text-[12px] text-red-600" data-err="pubPasswordConfirm">Konfirmasi kata sandi tidak sama.</p>
               </div>
 
-              <!-- Grid: Email & Phone (2 Columns) -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <!-- Email -->
-                <div class="space-y-1.5">
-                  <label class="block text-[13px] font-bold text-ink-body" for="email">
-                    Alamat Email <span class="text-red-500">*</span>
-                  </label>
-                  <input class="w-full h-11 px-4 rounded-xl bg-surface-neutral text-ink-body text-[14px] outline-none border border-border-subtle transition-all placeholder:text-ink-muted focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20" id="email" name="email" placeholder="nama@email.com" required type="email">
-                </div>
+              <label class="flex items-start gap-2.5 select-none">
+                <input id="pubTerms" type="checkbox" class="mt-0.5 h-4 w-4 cursor-pointer rounded border-border-subtle accent-primary text-primary">
+                <span class="text-[13px] leading-relaxed text-ink-muted">
+                  Saya menyatakan informasi penerbit yang diberikan benar dan menyetujui ketentuan pendaftaran Portal Penerbit.
+                </span>
+              </label>
+              <p class="hidden text-[12px] text-red-600" data-err="pubTerms">Persetujuan ketentuan wajib dicentang.</p>
+            </div>
 
-                <!-- Phone -->
-                <div class="space-y-1.5">
-                  <label class="block text-[13px] font-bold text-ink-body" for="phone">
-                    Nomor WhatsApp / HP <span class="text-red-500">*</span>
-                  </label>
-                  <input class="w-full h-11 px-4 rounded-xl bg-surface-neutral text-ink-body text-[14px] outline-none border border-border-subtle transition-all placeholder:text-ink-muted focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20" id="phone" name="phone" placeholder="0812-3456-7890" required type="tel">
-                </div>
-              </div>
-
-              <!-- Grid: Passwords Row (2 Columns) -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <!-- Password -->
-                <div class="space-y-1.5">
-                  <label class="block text-[13px] font-bold text-ink-body" for="password">
-                    Kata Sandi <span class="text-red-500">*</span>
-                  </label>
-                  <div class="relative flex items-center">
-                    <input class="w-full h-11 pl-4 pr-10 rounded-xl bg-surface-neutral text-ink-body text-[14px] outline-none border border-border-subtle transition-all placeholder:text-ink-muted focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20" id="password" minlength="8" name="password" placeholder="Minimal 8 karakter" required type="password">
-                    <button aria-label="Tampilkan kata sandi" class="absolute right-2.5 p-1 text-ink-muted hover:text-ink-body transition-colors" onclick="togglePasswordVisibility('password', 'pwdToggleIcon1')" type="button">
-                      <span id="pwdToggleIcon1" class="material-symbols-outlined text-[19px]">visibility</span>
-                    </button>
-                  </div>
-                </div>
-
-                <!-- Password Confirmation -->
-                <div class="space-y-1.5">
-                  <label class="block text-[13px] font-bold text-ink-body" for="passwordConfirm">
-                    Konfirmasi Kata Sandi <span class="text-red-500">*</span>
-                  </label>
-                  <div class="relative flex items-center">
-                    <input class="w-full h-11 pl-4 pr-10 rounded-xl bg-surface-neutral text-ink-body text-[14px] outline-none border border-border-subtle transition-all placeholder:text-ink-muted focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20" id="passwordConfirm" minlength="8" name="passwordConfirm" placeholder="Ulangi kata sandi" required type="password">
-                    <button aria-label="Tampilkan konfirmasi kata sandi" class="absolute right-2.5 p-1 text-ink-muted hover:text-ink-body transition-colors" onclick="togglePasswordVisibility('passwordConfirm', 'pwdToggleIcon2')" type="button">
-                      <span id="pwdToggleIcon2" class="material-symbols-outlined text-[19px]">visibility</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Terms Checkbox -->
-              <div class="pt-1">
-                <label class="flex items-start gap-2.5 cursor-pointer select-none">
-                  <input class="mt-0.5 w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" id="agreeTerms" required type="checkbox">
-                  <span class="text-[13px] text-ink-muted leading-relaxed">
-                    Saya menyetujui 
-                    <a class="text-primary font-semibold hover:underline" href="chatbot_bantuan_rekomendasi_desktop.html">Ketentuan Layanan</a> 
-                    &amp; 
-                    <a class="text-primary font-semibold hover:underline" href="chatbot_bantuan_rekomendasi_desktop.html">Kebijakan Privasi</a> 
-                    IKAPI Store.
-                  </span>
-                </label>
-              </div>
-
-              <!-- Submit Button -->
-              <button id="register-btn" class="w-full h-11 rounded-xl bg-primary hover:bg-primary-hover text-white text-[14px] font-bold flex items-center justify-center gap-2 transition-all shadow-xs active:scale-[0.99] cursor-pointer" type="submit">
-                <span>Daftar</span>
-                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            <!-- Step navigation -->
+            <div class="flex items-center justify-between gap-2 pt-1">
+              <button type="button" id="pub-back" class="focus-ring hidden h-11 items-center gap-1.5 rounded-xl border border-border-subtle px-4 text-[14px] font-semibold text-ink-body hover:bg-surface-neutral">
+                <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                <span>Kembali</span>
               </button>
-            </form>
+              <button type="button" id="pub-next" class="focus-ring ml-auto flex h-11 items-center gap-2 rounded-xl bg-primary px-4 text-[14px] font-bold text-white hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-70">
+                <span id="pub-next-label">Lanjutkan</span>
+                <span class="material-symbols-outlined text-[18px]" id="pub-next-icon">arrow_forward</span>
+              </button>
+            </div>
+          </form>
 
-            <!-- Divider -->
+          <!-- Google sign-in (buyer only) -->
+          <div id="google-block" class="space-y-4">
             <div class="relative flex items-center justify-center py-1">
               <div class="w-full border-t border-border-subtle"></div>
-              <span class="absolute px-3 bg-white text-[12px] uppercase tracking-wider text-ink-muted font-medium">
-                atau daftar dengan
-              </span>
+              <span class="absolute bg-white px-3 text-[12px] font-medium uppercase tracking-wider text-ink-muted">atau daftar dengan</span>
             </div>
-
-            <!-- Google Social Auth Button -->
-            <button class="w-full h-11 rounded-xl bg-white hover:bg-surface-soft text-ink-body text-[14px] font-semibold border border-border-subtle flex items-center justify-center gap-3 transition-colors shadow-xs cursor-pointer" onclick="simulateGoogleRegister()" type="button">
-              <!-- Authentic Google Multi-Color SVG -->
-              <svg aria-hidden="true" class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+            <button type="button" id="google-btn"
+              class="focus-ring flex h-11 w-full items-center justify-center gap-3 rounded-xl border border-border-subtle bg-white text-[14px] font-semibold text-ink-body transition-colors hover:bg-surface-soft">
+              <svg aria-hidden="true" class="h-4 w-4 shrink-0" viewBox="0 0 24 24">
                 <path d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.65v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.14z" fill="#4285F4"></path>
                 <path d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z" fill="#34A853"></path>
                 <path d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.03 0 12s.45 3.82 1.25 5.42l4.03-3.15z" fill="#FBBC05"></path>
@@ -219,96 +267,366 @@
               </svg>
               <span>Lanjutkan dengan Google</span>
             </button>
-
-            <!-- Footer Switch Link -->
-            <div class="text-center pt-1">
-              <p class="text-[13px] text-ink-muted">
-                Sudah punya akun? 
-                <a class="text-primary hover:text-primary-hover font-semibold ml-1 hover:underline" data-path="login" href="masuk_login_desktop.html">
-                  Masuk
-                </a>
-              </p>
-            </div>
-
           </div>
-        </div>
 
+          <div class="pt-1 text-center">
+            <p class="text-[13px] text-ink-muted" id="switch-text">Sudah punya akun?</p>
+            <a id="switch-link" class="focus-ring mt-1 inline-block rounded text-[13px] font-semibold text-primary hover:text-primary-hover hover:underline"
+              href="masuk_login_desktop.html?role=buyer">Masuk</a>
+          </div>
+
+          <!-- Demo helpers (reviewer only) -->
+          <details class="rounded-xl border border-border-subtle bg-surface-neutral px-3.5 py-2.5 text-[12px]" id="demo-block-buyer">
+            <summary class="cursor-pointer font-semibold text-ink-muted">Mode Demo - Pembeli</summary>
+            <div class="mt-2.5 space-y-2">
+              <p class="text-ink-muted">Pratinjau status formulir pendaftaran pembeli.</p>
+              <div class="flex flex-wrap gap-1.5" role="group" aria-label="Skenario demo pembeli">
+                <button type="button" data-demo="default" class="demo-chip focus-ring rounded-lg border border-border-subtle bg-white px-2.5 py-1 font-semibold text-ink-body">Default</button>
+                <button type="button" data-demo="duplicate" class="demo-chip focus-ring rounded-lg border border-border-subtle bg-white px-2.5 py-1 font-semibold text-ink-body">Email sudah terdaftar</button>
+                <button type="button" data-demo="loading" class="demo-chip focus-ring rounded-lg border border-border-subtle bg-white px-2.5 py-1 font-semibold text-ink-body">Sedang mengirim</button>
+              </div>
+            </div>
+          </details>
+
+          <details class="hidden rounded-xl border border-border-subtle bg-surface-neutral px-3.5 py-2.5 text-[12px]" id="demo-block-publisher">
+            <summary class="cursor-pointer font-semibold text-ink-muted">Mode Demo - Penerbit</summary>
+            <div class="mt-2.5 space-y-2">
+              <p class="text-ink-muted">Pratinjau status formulir dan pengajuan penerbit.</p>
+              <div class="flex flex-wrap gap-1.5" role="group" aria-label="Skenario demo penerbit">
+                <button type="button" data-demo="default" class="demo-chip focus-ring rounded-lg border border-border-subtle bg-white px-2.5 py-1 font-semibold text-ink-body">Default</button>
+                <button type="button" data-demo="duplicate" class="demo-chip focus-ring rounded-lg border border-border-subtle bg-white px-2.5 py-1 font-semibold text-ink-body">Email kantor sudah terdaftar</button>
+                <button type="button" data-demo="loading" class="demo-chip focus-ring rounded-lg border border-border-subtle bg-white px-2.5 py-1 font-semibold text-ink-body">Sedang mengirim</button>
+                <button type="button" data-demo="success" class="demo-chip focus-ring rounded-lg border border-border-subtle bg-white px-2.5 py-1 font-semibold text-ink-body">Pengajuan terkirim</button>
+              </div>
+            </div>
+          </details>
+
+          <p class="text-center text-[12px] text-ink-muted">
+            <a class="focus-ring rounded hover:underline" href="beranda_desktop.html">Kembali ke Beranda</a>
+          </p>
+        </div>
       </div>
     </div>
   </main>
 
-  <!-- TOAST NOTIFICATION -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-ink-body text-white shadow-xl text-[14px] font-medium border border-white/10">
-    <span class="material-symbols-outlined text-primary-accent text-[20px]">check_circle</span>
-    <span id="toast-message">Pendaftaran berhasil diproses</span>
-  </div>
-
-  <!-- CLIENT SCRIPT -->
   <script>
-    function togglePasswordVisibility(inputId, iconId) {
-      const input = document.getElementById(inputId);
-      const icon = document.getElementById(iconId);
-      if (!input || !icon) return;
+    (function () {
+      'use strict';
 
-      if (input.type === 'password') {
-        input.type = 'text';
-        icon.textContent = 'visibility_off';
-        icon.parentElement.setAttribute('aria-label', 'Sembunyikan kata sandi');
-      } else {
-        input.type = 'password';
-        icon.textContent = 'visibility';
-        icon.parentElement.setAttribute('aria-label', 'Tampilkan kata sandi');
+      var $ = function (id) { return document.getElementById(id); };
+      var role = 'buyer';
+      var step = 1;
+      var scenario = 'default';
+      var busy = false;
+
+      /* Separate draft state per role so switching never mixes or drops data. */
+      var pubDraft = { pubName: '', pubMember: '', pubAddress: '', pubPic: '', pubEmail: '', pubPhone: '', pubPassword: '', pubPasswordConfirm: '', pubTerms: false };
+
+      var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      var DUPLICATE_EMAIL = 'redaksi@kiblatbuku.co.id';
+
+      function showErr(name, on) {
+        var el = document.querySelector('[data-err="' + name + '"]');
+        if (el) el.classList.toggle('hidden', !on);
       }
-    }
-
-    let toastTimer = null;
-    function showToast(msg) {
-      const toast = document.getElementById('toast');
-      const toastMessage = document.getElementById('toast-message');
-      if (!toast || !toastMessage) return;
-      toastMessage.textContent = msg;
-      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
-      toast.classList.add('translate-y-0', 'opacity-100');
-      if (toastTimer) clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => {
-        toast.classList.remove('translate-y-0', 'opacity-100');
-        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
-      }, 2500);
-    }
-
-    function handleRegistrationSubmit(e) {
-      e.preventDefault();
-      const pw = document.getElementById('password').value;
-      const pwConfirm = document.getElementById('passwordConfirm').value;
-
-      if (pw !== pwConfirm) {
-        showToast('Kata sandi dan konfirmasi kata sandi tidak cocok');
-        return false;
+      function showBanner(title) {
+        $('error-title').textContent = title;
+        $('validation-banner').classList.remove('hidden');
+        $('validation-banner').classList.add('flex');
+      }
+      function hideBanner() {
+        $('validation-banner').classList.add('hidden');
+        $('validation-banner').classList.remove('flex');
+      }
+      function showInfo(text) {
+        $('info-text').textContent = text;
+        $('info-banner').classList.remove('hidden');
+        $('info-banner').classList.add('flex');
+      }
+      function hideInfo() {
+        $('info-banner').classList.add('hidden');
+        $('info-banner').classList.remove('flex');
+      }
+      function setBusy(btn, on, busyLabel) {
+        busy = on;
+        btn.disabled = on;
+        var label = btn.querySelector('[data-btn-label]');
+        var icon = btn.querySelector('[data-btn-icon]');
+        if (label) label.textContent = on ? busyLabel : label.getAttribute('data-idle') || 'Daftar';
+        if (icon) { icon.textContent = on ? 'progress_activity' : 'arrow_forward'; icon.classList.toggle('animate-spin', on); }
       }
 
-      const btn = document.getElementById('register-btn');
-      if (btn) {
+      /* ---------- Role switch ---------- */
+      function setRole(next) {
+        role = next === 'publisher' ? 'publisher' : 'buyer';
+        var isBuyer = role === 'buyer';
+
+        $('auth-heading').textContent = isBuyer ? 'Buat Akun' : 'Daftar sebagai Penerbit';
+        $('auth-description').textContent = isBuyer
+          ? 'Daftar untuk membeli dan membaca e-book di IKAPI Store.'
+          : 'Lengkapi data penerbit dalam tiga langkah.';
+        $('switch-text').textContent = isBuyer ? 'Sudah punya akun?' : 'Sudah punya akun penerbit?';
+        $('switch-link').textContent = 'Masuk';
+        $('switch-link').setAttribute('href', 'masuk_login_desktop.html?role=' + role);
+        $('google-block').classList.toggle('hidden', !isBuyer);
+        $('demo-block-buyer').classList.toggle('hidden', !isBuyer);
+        $('demo-block-publisher').classList.toggle('hidden', isBuyer);
+        $('buyer-form').classList.toggle('hidden', !isBuyer);
+        $('publisher-form').classList.toggle('hidden', isBuyer);
+
+        $('tab-buyer').setAttribute('aria-selected', isBuyer ? 'true' : 'false');
+        $('tab-publisher').setAttribute('aria-selected', isBuyer ? 'false' : 'true');
+        paintTab($('tab-buyer'), isBuyer);
+        paintTab($('tab-publisher'), !isBuyer);
+
+        hideBanner();
+        hideInfo();
+        /* Draft data of the other role is preserved, not merged. */
+        if (!isBuyer) restorePublisherStep();
+
+        var url = new URL(window.location.href);
+        url.searchParams.set('role', role);
+        window.history.replaceState({}, '', url);
+      }
+
+      function paintTab(btn, active) {
+        btn.className = 'role-tab focus-ring flex-1 rounded-lg px-3 py-2 text-[13px] ' +
+          (active ? 'bg-white font-bold text-primary shadow-sm' : 'font-semibold text-ink-muted hover:text-ink-body');
+      }
+
+      $('tab-buyer').addEventListener('click', function () { setRole('buyer'); });
+      $('tab-publisher').addEventListener('click', function () { setRole('publisher'); });
+
+      /* ---------- Password toggles ---------- */
+      document.querySelectorAll('[data-toggle-pw]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var input = $(btn.getAttribute('data-toggle-pw'));
+          var icon = btn.querySelector('.material-symbols-outlined');
+          var show = input.type === 'password';
+          input.type = show ? 'text' : 'password';
+          icon.textContent = show ? 'visibility_off' : 'visibility';
+          btn.setAttribute('aria-label', show ? 'Sembunyikan kata sandi' : 'Tampilkan kata sandi');
+        });
+      });
+
+      /* ---------- Buyer registration ---------- */
+      $('buyer-submit').querySelector('[data-btn-label]').setAttribute('data-idle', 'Daftar');
+
+      $('buyer-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (busy) return;
+
+        var name = $('fullName').value.trim();
+        var email = $('buyerEmail').value.trim().toLowerCase();
+        var phone = $('buyerPhone').value.trim();
+        var pw = $('buyerPassword').value;
+        var pw2 = $('buyerPasswordConfirm').value;
+        var terms = $('buyerTerms').checked;
+
+        var bad = false;
+        showErr('fullName', !name); bad = bad || !name;
+        var emailOk = EMAIL_RE.test(email); showErr('buyerEmail', !emailOk); bad = bad || !emailOk;
+        showErr('buyerPhone', !phone); bad = bad || !phone;
+        var pwOk = pw.length >= 8; showErr('buyerPassword', !pwOk); bad = bad || !pwOk;
+        var match = pwOk && pw === pw2; showErr('buyerPasswordConfirm', !match); bad = bad || !match;
+        showErr('buyerTerms', !terms); bad = bad || !terms;
+
+        if (bad) { showBanner('Periksa Kembali Formulir'); return; }
+
+        if (scenario === 'duplicate' || email === DUPLICATE_EMAIL) {
+          showBanner('Email sudah terdaftar pada prototype ini.');
+          return;
+        }
+
+        hideBanner();
+        setBusy($('buyer-submit'), true, 'Mendaftarkan...');
+        window.setTimeout(function () {
+          setBusy($('buyer-submit'), false);
+          $('buyer-submit').querySelector('[data-btn-label]').textContent = 'Daftar';
+          showInfo('Pendaftaran tersimpan pada prototype ini.');
+          var infoBox = $('info-banner');
+          if (infoBox && !window.__onboardingLinked) {
+            window.__onboardingLinked = true;
+            var link = document.createElement('a');
+            link.id = 'info-onboarding-link';
+            link.href = 'onboarding_preferensi_bacaan_desktop.html';
+            link.className = 'focus-ring ml-2 shrink-0 rounded text-[12.5px] font-bold text-primary hover:text-primary-hover';
+            link.textContent = 'Lanjut ke Preferensi Bacaan';
+            infoBox.insertBefore(link, infoBox.lastElementChild);
+          }
+        }, scenario === 'loading' ? 1800 : 900);
+      });
+
+      /* ---------- Publisher 3-step ---------- */
+      var STEP_TITLES = { 1: 'Informasi Penerbit', 2: 'Penanggung Jawab', 3: 'Keamanan Akun' };
+
+      function saveStep() {
+        if (step === 1) {
+          pubDraft.pubName = $('pubName').value.trim();
+          pubDraft.pubMember = $('pubMember').value.trim();
+          pubDraft.pubAddress = $('pubAddress').value.trim();
+        } else if (step === 2) {
+          pubDraft.pubPic = $('pubPic').value.trim();
+          pubDraft.pubEmail = $('pubEmail').value.trim();
+          pubDraft.pubPhone = $('pubPhone').value.trim();
+        } else {
+          pubDraft.pubPassword = $('pubPassword').value;
+          pubDraft.pubPasswordConfirm = $('pubPasswordConfirm').value;
+          pubDraft.pubTerms = $('pubTerms').checked;
+        }
+      }
+
+      function restorePublisherStep() {
+        if (step === 1) {
+          $('pubName').value = pubDraft.pubName;
+          $('pubMember').value = pubDraft.pubMember;
+          $('pubAddress').value = pubDraft.pubAddress;
+        } else if (step === 2) {
+          $('pubPic').value = pubDraft.pubPic;
+          $('pubEmail').value = pubDraft.pubEmail;
+          $('pubPhone').value = pubDraft.pubPhone;
+        } else {
+          $('pubPassword').value = pubDraft.pubPassword;
+          $('pubPasswordConfirm').value = pubDraft.pubPasswordConfirm;
+          $('pubTerms').checked = pubDraft.pubTerms;
+        }
+      }
+
+      /* Prototype only: stores the application in this browser and hands over to the
+         status page. No request is sent and no account status is created. */
+      function submitPublisherApplication() {
+        var record = {
+          name: $('pubName').value.trim(),
+          submittedAt: new Date().toISOString(),
+          status: 'pending',
+          reason: ''
+        };
+        try {
+          window.localStorage.setItem('ikapi_publisher_application_demo', JSON.stringify(record));
+          window.localStorage.removeItem('ikapi_publisher_status_preview');
+        } catch (e) {}
+        window.location.href = 'status_pendaftaran_penerbit_desktop.html';
+      }
+
+      function showStep(n) {
+        step = n;
+        document.querySelectorAll('#publisher-form [data-step]').forEach(function (el) {
+          el.classList.toggle('hidden', Number(el.getAttribute('data-step')) !== n);
+        });
+        document.querySelectorAll('#step-track [data-step-bar]').forEach(function (bar) {
+          var i = Number(bar.getAttribute('data-step-bar'));
+          /* A segment fills only after its step is completed, so step 1 starts empty. */
+          bar.className = 'h-1.5 flex-1 rounded-full ' + (i < n ? 'bg-primary' : 'bg-surface-neutral');
+        });
+        $('step-label').textContent = 'Langkah ' + n + ' dari 3';
+        $('step-title').textContent = STEP_TITLES[n];
+        $('step-track').setAttribute('aria-valuenow', String(n));
+        $('pub-back').classList.toggle('hidden', n === 1);
+        $('pub-back').classList.toggle('flex', n !== 1);
+        $('pub-next-label').textContent = n === 3 ? 'Ajukan Pendaftaran' : 'Lanjutkan';
+        $('pub-next-icon').textContent = n === 3 ? 'send' : 'arrow_forward';
+        hideBanner();
+      }
+
+      function validateStep() {
+        var bad = false;
+        if (step === 1) {
+          var n = $('pubName').value.trim(), m = $('pubMember').value.trim(), a = $('pubAddress').value.trim();
+          showErr('pubName', !n); showErr('pubMember', !m); showErr('pubAddress', !a);
+          bad = !n || !m || !a;
+        } else if (step === 2) {
+          var pic = $('pubPic').value.trim(), mail = $('pubEmail').value.trim(), tel = $('pubPhone').value.trim();
+          var mailOk = EMAIL_RE.test(mail);
+          showErr('pubPic', !pic); showErr('pubEmail', !mailOk); showErr('pubPhone', !tel);
+          bad = !pic || !mailOk || !tel;
+        } else {
+          var pw = $('pubPassword').value, pw2 = $('pubPasswordConfirm').value;
+          var pwOk = pw.length >= 8, match = pwOk && pw === pw2, terms = $('pubTerms').checked;
+          showErr('pubPassword', !pwOk); showErr('pubPasswordConfirm', !match); showErr('pubTerms', !terms);
+          bad = !pwOk || !match || !terms;
+        }
+        if (bad) showBanner('Lengkapi data pada langkah ini sebelum melanjutkan.');
+        return !bad;
+      }
+
+      $('pub-next').addEventListener('click', function () {
+        if (busy) return;
+        if (!validateStep()) return;
+        saveStep();
+
+        if (step < 3) { showStep(step + 1); return; }
+
+        /* Final submission */
+        if (scenario === 'duplicate' || pubDraft.pubEmail.toLowerCase() === DUPLICATE_EMAIL) {
+          showBanner('Email kantor sudah terdaftar pada prototype ini.');
+          showStep(2);
+          return;
+        }
+
+        busy = true;
+        var btn = $('pub-next');
         btn.disabled = true;
-        const origText = btn.innerHTML;
-        btn.innerHTML = `
-          <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-          </svg>
-          <span>Mendaftarkan...</span>
-        `;
-        setTimeout(() => {
-          showToast('Pendaftaran akun berhasil disimulasikan');
-          btn.innerHTML = origText;
-          btn.disabled = false;
-        }, 1200);
-      }
-      return false;
-    }
+        $('pub-next-label').textContent = 'Mengirim pengajuan...';
+        $('pub-next-icon').textContent = 'progress_activity';
+        $('pub-next-icon').classList.add('animate-spin');
 
-    function simulateGoogleRegister() {
-      showToast('Menghubungkan ke otentikasi Google SSO...');
-    }
+        window.setTimeout(function () {
+          busy = false;
+          btn.disabled = false;
+          $('pub-next-label').textContent = 'Ajukan Pendaftaran';
+          $('pub-next-icon').textContent = 'send';
+          $('pub-next-icon').classList.remove('animate-spin');
+
+          submitPublisherApplication();
+        }, scenario === 'loading' ? 1800 : 1000);
+      });
+
+      $('pub-back').addEventListener('click', function () {
+        saveStep();
+        if (step > 1) showStep(step - 1);
+      });
+
+      /* ---------- Demo scenarios ---------- */
+      document.querySelectorAll('.demo-chip').forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          scenario = chip.getAttribute('data-demo');
+          document.querySelectorAll('.demo-chip').forEach(function (c) { c.classList.remove('bg-surface-soft', 'text-primary'); });
+          chip.classList.add('bg-surface-soft', 'text-primary');
+          hideBanner();
+
+          if (scenario === 'duplicate') {
+            setRole('buyer');
+            $('buyerEmail').value = DUPLICATE_EMAIL;
+            showBanner('Email sudah terdaftar pada prototype ini.');
+          } else if (scenario === 'success') {
+            setRole('publisher');
+            submitPublisherApplication();
+          } else if (scenario === 'loading') {
+            setRole('publisher');
+            showStep(3);
+            $('pubPassword').value = 'demo12345';
+            $('pubPasswordConfirm').value = 'demo12345';
+            $('pubTerms').checked = true;
+            busy = true;
+            $('pub-next').disabled = true;
+            $('pub-next-label').textContent = 'Mengirim pengajuan...';
+            $('pub-next-icon').textContent = 'progress_activity';
+            window.setTimeout(function () { busy = false; $('pub-next').disabled = false; $('pub-next-label').textContent = 'Ajukan Pendaftaran'; $('pub-next-icon').textContent = 'send'; }, 1800);
+          } else {
+            if (role === 'publisher') { $('publisher-form').classList.remove('hidden'); showStep(1); }
+          }
+        });
+      });
+
+      $('google-btn').addEventListener('click', function () {
+        showInfo('Google OAuth belum tersedia pada prototype ini.');
+      });
+
+      /* ---------- Init ---------- */
+      var params = new URLSearchParams(window.location.search);
+      setRole(params.get('role') === 'publisher' ? 'publisher' : 'buyer');
+      showStep(1);
+    })();
   </script>
 </body>
 </html>

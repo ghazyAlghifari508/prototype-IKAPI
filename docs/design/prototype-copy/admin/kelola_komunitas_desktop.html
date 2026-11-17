@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelola Komunitas - Portal Administrator IKAPI Jawa Barat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#673DE6', 'primary-hover': '#5025D1', 'primary-deep': '#2F1C6A',
+        canvas: '#FFFFFF', soft: '#F5F6FF', neutral: '#F5F5F6',
+        ink: '#222225', muted: '#62636B', border: '#E5E7EB', divider: '#EFEFF2',
+      },
+      fontFamily: { sans: ['DM Sans', 'system-ui', 'sans-serif'] },
+      borderRadius: { xl: '12px', '2xl': '16px', '3xl': '20px' },
+    }
+  }
+}
+</script>
+<style>
+  :root { --topbar-h: 64px; --sidebar-w: 248px; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', system-ui, sans-serif; background: #FFFFFF; color: #222225; }
+  .shell-main { margin-left: 0; }
+  @media (min-width: 1024px) { .shell-main { margin-left: var(--sidebar-w); } }
+  .banner-bleed { margin-left: 0; }
+  @media (min-width: 1024px) { .banner-bleed { margin-left: calc(-1 * var(--sidebar-w)); } }
+  #publisher-sidebar { top: var(--topbar-h); }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .num { font-variant-numeric: tabular-nums; }
+  .focus-ring:focus-visible { outline: 2px solid #673DE6; outline-offset: 2px; }
+  .focus-ring-light:focus-visible { outline: 2px solid #FFFFFF; outline-offset: 2px; }
+  .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  #publisher-sidebar { transform: translateX(-100%); transition: transform .22s ease; }
+  #publisher-sidebar.is-open { transform: translateX(0); }
+  @media (min-width: 1024px) { #publisher-sidebar { transform: none; transition: none; } }
+  #user-drawer { transform: translateX(100%); transition: transform .24s ease; }
+  #user-drawer.is-open { transform: translateX(0); }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-thumb { background: #DCDCE2; border-radius: 9999px; }
+</style>
+  <script src="admin-guard.js"></script>
+</head>
+<body class="bg-canvas text-ink antialiased">
+
+<a href="#workspace" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focus:bg-primary focus:px-4 focus:py-2 focus:text-white focus:text-sm focus:font-semibold">Lewati ke konten utama</a>
+
+<!-- TOP UTILITY BAR -->
+<header class="absolute inset-x-0 top-0 z-50 h-16">
+  <div class="flex h-16 items-center justify-between gap-3 px-4 sm:px-6">
+    <div class="flex items-center gap-3">
+      <button type="button" id="sidebar-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="publisher-sidebar"
+        class="focus-ring-light grid h-10 w-10 place-items-center rounded-xl text-white hover:bg-white/10 lg:hidden">
+        <span class="material-symbols-outlined text-[22px]">menu</span>
+      </button>
+      <a href="dashboard_administrasi_utama_desktop.html" class="focus-ring-light flex items-center rounded-xl">
+        <img src="../../assets/logo-ikapi-jabar.png" alt="IKAPI Jawa Barat" class="h-7 w-auto object-contain drop-shadow-[0_1px_3px_rgba(0,0,0,0.35)]">
+      </a>
+    </div>
+    <div class="flex items-center gap-1.5">
+      <div class="relative">
+        <button type="button" id="btn-notif" aria-label="Notifikasi" aria-haspopup="true" aria-expanded="false"
+          class="focus-ring-light relative grid h-10 w-10 place-items-center rounded-xl text-white hover:bg-white/10">
+          <span class="material-symbols-outlined text-[22px]">notifications</span>
+        </button>
+        <div id="notif-panel" class="absolute right-0 top-12 hidden w-72 rounded-2xl border border-border bg-white p-4 shadow-[0_16px_40px_rgba(34,34,37,0.12)]">
+          <div class="mb-1.5 text-[13px] font-bold text-ink">Notifikasi</div>
+          <p class="text-[13px] leading-relaxed text-muted">Tidak ada notifikasi baru.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<div id="sidebar-scrim" class="fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden"></div>
+<aside id="publisher-sidebar" class="fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgba(34,34,37,0.07)] lg:translate-x-0">
+  <nav aria-label="Navigasi dashboard administrator" class="flex flex-1 flex-col gap-1 overflow-y-auto px-3 pb-4 pt-7">
+    <a href="dashboard_administrasi_utama_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">space_dashboard</span><span>Dashboard</span>
+    </a>
+    <p class="mt-3 px-3 text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Manajemen</p>
+    <a href="kelola_pengguna_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">group</span><span>Kelola Pengguna</span>
+    </a>
+    <a href="pengawasan_katalog_buku_global_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">menu_book</span><span>Pengawasan Katalog</span>
+    </a>
+    <a href="moderasi_ulasan_dan_komentar_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">reviews</span><span>Moderasi Ulasan</span>
+    </a>
+    <a href="kelola_komunitas_desktop.html" data-nav="kelola-komunitas" aria-current="page" class="focus-ring flex items-center gap-3 rounded-xl bg-primary px-3 py-2.5 text-[14px] font-semibold text-white">
+      <span class="material-symbols-outlined text-[20px]">groups</span><span>Kelola Komunitas</span>
+    </a>
+    <a href="moderasi_diskusi_komunitas_desktop.html" data-nav="moderasi-diskusi" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">forum</span><span>Moderasi Diskusi</span>
+    </a>
+    <p class="mt-3 px-3 text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Keuangan &amp; Monitoring</p>
+    <a href="monitoring_global_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">monitoring</span><span>Monitoring Global</span>
+    </a>
+    <a href="kelola_pencairan_dana_desktop.html" class="focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium text-muted transition-colors hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[20px]">payments</span><span>Kelola Pencairan Dana</span>
+    </a>
+  </nav>
+  <div class="flex items-center gap-2 border-t border-divider p-3">
+    <a href="login_administrator_desktop.html" class="focus-ring flex min-w-0 flex-1 items-center gap-3 rounded-xl px-2 py-2 hover:bg-neutral">
+      <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary text-white">
+        <span class="material-symbols-outlined text-[18px]">shield_person</span>
+      </span>
+      <span class="min-w-0 text-left leading-tight">
+        <span class="block truncate text-[13px] font-semibold text-ink">Administrator</span>
+        <span class="block truncate text-[11px] text-muted">Portal Administrator</span>
+      </span>
+    </a>
+    <a href="login_administrator_desktop.html" aria-label="Keluar" title="Keluar"
+      class="focus-ring grid h-10 w-10 shrink-0 place-items-center rounded-xl text-[#B42318] transition-colors hover:bg-[#FEF3F2]">
+      <span class="material-symbols-outlined text-[20px]">logout</span>
+    </a>
+  </div>
+</aside>
+
+<!-- MAIN COLUMN -->
+<div class="shell-main">
+  <div aria-hidden="true" class="banner-bleed relative h-[232px] overflow-hidden bg-primary-deep sm:h-[260px] lg:h-[276px]">
+    <svg class="absolute inset-0 h-full w-full" viewBox="0 0 1440 212" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="topScrim" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2F1C6A" stop-opacity="0.96"></stop>
+          <stop offset="100%" stop-color="#2F1C6A" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="212" fill="#2F1C6A"></rect>
+      <polygon points="418,0 612,0 470,212 276,212" fill="#4B2CBA"></polygon>
+      <polygon points="648,0 706,0 564,212 506,212" fill="#825CF1"></polygon>
+      <polygon points="748,0 1002,0 860,212 606,212" fill="#673DE6"></polygon>
+      <polygon points="1042,0 1084,0 942,212 900,212" fill="#4475D8"></polygon>
+      <polygon points="1124,0 1290,0 1148,212 982,212" fill="#4B2CBA"></polygon>
+      <polygon points="1342,0 1440,0 1440,212 1200,212" fill="#825CF1"></polygon>
+      <polygon points="1420,0 1440,0 1440,212 1378,212" fill="#4475D8"></polygon>
+      <rect width="1440" height="58" fill="url(#topScrim)"></rect>
+    </svg>
+  </div>
+
+  <main id="workspace" class="relative z-10 -mt-20 rounded-t-[20px] border-t border-border bg-white lg:ml-6">
+    <div class="mx-auto w-full max-w-[1560px] px-4 pb-16 pt-6 sm:px-6 lg:px-10 lg:pt-8">
+
+      <div class="mb-4 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+        <div class="min-w-0">
+          <h1 class="text-[26px] font-bold leading-tight tracking-tight text-ink lg:text-[30px]">Kelola Komunitas</h1>
+          <p class="mt-1 text-[14px] text-muted">Atur komunitas yang tersedia di direktori IKAPI Store.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="relative">
+            <button type="button" id="demo-toggle" aria-expanded="false" aria-haspopup="true"
+              class="focus-ring inline-flex h-10 items-center gap-1.5 rounded-xl border border-dashed border-border px-3 text-[13px] font-semibold text-muted transition-colors hover:bg-neutral hover:text-ink">
+              <span class="material-symbols-outlined text-[17px]">tune</span>
+              <span>Mode Demo</span>
+              <span class="material-symbols-outlined text-[17px]">expand_more</span>
+            </button>
+            <div id="demo-menu" class="absolute right-0 top-12 z-30 hidden w-72 rounded-2xl border border-border bg-white p-1.5 shadow-[0_16px_40px_rgba(34,34,37,0.12)]" role="menu" aria-label="Pilih skenario demo">
+              <button type="button" data-demo="reset" role="menuitem" class="focus-ring flex w-full items-center rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral">Kembalikan data komunitas awal</button>
+              <p class="px-3 pb-1.5 pt-2 text-[11px] leading-relaxed text-muted">Data komunitas disimpan di browser ini untuk keperluan prototype.</p>
+            </div>
+          </div>
+          <button type="button" id="btn-add"
+            class="focus-ring inline-flex h-10 items-center gap-1.5 rounded-xl bg-primary px-4 text-[13.5px] font-semibold text-white hover:bg-primary-hover">
+            <span class="material-symbols-outlined text-[18px]">add</span>
+            <span>Tambah Komunitas</span>
+          </button>
+        </div>
+      </div>
+
+      <p id="page-note" role="status" class="mb-3 hidden text-[12.5px] text-muted"></p>
+
+      <div class="mb-3 flex flex-wrap items-center gap-2">
+        <div class="relative min-w-[220px] flex-1">
+          <label for="community-search" class="sr-only">Cari komunitas</label>
+          <span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-muted">search</span>
+          <input id="community-search" type="search" placeholder="Cari nama komunitas..."
+            class="h-10 w-full rounded-xl border border-border bg-white pl-9 pr-3 text-[13.5px] text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+        </div>
+        <label for="status-filter" class="sr-only">Filter status komunitas</label>
+        <select id="status-filter"
+          class="h-10 rounded-xl border border-border bg-white px-3 text-[13.5px] font-medium text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+          <option value="all">Semua Status</option>
+          <option value="active">Aktif</option>
+          <option value="inactive">Nonaktif</option>
+        </select>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-border bg-white">
+        <table class="w-full min-w-[720px] border-collapse text-left">
+          <thead>
+            <tr class="border-b border-divider bg-white text-[11px] uppercase tracking-[0.06em] text-muted">
+              <th scope="col" class="px-4 py-3 font-bold">Komunitas</th>
+              <th scope="col" class="px-4 py-3 font-bold">Fokus</th>
+              <th scope="col" class="px-4 py-3 font-bold">Wilayah</th>
+              <th scope="col" class="px-4 py-3 font-bold">Status</th>
+              <th scope="col" class="px-4 py-3 pr-5 text-right font-bold">Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="community-rows" class="text-[13px]"></tbody>
+        </table>
+      </div>
+
+      <p id="table-summary" class="mt-3 text-[12.5px] text-muted"></p>
+
+      <div id="state-empty" class="mt-3 hidden rounded-2xl border border-border bg-white px-5 py-14 text-center">
+        <p class="text-[15px] font-semibold text-ink">Tidak Ada Komunitas</p>
+        <p class="mx-auto mt-1.5 max-w-sm text-[13px] leading-relaxed text-muted">Belum ada komunitas yang cocok dengan pencarian atau filter ini.</p>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+
+  /* ---------- shell: notifications / sidebar ---------- */
+  var notifBtn = $('btn-notif'), notifPanel = $('notif-panel');
+  notifBtn.addEventListener('click', function () {
+    var open = notifPanel.classList.contains('hidden');
+    notifPanel.classList.toggle('hidden', !open);
+    notifBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  var sidebar = $('publisher-sidebar'), scrim = $('sidebar-scrim'), toggle = $('sidebar-toggle');
+  function openSidebar() {
+    sidebar.classList.add('is-open');
+    scrim.classList.remove('hidden');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    var first = sidebar.querySelector('a');
+    if (first) first.focus();
+  }
+  function closeSidebar() {
+    if (!sidebar.classList.contains('is-open')) return;
+    sidebar.classList.remove('is-open');
+    scrim.classList.add('hidden');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    toggle.focus();
+  }
+  toggle.addEventListener('click', function () {
+    sidebar.classList.contains('is-open') ? closeSidebar() : openSidebar();
+  });
+  scrim.addEventListener('click', closeSidebar);
+  sidebar.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeSidebar); });
+
+  document.addEventListener('click', function (e) {
+    if (!notifPanel.contains(e.target) && !notifBtn.contains(e.target)) {
+      notifPanel.classList.add('hidden');
+      notifBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>
+
+<!-- ============ COMMUNITY DRAWER ============ -->
+<div id="drawer-scrim" class="fixed inset-0 z-[60] hidden bg-[#222225]/45"></div>
+<aside id="community-drawer" class="fixed right-0 top-0 z-[70] flex h-full w-full max-w-full flex-col border-l border-border bg-white shadow-[-16px_0_40px_rgba(34,34,37,0.12)] sm:max-w-[520px]"
+  role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+  <header class="flex items-start justify-between gap-4 border-b border-divider px-5 py-4">
+    <div class="min-w-0">
+      <h2 id="drawer-title" class="text-[17px] font-bold tracking-tight text-ink">Detail Komunitas</h2>
+      <p class="num mt-0.5 text-[12.5px] text-muted" id="drawer-id">-</p>
+    </div>
+    <button type="button" id="drawer-close" aria-label="Tutup detail" class="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[18px]">close</span>
+    </button>
+  </header>
+
+  <div class="flex-1 space-y-5 overflow-y-auto px-5 py-4">
+    <!-- view mode -->
+    <div id="drawer-view" class="space-y-5">
+      <section>
+        <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Identitas</h3>
+        <div class="mt-2 flex items-start gap-3">
+          <img id="view-photo" src="" alt="" class="h-16 w-24 shrink-0 rounded-lg border border-border object-cover">
+          <div class="min-w-0">
+            <p class="text-[15px] font-semibold leading-snug text-ink" id="view-name">-</p>
+            <p class="mt-0.5 text-[12.5px] text-muted" id="view-focus">-</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-divider pt-4">
+        <dl class="space-y-2 text-[13px]">
+          <div class="flex justify-between gap-3"><dt class="text-muted">Wilayah</dt><dd class="text-right font-medium text-ink" id="view-location">-</dd></div>
+          <div class="flex justify-between gap-3"><dt class="text-muted">Status</dt><dd class="text-right font-semibold text-ink" id="view-status">-</dd></div>
+          <div class="flex justify-between gap-3"><dt class="text-muted">Jumlah topik</dt><dd class="num text-ink" id="view-topics">-</dd></div>
+        </dl>
+      </section>
+
+      <section class="border-t border-divider pt-4">
+        <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Deskripsi singkat</h3>
+        <p class="mt-1.5 text-[13.5px] leading-relaxed text-ink" id="view-short">-</p>
+        <h3 class="mt-4 text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Deskripsi lengkap</h3>
+        <p class="mt-1.5 text-[13.5px] leading-relaxed text-ink" id="view-full">-</p>
+      </section>
+    </div>
+
+    <!-- form mode -->
+    <form id="drawer-form" class="hidden space-y-4" novalidate>
+      <div>
+        <label for="form-name" class="text-[12.5px] font-semibold text-ink">Nama komunitas</label>
+        <input id="form-name" type="text" maxlength="80" class="mt-1 h-10 w-full rounded-xl border border-border px-3 text-[13.5px] outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+        <p class="mt-1 hidden text-[12px] text-[#B42318]" id="err-name">Nama komunitas wajib diisi.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label for="form-focus" class="text-[12.5px] font-semibold text-ink">Fokus</label>
+          <select id="form-focus" class="mt-1 h-10 w-full rounded-xl border border-border bg-white px-3 text-[13.5px] outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+            <option value="filologi">Filologi &amp; Aksara Kuno</option>
+            <option value="fiksi">Klub Baca Fiksi</option>
+            <option value="sejarah">Sejarah Priangan</option>
+          </select>
+        </div>
+        <div>
+          <label for="form-status" class="text-[12.5px] font-semibold text-ink">Status</label>
+          <select id="form-status" class="mt-1 h-10 w-full rounded-xl border border-border bg-white px-3 text-[13.5px] outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+            <option value="active">Aktif</option>
+            <option value="inactive">Nonaktif</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label for="form-location" class="text-[12.5px] font-semibold text-ink">Wilayah</label>
+        <input id="form-location" type="text" maxlength="80" class="mt-1 h-10 w-full rounded-xl border border-border px-3 text-[13.5px] outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+        <p class="mt-1 hidden text-[12px] text-[#B42318]" id="err-location">Wilayah wajib diisi.</p>
+      </div>
+      <div>
+        <label for="form-short" class="text-[12.5px] font-semibold text-ink">Deskripsi singkat</label>
+        <textarea id="form-short" rows="2" maxlength="180" class="mt-1 w-full resize-none rounded-xl border border-border p-3 text-[13.5px] outline-none focus:border-primary focus:ring-2 focus:ring-primary/15"></textarea>
+        <p class="mt-1 hidden text-[12px] text-[#B42318]" id="err-short">Deskripsi singkat wajib diisi.</p>
+      </div>
+      <div>
+        <label for="form-full" class="text-[12.5px] font-semibold text-ink">Deskripsi lengkap</label>
+        <textarea id="form-full" rows="4" maxlength="600" class="mt-1 w-full resize-none rounded-xl border border-border p-3 text-[13.5px] outline-none focus:border-primary focus:ring-2 focus:ring-primary/15"></textarea>
+      </div>
+      <div>
+        <label for="form-photo" class="text-[12.5px] font-semibold text-ink">Foto komunitas</label>
+        <select id="form-photo" class="mt-1 h-10 w-full rounded-xl border border-border bg-white px-3 text-[13.5px] outline-none focus:border-primary focus:ring-2 focus:ring-primary/15"></select>
+        <img id="form-photo-preview" src="" alt="" class="mt-2 h-24 w-36 rounded-lg border border-border object-cover">
+        <p class="mt-1 text-[11.5px] leading-relaxed text-muted">Pilih dari aset ilustrasi yang tersedia. Unggah berkas belum didukung pada prototype ini.</p>
+      </div>
+      <p id="form-error" role="alert" class="hidden text-[12.5px] font-medium text-[#B42318]"></p>
+    </form>
+  </div>
+
+  <footer class="flex items-center justify-between gap-2 border-t border-divider px-5 py-3.5">
+    <button type="button" id="btn-toggle-status" class="focus-ring hidden h-10 items-center rounded-xl border border-border px-4 text-[13.5px] font-semibold text-ink hover:bg-neutral">Nonaktifkan</button>
+    <div class="ml-auto flex items-center gap-2">
+      <button type="button" id="btn-edit" class="focus-ring hidden h-10 items-center rounded-xl border border-border px-4 text-[13.5px] font-semibold text-ink hover:bg-neutral">Edit</button>
+      <button type="button" id="btn-cancel-form" class="focus-ring hidden h-10 items-center rounded-xl border border-border px-4 text-[13.5px] font-semibold text-ink hover:bg-neutral">Batal</button>
+      <button type="button" id="btn-save" class="focus-ring hidden h-10 items-center rounded-xl bg-primary px-4 text-[13.5px] font-semibold text-white hover:bg-primary-hover">Simpan</button>
+    </div>
+  </footer>
+</aside>
+
+<!-- TOAST -->
+<div id="toast" role="status" class="pointer-events-none fixed bottom-6 left-1/2 z-[95] hidden -translate-x-1/2 rounded-xl border border-border bg-white px-4 py-2.5 text-[13px] font-semibold text-ink shadow-[0_12px_32px_rgba(34,34,37,0.14)]">
+  <span id="toast-text"></span>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var $ = function (id) { return document.getElementById(id); };
+
+  var COMMUNITY_KEY = 'ikapi_communities_demo';
+  var TOPIC_KEY = 'ikapi_community_topics_demo';
+
+  /* Default directory data, mirrored from the public community page. */
+  var DEFAULTS = [
+    {
+      id: 'community-filologi', name: 'Komunitas Filologi Pasundan', focus: 'filologi',
+      focusLabel: 'Filologi & Aksara Kuno', location: 'Bandung, Jawa Barat',
+      shortDesc: 'Komunitas yang mempelajari dan melestarikan naskah serta aksara Sunda kuno.',
+      fullDesc: 'Komunitas Filologi Pasundan berakar dari lingkaran pegiat manuskrip, peneliti sastra daerah, dan generasi muda yang berikhtiar menyelamatkan lembaran naskah lontar dan daluwang di Jawa Barat agar dapat dipelajari secara luas.',
+      photo: '../../assets/events/event-community.jpg',
+      photoAlt: 'Foto ilustrasi kegiatan membaca dan menelaah naskah bersama',
+      status: 'active'
+    },
+    {
+      id: 'community-klub-buku', name: 'Klub Buku Priangan (KBP)', focus: 'fiksi',
+      focusLabel: 'Klub Baca Fiksi', location: 'Bandung & Cimahi, Jawa Barat',
+      shortDesc: 'Komunitas pembaca yang membahas novel dan karya sastra.',
+      fullDesc: 'Klub Buku Priangan adalah lingkar pembaca independen yang rutin mengadakan pertemuan diskusi karya sastra fiksi, bedah buku kurasi IKAPI, dan ruang bertukar bacaan di berbagai ruang publik terbuka.',
+      photo: '../../assets/events/event-children-story.jpg',
+      photoAlt: 'Foto ilustrasi diskusi buku bersama sekelompok pembaca',
+      status: 'active'
+    },
+    {
+      id: 'community-sejarah', name: 'Masyarakat Sejarah & Budaya Sunda', focus: 'sejarah',
+      focusLabel: 'Sejarah Priangan', location: 'Sumedang & Garut, Jawa Barat',
+      shortDesc: 'Komunitas yang mempelajari sejarah dan kebudayaan Sunda melalui diskusi serta kegiatan literasi.',
+      fullDesc: 'Masyarakat Sejarah & Budaya Sunda mengkaji babad, sejarah geomorfologi Priangan, dan buku-buku kearifan lokal bersama para peneliti, pengarang daerah, serta pendidik dari berbagai institusi.',
+      photo: '../../assets/events/event-book-fair.jpg',
+      photoAlt: 'Foto ilustrasi kunjungan pameran buku dan literasi daerah',
+      status: 'active'
+    }
+  ];
+
+  var PHOTOS = [
+    { value: '../../assets/events/event-community.jpg', label: 'Kegiatan membaca dan menelaah naskah' },
+    { value: '../../assets/events/event-children-story.jpg', label: 'Diskusi buku bersama pembaca' },
+    { value: '../../assets/events/event-book-fair.jpg', label: 'Pameran buku dan literasi daerah' },
+    { value: '../../assets/events/event-webinar.jpg', label: 'Kegiatan daring literasi' }
+  ];
+
+  var FOCUS_LABEL = {
+    filologi: 'Filologi & Aksara Kuno',
+    fiksi: 'Klub Baca Fiksi',
+    sejarah: 'Sejarah Priangan'
+  };
+
+  var ui = { query: '', status: 'all', mode: 'view', selectedId: null, lastTrigger: null };
+
+  function readJSON(key, fallback) {
+    try {
+      var raw = window.localStorage.getItem(key);
+      if (!raw) return fallback;
+      var parsed = JSON.parse(raw);
+      return parsed && typeof parsed === 'object' ? parsed : fallback;
+    } catch (e) { return fallback; }
+  }
+
+  function writeJSON(key, value) {
+    try { window.localStorage.setItem(key, JSON.stringify(value)); return true; }
+    catch (e) { return false; }
+  }
+
+  function communities() {
+    var stored = readJSON(COMMUNITY_KEY, null);
+    if (Array.isArray(stored) && stored.length) return stored;
+    writeJSON(COMMUNITY_KEY, DEFAULTS);
+    return DEFAULTS.slice();
+  }
+
+  function saveCommunities(list) { return writeJSON(COMMUNITY_KEY, list); }
+
+  function topicCount(communityId) {
+    var topics = readJSON(TOPIC_KEY, []);
+    if (!Array.isArray(topics)) return 0;
+    return topics.filter(function (t) { return t.communityId === communityId && !t.removed; }).length;
+  }
+
+  function statusLabel(status) { return status === 'inactive' ? 'Nonaktif' : 'Aktif'; }
+
+  function note(text) {
+    var el = $('page-note');
+    el.textContent = text || '';
+    el.classList.toggle('hidden', !text);
+  }
+
+  function toast(text) {
+    $('toast-text').textContent = text;
+    $('toast').classList.remove('hidden');
+    window.clearTimeout(toast.timer);
+    toast.timer = window.setTimeout(function () { $('toast').classList.add('hidden'); }, 2600);
+  }
+
+  function filtered() {
+    var list = communities();
+    if (ui.status !== 'all') list = list.filter(function (c) { return (c.status || 'active') === ui.status; });
+    var q = ui.query.trim().toLowerCase();
+    if (q) {
+      list = list.filter(function (c) {
+        return (c.name + ' ' + c.location + ' ' + c.focusLabel).toLowerCase().indexOf(q) !== -1;
+      });
+    }
+    return list.sort(function (a, b) { return a.name.localeCompare(b.name); });
+  }
+
+  function render() {
+    var tbody = $('community-rows');
+    var list = filtered();
+    tbody.textContent = '';
+
+    $('table-summary').textContent = list.length + ' komunitas ditampilkan';
+    $('state-empty').classList.toggle('hidden', list.length > 0);
+
+    list.forEach(function (c) {
+      var tr = document.createElement('tr');
+      tr.className = 'border-b border-divider transition-colors hover:bg-soft';
+
+      var nameCell = document.createElement('td');
+      nameCell.className = 'px-4 py-3';
+      var wrap = document.createElement('div');
+      wrap.className = 'flex items-center gap-3';
+      var img = document.createElement('img');
+      img.src = c.photo;
+      img.alt = '';
+      img.className = 'h-10 w-14 shrink-0 rounded border border-border object-cover';
+      var text = document.createElement('div');
+      text.className = 'min-w-0';
+      var name = document.createElement('p');
+      name.className = 'truncate text-[13.5px] font-semibold text-ink';
+      name.textContent = c.name;
+      var sub = document.createElement('p');
+      sub.className = 'num mt-0.5 text-[11.5px] text-muted';
+      sub.textContent = c.id;
+      text.appendChild(name);
+      text.appendChild(sub);
+      wrap.appendChild(img);
+      wrap.appendChild(text);
+      nameCell.appendChild(wrap);
+
+      var focusCell = document.createElement('td');
+      focusCell.className = 'px-4 py-3 text-[13px] text-ink';
+      focusCell.textContent = c.focusLabel;
+
+      var locationCell = document.createElement('td');
+      locationCell.className = 'px-4 py-3 text-[13px] text-muted';
+      locationCell.textContent = c.location;
+
+      var statusCell = document.createElement('td');
+      statusCell.className = 'px-4 py-3';
+      var status = document.createElement('span');
+      status.className = (c.status || 'active') === 'inactive'
+        ? 'text-[12px] font-semibold text-[#B42318]'
+        : 'text-[12px] font-semibold text-[#0F7B4F]';
+      status.textContent = statusLabel(c.status);
+      statusCell.appendChild(status);
+
+      var actionCell = document.createElement('td');
+      actionCell.className = 'px-4 py-3 pr-5 text-right';
+      var button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'focus-ring inline-flex h-8 items-center rounded-lg border border-border px-3 text-[12.5px] font-semibold text-ink hover:bg-neutral';
+      button.textContent = 'Tinjau';
+      button.addEventListener('click', function () { openDrawer(c.id, button); });
+      actionCell.appendChild(button);
+
+      tr.appendChild(nameCell);
+      tr.appendChild(focusCell);
+      tr.appendChild(locationCell);
+      tr.appendChild(statusCell);
+      tr.appendChild(actionCell);
+      tbody.appendChild(tr);
+    });
+  }
+
+  /* ---------- drawer ---------- */
+  function openDrawer(id, trigger) {
+    var list = communities();
+    var record = id ? list.filter(function (c) { return c.id === id; })[0] : null;
+    if (!record) return;
+
+    ui.selectedId = record.id;
+    ui.lastTrigger = trigger || null;
+    ui.mode = 'view';
+
+    $('drawer-title').textContent = 'Detail Komunitas';
+    $('drawer-id').textContent = record.id;
+    $('view-photo').src = record.photo;
+    $('view-photo').alt = record.photoAlt || '';
+    $('view-name').textContent = record.name;
+    $('view-focus').textContent = record.focusLabel;
+    $('view-location').textContent = record.location;
+    $('view-status').textContent = statusLabel(record.status);
+    $('view-topics').textContent = topicCount(record.id);
+    $('view-short').textContent = record.shortDesc;
+    $('view-full').textContent = record.fullDesc || 'Belum ada deskripsi lengkap.';
+
+    var toggle = $('btn-toggle-status');
+    toggle.textContent = (record.status || 'active') === 'active' ? 'Nonaktifkan' : 'Aktifkan';
+
+    paintMode();
+    openDrawerPanel();
+  }
+
+  function openDrawerPanel() {
+    $('community-drawer').classList.add('is-open');
+    $('community-drawer').setAttribute('aria-hidden', 'false');
+    $('drawer-scrim').classList.remove('hidden');
+    $('drawer-close').focus();
+  }
+
+  function closeDrawer() {
+    var drawer = $('community-drawer');
+    if (!drawer.classList.contains('is-open')) return;
+    drawer.classList.remove('is-open');
+    drawer.setAttribute('aria-hidden', 'true');
+    $('drawer-scrim').classList.add('hidden');
+    if (ui.lastTrigger) ui.lastTrigger.focus();
+  }
+
+  function paintMode() {
+    var view = ui.mode === 'view';
+    $('drawer-view').classList.toggle('hidden', !view);
+    $('drawer-form').classList.toggle('hidden', view);
+    $('btn-edit').classList.toggle('hidden', !view || ui.mode === 'create');
+    $('btn-edit').classList.toggle('items-center', !view);
+    $('btn-edit').classList.toggle('inline-flex', !view);
+    $('btn-toggle-status').classList.toggle('hidden', !view);
+    $('btn-toggle-status').classList.toggle('items-center', !view);
+    $('btn-toggle-status').classList.toggle('inline-flex', !view);
+    $('btn-cancel-form').classList.toggle('hidden', view);
+    $('btn-cancel-form').classList.toggle('items-center', !view);
+    $('btn-cancel-form').classList.toggle('inline-flex', !view);
+    $('btn-save').classList.toggle('hidden', view);
+    $('btn-save').classList.toggle('items-center', !view);
+    $('btn-save').classList.toggle('inline-flex', !view);
+  }
+
+  function fillForm(record) {
+    $('form-name').value = record ? record.name : '';
+    $('form-focus').value = record ? record.focus : 'filologi';
+    $('form-location').value = record ? record.location : '';
+    $('form-short').value = record ? record.shortDesc : '';
+    $('form-full').value = record ? (record.fullDesc || '') : '';
+    $('form-status').value = record ? (record.status || 'active') : 'active';
+
+    var select = $('form-photo');
+    select.textContent = '';
+    PHOTOS.forEach(function (photo) {
+      var option = document.createElement('option');
+      option.value = photo.value;
+      option.textContent = photo.label;
+      select.appendChild(option);
+    });
+    select.value = record && record.photo ? record.photo : PHOTOS[0].value;
+    $('form-photo-preview').src = select.value;
+
+    ['err-name', 'err-location', 'err-short'].forEach(function (id) { $(id).classList.add('hidden'); });
+    $('form-error').classList.add('hidden');
+  }
+
+  function startCreate() {
+    ui.mode = 'create';
+    ui.selectedId = null;
+    ui.lastTrigger = document.activeElement;
+    $('drawer-title').textContent = 'Tambah Komunitas';
+    $('drawer-id').textContent = 'Komunitas baru';
+    fillForm(null);
+    paintMode();
+    openDrawerPanel();
+    $('form-name').focus();
+  }
+
+  function startEdit() {
+    var record = communities().filter(function (c) { return c.id === ui.selectedId; })[0];
+    if (!record) return;
+    ui.mode = 'edit';
+    $('drawer-title').textContent = 'Edit Komunitas';
+    fillForm(record);
+    paintMode();
+    $('form-name').focus();
+  }
+
+  function saveForm() {
+    var name = $('form-name').value.trim();
+    var location = $('form-location').value.trim();
+    var shortDesc = $('form-short').value.trim();
+    var focus = $('form-focus').value;
+    var status = $('form-status').value;
+    var photo = $('form-photo').value;
+
+    var invalid = false;
+    $('err-name').classList.toggle('hidden', !!name);
+    $('err-location').classList.toggle('hidden', !!location);
+    $('err-short').classList.toggle('hidden', !!shortDesc);
+    if (!name || !location || !shortDesc) invalid = true;
+    if (invalid) {
+      $('form-error').textContent = 'Lengkapi nama, wilayah, dan deskripsi singkat.';
+      $('form-error').classList.remove('hidden');
+      return;
+    }
+
+    var list = communities();
+    var photoMeta = PHOTOS.filter(function (p) { return p.value === photo; })[0];
+
+    if (ui.mode === 'create') {
+      var newRecord = {
+        id: 'community-' + Date.now().toString(36),
+        name: name,
+        focus: focus,
+        focusLabel: FOCUS_LABEL[focus],
+        location: location,
+        shortDesc: shortDesc,
+        fullDesc: $('form-full').value.trim(),
+        photo: photo,
+        photoAlt: 'Foto ilustrasi ' + (photoMeta ? photoMeta.label.toLowerCase() : 'kegiatan komunitas'),
+        status: status
+      };
+      list.push(newRecord);
+
+      if (!saveCommunities(list)) {
+        $('form-error').textContent = 'Komunitas belum tersimpan. Coba lagi.';
+        $('form-error').classList.remove('hidden');
+        return;
+      }
+
+      ui.selectedId = newRecord.id;
+      toast('Komunitas ditambahkan.');
+    } else {
+      var target = list.filter(function (c) { return c.id === ui.selectedId; })[0];
+      if (!target) return;
+      target.name = name;
+      target.focus = focus;
+      target.focusLabel = FOCUS_LABEL[focus];
+      target.location = location;
+      target.shortDesc = shortDesc;
+      target.fullDesc = $('form-full').value.trim();
+      target.photo = photo;
+      target.photoAlt = 'Foto ilustrasi ' + (photoMeta ? photoMeta.label.toLowerCase() : 'kegiatan komunitas');
+      target.status = status;
+
+      if (!saveCommunities(list)) {
+        $('form-error').textContent = 'Perubahan belum tersimpan. Coba lagi.';
+        $('form-error').classList.remove('hidden');
+        return;
+      }
+
+      toast('Perubahan komunitas disimpan.');
+    }
+
+    ui.mode = 'view';
+    render();
+    openDrawer(ui.selectedId, ui.lastTrigger);
+  }
+
+  function toggleStatus() {
+    var list = communities();
+    var record = list.filter(function (c) { return c.id === ui.selectedId; })[0];
+    if (!record) return;
+
+    var next = (record.status || 'active') === 'active' ? 'inactive' : 'active';
+    record.status = next;
+
+    if (!saveCommunities(list)) {
+      toast('Status belum tersimpan. Coba lagi.');
+      return;
+    }
+
+    note(next === 'inactive'
+      ? 'Komunitas dinonaktifkan. Profil dan diskusinya tidak lagi tampil di direktori publik.'
+      : 'Komunitas diaktifkan kembali.');
+    toast(next === 'inactive' ? 'Komunitas dinonaktifkan.' : 'Komunitas diaktifkan.');
+    render();
+    openDrawer(record.id, ui.lastTrigger);
+  }
+
+  /* ---------- demo menu ---------- */
+  var demoToggle = $('demo-toggle'), demoMenu = $('demo-menu');
+  function closeDemo() {
+    demoMenu.classList.add('hidden');
+    demoToggle.setAttribute('aria-expanded', 'false');
+  }
+  demoToggle.addEventListener('click', function () {
+    var open = demoMenu.classList.contains('hidden');
+    demoMenu.classList.toggle('hidden', !open);
+    demoToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  demoMenu.addEventListener('click', function (e) {
+    var item = e.target.closest('[data-demo]');
+    if (!item) return;
+    closeDemo();
+    if (!saveCommunities(DEFAULTS.slice())) { toast('Data demo tidak dapat dipulihkan.'); return; }
+    note('Data komunitas dikembalikan ke kondisi awal.');
+    toast('Data komunitas dipulihkan.');
+    render();
+  });
+
+  $('community-search').addEventListener('input', function (e) { ui.query = e.target.value; render(); });
+  $('status-filter').addEventListener('change', function (e) { ui.status = e.target.value; render(); });
+  $('btn-add').addEventListener('click', startCreate);
+  $('btn-edit').addEventListener('click', startEdit);
+  $('btn-toggle-status').addEventListener('click', toggleStatus);
+  $('btn-save').addEventListener('click', saveForm);
+  $('btn-cancel-form').addEventListener('click', function () {
+    if (ui.mode === 'create') { closeDrawer(); render(); return; }
+    ui.mode = 'view';
+    paintMode();
+  });
+  $('drawer-close').addEventListener('click', closeDrawer);
+  $('drawer-scrim').addEventListener('click', closeDrawer);
+  $('form-photo').addEventListener('change', function (e) { $('form-photo-preview').src = e.target.value; });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (!$('demo-menu').classList.contains('hidden')) { closeDemo(); return; }
+    closeDrawer();
+  });
+  document.addEventListener('click', function (e) {
+    if (!demoMenu.contains(e.target) && !demoToggle.contains(e.target)) closeDemo();
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
