@@ -17,13 +17,23 @@ Prototype marketplace & katalog penerbit IKAPI Jawa Barat.
 
 ## Instalasi lokal
 
+Tahap saat ini masih **frontend-only**: seluruh halaman prototype HTML di `docs/design/prototype-copy/` belum dikonversi ke Blade, dan belum ada fitur bisnis yang memakai database.
+
 ```sh
 composer install
 npm install
 cp .env.example .env
 php artisan key:generate
-php artisan migrate
 npm run build
+```
+
+`SESSION_DRIVER`, `CACHE_STORE`, dan `QUEUE_CONNECTION` pada `.env.example` memakai driver `file`/`sync` sehingga aplikasi bisa dijalankan tanpa tabel database.
+
+Migrasi database **belum diperlukan** untuk tahap ini:
+
+```sh
+# jalankan hanya setelah integrasi database dimulai
+php artisan migrate
 ```
 
 Sesuaikan kredensial MySQL di `.env`. Jangan commit `.env`.

@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 /*
@@ -14,8 +13,12 @@ use Tests\TestCase;
 |
 */
 
+/*
+| Feature tests bind the Laravel test case only. Database traits are added
+| per-test, because the current stage is a database-free frontend foundation.
+*/
+
 pest()->extend(TestCase::class)
-    ->use(RefreshDatabase::class)
     ->in('Feature');
 
 /*

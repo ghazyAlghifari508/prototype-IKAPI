@@ -62,7 +62,7 @@ Tidak ada persona demografis, angka pembeli, jumlah katalog, atau hasil riset pe
 | `ERD.drawio` | Entitas logis: akun, pelanggan, buku, order, ulasan, bookmark, event, komunitas | Bukan spesifikasi final API atau desain database |
 | `SKEMA RELASI.drawio` | Referensi field dan relasi data yang relevan untuk tampilan | Tidak membenarkan pembuatan field UI baru tanpa kebutuhan |
 | `Proposal_Abdimas_Online_Bookstore_...pdf` | Tujuan proyek, tiga peran, perlindungan PDF, pembayaran, dan contoh rancangan pada hlm. 5–8 | Gambar pada proposal adalah referensi kebutuhan/alur, bukan design system final |
-| Repo `prototype-IKAPI`, branch `feature/breeze-auth-scaffold`, `docs/spec` | Sumber proyek terkait | Harus dibuka ulang pada commit/branch terbaru oleh agent sebelum desain |
+| Repo `prototype-IKAPI`, branch `prototype-only`, `docs/spec` | Sumber proyek terkait | Harus dibuka ulang pada commit/branch terbaru oleh agent sebelum desain |
 | `docs/design/page-ref` | Referensi visual halaman bookstore | Mengarahkan komposisi dan elemen visual, bukan mengimpor fitur produk referensi |
 | `docs/design/scrape-ref/DESIGN.md` | Bukti pengukuran visual terbatas dari Midtrans | Bukan template UI marketplace atau spesifikasi fitur |
 | `docs/design/assets/assets.json` + `covers/` | 7 buku demo dan cover | Bukan inventaris atau harga resmi IKAPI |
@@ -230,7 +230,7 @@ Homepage minimum mengutamakan header dan pencarian, hero bookstore, navigasi kat
 
 ## 6.1 Identitas dan akun (UC 01–03; tambahan dari scaffold autentikasi)
 
-**FR-A01 Registrasi pembeli — confirmed.** Pengunjung dapat mendaftarkan akun dengan nama, email, nomor HP, dan password sebagaimana skenario use case. Validasi mencakup field wajib dan email yang sudah terdaftar; hasil sukses mengarahkan pengguna ke login sesuai skenario. Komponen login/register yang sudah ada dalam Laravel Breeze harus diperiksa karena field scaffold dapat berbeda.
+**FR-A01 Registrasi pembeli — confirmed.** Pengunjung dapat mendaftarkan akun dengan nama, email, nomor HP, dan password sebagaimana skenario use case. Validasi mencakup field wajib dan email yang sudah terdaftar; hasil sukses mengarahkan pengguna ke login sesuai skenario. Komponen login/register mengikuti desain final IKAPI Store pada halaman prototype, dan tidak memakai scaffold autentikasi bawaan framework.
 
 **FR-A02 Login — confirmed.** Login menggunakan email dan password. Kredensial salah menimbulkan error yang bisa dipahami; password input dikosongkan sesuai skenario; pengguna tetap berada pada halaman masuk. Login berhasil mengarahkan ke pengalaman pembeli. Untuk pengguna yang baru diarahkan dari belanja, pengembalian ke konteks awal adalah usulan UX yang perlu dicek terhadap mekanisme aplikasi.
 
@@ -778,7 +778,7 @@ Fitur **Komunitas** berasal dari diagram use case dan model data, tetapi belum m
 
 # 17. Lampiran: fixture katalog yang telah teridentifikasi
 
-Sumber: `docs/design/assets/assets.json` pada branch `feature/breeze-auth-scaffold` yang telah diperiksa. Harga **hanya untuk simulasi prototipe**.
+Sumber: `docs/design/assets/assets.json` pada branch `prototype-only` yang telah diperiksa. Harga **hanya untuk simulasi prototipe**.
 
 | ID | Judul | Penulis | Kategori fixture | Harga simulasi |
 |---|---|---|---|---:|

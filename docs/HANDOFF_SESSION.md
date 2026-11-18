@@ -6,7 +6,7 @@ Dokumen ini dibuat sebagai rangkuman lengkap konteks, riwayat perbaikan, arsitek
 
 ## 1. Identitas & Lingkungan Kerja
 - **Repositori:** `prototype-IKAPI`
-- **Branch Aktif:** `feature/breeze-auth-scaffold`
+- **Branch Aktif:** `prototype-only`
 - **Stack Teknologi:** HTML5, Tailwind CSS (via CDN), Vanilla JavaScript, Playwright (untuk automated QA).
 - **Direktori Utama Prototype:** `docs/design/prototype-copy/`
 - **Direktori Aset Desain:** `docs/design/assets/`
