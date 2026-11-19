@@ -1,40 +1,102 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-slate-50">
+<html lang="id" class="h-full bg-[#f5f5f6]">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ config('app.name', 'IKAPI Marketplace') }}</title>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700" rel="stylesheet" />
-
-    <!-- Styles / Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IKAPI Jawa Barat — Marketplace & Portal Penerbit Buku</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#673de6', hover: '#5025d1', deep: '#2f1c6a' },
+            surface: { DEFAULT: '#ffffff', soft: '#f5f6ff', neutral: '#f5f5f6' },
+            ink: { body: '#222225', muted: '#62636b' },
+            'border-subtle': '#e5e7eb'
+          },
+          fontFamily: { sans: ["'DM Sans'", 'sans-serif'] }
+        }
+      }
+    };
+  </script>
 </head>
-<body class="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8 font-sans antialiased text-slate-800">
-    <div class="sm:mx-auto sm:w-full sm:max-w-md text-center">
-        <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-indigo-600 text-white shadow-lg shadow-indigo-200 mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>
-        </div>
-        <h1 class="text-3xl font-bold tracking-tight text-slate-900">IKAPI Jawa Barat</h1>
-        <p class="mt-2 text-sm text-slate-600">Marketplace & Katalog Penerbit Buku</p>
-    </div>
+<body class="min-h-full flex flex-col font-sans antialiased text-ink-body bg-surface-neutral">
 
-    <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div class="bg-white py-8 px-6 shadow-sm border border-slate-200/80 rounded-2xl sm:px-10 text-center">
-            <div class="space-y-4">
-                <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700 ring-1 ring-inset ring-emerald-600/20">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
-                    Stack Siap: Laravel + Blade + Tailwind + MySQL
-                </span>
-                <p class="text-sm text-slate-600">
-                    Projek telah dibersihkan dan disiapkan dengan stack baru. Anda dapat mulai menambahkan model, migrasi, dan view Blade sesuai kebutuhan tim.
-                </p>
-            </div>
-        </div>
+  <header class="border-b border-border-subtle bg-white">
+    <div class="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-3">
+        <span class="text-2xl font-bold tracking-tight text-primary">IKAPI</span>
+        <span class="text-[14px] font-semibold text-ink-muted">Jawa Barat</span>
+      </div>
+      <nav class="flex items-center gap-3">
+        @auth
+          <span class="text-[13px] font-semibold text-ink-body">Halo, {{ auth()->user()->name }}</span>
+          @if (auth()->user()->isPublisher())
+            <a href="{{ route('publisher.dashboard') }}" class="rounded-xl bg-primary px-4 py-2 text-[13px] font-bold text-white hover:bg-primary-hover">Dashboard Penerbit</a>
+          @elseif (auth()->user()->isAdmin())
+            <a href="{{ route('admin.dashboard') }}" class="rounded-xl bg-primary-deep px-4 py-2 text-[13px] font-bold text-white hover:bg-black">Dashboard Admin</a>
+          @endif
+          <form method="POST" action="{{ route('logout') }}" class="inline">
+            @csrf
+            <button type="submit" class="rounded-xl border border-border-subtle px-3.5 py-2 text-[13px] font-semibold text-ink-muted hover:bg-surface-neutral hover:text-red-600">Keluar</button>
+          </form>
+        @else
+          <a href="{{ route('login') }}" class="rounded-xl border border-border-subtle px-4 py-2 text-[13px] font-bold text-ink-body hover:bg-surface-neutral">Masuk</a>
+          <a href="{{ route('register') }}" class="rounded-xl bg-primary px-4 py-2 text-[13px] font-bold text-white hover:bg-primary-hover">Daftar Akun</a>
+        @endauth
+      </nav>
     </div>
+  </header>
+
+  <main class="flex-1 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div class="w-full max-w-2xl bg-white p-8 sm:p-10 rounded-3xl shadow-xl border border-border-subtle text-center space-y-6">
+      
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-surface-soft text-primary shadow-sm mb-2">
+        <span class="material-symbols-outlined text-[36px]">auto_stories</span>
+      </div>
+
+      <div class="space-y-2">
+        <h1 class="text-3xl font-bold tracking-tight text-ink-body">Platform Autentikasi IKAPI Store</h1>
+        <p class="text-sm text-ink-muted max-w-md mx-auto">
+          Sistem autentikasi terpadu untuk Pembeli, Mitra Penerbit, dan Administrator berbasis Laravel Blade & PostgreSQL.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4">
+        <a href="{{ route('login', ['role' => 'buyer']) }}" class="flex flex-col items-center justify-center p-5 rounded-2xl border border-border-subtle bg-surface-neutral hover:border-primary hover:bg-surface-soft transition-colors">
+          <span class="material-symbols-outlined text-[28px] text-primary mb-2">person</span>
+          <span class="text-[14px] font-bold text-ink-body">Portal Pembeli</span>
+          <span class="text-[12px] text-ink-muted mt-1">Masuk & Baca Buku</span>
+        </a>
+
+        <a href="{{ route('login', ['role' => 'publisher']) }}" class="flex flex-col items-center justify-center p-5 rounded-2xl border border-border-subtle bg-surface-neutral hover:border-primary hover:bg-surface-soft transition-colors">
+          <span class="material-symbols-outlined text-[28px] text-primary mb-2">menu_book</span>
+          <span class="text-[14px] font-bold text-ink-body">Portal Penerbit</span>
+          <span class="text-[12px] text-ink-muted mt-1">Kelola & Terbitkan</span>
+        </a>
+
+        <a href="{{ route('admin.login') }}" class="flex flex-col items-center justify-center p-5 rounded-2xl border border-border-subtle bg-surface-neutral hover:border-primary-deep hover:bg-surface-soft transition-colors">
+          <span class="material-symbols-outlined text-[28px] text-primary-deep mb-2">admin_panel_settings</span>
+          <span class="text-[14px] font-bold text-ink-body">Administrator</span>
+          <span class="text-[12px] text-ink-muted mt-1">Manajemen Sistem</span>
+        </a>
+      </div>
+
+      <div class="border-t border-border-subtle pt-6 flex flex-wrap items-center justify-center gap-4 text-xs text-ink-muted">
+        <a href="{{ route('register', ['role' => 'buyer']) }}" class="hover:text-primary underline">Pendaftaran Pembeli</a>
+        <span>•</span>
+        <a href="{{ route('register', ['role' => 'publisher']) }}" class="hover:text-primary underline">Pendaftaran Penerbit (3 Langkah)</a>
+        <span>•</span>
+        <a href="{{ route('password.request') }}" class="hover:text-primary underline">Lupa Kata Sandi</a>
+      </div>
+
+    </div>
+  </main>
+
 </body>
 </html>
