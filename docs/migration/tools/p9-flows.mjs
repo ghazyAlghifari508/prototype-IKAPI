@@ -393,31 +393,16 @@ const snap = async (page, name) => { await page.screenshot({ path: path.join(SHO
   await ctx.close();
 }
 
-/* 9. Admin login preview: validation, demo submit, session marker, redirect */
+/* 9. Admin login: demo build accepts any credentials and opens the dashboard as an explicit preview */
 {
   const { ctx, page, errors, bad } = await open(`${BASE}/admin/masuk`);
   const out = {};
+  await page.fill('#admin-email', 'asd');
+  await page.fill('#admin-password', 'x');
   await page.click('#submit-btn');
-  await page.waitForTimeout(400);
-  out.validation = await page.evaluate(() => ({
-    banner: !document.getElementById('feedback').classList.contains('hidden'),
-    emailErr: !document.getElementById('email-error').classList.contains('hidden'),
-    passwordErr: !document.getElementById('password-error').classList.contains('hidden'),
-  }));
-  await page.fill('#admin-email', 'admin@ikapi-jabar.id');
-  await page.fill('#admin-password', 'admin12345');
-  await page.click('#submit-btn');
-  await page.waitForTimeout(1100);
-  // The source never claims a successful sign-in: it explains that admin auth does not exist and offers the
-  // dashboard preview instead. That message is the expected outcome here.
-  out.feedback = await page.evaluate(() => (document.getElementById('feedback-text')?.textContent || '').trim().slice(0, 90));
-  out.previewLinkVisible = await page.evaluate(() => !document.getElementById('preview-dashboard-link')?.classList.contains('hidden'));
-  out.previewNoteVisible = await page.evaluate(() => !document.getElementById('preview-note')?.classList.contains('hidden'));
-  if (out.previewLinkVisible) {
-    await page.evaluate(() => document.getElementById('preview-dashboard-link').click());
-    out.redirected = await page.waitForURL(/\/admin$/, { timeout: 12000 }).then(() => true).catch(() => false);
-    out.session = await page.evaluate(() => JSON.parse(localStorage.getItem('ikapi_admin_session_demo') || 'null'));
-  }
+  out.redirected = await page.waitForURL(/\/admin$/, { timeout: 15000 }).then(() => true).catch(() => false);
+  out.session = await page.evaluate(() => JSON.parse(localStorage.getItem('ikapi_admin_session_demo') || 'null'));
+  out.dashboardRendered = await page.evaluate(() => Boolean(document.querySelector('#activity-list, main h1')));
   out.noSecurityClaim = await page.evaluate(() => !/terlindungi|secure connection/i.test(document.body.innerText));
   rec('9-admin-login-preview', { out, errors, bad });
   await ctx.close();

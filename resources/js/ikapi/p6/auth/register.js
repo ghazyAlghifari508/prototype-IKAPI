@@ -123,15 +123,17 @@ onReady(function () {
             var pw2 = $('buyerPasswordConfirm').value;
             var terms = $('buyerTerms').checked;
 
-            var bad = false;
-            showErr('fullName', !name); bad = bad || !name;
-            var emailOk = EMAIL_RE.test(email); showErr('buyerEmail', !emailOk); bad = bad || !emailOk;
-            showErr('buyerPhone', !phone); bad = bad || !phone;
-            var pwOk = pw.length >= 8; showErr('buyerPassword', !pwOk); bad = bad || !pwOk;
-            var match = pwOk && pw === pw2; showErr('buyerPasswordConfirm', !match); bad = bad || !match;
-            showErr('buyerTerms', !terms); bad = bad || !terms;
+            /* Demo build: no format, length, match or consent gate (the owner needs free access). Only the
+               duplicate-email demo chip still shows its state. */
+            var bad = !name || !email || !phone || !pw;
+            showErr('fullName', !name);
+            showErr('buyerEmail', !email);
+            showErr('buyerPhone', !phone);
+            showErr('buyerPassword', !pw);
+            showErr('buyerPasswordConfirm', false);
+            showErr('buyerTerms', false);
 
-            if (bad) { showBanner('Periksa Kembali Formulir'); return; }
+            if (bad) { showBanner('Isi nama, email, telepon, dan kata sandi (bebas, tidak divalidasi).'); return; }
 
             if (scenario === 'duplicate' || email === DUPLICATE_EMAIL) {
               showBanner('Email sudah terdaftar pada prototype ini.');
@@ -230,22 +232,21 @@ onReady(function () {
 
           function validateStep() {
             var bad = false;
+            /* Demo build: any non-empty value passes; no email format, password length, match or consent gate. */
             if (step === 1) {
               var n = $('pubName').value.trim(), m = $('pubMember').value.trim(), a = $('pubAddress').value.trim();
               showErr('pubName', !n); showErr('pubMember', !m); showErr('pubAddress', !a);
               bad = !n || !m || !a;
             } else if (step === 2) {
               var pic = $('pubPic').value.trim(), mail = $('pubEmail').value.trim(), tel = $('pubPhone').value.trim();
-              var mailOk = EMAIL_RE.test(mail);
-              showErr('pubPic', !pic); showErr('pubEmail', !mailOk); showErr('pubPhone', !tel);
-              bad = !pic || !mailOk || !tel;
+              showErr('pubPic', !pic); showErr('pubEmail', !mail); showErr('pubPhone', !tel);
+              bad = !pic || !mail || !tel;
             } else {
-              var pw = $('pubPassword').value, pw2 = $('pubPasswordConfirm').value;
-              var pwOk = pw.length >= 8, match = pwOk && pw === pw2, terms = $('pubTerms').checked;
-              showErr('pubPassword', !pwOk); showErr('pubPasswordConfirm', !match); showErr('pubTerms', !terms);
-              bad = !pwOk || !match || !terms;
+              var pw = $('pubPassword').value;
+              showErr('pubPassword', !pw); showErr('pubPasswordConfirm', false); showErr('pubTerms', false);
+              bad = !pw;
             }
-            if (bad) showBanner('Lengkapi data pada langkah ini sebelum melanjutkan.');
+            if (bad) showBanner('Lengkapi kolom pada langkah ini (isinya bebas).');
             return !bad;
           }
 

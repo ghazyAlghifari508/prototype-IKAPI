@@ -25,7 +25,12 @@
     "errors": []
   },
   {
-    "scenario": "login-validation-empty-submit",
+    "scenario": "login-empty-submit-opens-portal",
+    "redirected": true,
+    "errors": []
+  },
+  {
+    "scenario": "login-validation-demo-chip",
     "state": {
       "banner": true,
       "emailErr": true,
@@ -40,7 +45,7 @@
       "banner": true,
       "emailErrVisible": true,
       "passwordErrVisible": true,
-      "termsErrVisible": true,
+      "termsErrVisible": false,
       "active": "buyer-submit"
     },
     "errors": []

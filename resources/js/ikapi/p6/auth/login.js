@@ -116,22 +116,26 @@ onReady(function () {
             $('auth-form').classList.remove('hidden');
             $('google-block').classList.toggle('hidden', role !== 'buyer');
           }
-          /* Only same-folder prototype pages may be used as a return destination. */
+          /* Return destinations: real app paths (any phase) or a prototype file name kept for the demo links. */
           function safeNext(raw) {
             if (!raw) return null;
             var value = raw.trim();
+            if (value.charAt(0) === '/' && value.charAt(1) !== '/') return value;
             if (!/^[a-z0-9_-]+\.html(\?[^#\s]*)?$/i.test(value)) return null;
             return value;
           }
 
-          function rememberBuyerSession(email) {
+          function rememberSession(email, selectedRole) {
             try {
               window.localStorage.setItem('ikapi_buyer_session_demo', JSON.stringify({
                 id: 'USR-PMB-0042',
                 email: email,
                 name: 'Pembeli Demo',
-                role: 'buyer'
+                role: selectedRole
               }));
+              if (selectedRole === 'publisher') {
+                window.localStorage.setItem('ikapi_publisher_session_demo', JSON.stringify({ email: email, role: 'publisher' }));
+              }
             } catch (e) {}
           }
 
@@ -156,18 +160,22 @@ onReady(function () {
             $('submit-icon').classList.toggle('animate-spin', on);
           }
 
-          /* ---------- Validation ---------- */
+          /* ---------- Validation ----------
+             Demo build: any credentials are accepted (the owner needs free access to the portal pages). The field
+             errors still exist for the "Periksa validasi" chip, which is the only path that shows them. */
           function validate() {
             var email = $('email-field').value.trim();
             var password = $('password-field').value;
-            var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-            var passwordOk = password.trim().length >= 6;
 
-            $('email-error-msg').classList.toggle('hidden', emailOk);
-            $('password-error-msg').classList.toggle('hidden', passwordOk);
+            if (scenario === 'validation') {
+              var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+              var passwordOk = password.trim().length >= 6;
+              $('email-error-msg').classList.toggle('hidden', emailOk);
+              $('password-error-msg').classList.toggle('hidden', passwordOk);
+              if (!emailOk) { $('email-field').focus(); return null; }
+              if (!passwordOk) { $('password-field').focus(); return null; }
+            }
 
-            if (!emailOk) { $('email-field').focus(); return null; }
-            if (!passwordOk) { $('password-field').focus(); return null; }
             return { email: email.toLowerCase(), password: password };
           }
 
@@ -199,28 +207,18 @@ onReady(function () {
               showBanner('Email atau kata sandi tidak sesuai.');
               return;
             }
-
-            var account = DEMO_ACCOUNTS[data.email];
-
-            /* Reviewer-forced pending scenario (still role-checked). */
             if (scenario === 'pending') { showPending(); return; }
 
-            if (!account || data.password !== DEMO_PASSWORD) {
-              showBanner('Email atau kata sandi tidak sesuai.');
-              return;
-            }
+            /* Demo login: every email/password combination is accepted; only the selected role decides where
+               the visitor lands. Unknown accounts get a demo identity instead of an error. */
+            var account = DEMO_ACCOUNTS[data.email];
+            var landing = account && account.next
+              ? account.next
+              : (role === 'publisher' ? '/penerbit' : '/akun/perpustakaan');
 
-            if (account.role !== role) {
-              showBanner('Akun ini terdaftar sebagai ' + (account.role === 'buyer' ? 'Pembeli' : 'Penerbit') +
-                '. Pilih tab ' + (account.role === 'buyer' ? 'Pembeli' : 'Penerbit') + ' untuk melanjutkan.');
-              return;
-            }
+            rememberSession(data.email || (role === 'publisher' ? 'penerbit@demo.ikapi.id' : 'pembeli@demo.ikapi.id'), role);
 
-            if (account.status === 'pending') { showPending(); return; }
-
-            if (account.role === 'buyer') rememberBuyerSession(data.email || 'pembeli@demo.ikapi.id');
-
-            window.location.href = safeNext(params.get('next')) || account.next;
+            window.location.href = safeNext(params.get('next')) || landing;
           }
 
           $('auth-form').addEventListener('submit', function (e) {

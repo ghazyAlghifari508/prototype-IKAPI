@@ -59,33 +59,11 @@ onReady(function () {
         });
       });
 
+      /* Demo build: the admin sign-in is a preview entry, so any email/password is accepted and the visitor is
+         taken to the dashboard with an explicit preview session (nothing is authenticated on a server). */
       function validate() {
         clearFieldErrors();
-        var email = $('admin-email').value.trim();
-        var password = $('admin-password').value;
-        var ok = true;
-
-        if (!email) {
-          $('email-error').textContent = 'Alamat email wajib diisi.';
-          $('email-error').classList.remove('hidden');
-          $('admin-email').setAttribute('aria-invalid', 'true');
-          ok = false;
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-          $('email-error').textContent = 'Masukkan alamat email yang valid.';
-          $('email-error').classList.remove('hidden');
-          $('admin-email').setAttribute('aria-invalid', 'true');
-          ok = false;
-        }
-        if (!password.trim()) {
-          $('password-error').textContent = 'Kata sandi wajib diisi.';
-          $('password-error').classList.remove('hidden');
-          $('admin-password').setAttribute('aria-invalid', 'true');
-          ok = false;
-        }
-        if (!ok) {
-          $('email-error').classList.contains('hidden') ? $('admin-password').focus() : $('admin-email').focus();
-        }
-        return ok;
+        return true;
       }
 
       /* Preview entry records an explicit administrator preview session so the
@@ -110,10 +88,15 @@ onReady(function () {
         setLoading(true);
         window.setTimeout(function () {
           setLoading(false);
-          /* No backend authentication exists in this prototype: never claim success. */
-          setFeedback('info', 'Autentikasi administrator belum tersedia pada prototype ini. Gunakan pratinjau dashboard di bawah untuk meninjau tampilan.');
-          $('preview-note').classList.remove('hidden');
-          $('preview-note').scrollIntoView({ block: 'nearest' });
+          try {
+            window.localStorage.setItem('ikapi_admin_session_demo', JSON.stringify({
+              role: 'admin',
+              preview: true,
+              email: ($('admin-email').value.trim() || 'admin@ikapi-jabar.id')
+            }));
+          } catch (e) {}
+          /* Preview only: no credential is verified, the dashboard is opened for review. */
+          window.location.href = '/admin';
         }, 700);
       });
 

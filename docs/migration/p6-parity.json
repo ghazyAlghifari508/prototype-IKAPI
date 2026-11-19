@@ -1,64 +1,6 @@
 [
  {
   "page": "login",
-  "viewport": "1440x900",
-  "ratio": 0.000176,
-  "diffPixels": 228,
-  "protoHeight": 900,
-  "bladeHeight": 900,
-  "protoWidth": 1440,
-  "bladeWidth": 1440,
-  "errors": {
-   "blade": [],
-   "proto": []
-  },
-  "badResponses": {
-   "blade": [],
-   "proto": []
-  },
-  "h1": {
-   "blade": [
-    {
-     "t": "Selamat Datang Kembali",
-     "fs": "26px",
-     "box": [
-      736,
-      189,
-      448,
-      36
-     ]
-    }
-   ],
-   "proto": [
-    {
-     "t": "Selamat Datang Kembali",
-     "fs": "26px",
-     "box": [
-      736,
-      189,
-      448,
-      36
-     ]
-    }
-   ]
-  },
-  "brokenImages": {
-   "blade": 0,
-   "proto": 0
-  },
-  "body": {
-   "blade": [
-    "\"DM Sans\", sans-serif",
-    "rgb(245, 245, 246)"
-   ],
-   "proto": [
-    "\"DM Sans\", -apple-system",
-    "rgb(245, 245, 246)"
-   ]
-  }
- },
- {
-  "page": "login",
   "viewport": "1366x768",
   "ratio": 0,
   "diffPixels": 0,
@@ -560,64 +502,6 @@
       123,
       238,
       66
-     ]
-    }
-   ]
-  },
-  "brokenImages": {
-   "blade": 0,
-   "proto": 0
-  },
-  "body": {
-   "blade": [
-    "\"DM Sans\", sans-serif",
-    "rgb(245, 245, 246)"
-   ],
-   "proto": [
-    "\"DM Sans\", -apple-system",
-    "rgb(245, 245, 246)"
-   ]
-  }
- },
- {
-  "page": "register",
-  "viewport": "1440x900",
-  "ratio": 0,
-  "diffPixels": 0,
-  "protoHeight": 917,
-  "bladeHeight": 917,
-  "protoWidth": 1440,
-  "bladeWidth": 1440,
-  "errors": {
-   "blade": [],
-   "proto": []
-  },
-  "badResponses": {
-   "blade": [],
-   "proto": []
-  },
-  "h1": {
-   "blade": [
-    {
-     "t": "Buat Akun",
-     "fs": "26px",
-     "box": [
-      704,
-      155,
-      512,
-      36
-     ]
-    }
-   ],
-   "proto": [
-    {
-     "t": "Buat Akun",
-     "fs": "26px",
-     "box": [
-      704,
-      155,
-      512,
-      36
      ]
     }
    ]
@@ -6086,6 +5970,122 @@
    "proto": [
     "\"DM Sans\", sans-serif",
     "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "login",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 900,
+  "bladeHeight": 900,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Selamat Datang Kembali",
+     "fs": "26px",
+     "box": [
+      736,
+      189,
+      448,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Selamat Datang Kembali",
+     "fs": "26px",
+     "box": [
+      736,
+      189,
+      448,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "register",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 917,
+  "bladeHeight": 917,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Buat Akun",
+     "fs": "26px",
+     "box": [
+      704,
+      155,
+      512,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Buat Akun",
+     "fs": "26px",
+     "box": [
+      704,
+      155,
+      512,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
    ]
   }
  }

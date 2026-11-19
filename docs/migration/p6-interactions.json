@@ -38,7 +38,7 @@
       "urlAfterSubmit": "/status-pendaftaran-penerbit",
       "applicationStored": {
         "name": "CV Aksara Jaya",
-        "submittedAt": "2026-11-19T06:08:26.918Z",
+        "submittedAt": "2026-11-19T10:13:01.580Z",
         "status": "pending",
         "reason": ""
       },
@@ -208,7 +208,7 @@
           "cover": "/assets/ikapi/covers/laskar-aksara-pasundan.jpg",
           "rating": 5,
           "date": "19 November 2026",
-          "timestamp": 1795068556173,
+          "timestamp": 1795083222417,
           "comment": "Ulasan diperbarui via verifikasi otomatis."
         },
         {

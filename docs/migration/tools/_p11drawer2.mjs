@@ -1,0 +1,18 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch();
+const ctx = await b.newContext({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
+const p = await ctx.newPage();
+const errs = [];
+p.on('pageerror', (e) => errs.push(String(e).slice(0, 100)));
+await p.goto('http://127.0.0.1:8140/admin/moderasi-diskusi', { waitUntil: 'domcontentloaded' });
+await p.waitForTimeout(500);
+const box = () => p.evaluate(() => { const el = document.getElementById('review-drawer'); const r = el.getBoundingClientRect(); return { x: Math.round(r.x), w: Math.round(r.width), open: el.classList.contains('is-open'), aria: el.getAttribute('aria-hidden') }; });
+console.log('initial', JSON.stringify(await box()));
+console.log('rows in #report-rows:', await p.locator('#report-rows button').count(), '| children:', await p.evaluate(() => document.getElementById('report-rows').children.length));
+await p.locator('#report-rows button').first().click();
+await p.waitForTimeout(500);
+console.log('after click', JSON.stringify(await box()));
+await p.click('#drawer-close');
+await p.waitForTimeout(500);
+console.log('after close', JSON.stringify(await box()), 'errors', errs);
+await b.close();

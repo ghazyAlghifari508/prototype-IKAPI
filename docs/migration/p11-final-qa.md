@@ -232,3 +232,25 @@ migrasi.
 2. Putuskan EX-2: hapus `backdrop-blur-xs` pada badge tanggal di kedua sisi agar nol mutlak, atau terima.
 3. Bila ingin demo lintas tab: tambahkan listener `storage` (penambahan fitur, bukan migrasi).
 4. Commit/push hanya atas instruksi eksplisit; saat ini seluruh pekerjaan P01–P11 belum di-commit.
+
+## 13. Perubahan atas permintaan pemilik setelah laporan awal (P11b)
+
+Tiga permintaan langsung dari pemilik, di luar kriteria "jangan ubah desain": akses demo tanpa blokir
+login/register, dan drawer admin yang muncul sendiri / tombol X tidak berfungsi. Semua diverifikasi ulang di
+browser; parity yang berubah dicatat di bawah.
+
+| # | Permintaan | Akar masalah | Perubahan | Bukti |
+|---|---|---|---|---|
+| QA-11-6 | Drawer kanan di `/admin/komunitas` dan `/admin/moderasi-diskusi` **muncul sendiri** dan tombol X tidak menutup | CSS halaman menyalin `#user-drawer { transform: translateX(100%) }` dari berkas sumber lain, sedangkan elemennya `#community-drawer` / `#review-drawer`. Tanpa transform, drawer `fixed right-0` selalu terlihat; `closeDrawer()` juga berhenti lebih awal karena kelas `is-open` tidak pernah ditambahkan | Selector CSS diperbaiki ke id yang benar; guard `if (!drawer.classList.contains('is-open')) return;` dihapus | `p11-drawer.json`: 6/6 drawer admin mulai di luar layar (x=1440), terbuka (x≈900–920), dan tertutup kembali (x=1440), 0 error |
+| QA-11-7 | Login/register **memblokir** kredensial asal-asalan; admin tidak bisa masuk dashboard | Prototipe memvalidasi format email, panjang kata sandi, akun demo tetap, dan langsung menolak akun tak dikenal; login admin hanya menampilkan catatan pratinjau | `p6/auth/login.js`: semua email/kata sandi diterima (termasuk kosong), rute ditentukan tab peran (pembeli → `/akun/perpustakaan`, penerbit → `/penerbit`). `p6/auth/register.js`: hanya kolom terisi, tanpa format/panjang/konfirmasi/syarat. `p9/login.js`: kredensial apa pun → `/admin` dengan sesi `preview: true` | `p11-auth-free.mjs`: 5/5 kasus (junk, kosong, penerbit, wizard penerbit, admin) berhasil masuk; chip demo "Validasi kosong" tetap menampilkan state error |
+
+Deviasi parity yang diterima (permintaan pemilik, bukan regresi):
+
+| Halaman | Sebelum | Sesudah |
+|---|---|---|
+| `/admin/komunitas` | 0 piksel (drawer prototipe selalu terbuka, jadi keduanya sama-sama "salah") | 16,2% @1440 / 41,5% @390 (drawer kini tersembunyi seperti niat CSS sumber) |
+| `/admin/moderasi-diskusi` | 0 piksel | 16,7% @1440 / 42,5% @390 |
+| `/masuk`, `/daftar`, `/admin/masuk` | 0 piksel | tetap **0 piksel** (hanya logika JS yang berubah) |
+
+Suite yang diperbarui agar menguji perilaku baru: `p9-flows.mjs` skenario 9 (login admin → `/admin`), `p6-a11y.mjs`
+skenario 3 (submit kosong membuka portal; state error diuji lewat chip demo).

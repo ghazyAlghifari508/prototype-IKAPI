@@ -206,20 +206,13 @@
   {
     "scenario": "9-admin-login-preview",
     "out": {
-      "validation": {
-        "banner": false,
-        "emailErr": true,
-        "passwordErr": true
-      },
-      "feedback": "Autentikasi administrator belum tersedia pada prototype ini. Gunakan pratinjau dashboard d",
-      "previewLinkVisible": true,
-      "previewNoteVisible": true,
       "redirected": true,
       "session": {
         "role": "admin",
         "preview": true,
-        "email": "admin@ikapi-jabar.id"
+        "email": "asd"
       },
+      "dashboardRendered": true,
       "noSecurityClaim": true
     },
     "errors": [],

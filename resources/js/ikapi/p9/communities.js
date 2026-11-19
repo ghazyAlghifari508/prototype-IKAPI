@@ -223,7 +223,6 @@ onReady(function () {
 
       function closeDrawer() {
         var drawer = $('community-drawer');
-        if (!drawer.classList.contains('is-open')) return;
         drawer.classList.remove('is-open');
         drawer.setAttribute('aria-hidden', 'true');
         $('drawer-scrim').classList.add('hidden');

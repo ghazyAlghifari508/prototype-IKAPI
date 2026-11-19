@@ -28,8 +28,8 @@
   #publisher-sidebar { transform: translateX(-100%); transition: transform .22s ease; }
   #publisher-sidebar.is-open { transform: translateX(0); }
   @media (min-width: 1024px) { #publisher-sidebar { transform: none; transition: none; } }
-  #user-drawer { transform: translateX(100%); transition: transform .24s ease; }
-  #user-drawer.is-open { transform: translateX(0); }
+  #community-drawer { transform: translateX(100%); transition: transform .24s ease; }
+  #community-drawer.is-open { transform: translateX(0); }
   @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
   ::-webkit-scrollbar { width: 10px; height: 10px; }
   ::-webkit-scrollbar-thumb { background: #DCDCE2; border-radius: 9999px; }

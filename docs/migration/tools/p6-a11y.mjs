@@ -67,18 +67,26 @@ async function open(url) {
   await ctx.close();
 }
 
-/* 3. Validation: empty submit shows inline errors, focus moves to the first invalid field */
+/* 3. Demo login has no credential gate: submitting empty opens the buyer area.
+       The inline error state still exists and is reachable through the "Validasi kosong" demo chip. */
 {
   const { ctx, page, errors } = await open(`${BASE}/masuk`);
   await page.click('#submit-btn');
-  await page.waitForTimeout(400);
+  const redirected = await page.waitForURL(/\/akun\/perpustakaan/, { timeout: 12000 }).then(() => true).catch(() => false);
+  rec('login-empty-submit-opens-portal', { redirected, errors });
+  await ctx.close();
+}
+{
+  const { ctx, page, errors } = await open(`${BASE}/masuk`);
+  await page.evaluate(() => document.querySelector('.demo-chip[data-demo="validation"]').click());
+  await page.waitForTimeout(350);
   const state = await page.evaluate(() => ({
     banner: !document.getElementById('validation-banner').classList.contains('hidden'),
     emailErr: !document.getElementById('email-error-msg').classList.contains('hidden'),
     passwordErr: !document.getElementById('password-error-msg').classList.contains('hidden'),
     active: document.activeElement ? document.activeElement.id : null,
   }));
-  rec('login-validation-empty-submit', { state, errors });
+  rec('login-validation-demo-chip', { state, errors });
   await ctx.close();
 }
 

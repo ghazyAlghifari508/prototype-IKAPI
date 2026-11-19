@@ -1,0 +1,164 @@
+[
+  {
+    "route": "/admin/pengguna",
+    "drawer": "#user-drawer",
+    "initial": {
+      "x": 1440,
+      "w": 520,
+      "open": false,
+      "aria": "true",
+      "vw": 1440
+    },
+    "opened": {
+      "x": 920,
+      "w": 520,
+      "open": true,
+      "aria": "false",
+      "vw": 1440
+    },
+    "closed": {
+      "x": 1440,
+      "w": 520,
+      "open": false,
+      "aria": "true",
+      "vw": 1440
+    },
+    "pass": true,
+    "errors": []
+  },
+  {
+    "route": "/admin/katalog",
+    "drawer": "#catalog-drawer",
+    "initial": {
+      "x": 1440,
+      "w": 540,
+      "open": false,
+      "aria": "true",
+      "vw": 1440
+    },
+    "opened": {
+      "x": 900,
+      "w": 540,
+      "open": true,
+      "aria": "false",
+      "vw": 1440
+    },
+    "closed": {
+      "x": 1440,
+      "w": 540,
+      "open": false,
+      "aria": "true",
+      "vw": 1440
+    },
+    "pass": true,
+    "errors": []
+  },
+  {
+    "route": "/admin/moderasi-ulasan",
+    "drawer": "#mod-drawer",
+    "initial": {
+      "x": 1440,
+      "w": 540,
+      "open": false,
+      "aria": "true",
+      "vw": 1440
+    },
+    "opened": {
+      "x": 900,
+      "w": 540,
+      "open": true,
+      "aria": "false",
+      "vw": 1440
+    },
+    "closed": {
+      "x": 1440,
+      "w": 540,
+      "open": false,
+      "aria": "true",
+      "vw": 1440
+    },
+    "pass": true,
+    "errors": []
+  },
+  {
+    "route": "/admin/pencairan",
+    "drawer": "#payout-drawer",
+    "initial": {
+      "x": 1440,
+      "w": 520,
+      "open": false,
+      "aria": "true",
+      "vw": 1440
+    },
+    "opened": {
+      "x": 920,
+      "w": 520,
+      "open": true,
+      "aria": "false",
+      "vw": 1440
+    },
+    "closed": {
+      "x": 1440,
+      "w": 520,
+      "open": false,
+      "aria": "true",
+      "vw": 1440
+    },
+    "pass": true,
+    "errors": []
+  },
+  {
+    "route": "/admin/komunitas",
+    "drawer": "#community-drawer",
+    "initial": {
+      "x": 1440,
+      "w": 520,
+      "open": false,
+      "aria": "true",
+      "vw": 1440
+    },
+    "opened": {
+      "x": 920,
+      "w": 520,
+      "open": true,
+      "aria": "false",
+      "vw": 1440
+    },
+    "closed": {
+      "x": 1440,
+      "w": 520,
+      "open": false,
+      "aria": "true",
+      "vw": 1440
+    },
+    "pass": true,
+    "errors": []
+  },
+  {
+    "route": "/admin/moderasi-diskusi",
+    "drawer": "#review-drawer",
+    "initial": {
+      "x": 1440,
+      "w": 540,
+      "open": false,
+      "aria": "true",
+      "vw": 1440
+    },
+    "opened": {
+      "x": 900,
+      "w": 540,
+      "open": true,
+      "aria": "false",
+      "vw": 1440
+    },
+    "closed": {
+      "x": 1440,
+      "w": 540,
+      "open": false,
+      "aria": "true",
+      "vw": 1440
+    },
+    "pass": true,
+    "errors": []
+  }
+]
