@@ -8,6 +8,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Publisher\PublisherDashboardController;
 use App\Http\Controllers\Publisher\StatusController;
+use App\Http\Controllers\User\ProfileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -46,6 +47,11 @@ Route::middleware('guest')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
     Route::post('/admin/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
+
+    // User Profile
+    Route::get('/profil', [ProfileController::class, 'index'])->name('profile.index');
+    Route::post('/profil', [ProfileController::class, 'update'])->name('profile.update');
+    Route::post('/profil/avatar/hapus', [ProfileController::class, 'deleteAvatar'])->name('profile.avatar.delete');
 
     // Publisher Area
     Route::get('/penerbit/status', [StatusController::class, 'index'])->name('publisher.status');

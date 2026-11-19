@@ -24,6 +24,7 @@ class User extends Authenticatable
         'password',
         'phone',
         'address',
+        'favorite_categories',
         'avatar_path',
         'avatar_preset',
         'email_verified_at',
@@ -49,7 +50,33 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'favorite_categories' => 'array',
         ];
+    }
+
+    /**
+     * Get 2-letter uppercase initials from user name.
+     */
+    public function getInitialsAttribute(): string
+    {
+        $words = preg_split('/\s+/', trim($this->name));
+        if (count($words) >= 2) {
+            return strtoupper(mb_substr($words[0], 0, 1) . mb_substr($words[1], 0, 1));
+        }
+
+        return strtoupper(mb_substr($this->name, 0, 2));
+    }
+
+    /**
+     * Get full URL or asset path to avatar.
+     */
+    public function getAvatarUrlAttribute(): ?string
+    {
+        if ($this->avatar_path && file_exists(public_path($this->avatar_path))) {
+            return asset($this->avatar_path);
+        }
+
+        return null;
     }
 
     public function roles()

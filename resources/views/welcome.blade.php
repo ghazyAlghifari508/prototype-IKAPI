@@ -36,6 +36,7 @@
       <nav class="flex items-center gap-3">
         @auth
           <span class="text-[13px] font-semibold text-ink-body">Halo, {{ auth()->user()->name }}</span>
+          <a href="{{ route('profile.index') }}" class="rounded-xl border border-border-subtle px-3.5 py-2 text-[13px] font-semibold text-ink-body hover:bg-surface-neutral">Profil Saya</a>
           @if (auth()->user()->isPublisher())
             <a href="{{ route('publisher.dashboard') }}" class="rounded-xl bg-primary px-4 py-2 text-[13px] font-bold text-white hover:bg-primary-hover">Dashboard Penerbit</a>
           @elseif (auth()->user()->isAdmin())
