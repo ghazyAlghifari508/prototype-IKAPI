@@ -1,0 +1,692 @@
+<section class="w-full py-8 bg-white">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <!-- Catalog Controls Toolbar (Unwrapped, directly on white canvas) -->
+          <div class="mb-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+            <!-- Inline Search Input -->
+            <div class="relative flex-1 min-w-0">
+              <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-muted text-[19px]">search</span>
+              <input id="catalog-search-input" class="w-full h-11 pl-10 pr-4 rounded-xl bg-surface-neutral border border-border-subtle text-[14px] text-ink-body placeholder:text-ink-muted outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Cari berdasarkan judul atau penulis..." type="text">
+            </div>
+
+            <!-- Controls: Layout Switch & Sorting -->
+            <div class="flex items-center justify-between sm:justify-end gap-3 shrink-0">
+              <!-- View Toggle (Grid vs List) -->
+              <div class="flex items-center bg-surface-neutral p-1 rounded-xl border border-border-subtle">
+                <button id="btn-view-grid" class="w-9 h-9 rounded-lg flex items-center justify-center bg-primary text-white shadow-xs transition-colors cursor-pointer" title="Grid View" type="button" onclick="setViewMode('grid')">
+                  <span class="material-symbols-outlined text-[19px]">grid_view</span>
+                </button>
+                <button id="btn-view-list" class="w-9 h-9 rounded-lg flex items-center justify-center text-ink-muted hover:text-ink-body hover:bg-white transition-colors cursor-pointer" title="List View" type="button" onclick="setViewMode('list')">
+                  <span class="material-symbols-outlined text-[19px]">view_list</span>
+                </button>
+              </div>
+
+              <!-- Sort Dropdown -->
+              <div class="relative min-w-[200px]">
+                <select id="catalog-sort-select" class="w-full h-11 pl-3.5 pr-9 rounded-xl bg-surface-neutral border border-border-subtle text-[13.5px] font-semibold text-ink-body outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20 appearance-none cursor-pointer" onchange="handleSortChange()">
+                  <option value="az">Urutkan: Judul (A–Z)</option>
+                  <option value="za">Urutkan: Judul (Z–A)</option>
+                  <option value="newest">Terbaru Rilis</option>
+                  <option value="price_low">Harga Terendah</option>
+                  <option value="price_high">Harga Tertinggi</option>
+                </select>
+                <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-ink-muted text-[19px] pointer-events-none">expand_more</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- MAIN CATALOG BODY (Sidebar + Fluid Product Grid) -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- SIDEBAR FILTER (3 Cols Desktop, Sticky) -->
+            <aside class="lg:col-span-3 bg-white rounded-3xl p-6 border border-border-subtle shadow-sm flex flex-col gap-6 lg:sticky lg:top-36">
+              <!-- Title & Reset -->
+              <div class="flex items-center justify-between pb-3 border-b border-border-subtle">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+                  <h2 class="text-[16px] font-bold text-ink-body">Filter Buku</h2>
+                </div>
+                <button type="button" class="text-[13px] font-semibold text-primary hover:text-primary-hover hover:underline cursor-pointer" onclick="resetAllFilters()">
+                  Reset
+                </button>
+              </div>
+
+              <!-- Section: Kategori -->
+              <div class="flex flex-col gap-3">
+                <span class="text-[13px] font-bold text-ink-body uppercase tracking-wider block">Kategori</span>
+                <div class="flex flex-col gap-2.5 text-[13.5px]">
+                  <label class="flex items-center justify-between cursor-pointer group select-none">
+                    <span class="flex items-center gap-2.5">
+                      <input id="cat-all" checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" type="checkbox" onchange="handleCategoryCheckbox('all')">
+                      <span class="text-ink-body group-hover:text-primary transition-colors font-medium">Semua Kategori</span>
+                    </span>
+                    <span class="text-[12px] text-ink-muted">(12)</span>
+                  </label>
+                  <label class="flex items-center justify-between cursor-pointer group select-none">
+                    <span class="flex items-center gap-2.5">
+                      <input class="cat-filter-checkbox w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" data-category="Pendidikan" type="checkbox" onchange="handleCategoryCheckbox('specific')">
+                      <span class="text-ink-muted group-hover:text-ink-body transition-colors">Pendidikan</span>
+                    </span>
+                    <span class="text-[12px] text-ink-muted">(3)</span>
+                  </label>
+                  <label class="flex items-center justify-between cursor-pointer group select-none">
+                    <span class="flex items-center gap-2.5">
+                      <input class="cat-filter-checkbox w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" data-category="Sastra &amp; Fiksi" type="checkbox" onchange="handleCategoryCheckbox('specific')">
+                      <span class="text-ink-muted group-hover:text-ink-body transition-colors">Sastra &amp; Fiksi</span>
+                    </span>
+                    <span class="text-[12px] text-ink-muted">(3)</span>
+                  </label>
+                  <label class="flex items-center justify-between cursor-pointer group select-none">
+                    <span class="flex items-center gap-2.5">
+                      <input class="cat-filter-checkbox w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" data-category="Budaya &amp; Tradisi" type="checkbox" onchange="handleCategoryCheckbox('specific')">
+                      <span class="text-ink-muted group-hover:text-ink-body transition-colors">Budaya &amp; Tradisi</span>
+                    </span>
+                    <span class="text-[12px] text-ink-muted">(3)</span>
+                  </label>
+                  <label class="flex items-center justify-between cursor-pointer group select-none">
+                    <span class="flex items-center gap-2.5">
+                      <input class="cat-filter-checkbox w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" data-category="Bisnis &amp; Ekonomi" type="checkbox" onchange="handleCategoryCheckbox('specific')">
+                      <span class="text-ink-muted group-hover:text-ink-body transition-colors">Bisnis &amp; Ekonomi</span>
+                    </span>
+                    <span class="text-[12px] text-ink-muted">(3)</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Section: Penerbit IKAPI Jabar -->
+              <div class="flex flex-col gap-3 pt-3 border-t border-border-subtle">
+                <span class="text-[13px] font-bold text-ink-body uppercase tracking-wider block">
+                  Penerbit IKAPI Jabar
+                </span>
+                <div class="flex flex-col gap-2.5 text-[13.5px]">
+                  <label class="flex items-center justify-between cursor-pointer group select-none">
+                    <span class="flex items-center gap-2.5">
+                      <input class="pub-filter-checkbox w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" data-publisher="Kiblat Buku Utama" type="checkbox" onchange="handlePublisherCheckbox()">
+                      <span class="text-ink-muted group-hover:text-ink-body transition-colors">Kiblat Buku Utama</span>
+                    </span>
+                    <span class="text-[12px] text-ink-muted">(3)</span>
+                  </label>
+                  <label class="flex items-center justify-between cursor-pointer group select-none">
+                    <span class="flex items-center gap-2.5">
+                      <input class="pub-filter-checkbox w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" data-publisher="UPI Press" type="checkbox" onchange="handlePublisherCheckbox()">
+                      <span class="text-ink-muted group-hover:text-ink-body transition-colors">UPI Press</span>
+                    </span>
+                    <span class="text-[12px] text-ink-muted">(3)</span>
+                  </label>
+                  <label class="flex items-center justify-between cursor-pointer group select-none">
+                    <span class="flex items-center gap-2.5">
+                      <input class="pub-filter-checkbox w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" data-publisher="ITB Press" type="checkbox" onchange="handlePublisherCheckbox()">
+                      <span class="text-ink-muted group-hover:text-ink-body transition-colors">ITB Press</span>
+                    </span>
+                    <span class="text-[12px] text-ink-muted">(3)</span>
+                  </label>
+                  <label class="flex items-center justify-between cursor-pointer group select-none">
+                    <span class="flex items-center gap-2.5">
+                      <input class="pub-filter-checkbox w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" data-publisher="Geger Sunten" type="checkbox" onchange="handlePublisherCheckbox()">
+                      <span class="text-ink-muted group-hover:text-ink-body transition-colors">Geger Sunten</span>
+                    </span>
+                    <span class="text-[12px] text-ink-muted">(3)</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Section: Rentang Harga -->
+              <div class="flex flex-col gap-3 pt-3 border-t border-border-subtle">
+                <span class="text-[13px] font-bold text-ink-body uppercase tracking-wider block">Rentang Harga (Rp)</span>
+                
+                <!-- Price Inputs (Min & Max) -->
+                <div class="grid grid-cols-2 gap-2 mt-1">
+                  <div class="space-y-1">
+                    <span class="text-[11px] text-ink-muted font-bold uppercase">Min</span>
+                    <input id="price-min-input" class="w-full h-10 px-2.5 rounded-xl bg-surface-neutral text-[13px] text-ink-body font-mono border border-border-subtle outline-none focus:border-primary focus:bg-white" type="number" placeholder="20000" value="20000">
+                  </div>
+                  <div class="space-y-1">
+                    <span class="text-[11px] text-ink-muted font-bold uppercase">Max</span>
+                    <input id="price-max-input" class="w-full h-10 px-2.5 rounded-xl bg-surface-neutral text-[13px] text-ink-body font-mono border border-border-subtle outline-none focus:border-primary focus:bg-white" type="number" placeholder="100000" value="100000">
+                  </div>
+                </div>
+                <button type="button" class="w-full h-10 rounded-xl bg-surface-neutral hover:bg-surface-soft hover:text-primary text-ink-body font-bold text-[13px] border border-border-subtle transition-colors cursor-pointer" onclick="applyPriceFilter()">
+                  Terapkan Harga
+                </button>
+              </div>
+            </aside>
+
+            <!-- PRODUCT GRID (9 Cols desktop: 3 across in Grid mode) -->
+            <div class="lg:col-span-9 flex flex-col gap-8">
+              
+              <!-- Container for Product Cards (Dynamically Populated) -->
+              <div id="catalog-products-container" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+          <article class="group bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all flex flex-col justify-between">
+            <div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-3 border border-border-subtle shadow-xs">
+                  <img src="../../assets/covers/B04.jpg" alt="Sampul Antologi Puisi Lembayung" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                  <div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-xs text-ink-body text-[10px] font-bold tracking-wide uppercase shadow-xs">
+                    E-Book
+                  </div>
+                </div>
+              </a>
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="px-2 py-0.5 rounded-md bg-surface-soft text-primary font-bold text-[11px] truncate">
+                  Sastra &amp; Fiksi
+                </span>
+                <span class="text-[12px] text-ink-muted truncate font-medium">
+                  Geger Sunten
+                </span>
+              </div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <h3 class="text-[15px] font-bold text-ink-body leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">
+                  Antologi Puisi Lembayung
+                </h3>
+              </a>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Dewi Sartika Putri</p>
+            </div>
+            <div class="mt-4 pt-2.5 border-t border-border-subtle flex items-center justify-between">
+              <div>
+                <span class="block text-[10px] text-ink-muted uppercase font-bold tracking-wider">Harga Lisensi</span>
+                <span class="text-[17px] text-ink-body font-bold font-sans">Rp 38.000</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button class="w-9 h-9 rounded-xl bg-surface-neutral hover:bg-surface-soft text-ink-muted hover:text-primary flex items-center justify-center transition-colors border border-border-subtle cursor-pointer" title="Tambah ke Keranjang" type="button" onclick="handleAddToCart('Antologi Puisi Lembayung')">
+                  <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                </button>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-9 px-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold flex items-center transition-colors shadow-xs">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article class="group bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all flex flex-col justify-between">
+            <div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-3 border border-border-subtle shadow-xs">
+                  <img src="../../assets/covers/B03.jpg" alt="Sampul Bumi Parahyangan: Narasi Alam" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                  <div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-xs text-ink-body text-[10px] font-bold tracking-wide uppercase shadow-xs">
+                    E-Book
+                  </div>
+                </div>
+              </a>
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="px-2 py-0.5 rounded-md bg-surface-soft text-primary font-bold text-[11px] truncate">
+                  Budaya &amp; Tradisi
+                </span>
+                <span class="text-[12px] text-ink-muted truncate font-medium">
+                  ITB Press
+                </span>
+              </div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <h3 class="text-[15px] font-bold text-ink-body leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">
+                  Bumi Parahyangan: Narasi Alam
+                </h3>
+              </a>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Prof. Didi Supardi</p>
+            </div>
+            <div class="mt-4 pt-2.5 border-t border-border-subtle flex items-center justify-between">
+              <div>
+                <span class="block text-[10px] text-ink-muted uppercase font-bold tracking-wider">Harga Lisensi</span>
+                <span class="text-[17px] text-ink-body font-bold font-sans">Rp 74.000</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button class="w-9 h-9 rounded-xl bg-surface-neutral hover:bg-surface-soft text-ink-muted hover:text-primary flex items-center justify-center transition-colors border border-border-subtle cursor-pointer" title="Tambah ke Keranjang" type="button" onclick="handleAddToCart('Bumi Parahyangan: Narasi Alam')">
+                  <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                </button>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-9 px-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold flex items-center transition-colors shadow-xs">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article class="group bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all flex flex-col justify-between">
+            <div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-3 border border-border-subtle shadow-xs">
+                  <img src="../../assets/covers/B09.jpg" alt="Sampul Ekonomi Kerakyatan Jawa Barat" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                  <div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-xs text-ink-body text-[10px] font-bold tracking-wide uppercase shadow-xs">
+                    E-Book
+                  </div>
+                </div>
+              </a>
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="px-2 py-0.5 rounded-md bg-surface-soft text-primary font-bold text-[11px] truncate">
+                  Bisnis &amp; Ekonomi
+                </span>
+                <span class="text-[12px] text-ink-muted truncate font-medium">
+                  UPI Press
+                </span>
+              </div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <h3 class="text-[15px] font-bold text-ink-body leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">
+                  Ekonomi Kerakyatan Jawa Barat
+                </h3>
+              </a>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Dr. Ahmad Fauzi</p>
+            </div>
+            <div class="mt-4 pt-2.5 border-t border-border-subtle flex items-center justify-between">
+              <div>
+                <span class="block text-[10px] text-ink-muted uppercase font-bold tracking-wider">Harga Lisensi</span>
+                <span class="text-[17px] text-ink-body font-bold font-sans">Rp 65.000</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button class="w-9 h-9 rounded-xl bg-surface-neutral hover:bg-surface-soft text-ink-muted hover:text-primary flex items-center justify-center transition-colors border border-border-subtle cursor-pointer" title="Tambah ke Keranjang" type="button" onclick="handleAddToCart('Ekonomi Kerakyatan Jawa Barat')">
+                  <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                </button>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-9 px-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold flex items-center transition-colors shadow-xs">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article class="group bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all flex flex-col justify-between">
+            <div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-3 border border-border-subtle shadow-xs">
+                  <img src="../../assets/covers/B10.jpg" alt="Sampul Filsafat Silih Asih Silih Asuh" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                  <div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-xs text-ink-body text-[10px] font-bold tracking-wide uppercase shadow-xs">
+                    E-Book
+                  </div>
+                </div>
+              </a>
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="px-2 py-0.5 rounded-md bg-surface-soft text-primary font-bold text-[11px] truncate">
+                  Budaya &amp; Tradisi
+                </span>
+                <span class="text-[12px] text-ink-muted truncate font-medium">
+                  Kiblat Buku Utama
+                </span>
+              </div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <h3 class="text-[15px] font-bold text-ink-body leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">
+                  Filsafat Silih Asih Silih Asuh
+                </h3>
+              </a>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">K.H. Toto Toharudin</p>
+            </div>
+            <div class="mt-4 pt-2.5 border-t border-border-subtle flex items-center justify-between">
+              <div>
+                <span class="block text-[10px] text-ink-muted uppercase font-bold tracking-wider">Harga Lisensi</span>
+                <span class="text-[17px] text-ink-body font-bold font-sans">Rp 42.000</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button class="w-9 h-9 rounded-xl bg-surface-neutral hover:bg-surface-soft text-ink-muted hover:text-primary flex items-center justify-center transition-colors border border-border-subtle cursor-pointer" title="Tambah ke Keranjang" type="button" onclick="handleAddToCart('Filsafat Silih Asih Silih Asuh')">
+                  <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                </button>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-9 px-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold flex items-center transition-colors shadow-xs">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article class="group bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all flex flex-col justify-between">
+            <div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-3 border border-border-subtle shadow-xs">
+                  <img src="../../assets/covers/B08.jpg" alt="Sampul Kamus Undak Usuk Basa Sunda" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                  <div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-xs text-ink-body text-[10px] font-bold tracking-wide uppercase shadow-xs">
+                    E-Book
+                  </div>
+                </div>
+              </a>
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="px-2 py-0.5 rounded-md bg-surface-soft text-primary font-bold text-[11px] truncate">
+                  Pendidikan
+                </span>
+                <span class="text-[12px] text-ink-muted truncate font-medium">
+                  Geger Sunten
+                </span>
+              </div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <h3 class="text-[15px] font-bold text-ink-body leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">
+                  Kamus Undak Usuk Basa Sunda
+                </h3>
+              </a>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Drs. Yayat Sudaryat</p>
+            </div>
+            <div class="mt-4 pt-2.5 border-t border-border-subtle flex items-center justify-between">
+              <div>
+                <span class="block text-[10px] text-ink-muted uppercase font-bold tracking-wider">Harga Lisensi</span>
+                <span class="text-[17px] text-ink-body font-bold font-sans">Rp 48.000</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button class="w-9 h-9 rounded-xl bg-surface-neutral hover:bg-surface-soft text-ink-muted hover:text-primary flex items-center justify-center transition-colors border border-border-subtle cursor-pointer" title="Tambah ke Keranjang" type="button" onclick="handleAddToCart('Kamus Undak Usuk Basa Sunda')">
+                  <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                </button>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-9 px-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold flex items-center transition-colors shadow-xs">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article class="group bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all flex flex-col justify-between">
+            <div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-3 border border-border-subtle shadow-xs">
+                  <img src="../../assets/covers/B12.jpg" alt="Sampul Kumpulan Cerpen Pasundan Kiwari" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                  <div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-xs text-ink-body text-[10px] font-bold tracking-wide uppercase shadow-xs">
+                    E-Book
+                  </div>
+                </div>
+              </a>
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="px-2 py-0.5 rounded-md bg-surface-soft text-primary font-bold text-[11px] truncate">
+                  Sastra &amp; Fiksi
+                </span>
+                <span class="text-[12px] text-ink-muted truncate font-medium">
+                  Geger Sunten
+                </span>
+              </div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <h3 class="text-[15px] font-bold text-ink-body leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">
+                  Kumpulan Cerpen Pasundan Kiwari
+                </h3>
+              </a>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Dadan Sutisna</p>
+            </div>
+            <div class="mt-4 pt-2.5 border-t border-border-subtle flex items-center justify-between">
+              <div>
+                <span class="block text-[10px] text-ink-muted uppercase font-bold tracking-wider">Harga Lisensi</span>
+                <span class="text-[17px] text-ink-body font-bold font-sans">Rp 39.000</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button class="w-9 h-9 rounded-xl bg-surface-neutral hover:bg-surface-soft text-ink-muted hover:text-primary flex items-center justify-center transition-colors border border-border-subtle cursor-pointer" title="Tambah ke Keranjang" type="button" onclick="handleAddToCart('Kumpulan Cerpen Pasundan Kiwari')">
+                  <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                </button>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-9 px-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold flex items-center transition-colors shadow-xs">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article class="group bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all flex flex-col justify-between">
+            <div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-3 border border-border-subtle shadow-xs">
+                  <img src="../../assets/covers/laskar-aksara-pasundan.jpg" alt="Sampul Laskar Aksara Pasundan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                  <div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-xs text-ink-body text-[10px] font-bold tracking-wide uppercase shadow-xs">
+                    E-Book
+                  </div>
+                </div>
+              </a>
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="px-2 py-0.5 rounded-md bg-surface-soft text-primary font-bold text-[11px] truncate">
+                  Sastra &amp; Fiksi
+                </span>
+                <span class="text-[12px] text-ink-muted truncate font-medium">
+                  Kiblat Buku Utama
+                </span>
+              </div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <h3 class="text-[15px] font-bold text-ink-body leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">
+                  Laskar Aksara Pasundan
+                </h3>
+              </a>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Ayi R. Kurnia</p>
+            </div>
+            <div class="mt-4 pt-2.5 border-t border-border-subtle flex items-center justify-between">
+              <div>
+                <span class="block text-[10px] text-ink-muted uppercase font-bold tracking-wider">Harga Lisensi</span>
+                <span class="text-[17px] text-ink-body font-bold font-sans">Rp 45.000</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button class="w-9 h-9 rounded-xl bg-surface-neutral hover:bg-surface-soft text-ink-muted hover:text-primary flex items-center justify-center transition-colors border border-border-subtle cursor-pointer" title="Tambah ke Keranjang" type="button" onclick="handleAddToCart('Laskar Aksara Pasundan')">
+                  <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                </button>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-9 px-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold flex items-center transition-colors shadow-xs">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article class="group bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all flex flex-col justify-between">
+            <div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-3 border border-border-subtle shadow-xs">
+                  <img src="../../assets/covers/B07.jpg" alt="Sampul Manajemen Keuangan UMKM Daerah" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                  <div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-xs text-ink-body text-[10px] font-bold tracking-wide uppercase shadow-xs">
+                    E-Book
+                  </div>
+                </div>
+              </a>
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="px-2 py-0.5 rounded-md bg-surface-soft text-primary font-bold text-[11px] truncate">
+                  Bisnis &amp; Ekonomi
+                </span>
+                <span class="text-[12px] text-ink-muted truncate font-medium">
+                  UPI Press
+                </span>
+              </div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <h3 class="text-[15px] font-bold text-ink-body leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">
+                  Manajemen Keuangan UMKM Daerah
+                </h3>
+              </a>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Hendra Setiawan, S.E.</p>
+            </div>
+            <div class="mt-4 pt-2.5 border-t border-border-subtle flex items-center justify-between">
+              <div>
+                <span class="block text-[10px] text-ink-muted uppercase font-bold tracking-wider">Harga Lisensi</span>
+                <span class="text-[17px] text-ink-body font-bold font-sans">Rp 49.000</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button class="w-9 h-9 rounded-xl bg-surface-neutral hover:bg-surface-soft text-ink-muted hover:text-primary flex items-center justify-center transition-colors border border-border-subtle cursor-pointer" title="Tambah ke Keranjang" type="button" onclick="handleAddToCart('Manajemen Keuangan UMKM Daerah')">
+                  <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                </button>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-9 px-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold flex items-center transition-colors shadow-xs">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article class="group bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all flex flex-col justify-between">
+            <div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-3 border border-border-subtle shadow-xs">
+                  <img src="../../assets/covers/B05.jpg" alt="Sampul Menelusuri Jejak Sejarah Priangan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                  <div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-xs text-ink-body text-[10px] font-bold tracking-wide uppercase shadow-xs">
+                    E-Book
+                  </div>
+                </div>
+              </a>
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="px-2 py-0.5 rounded-md bg-surface-soft text-primary font-bold text-[11px] truncate">
+                  Budaya &amp; Tradisi
+                </span>
+                <span class="text-[12px] text-ink-muted truncate font-medium">
+                  Kiblat Buku Utama
+                </span>
+              </div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <h3 class="text-[15px] font-bold text-ink-body leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">
+                  Menelusuri Jejak Sejarah Priangan
+                </h3>
+              </a>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Prof. Sobana Hardjasaputra</p>
+            </div>
+            <div class="mt-4 pt-2.5 border-t border-border-subtle flex items-center justify-between">
+              <div>
+                <span class="block text-[10px] text-ink-muted uppercase font-bold tracking-wider">Harga Lisensi</span>
+                <span class="text-[17px] text-ink-body font-bold font-sans">Rp 52.000</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button class="w-9 h-9 rounded-xl bg-surface-neutral hover:bg-surface-soft text-ink-muted hover:text-primary flex items-center justify-center transition-colors border border-border-subtle cursor-pointer" title="Tambah ke Keranjang" type="button" onclick="handleAddToCart('Menelusuri Jejak Sejarah Priangan')">
+                  <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                </button>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-9 px-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold flex items-center transition-colors shadow-xs">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article class="group bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all flex flex-col justify-between">
+            <div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-3 border border-border-subtle shadow-xs">
+                  <img src="../../assets/covers/B11.jpg" alt="Sampul Metodologi Penelitian Bahasa Daerah" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                  <div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-xs text-ink-body text-[10px] font-bold tracking-wide uppercase shadow-xs">
+                    E-Book
+                  </div>
+                </div>
+              </a>
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="px-2 py-0.5 rounded-md bg-surface-soft text-primary font-bold text-[11px] truncate">
+                  Pendidikan
+                </span>
+                <span class="text-[12px] text-ink-muted truncate font-medium">
+                  UPI Press
+                </span>
+              </div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <h3 class="text-[15px] font-bold text-ink-body leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">
+                  Metodologi Penelitian Bahasa Daerah
+                </h3>
+              </a>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Dr. Nani Darmayanti</p>
+            </div>
+            <div class="mt-4 pt-2.5 border-t border-border-subtle flex items-center justify-between">
+              <div>
+                <span class="block text-[10px] text-ink-muted uppercase font-bold tracking-wider">Harga Lisensi</span>
+                <span class="text-[17px] text-ink-body font-bold font-sans">Rp 56.000</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button class="w-9 h-9 rounded-xl bg-surface-neutral hover:bg-surface-soft text-ink-muted hover:text-primary flex items-center justify-center transition-colors border border-border-subtle cursor-pointer" title="Tambah ke Keranjang" type="button" onclick="handleAddToCart('Metodologi Penelitian Bahasa Daerah')">
+                  <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                </button>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-9 px-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold flex items-center transition-colors shadow-xs">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article class="group bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all flex flex-col justify-between">
+            <div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-3 border border-border-subtle shadow-xs">
+                  <img src="../../assets/covers/B02.jpg" alt="Sampul Pendidikan Karakter Sunda" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                  <div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-xs text-ink-body text-[10px] font-bold tracking-wide uppercase shadow-xs">
+                    E-Book
+                  </div>
+                </div>
+              </a>
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="px-2 py-0.5 rounded-md bg-surface-soft text-primary font-bold text-[11px] truncate">
+                  Pendidikan
+                </span>
+                <span class="text-[12px] text-ink-muted truncate font-medium">
+                  UPI Press
+                </span>
+              </div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <h3 class="text-[15px] font-bold text-ink-body leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">
+                  Pendidikan Karakter Sunda
+                </h3>
+              </a>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Dr. Cecep Hidayat, M.Pd.</p>
+            </div>
+            <div class="mt-4 pt-2.5 border-t border-border-subtle flex items-center justify-between">
+              <div>
+                <span class="block text-[10px] text-ink-muted uppercase font-bold tracking-wider">Harga Lisensi</span>
+                <span class="text-[17px] text-ink-body font-bold font-sans">Rp 58.000</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button class="w-9 h-9 rounded-xl bg-surface-neutral hover:bg-surface-soft text-ink-muted hover:text-primary flex items-center justify-center transition-colors border border-border-subtle cursor-pointer" title="Tambah ke Keranjang" type="button" onclick="handleAddToCart('Pendidikan Karakter Sunda')">
+                  <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                </button>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-9 px-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold flex items-center transition-colors shadow-xs">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article class="group bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all flex flex-col justify-between">
+            <div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-3 border border-border-subtle shadow-xs">
+                  <img src="../../assets/covers/B06.jpg" alt="Sampul Strategi Wirausaha Kreatif Era Digital" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                  <div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-xs text-ink-body text-[10px] font-bold tracking-wide uppercase shadow-xs">
+                    E-Book
+                  </div>
+                </div>
+              </a>
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="px-2 py-0.5 rounded-md bg-surface-soft text-primary font-bold text-[11px] truncate">
+                  Bisnis &amp; Ekonomi
+                </span>
+                <span class="text-[12px] text-ink-muted truncate font-medium">
+                  ITB Press
+                </span>
+              </div>
+              <a href="detail_buku_desktop.html" data-path="detail-buku" class="block">
+                <h3 class="text-[15px] font-bold text-ink-body leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">
+                  Strategi Wirausaha Kreatif Era Digital
+                </h3>
+              </a>
+              <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Rian Anggoro, M.B.A.</p>
+            </div>
+            <div class="mt-4 pt-2.5 border-t border-border-subtle flex items-center justify-between">
+              <div>
+                <span class="block text-[10px] text-ink-muted uppercase font-bold tracking-wider">Harga Lisensi</span>
+                <span class="text-[17px] text-ink-body font-bold font-sans">Rp 62.000</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button class="w-9 h-9 rounded-xl bg-surface-neutral hover:bg-surface-soft text-ink-muted hover:text-primary flex items-center justify-center transition-colors border border-border-subtle cursor-pointer" title="Tambah ke Keranjang" type="button" onclick="handleAddToCart('Strategi Wirausaha Kreatif Era Digital')">
+                  <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                </button>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-9 px-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold flex items-center transition-colors shadow-xs">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+              <!-- Empty State Container (Hidden by default) -->
+              <div id="catalog-empty-state" class="hidden p-10 sm:p-14 rounded-3xl bg-white border border-border-subtle shadow-xs text-center flex-col items-center justify-center gap-3">
+                <div class="w-16 h-16 rounded-2xl bg-surface-soft border border-primary/20 flex items-center justify-center text-primary mx-auto mb-1">
+                  <span class="material-symbols-outlined text-[32px]">search_off</span>
+                </div>
+                <h3 class="text-[20px] font-bold text-ink-body tracking-tight">
+                  Tidak Ada Buku yang Cocok
+                </h3>
+                <p class="text-[14px] text-ink-muted max-w-sm">
+                  Coba sesuaikan kata kunci pencarian, filter kategori, atau rentang harga yang dipilih.
+                </p>
+                <button type="button" class="mt-2 h-11 px-6 rounded-xl bg-primary hover:bg-primary-hover text-white text-[14px] font-bold transition-all shadow-xs cursor-pointer" onclick="resetAllFilters()">
+                  Reset Filter
+                </button>
+              </div>
+
+              <!-- PAGINATION BAR -->
+              <div id="catalog-pagination-bar" class="bg-surface-neutral rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 border border-border-subtle shadow-xs">
+                <span id="pagination-summary-text" class="text-[13.5px] text-ink-muted">Menampilkan <strong class="text-ink-body font-bold">1 – 12</strong> dari <strong class="text-ink-body font-bold">12</strong> buku</span>
+                
+                <div class="flex items-center gap-1.5 overflow-x-auto max-w-full pb-1 scrollbar-none">
+                  <button id="btn-page-prev" class="h-9 px-3.5 rounded-xl bg-white text-ink-muted hover:text-ink-body hover:bg-surface-soft text-[13px] font-semibold flex items-center gap-1 transition-colors border border-border-subtle disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer" disabled="" type="button" onclick="changeCatalogPage(-1)">
+                    <span class="material-symbols-outlined text-[17px]">chevron_left</span>
+                    <span>Sebelumnya</span>
+                  </button>
+                  <button class="w-9 h-9 rounded-xl bg-primary text-white font-bold text-[13.5px] flex items-center justify-center shadow-xs cursor-pointer" type="button">
+                    1
+                  </button>
+                  <button id="btn-page-next" class="h-9 px-3.5 rounded-xl bg-white text-ink-muted hover:text-ink-body hover:bg-surface-soft text-[13px] font-semibold flex items-center gap-1 transition-colors border border-border-subtle disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer" disabled="" type="button" onclick="changeCatalogPage(1)">
+                    <span>Selanjutnya</span>
+                    <span class="material-symbols-outlined text-[17px]">chevron_right</span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>

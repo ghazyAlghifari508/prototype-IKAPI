@@ -1,0 +1,226 @@
+{
+  "DEMO": {
+    "updated": "14 Nov 2026, 15:30 WIB",
+    "evalSamples": 42,
+    "daily": [
+      1,
+      2,
+      3,
+      2,
+      4,
+      3,
+      1,
+      4,
+      4,
+      3,
+      4,
+      5,
+      3,
+      3,
+      2,
+      4,
+      4,
+      6,
+      5,
+      3,
+      3,
+      4,
+      5,
+      4,
+      3,
+      6,
+      3,
+      4,
+      3,
+      2
+    ]
+  },
+  "EMPTY": {
+    "books": "0",
+    "booksSub": "Belum ada judul e-book yang diterbitkan",
+    "sold": "0",
+    "soldSub": "0 eksemplar terverifikasi",
+    "revenue": "Rp 0",
+    "revenueSub": "Akumulasi neto hak penerbit",
+    "balance": "Rp 0",
+    "balanceSub": "Dapat diajukan untuk pencairan"
+  },
+  "FILLED": {
+    "books": "4",
+    "booksSub": "4 judul terbit dari 5 judul di katalog",
+    "sold": "undefined",
+    "soldSub": "undefined eksemplar terjual pada katalog",
+    "revenue": "Rp 1.485.000",
+    "revenueSub": "Akumulasi neto setelah bagi hasil platform",
+    "balance": "Rp 840.000",
+    "balanceSub": "Dapat diajukan untuk pencairan"
+  },
+  "BASE_ORDERS": [
+    {
+      "id": "ORD-2026-11082",
+      "date": "2026-11-14",
+      "qty": 5,
+      "net": 241200,
+      "status": "lunas",
+      "book": "Laskar Aksara Pasundan",
+      "author": "Ayi R. Kurnia",
+      "cover": "../../assets/covers/laskar-aksara-pasundan.jpg",
+      "items": [
+        {
+          "title": "Laskar Aksara Pasundan",
+          "author": "Ayi R. Kurnia"
+        },
+        {
+          "title": "Pendidikan Karakter Sunda",
+          "author": "Dr. Cecep Hidayat"
+        },
+        {
+          "title": "Bumi Parahyangan: Jejak Purba",
+          "author": "T. Bachtiar"
+        },
+        {
+          "title": "Flora Priangan: Arsip Hayati",
+          "author": "Dr. Encep Kosasih"
+        },
+        {
+          "title": "Tata Bahasa & Morfologi Sunda Modern",
+          "author": "Prof. Dr. Iskandar"
+        }
+      ]
+    },
+    {
+      "id": "ORD-2026-11045",
+      "date": "2026-11-13",
+      "qty": 1,
+      "net": 52000,
+      "status": "lunas",
+      "book": "Pendidikan Karakter Sunda",
+      "author": "Dr. Cecep Hidayat",
+      "cover": "../../assets/covers/B02.jpg",
+      "items": null
+    },
+    {
+      "id": "ORD-2026-10991",
+      "date": "2026-11-11",
+      "qty": 1,
+      "net": 58500,
+      "status": "lunas",
+      "book": "Bumi Parahyangan: Jejak Purba",
+      "author": "T. Bachtiar",
+      "cover": "../../assets/covers/B03.jpg",
+      "items": null
+    },
+    {
+      "id": "ORD-2026-10820",
+      "date": "2026-11-09",
+      "qty": 1,
+      "net": 48000,
+      "status": "lunas",
+      "book": "Flora Priangan: Arsip Hayati",
+      "author": "Dr. Encep Kosasih",
+      "cover": "../../assets/covers/B05.jpg",
+      "items": null
+    },
+    {
+      "id": "ORD-2026-10764",
+      "date": "2026-11-07",
+      "qty": 1,
+      "net": 40500,
+      "status": "lunas",
+      "book": "Laskar Aksara Pasundan",
+      "author": "Ayi R. Kurnia",
+      "cover": "../../assets/covers/laskar-aksara-pasundan.jpg",
+      "items": null
+    }
+  ],
+  "BASE": {
+    "net": 1485000,
+    "available": 840000,
+    "pending": 645000,
+    "bank": "BCA",
+    "bankName": "Bank Central Asia (BCA)",
+    "holder": "PT Kiblat Buku Utama",
+    "masked": "•••• 4892",
+    "withdrawals": [
+      {
+        "id": "WDR-2026-0042",
+        "date": "2026-11-12",
+        "amount": 645000,
+        "status": "proses"
+      },
+      {
+        "id": "WDR-2026-0038",
+        "date": "2026-10-28",
+        "amount": 1250000,
+        "status": "selesai"
+      },
+      {
+        "id": "WDR-2026-0029",
+        "date": "2026-10-14",
+        "amount": 850000,
+        "status": "selesai"
+      }
+    ]
+  },
+  "BASE_REVIEWS": [
+    {
+      "id": 1,
+      "book": "Laskar Aksara Pasundan",
+      "bookAuthor": "Ayi R. Kurnia",
+      "cover": "../../assets/covers/laskar-aksara-pasundan.jpg",
+      "reviewer": "Dian Nugraha",
+      "date": "14 November 2026",
+      "content": "Uraian sejarah aksara dan kearifan Sunda disajikan sangat hidup dan mudah dipahami. Namun di bab 4 terkait aksara rarangken rasanya butuh glosarium tambahan agar pembaca pemula tidak tersendat.",
+      "reply": null
+    },
+    {
+      "id": 2,
+      "book": "Pendidikan Karakter Sunda",
+      "bookAuthor": "Dr. Cecep Hidayat",
+      "cover": "../../assets/covers/B02.jpg",
+      "reviewer": "Siti Rahmawati",
+      "date": "12 November 2026",
+      "content": "Buku yang sangat komprehensif untuk pengajaran nilai budi pekerti di sekolah. Format e-book di web reader sangat nyaman dibaca, baik di laptop maupun saat dibuka dari ponsel.",
+      "reply": {
+        "content": "Terima kasih Ibu Siti atas apresiasi dan masukannya. Kami berkomitmen menghadirkan karya literasi pendidikan yang mendalam bagi generasi muda Jawa Barat.",
+        "date": "13 November 2026"
+      }
+    },
+    {
+      "id": 3,
+      "book": "Bumi Parahyangan: Jejak Purba",
+      "bookAuthor": "T. Bachtiar",
+      "cover": "../../assets/covers/B03.jpg",
+      "reviewer": "Hendra Wijaya",
+      "date": "10 November 2026",
+      "content": "Ilustrasi geologi purba yang disertakan sangat informatif dan tajam saat dibuka di web reader. Sangat membuka wawasan tentang Bandung purba dan pembentukan bentang alam Priangan.",
+      "reply": null
+    },
+    {
+      "id": 4,
+      "book": "Flora Priangan: Arsip Hayati",
+      "bookAuthor": "Dr. Encep Kosasih",
+      "cover": "../../assets/covers/B05.jpg",
+      "reviewer": "Maya Lestari",
+      "date": "08 November 2026",
+      "content": "Dokumentasi taksonomi tanaman endemik yang sangat langka dan berharga. Penyajian gambar digitalnya jernih, dan struktur babnya memudahkan saya menelusuri spesies tertentu.",
+      "reply": {
+        "content": "Terima kasih banyak atas dukungannya! Suplemen botani pegunungan sedang kami siapkan untuk edisi digital berikutnya.",
+        "date": "09 November 2026"
+      }
+    }
+  ],
+  "SAVED_PROFILE": {
+    "name": "PT Kiblat Buku Utama",
+    "pic": "H. Asep Ridwan, M.Hum",
+    "email": "redaksi@kiblatbuku.co.id",
+    "phone": "0812-2145-8890",
+    "address": "Jl. Lengkong Besar No. 127, Lengkong, Kota Bandung, Jawa Barat 40261",
+    "member": "041/JBA/2020"
+  },
+  "SAVED_BANK": {
+    "bank": "Bank Central Asia (BCA)",
+    "number": "5220394892",
+    "holder": "PT Kiblat Buku Utama"
+  }
+}

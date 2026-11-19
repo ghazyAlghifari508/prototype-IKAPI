@@ -1,0 +1,134 @@
+<section id="section-rating" class="w-full py-12 bg-white border-t border-border-subtle">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          
+          <div class="flex items-center justify-between pb-1">
+            <h2 class="text-[22px] md:text-[24px] font-bold text-ink-body tracking-tight">Ulasan Pembaca</h2>
+            <span id="review-count-badge" class="text-[14px] text-ink-muted font-medium">3 ulasan</span>
+          </div>
+
+          <!-- Interactive Rating & Review Submission Card -->
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-border-subtle shadow-sm space-y-5">
+            <div class="space-y-1">
+              <h3 class="text-[18px] font-bold text-ink-body tracking-tight">
+                Beri Penilaian
+              </h3>
+              <p class="text-[14px] text-ink-muted">
+                Bagaimana pendapatmu tentang buku ini?
+              </p>
+            </div>
+
+            <!-- 5-Star Interactive Rating Controls -->
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+              <div id="star-rating-container" class="flex items-center gap-1" role="radiogroup" aria-label="Penilaian bintang 1 sampai 5">
+                <button type="button" role="radio" aria-checked="false" aria-label="1 bintang - Sangat kurang" class="star-btn p-1 cursor-pointer" data-rating="1" onclick="selectStarRating(1)" onmouseenter="hoverStarRating(1)" onmouseleave="leaveStarRating()">
+                  <span class="material-symbols-outlined text-[32px]">star</span>
+                </button>
+                <button type="button" role="radio" aria-checked="false" aria-label="2 bintang - Kurang" class="star-btn p-1 cursor-pointer" data-rating="2" onclick="selectStarRating(2)" onmouseenter="hoverStarRating(2)" onmouseleave="leaveStarRating()">
+                  <span class="material-symbols-outlined text-[32px]">star</span>
+                </button>
+                <button type="button" role="radio" aria-checked="false" aria-label="3 bintang - Cukup" class="star-btn p-1 cursor-pointer" data-rating="3" onclick="selectStarRating(3)" onmouseenter="hoverStarRating(3)" onmouseleave="leaveStarRating()">
+                  <span class="material-symbols-outlined text-[32px]">star</span>
+                </button>
+                <button type="button" role="radio" aria-checked="false" aria-label="4 bintang - Bagus" class="star-btn p-1 cursor-pointer" data-rating="4" onclick="selectStarRating(4)" onmouseenter="hoverStarRating(4)" onmouseleave="leaveStarRating()">
+                  <span class="material-symbols-outlined text-[32px]">star</span>
+                </button>
+                <button type="button" role="radio" aria-checked="false" aria-label="5 bintang - Sangat bagus" class="star-btn p-1 cursor-pointer" data-rating="5" onclick="selectStarRating(5)" onmouseenter="hoverStarRating(5)" onmouseleave="leaveStarRating()">
+                  <span class="material-symbols-outlined text-[32px]">star</span>
+                </button>
+              </div>
+
+              <!-- Rating Label Feedback -->
+              <span id="star-rating-label" class="text-[13px] font-semibold text-ink-muted">
+                Rating kamu: Belum dipilih
+              </span>
+            </div>
+
+            <!-- Optional Review Text Input -->
+            <div class="space-y-1.5 pt-1">
+              <label for="user-review-text" class="block text-[13px] font-bold text-ink-body">
+                Tulis Ulasan (Opsional)
+              </label>
+              <textarea id="user-review-text" rows="2" class="w-full p-3.5 rounded-xl bg-surface-neutral border border-border-subtle text-ink-body text-[14px] placeholder:text-ink-muted focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20 transition-all resize-none" placeholder="Tuliskan pengalaman atau kesan membaca buku ini..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex items-center gap-3 pt-1">
+              <button id="btn-submit-rating" type="button" class="h-10 px-5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold transition-all shadow-xs cursor-pointer" onclick="submitUserRating()">
+                Kirim Penilaian
+              </button>
+              <button id="btn-cancel-rating" type="button" class="hidden h-10 px-4 rounded-xl border border-border-subtle bg-white hover:bg-surface-neutral text-ink-muted text-[13px] font-medium transition-colors" onclick="resetUserRating()">
+                Hapus Penilaian
+              </button>
+            </div>
+          </div>
+
+          <!-- Existing Reviews List -->
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-border-subtle shadow-sm divide-y divide-border-subtle" id="reviews-list-container">
+            <!-- Review 1 -->
+            <article class="review-item py-4 first:pt-0 last:pb-0 flex flex-col gap-2" data-comment-id="CMT-2026-101">
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex min-w-0 flex-col gap-0.5">
+                  <span class="review-author text-[14px] font-bold text-ink-body">Gilang Nugraha</span>
+                  <time class="text-[12px] text-ink-muted" datetime="2025-01-12">12 Januari 2025</time>
+                </div>
+                <button type="button" class="comment-menu-btn -mr-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg text-ink-muted transition-colors hover:bg-surface-neutral hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40" aria-label="Aksi untuk komentar Gilang Nugraha" aria-haspopup="menu" aria-expanded="false">
+                  <span class="material-symbols-outlined text-[20px]" aria-hidden="true">more_horiz</span>
+                </button>
+              </div>
+              <p class="review-body text-[14px] text-ink-body leading-relaxed">
+                Pembahasan mengenai naskah kuno Priangan disampaikan secara mengalir. Gaya bahasanya mudah dinikmati dan memberikan wawasan baru tentang kekayaan tradisi tulisan Pasundan.
+              </p>
+              <span class="review-reaction hidden items-center gap-1 text-[12px] font-semibold text-primary" role="status">
+                <span class="material-symbols-outlined text-[15px]" data-reaction-icon="" aria-hidden="true">thumb_up</span>
+                <span data-reaction-label="">Suka</span>
+              </span>
+            </article>
+
+            <!-- Review 2 -->
+            <article class="review-item py-4 first:pt-0 last:pb-0 flex flex-col gap-2" data-comment-id="CMT-2026-102">
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex min-w-0 flex-col gap-0.5">
+                  <span class="review-author text-[14px] font-bold text-ink-body">Ratih Wulandari</span>
+                  <time class="text-[12px] text-ink-muted" datetime="2024-12-28">28 Desember 2024</time>
+                </div>
+                <button type="button" class="comment-menu-btn -mr-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg text-ink-muted transition-colors hover:bg-surface-neutral hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40" aria-label="Aksi untuk komentar Ratih Wulandari" aria-haspopup="menu" aria-expanded="false">
+                  <span class="material-symbols-outlined text-[20px]" aria-hidden="true">more_horiz</span>
+                </button>
+              </div>
+              <p class="review-body text-[14px] text-ink-body leading-relaxed">
+                Penjelasan filosofis tentang lambang aksara Sunda Kuna pada bab pertengahan sangat menarik. Buku ini cocok menjadi referensi bacaan bagi pegiat literasi daerah.
+              </p>
+              <span class="review-reaction hidden items-center gap-1 text-[12px] font-semibold text-primary" role="status">
+                <span class="material-symbols-outlined text-[15px]" data-reaction-icon="" aria-hidden="true">thumb_up</span>
+                <span data-reaction-label="">Suka</span>
+              </span>
+            </article>
+
+            <!-- Review 3 -->
+            <article class="review-item py-4 first:pt-0 last:pb-0 flex flex-col gap-2" data-comment-id="CMT-2026-103">
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex min-w-0 flex-col gap-0.5">
+                  <span class="review-author text-[14px] font-bold text-ink-body">Fajar Ashari</span>
+                  <time class="text-[12px] text-ink-muted" datetime="2024-12-19">19 Desember 2024</time>
+                </div>
+                <button type="button" class="comment-menu-btn -mr-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg text-ink-muted transition-colors hover:bg-surface-neutral hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40" aria-label="Aksi untuk komentar Fajar Ashari" aria-haspopup="menu" aria-expanded="false">
+                  <span class="material-symbols-outlined text-[20px]" aria-hidden="true">more_horiz</span>
+                </button>
+              </div>
+              <p class="review-body text-[14px] text-ink-body leading-relaxed">
+                Penceritaan sejarah lokal yang dikemas dalam bentuk narasi fiksi membuat topik filologi menjadi lebih memikat dan relevan untuk dibaca hari ini.
+              </p>
+              <span class="review-reaction hidden items-center gap-1 text-[12px] font-semibold text-primary" role="status">
+                <span class="material-symbols-outlined text-[15px]" data-reaction-icon="" aria-hidden="true">thumb_up</span>
+                <span data-reaction-label="">Suka</span>
+              </span>
+            </article>
+
+              <p class="text-[14px] text-ink-body leading-relaxed">
+                Penceritaan sejarah lokal yang dikemas dalam bentuk narasi fiksi membuat topik filologi menjadi lebih memikat dan relevan untuk dibaca hari ini.
+              </p>
+            
+          </div>
+
+        </div>
+      </section>

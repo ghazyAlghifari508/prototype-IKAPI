@@ -1,0 +1,902 @@
+[
+ {
+  "page": "directory",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "viewportDiffPixels": 0,
+  "heightDelta": 0,
+  "protoHeight": 1509,
+  "bladeHeight": 1509,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "textEqual": true,
+  "bladeTextLength": 824,
+  "protoTextLength": 824,
+  "views": {
+   "blade": [
+    "view-explore"
+   ],
+   "proto": [
+    "view-explore"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 1
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "directory",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0.000046,
+  "viewportDiffPixels": 36,
+  "heightDelta": 0,
+  "protoHeight": 1925,
+  "bladeHeight": 1925,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "textEqual": true,
+  "bladeTextLength": 824,
+  "protoTextLength": 824,
+  "views": {
+   "blade": [
+    "view-explore"
+   ],
+   "proto": [
+    "view-explore"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 1
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "directory",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "viewportDiffPixels": 0,
+  "heightDelta": 0,
+  "protoHeight": 2813,
+  "bladeHeight": 2813,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "textEqual": true,
+  "bladeTextLength": 824,
+  "protoTextLength": 824,
+  "views": {
+   "blade": [
+    "view-explore"
+   ],
+   "proto": [
+    "view-explore"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 1
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "profile",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0.000002,
+  "viewportDiffPixels": 2,
+  "heightDelta": 0,
+  "protoHeight": 1454,
+  "bladeHeight": 1454,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "textEqual": true,
+  "bladeTextLength": 1334,
+  "protoTextLength": 1334,
+  "views": {
+   "blade": [
+    "view-profile"
+   ],
+   "proto": [
+    "view-profile"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "profile",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0.000032,
+  "viewportDiffPixels": 25,
+  "heightDelta": 0,
+  "protoHeight": 1807,
+  "bladeHeight": 1807,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "textEqual": true,
+  "bladeTextLength": 1334,
+  "protoTextLength": 1334,
+  "views": {
+   "blade": [
+    "view-profile"
+   ],
+   "proto": [
+    "view-profile"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "profile",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "viewportDiffPixels": 0,
+  "heightDelta": 0,
+  "protoHeight": 2628,
+  "bladeHeight": 2628,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "textEqual": true,
+  "bladeTextLength": 1334,
+  "protoTextLength": 1334,
+  "views": {
+   "blade": [
+    "view-profile"
+   ],
+   "proto": [
+    "view-profile"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "room",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "viewportDiffPixels": 0,
+  "heightDelta": 0,
+  "protoHeight": 1034,
+  "bladeHeight": 1034,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "textEqual": true,
+  "bladeTextLength": 741,
+  "protoTextLength": 741,
+  "views": {
+   "blade": [
+    "view-room"
+   ],
+   "proto": [
+    "view-room"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "room",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0.000032,
+  "viewportDiffPixels": 25,
+  "heightDelta": 0,
+  "protoHeight": 1188,
+  "bladeHeight": 1188,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "textEqual": true,
+  "bladeTextLength": 741,
+  "protoTextLength": 741,
+  "views": {
+   "blade": [
+    "view-room"
+   ],
+   "proto": [
+    "view-room"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "room",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "viewportDiffPixels": 0,
+  "heightDelta": 0,
+  "protoHeight": 1639,
+  "bladeHeight": 1639,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "textEqual": true,
+  "bladeTextLength": 741,
+  "protoTextLength": 741,
+  "views": {
+   "blade": [
+    "view-room"
+   ],
+   "proto": [
+    "view-room"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "topic",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "viewportDiffPixels": 0,
+  "heightDelta": 0,
+  "protoHeight": 1321,
+  "bladeHeight": 1321,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "textEqual": true,
+  "bladeTextLength": 1126,
+  "protoTextLength": 1126,
+  "views": {
+   "blade": [
+    "view-topic"
+   ],
+   "proto": [
+    "view-topic"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "topic",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0.000032,
+  "viewportDiffPixels": 25,
+  "heightDelta": 0,
+  "protoHeight": 1448,
+  "bladeHeight": 1448,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "textEqual": true,
+  "bladeTextLength": 1126,
+  "protoTextLength": 1126,
+  "views": {
+   "blade": [
+    "view-topic"
+   ],
+   "proto": [
+    "view-topic"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "topic",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "viewportDiffPixels": 0,
+  "heightDelta": 0,
+  "protoHeight": 2146,
+  "bladeHeight": 2146,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "textEqual": true,
+  "bladeTextLength": 1126,
+  "protoTextLength": 1126,
+  "views": {
+   "blade": [
+    "view-topic"
+   ],
+   "proto": [
+    "view-topic"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "reply",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "viewportDiffPixels": 0,
+  "heightDelta": 0,
+  "protoHeight": 877,
+  "bladeHeight": 877,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "textEqual": true,
+  "bladeTextLength": 307,
+  "protoTextLength": 307,
+  "views": {
+   "blade": [
+    "view-reply"
+   ],
+   "proto": [
+    "view-reply"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 1
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "reply",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0.000032,
+  "viewportDiffPixels": 25,
+  "heightDelta": 0,
+  "protoHeight": 1188,
+  "bladeHeight": 1188,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "textEqual": true,
+  "bladeTextLength": 307,
+  "protoTextLength": 307,
+  "views": {
+   "blade": [
+    "view-reply"
+   ],
+   "proto": [
+    "view-reply"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 1
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "reply",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "viewportDiffPixels": 0,
+  "heightDelta": 0,
+  "protoHeight": 1351,
+  "bladeHeight": 1351,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "textEqual": true,
+  "bladeTextLength": 307,
+  "protoTextLength": 307,
+  "views": {
+   "blade": [
+    "view-reply"
+   ],
+   "proto": [
+    "view-reply"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 1
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "directory",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "viewportDiffPixels": 0,
+  "heightDelta": 0,
+  "protoHeight": 1509,
+  "bladeHeight": 1509,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "textEqual": true,
+  "bladeTextLength": 824,
+  "protoTextLength": 824,
+  "views": {
+   "blade": [
+    "view-explore"
+   ],
+   "proto": [
+    "view-explore"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 1
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "directory",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "viewportDiffPixels": 0,
+  "heightDelta": 0,
+  "protoHeight": 2826,
+  "bladeHeight": 2826,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "textEqual": true,
+  "bladeTextLength": 824,
+  "protoTextLength": 824,
+  "views": {
+   "blade": [
+    "view-explore"
+   ],
+   "proto": [
+    "view-explore"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 1
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "profile",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0.000002,
+  "viewportDiffPixels": 2,
+  "heightDelta": 0,
+  "protoHeight": 1454,
+  "bladeHeight": 1454,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "textEqual": true,
+  "bladeTextLength": 1334,
+  "protoTextLength": 1334,
+  "views": {
+   "blade": [
+    "view-profile"
+   ],
+   "proto": [
+    "view-profile"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "profile",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0.000006,
+  "viewportDiffPixels": 2,
+  "heightDelta": 0,
+  "protoHeight": 2426,
+  "bladeHeight": 2426,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "textEqual": true,
+  "bladeTextLength": 1334,
+  "protoTextLength": 1334,
+  "views": {
+   "blade": [
+    "view-profile"
+   ],
+   "proto": [
+    "view-profile"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "room",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "viewportDiffPixels": 0,
+  "heightDelta": 0,
+  "protoHeight": 1034,
+  "bladeHeight": 1034,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "textEqual": true,
+  "bladeTextLength": 741,
+  "protoTextLength": 741,
+  "views": {
+   "blade": [
+    "view-room"
+   ],
+   "proto": [
+    "view-room"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "room",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "viewportDiffPixels": 0,
+  "heightDelta": 0,
+  "protoHeight": 1494,
+  "bladeHeight": 1494,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "textEqual": true,
+  "bladeTextLength": 741,
+  "protoTextLength": 741,
+  "views": {
+   "blade": [
+    "view-room"
+   ],
+   "proto": [
+    "view-room"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "topic",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "viewportDiffPixels": 0,
+  "heightDelta": 0,
+  "protoHeight": 1321,
+  "bladeHeight": 1321,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "textEqual": true,
+  "bladeTextLength": 1126,
+  "protoTextLength": 1126,
+  "views": {
+   "blade": [
+    "view-topic"
+   ],
+   "proto": [
+    "view-topic"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "topic",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "viewportDiffPixels": 0,
+  "heightDelta": 0,
+  "protoHeight": 1913,
+  "bladeHeight": 1913,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "textEqual": true,
+  "bladeTextLength": 1126,
+  "protoTextLength": 1126,
+  "views": {
+   "blade": [
+    "view-topic"
+   ],
+   "proto": [
+    "view-topic"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "reply",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "viewportDiffPixels": 0,
+  "heightDelta": 0,
+  "protoHeight": 1008,
+  "bladeHeight": 1008,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "textEqual": true,
+  "bladeTextLength": 307,
+  "protoTextLength": 307,
+  "views": {
+   "blade": [
+    "view-reply"
+   ],
+   "proto": [
+    "view-reply"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 1
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "reply",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "viewportDiffPixels": 0,
+  "heightDelta": 0,
+  "protoHeight": 1189,
+  "bladeHeight": 1189,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "textEqual": true,
+  "bladeTextLength": 307,
+  "protoTextLength": 307,
+  "views": {
+   "blade": [
+    "view-reply"
+   ],
+   "proto": [
+    "view-reply"
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 1
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ }
+]

@@ -1,0 +1,1397 @@
+[
+ {
+  "page": "dashboard",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 1028,
+  "bladeHeight": 1028,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "textEqual": true,
+  "bladeTextLength": 1069,
+  "protoTextLength": 1069,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "dashboard",
+  "viewport": "1366x768",
+  "ratio": 0.004239,
+  "diffPixels": 5952,
+  "viewportRatio": 0.004693,
+  "heightDelta": 0,
+  "protoHeight": 1028,
+  "bladeHeight": 1028,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "textEqual": true,
+  "bladeTextLength": 1069,
+  "protoTextLength": 1069,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "dashboard",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 1702,
+  "bladeHeight": 1702,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "textEqual": true,
+  "bladeTextLength": 1069,
+  "protoTextLength": 1069,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "dashboard",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 2009,
+  "bladeHeight": 2009,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "textEqual": true,
+  "bladeTextLength": 1069,
+  "protoTextLength": 1069,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "dashboard",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 2090,
+  "bladeHeight": 2090,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "textEqual": true,
+  "bladeTextLength": 1069,
+  "protoTextLength": 1069,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "users",
+  "viewport": "1440x900",
+  "ratio": 0.000041,
+  "diffPixels": 53,
+  "viewportRatio": 0.000041,
+  "heightDelta": 0,
+  "protoHeight": 900,
+  "bladeHeight": 900,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "textEqual": true,
+  "bladeTextLength": 768,
+  "protoTextLength": 768,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "users",
+  "viewport": "1366x768",
+  "ratio": 0.000163,
+  "diffPixels": 171,
+  "viewportRatio": 0.000163,
+  "heightDelta": 0,
+  "protoHeight": 768,
+  "bladeHeight": 768,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "textEqual": true,
+  "bladeTextLength": 768,
+  "protoTextLength": 768,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "users",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 1024,
+  "bladeHeight": 1024,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "textEqual": true,
+  "bladeTextLength": 768,
+  "protoTextLength": 768,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "users",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 910,
+  "bladeHeight": 910,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "textEqual": true,
+  "bladeTextLength": 768,
+  "protoTextLength": 768,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "users",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0.000129,
+  "heightDelta": 0,
+  "protoHeight": 950,
+  "bladeHeight": 950,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "textEqual": true,
+  "bladeTextLength": 768,
+  "protoTextLength": 768,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "catalog",
+  "viewport": "1440x900",
+  "ratio": 0.000021,
+  "diffPixels": 27,
+  "viewportRatio": 0.000021,
+  "heightDelta": 0,
+  "protoHeight": 900,
+  "bladeHeight": 900,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "textEqual": true,
+  "bladeTextLength": 931,
+  "protoTextLength": 931,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "catalog",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0.00013,
+  "heightDelta": 0,
+  "protoHeight": 791,
+  "bladeHeight": 791,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "textEqual": true,
+  "bladeTextLength": 931,
+  "protoTextLength": 931,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "catalog",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 1046,
+  "bladeHeight": 1046,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "textEqual": true,
+  "bladeTextLength": 931,
+  "protoTextLength": 931,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "catalog",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0.000322,
+  "heightDelta": 0,
+  "protoHeight": 1068,
+  "bladeHeight": 1068,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "textEqual": true,
+  "bladeTextLength": 931,
+  "protoTextLength": 931,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "catalog",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 1089,
+  "bladeHeight": 1089,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "textEqual": true,
+  "bladeTextLength": 931,
+  "protoTextLength": 931,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "review-moderation",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 1222,
+  "bladeHeight": 1222,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "textEqual": true,
+  "bladeTextLength": 1430,
+  "protoTextLength": 1430,
+  "brokenImages": {
+   "blade": 1,
+   "proto": 1
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "review-moderation",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 1222,
+  "bladeHeight": 1222,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "textEqual": true,
+  "bladeTextLength": 1430,
+  "protoTextLength": 1430,
+  "brokenImages": {
+   "blade": 1,
+   "proto": 1
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "review-moderation",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 1368,
+  "bladeHeight": 1368,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "textEqual": true,
+  "bladeTextLength": 1430,
+  "protoTextLength": 1430,
+  "brokenImages": {
+   "blade": 1,
+   "proto": 1
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "review-moderation",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 1458,
+  "bladeHeight": 1458,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "textEqual": true,
+  "bladeTextLength": 1430,
+  "protoTextLength": 1430,
+  "brokenImages": {
+   "blade": 1,
+   "proto": 1
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "review-moderation",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 1610,
+  "bladeHeight": 1610,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "textEqual": true,
+  "bladeTextLength": 1430,
+  "protoTextLength": 1430,
+  "brokenImages": {
+   "blade": 1,
+   "proto": 1
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "monitoring",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 1646,
+  "bladeHeight": 1646,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "textEqual": true,
+  "bladeTextLength": 1724,
+  "protoTextLength": 1724,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "monitoring",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 1646,
+  "bladeHeight": 1646,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "textEqual": true,
+  "bladeTextLength": 1724,
+  "protoTextLength": 1724,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "monitoring",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 1993,
+  "bladeHeight": 1993,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "textEqual": true,
+  "bladeTextLength": 1724,
+  "protoTextLength": 1724,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "monitoring",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 2495,
+  "bladeHeight": 2495,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "textEqual": true,
+  "bladeTextLength": 1724,
+  "protoTextLength": 1724,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "monitoring",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 2585,
+  "bladeHeight": 2585,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "textEqual": true,
+  "bladeTextLength": 1724,
+  "protoTextLength": 1724,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "payouts",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 900,
+  "bladeHeight": 900,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "textEqual": true,
+  "bladeTextLength": 556,
+  "protoTextLength": 556,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "payouts",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 768,
+  "bladeHeight": 768,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "textEqual": true,
+  "bladeTextLength": 556,
+  "protoTextLength": 556,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "payouts",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 1024,
+  "bladeHeight": 1024,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "textEqual": true,
+  "bladeTextLength": 556,
+  "protoTextLength": 556,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "payouts",
+  "viewport": "390x844",
+  "ratio": 0.003393,
+  "diffPixels": 1117,
+  "viewportRatio": 0.003393,
+  "heightDelta": 0,
+  "protoHeight": 844,
+  "bladeHeight": 844,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "textEqual": true,
+  "bladeTextLength": 556,
+  "protoTextLength": 556,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "payouts",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 851,
+  "bladeHeight": 851,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "textEqual": true,
+  "bladeTextLength": 556,
+  "protoTextLength": 556,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "communities",
+  "viewport": "1440x900",
+  "ratio": 0.003323,
+  "diffPixels": 4306,
+  "viewportRatio": 0.003323,
+  "heightDelta": 0,
+  "protoHeight": 900,
+  "bladeHeight": 900,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "textEqual": true,
+  "bladeTextLength": 570,
+  "protoTextLength": 570,
+  "brokenImages": {
+   "blade": 2,
+   "proto": 2
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "communities",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 768,
+  "bladeHeight": 768,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "textEqual": true,
+  "bladeTextLength": 570,
+  "protoTextLength": 570,
+  "brokenImages": {
+   "blade": 2,
+   "proto": 2
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "communities",
+  "viewport": "768x1024",
+  "ratio": 0.000025,
+  "diffPixels": 20,
+  "viewportRatio": 0.000025,
+  "heightDelta": 0,
+  "protoHeight": 1024,
+  "bladeHeight": 1024,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "textEqual": true,
+  "bladeTextLength": 570,
+  "protoTextLength": 570,
+  "brokenImages": {
+   "blade": 2,
+   "proto": 2
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "communities",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 844,
+  "bladeHeight": 844,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "textEqual": true,
+  "bladeTextLength": 570,
+  "protoTextLength": 570,
+  "brokenImages": {
+   "blade": 2,
+   "proto": 2
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "communities",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 816,
+  "bladeHeight": 816,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "textEqual": true,
+  "bladeTextLength": 570,
+  "protoTextLength": 570,
+  "brokenImages": {
+   "blade": 2,
+   "proto": 2
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "discussion-moderation",
+  "viewport": "1440x900",
+  "ratio": 0.00003,
+  "diffPixels": 39,
+  "viewportRatio": 0.00003,
+  "heightDelta": 0,
+  "protoHeight": 900,
+  "bladeHeight": 900,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "textEqual": true,
+  "bladeTextLength": 398,
+  "protoTextLength": 398,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "discussion-moderation",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 768,
+  "bladeHeight": 768,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "textEqual": true,
+  "bladeTextLength": 398,
+  "protoTextLength": 398,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "discussion-moderation",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 1024,
+  "bladeHeight": 1024,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "textEqual": true,
+  "bladeTextLength": 398,
+  "protoTextLength": 398,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "discussion-moderation",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 844,
+  "bladeHeight": 844,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "textEqual": true,
+  "bladeTextLength": 398,
+  "protoTextLength": 398,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "discussion-moderation",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 888,
+  "bladeHeight": 888,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "textEqual": true,
+  "bladeTextLength": 398,
+  "protoTextLength": 398,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", sans-serif",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "login",
+  "viewport": "1440x900",
+  "ratio": 0.000973,
+  "diffPixels": 1261,
+  "viewportRatio": 0.000973,
+  "heightDelta": 0,
+  "protoHeight": 900,
+  "bladeHeight": 900,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "textEqual": true,
+  "bladeTextLength": 0,
+  "protoTextLength": 0,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", system-ui, ",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "login",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "viewportRatio": 0,
+  "heightDelta": 0,
+  "protoHeight": 768,
+  "bladeHeight": 768,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "textEqual": true,
+  "bladeTextLength": 0,
+  "protoTextLength": 0,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", system-ui, ",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "login",
+  "viewport": "768x1024",
+  "ratio": 0.000066,
+  "diffPixels": 52,
+  "viewportRatio": 0.000066,
+  "heightDelta": 0,
+  "protoHeight": 1024,
+  "bladeHeight": 1024,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "textEqual": true,
+  "bladeTextLength": 0,
+  "protoTextLength": 0,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", system-ui, ",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "login",
+  "viewport": "390x844",
+  "ratio": 0.00065,
+  "diffPixels": 214,
+  "viewportRatio": 0.00065,
+  "heightDelta": 0,
+  "protoHeight": 844,
+  "bladeHeight": 844,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "textEqual": true,
+  "bladeTextLength": 0,
+  "protoTextLength": 0,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", system-ui, ",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ },
+ {
+  "page": "login",
+  "viewport": "320x700",
+  "ratio": 0.00096,
+  "diffPixels": 215,
+  "viewportRatio": 0.00096,
+  "heightDelta": 0,
+  "protoHeight": 700,
+  "bladeHeight": 700,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "textEqual": true,
+  "bladeTextLength": 0,
+  "protoTextLength": 0,
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "bodyFont": {
+   "blade": "\"DM Sans\", system-ui, ",
+   "proto": "\"DM Sans\", system-ui, "
+  },
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  }
+ }
+]

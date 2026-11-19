@@ -1,0 +1,302 @@
+<div id="snap-overlay" role="dialog" aria-modal="true" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs hidden items-center justify-center p-4">
+    <div id="snap-modal-box" class="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden border border-border-subtle flex flex-col max-h-[92vh] animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- Modal Top Header: Merchant Logo & Close Button -->
+      <div class="bg-white px-6 py-4 border-b border-border-subtle flex items-center justify-between shrink-0">
+        <div class="flex items-center">
+          <img src="../../assets/logo-ikapi-jabar.png" alt="Logo IKAPI" class="h-6 w-auto object-contain">
+        </div>
+        <button type="button" aria-label="Tutup Pembayaran" class="w-8 h-8 rounded-full hover:bg-surface-neutral text-ink-muted hover:text-ink-body flex items-center justify-center transition-colors cursor-pointer" onclick="closeSnapOverlay()">
+          <span class="material-symbols-outlined text-[19px]">close</span>
+        </button>
+      </div>
+
+      <!-- Amount & Order Details Header (Midtrans Photo 8 Component) -->
+      <div class="bg-surface-neutral px-6 py-4 border-b border-border-subtle shrink-0 space-y-2">
+        <div class="flex items-center justify-between">
+          <div>
+            <span class="text-[11px] text-ink-muted block uppercase font-bold tracking-wider">Total Pembayaran</span>
+            <span id="snap-total-display" class="text-[26px] font-bold text-ink-body font-sans leading-tight">Rp 103.000</span>
+          </div>
+          <button type="button" id="btn-toggle-order-details" class="text-[13px] font-bold text-primary hover:text-primary-hover flex items-center gap-1 cursor-pointer select-none" onclick="toggleOrderDetailsDrawer()">
+            <span>Detail</span>
+            <span id="detail-chevron" class="material-symbols-outlined text-[18px] transition-transform">expand_more</span>
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[12px] text-ink-muted">
+          <span id="snap-order-id-label" class="font-mono">Order ID #IKP-20261116-081</span>
+          <span class="flex items-center gap-1 text-amber-700 font-semibold">
+            <span class="material-symbols-outlined text-[15px]">schedule</span>
+            <span id="snap-countdown-timer">Selesaikan dalam 23:59:58</span>
+          </span>
+        </div>
+
+        <!-- Expandable Order Items Breakdown Drawer -->
+        <div id="order-details-drawer" class="hidden pt-3 border-t border-border-subtle space-y-2 text-[13px]">
+          <div id="order-details-items-list" class="space-y-1.5">
+            <!-- Dynamically populated from active cart -->
+          </div>
+          <div class="pt-2 border-t border-border-subtle flex justify-between font-bold text-ink-body">
+            <span>Total Tagihan</span>
+            <span id="order-details-total" class="text-primary font-sans">Rp 103.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Body Container (Scrollable) -->
+      <div class="p-6 overflow-y-auto flex-1 space-y-4">
+        
+        <!-- SUBVIEW 1: VERTICAL PAYMENT METHOD LIST (Foto 8 Benchmark) -->
+        <div id="snap-selection-view" class="space-y-4">
+          <span class="text-[11px] font-bold text-ink-muted uppercase tracking-wider block">
+            PILIH METODE PEMBAYARAN
+          </span>
+
+          <!-- Payment Methods Vertical List with dividers -->
+          <div class="rounded-2xl border border-border-subtle bg-white overflow-hidden divide-y divide-border-subtle">
+            
+            <!-- Method 1: GoPay / QRIS -->
+            <button type="button" class="w-full p-4 flex items-center justify-between hover:bg-surface-neutral text-left transition-colors cursor-pointer group" onclick="selectPaymentMethod('qris', 'GoPay / QRIS')">
+              <div class="flex items-center gap-3.5 min-w-0">
+                <div class="w-10 h-10 rounded-xl bg-surface-soft text-primary flex items-center justify-center shrink-0 border border-primary/20">
+                  <span class="material-symbols-outlined text-[22px]">qr_code_2</span>
+                </div>
+                <div class="min-w-0">
+                  <p class="text-[14px] font-bold text-ink-body group-hover:text-primary transition-colors">GoPay / QRIS</p>
+                  <p class="text-[12px] text-ink-muted truncate">Pindai QR dengan GoPay, OVO, Dana, ShopeePay</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-[20px] text-ink-muted group-hover:text-primary transition-transform group-hover:translate-x-1 shrink-0">chevron_right</span>
+            </button>
+
+            <!-- Method 2: Virtual Account (Expandable Accordion) -->
+            <div>
+              <button type="button" class="w-full p-4 flex items-center justify-between hover:bg-surface-neutral text-left transition-colors cursor-pointer group" onclick="toggleVaAccordion()">
+                <div class="flex items-center gap-3.5 min-w-0">
+                  <div class="w-10 h-10 rounded-xl bg-surface-soft text-primary flex items-center justify-center shrink-0 border border-primary/20">
+                    <span class="material-symbols-outlined text-[22px]">account_balance</span>
+                  </div>
+                  <div class="min-w-0">
+                    <p class="text-[14px] font-bold text-ink-body group-hover:text-primary transition-colors">Virtual Account</p>
+                    <p class="text-[12px] text-ink-muted truncate">BCA, Mandiri, BNI, BRI, Permata</p>
+                  </div>
+                </div>
+                <span id="va-chevron" class="material-symbols-outlined text-[20px] text-ink-muted group-hover:text-primary transition-transform">expand_more</span>
+              </button>
+
+              <!-- VA Banks Sublist Accordion -->
+              <div id="va-sublist" class="hidden bg-surface-neutral/60 px-4 py-2 border-t border-border-subtle divide-y divide-border-subtle/70 text-[13.5px]">
+                <button type="button" class="w-full py-2.5 px-2 flex items-center justify-between hover:text-primary text-ink-body font-medium transition-colors text-left" onclick="selectPaymentMethod('va-bca', 'BCA Virtual Account')">
+                  <span>BCA Virtual Account</span>
+                  <span class="material-symbols-outlined text-[17px] text-ink-muted">chevron_right</span>
+                </button>
+                <button type="button" class="w-full py-2.5 px-2 flex items-center justify-between hover:text-primary text-ink-body font-medium transition-colors text-left" onclick="selectPaymentMethod('va-mandiri', 'Mandiri Bill Payment')">
+                  <span>Mandiri Bill Payment</span>
+                  <span class="material-symbols-outlined text-[17px] text-ink-muted">chevron_right</span>
+                </button>
+                <button type="button" class="w-full py-2.5 px-2 flex items-center justify-between hover:text-primary text-ink-body font-medium transition-colors text-left" onclick="selectPaymentMethod('va-bni', 'BNI Virtual Account')">
+                  <span>BNI Virtual Account</span>
+                  <span class="material-symbols-outlined text-[17px] text-ink-muted">chevron_right</span>
+                </button>
+                <button type="button" class="w-full py-2.5 px-2 flex items-center justify-between hover:text-primary text-ink-body font-medium transition-colors text-left" onclick="selectPaymentMethod('va-bri', 'BRI Virtual Account')">
+                  <span>BRI Virtual Account</span>
+                  <span class="material-symbols-outlined text-[17px] text-ink-muted">chevron_right</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Method 3: ShopeePay -->
+            <button type="button" class="w-full p-4 flex items-center justify-between hover:bg-surface-neutral text-left transition-colors cursor-pointer group" onclick="selectPaymentMethod('shopeepay', 'ShopeePay')">
+              <div class="flex items-center gap-3.5 min-w-0">
+                <div class="w-10 h-10 rounded-xl bg-surface-soft text-primary flex items-center justify-center shrink-0 border border-primary/20">
+                  <span class="material-symbols-outlined text-[22px]">payments</span>
+                </div>
+                <div class="min-w-0">
+                  <p class="text-[14px] font-bold text-ink-body group-hover:text-primary transition-colors">ShopeePay</p>
+                  <p class="text-[12px] text-ink-muted truncate">Bayar langsung dengan saldo ShopeePay</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-[20px] text-ink-muted group-hover:text-primary transition-transform group-hover:translate-x-1 shrink-0">chevron_right</span>
+            </button>
+
+            <!-- Method 4: Kartu Kredit / Debit -->
+            <button type="button" class="w-full p-4 flex items-center justify-between hover:bg-surface-neutral text-left transition-colors cursor-pointer group" onclick="selectPaymentMethod('credit_card', 'Kartu Kredit / Debit')">
+              <div class="flex items-center gap-3.5 min-w-0">
+                <div class="w-10 h-10 rounded-xl bg-surface-soft text-primary flex items-center justify-center shrink-0 border border-primary/20">
+                  <span class="material-symbols-outlined text-[22px]">credit_card</span>
+                </div>
+                <div class="min-w-0">
+                  <p class="text-[14px] font-bold text-ink-body group-hover:text-primary transition-colors">Kartu Kredit / Debit</p>
+                  <p class="text-[12px] text-ink-muted truncate">Visa, Mastercard, JCB</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-[20px] text-ink-muted group-hover:text-primary transition-transform group-hover:translate-x-1 shrink-0">chevron_right</span>
+            </button>
+
+          </div>
+
+          <!-- Compact Reviewer Simulator Disclosure Bar (Discreet for Testing 4 States) -->
+          <details class="group bg-surface-neutral rounded-2xl border border-border-subtle text-[12px] select-none">
+            <summary class="px-3.5 py-2 cursor-pointer font-semibold text-ink-muted hover:text-ink-body flex items-center justify-between list-none">
+              <span class="flex items-center gap-1.5 text-primary">
+                <span class="material-symbols-outlined text-[16px]">tune</span>
+                <span>Mode Pengujian Status (QA)</span>
+              </span>
+              <span class="material-symbols-outlined text-[16px] transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <div class="p-3 pt-1 border-t border-border-subtle flex flex-wrap gap-1.5 bg-white rounded-b-2xl">
+              <button type="button" class="px-3 py-1 rounded-lg bg-emerald-50 text-emerald-700 font-bold border border-emerald-200 hover:bg-emerald-100 transition-colors" onclick="setDemoPaymentStatus('berhasil')">
+                ✓ Berhasil
+              </button>
+              <button type="button" class="px-3 py-1 rounded-lg bg-amber-50 text-amber-700 font-bold border border-amber-200 hover:bg-amber-100 transition-colors" onclick="setDemoPaymentStatus('menunggu')">
+                ⏳ Menunggu
+              </button>
+              <button type="button" class="px-3 py-1 rounded-lg bg-red-50 text-red-700 font-bold border border-red-200 hover:bg-red-100 transition-colors" onclick="setDemoPaymentStatus('gagal')">
+                ✕ Gagal
+              </button>
+              <button type="button" class="px-3 py-1 rounded-lg bg-gray-100 text-gray-700 font-bold border border-gray-200 hover:bg-gray-200 transition-colors" onclick="setDemoPaymentStatus('kedaluwarsa')">
+                ⏰ Kedaluwarsa
+              </button>
+            </div>
+          </details>
+
+        </div>
+
+        <!-- SUBVIEW 2: STATUS BERHASIL -->
+        <div id="status-berhasil" class="hidden flex flex-col items-center text-center gap-4 py-4">
+          <div class="w-14 h-14 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center border border-emerald-200 shadow-xs">
+            <span class="material-symbols-outlined text-[32px]">check_circle</span>
+          </div>
+          <div class="space-y-1">
+            <h4 class="text-[20px] font-bold text-ink-body tracking-tight">Pembayaran Berhasil</h4>
+            <p class="text-[14px] text-ink-muted max-w-sm">
+              Pembayaran simulasi telah terkonfirmasi. Buku otomatis aktif di akun Anda.
+            </p>
+          </div>
+          <div class="w-full bg-surface-neutral p-4 rounded-2xl border border-border-subtle text-left text-[13.5px] space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Nomor Pesanan</span>
+              <span id="status-success-order-id" class="font-mono font-bold text-ink-body">#IKP-20261116-081</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Total Transaksi</span>
+              <span class="font-bold text-primary font-sans" id="status-berhasil-total">Rp 103.000</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Status</span>
+              <span class="font-bold text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded-full text-[11.5px]">Lunas</span>
+            </div>
+          </div>
+          <div class="w-full flex flex-col gap-2.5 pt-2">
+            <a href="perpustakaan_saya_desktop.html" data-path="perpustakaan-saya" class="w-full h-11 rounded-xl bg-primary hover:bg-primary-hover text-white text-[14px] font-bold flex items-center justify-center gap-2 transition-all shadow-xs">
+              <span class="material-symbols-outlined text-[18px]">local_library</span>
+              <span>Buka Perpustakaan Saya</span>
+            </a>
+            <button type="button" class="w-full h-10 rounded-xl border border-border-subtle bg-white hover:bg-surface-neutral text-ink-body text-[13px] font-semibold transition-colors" onclick="backToSnapSelector()">
+              Kembali ke Pilihan Metode
+            </button>
+          </div>
+        </div>
+
+        <!-- SUBVIEW 3: STATUS MENUNGGU -->
+        <div id="status-menunggu" class="hidden flex flex-col items-center text-center gap-4 py-4">
+          <div class="w-14 h-14 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center border border-amber-200 shadow-xs">
+            <span class="material-symbols-outlined text-[32px]">schedule</span>
+          </div>
+          <div class="space-y-1">
+            <h4 class="text-[20px] font-bold text-ink-body tracking-tight">Menunggu Pembayaran</h4>
+            <p class="text-[14px] text-ink-muted max-w-sm">
+              Selesaikan simulasi pembayaran sebelum batas waktu berakhir.
+            </p>
+          </div>
+          <div class="w-full bg-amber-50/60 p-4 rounded-2xl border border-amber-200 text-left text-[13.5px] space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Nomor Pesanan</span>
+              <span id="status-pending-order-id" class="font-mono font-bold text-ink-body">#IKP-20261116-081</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Metode Dipilih</span>
+              <span id="status-pending-method" class="font-bold text-ink-body">GoPay / QRIS</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Total Pembayaran</span>
+              <span class="font-bold text-primary font-sans" id="status-menunggu-total">Rp 103.000</span>
+            </div>
+          </div>
+          <div class="w-full flex flex-col gap-2.5 pt-2">
+            <button type="button" class="w-full h-11 rounded-xl bg-primary hover:bg-primary-hover text-white text-[14px] font-bold flex items-center justify-center gap-2 transition-all shadow-xs cursor-pointer" onclick="checkPaymentStatus()">
+              <span class="material-symbols-outlined text-[18px]">sync</span>
+              <span>Cek Status Transaksi</span>
+            </button>
+            <button type="button" class="w-full h-10 rounded-xl border border-border-subtle bg-white hover:bg-surface-neutral text-ink-body text-[13px] font-semibold transition-colors" onclick="backToSnapSelector()">
+              Ganti Metode Pembayaran
+            </button>
+          </div>
+        </div>
+
+        <!-- SUBVIEW 4: STATUS GAGAL -->
+        <div id="status-gagal" class="hidden flex flex-col items-center text-center gap-4 py-4">
+          <div class="w-14 h-14 rounded-full bg-red-50 text-red-600 flex items-center justify-center border border-red-200 shadow-xs">
+            <span class="material-symbols-outlined text-[32px]">error</span>
+          </div>
+          <div class="space-y-1">
+            <h4 class="text-[20px] font-bold text-ink-body tracking-tight">Pembayaran Gagal</h4>
+            <p class="text-[14px] text-ink-muted max-w-sm">
+              Pembayaran simulasi tidak berhasil diproses. Silakan coba metode lain.
+            </p>
+          </div>
+          <div class="w-full bg-surface-neutral p-4 rounded-2xl border border-border-subtle text-left text-[13.5px] space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Nomor Pesanan</span>
+              <span id="status-failed-order-id" class="font-mono font-bold text-ink-body">#IKP-20261116-081</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Status</span>
+              <span class="font-bold text-red-600 bg-red-50 px-2.5 py-0.5 rounded-full text-[11.5px]">Gagal</span>
+            </div>
+          </div>
+          <div class="w-full flex flex-col gap-2.5 pt-2">
+            <button type="button" class="w-full h-11 rounded-xl bg-primary hover:bg-primary-hover text-white text-[14px] font-bold flex items-center justify-center gap-2 transition-all shadow-xs cursor-pointer" onclick="backToSnapSelector()">
+              <span class="material-symbols-outlined text-[18px]">replay</span>
+              <span>Coba Bayar Lagi</span>
+            </button>
+            <button type="button" class="w-full h-10 rounded-xl border border-border-subtle bg-white hover:bg-surface-neutral text-ink-body text-[13px] font-semibold transition-colors" onclick="closeSnapOverlay()">
+              Tutup
+            </button>
+          </div>
+        </div>
+
+        <!-- SUBVIEW 5: STATUS KEDALUWARSA -->
+        <div id="status-kedaluwarsa" class="hidden flex flex-col items-center text-center gap-4 py-4">
+          <div class="w-14 h-14 rounded-full bg-surface-neutral text-ink-muted flex items-center justify-center border border-border-subtle shadow-xs">
+            <span class="material-symbols-outlined text-[32px]">timer_off</span>
+          </div>
+          <div class="space-y-1">
+            <h4 class="text-[20px] font-bold text-ink-body tracking-tight">Pembayaran Kedaluwarsa</h4>
+            <p class="text-[14px] text-ink-muted max-w-sm">
+              Waktu simulasi pembayaran untuk pesanan ini telah berakhir.
+            </p>
+          </div>
+          <div class="w-full bg-surface-neutral p-4 rounded-2xl border border-border-subtle text-left text-[13.5px] space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Nomor Pesanan</span>
+              <span id="status-expired-order-id" class="font-mono font-bold text-ink-body">#IKP-20261116-081</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-ink-muted">Status</span>
+              <span class="font-bold text-gray-700 bg-gray-100 px-2.5 py-0.5 rounded-full text-[11.5px]">Kedaluwarsa</span>
+            </div>
+          </div>
+          <div class="w-full flex flex-col gap-2.5 pt-2">
+            <button type="button" class="w-full h-11 rounded-xl bg-primary hover:bg-primary-hover text-white text-[14px] font-bold flex items-center justify-center gap-2 transition-all shadow-xs cursor-pointer" onclick="closeSnapOverlay()">
+              <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+              <span>Kembali ke Keranjang</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>

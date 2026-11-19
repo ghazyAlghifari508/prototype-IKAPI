@@ -1,0 +1,85 @@
+<aside id="payout-drawer" class="fixed right-0 top-0 z-[70] flex h-full w-full max-w-full flex-col border-l border-border bg-white shadow-[-16px_0_40px_rgba(34,34,37,0.12)] sm:max-w-[520px]" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+  <header class="flex items-start justify-between gap-4 border-b border-divider px-5 py-4">
+    <div class="min-w-0">
+      <h2 id="drawer-title" class="text-[17px] font-bold tracking-tight text-ink">Detail Pencairan</h2>
+      <p class="num mt-0.5 text-[12.5px] text-muted" id="drawer-id">-</p>
+    </div>
+    <button type="button" id="drawer-close" aria-label="Tutup detail" class="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[18px]">close</span>
+    </button>
+  </header>
+
+  <div class="flex-1 space-y-5 overflow-y-auto px-5 py-4">
+    <!-- A. Detail pengajuan -->
+    <section>
+      <p class="text-[12.5px] font-semibold text-ink" id="drawer-publisher">-</p>
+      <p class="mt-1 text-[13px] text-muted">Nominal pencairan</p>
+      <p class="num mt-0.5 text-[24px] font-bold leading-none tracking-tight text-ink" id="drawer-amount">-</p>
+      <p class="mt-2 flex flex-wrap items-center gap-2 text-[12.5px] text-muted">Status: <span class="font-semibold text-ink" id="drawer-status">-</span><span class="inline-block h-3 w-px bg-border"></span><span id="drawer-date">-</span></p>
+    </section>
+
+    <!-- B. Rekening -->
+    <section class="border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Rekening Tujuan</h3>
+      <dl class="mt-2 space-y-1.5 text-[13px]">
+        <div class="flex justify-between gap-3"><dt class="text-muted">Bank</dt><dd class="text-ink" id="drawer-bank">-</dd></div>
+        <div class="flex justify-between gap-3"><dt class="text-muted">Pemilik</dt><dd class="text-right text-ink" id="drawer-holder">-</dd></div>
+        <div class="flex items-center justify-between gap-3">
+          <dt class="text-muted">No. Rekening</dt>
+          <dd class="flex items-center gap-2">
+            <span class="num text-ink" id="drawer-account">-</span>
+            <button type="button" id="btn-copy-account" class="focus-ring rounded px-1.5 py-0.5 text-[12px] font-semibold text-primary hover:bg-soft">Salin</button>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- C. Rincian perhitungan -->
+    <section class="border-t border-divider pt-4">
+      <div id="royalty-block">
+        <button type="button" id="btn-toggle-royalty" aria-expanded="false" class="focus-ring flex w-full items-center justify-between gap-2 rounded text-[13px] font-semibold text-ink hover:text-primary">
+          <span>Lihat Rincian Perhitungan</span>
+          <span class="material-symbols-outlined text-[18px] text-muted" id="royalty-chevron">expand_more</span>
+        </button>
+        <dl id="royalty-detail" class="mt-2 hidden space-y-1.5 border-t border-divider pt-2 text-[13px]">
+          <div class="flex justify-between gap-3"><dt class="text-muted">Akumulasi royalti</dt><dd class="num text-ink" id="royalty-gross">-</dd></div>
+          <div class="flex justify-between gap-3"><dt class="text-muted">Penarikan sebelumnya</dt><dd class="num text-ink" id="royalty-previous">-</dd></div>
+          <div class="flex justify-between gap-3"><dt class="text-muted">Nominal pengajuan</dt><dd class="num text-ink" id="royalty-requested">-</dd></div>
+          <div class="flex justify-between gap-3 border-t border-divider pt-1.5"><dt class="font-semibold text-ink">Sisa saldo</dt><dd class="num font-semibold text-ink" id="royalty-remaining">-</dd></div>
+        </dl>
+      </div>
+      <p class="mt-1 hidden text-[12px] leading-relaxed text-muted" id="royalty-unavailable">Rincian perhitungan belum tersedia untuk pengajuan ini.</p>
+    </section>
+
+    <!-- D. Bukti transfer (dikirim penerbit, ditinjau admin) -->
+    <section class="border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Bukti Transfer</h3>
+
+      <div id="proof-stored" class="mt-2 hidden">
+        <div class="flex items-start gap-3 rounded-xl border border-border p-3">
+          <img src="../../assets/ilustration/bukti-transfer-demo.jpg" alt="Bukti transfer dari penerbit" class="h-20 w-16 shrink-0 rounded border border-border object-cover">
+          <div class="min-w-0">
+            <p class="text-[13px] font-semibold text-ink" id="stored-name">bukti-transfer.jpg</p>
+            <p class="text-[12px] text-muted">Diunggah penerbit untuk pengajuan ini.</p>
+            <button type="button" id="btn-stored-preview" class="focus-ring mt-1.5 rounded-lg px-2 py-1 text-[12px] font-semibold text-primary hover:bg-soft">Lihat Bukti</button>
+          </div>
+        </div>
+      </div>
+
+      <p id="proof-none" class="mt-2 hidden text-[12px] leading-relaxed text-muted">Penerbit belum mengunggah bukti transfer untuk pengajuan ini.</p>
+    </section>
+
+    <!-- Rejection reason -->
+    <section id="reject-reason-block" class="hidden border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Alasan Penolakan</h3>
+      <p class="mt-1 text-[13px] leading-relaxed text-ink" id="drawer-reason">-</p>
+    </section>
+  </div>
+
+  <footer class="border-t border-divider px-5 py-3">
+    <div class="flex items-center justify-end gap-2">
+      <button type="button" id="btn-reject" class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[13.5px] font-semibold text-ink hover:bg-neutral disabled:cursor-not-allowed disabled:opacity-40">Tolak Pengajuan</button>
+      <button type="button" id="btn-finalize" class="focus-ring inline-flex h-10 items-center rounded-xl bg-primary px-4 text-[13.5px] font-semibold text-white hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-40">Selesaikan Pencairan</button>
+    </div>
+  </footer>
+</aside>

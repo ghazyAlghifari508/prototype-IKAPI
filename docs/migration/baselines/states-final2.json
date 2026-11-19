@@ -1,0 +1,154 @@
+[
+ {
+  "key": "cart#controls-inventory",
+  "page": "user/keranjang_pembayaran_terpadu_desktop.html",
+  "controls": [
+   "favorite_border|-",
+   "delete Hapus|-",
+   "favorite_border|-",
+   "delete Hapus|-",
+   "Lanjut ke Pembayaran arrow|btn-checkout",
+   "close|-",
+   "Detail expand_more|btn-toggle-order-details",
+   "qr_code_2 GoPay / QRIS Pin|-",
+   "account_balance Virtual Ac|-",
+   "payments ShopeePay Bayar l|-",
+   "credit_card Kartu Kredit /|-",
+   "✓ Berhasil|-",
+   "⏳ Menunggu|-",
+   "✕ Gagal|-",
+   "⏰ Kedaluwarsa|-"
+  ]
+ },
+ {
+  "key": "cart#status-berhasil",
+  "page": "user/keranjang_pembayaran_terpadu_desktop.html",
+  "actions": [
+   "checkout",
+   "clicked:✓ Berhasil"
+  ],
+  "before": "hidden",
+  "after": "shown",
+  "reached": true,
+  "file": "user/keranjang_pembayaran_terpadu_desktop/state-status-berhasil-final.png",
+  "bytes": 159656,
+  "errors": []
+ },
+ {
+  "key": "cart#status-menunggu",
+  "page": "user/keranjang_pembayaran_terpadu_desktop.html",
+  "actions": [
+   "checkout",
+   "clicked:⏳ Menunggu"
+  ],
+  "before": "hidden",
+  "after": "shown",
+  "reached": true,
+  "file": "user/keranjang_pembayaran_terpadu_desktop/state-status-menunggu-final.png",
+  "bytes": 154694,
+  "errors": []
+ },
+ {
+  "key": "cart#status-gagal",
+  "page": "user/keranjang_pembayaran_terpadu_desktop.html",
+  "actions": [
+   "checkout",
+   "clicked:✕ Gagal"
+  ],
+  "before": "hidden",
+  "after": "shown",
+  "reached": true,
+  "file": "user/keranjang_pembayaran_terpadu_desktop/state-status-gagal-final.png",
+  "bytes": 147912,
+  "errors": []
+ },
+ {
+  "key": "cart#status-kedaluwarsa",
+  "page": "user/keranjang_pembayaran_terpadu_desktop.html",
+  "actions": [
+   "checkout",
+   "clicked:⏰ Kedaluwarsa"
+  ],
+  "before": "hidden",
+  "after": "shown",
+  "reached": true,
+  "file": "user/keranjang_pembayaran_terpadu_desktop/state-status-kedaluwarsa-final.png",
+  "bytes": 148636,
+  "errors": []
+ },
+ {
+  "key": "catalog#category-filter",
+  "page": "user/katalog_buku_desktop.html",
+  "actions": [
+   "clicked:Sastra & Fiksi\n     "
+  ],
+  "before": "{\"checked\":[\"cat-all\"],\"cards\":12}",
+  "after": "{\"checked\":[\"box0\"],\"cards\":3}",
+  "reached": true,
+  "file": "user/katalog_buku_desktop/state-category-filter-final.png",
+  "bytes": 616240,
+  "errors": []
+ },
+ {
+  "key": "agenda#article-modal",
+  "page": "user/agenda_berita_literasi_desktop.html",
+  "actions": [
+   "clicked:Lihat Detail Acara\n   "
+  ],
+  "before": "{\"featured\":false,\"article\":false}",
+  "after": "{\"featured\":true,\"article\":false}",
+  "reached": true,
+  "file": "user/agenda_berita_literasi_desktop/state-article-modal-final.png",
+  "bytes": 502569,
+  "errors": []
+ },
+ {
+  "key": "admin-payouts#drawer",
+  "page": "admin/kelola_pencairan_dana_desktop.html",
+  "actions": [
+   "clicked"
+  ],
+  "before": "{\"x\":1440,\"w\":520,\"vw\":1440,\"onscreen\":false}",
+  "after": "{\"x\":1440,\"w\":520,\"vw\":1440,\"onscreen\":false}",
+  "reached": false,
+  "file": "admin/kelola_pencairan_dana_desktop/state-drawer-final.png",
+  "bytes": 105464,
+  "errors": [
+   "ReferenceError: editable is not defined"
+  ]
+ },
+ {
+  "key": "admin-community#drawer-default",
+  "page": "admin/kelola_komunitas_desktop.html",
+  "actions": [],
+  "before": "{\"x\":920,\"w\":520,\"vw\":1440,\"onscreen\":true,\"cls\":\"fixed right-0 top-0 z-[70] flex h-full w\"}",
+  "after": "{\"x\":920,\"w\":520,\"vw\":1440,\"onscreen\":true,\"cls\":\"fixed right-0 top-0 z-[70] flex h-full w\"}",
+  "reached": false,
+  "file": "admin/kelola_komunitas_desktop/state-drawer-default-final.png",
+  "bytes": 115958,
+  "errors": []
+ },
+ {
+  "key": "admin-community#create",
+  "page": "admin/kelola_komunitas_desktop.html",
+  "actions": [
+   "clicked:add\n            Tambah"
+  ],
+  "before": "{\"drawerInputVisible\":false}",
+  "after": "{\"drawerInputVisible\":true}",
+  "reached": true,
+  "file": "admin/kelola_komunitas_desktop/state-create-final.png",
+  "bytes": 155409,
+  "errors": []
+ },
+ {
+  "key": "detail#rating-dom",
+  "page": "user/detail_buku_desktop.html",
+  "dom": {
+   "starCount": 5,
+   "sampleClass": "star-btn p-1 cursor-pointer is-active",
+   "inputs": 0,
+   "afterClickVisual": 0
+  }
+ }
+]

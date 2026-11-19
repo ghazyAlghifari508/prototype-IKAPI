@@ -1,0 +1,126 @@
+[
+  {
+    "check": "1-responsive-header",
+    "head": {
+      "height": 113,
+      "links": [
+        {
+          "t": "Beranda",
+          "vis": true,
+          "href": "http://127.0.0.1:8140"
+        },
+        {
+          "t": "Katalog Buku",
+          "vis": true,
+          "href": "http://127.0.0.1:8140/katalog"
+        },
+        {
+          "t": "Agenda Literasi",
+          "vis": true,
+          "href": "http://127.0.0.1:8140/agenda"
+        },
+        {
+          "t": "Komunitas Literasi",
+          "vis": true,
+          "href": "http://127.0.0.1:8140/komunitas"
+        }
+      ],
+      "hamburger": false,
+      "scrollW": 390,
+      "clientW": 390
+    },
+    "navStatus": [
+      [
+        "Beranda",
+        "ERR"
+      ],
+      [
+        "Katalog Buku",
+        "ERR"
+      ],
+      [
+        "Agenda Literasi",
+        "ERR"
+      ],
+      [
+        "Komunitas Literasi",
+        "ERR"
+      ]
+    ],
+    "errors": []
+  },
+  {
+    "check": "2-catalog-search",
+    "before": 12,
+    "after": 2,
+    "summary": "Menampilkan 1 – 2 dari 2 buku",
+    "errors": []
+  },
+  {
+    "check": "3-catalog-filter-sort-reset",
+    "before": 12,
+    "afterSort": 12,
+    "emptyVisible": true,
+    "afterReset": 12,
+    "errors": []
+  },
+  {
+    "check": "4-cart-add-badge",
+    "rowsBefore": 2,
+    "rowsAfter": 2,
+    "badgeBefore": "2",
+    "badgeAfter": "3",
+    "toast": "thumb_up Suka",
+    "errors": []
+  },
+  {
+    "check": "5-footer-links",
+    "total": 6,
+    "sampled": 6,
+    "bad": [
+      [
+        "https://instagram.com",
+        301
+      ],
+      [
+        "https://youtube.com",
+        301
+      ],
+      [
+        "https://facebook.com",
+        301
+      ],
+      [
+        "https://x.com",
+        403
+      ]
+    ],
+    "errors": []
+  },
+  {
+    "check": "6-chatbot-local",
+    "toggles": {
+      "initialOpen": true,
+      "afterToggle": false,
+      "reopened": true
+    },
+    "bubbles": 2,
+    "externalDuringChat": [],
+    "errors": []
+  },
+  {
+    "check": "7-room-nonmember-gate",
+    "room": {
+      "found": true,
+      "disabled": true,
+      "ariaDisabled": null,
+      "bg": "rgb(245, 245, 246)",
+      "cursor": "not-allowed"
+    },
+    "sortOptions": [
+      "Terbaru:true",
+      "Aktivitas Terakhir:false"
+    ],
+    "errors": []
+  }
+]

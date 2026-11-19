@@ -1,0 +1,53 @@
+[
+  {
+    "id": "community-filologi",
+    "name": "Komunitas Filologi Pasundan",
+    "focus": "filologi",
+    "focusLabel": "Filologi & Aksara Kuno",
+    "location": "Bandung, Jawa Barat",
+    "shortDesc": "Komunitas yang mempelajari dan melestarikan naskah serta aksara Sunda kuno.",
+    "fullDesc": "Komunitas Filologi Pasundan berakar dari lingkaran pegiat manuskrip, peneliti sastra daerah, dan generasi muda yang berikhtiar menyelamatkan lembaran naskah lontar dan daluwang di Jawa Barat agar dapat dipelajari secara luas.",
+    "photo": "../../assets/events/event-community.jpg",
+    "photoAlt": "Foto kegiatan komunitas",
+    "focusPoints": [
+      "Transliterasi naskah lontar dan aksara Sunda kuno",
+      "Kajian filologi dan penelusuran sejarah manuskrip Pasundan",
+      "Pelatihan pembacaan aksara kuno bagi pegiat literasi muda"
+    ],
+    "status": "active"
+  },
+  {
+    "id": "community-klub-buku",
+    "name": "Klub Buku Priangan (KBP)",
+    "focus": "fiksi",
+    "focusLabel": "Klub Baca Fiksi",
+    "location": "Bandung & Cimahi, Jawa Barat",
+    "shortDesc": "Komunitas pembaca yang membahas novel dan karya sastra.",
+    "fullDesc": "Klub Buku Priangan adalah lingkar pembaca independen yang rutin mengadakan pertemuan diskusi karya sastra fiksi, bedah buku kurasi IKAPI, dan ruang bertukar bacaan di berbagai ruang publik terbuka.",
+    "photo": "../../assets/events/event-children-story.jpg",
+    "photoAlt": "Foto kegiatan komunitas",
+    "focusPoints": [
+      "Diskusi berkala novel dan antologi sastra Nusantara",
+      "Kegiatan bertukar buku dan apresiasi karya penulis lokal",
+      "Klub baca akhir pekan di taman literasi dan kedai buku"
+    ],
+    "status": "active"
+  },
+  {
+    "id": "community-sejarah",
+    "name": "Masyarakat Sejarah & Budaya Sunda",
+    "focus": "sejarah",
+    "focusLabel": "Sejarah Priangan",
+    "location": "Sumedang & Garut, Jawa Barat",
+    "shortDesc": "Komunitas yang mempelajari sejarah dan kebudayaan Sunda melalui diskusi serta kegiatan literasi.",
+    "fullDesc": "Masyarakat Sejarah & Budaya Sunda mengkaji babad, sejarah geomorfologi Priangan, dan buku-buku kearifan lokal bersama para peneliti, pengarang daerah, serta pendidik dari berbagai institusi.",
+    "photo": "../../assets/events/event-book-fair.jpg",
+    "photoAlt": "Foto kegiatan komunitas",
+    "focusPoints": [
+      "Kajian sejarah lokal dan dokumentasi cerita rakyat",
+      "Diskusi buku geomorfologi dan bentang alam Bandung Purba",
+      "Penyelenggaraan ekspedisi literasi situs sejarah Pasundan"
+    ],
+    "status": "active"
+  }
+]

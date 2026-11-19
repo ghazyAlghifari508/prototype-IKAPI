@@ -1,0 +1,85 @@
+<header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-border-subtle shadow-[0_1px_4px_rgba(34,34,37,0.04)]">
+    <div class="h-28 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between">
+      <div class="h-16 flex items-center justify-between gap-4">
+        <!-- Logo -->
+        <div class="flex items-center gap-4 shrink-0">
+          <a href="beranda_desktop.html" data-path="beranda" class="flex items-center" aria-label="Beranda IKAPI Jawa Barat">
+            <img alt="Logo IKAPI Jawa Barat" class="h-7 sm:h-8 w-auto object-contain" src="../../assets/logo-ikapi-jabar.png">
+          </a>
+        </div>
+        <!-- Search Bar -->
+        <div class="flex-1 max-w-xl mx-2 hidden sm:flex items-center">
+          <div class="relative w-full">
+            <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-muted text-[20px]">search</span>
+            <input class="w-full h-10 pl-10 pr-4 rounded-xl bg-surface-neutral text-[14px] text-ink-body placeholder:text-ink-muted outline-none ring-1 ring-border-subtle focus:ring-2 focus:ring-primary focus:bg-white transition-all" placeholder="Cari judul buku, penulis, atau topik..." type="text">
+          </div>
+        </div>
+        <!-- Right Actions & Dropdown -->
+        <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+          <a class="relative p-2 rounded-xl text-ink-body hover:text-primary hover:bg-surface-soft transition-colors" data-path="keranjang" href="keranjang_pembayaran_terpadu_desktop.html" aria-label="Keranjang Belanja">
+            <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+            <span id="header-cart-badge" class="absolute top-1 right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-primary text-white text-[11px] font-bold flex items-center justify-center">2</span>
+          </a>
+          <div class="h-6 w-px bg-border-subtle"></div>
+          
+          <!-- User Profile & Dropdown Trigger -->
+          <div class="relative">
+            <button id="toggle-dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true" class="flex items-center gap-2.5 p-1.5 pl-2 rounded-full hover:bg-surface-neutral transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+              <div id="header-avatar" class="w-8 h-8 rounded-full bg-primary text-white font-bold text-[13px] flex items-center justify-center shrink-0 overflow-hidden shadow-xs">
+                <span id="header-avatar-initials">AH</span>
+              </div>
+              <span id="header-user-name" class="hidden md:inline text-[14px] text-ink-body font-semibold">Ahmad Hidayat</span>
+              <span class="material-symbols-outlined text-[18px] text-ink-muted">expand_more</span>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div id="header-user-dropdown" class="hidden absolute right-0 mt-2 w-64 bg-white rounded-2xl shadow-xl border border-border-subtle py-2 z-50 transition-all">
+              <div class="px-4 py-3 border-b border-border-subtle">
+                <p id="dropdown-user-name" class="text-[14px] font-bold text-ink-body truncate">Ahmad Hidayat</p>
+                <p id="dropdown-user-email" class="text-[12px] text-ink-muted truncate">ahmad.hidayat@literasi.id</p>
+              </div>
+              <div class="py-1 text-[13px]">
+                <a href="akun_saya_profil_dropdown_navigasi_desktop.html" class="flex items-center gap-2.5 px-4 py-2 font-bold text-primary bg-surface-soft transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">person</span>
+                  <span>Profil Saya</span>
+                </a>
+                <a href="riwayat_pesanan_desktop.html" class="flex items-center gap-2.5 px-4 py-2 text-ink-body hover:text-primary hover:bg-surface-neutral transition-colors font-medium">
+                  <span class="material-symbols-outlined text-[18px]">receipt_long</span>
+                  <span>Riwayat Pesanan</span>
+                </a>
+                <a href="perpustakaan_saya_desktop.html" class="flex items-center gap-2.5 px-4 py-2 text-ink-body hover:text-primary hover:bg-surface-neutral transition-colors font-medium">
+                  <span class="material-symbols-outlined text-[18px]">local_library</span>
+                  <span>Perpustakaan Saya</span>
+                </a>
+                <a href="riwayat_ulasan_desktop.html" class="flex items-center gap-2.5 px-4 py-2 text-ink-body hover:text-primary hover:bg-surface-neutral transition-colors font-medium">
+                  <span class="material-symbols-outlined text-[18px]">rate_review</span>
+                  <span>Riwayat Ulasan</span>
+                </a>
+                <a href="pengaturan_akun_desktop.html" class="flex items-center gap-2.5 px-4 py-2 text-ink-body hover:text-primary hover:bg-surface-neutral transition-colors font-medium">
+                  <span class="material-symbols-outlined text-[18px]">settings</span>
+                  <span>Pengaturan Akun</span>
+                </a>
+                <a href="bantuan_akun_desktop.html" class="flex items-center gap-2.5 px-4 py-2 text-ink-body hover:text-primary hover:bg-surface-neutral transition-colors font-medium">
+                  <span class="material-symbols-outlined text-[18px]">help</span>
+                  <span>Bantuan</span>
+                </a>
+              </div>
+              <div class="pt-1 border-t border-border-subtle">
+                <a href="masuk_login_desktop.html" class="flex items-center gap-2.5 px-4 py-2 text-[13px] text-red-600 hover:bg-red-50 transition-colors font-semibold">
+                  <span class="material-symbols-outlined text-[18px]">logout</span>
+                  <span>Keluar Akun</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Primary Nav Tabs -->
+      <nav class="h-12 flex items-center gap-6 overflow-x-auto scrollbar-none max-w-full">
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="beranda" href="beranda_desktop.html">Beranda</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="katalog-buku" href="katalog_buku_desktop.html">Katalog Buku</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="agenda-literasi" href="agenda_berita_literasi_desktop.html">Agenda Literasi</a>
+        <a class="h-full flex items-center text-[14px] text-ink-muted hover:text-primary transition-colors whitespace-nowrap" data-path="komunitas-literasi" href="komunitas_literasi_desktop.html">Komunitas Literasi</a>
+      </nav>
+    </div>
+  </header>

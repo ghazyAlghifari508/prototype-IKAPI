@@ -1,0 +1,60 @@
+[
+  {
+    "scenario": "1-empty-store-seeds-everywhere",
+    "out": {
+      "communities": 3,
+      "replies": 4,
+      "seededStore": 8,
+      "catalog": 12,
+      "orders": 5,
+      "publisherBooks": 5,
+      "adminUsers": 2
+    },
+    "errors": []
+  },
+  {
+    "scenario": "2-corrupt-json-graceful",
+    "out": {
+      "directoryCards": 3,
+      "topicNodes": 4,
+      "topicUnavailable": false,
+      "profileRendered": true,
+      "readerPage": "Halaman 41 (1 dari 4 di "
+    },
+    "errors": []
+  },
+  {
+    "scenario": "3-storage-blocked",
+    "out": {
+      "joinVisible": true,
+      "pageAlive": true,
+      "actionsText": "Gabung Komunitas",
+      "joinedShown": false,
+      "financeAlive": true,
+      "financeBalance": [
+        "Rp 1.485.000",
+        "Rp 840.000"
+      ]
+    },
+    "errors": []
+  },
+  {
+    "scenario": "4-conflicting-role-flags",
+    "out": {
+      "adminOk": true,
+      "publisherOk": true,
+      "buyerHeaderName": "Ahmad Hidayat",
+      "statusLabel": "Menunggu persetujuan",
+      "noRedirectLoop": true
+    },
+    "errors": []
+  },
+  {
+    "scenario": "5-double-submit",
+    "out": {
+      "before": 8,
+      "created": 1
+    },
+    "errors": []
+  }
+]

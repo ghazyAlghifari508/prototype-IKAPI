@@ -1,0 +1,32 @@
+<main class="w-full min-h-screen pt-28 pb-28 flex-1 flex flex-col items-center justify-start px-4 sm:px-6 md:px-8">
+    
+    <!-- Floating Toast Notification -->
+    <div id="reader-toast" class="fixed top-20 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 transform -translate-y-6 opacity-0 pointer-events-none font-sans">
+      <div id="toast-inner" class="flex items-center gap-2 px-4 py-2.5 rounded-2xl shadow-xl bg-ink-body text-white text-[13px] font-medium border border-white/10">
+        <span id="toast-icon" class="material-symbols-outlined text-primary-accent text-[18px]">info</span>
+        <span id="toast-message">Halaman berhasil ditandai.</span>
+      </div>
+    </div>
+
+    <!-- BOOK PAGE / PAPER CONTAINER (Unwrapped, directly on white canvas) -->
+    <article id="book-page" class="w-full max-w-3xl theme-paper transition-all duration-300 py-2">
+      
+      <!-- Top Running Header -->
+      <div class="flex items-center justify-between border-b theme-border pb-3 mb-8 text-[12.5px] theme-muted font-sans tracking-wide">
+        <span class="truncate">Laskar Aksara Pasundan</span>
+        <span id="running-chapter-label" class="shrink-0 ml-2 font-bold text-primary">Bab 3</span>
+      </div>
+
+      <!-- Dynamic Chapter Content Area -->
+      <div id="prose-content" class="space-y-6 text-[18px] leading-[1.8] text-left transition-all duration-200 font-reading-serif">
+        <!-- Content injected by JavaScript -->
+      </div>
+
+      <!-- Page Bottom Indicator in Paper -->
+      <div class="mt-10 pt-4 border-t theme-border flex items-center justify-between text-[12.5px] theme-muted font-sans">
+        <span id="footer-chapter-name">Bab 3: Hulu Cimanuk</span>
+        <span id="footer-page-number" class="font-mono font-bold theme-text">Hal 41</span>
+      </div>
+
+    </article>
+  </main>

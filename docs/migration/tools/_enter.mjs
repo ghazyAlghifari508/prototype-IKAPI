@@ -1,0 +1,15 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch();
+const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } });
+const p = await ctx.newPage();
+await p.goto('http://127.0.0.1:8140/masuk', { waitUntil: 'load' });
+await p.waitForTimeout(300);
+await p.fill('#email-field', 'pembeli@demo.ikapi.id');
+await p.fill('#password-field', 'demo12345');
+await p.focus('#password-field');
+await p.keyboard.press('Enter');
+await p.waitForTimeout(1500);
+console.log('URL:', p.url());
+console.log('title:', await p.title());
+console.log('body starts:', (await p.textContent('body')).replace(/\s+/g, ' ').trim().slice(0, 120));
+await b.close();

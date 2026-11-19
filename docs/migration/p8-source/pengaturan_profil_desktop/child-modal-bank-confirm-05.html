@@ -1,0 +1,29 @@
+<div id="modal-bank-confirm" class="fixed inset-0 z-[70] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-bank-confirm=""></div>
+  <div class="relative mx-auto mt-20 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[460px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:p-6" role="dialog" aria-modal="true" aria-labelledby="bank-confirm-title">
+    <div class="mb-3 flex items-start justify-between gap-4">
+      <h2 id="bank-confirm-title" class="text-[18px] font-bold tracking-tight text-ink">Konfirmasi Perubahan Rekening</h2>
+      <button type="button" data-close-bank-confirm="" aria-label="Tutup" class="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+    <p class="text-[13px] leading-relaxed text-muted">Periksa kembali rekening tujuan pencairan.</p>
+    <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+      <div class="rounded-xl border border-border p-3.5">
+        <p class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Rekening sebelumnya</p>
+        <p class="mt-1 text-[13px] font-semibold text-ink" id="confirm-old-bank">-</p>
+        <p class="num text-[12.5px] text-muted" id="confirm-old-account">-</p>
+      </div>
+      <div class="rounded-xl border border-border p-3.5">
+        <p class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Rekening baru</p>
+        <p class="mt-1 text-[13px] font-semibold text-ink" id="confirm-new-bank">-</p>
+        <p class="num text-[12.5px] text-muted" id="confirm-new-account">-</p>
+      </div>
+    </div>
+    <p class="mt-3 text-[12px] leading-relaxed text-muted">Perubahan disimpan pada prototype ini dan tidak mengubah data rekening sungguhan.</p>
+    <div class="mt-5 flex items-center justify-end gap-2 border-t border-divider pt-4">
+      <button type="button" data-close-bank-confirm="" class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">Kembali</button>
+      <button type="button" id="btn-bank-confirm" class="focus-ring inline-flex h-10 items-center rounded-xl bg-primary px-4 text-[14px] font-semibold text-white hover:bg-primary-hover">Konfirmasi Perubahan</button>
+    </div>
+  </div>
+</div>

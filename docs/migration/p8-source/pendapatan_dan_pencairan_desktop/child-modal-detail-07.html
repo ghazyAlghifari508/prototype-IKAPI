@@ -1,0 +1,25 @@
+<div id="modal-detail" class="fixed inset-0 z-[70] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-detail=""></div>
+  <div class="relative mx-auto mt-20 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[460px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:p-6" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+    <div class="mb-3 flex items-start justify-between gap-4">
+      <h2 id="detail-title" class="text-[18px] font-bold tracking-tight text-ink">Detail Pencairan</h2>
+      <button type="button" data-close-detail="" aria-label="Tutup" class="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+    <dl class="space-y-2.5 text-[13px]">
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">No. pengajuan</dt><dd class="num font-semibold text-ink" id="detail-number">-</dd></div>
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Status</dt><dd class="font-semibold text-ink" id="detail-status">-</dd></div>
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Tanggal</dt><dd class="text-ink" id="detail-date">-</dd></div>
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Nominal</dt><dd class="num font-semibold text-ink" id="detail-amount">-</dd></div>
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Rekening</dt><dd class="text-ink" id="detail-bank">-</dd></div>
+    </dl>
+    <div class="mt-4 rounded-xl border border-border p-3.5">
+      <p class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Bukti transfer</p>
+      <p class="mt-1 text-[13px] leading-relaxed text-ink" id="detail-proof">Belum tersedia dalam prototype ini.</p>
+    </div>
+    <div class="mt-5 flex items-center justify-end gap-2 border-t border-divider pt-4">
+      <button type="button" data-close-detail="" class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">Tutup</button>
+    </div>
+  </div>
+</div>

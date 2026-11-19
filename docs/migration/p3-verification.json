@@ -1,0 +1,98 @@
+{
+ "base": "http://127.0.0.1:8130",
+ "captures": [
+  {
+   "viewport": "1440x900",
+   "file": "docs/migration/baselines/foundation/1440x900.png",
+   "bytes": 577545,
+   "errors": [],
+   "network": []
+  },
+  {
+   "viewport": "390x844",
+   "file": "docs/migration/baselines/foundation/390x844.png",
+   "bytes": 598969,
+   "errors": [],
+   "network": []
+  }
+ ],
+ "checks": {
+  "body": {
+   "fontFamily": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
+   "fontSize": "16px",
+   "color": "rgb(34, 34, 37)",
+   "background": "rgb(255, 255, 255)",
+   "lineHeight": "24px"
+  },
+  "h1": {
+   "fontSize": "34px",
+   "lineHeight": "42.5px",
+   "fontWeight": "700"
+  },
+  "primarySwatch": "rgb(103, 61, 230)",
+  "primaryText": "rgb(103, 61, 230)",
+  "borderDefault": "rgb(229, 231, 235)",
+  "borderWidth": "1px",
+  "placeholderColor": "rgb(156, 163, 175)",
+  "inputRadius": "12px",
+  "inputBorderColor": "rgb(229, 231, 235)",
+  "shadowSm": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+  "shadowXs": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+  "radius2xl": "16px",
+  "iconFont": "\"Material Symbols Outlined\"",
+  "fonts": {
+   "dmSans": true,
+   "literata": false,
+   "material": true,
+   "status": "loaded",
+   "loadedFamilies": [
+    "DM Sans",
+    "Literata",
+    "Material Symbols Outlined"
+   ]
+  },
+  "cssVars": {
+   "fontSans": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
+   "colorVarsPublished": true
+  },
+  "demo": {
+   "available": true,
+   "keys": 21,
+   "mutable": 19,
+   "guardBefore": {
+    "admin": false,
+    "publisher": false
+   },
+   "safeNextOk": "perpustakaan_saya_desktop.html?tab=reading",
+   "safeNextRejected": null,
+   "idParamValid": true,
+   "idParamInvalid": false
+  },
+  "demoAfterWrite": {
+   "out": "{\n \"written\": true,\n \"guards\": {\n  \"admin\": true,\n  \"publisher\": false\n }\n}",
+   "guardAfter": {
+    "admin": true,
+    "publisher": false
+   },
+   "stored": "{\"role\":\"buyer\",\"at\":\"2026-11-18T13:33:30.999Z\",\"id\":\"USR-PMB-0042\",\"email\":\"pembeli@demo.ikapi.id\",\"name\":\"Pembeli Demo\"}"
+  },
+  "notice": {
+   "rendered": true,
+   "position": "fixed",
+   "zIndex": "50",
+   "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+   "iconColor": "rgb(15, 123, 79)",
+   "text": "check_circleNotifikasi demo dari resources/js/ikapi/demo/notice.js"
+  },
+  "demoAfterClear": {
+   "session": null,
+   "out": "{\n \"cleared\": true,\n \"buyerSession\": null\n}"
+  }
+ },
+ "assets": {
+  "total": 76,
+  "ok": 76,
+  "failed": [],
+  "sizeMismatch": []
+ }
+}

@@ -1,0 +1,99 @@
+[
+  {
+    "id": "IKP-20261115-081",
+    "date": "15 November 2026, 14:20 WIB",
+    "status": "success",
+    "statusLabel": "Pembayaran Berhasil",
+    "paymentMethod": "GoPay / QRIS",
+    "books": [
+      {
+        "id": 1,
+        "title": "Laskar Aksara Pasundan",
+        "author": "Ayi R. Kurnia",
+        "price": 45000,
+        "cover": "../../assets/covers/laskar-aksara-pasundan.jpg"
+      }
+    ],
+    "subtotal": 45000,
+    "total": 45000
+  },
+  {
+    "id": "IKP-20261112-042",
+    "date": "12 November 2026, 09:15 WIB",
+    "status": "pending",
+    "statusLabel": "Menunggu Pembayaran",
+    "paymentMethod": "BCA Virtual Account (8801-9238-1029)",
+    "books": [
+      {
+        "id": 2,
+        "title": "Pendidikan Karakter Sunda",
+        "author": "Dr. Cecep Hidayat",
+        "price": 58000,
+        "cover": "../../assets/covers/B02.jpg"
+      }
+    ],
+    "subtotal": 58000,
+    "total": 58000
+  },
+  {
+    "id": "IKP-20261105-019",
+    "date": "05 November 2026, 19:40 WIB",
+    "status": "success",
+    "statusLabel": "Pembayaran Berhasil",
+    "paymentMethod": "Mandiri Bill Payment",
+    "books": [
+      {
+        "id": 3,
+        "title": "Menelusuri Jejak Sejarah Priangan",
+        "author": "Prof. Sobana Hardjasaputra",
+        "price": 52000,
+        "cover": "../../assets/covers/B03.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Antologi Puisi Pasundan Kiwari",
+        "author": "Dadan Sutisna",
+        "price": 38000,
+        "cover": "../../assets/covers/B05.jpg"
+      }
+    ],
+    "subtotal": 90000,
+    "total": 90000
+  },
+  {
+    "id": "IKP-20261028-005",
+    "date": "28 Oktober 2026, 11:05 WIB",
+    "status": "expired",
+    "statusLabel": "Kedaluwarsa",
+    "paymentMethod": "BNI Virtual Account",
+    "books": [
+      {
+        "id": 5,
+        "title": "Kearifan Lokal Tatar Sunda",
+        "author": "Tim Budaya Dispusipda",
+        "price": 42000,
+        "cover": "../../assets/covers/B01.jpg"
+      }
+    ],
+    "subtotal": 42000,
+    "total": 42000
+  },
+  {
+    "id": "IKP-20261019-002",
+    "date": "19 Oktober 2026, 16:30 WIB",
+    "status": "failed",
+    "statusLabel": "Pembayaran Gagal",
+    "paymentMethod": "Kartu Kredit / Debit",
+    "books": [
+      {
+        "id": 6,
+        "title": "Tata Bahasa Sunda Mutakhir",
+        "author": "Yayat Sudaryat",
+        "price": 49000,
+        "cover": "../../assets/covers/B04.jpg"
+      }
+    ],
+    "subtotal": 49000,
+    "total": 49000
+  }
+]

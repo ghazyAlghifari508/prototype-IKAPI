@@ -1,0 +1,158 @@
+{
+  "events": {
+    "ev-1": {
+      "title": "Lokakarya Filologi Populer: Mengalihaksarakan Naskah Sunda Kuno",
+      "category": "Lokakarya",
+      "format": "Tatap muka",
+      "dateText": "Rabu, 18 November 2026",
+      "dateIcs": [
+        "20261118T100000",
+        "20261118T123000"
+      ],
+      "time": "10:00 - 12:30 WIB",
+      "location": "Ruang Seminar Graha IKAPI Jabar, Bandung",
+      "organizer": "Kiblat Buku",
+      "fee": "Gratis, kuota 40 peserta",
+      "cover": "/assets/ikapi/events/event-community.jpg",
+      "description": [
+        "Lokakarya ini membuka cara membaca dan mengalihaksarakan naskah Sunda kuno bagi pembaca umum. Peserta dikenalkan pada bentuk aksara, kaidah penulisan, serta langkah praktis memindahkan teks dari lembar naskah ke huruf Latin.",
+        "Materi disusun untuk peserta tanpa latar belakang filologi. Setiap sesi disertai latihan terbimbing menggunakan lembar kerja yang disediakan panitia."
+      ],
+      "rundown": [
+        [
+          "10:00",
+          "Registrasi dan pembukaan"
+        ],
+        [
+          "10:15",
+          "Pengenalan aksara Sunda kuno"
+        ],
+        [
+          "11:00",
+          "Latihan alih aksara terbimbing"
+        ],
+        [
+          "12:00",
+          "Diskusi dan penutup"
+        ]
+      ],
+      "speakers": [
+        [
+          "Ayi R. Kurnia",
+          "Penulis dan peneliti naskah Sunda, Kiblat Buku"
+        ],
+        [
+          "Ratih Wulandari",
+          "Pengajar filologi, Universitas Padjadjaran"
+        ]
+      ],
+      "notes": [
+        "Peserta membawa laptop atau buku catatan.",
+        "Lembar kerja naskah disediakan panitia.",
+        "Tidak diperlukan kemampuan membaca aksara sebelumnya."
+      ]
+    },
+    "ev-2": {
+      "title": "Bedah Buku & Diskusi Publik: Pendidikan Karakter Berbasis Kearifan Lokal",
+      "category": "Diskusi Publik",
+      "format": "Tatap muka",
+      "dateText": "Minggu, 22 November 2026",
+      "dateIcs": [
+        "20261122T133000",
+        "20261122T160000"
+      ],
+      "time": "13:30 - 16:00 WIB",
+      "location": "Aula Pusat Studi Sunda, Bandung",
+      "organizer": "UPI Press",
+      "fee": "Gratis, kuota 80 peserta",
+      "cover": "/assets/ikapi/events/event-children-story.jpg",
+      "description": [
+        "Diskusi publik ini membahas buku Pendidikan Karakter Sunda dan cara nilai kearifan lokal dipakai di ruang kelas. Pembahasan diarahkan pada praktik pembelajaran, bukan hanya gagasan.",
+        "Sesi tanya jawab dibuka untuk guru, mahasiswa, dan pengelola komunitas literasi."
+      ],
+      "rundown": [
+        [
+          "13:30",
+          "Registrasi dan pembukaan"
+        ],
+        [
+          "13:45",
+          "Paparan penulis"
+        ],
+        [
+          "14:45",
+          "Tanggapan penanggap"
+        ],
+        [
+          "15:30",
+          "Tanya jawab dan penutup"
+        ]
+      ],
+      "speakers": [
+        [
+          "Dr. Cecep Hidayat",
+          "Penulis, UPI Press"
+        ],
+        [
+          "Fajar Ashari",
+          "Praktisi pendidikan dasar, Bandung"
+        ]
+      ],
+      "notes": [
+        "Terbuka untuk umum tanpa pendaftaran berkelompok.",
+        "Diskusi direkam untuk dokumentasi penyelenggara."
+      ]
+    },
+    "ev-3": {
+      "title": "Sarasehan Editor & Penulis: Standarisasi E-Book Berlisensi",
+      "category": "Webinar",
+      "format": "Daring (Zoom)",
+      "dateText": "Sabtu, 28 November 2026",
+      "dateIcs": [
+        "20261128T090000",
+        "20261128T120000"
+      ],
+      "time": "09:00 - 12:00 WIB",
+      "location": "Daring via Zoom / Hybrid IKAPI Jabar",
+      "organizer": "IKAPI Jabar",
+      "fee": "Gratis untuk anggota IKAPI Jabar",
+      "cover": "/assets/ikapi/events/event-webinar.jpg",
+      "description": [
+        "Sarasehan ini membahas standar berkas e-book yang siap dipasarkan: struktur metadata, penamaan berkas, dan kelengkapan lisensi penerbit.",
+        "Materi ditujukan bagi editor dan penulis yang menyiapkan naskah untuk katalog digital."
+      ],
+      "rundown": [
+        [
+          "09:00",
+          "Pembukaan dan pengantar"
+        ],
+        [
+          "09:20",
+          "Standar metadata e-book"
+        ],
+        [
+          "10:30",
+          "Pemeriksaan berkas dan lisensi"
+        ],
+        [
+          "11:30",
+          "Tanya jawab"
+        ]
+      ],
+      "speakers": [
+        [
+          "H. Asep Ridwan, M.Hum",
+          "Ketua IKAPI Jawa Barat"
+        ],
+        [
+          "Dr. Encep Kosasih",
+          "Editor, Flora Priangan: Arsip Hayati"
+        ]
+      ],
+      "notes": [
+        "Tautan Zoom dikirim melalui email terdaftar pada hari kegiatan.",
+        "Rekaman tersedia terbatas untuk peserta."
+      ]
+    }
+  }
+}

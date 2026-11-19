@@ -1,0 +1,11 @@
+<div id="modal-unsaved" class="fixed inset-0 z-[70] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-unsaved=""></div>
+  <div class="relative mx-auto mt-24 w-[calc(100%-2rem)] max-w-[420px] rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:p-6" role="dialog" aria-modal="true" aria-labelledby="unsaved-title">
+    <h2 id="unsaved-title" class="text-[18px] font-bold tracking-tight text-ink">Buang Perubahan?</h2>
+    <p class="mt-1 text-[13px] leading-relaxed text-muted">Perubahan yang belum disimpan akan hilang.</p>
+    <div class="mt-5 flex items-center justify-end gap-2 border-t border-divider pt-4">
+      <button type="button" data-close-unsaved="" class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">Tetap di Halaman</button>
+      <button type="button" id="btn-discard" class="focus-ring inline-flex h-10 items-center rounded-xl bg-[#B42318] px-4 text-[14px] font-semibold text-white hover:bg-[#971B13]">Buang</button>
+    </div>
+  </div>
+</div>

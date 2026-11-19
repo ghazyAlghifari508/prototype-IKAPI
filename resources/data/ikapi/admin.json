@@ -1,0 +1,496 @@
+{
+  "BASE": {
+    "kpi": {
+      "revenue": 18450000,
+      "paid": 142,
+      "books": 56,
+      "publishers": 12
+    },
+    "queue": [
+      {
+        "category": "Pendaftaran Penerbit",
+        "count": 2,
+        "unit": "menunggu",
+        "detail": "PT Mizan Pustaka Utama, CV Angkasa Bandung",
+        "cta": "Tinjau Akun",
+        "href": "kelola_pengguna_desktop.html"
+      },
+      {
+        "category": "Pengajuan Pencairan",
+        "count": 1,
+        "unit": "pengajuan",
+        "detail": "PT Kiblat Buku Utama, Rp 645.000",
+        "cta": "Tinjau Pencairan",
+        "href": "kelola_pencairan_dana_desktop.html"
+      },
+      {
+        "category": "Laporan Buku",
+        "count": 1,
+        "unit": "laporan",
+        "detail": "Sang Pemimpi, E-book tidak dapat dibuka",
+        "cta": "Periksa Buku",
+        "href": "pengawasan_katalog_buku_global_desktop.html"
+      },
+      {
+        "category": "Laporan Komentar & Ulasan",
+        "count": 1,
+        "unit": "laporan",
+        "detail": "Ulasan yang menunggu pemeriksaan",
+        "cta": "Tinjau Laporan",
+        "href": "moderasi_ulasan_dan_komentar_desktop.html"
+      }
+    ],
+    "activity": [
+      {
+        "id": "ORD-2026-0891",
+        "buyer": "Alghifari Ghazy",
+        "qty": 2,
+        "amount": 145000,
+        "at": "14 Nov 2026, 14:22 WIB"
+      },
+      {
+        "id": "ORD-2026-0890",
+        "buyer": "Siti Nurhaliza",
+        "qty": 1,
+        "amount": 85000,
+        "at": "14 Nov 2026, 13:40 WIB"
+      },
+      {
+        "id": "ORD-2026-0889",
+        "buyer": "Dwi Raharjo",
+        "qty": 1,
+        "amount": 120000,
+        "at": "14 Nov 2026, 11:15 WIB"
+      },
+      {
+        "id": "ORD-2026-0888",
+        "buyer": "Anita Wulandari",
+        "qty": 1,
+        "amount": 95000,
+        "at": "14 Nov 2026, 09:30 WIB"
+      }
+    ]
+  },
+  "BASE_USERS": [
+    {
+      "key": "mizan",
+      "reg": "REG-2026-088",
+      "name": "PT Mizan Pustaka Utama",
+      "role": "penerbit",
+      "pj": "Ahmad Fuadi, M.Hum",
+      "email": "ahmad.fuadi@mizan.co.id",
+      "phone": "+62 22 7834 1120",
+      "address": "Jl. Cinambo No. 135, Cisaranten Wetan, Bandung, Jawa Barat 40294",
+      "ikapi": "042/JBA/2018",
+      "date": "2026-11-14",
+      "dateText": "14 Nov 2026, 09:30 WIB",
+      "registration": "pending",
+      "account": "active",
+      "reason": ""
+    },
+    {
+      "key": "angkasa",
+      "reg": "REG-2026-087",
+      "name": "CV Angkasa Bandung",
+      "role": "penerbit",
+      "pj": "Dra. Ratna Juwita",
+      "email": "ratna.j@angkasabandung.com",
+      "phone": "+62 22 420 5450",
+      "address": "Jl. Merdeka No. 42, Babakan Ciamis, Sumur Bandung, Bandung 40117",
+      "ikapi": "018/JBA/2012",
+      "date": "2026-11-13",
+      "dateText": "13 Nov 2026, 16:15 WIB",
+      "registration": "pending",
+      "account": "active",
+      "reason": ""
+    },
+    {
+      "key": "kautsar",
+      "reg": "REG-2026-079",
+      "name": "Penerbit Al-Kautsar Grafika",
+      "role": "penerbit",
+      "pj": "Ir. H. Syarif Hidayat",
+      "email": "syarif@alkautsar.id",
+      "phone": "+62 21 8591 2244",
+      "address": "Jl. Cipinang Muara III No. 49, Jatinegara, Jakarta Timur 13420",
+      "ikapi": "105/DKI/2005",
+      "date": "2026-11-11",
+      "dateText": "11 Nov 2026, 11:20 WIB",
+      "registration": "approved",
+      "account": "active",
+      "reason": ""
+    },
+    {
+      "key": "pelangi",
+      "reg": "REG-2026-064",
+      "name": "CV Pelangi Aksara Digital",
+      "role": "penerbit",
+      "pj": "Dedi Kurniawan",
+      "email": "dedi@pelangiaksara.com",
+      "phone": "+62 274 553 118",
+      "address": "Jl. Gejayan No. 12A, Sleman, DI Yogyakarta 55281",
+      "ikapi": "091/DIY/2021",
+      "date": "2026-11-08",
+      "dateText": "08 Nov 2026, 14:00 WIB",
+      "registration": "rejected",
+      "account": "inactive",
+      "reason": "Nomor anggota IKAPI belum sesuai dengan data keanggotaan."
+    }
+  ],
+  "BASE_REPORTS": [
+    {
+      "id": "LPR-2026-041",
+      "book": "Sang Pemimpi",
+      "author": "Andrea Hirata",
+      "isbn": "978-602-291-001-5",
+      "publisher": "PT Mizan Pustaka Utama",
+      "publisherMeta": "Anggota IKAPI Jawa Barat",
+      "type": "Berkas PDF Rusak",
+      "date": "2026-11-14",
+      "dateText": "14 Nov 2026",
+      "format": "PDF - 14.2 MB",
+      "notes": "Beberapa halaman tidak dapat dimuat dan berkas terasa berat saat dibuka di web reader.",
+      "section": "Halaman 42-48",
+      "pubStatus": "terbit",
+      "reportStatus": "baru",
+      "decision": ""
+    },
+    {
+      "id": "LPR-2026-042",
+      "book": "Aroma Karsa",
+      "author": "Dee Lestari",
+      "isbn": "978-602-424-694-5",
+      "publisher": "CV Angkasa Publishing",
+      "publisherMeta": "Kota Bandung, Jawa Barat",
+      "type": "Dugaan Hak Cipta",
+      "date": "2026-11-13",
+      "dateText": "13 Nov 2026",
+      "format": "EPUB - 8.6 MB",
+      "notes": "Berkas diduga disebarkan tanpa izin pemegang hak cipta. Mohon diperiksa kelengkapan lisensinya.",
+      "pubStatus": "terbit",
+      "reportStatus": "baru",
+      "decision": ""
+    }
+  ],
+  "BASE_CATALOG": [
+    {
+      "id": "BK-101",
+      "book": "Pulang",
+      "author": "Leila S. Chudori",
+      "publisher": "Kepustakaan Populer Gramedia",
+      "format": "EPUB - 5.1 MB",
+      "price": 89000,
+      "sold": 842,
+      "status": "terbit"
+    },
+    {
+      "id": "BK-102",
+      "book": "Cantik Itu Luka",
+      "author": "Eka Kurniawan",
+      "publisher": "Gramedia Pustaka Utama",
+      "format": "PDF - 18.4 MB",
+      "price": 105000,
+      "sold": 1412,
+      "status": "terbit"
+    }
+  ],
+  "BASE_RECORDS": [
+    {
+      "key": "rian",
+      "id": "MOD-2026-089",
+      "user": "Rian Pratama",
+      "handle": "@rian_pratama",
+      "book": "Laskar Aksara Pasundan",
+      "author": "Ayi R. Kurnia",
+      "publisher": "PT Kiblat Buku Utama",
+      "rating": 1,
+      "cover": "../../assets/covers/laskar-aksara-pasundan.jpg",
+      "category": "Kata Kasar & Provokasi",
+      "reporters": 3,
+      "reportedAt": "2026-11-16T08:00:00+07:00",
+      "timeText": "2 jam lalu",
+      "comment": "E-book ini mengecewakan! Penerbit dan penulisnya tolol, susunan babnya berantakan dan web reader sering gagal dimuat di tengah bacaan. Buang-buang uang beli sampah begini!",
+      "reply": {
+        "publisher": "PT Kiblat Buku Utama",
+        "text": "Halo Kak Rian, mohon maaf atas ketidaknyamanannya. Kendala pemuatan Web Reader dan tata letak bab sudah kami perbaiki pada berkas e-book terbaru. Silakan muat ulang perpustakaan Anda."
+      },
+      "notes": "",
+      "decision": "new"
+    },
+    {
+      "key": "promo",
+      "id": "MOD-2026-088",
+      "user": "PromoBookOnline99",
+      "handle": "@bot_diskon",
+      "book": "Pendidikan Karakter Sunda",
+      "author": "Dr. Cecep Hidayat",
+      "publisher": "UPI Press",
+      "rating": 5,
+      "cover": "../../assets/covers/B02.jpg",
+      "category": "Spam & Promosi Eksternal",
+      "reporters": 1,
+      "reportedAt": "2026-11-16T06:00:00+07:00",
+      "timeText": "4 jam lalu",
+      "comment": "PROMO GILA! Klaim e-book gratis dan saldo jutaan rupiah tiap hari, klik bit.ly/uang-gratis-ikapi sekarang juga! Terbukti membayar 100% no hoax!!",
+      "reply": null,
+      "notes": "",
+      "decision": "new"
+    },
+    {
+      "key": "dewi",
+      "id": "MOD-2026-087",
+      "user": "Dewi Sartika",
+      "handle": "@dewi.sartika",
+      "book": "Bumi Parahyangan: Jejak Purba",
+      "author": "T. Bachtiar",
+      "publisher": "ITB Press",
+      "rating": 1,
+      "cover": "../../assets/covers/B03.jpg",
+      "category": "Ujaran Kebencian",
+      "reporters": 5,
+      "reportedAt": "2026-11-15T20:00:00+07:00",
+      "timeText": "kemarin",
+      "comment": "Isi e-book ini menyebarkan kebencian terhadap suku tertentu dan sengaja merusak moral generasi muda. Penerbit seperti ini tidak layak ada di katalog dan harus diblokir permanen!",
+      "reply": null,
+      "notes": "",
+      "decision": "new"
+    }
+  ],
+  "BASE_TX": [
+    {
+      "id": "ORD-2026-0891",
+      "at": "2026-11-14T14:22:00+07:00",
+      "date": "2026-11-14",
+      "dateText": "14 Nov 2026, 14:22 WIB",
+      "book": "Sang Pemimpi",
+      "publisher": "PT Mizan Pustaka Utama",
+      "method": "QRIS Gopay",
+      "amount": 145000,
+      "status": "Berhasil"
+    },
+    {
+      "id": "ORD-2026-0890",
+      "at": "2026-11-14T13:40:00+07:00",
+      "date": "2026-11-14",
+      "dateText": "14 Nov 2026, 13:40 WIB",
+      "book": "Laskar Pelangi",
+      "publisher": "PT Bentang Pustaka",
+      "method": "BCA Virtual Account",
+      "amount": 85000,
+      "status": "Berhasil"
+    },
+    {
+      "id": "ORD-2026-0889",
+      "at": "2026-11-14T11:15:00+07:00",
+      "date": "2026-11-14",
+      "dateText": "14 Nov 2026, 11:15 WIB",
+      "book": "Aroma Karsa",
+      "publisher": "CV Angkasa Publishing",
+      "method": "Mandiri Bill",
+      "amount": 120000,
+      "status": "Berhasil"
+    },
+    {
+      "id": "ORD-2026-0888",
+      "at": "2026-11-14T09:30:00+07:00",
+      "date": "2026-11-14",
+      "dateText": "14 Nov 2026, 09:30 WIB",
+      "book": "Hujan di Bulan Juni",
+      "publisher": "PT Mizan Pustaka Utama",
+      "method": "BNI Virtual Account",
+      "amount": 95000,
+      "status": "Berhasil"
+    },
+    {
+      "id": "ORD-2026-0887",
+      "at": "2026-11-13T21:05:00+07:00",
+      "date": "2026-11-13",
+      "dateText": "13 Nov 2026, 21:05 WIB",
+      "book": "Bumi Manusia",
+      "publisher": "PT Bentang Pustaka",
+      "method": "ShopeePay",
+      "amount": 110000,
+      "status": "Berhasil"
+    },
+    {
+      "id": "ORD-2026-0886",
+      "at": "2026-11-13T18:40:00+07:00",
+      "date": "2026-11-13",
+      "dateText": "13 Nov 2026, 18:40 WIB",
+      "book": "Cantik Itu Luka",
+      "publisher": "CV Pelangi Aksara",
+      "method": "BRI Virtual Account",
+      "amount": 135000,
+      "status": "Berhasil"
+    },
+    {
+      "id": "ORD-2026-0879",
+      "at": "2026-11-12T10:05:00+07:00",
+      "date": "2026-11-12",
+      "dateText": "12 Nov 2026, 10:05 WIB",
+      "book": "Laskar Aksara Pasundan",
+      "publisher": "PT Kiblat Buku Utama",
+      "method": "BCA Virtual Account",
+      "amount": 118000,
+      "status": "Berhasil"
+    },
+    {
+      "id": "ORD-2026-0863",
+      "at": "2026-11-06T16:20:00+07:00",
+      "date": "2026-11-06",
+      "dateText": "06 Nov 2026, 16:20 WIB",
+      "book": "Pendidikan Karakter Sunda",
+      "publisher": "UPI Press",
+      "method": "Mandiri Bill",
+      "amount": 96000,
+      "status": "Berhasil"
+    },
+    {
+      "id": "ORD-2026-0852",
+      "at": "2026-11-05T09:48:00+07:00",
+      "date": "2026-11-05",
+      "dateText": "05 Nov 2026, 09:48 WIB",
+      "book": "Flora Priangan: Arsip Hayati",
+      "publisher": "Bumi Aksara",
+      "method": "BNI Virtual Account",
+      "amount": 88000,
+      "status": "Berhasil"
+    },
+    {
+      "id": "ORD-2026-0841",
+      "at": "2026-11-03T13:12:00+07:00",
+      "date": "2026-11-03",
+      "dateText": "03 Nov 2026, 13:12 WIB",
+      "book": "Bumi Parahyangan: Jejak Purba",
+      "publisher": "ITB Press",
+      "method": "QRIS Gopay",
+      "amount": 132000,
+      "status": "Berhasil"
+    }
+  ],
+  "BASE_PAYOUTS": [
+    {
+      "id": "WD-2026-1104",
+      "publisher": "PT Kiblat Buku Utama",
+      "member": "041/JBA/2020",
+      "bank": "BCA",
+      "account": "5220394892",
+      "holder": "PT Kiblat Buku Utama",
+      "amount": 645000,
+      "status": "proses",
+      "date": "2026-11-14",
+      "royalty": {
+        "gross": 780000,
+        "previous": 135000,
+        "requested": 645000,
+        "remaining": 0
+      },
+      "reason": ""
+    },
+    {
+      "id": "WD-2026-1102",
+      "publisher": "PT Mizan Pustaka Utama",
+      "member": "112/JBA/2019",
+      "bank": "BCA",
+      "account": "8849211120",
+      "holder": "PT Mizan Pustaka Utama",
+      "amount": 4250000,
+      "status": "selesai",
+      "date": "2026-11-10",
+      "proofName": "bukti-transfer-4250000.jpg",
+      "royalty": null,
+      "reason": ""
+    },
+    {
+      "id": "WD-2026-1098",
+      "publisher": "CV Angkasa Bandung",
+      "member": "087/JBA/2018",
+      "bank": "Bank Mandiri",
+      "account": "1300088417",
+      "holder": "CV Angkasa Bandung",
+      "amount": 1820000,
+      "status": "selesai",
+      "date": "2026-11-08",
+      "proofName": "bukti-transfer-1820000.jpg",
+      "royalty": null,
+      "reason": ""
+    },
+    {
+      "id": "WD-2026-1095",
+      "publisher": "Penerbit Lentera Ilmu",
+      "member": "204/JBA/2022",
+      "bank": "BNI",
+      "account": "0912320107",
+      "holder": "Penerbit Lentera Ilmu",
+      "amount": 950000,
+      "status": "ditolak",
+      "date": "2026-11-05",
+      "royalty": null,
+      "reason": "Data rekening tujuan belum sesuai dengan dokumen penerbit."
+    }
+  ],
+  "DEFAULTS": [
+    {
+      "id": "community-filologi",
+      "name": "Komunitas Filologi Pasundan",
+      "focus": "filologi",
+      "focusLabel": "Filologi & Aksara Kuno",
+      "location": "Bandung, Jawa Barat",
+      "shortDesc": "Komunitas yang mempelajari dan melestarikan naskah serta aksara Sunda kuno.",
+      "fullDesc": "Komunitas Filologi Pasundan berakar dari lingkaran pegiat manuskrip, peneliti sastra daerah, dan generasi muda yang berikhtiar menyelamatkan lembaran naskah lontar dan daluwang di Jawa Barat agar dapat dipelajari secara luas.",
+      "photo": "../../assets/events/event-community.jpg",
+      "photoAlt": "Foto ilustrasi kegiatan membaca dan menelaah naskah bersama",
+      "status": "active"
+    },
+    {
+      "id": "community-klub-buku",
+      "name": "Klub Buku Priangan (KBP)",
+      "focus": "fiksi",
+      "focusLabel": "Klub Baca Fiksi",
+      "location": "Bandung & Cimahi, Jawa Barat",
+      "shortDesc": "Komunitas pembaca yang membahas novel dan karya sastra.",
+      "fullDesc": "Klub Buku Priangan adalah lingkar pembaca independen yang rutin mengadakan pertemuan diskusi karya sastra fiksi, bedah buku kurasi IKAPI, dan ruang bertukar bacaan di berbagai ruang publik terbuka.",
+      "photo": "../../assets/events/event-children-story.jpg",
+      "photoAlt": "Foto ilustrasi diskusi buku bersama sekelompok pembaca",
+      "status": "active"
+    },
+    {
+      "id": "community-sejarah",
+      "name": "Masyarakat Sejarah & Budaya Sunda",
+      "focus": "sejarah",
+      "focusLabel": "Sejarah Priangan",
+      "location": "Sumedang & Garut, Jawa Barat",
+      "shortDesc": "Komunitas yang mempelajari sejarah dan kebudayaan Sunda melalui diskusi serta kegiatan literasi.",
+      "fullDesc": "Masyarakat Sejarah & Budaya Sunda mengkaji babad, sejarah geomorfologi Priangan, dan buku-buku kearifan lokal bersama para peneliti, pengarang daerah, serta pendidik dari berbagai institusi.",
+      "photo": "../../assets/events/event-book-fair.jpg",
+      "photoAlt": "Foto ilustrasi kunjungan pameran buku dan literasi daerah",
+      "status": "active"
+    }
+  ],
+  "seeds": [
+    {
+      "id": "DRPT-DEMO-01",
+      "targetType": "topic",
+      "targetId": "TPC-2026-102",
+      "communityId": "community-klub-buku",
+      "reporterUserId": "USR-DEMO-NADIA",
+      "reasonId": "spam",
+      "reasonLabel": "Spam atau promosi",
+      "details": "Judulnya terasa seperti promosi berulang, bukan pembahasan buku.",
+      "createdAt": "2026-11-18T17:53:56.283Z",
+      "status": "pending"
+    },
+    {
+      "id": "DRPT-DEMO-02",
+      "targetType": "reply",
+      "targetId": "RPL-2026-201",
+      "communityId": "community-klub-buku",
+      "reporterUserId": "USR-DEMO-RAKA",
+      "reasonId": "abuse",
+      "reasonLabel": "Kata kasar atau pelecehan",
+      "details": "Balasan menyebut anggota lain dengan kata yang tidak pantas.",
+      "createdAt": "2026-11-18T19:53:56.284Z",
+      "status": "pending"
+    }
+  ]
+}

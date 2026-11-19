@@ -1,0 +1,15 @@
+<div id="modal-success" class="fixed inset-0 z-[70] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-success=""></div>
+  <div class="relative mx-auto mt-24 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[420px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:p-6" role="dialog" aria-modal="true" aria-labelledby="success-title">
+    <h2 id="success-title" class="text-[18px] font-bold tracking-tight text-ink">Pengajuan Diterima</h2>
+    <p class="mt-1 text-[13px] leading-relaxed text-muted">Pengajuan pencairan telah tercatat pada prototype ini dan menunggu proses berikutnya.</p>
+    <dl class="mt-4 space-y-2.5 text-[13px]">
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">No. pengajuan</dt><dd class="num font-semibold text-ink" id="success-number">-</dd></div>
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Nominal</dt><dd class="num font-semibold text-ink" id="success-amount">-</dd></div>
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Status</dt><dd class="font-semibold text-ink">Dalam Proses</dd></div>
+    </dl>
+    <div class="mt-5 flex items-center justify-end gap-2 border-t border-divider pt-4">
+      <button type="button" data-close-success="" class="focus-ring inline-flex h-10 items-center rounded-xl bg-primary px-4 text-[14px] font-semibold text-white hover:bg-primary-hover">Lihat Riwayat</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+{
+  "faqs": [
+    {
+      "id": "faq-1",
+      "topic": "pembayaran",
+      "question": "Bagaimana cara membeli e-book di IKAPI Store?",
+      "answer": "Pilih e-book yang Anda inginkan di Katalog Buku, klik tombol \"Tambah ke Keranjang\", lalu buka halaman Keranjang Belanja. Klik \"Lanjut ke Pembayaran\" dan pilih metode pembayaran seperti QRIS atau Virtual Account bank yang tersedia."
+    },
+    {
+      "id": "faq-2",
+      "topic": "pembayaran",
+      "question": "Metode pembayaran apa saja yang didukung?",
+      "answer": "IKAPI Store mendukung pembayaran instan via QRIS (GoPay, OVO, Dana, ShopeePay, LinkAja) serta Virtual Account transfer otomatis untuk bank-bank utama di Indonesia."
+    },
+    {
+      "id": "faq-3",
+      "topic": "pembayaran",
+      "question": "Pembayaran sudah selesai, mengapa e-book belum muncul?",
+      "answer": "Verifikasi sistem biasanya berlangsung instan. Namun jika terjadi jeda perbankan, silakan periksa tab Riwayat Pesanan atau lakukan penyegaran pada halaman Perpustakaan Saya. Jika kendala berlanjut, hubungi tim kami via surel sekretariat@ikapi-jabar.id."
+    },
+    {
+      "id": "faq-4",
+      "topic": "reader",
+      "question": "Bagaimana cara membaca e-book yang sudah dibeli?",
+      "answer": "Masuk ke akun Anda dan buka menu Perpustakaan Saya. Klik \"Mulai Baca\" atau \"Lanjutkan Membaca\" pada buku yang Anda miliki. Buku akan otomatis terbuka pada Web Reader interaktif peramban Anda."
+    },
+    {
+      "id": "faq-5",
+      "topic": "reader",
+      "question": "Apakah e-book dapat diunduh sebagai file mentah PDF atau EPUB?",
+      "answer": "Untuk melindungi hak cipta pengarang dan penerbit daerah Jawa Barat, seluruh e-book di IKAPI Store dilindungi lisensi resmi dan dibaca langsung melalui peramban Web Reader tanpa unduhan berkas mentah."
+    },
+    {
+      "id": "faq-6",
+      "topic": "akun",
+      "question": "Bagaimana cara mengatur ulang kata sandi jika saya lupa?",
+      "answer": "Buka halaman Masuk, klik tautan \"Lupa kata sandi?\", lalu masukkan alamat email akun Anda. Kami akan mengirimkan tautan pemulihan kata sandi ke kotak masuk email Anda."
+    },
+    {
+      "id": "faq-7",
+      "topic": "akun",
+      "question": "Bagaimana cara mengubah foto profil dan informasi akun?",
+      "answer": "Buka menu Profil Saya dari bilah navigasi samping akun. Di sana Anda dapat mengunggah foto profil baru (JPG/PNG/WebP maks 2MB), mengganti nama lengkap, dan memilih preferensi kategori bacaan favorit."
+    },
+    {
+      "id": "faq-8",
+      "topic": "pesanan",
+      "question": "Di mana saya bisa melihat riwayat pembelian e-book?",
+      "answer": "Seluruh riwayat transaksi yang pernah Anda lakukan tercatat rapi di halaman Riwayat Pesanan. Anda dapat memfilter pesanan berdasarkan status Berhasil, Menunggu, Gagal, atau Kedaluwarsa."
+    }
+  ]
+}

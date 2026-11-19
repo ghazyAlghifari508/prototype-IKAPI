@@ -1,9 +1,334 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-@plugin "@tailwindcss/forms";
+/*
+| P03 foundation - Tailwind CSS 4 (CSS-first), Vite.
+|
+| Sources of truth (verified in P01/P02):
+|   docs/design/prototype-copy/{user,penerbit,admin}/*.html  (Tailwind 3.4.17 via CDN + per-page tailwind.config)
+|   docs/migration/p1-inventory.md, docs/migration/p1-architecture-blueprint.md, docs/migration/p2-visual-baseline.md
+|
+| Rules kept from the brief: no CDN <script>, no JS tailwind.config, no runtime class concatenation,
+| tokens come from the measurement tables, and every deviation from the prototype is documented.
+*/
 
-@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
+/* Tailwind must scan only application sources. The prototype HTML lives in docs/ and is scanned
+   implicitly (tracked files, not gitignored), which would leak prototype-only classes into the bundle. */
+@source '../../resources/views/**/*.blade.php';
+@source '../../resources/js/**/*.js';
+@source not '../../docs';
 
+/*
+| Tokens measured from the prototype (P02 section 6) and from the per-page configs (P01 section 6.1).
+| Names follow the prototype classes: bg-primary, bg-primary-hover, text-ink-body, border-border-subtle,
+| bg-surface-soft, bg-surface-neutral, bg-canvas, bg-soft, bg-neutral, text-muted, border-divider.
+*/
 @theme {
-    --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    /* DM Sans is the measured body font on all 38 pages (16px, rgb(34,34,37)). */
+    --font-sans: 'DM Sans', sans-serif; /* exactly the prototype's stack (its tailwind.config: ["'DM Sans'", "sans-serif"]) */
+    /* Literata is used by preview_buku + web_reader only, so it stays available without being loaded. */
+    --font-serif: 'Literata', ui-serif, Georgia, serif;
+    /* the prototype's own token for long-form reading (preview_buku, web_reader): font-reading */
+    --font-reading: 'Literata', Georgia, serif;
+
+    /*
+    | Parity shims. The prototype loads Tailwind 3.4.17 from the CDN and uses two names whose meaning
+    | differs in v4 (measured in P02 section 6.2):
+    |   shadow-sm  v3 = 0 1px 2px rgb(0 0 0 / 0.05)   v4 = 0 1px 3px ... + 0 1px 2px -1px ...  -> restore v3 value
+    |   shadow-xs  v3 = class does not exist (no shadow)  v4 = 0 1px 2px rgb(0 0 0 / 0.05)     -> neutralise
+    | shadow-xs appears in 18 prototype pages where it renders nothing today; keeping that parity means
+    | the golden PNGs stay comparable. Remove the shim if the design owner wants the shadow instead.
+    */
+    --shadow-xs: 0 0 #0000;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+/*
+| Colour tokens are declared `inline`. Reason (found in P04 by pixel-diffing the buyer footer): with a normal
+| `@theme`, an alpha utility such as `text-white/60` compiles to `color-mix(in oklab, var(--color-white) 60%, transparent)`,
+| and Chromium composites that mix in oklab, which rasterises 1..10/255 differently from the prototype's v3 output
+| `rgba(255,255,255,.6)`. 46 alpha utilities exist across the prototype (395 usages), so this is not a fringe case.
+| `@theme inline` makes Tailwind emit the literal colour, so the utility becomes hex-with-alpha (`#ffffff99`), exactly
+| like Tailwind 3, while `bg-primary` etc. keep working.
+| Trade-off, deliberate: with `inline` the colour custom properties are not published to `:root`, so custom CSS below
+| must use literal colours (the prototype's own <style> blocks do the same).
+*/
+@theme inline {
+    /*
+    | Tailwind's default palette, pinned to the v3.4 sRGB values the prototype was rendered with.
+    | v4 ships the same names in `oklch()`, which rasterises 1..5/255 differently (measured in P06 on
+    | `text-red-500`: rgb(239,68,68) vs oklch(0.637 0.237 25.331)). Only the 25 (name, shade) pairs that
+    | actually appear in docs/design/prototype-copy are overridden; adding more is not necessary.
+    */
+    /* Pure white/black: declared inline for the same reason as the palette pins below, so `bg-white/95` emits
+       #fffffff2 instead of color-mix(in oklab, ...) (measured in P08 on the invoice toolbar: 1/255 off). */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-red-50: #fef2f2;
+    --color-red-100: #fee2e2;
+    --color-red-200: #fecaca;
+    --color-red-500: #ef4444;
+    --color-red-600: #dc2626;
+    --color-red-700: #b91c1c;
+    --color-amber-50: #fffbeb;
+    --color-amber-100: #fef3c7;
+    --color-amber-200: #fde68a;
+    --color-amber-400: #fbbf24;
+    --color-amber-600: #d97706;
+    --color-amber-700: #b45309;
+    --color-emerald-50: #ecfdf5;
+    --color-emerald-100: #d1fae5;
+    --color-emerald-200: #a7f3d0;
+    --color-emerald-600: #059669;
+    --color-emerald-700: #047857;
+    --color-gray-100: #f3f4f6;
+    --color-gray-200: #e5e7eb;
+    --color-gray-300: #d1d5db;
+    --color-gray-400: #9ca3af;
+    --color-gray-600: #4b5563;
+    --color-gray-700: #374151;
+    --color-gray-900: #111827;
+    --color-green-700: #15803d;
+
+    --color-primary: #673de6;
+    --color-primary-hover: #5025d1;
+    --color-primary-deep: #2f1c6a;
+    --color-primary-container: #673de6;
+    --color-primary-accent: #9d99ff;
+
+    --color-surface: #ffffff;
+    --color-surface-soft: #f5f6ff;
+    --color-surface-neutral: #f5f5f6;
+    --color-surface-border: #e5e7eb;
+
+    /* buyer pages use ink.{body,muted,subtle}; portal pages use flat ink/muted/border/divider/canvas/soft. */
+    --color-ink: #222225;
+    --color-ink-body: #222225;
+    --color-ink-muted: #62636b;
+    --color-ink-subtle: #9d9ea4;
+    --color-muted: #62636b;
+    --color-canvas: #ffffff;
+    --color-soft: #f5f6ff;
+    --color-neutral: #f5f5f6;
+    --color-divider: #efeff2;
+    --color-viewer: #f5f5f6;
+
+    --color-border: #e5e7eb;
+    --color-border-subtle: #e5e7eb;
+    --color-border-bold: #d1d5db;
+
+    /* Status text colours used by the prototype (plain coloured text, never badges with bg/border). */
+    --color-status-success: #0f7b4f;
+    --color-status-danger: #b42318;
+}
+
+/*
+| Preflight compensation. Tailwind 4 changed three defaults that the prototype relies on implicitly
+| (again measured in P02 section 6.2, not assumed):
+|   1. border colour default: v3 #e5e7eb, v4 currentColor
+|   2. placeholder colour:    v3 #9ca3af, v4 currentcolor
+|   3. cursor:                v3 sets pointer on [role=button], v4 does not
+| plus the prototype's own .focus-ring / .scrollbar-none helpers, ported verbatim.
+*/
+@layer base {
+    *,
+    ::before,
+    ::after {
+        /* literal, not var(--color-border): colour tokens are `@theme inline` and are not published to :root */
+        border-color: #e5e7eb;
+    }
+
+    ::placeholder {
+        color: #9ca3af;
+        opacity: 1;
+    }
+
+    [role='button'] {
+        cursor: pointer;
+    }
+
+    /* v4's preflight resets padding on every element (`* { padding: 0 }`); the prototype ran on v3, which did not,
+       so a bare `<th>` kept the user-agent 1px box padding. Measured on the P08 invoice table header: 26px vs 25px
+       row height, which shifted the whole sheet by 1px. Utility classes still win (they live in @layer utilities). */
+    th,
+    td,
+    caption {
+        padding: 1px;
+    }
+}
+
+/* Ported from the prototype <style> blocks: outline 2px + offset 2px, primary on light, white on dark. */
+@utility focus-ring {
+    &:focus-visible {
+        outline: 2px solid #673de6;
+        outline-offset: 2px;
+    }
+}
+
+@utility focus-ring-light {
+    &:focus-visible {
+        outline: 2px solid #ffffff;
+        outline-offset: 2px;
+    }
+}
+
+/* Prototype: -ms-overflow-style: none; scrollbar-width: none; ::-webkit-scrollbar { display: none } */
+@utility scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* Print helper used by the publisher invoice page. */
+@utility no-print {
+    @media print {
+        display: none;
+    }
+}
+
+/*
+| Portal shell (publisher + admin). Copied verbatim from the identical <style> rules in the 14 portal
+| pages (P04 audit: every rule below appears in 14/14 pages). Scoped under `.ikapi-portal` so the buyer
+| shell is never affected: the prototype loads this CSS only on portal pages, so a global rule would
+| change golden screenshots of the buyer pages.
+|   --topbar-h 64px, --sidebar-w 248px, drawer transition .22s, scrollbar 10px / #DCDCE2.
+*/
+.ikapi-portal {
+    --topbar-h: 64px;
+    --sidebar-w: 248px;
+
+    .shell-main {
+        margin-left: 0;
+    }
+
+    .banner-bleed {
+        margin-left: 0;
+    }
+
+    #publisher-sidebar {
+        top: var(--topbar-h);
+        transform: translateX(-100%);
+        transition: transform 0.22s ease;
+    }
+
+    #publisher-sidebar.is-open {
+        transform: translateX(0);
+    }
+
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .num {
+        font-variant-numeric: tabular-nums;
+    }
+
+    @media (min-width: 1024px) {
+        .shell-main {
+            margin-left: var(--sidebar-w);
+        }
+
+        .banner-bleed {
+            margin-left: calc(-1 * var(--sidebar-w));
+        }
+
+        #publisher-sidebar {
+            transform: none;
+            transition: none;
+        }
+    }
+}
+
+/* Scrollbar styling used by every portal page (applied to the whole document there). */
+.ikapi-portal ::-webkit-scrollbar,
+.ikapi-portal::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.ikapi-portal ::-webkit-scrollbar-thumb,
+.ikapi-portal::-webkit-scrollbar-thumb {
+    background: #dcdce2;
+    border-radius: 9999px;
+}
+
+/* Honoured by 14/14 portal pages and 7/22 buyer pages. */
+@media (prefers-reduced-motion: reduce) {
+    .ikapi-portal *,
+    .ikapi-portal *::before,
+    .ikapi-portal *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/*
+| shadow-xs parity, second half (P05).
+| P03 already neutralised the shim value (`--shadow-xs: 0 0 #0000`), but Chromium still composites the utility's
+| box-shadow list (`var(--tw-inset-shadow), ..., var(--tw-shadow)`), which rasterises a 1..2/255 difference on the
+| element's rounded edges — measured on the beranda shelf covers (1039 -> 524 differing pixels when the rule below
+| is applied). The prototype loads Tailwind 3.4.17, where `shadow-xs` does not exist at all, so the element truly has
+| `box-shadow: none`. This rule is intentionally NOT inside `@layer utilities`: unlayered CSS wins over any layer,
+| which is exactly what is needed to beat Tailwind's generated utility (the same mechanism that made the Google
+| Material Symbols rule win before P04 fixed it).
+| Keep `--shadow-xs` in @theme as documentation of the intent; this rule is what the browser actually uses.
+*/
+.shadow-xs {
+    box-shadow: none;
+}
+
+/*
+| space-y-* direction compatibility (found in P05 on the catalog price cells and the detail textarea).
+| Tailwind 4 emits `> :not(:last-child) { margin-block-end: ... }`. Two problems appear on these pages:
+|   1. an INLINE previous sibling ignores block margins, so the gap silently disappears
+|   2. when the compat margin-top below is added, v4's margin-bottom would stack on top of it (double gap)
+| Both are fixed by resetting v4's side for every non-last child and restoring the v3 margin-top on the
+| following siblings. Values listed are exactly the ones the prototype uses (docs/migration/p1-inventory.md).
+*/
+@layer utilities {
+:where(.space-y-0\.5 > :not(:last-child)) { margin-block-end: 0; }
+.space-y-0\.5 > :not([hidden]) ~ :not([hidden]) { margin-top: .125rem; }
+:where(.space-y-1 > :not(:last-child)) { margin-block-end: 0; }
+.space-y-1 > :not([hidden]) ~ :not([hidden]) { margin-top: .25rem; }
+:where(.space-y-1\.5 > :not(:last-child)) { margin-block-end: 0; }
+.space-y-1\.5 > :not([hidden]) ~ :not([hidden]) { margin-top: .375rem; }
+:where(.space-y-2 > :not(:last-child)) { margin-block-end: 0; }
+.space-y-2 > :not([hidden]) ~ :not([hidden]) { margin-top: .5rem; }
+:where(.space-y-2\.5 > :not(:last-child)) { margin-block-end: 0; }
+.space-y-2\.5 > :not([hidden]) ~ :not([hidden]) { margin-top: .625rem; }
+:where(.space-y-3 > :not(:last-child)) { margin-block-end: 0; }
+.space-y-3 > :not([hidden]) ~ :not([hidden]) { margin-top: .75rem; }
+:where(.space-y-3\.5 > :not(:last-child)) { margin-block-end: 0; }
+.space-y-3\.5 > :not([hidden]) ~ :not([hidden]) { margin-top: .875rem; }
+:where(.space-y-4 > :not(:last-child)) { margin-block-end: 0; }
+.space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
+:where(.space-y-5 > :not(:last-child)) { margin-block-end: 0; }
+.space-y-5 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.25rem; }
+:where(.space-y-6 > :not(:last-child)) { margin-block-end: 0; }
+.space-y-6 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem; }
+:where(.space-y-8 > :not(:last-child)) { margin-block-end: 0; }
+.space-y-8 > :not([hidden]) ~ :not([hidden]) { margin-top: 2rem; }
+}
+
+/*
+| divide-y / divide-x direction compatibility (found in P07 on the community reply list).
+| v3 put the divider on the *following* sibling's border-top (`> :not([hidden]) ~ :not([hidden])`); v4 moved it to
+| border-bottom of `:not(:last-child)`. Same 1px, different box: the first reply grew 1px and the line sat on the
+| wrong edge. The v4 rule is neutralised with the same `:where()` specificity Tailwind gives it, then the v3 rule is
+| restored, both inside @layer utilities so they behave like the utilities they replace.
+*/
+@layer utilities {
+    :where(.divide-y > :not(:last-child)) { border-bottom-width: 0; }
+    :where(.divide-x > :not(:last-child)) { border-right-width: 0; }
+    .divide-y > :not([hidden]) ~ :not([hidden]) { border-top-width: 1px; }
+    .divide-x > :not([hidden]) ~ :not([hidden]) { border-left-width: 1px; border-right-width: 0; }
+    /* v4 paints the divider colour on `:not(:last-child)`; with the v3 edge the LAST child would therefore get a
+       width without a colour (base border colour, measured on the P09 dashboard activity list: #e5e7eb vs the
+       divider #efeff2). The colour is re-stated for the sibling set the width rule targets. */
+    .divide-y.divide-divider > :not([hidden]) ~ :not([hidden]) { border-top-color: #efeff2; }
+    .divide-y.divide-border-subtle > :not([hidden]) ~ :not([hidden]) { border-top-color: #e5e7eb; }
+    .divide-x.divide-divider > :not([hidden]) ~ :not([hidden]) { border-left-color: #efeff2; }
+    .divide-x.divide-border-subtle > :not([hidden]) ~ :not([hidden]) { border-left-color: #e5e7eb; }
 }

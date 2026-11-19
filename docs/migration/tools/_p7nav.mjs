@@ -1,0 +1,13 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch();
+const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } });
+const p = await ctx.newPage();
+p.on('pageerror', (e) => console.log('ERR', String(e).slice(0, 200)));
+await p.goto('http://127.0.0.1:8140/komunitas', { waitUntil: 'load' });
+await p.waitForTimeout(700);
+await p.locator('#directory-grid article button', { hasText: 'Lihat Komunitas' }).first().click();
+await p.waitForTimeout(1200);
+console.log('url', p.url());
+console.log('visible', await p.evaluate(() => [...document.querySelectorAll('[id^="view-"]')].filter((e) => !e.classList.contains('hidden')).map((e) => e.id)));
+console.log('cards', await p.locator('#directory-grid article').count());
+await b.close();

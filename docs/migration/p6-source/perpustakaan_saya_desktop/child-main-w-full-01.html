@@ -1,0 +1,383 @@
+<main class="w-full pt-28 bg-white min-h-[calc(100vh-16rem)]">
+    <div class="flex flex-col w-full">
+      <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 w-full flex flex-col gap-6">
+        
+        <!-- Mobile Compact Account Navigation Menu -->
+        <details class="lg:hidden group bg-white border border-border-subtle rounded-2xl text-[14px] overflow-hidden shadow-xs">
+          <summary class="px-4 py-3 cursor-pointer font-semibold text-ink-body flex items-center justify-between list-none select-none">
+            <div class="flex items-center gap-2.5 text-primary">
+              <span class="material-symbols-outlined text-[20px]">local_library</span>
+              <span>Menu Akun: Perpustakaan Saya</span>
+            </div>
+            <span class="material-symbols-outlined text-[20px] text-ink-muted transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <div class="p-3 border-t border-border-subtle bg-surface-neutral flex flex-col gap-1">
+            <a href="akun_saya_profil_dropdown_navigasi_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Profil Saya</a>
+            <a href="riwayat_pesanan_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Riwayat Pesanan</a>
+            <a href="perpustakaan_saya_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-surface-soft text-primary font-bold">Perpustakaan Saya</a>
+            <a href="riwayat_ulasan_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Riwayat Ulasan</a>
+            <a href="pengaturan_akun_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Pengaturan Akun</a>
+            <a href="bantuan_akun_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Bantuan</a>
+            <div class="h-px bg-border-subtle my-1"></div>
+            <a href="masuk_login_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-red-600 font-semibold">Keluar Akun</a>
+          </div>
+        </details>
+
+        <!-- Page Header + Search & Simulator -->
+        <div class="flex flex-col gap-4 pb-2 border-b border-border-subtle">
+          
+          <!-- Top Row: Simulator Controls (Discreet Collapsible Panel) -->
+          <div class="flex justify-end">
+            <details id="qa-simulation-panel" class="group bg-surface-neutral border border-border-subtle rounded-xl text-[12px] select-none transition-all">
+              <summary class="px-3.5 py-1.5 cursor-pointer font-medium text-ink-muted hover:text-ink-body flex items-center gap-2 list-none">
+                <span class="material-symbols-outlined text-[16px] text-primary">tune</span>
+                <span>Mode Simulasi Perpustakaan</span>
+                <span class="material-symbols-outlined text-[16px] text-ink-muted transition-transform group-open:rotate-180">expand_more</span>
+              </summary>
+              <div class="p-2.5 pt-1.5 flex flex-wrap items-center gap-1.5 border-t border-border-subtle bg-white rounded-b-xl" role="toolbar">
+                <button id="btnSimulateEmpty" type="button" class="px-3 py-1 rounded-lg bg-surface-neutral hover:bg-surface-soft hover:text-primary text-ink-body font-medium transition-colors border border-border-subtle" onclick="simulateEmptyLibrary()">
+                  Simulasi Koleksi Kosong
+                </button>
+                <button id="btnSimulateNoSearch" type="button" class="px-3 py-1 rounded-lg bg-surface-neutral hover:bg-surface-soft hover:text-primary text-ink-body font-medium transition-colors border border-border-subtle" onclick="simulateNoSearchResult()">
+                  Simulasi Hasil Nihil
+                </button>
+                <button id="btnResetLibrary" type="button" class="px-3 py-1 rounded-lg bg-primary text-white font-bold transition-all shadow-xs" onclick="resetLibraryState()">
+                  Pulihkan Koleksi Asli
+                </button>
+              </div>
+            </details>
+          </div>
+
+          <!-- Header & Inline Search -->
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
+            <div>
+              <h1 class="text-[30px] md:text-[34px] font-bold text-ink-body tracking-tight leading-tight">
+                Perpustakaan Saya
+              </h1>
+              <p class="text-[14px] sm:text-[15px] text-ink-muted mt-1">
+                Koleksi e-book yang sudah kamu miliki, siap dibaca kapan saja melalui Web Reader.
+              </p>
+            </div>
+
+            <!-- Library Search Bar -->
+            <div class="w-full lg:w-80">
+              <div class="relative flex items-center">
+                <span class="material-symbols-outlined absolute left-3.5 text-ink-muted text-[19px] pointer-events-none">search</span>
+                <input id="librarySearch" class="w-full h-11 pl-10 pr-9 bg-surface-neutral text-ink-body text-[14px] rounded-xl border border-border-subtle placeholder:text-ink-muted outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Cari judul atau penulis..." type="text">
+                <button id="clearSearchBtn" type="button" class="hidden absolute right-3 text-ink-muted hover:text-ink-body p-0.5 cursor-pointer" onclick="clearSearchInput()" title="Bersihkan pencarian">
+                  <span class="material-symbols-outlined text-[18px]">close</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 2-COLUMN WORKSPACE: Google Stitch Floating Sidebar + Library Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- LEFT FLOATING SIDEBAR (Independent Rounded Panel) -->
+          <aside class="hidden lg:block lg:col-span-4 xl:col-span-3">
+            <div class="lg:sticky lg:top-36 bg-white rounded-3xl border border-border-subtle shadow-sm p-6 flex flex-col gap-6">
+              
+              <!-- Mini Profile Identity Header -->
+              <div class="flex items-center gap-3.5 pb-5 border-b border-border-subtle">
+                <div id="sidebar-avatar" class="w-12 h-12 rounded-full bg-primary text-white font-bold text-[18px] flex items-center justify-center shrink-0 overflow-hidden shadow-xs">
+                  <span id="sidebar-avatar-initials">AH</span>
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <span id="sidebar-user-name" class="font-bold text-[15px] text-ink-body truncate">Ahmad Hidayat</span>
+                  <span id="sidebar-user-email" class="text-[12px] text-ink-muted truncate">ahmad.hidayat@literasi.id</span>
+                </div>
+              </div>
+
+              <!-- Navigation Menu Links -->
+              <nav class="flex flex-col gap-1.5 text-[14px]">
+                <a href="akun_saya_profil_dropdown_navigasi_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">person</span>
+                  <span>Profil Saya</span>
+                </a>
+                <a href="riwayat_pesanan_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">receipt_long</span>
+                  <span>Riwayat Pesanan</span>
+                </a>
+                <a href="perpustakaan_saya_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl bg-surface-soft text-primary font-bold shadow-xs transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">local_library</span>
+                  <span>Perpustakaan Saya</span>
+                </a>
+                <a href="riwayat_ulasan_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">rate_review</span>
+                  <span>Riwayat Ulasan</span>
+                </a>
+                <a href="pengaturan_akun_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">settings</span>
+                  <span>Pengaturan Akun</span>
+                </a>
+                <a href="bantuan_akun_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">help</span>
+                  <span>Bantuan</span>
+                </a>
+
+                <div class="h-px bg-border-subtle my-2"></div>
+
+                <a href="masuk_login_desktop.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-red-600 hover:bg-red-50 transition-colors font-semibold">
+                  <span class="material-symbols-outlined text-[20px]">logout</span>
+                  <span>Keluar Akun</span>
+                </a>
+              </nav>
+
+            </div>
+          </aside>
+
+          <!-- RIGHT MAIN: Library Content Area -->
+          <section class="lg:col-span-8 xl:col-span-9 flex flex-col gap-6">
+            
+            <!-- SECTION: LANJUTKAN MEMBACA (Clean White Card, Zero Badges/Labels) -->
+            <div id="continue-reading-section" class="w-full bg-white rounded-3xl p-6 sm:p-7 border border-border-subtle shadow-xs">
+              <div class="flex items-center justify-between pb-3 mb-4 border-b border-border-subtle text-[12.5px] text-ink-muted font-medium">
+                <span>Lanjutkan Bacaan Terakhir</span>
+                <span id="last-read-time">Terakhir dibaca kemarin</span>
+              </div>
+
+              <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                <!-- Cover & Details -->
+                <div class="flex items-center gap-4 sm:gap-5 w-full sm:w-auto">
+                  <div class="w-20 sm:w-24 aspect-[2/3] rounded-2xl overflow-hidden bg-surface-neutral border border-border-subtle shrink-0 shadow-xs">
+                    <img src="../../assets/covers/laskar-aksara-pasundan.jpg" alt="Sampul Laskar Aksara Pasundan" class="w-full h-full object-cover">
+                  </div>
+                  <div class="flex flex-col gap-1 min-w-0">
+                    <h2 class="text-[17px] sm:text-[19px] font-bold text-ink-body leading-snug truncate">
+                      Laskar Aksara Pasundan
+                    </h2>
+                    <p class="text-[13px] text-ink-muted">
+                      Ayi R. Kurnia • Kiblat Buku Utama
+                    </p>
+                    <div class="mt-2 flex flex-col gap-1 w-full max-w-xs">
+                      <div class="flex justify-between items-center text-[12px] text-ink-muted font-medium">
+                        <span id="feat-page-meta">Halaman 42 dari 268</span>
+                        <span class="font-bold text-ink-body" id="feat-progress-meta">16%</span>
+                      </div>
+                      <div class="w-full h-2 rounded-full bg-surface-soft overflow-hidden border border-primary/20">
+                        <div id="feat-progress-bar" class="h-full bg-primary rounded-full transition-all duration-300" style="width: 16%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="flex sm:flex-col items-stretch sm:items-end gap-2.5 w-full sm:w-auto shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-border-subtle">
+                  <a href="web_reader_desktop.html" data-path="reader" class="h-10 px-5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13.5px] font-bold flex items-center justify-center gap-2 transition-all shadow-xs">
+                    <span>Lanjutkan Membaca</span>
+                    <span class="material-symbols-outlined text-[17px]">arrow_forward</span>
+                  </a>
+                  <button type="button" class="h-9 px-4 rounded-xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral text-[13px] font-semibold flex items-center justify-center gap-1.5 transition-colors cursor-pointer border border-transparent hover:border-border-subtle" onclick="markAsFinished('Laskar Aksara Pasundan')">
+                    <span class="material-symbols-outlined text-[17px]">check_circle</span>
+                    <span>Tandai Selesai</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- LIBRARY CONTROLS: Tabs, Sorting & View Mode -->
+            <div class="flex flex-col gap-4">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                
+                <!-- Category Tabs -->
+                <div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none" role="tablist">
+                  <button id="tab-all" type="button" role="tab" aria-selected="true" class="tab-btn px-3.5 py-1.5 rounded-xl text-[13px] font-bold transition-all bg-primary text-white shadow-xs cursor-pointer" onclick="switchTab('all')">
+                    Semua Buku <span id="count-all" class="ml-1 opacity-90">(3)</span>
+                  </button>
+                  <button id="tab-reading" type="button" role="tab" aria-selected="false" class="tab-btn px-3.5 py-1.5 rounded-xl text-[13px] font-semibold transition-all bg-surface-neutral text-ink-muted hover:text-ink-body hover:bg-surface-soft cursor-pointer" onclick="switchTab('reading')">
+                    Sedang Dibaca <span id="count-reading" class="ml-1 opacity-90">(1)</span>
+                  </button>
+                  <button id="tab-unread" type="button" role="tab" aria-selected="false" class="tab-btn px-3.5 py-1.5 rounded-xl text-[13px] font-semibold transition-all bg-surface-neutral text-ink-muted hover:text-ink-body hover:bg-surface-soft cursor-pointer" onclick="switchTab('unread')">
+                    Belum Dibaca <span id="count-unread" class="ml-1 opacity-90">(2)</span>
+                  </button>
+                  <button id="tab-favorite" type="button" role="tab" aria-selected="false" class="tab-btn px-3.5 py-1.5 rounded-xl text-[13px] font-semibold transition-all bg-surface-neutral text-ink-muted hover:text-ink-body hover:bg-surface-soft cursor-pointer" onclick="switchTab('favorite')">
+                    Buku Favorit <span id="count-favorite" class="ml-1 opacity-90">(2)</span>
+                  </button>
+                </div>
+
+                <!-- Sorting & View Mode -->
+                <div class="flex items-center gap-2.5 shrink-0 self-end sm:self-auto">
+                  <div class="flex items-center gap-1.5 text-[12.5px] text-ink-muted">
+                    <span>Urutkan:</span>
+                    <select id="sortSelect" class="bg-surface-neutral text-ink-body text-[12.5px] font-semibold rounded-xl py-1.5 px-2.5 border border-border-subtle focus:border-primary focus:bg-white focus:outline-none cursor-pointer" onchange="applySorting()">
+                      <option value="recent">Terakhir Diakses</option>
+                      <option value="title">Judul (A–Z)</option>
+                      <option value="progress">Kemajuan Baca</option>
+                    </select>
+                  </div>
+
+                  <!-- View Mode Toggle -->
+                  <div class="flex items-center bg-surface-neutral p-1 rounded-xl border border-border-subtle">
+                    <button id="viewGridBtn" type="button" aria-label="Tampilan Kisi" class="p-1 rounded-lg bg-primary text-white transition-colors cursor-pointer" onclick="toggleViewMode('grid')" title="Tampilan Kisi">
+                      <span class="material-symbols-outlined text-[17px]">grid_view</span>
+                    </button>
+                    <button id="viewListBtn" type="button" aria-label="Tampilan Daftar" class="p-1 rounded-lg text-ink-muted hover:text-ink-body transition-colors cursor-pointer" onclick="toggleViewMode('list')" title="Tampilan Daftar">
+                      <span class="material-symbols-outlined text-[17px]">view_list</span>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- BOOK CARDS CONTAINER (2 Cols on lg, 3 Cols on xl) -->
+              <div id="booksGrid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 transition-all">
+                
+                <!-- Book Card 1: Purchased, Reading -->
+                <article class="book-card group flex flex-col bg-white rounded-3xl p-4 sm:p-5 border border-border-subtle shadow-xs hover:border-primary/40 transition-all" data-book-id="1" data-title="Laskar Aksara Pasundan" data-author="Ayi R. Kurnia" data-purchased="true" data-status="reading" data-current-page="42" data-total-page="268" data-progress="16" data-favorite="true">
+                  <div class="book-cover-container relative w-full aspect-[2/3] rounded-2xl overflow-hidden bg-surface-neutral mb-3 flex items-center justify-center border border-border-subtle shadow-xs">
+                    <img src="../../assets/covers/laskar-aksara-pasundan.jpg" alt="Sampul Laskar Aksara Pasundan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    <button type="button" aria-label="Favorit" class="btn-fav-card absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-xs flex items-center justify-center text-red-600 hover:scale-110 transition-all shadow-xs cursor-pointer" onclick="toggleFavorite(1, event)">
+                      <span id="fav-icon-1" class="material-symbols-outlined text-[18px]">favorite</span>
+                    </button>
+                  </div>
+                  <div class="flex flex-col flex-1 justify-between">
+                    <div>
+                      <h3 class="text-[15px] font-bold text-ink-body line-clamp-2 leading-snug group-hover:text-primary transition-colors">
+                        Laskar Aksara Pasundan
+                      </h3>
+                      <p class="text-[12.5px] text-ink-muted mt-0.5">Ayi R. Kurnia</p>
+                      <div class="mt-2.5 flex flex-col gap-1">
+                        <div class="w-full h-1.5 bg-surface-soft border border-primary/20 rounded-full overflow-hidden">
+                          <div class="card-progress-bar h-full bg-primary rounded-full" style="width: 16%;"></div>
+                        </div>
+                        <span class="card-progress-text text-[11.5px] text-ink-muted">Halaman 42 / 268 • 16%</span>
+                      </div>
+                    </div>
+                    <div class="mt-3.5 pt-2.5 border-t border-border-subtle">
+                      <a href="web_reader_desktop.html" data-path="reader" class="w-full h-9 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold flex items-center justify-center gap-1.5 transition-colors shadow-xs">
+                        <span>Lanjutkan Membaca</span>
+                        <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Book Card 2: Purchased, Unread -->
+                <article class="book-card group flex flex-col bg-white rounded-3xl p-4 sm:p-5 border border-border-subtle shadow-xs hover:border-primary/40 transition-all" data-book-id="2" data-title="Pendidikan Karakter Sunda" data-author="Dr. Cecep Hidayat" data-purchased="true" data-status="unread" data-current-page="0" data-total-page="240" data-progress="0" data-favorite="false">
+                  <div class="book-cover-container relative w-full aspect-[2/3] rounded-2xl overflow-hidden bg-surface-neutral mb-3 flex items-center justify-center border border-border-subtle shadow-xs">
+                    <img src="../../assets/covers/B02.jpg" alt="Sampul Pendidikan Karakter Sunda" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    <button type="button" aria-label="Favorit" class="btn-fav-card absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-xs flex items-center justify-center text-ink-muted hover:text-red-600 hover:scale-110 transition-all shadow-xs cursor-pointer" onclick="toggleFavorite(2, event)">
+                      <span id="fav-icon-2" class="material-symbols-outlined text-[18px]">favorite_border</span>
+                    </button>
+                  </div>
+                  <div class="flex flex-col flex-1 justify-between">
+                    <div>
+                      <h3 class="text-[15px] font-bold text-ink-body line-clamp-2 leading-snug group-hover:text-primary transition-colors">
+                        Pendidikan Karakter Sunda
+                      </h3>
+                      <p class="text-[12.5px] text-ink-muted mt-0.5">Dr. Cecep Hidayat</p>
+                      <p class="text-[12px] text-ink-muted mt-2.5">240 Halaman • Belum Dibaca</p>
+                    </div>
+                    <div class="mt-3.5 pt-2.5 border-t border-border-subtle">
+                      <a href="web_reader_desktop.html" data-path="reader" class="w-full h-9 rounded-xl border border-border-subtle bg-white hover:bg-surface-neutral text-ink-body text-[13px] font-semibold flex items-center justify-center gap-1.5 transition-colors">
+                        <span class="material-symbols-outlined text-[15px] text-primary">menu_book</span>
+                        <span>Mulai Baca</span>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Book Card 3: Purchased, Unread -->
+                <article class="book-card group flex flex-col bg-white rounded-3xl p-4 sm:p-5 border border-border-subtle shadow-xs hover:border-primary/40 transition-all" data-book-id="3" data-title="Bumi Parahyangan: Narasi Tanah Pasundan" data-author="Prof. Didi Supardi" data-purchased="true" data-status="unread" data-current-page="0" data-total-page="312" data-progress="0" data-favorite="false">
+                  <div class="book-cover-container relative w-full aspect-[2/3] rounded-2xl overflow-hidden bg-surface-neutral mb-3 flex items-center justify-center border border-border-subtle shadow-xs">
+                    <img src="../../assets/covers/B03.jpg" alt="Sampul Bumi Parahyangan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    <button type="button" aria-label="Favorit" class="btn-fav-card absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-xs flex items-center justify-center text-ink-muted hover:text-red-600 hover:scale-110 transition-all shadow-xs cursor-pointer" onclick="toggleFavorite(3, event)">
+                      <span id="fav-icon-3" class="material-symbols-outlined text-[18px]">favorite_border</span>
+                    </button>
+                  </div>
+                  <div class="flex flex-col flex-1 justify-between">
+                    <div>
+                      <h3 class="text-[15px] font-bold text-ink-body line-clamp-2 leading-snug group-hover:text-primary transition-colors">
+                        Bumi Parahyangan: Narasi Tanah Pasundan
+                      </h3>
+                      <p class="text-[12.5px] text-ink-muted mt-0.5">Prof. Didi Supardi</p>
+                      <p class="text-[12px] text-ink-muted mt-2.5">312 Halaman • Belum Dibaca</p>
+                    </div>
+                    <div class="mt-3.5 pt-2.5 border-t border-border-subtle">
+                      <a href="web_reader_desktop.html" data-path="reader" class="w-full h-9 rounded-xl border border-border-subtle bg-white hover:bg-surface-neutral text-ink-body text-[13px] font-semibold flex items-center justify-center gap-1.5 transition-colors">
+                        <span class="material-symbols-outlined text-[15px] text-primary">menu_book</span>
+                        <span>Mulai Baca</span>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Book Card 4: Wishlist (Only in Tab Favorit) -->
+                <article class="book-card group flex flex-col bg-white rounded-3xl p-4 sm:p-5 border border-border-subtle shadow-xs hover:border-primary/40 transition-all hidden" data-book-id="4" data-title="Ciung Wanara: Hikayat Tatar Pasundan" data-author="Pustaka Jaya" data-purchased="false" data-status="wishlist" data-current-page="0" data-total-page="190" data-progress="0" data-favorite="true">
+                  <div class="book-cover-container relative w-full aspect-[2/3] rounded-2xl overflow-hidden bg-surface-neutral mb-3 flex items-center justify-center border border-border-subtle shadow-xs">
+                    <img src="../../assets/covers/B01.jpg" alt="Sampul Ciung Wanara" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    <button type="button" aria-label="Favorit" class="btn-fav-card absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-xs flex items-center justify-center text-red-600 hover:scale-110 transition-all shadow-xs cursor-pointer" onclick="toggleFavorite(4, event)">
+                      <span id="fav-icon-4" class="material-symbols-outlined text-[18px]">favorite</span>
+                    </button>
+                    <div class="absolute bottom-2 left-2 bg-[#222225]/85 backdrop-blur-xs text-white px-2 py-0.5 rounded-md text-[10px] font-bold tracking-wide">
+                      Wishlist
+                    </div>
+                  </div>
+                  <div class="flex flex-col flex-1 justify-between">
+                    <div>
+                      <div class="flex items-center justify-between gap-1 mb-0.5">
+                        <span class="text-[11.5px] text-ink-muted">Pustaka Jaya</span>
+                        <span class="text-[12.5px] font-bold text-primary font-mono">Rp 39.000</span>
+                      </div>
+                      <h3 class="text-[15px] font-bold text-ink-body line-clamp-2 leading-snug group-hover:text-primary transition-colors">
+                        Ciung Wanara: Hikayat Tatar Pasundan
+                      </h3>
+                      <p class="text-[11.5px] text-amber-700 font-semibold mt-2">Belum dimiliki</p>
+                    </div>
+                    <div class="mt-3.5 pt-2.5 border-t border-border-subtle">
+                      <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="w-full h-9 rounded-xl bg-surface-neutral hover:bg-surface-soft hover:text-primary text-ink-body text-[12.5px] font-semibold flex items-center justify-center gap-1.5 transition-colors border border-border-subtle">
+                        <span class="material-symbols-outlined text-[15px]">shopping_bag</span>
+                        <span>Beli di Katalog</span>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+
+              <!-- REUSABLE EMPTY STATE CONTAINER (Directly on canvas, Custom notfoundil.png) -->
+              <div id="emptyCategoryState" class="hidden w-full flex-col items-center justify-center text-center py-10 px-4 bg-white rounded-3xl border border-border-subtle shadow-xs">
+                <div class="w-36 sm:w-44 aspect-square flex items-center justify-center mb-3">
+                  <img src="../../assets/ilustration/notfoundil.png" alt="Belum Ada Buku" class="w-full h-full object-contain">
+                </div>
+                <h3 id="empty-state-title" class="text-[19px] font-bold text-ink-body tracking-tight mb-1">
+                  Belum Ada Buku
+                </h3>
+                <p id="empty-state-desc" class="text-[13.5px] text-ink-muted max-w-sm mb-4">
+                  Buku yang kamu beli akan muncul di sini.
+                </p>
+                <a id="empty-state-cta" href="katalog_buku_desktop.html" data-path="katalog-buku" class="inline-flex items-center gap-2 h-10 px-5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13.5px] font-bold transition-all shadow-xs">
+                  <span class="material-symbols-outlined text-[17px]">explore</span>
+                  <span id="empty-state-cta-text">Jelajahi Katalog Buku</span>
+                </a>
+              </div>
+
+              <!-- EMPTY SEARCH RESULTS CONTAINER -->
+              <div id="emptySearchState" class="hidden w-full flex-col items-center justify-center text-center py-10 px-4 bg-white rounded-3xl border border-border-subtle shadow-xs">
+                <div class="w-36 sm:w-44 aspect-square flex items-center justify-center mb-3">
+                  <img src="../../assets/ilustration/notfoundil.png" alt="Buku Tidak Ditemukan" class="w-full h-full object-contain">
+                </div>
+                <h3 class="text-[19px] font-bold text-ink-body tracking-tight mb-1">
+                  Buku Tidak Ditemukan
+                </h3>
+                <p class="text-[13.5px] text-ink-muted max-w-sm mb-4">
+                  Tidak ada buku yang cocok dengan pencarianmu.
+                </p>
+                <button type="button" class="inline-flex items-center gap-1.5 h-10 px-5 rounded-xl border border-border-subtle bg-surface-neutral hover:bg-surface-soft hover:text-primary text-ink-body text-[13px] font-bold transition-colors cursor-pointer" onclick="clearSearchInput()">
+                  <span class="material-symbols-outlined text-[17px]">close</span>
+                  <span>Hapus Pencarian</span>
+                </button>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </div>
+    </div>
+  </main>

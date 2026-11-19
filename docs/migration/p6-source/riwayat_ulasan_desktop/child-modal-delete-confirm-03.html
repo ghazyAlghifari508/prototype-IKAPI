@@ -1,0 +1,21 @@
+<div id="modal-delete-confirm" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm" role="dialog" aria-modal="true">
+    <div class="bg-white rounded-3xl max-w-sm w-full p-6 text-center space-y-4 shadow-2xl border border-border-subtle animate-in fade-in zoom-in-95 duration-200">
+      <div class="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center mx-auto">
+        <span class="material-symbols-outlined text-[26px]">delete</span>
+      </div>
+      <div class="space-y-1">
+        <h3 class="text-[17px] font-bold text-ink-body">Hapus Ulasan?</h3>
+        <p class="text-[13px] text-ink-muted max-w-xs mx-auto">
+          Penilaian dan ulasan untuk buku ini akan dihapus dari riwayat akun Anda.
+        </p>
+      </div>
+      <div class="flex items-center justify-center gap-2 pt-2">
+        <button type="button" class="flex-1 h-10 px-4 rounded-xl border border-border-subtle bg-white hover:bg-surface-neutral text-ink-body text-[13px] font-semibold transition-colors" onclick="closeDeleteModal()">
+          Batal
+        </button>
+        <button id="btn-confirm-delete" type="button" class="flex-1 h-10 px-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-[13px] font-bold transition-colors cursor-pointer">
+          Hapus Ulasan
+        </button>
+      </div>
+    </div>
+  </div>

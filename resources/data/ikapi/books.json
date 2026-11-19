@@ -1,0 +1,498 @@
+[
+  {
+    "id": "B01",
+    "slug": "laskar-aksara-pasundan",
+    "title": "Laskar Aksara Pasundan",
+    "author": "Ayi R. Kurnia",
+    "publisher": "Kiblat Buku Utama",
+    "category": "Sastra & Fiksi",
+    "year": 2024,
+    "price": 45000,
+    "cover": "covers/laskar-aksara-pasundan.jpg",
+    "coverAlt": "Sampul Buku Laskar Aksara Pasundan",
+    "sources": [
+      "catalog"
+    ],
+    "detail": {
+      "bookId": "BK-01",
+      "synopsis": [
+        "Di lereng Gunung Manglayang, penemuan naskah daun lontar beraksara kuno memicu pergulatan batin Ki Danu, seorang juru pelihara naskah tua yang berupaya menjaga warisan budaya di tengah derasnya arus modernisasi.",
+        "Ketika sekelompok pemuda pegiat kebudayaan dari Bandung tiba dengan misi digitalisasi, mereka menemukan rahasia filosofi luhur tentang ketahanan pangan, kearifan lingkungan, dan catatan sejarah Pasundan yang tersimpan selama berabad-abad.",
+        "Melalui penceritaan yang hangat dan lekat dengan kearifan lokal, novel ini menggambarkan jembatan antar-generasi dalam merawat ingatan sejarah dan kearifan aksara Nusantara."
+      ],
+      "rows": [
+        {
+          "label": "Penulis",
+          "value": "Ayi R. Kurnia"
+        },
+        {
+          "label": "Penerbit",
+          "value": "Kiblat Buku Utama"
+        },
+        {
+          "label": "Tahun Terbit",
+          "value": "2024"
+        },
+        {
+          "label": "Bahasa",
+          "value": "Bahasa Indonesia & Sunda"
+        },
+        {
+          "label": "Format",
+          "value": "E-Book (Web Reader)"
+        },
+        {
+          "label": "Jumlah Halaman",
+          "value": "268 halaman"
+        }
+      ],
+      "reviews": [
+        {
+          "commentId": "CMT-2026-101",
+          "author": "Gilang Nugraha",
+          "date": "12 Januari 2025",
+          "datetime": "2025-01-12",
+          "body": "Pembahasan mengenai naskah kuno Priangan disampaikan secara mengalir. Gaya bahasanya mudah dinikmati dan memberikan wawasan baru tentang kekayaan tradisi tulisan Pasundan."
+        },
+        {
+          "commentId": "CMT-2026-102",
+          "author": "Ratih Wulandari",
+          "date": "28 Desember 2024",
+          "datetime": "2024-12-28",
+          "body": "Penjelasan filosofis tentang lambang aksara Sunda Kuna pada bab pertengahan sangat menarik. Buku ini cocok menjadi referensi bacaan bagi pegiat literasi daerah."
+        },
+        {
+          "commentId": "CMT-2026-103",
+          "author": "Fajar Ashari",
+          "date": "19 Desember 2024",
+          "datetime": "2024-12-19",
+          "body": "Penceritaan sejarah lokal yang dikemas dalam bentuk narasi fiksi membuat topik filologi menjadi lebih memikat dan relevan untuk dibaca hari ini."
+        }
+      ],
+      "related": [
+        {
+          "title": "Pendidikan Karakter Sunda",
+          "author": "Dr. Cecep Hidayat, M.Pd.",
+          "price": 58000,
+          "cover": "covers/B02.jpg",
+          "coverAlt": "Sampul buku Pendidikan Karakter Sunda",
+          "bookSlug": "pendidikan-karakter-sunda"
+        },
+        {
+          "title": "Bumi Parahyangan: Narasi Tanah Pasundan",
+          "author": "Prof. Didi Supardi",
+          "price": 74000,
+          "cover": "covers/B03.jpg",
+          "coverAlt": "Sampul buku Bumi Parahyangan",
+          "bookSlug": "bumi-parahyangan-narasi-alam"
+        },
+        {
+          "title": "Strategi Wirausaha Kreatif Era Digital",
+          "author": "Rian Anggoro, M.B.A.",
+          "price": 62000,
+          "cover": "covers/B06.jpg",
+          "coverAlt": "Sampul buku Strategi Wirausaha Kreatif",
+          "bookSlug": "strategi-wirausaha-kreatif-era-digital"
+        },
+        {
+          "title": "Antologi Puisi Lembayung Bandung",
+          "author": "Dewi Sartika Putri",
+          "price": 38000,
+          "cover": "covers/B04.jpg",
+          "coverAlt": "Sampul buku Antologi Puisi Lembayung Bandung",
+          "bookSlug": "antologi-puisi-lembayung"
+        }
+      ]
+    }
+  },
+  {
+    "id": "B02",
+    "slug": "pendidikan-karakter-sunda",
+    "title": "Pendidikan Karakter Sunda",
+    "author": "Dr. Cecep Hidayat, M.Pd.",
+    "publisher": "UPI Press",
+    "category": "Pendidikan",
+    "year": 2023,
+    "price": 58000,
+    "cover": "covers/B02.jpg",
+    "coverAlt": "Sampul Pendidikan Karakter Sunda",
+    "sources": [
+      "catalog"
+    ]
+  },
+  {
+    "id": "B03",
+    "slug": "bumi-parahyangan-narasi-alam",
+    "title": "Bumi Parahyangan: Narasi Alam",
+    "author": "Prof. Didi Supardi",
+    "publisher": "ITB Press",
+    "category": "Budaya & Tradisi",
+    "year": 2024,
+    "price": 74000,
+    "cover": "covers/B03.jpg",
+    "coverAlt": "Sampul Bumi Parahyangan: Narasi Alam",
+    "sources": [
+      "catalog"
+    ]
+  },
+  {
+    "id": "B04",
+    "slug": "antologi-puisi-lembayung",
+    "title": "Antologi Puisi Lembayung",
+    "author": "Dewi Sartika Putri",
+    "publisher": "Geger Sunten",
+    "category": "Sastra & Fiksi",
+    "year": 2022,
+    "price": 38000,
+    "cover": "covers/B04.jpg",
+    "coverAlt": "Sampul Antologi Puisi Lembayung",
+    "sources": [
+      "catalog"
+    ]
+  },
+  {
+    "id": "B05",
+    "slug": "menelusuri-jejak-sejarah-priangan",
+    "title": "Menelusuri Jejak Sejarah Priangan",
+    "author": "Prof. Sobana Hardjasaputra",
+    "publisher": "Kiblat Buku Utama",
+    "category": "Budaya & Tradisi",
+    "year": 2023,
+    "price": 52000,
+    "cover": "covers/B05.jpg",
+    "coverAlt": "Sampul Menelusuri Jejak Sejarah Priangan",
+    "sources": [
+      "catalog"
+    ]
+  },
+  {
+    "id": "B06",
+    "slug": "strategi-wirausaha-kreatif-era-digital",
+    "title": "Strategi Wirausaha Kreatif Era Digital",
+    "author": "Rian Anggoro, M.B.A.",
+    "publisher": "ITB Press",
+    "category": "Bisnis & Ekonomi",
+    "year": 2024,
+    "price": 62000,
+    "cover": "covers/B06.jpg",
+    "coverAlt": "Sampul Strategi Wirausaha Kreatif Era Digital",
+    "sources": [
+      "catalog"
+    ]
+  },
+  {
+    "id": "B07",
+    "slug": "manajemen-keuangan-umkm-daerah",
+    "title": "Manajemen Keuangan UMKM Daerah",
+    "author": "Hendra Setiawan, S.E.",
+    "publisher": "UPI Press",
+    "category": "Bisnis & Ekonomi",
+    "year": 2023,
+    "price": 49000,
+    "cover": "covers/B07.jpg",
+    "coverAlt": "Sampul Manajemen Keuangan UMKM Daerah",
+    "sources": [
+      "catalog"
+    ]
+  },
+  {
+    "id": "B08",
+    "slug": "kamus-undak-usuk-basa-sunda",
+    "title": "Kamus Undak Usuk Basa Sunda",
+    "author": "Drs. Yayat Sudaryat",
+    "publisher": "Geger Sunten",
+    "category": "Pendidikan",
+    "year": 2021,
+    "price": 48000,
+    "cover": "covers/B08.jpg",
+    "coverAlt": "Sampul Kamus Undak Usuk Basa Sunda",
+    "sources": [
+      "catalog"
+    ]
+  },
+  {
+    "id": "B09",
+    "slug": "ekonomi-kerakyatan-jawa-barat",
+    "title": "Ekonomi Kerakyatan Jawa Barat",
+    "author": "Dr. Ahmad Fauzi",
+    "publisher": "UPI Press",
+    "category": "Bisnis & Ekonomi",
+    "year": 2024,
+    "price": 65000,
+    "cover": "covers/B09.jpg",
+    "coverAlt": "Sampul Ekonomi Kerakyatan Jawa Barat",
+    "sources": [
+      "catalog"
+    ]
+  },
+  {
+    "id": "B10",
+    "slug": "filsafat-silih-asih-silih-asuh",
+    "title": "Filsafat Silih Asih Silih Asuh",
+    "author": "K.H. Toto Toharudin",
+    "publisher": "Kiblat Buku Utama",
+    "category": "Budaya & Tradisi",
+    "year": 2022,
+    "price": 42000,
+    "cover": "covers/B10.jpg",
+    "coverAlt": "Sampul Filsafat Silih Asih Silih Asuh",
+    "sources": [
+      "catalog"
+    ]
+  },
+  {
+    "id": "B11",
+    "slug": "metodologi-penelitian-bahasa-daerah",
+    "title": "Metodologi Penelitian Bahasa Daerah",
+    "author": "Dr. Nani Darmayanti",
+    "publisher": "UPI Press",
+    "category": "Pendidikan",
+    "year": 2023,
+    "price": 56000,
+    "cover": "covers/B11.jpg",
+    "coverAlt": "Sampul Metodologi Penelitian Bahasa Daerah",
+    "sources": [
+      "catalog"
+    ]
+  },
+  {
+    "id": "B12",
+    "slug": "kumpulan-cerpen-pasundan-kiwari",
+    "title": "Kumpulan Cerpen Pasundan Kiwari",
+    "author": "Dadan Sutisna",
+    "publisher": "Geger Sunten",
+    "category": "Sastra & Fiksi",
+    "year": 2024,
+    "price": 39000,
+    "cover": "covers/B12.jpg",
+    "coverAlt": "Sampul Kumpulan Cerpen Pasundan Kiwari",
+    "sources": [
+      "catalog"
+    ]
+  },
+  {
+    "id": "B01",
+    "slug": "pride-and-prejudice",
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "publisher": null,
+    "category": null,
+    "year": null,
+    "price": 45000,
+    "cover": "covers/B01.jpg",
+    "coverAlt": "Sampul buku Pride and Prejudice",
+    "sources": [
+      "shelf"
+    ]
+  },
+  {
+    "id": "B08",
+    "slug": "the-great-gatsby",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "publisher": null,
+    "category": null,
+    "year": null,
+    "price": 48000,
+    "cover": "covers/B08.jpg",
+    "coverAlt": "Sampul buku The Great Gatsby",
+    "sources": [
+      "shelf"
+    ]
+  },
+  {
+    "id": "B03",
+    "slug": "the-adventures-of-sherlock-holmes",
+    "title": "The Adventures of Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "publisher": null,
+    "category": null,
+    "year": null,
+    "price": 59000,
+    "cover": "covers/B03.jpg",
+    "coverAlt": "Sampul buku The Adventures of Sherlock Holmes",
+    "sources": [
+      "shelf"
+    ]
+  },
+  {
+    "id": "B05",
+    "slug": "the-book-of-tea",
+    "title": "The Book of Tea",
+    "author": "Okakura Kakuzō",
+    "publisher": null,
+    "category": null,
+    "year": null,
+    "price": 29000,
+    "cover": "covers/B05.jpg",
+    "coverAlt": "Sampul buku The Book of Tea",
+    "sources": [
+      "shelf"
+    ]
+  },
+  {
+    "id": "B15",
+    "slug": "the-picture-of-dorian-gray",
+    "title": "The Picture of Dorian Gray",
+    "author": "Oscar Wilde",
+    "publisher": null,
+    "category": null,
+    "year": null,
+    "price": 46000,
+    "cover": "covers/B15.jpg",
+    "coverAlt": "Sampul buku The Picture of Dorian Gray",
+    "sources": [
+      "shelf"
+    ]
+  },
+  {
+    "id": "B02",
+    "slug": "frankenstein",
+    "title": "Frankenstein",
+    "author": "Mary Shelley",
+    "publisher": null,
+    "category": null,
+    "year": null,
+    "price": 39000,
+    "cover": "covers/B02.jpg",
+    "coverAlt": "Sampul buku Frankenstein",
+    "sources": [
+      "shelf"
+    ]
+  },
+  {
+    "id": "B11",
+    "slug": "alices-adventures-in-wonderland",
+    "title": "Alice's Adventures in Wonderland",
+    "author": "Lewis Carroll",
+    "publisher": null,
+    "category": null,
+    "year": null,
+    "price": 36000,
+    "cover": "covers/B11.jpg",
+    "coverAlt": "Sampul buku Alice's Adventures in Wonderland",
+    "sources": [
+      "shelf"
+    ]
+  },
+  {
+    "id": "B13",
+    "slug": "the-time-machine",
+    "title": "The Time Machine",
+    "author": "H. G. Wells",
+    "publisher": null,
+    "category": null,
+    "year": null,
+    "price": 38000,
+    "cover": "covers/B13.jpg",
+    "coverAlt": "Sampul buku The Time Machine",
+    "sources": [
+      "shelf"
+    ]
+  },
+  {
+    "id": "B04",
+    "slug": "flatland-a-romance",
+    "title": "Flatland: A Romance",
+    "author": "Edwin A. Abbott",
+    "publisher": null,
+    "category": null,
+    "year": null,
+    "price": 35000,
+    "cover": "covers/B04.jpg",
+    "coverAlt": "Sampul buku Flatland",
+    "sources": [
+      "shelf"
+    ]
+  },
+  {
+    "id": "B14",
+    "slug": "the-call-of-the-wild",
+    "title": "The Call of the Wild",
+    "author": "Jack London",
+    "publisher": null,
+    "category": null,
+    "year": null,
+    "price": 34000,
+    "cover": "covers/B14.jpg",
+    "coverAlt": "Sampul buku The Call of the Wild",
+    "sources": [
+      "shelf"
+    ]
+  },
+  {
+    "id": "B06",
+    "slug": "the-art-of-war",
+    "title": "The Art of War",
+    "author": "Sun Tzu",
+    "publisher": null,
+    "category": null,
+    "year": null,
+    "price": 32000,
+    "cover": "covers/B06.jpg",
+    "coverAlt": "Sampul buku The Art of War",
+    "sources": [
+      "shelf"
+    ]
+  },
+  {
+    "id": "B10",
+    "slug": "dracula",
+    "title": "Dracula",
+    "author": "Bram Stoker",
+    "publisher": null,
+    "category": null,
+    "year": null,
+    "price": 42000,
+    "cover": "covers/B10.jpg",
+    "coverAlt": "Sampul buku Dracula",
+    "sources": [
+      "shelf"
+    ]
+  },
+  {
+    "id": "B07",
+    "slug": "the-theory-of-the-leisure-class",
+    "title": "The Theory of the Leisure Class",
+    "author": "Thorstein Veblen",
+    "publisher": null,
+    "category": null,
+    "year": null,
+    "price": 49000,
+    "cover": "covers/B07.jpg",
+    "coverAlt": "Sampul buku The Theory of the Leisure Class",
+    "sources": [
+      "shelf"
+    ]
+  },
+  {
+    "id": "B12",
+    "slug": "a-tale-of-two-cities",
+    "title": "A Tale of Two Cities",
+    "author": "Charles Dickens",
+    "publisher": null,
+    "category": null,
+    "year": null,
+    "price": 52000,
+    "cover": "covers/B12.jpg",
+    "coverAlt": "Sampul buku A Tale of Two Cities",
+    "sources": [
+      "shelf"
+    ]
+  },
+  {
+    "id": "B09",
+    "slug": "moby-dick",
+    "title": "Moby Dick",
+    "author": "Herman Melville",
+    "publisher": null,
+    "category": null,
+    "year": null,
+    "price": 65000,
+    "cover": "covers/B09.jpg",
+    "coverAlt": "Sampul buku Moby Dick",
+    "sources": [
+      "shelf"
+    ]
+  }
+]

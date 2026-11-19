@@ -1,0 +1,732 @@
+{
+ "beranda": {
+  "carouselSlides": [
+   {
+    "i": 0,
+    "cls": "carousel-slide absolute inset-0 w-full h-full transition-opacity duration-500 op",
+    "img": "../../assets/banner-hero/Dari Penerbit Jawa Barat.png",
+    "alt": "Dari Penerbit Jawa Barat",
+    "title": null,
+    "texts": [],
+    "links": [
+     [
+      "",
+      "katalog_buku_desktop.html"
+     ]
+    ]
+   },
+   {
+    "i": 1,
+    "cls": "carousel-slide absolute inset-0 w-full h-full transition-opacity duration-500 op",
+    "img": "../../assets/banner-hero/Screenshot 2026-11-15 005252.png",
+    "alt": "Promo Spesial E-Book IKAPI Store",
+    "title": null,
+    "texts": [],
+    "links": [
+     [
+      "",
+      "katalog_buku_desktop.html"
+     ]
+    ]
+   },
+   {
+    "i": 2,
+    "cls": "carousel-slide absolute inset-0 w-full h-full transition-opacity duration-500 op",
+    "img": "../../assets/banner-hero/Screenshot 2026-11-15 005335.png",
+    "alt": "Rekomendasi Naskah & Pre-Order Buku",
+    "title": null,
+    "texts": [],
+    "links": [
+     [
+      "",
+      "katalog_buku_desktop.html"
+     ]
+    ]
+   }
+  ],
+  "sections": [
+   {
+    "i": 0,
+    "h2": null,
+    "h3": null,
+    "cards": 0,
+    "chips": 5,
+    "html_length": 3995
+   },
+   {
+    "i": 1,
+    "h2": null,
+    "h3": null,
+    "cards": 0,
+    "chips": 0,
+    "html_length": 3457
+   },
+   {
+    "i": 2,
+    "h2": "Rekomendasi Buku",
+    "h3": "Pride and Prejudice",
+    "cards": 5,
+    "chips": 0,
+    "html_length": 9302
+   },
+   {
+    "i": 3,
+    "h2": "Buku Rilis Terbaru",
+    "h3": "Frankenstein",
+    "cards": 5,
+    "chips": 0,
+    "html_length": 9221
+   },
+   {
+    "i": 4,
+    "h2": "Buku Terlaris",
+    "h3": "The Art of War",
+    "cards": 5,
+    "chips": 0,
+    "html_length": 9183
+   },
+   {
+    "i": 5,
+    "h2": "Agenda Literasi",
+    "h3": "Pekan Buku Jawa Barat 2026: Temu Penulis & Penerbit",
+    "cards": 4,
+    "chips": 0,
+    "html_length": 10868
+   }
+  ],
+  "shelves": [
+   {
+    "i": 2,
+    "title": "Rekomendasi Buku",
+    "items": [
+     {
+      "title": "Pride and Prejudice",
+      "href": "detail_buku_desktop.html",
+      "price": "Rp 45.000",
+      "cover": "../../assets/covers/B01.jpg",
+      "badge": null
+     },
+     {
+      "title": "The Great Gatsby",
+      "href": "detail_buku_desktop.html",
+      "price": "Rp 48.000",
+      "cover": "../../assets/covers/B08.jpg",
+      "badge": null
+     },
+     {
+      "title": "The Adventures of Sherlock Holmes",
+      "href": "detail_buku_desktop.html",
+      "price": "Rp 59.000",
+      "cover": "../../assets/covers/B03.jpg",
+      "badge": null
+     },
+     {
+      "title": "The Book of Tea",
+      "href": "detail_buku_desktop.html",
+      "price": "Rp 29.000",
+      "cover": "../../assets/covers/B05.jpg",
+      "badge": null
+     },
+     {
+      "title": "The Picture of Dorian Gray",
+      "href": "detail_buku_desktop.html",
+      "price": "Rp 46.000",
+      "cover": "../../assets/covers/B15.jpg",
+      "badge": null
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "title": "Buku Rilis Terbaru",
+    "items": [
+     {
+      "title": "Frankenstein",
+      "href": "detail_buku_desktop.html",
+      "price": "Rp 39.000",
+      "cover": "../../assets/covers/B02.jpg",
+      "badge": null
+     },
+     {
+      "title": "Alice's Adventures in Wonderland",
+      "href": "detail_buku_desktop.html",
+      "price": "Rp 36.000",
+      "cover": "../../assets/covers/B11.jpg",
+      "badge": null
+     },
+     {
+      "title": "The Time Machine",
+      "href": "detail_buku_desktop.html",
+      "price": "Rp 38.000",
+      "cover": "../../assets/covers/B13.jpg",
+      "badge": null
+     },
+     {
+      "title": "Flatland: A Romance",
+      "href": "detail_buku_desktop.html",
+      "price": "Rp 35.000",
+      "cover": "../../assets/covers/B04.jpg",
+      "badge": null
+     },
+     {
+      "title": "The Call of the Wild",
+      "href": "detail_buku_desktop.html",
+      "price": "Rp 34.000",
+      "cover": "../../assets/covers/B14.jpg",
+      "badge": null
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "title": "Buku Terlaris",
+    "items": [
+     {
+      "title": "The Art of War",
+      "href": "detail_buku_desktop.html",
+      "price": "Rp 32.000",
+      "cover": "../../assets/covers/B06.jpg",
+      "badge": null
+     },
+     {
+      "title": "Dracula",
+      "href": "detail_buku_desktop.html",
+      "price": "Rp 42.000",
+      "cover": "../../assets/covers/B10.jpg",
+      "badge": null
+     },
+     {
+      "title": "The Theory of the Leisure Class",
+      "href": "detail_buku_desktop.html",
+      "price": "Rp 49.000",
+      "cover": "../../assets/covers/B07.jpg",
+      "badge": null
+     },
+     {
+      "title": "A Tale of Two Cities",
+      "href": "detail_buku_desktop.html",
+      "price": "Rp 52.000",
+      "cover": "../../assets/covers/B12.jpg",
+      "badge": null
+     },
+     {
+      "title": "Moby Dick",
+      "href": "detail_buku_desktop.html",
+      "price": "Rp 65.000",
+      "cover": "../../assets/covers/B09.jpg",
+      "badge": null
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "title": "Agenda Literasi",
+    "items": [
+     {
+      "title": "Pekan Buku Jawa Barat 2026: Temu Penulis & Penerbit",
+      "href": "agenda_berita_literasi_desktop.html",
+      "price": null,
+      "cover": "../../assets/events/event-book-fair.jpg",
+      "badge": null
+     },
+     {
+      "title": "Festival Dongeng & Literasi Anak Pasundan",
+      "href": "agenda_berita_literasi_desktop.html",
+      "price": null,
+      "cover": "../../assets/events/event-children-story.jpg",
+      "badge": null
+     },
+     {
+      "title": "Bincang Buku: Masa Depan Penerbitan & Ekosistem E-Book",
+      "href": "agenda_berita_literasi_desktop.html",
+      "price": "Rp 25.000",
+      "cover": "../../assets/events/event-community.jpg",
+      "badge": null
+     },
+     {
+      "title": "Lokakarya Penulisan Buku Akademik & Monograf Ber-ISBN",
+      "href": "agenda_berita_literasi_desktop.html",
+      "price": null,
+      "cover": "../../assets/events/event-webinar.jpg",
+      "badge": null
+     }
+    ]
+   }
+  ],
+  "categoryChips": [
+   [
+    "chevron_left",
+    null
+   ],
+   [
+    "chevron_right",
+    null
+   ]
+  ],
+  "agenda": [
+   {
+    "tag": "ARTICLE",
+    "text": "Pekan Buku Jawa Barat 2026: Temu Penulis & Penerbit calendar_today 28 Nov – 05 Des 2026 | ",
+    "img": "../../assets/events/event-book-fair.jpg",
+    "href": "agenda_berita_literasi_desktop.html"
+   },
+   {
+    "tag": "ARTICLE",
+    "text": "Festival Dongeng & Literasi Anak Pasundan calendar_today 12 Desember 2026 | 10:00 - 15:00 ",
+    "img": "../../assets/events/event-children-story.jpg",
+    "href": "agenda_berita_literasi_desktop.html"
+   },
+   {
+    "tag": "ARTICLE",
+    "text": "Bincang Buku: Masa Depan Penerbitan & Ekosistem E-Book calendar_today 18 Desember 2026 | 1",
+    "img": "../../assets/events/event-community.jpg",
+    "href": "agenda_berita_literasi_desktop.html"
+   },
+   {
+    "tag": "ARTICLE",
+    "text": "Lokakarya Penulisan Buku Akademik & Monograf Ber-ISBN calendar_today 22 Desember 2026 | 09",
+    "img": "../../assets/events/event-webinar.jpg",
+    "href": "agenda_berita_literasi_desktop.html"
+   }
+  ]
+ },
+ "katalog": {
+  "facets": {
+   "aside": 8763,
+   "checkboxes": [
+    [
+     "cat-all",
+     "",
+     "on",
+     true,
+     "Semua Kategori (12)"
+    ],
+    [
+     "",
+     "",
+     "on",
+     false,
+     "Pendidikan (3)"
+    ],
+    [
+     "",
+     "",
+     "on",
+     false,
+     "Sastra & Fiksi (3)"
+    ],
+    [
+     "",
+     "",
+     "on",
+     false,
+     "Budaya & Tradisi (3)"
+    ],
+    [
+     "",
+     "",
+     "on",
+     false,
+     "Bisnis & Ekonomi (3)"
+    ],
+    [
+     "",
+     "",
+     "on",
+     false,
+     "Kiblat Buku Utama (3)"
+    ],
+    [
+     "",
+     "",
+     "on",
+     false,
+     "UPI Press (3)"
+    ],
+    [
+     "",
+     "",
+     "on",
+     false,
+     "ITB Press (3)"
+    ],
+    [
+     "",
+     "",
+     "on",
+     false,
+     "Geger Sunten (3)"
+    ]
+   ],
+   "selects": [
+    [
+     "catalog-sort-select",
+     [
+      [
+       "az",
+       "Urutkan: Judul (A–Z)"
+      ],
+      [
+       "za",
+       "Urutkan: Judul (Z–A)"
+      ],
+      [
+       "newest",
+       "Terbaru Rilis"
+      ],
+      [
+       "price_low",
+       "Harga Terendah"
+      ],
+      [
+       "price_high",
+       "Harga Tertinggi"
+      ]
+     ]
+    ]
+   ],
+   "counters": [
+    [
+     "cat-all",
+     ""
+    ]
+   ],
+   "viewButtons": [
+    "btn-view-grid",
+    "btn-view-list"
+   ],
+   "searchInputs": [
+    "catalog-search-input"
+   ],
+   "sortSelect": "<select id=\"catalog-sort-select\" class=\"w-full h-11 pl-3.5 pr-9 rounded-xl bg-surface-neutral border border-border-subtle text-[13.5px] font-semibold text-ink-body outline-none focus:border-primary fo"
+  },
+  "state": {
+   "searchQuery": "",
+   "selectedCategories": [],
+   "selectedPublishers": [],
+   "minPrice": 20000,
+   "maxPrice": 100000,
+   "sortBy": "az",
+   "viewMode": "grid",
+   "currentPage": 1,
+   "pageSize": 12
+  },
+  "books": [
+   {
+    "id": "B01",
+    "title": "Laskar Aksara Pasundan",
+    "author": "Ayi R. Kurnia",
+    "category": "Sastra & Fiksi",
+    "publisher": "Kiblat Buku Utama",
+    "price": 45000,
+    "cover": "../../assets/covers/laskar-aksara-pasundan.jpg",
+    "year": 2024,
+    "detailUrl": "detail_buku_desktop.html"
+   },
+   {
+    "id": "B02",
+    "title": "Pendidikan Karakter Sunda",
+    "author": "Dr. Cecep Hidayat, M.Pd.",
+    "category": "Pendidikan",
+    "publisher": "UPI Press",
+    "price": 58000,
+    "cover": "../../assets/covers/B02.jpg",
+    "year": 2023,
+    "detailUrl": "detail_buku_desktop.html"
+   },
+   {
+    "id": "B03",
+    "title": "Bumi Parahyangan: Narasi Alam",
+    "author": "Prof. Didi Supardi",
+    "category": "Budaya & Tradisi",
+    "publisher": "ITB Press",
+    "price": 74000,
+    "cover": "../../assets/covers/B03.jpg",
+    "year": 2024,
+    "detailUrl": "detail_buku_desktop.html"
+   },
+   {
+    "id": "B04",
+    "title": "Antologi Puisi Lembayung",
+    "author": "Dewi Sartika Putri",
+    "category": "Sastra & Fiksi",
+    "publisher": "Geger Sunten",
+    "price": 38000,
+    "cover": "../../assets/covers/B04.jpg",
+    "year": 2022,
+    "detailUrl": "detail_buku_desktop.html"
+   },
+   {
+    "id": "B05",
+    "title": "Menelusuri Jejak Sejarah Priangan",
+    "author": "Prof. Sobana Hardjasaputra",
+    "category": "Budaya & Tradisi",
+    "publisher": "Kiblat Buku Utama",
+    "price": 52000,
+    "cover": "../../assets/covers/B05.jpg",
+    "year": 2023,
+    "detailUrl": "detail_buku_desktop.html"
+   },
+   {
+    "id": "B06",
+    "title": "Strategi Wirausaha Kreatif Era Digital",
+    "author": "Rian Anggoro, M.B.A.",
+    "category": "Bisnis & Ekonomi",
+    "publisher": "ITB Press",
+    "price": 62000,
+    "cover": "../../assets/covers/B06.jpg",
+    "year": 2024,
+    "detailUrl": "detail_buku_desktop.html"
+   },
+   {
+    "id": "B07",
+    "title": "Manajemen Keuangan UMKM Daerah",
+    "author": "Hendra Setiawan, S.E.",
+    "category": "Bisnis & Ekonomi",
+    "publisher": "UPI Press",
+    "price": 49000,
+    "cover": "../../assets/covers/B07.jpg",
+    "year": 2023,
+    "detailUrl": "detail_buku_desktop.html"
+   },
+   {
+    "id": "B08",
+    "title": "Kamus Undak Usuk Basa Sunda",
+    "author": "Drs. Yayat Sudaryat",
+    "category": "Pendidikan",
+    "publisher": "Geger Sunten",
+    "price": 48000,
+    "cover": "../../assets/covers/B08.jpg",
+    "year": 2021,
+    "detailUrl": "detail_buku_desktop.html"
+   },
+   {
+    "id": "B09",
+    "title": "Ekonomi Kerakyatan Jawa Barat",
+    "author": "Dr. Ahmad Fauzi",
+    "category": "Bisnis & Ekonomi",
+    "publisher": "UPI Press",
+    "price": 65000,
+    "cover": "../../assets/covers/B09.jpg",
+    "year": 2024,
+    "detailUrl": "detail_buku_desktop.html"
+   },
+   {
+    "id": "B10",
+    "title": "Filsafat Silih Asih Silih Asuh",
+    "author": "K.H. Toto Toharudin",
+    "category": "Budaya & Tradisi",
+    "publisher": "Kiblat Buku Utama",
+    "price": 42000,
+    "cover": "../../assets/covers/B10.jpg",
+    "year": 2022,
+    "detailUrl": "detail_buku_desktop.html"
+   },
+   {
+    "id": "B11",
+    "title": "Metodologi Penelitian Bahasa Daerah",
+    "author": "Dr. Nani Darmayanti",
+    "category": "Pendidikan",
+    "publisher": "UPI Press",
+    "price": 56000,
+    "cover": "../../assets/covers/B11.jpg",
+    "year": 2023,
+    "detailUrl": "detail_buku_desktop.html"
+   },
+   {
+    "id": "B12",
+    "title": "Kumpulan Cerpen Pasundan Kiwari",
+    "author": "Dadan Sutisna",
+    "category": "Sastra & Fiksi",
+    "publisher": "Geger Sunten",
+    "price": 39000,
+    "cover": "../../assets/covers/B12.jpg",
+    "year": 2024,
+    "detailUrl": "detail_buku_desktop.html"
+   }
+  ],
+  "renderedCards": 12,
+  "pagination": "Menampilkan 1 – 12 dari 12 buku chevron_left Sebelumnya 1 Selanjutnya chevron_right",
+  "resultSummary": null
+ },
+ "detail": {
+  "sections": [
+   {
+    "i": 0,
+    "id": "book-detail",
+    "h2": [],
+    "articles": 0,
+    "len": 4830
+   },
+   {
+    "i": 1,
+    "id": null,
+    "h2": [
+     "Sinopsis",
+     "Detail Buku"
+    ],
+    "articles": 0,
+    "len": 3304
+   },
+   {
+    "i": 2,
+    "id": "section-rating",
+    "h2": [
+     "Ulasan Pembaca"
+    ],
+    "articles": 3,
+    "len": 10101
+   },
+   {
+    "i": 3,
+    "id": null,
+    "h2": [
+     "Buku Terkait"
+    ],
+    "articles": 4,
+    "len": 7640
+   }
+  ],
+  "book": {
+   "dataBookId": "BK-01",
+   "h1": "Laskar Aksara Pasundan",
+   "texts": [
+    "Karya Ayi R. Kurnia",
+    "Ayi R. Kurnia",
+    "Penerbit Kiblat Buku Utama",
+    "Tahun Terbit 2024",
+    "Bahasa Indonesia & Sunda",
+    "268 Halaman",
+    "Harga Lisensi Baca",
+    "shopping_bag",
+    "Tambah ke Keranjang",
+    "book_2",
+    "Baca Cuplikan",
+    "favorite_border",
+    "flag",
+    "Laporkan"
+   ]
+  },
+  "related": [
+   {
+    "title": "Pendidikan Karakter Sunda",
+    "author": "Dr. Cecep Hidayat, M.Pd.",
+    "price": "Rp 58.000",
+    "cover": "../../assets/covers/B02.jpg",
+    "href": "katalog_buku_desktop.html"
+   },
+   {
+    "title": "Bumi Parahyangan: Narasi Tanah Pasundan",
+    "author": "Prof. Didi Supardi",
+    "price": "Rp 74.000",
+    "cover": "../../assets/covers/B03.jpg",
+    "href": "katalog_buku_desktop.html"
+   },
+   {
+    "title": "Strategi Wirausaha Kreatif Era Digital",
+    "author": "Rian Anggoro, M.B.A.",
+    "price": "Rp 62.000",
+    "cover": "../../assets/covers/B06.jpg",
+    "href": "katalog_buku_desktop.html"
+   },
+   {
+    "title": "Antologi Puisi Lembayung Bandung",
+    "author": "Dewi Sartika Putri",
+    "price": "Rp 38.000",
+    "cover": "../../assets/covers/B04.jpg",
+    "href": "katalog_buku_desktop.html"
+   }
+  ],
+  "reviews": [
+   "Gilang Nugraha 12 Januari 2025 more_horiz Pembahasan mengenai naskah kuno Priang",
+   "Ratih Wulandari 28 Desember 2024 more_horiz Penjelasan filosofis tentang lambang",
+   "Fajar Ashari 19 Desember 2024 more_horiz Penceritaan sejarah lokal yang dikemas ",
+   "Penceritaan sejarah lokal yang dikemas dalam bentuk narasi fiksi membuat topik f"
+  ],
+  "ratingLabels": {
+   "1": "Sangat kurang (1 bintang)",
+   "2": "Kurang (2 bintang)",
+   "3": "Cukup (3 bintang)",
+   "4": "Bagus (4 bintang)",
+   "5": "Sangat bagus (5 bintang)"
+  },
+  "reasons": {
+   "comment": null
+  }
+ },
+ "preview": {
+  "samplePages": [
+   {
+    "num": 1,
+    "chapter": "Bab 1",
+    "title": "Jejak Aksara di Kaki Gunung Manglayang",
+    "paragraphs": [
+     "Kabut tipis masih merayap lambat di lembah Palasari saat fajar memecah siluet Gunung Manglayang. Hawa dingin khas dataran tinggi Bandung Timur menusuk hingga ke serat benang jaket rajut yang kukenakan. Di hadapanku, sebuah peti kayu jati berukir sulur daun sirih teronggok di sudut surau tua berdinding sasak bambu.",
+     "Wangi minyak cengkeh menguar seketika kait kuningan peti tersebut berderit terbuka, menandai pertemuan pertamaku dengan lembaran lontar yang nyaris dilupakan peradaban zaman modern.",
+     "Pak Tua Rusdi menyeka kacamata bundarnya dengan ujung sarung poleng. Tangannya yang bergetar hati-hati membuka helaian kain mori putih pembalut naskah kuno tersebut. Guratan aksara Sunda Buhun tampak hitam legam, terukir menggunakan pisau pangot dengan presisi yang mencengangkan bagi siapa pun yang memahaminya.",
+     "“Ini naskah titipan karuhun, Cep Dani,” tutur Pak Rusdi serak namun sarat ketakziman. “Disimpan turun-temurun sejak kakek buyut saya bertugas sebagai juru rawat naskah di kawasan lereng timur. Dulu, para sesepuh membacanya dengan tembang pupuh setiap kali musim tanam padi dan panen raya tiba.”",
+     "Aku mendekatkan lampu senter kecil ke permukaan daun tal. Serat-serat alaminya masih kokoh meski tepiannya mulai rapuh dimakan usia. Huruf-huruf bersudut tegas itu seolah hidup, mengisahkan kembali peristiwa ratusan tahun silam ketika para juru tulis mandala menggoreskan catatan di tengah keheningan pertapaan lereng gunung.",
+     "Catatan kecil di ujung lempir lontar menunjukkan penanggalan candrasangkala yang dipadankan dengan abad ke-16 Masehi. Rasa kagum bercampur getar tanggung jawab bergolak di dadaku; kami bukan sekadar menemukan artefak tua, melainkan membuka kembali gerbang dialog dengan peradaban masa lalu yang sarat kearifan ekologis."
+    ]
+   },
+   {
+    "num": 2,
+    "chapter": "Bab 1",
+    "title": "Aroma Daluwang dan Jejak Masa Lalu",
+    "paragraphs": [
+     "“Naskah ieu sanes saukur guratan aksara, Cep,” bisik Pak Rusdi perlahan, netranya menatap lurus ke arah kabut yang perlahan tersibak sinar mentari pagi di ufuk timur. “Ieu mangrupikeun napas jeung kearifan kumaha karuhun urang ngajaga leuweung, cai, jeung martabat bangsa.”",
+     "Aku menahan napas seraya menyentuh tepi daun tal yang kering itu. Dinginnya permukaan lontar seolah menghantarkan getaran ketabahan para juru tulis masa silam yang mendedikasikan hidupnya demi merawat ingatan bersama.",
+     "Di luar surau, suara gemericik aliran sungai kecil membelah kebun bambu. Lembur ini tampak begitu tenang, seakan terisolasi dari keriuhan kota Bandung yang berjarak hanya puluhan kilometer di sebelah barat.",
+     "Selain lempir lontar beraksara Sunda kuno, di dasar peti itu terselip beberapa lembar kertas daluwang cokelat keemasan. Teksturnya berserat kasar khas kulit pohon saeh yang ditempa berulang kali di atas landasan batu kali, dengan tinta jelaga damar yang masih berkilau pekat.",
+     "“Daluwang ini memuat petuah tata kelola air dan batas wilayah leuweung larangan,” tambah Pak Rusdi seraya menunjuk sketsa peta kuno bertinta merah mangsi. “Orang tua baheula tak pernah berani menebang pohon sembarangan karena hukum adatnya terpahat jelas di lembaran ini. Jika hulu sungai dirusak, niscaya petaka kemarau panjang akan menimpa seisi lembah.”",
+     "Aku membuka kamera dokumentasi dan meletakkan meteran ukur kalibrasi warna di samping naskah daluwang. Proses alih wahana digital ini terasa sakral; setiap bidikan resolusi tinggi adalah ikhtiar memastikan bahwa bait-bait petuah leluhur Pasundan tak akan lenyap ditelan pelapukan zaman."
+    ]
+   },
+   {
+    "num": 3,
+    "chapter": "Bab 2",
+    "title": "Prasasti Kawali dan Rahasia Pasangan",
+    "paragraphs": [
+     "Perjalanan kami berlanjut menuju kawasan cagar budaya Astana Gede di Kawali. Deretan batu tegak berlumut menaungi kompleks yang dahulu menjadi pusat peradaban Galuh. Udara lembap hutan larangan menyambut derap langkah kami yang kian melambat.",
+     "Di atas permukaan batu andesit kelabu, guratan kalimat pembuka prasasti terpatri tegas: 'Aya ma nu ngarep-ngarep karahayuan, hayu pake tindak utama...' Pesan moral luhur itu seakan tak pernah lekang oleh waktu.",
+     "Dani, mahasiswa filologi yang menemaniku, membuka buku catatannya dengan antusias. Setiap lekuk aksara dipetakan secara teliti ke dalam sistem dokumentasi digital, menghubungkan masa silam dengan peradaban modern.",
+     "Kami mengamati teknik pahatan relief aksara yang begitu halus. Berbeda dengan naskah daun lontar, pahatan batu Kawali memiliki proporsi tegak dan proporsional, mencerminkan kedewasaan tradisi literasi keraton Galuh pada masa kepemimpinan Prabu Niskala Wastu Kancana.",
+     "“Perhatikan tanda vokalisasi panyecek dan panglayar di baris ketiga,” bisik Dani sambil membandingkan foto makro dengan tabel aksara baku. “Sistem fonetik yang mereka susun telah mencapai tingkat ketelitian tata bahasa yang sangat matang, menandakan tingginya peradaban tulis tatar Sunda pada masa itu.”",
+     "Hembusan angin pegunungan menerbangkan dedaunan kering di atas pelataran batu prasasti. Di tempat hening inilah kami menyadari bahwa prasasti batu ini bukanlah monumen penaklukan, melainkan piagam etika kemanusiaan yang menuntun para pemimpin agar senantiasa berbuat kebajikan bagi rakyatnya."
+    ]
+   },
+   {
+    "num": 4,
+    "chapter": "Bab 2",
+    "title": "Menjaga Denyut Naskah Nusantara",
+    "paragraphs": [
+     "Menjelang petang, hujan rintik-rintik mulai membasahi dedaunan mahoni di pelataran situs. Kami berteduh di bawah cungkup prasasti, menyaksikan bagaimana aksara kuno ini tetap tegak berdiri meski ratusan musim telah berganti.",
+     "Perjalanan ini bukan sekadar pencarian naskah tua, melainkan ikhtiar memahami bagaimana kearifan lokal dapat terus memberi inspirasi bagi generasi yang hidup di era serba cepat.",
+     "Setiap baris kalimat dalam lembaran lontar dan pahatan batu mengajarkan satu hal mendasar: martabat suatu peradaban tercermin dari kesungguhannya menjaga warisan ilmu dan aksaranya.",
+     "Saat layar laptop dinyalakan kembali di bawah temaram lampu surau Kawali, deretan aksara digital hasil pemindaian berpendar terang di hadapan kami. Pertemuan antara batu prasasti abad pertengahan dan piksel layar Web Reader modern melahirkan jembatan kebudayaan baru yang mengharukan.",
+     "“Jika naskah-naskah ini hanya tersimpan di ruang museum tertutup, lambat laun mereka akan sunyi dan terlupakan,” tutur Dani seraya merapikan berkas transliterasi. “Namun ketika generasi muda dapat membaca cuplikan naskahnya langsung lewat gawai dengan kenyamanan tipografi hari ini, denyut kearifan itu akan terus hidup di sanubari mereka.”",
+     "Kami beranjak melangkah pulang meninggalkan kompleks cagar budaya saat gema genta senja menyatu dengan kabut kaki gunung. Di dalam media penyimpanan kami kini tersimpan rekaman digital berharga yang siap dibagikan kepada seluruh pembaca dan pegiat literasi di tanah air."
+    ]
+   }
+  ],
+  "progress": "25%",
+  "controls": [
+   [
+    "btn-prev",
+    null,
+    "chevron_left Sebelumnya"
+   ],
+   [
+    "btn-next",
+    null,
+    "Berikutnya chevron_right"
+   ],
+   [
+    "btnAddToCart",
+    null,
+    "shopping_bag Beli Buku P"
+   ]
+  ],
+  "header": null
+ }
+}

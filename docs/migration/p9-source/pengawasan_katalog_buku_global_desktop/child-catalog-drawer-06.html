@@ -1,0 +1,59 @@
+<aside id="catalog-drawer" class="fixed right-0 top-0 z-[70] flex h-full w-full max-w-full flex-col border-l border-border bg-white shadow-[-16px_0_40px_rgba(34,34,37,0.12)] sm:max-w-[540px]" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+  <header class="flex items-start justify-between gap-4 border-b border-divider px-5 py-4">
+    <div class="min-w-0">
+      <h2 id="drawer-title" class="text-[17px] font-bold tracking-tight text-ink">Detail Laporan Buku</h2>
+      <p class="num mt-0.5 text-[12.5px] text-muted" id="drawer-id">-</p>
+    </div>
+    <button type="button" id="drawer-close" aria-label="Tutup detail" class="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[18px]">close</span>
+    </button>
+  </header>
+
+  <div class="flex-1 space-y-5 overflow-y-auto px-5 py-4">
+    <section>
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Informasi Buku</h3>
+      <div class="mt-2 flex items-start gap-3">
+        <div class="grid h-20 w-14 shrink-0 place-items-center rounded border border-border bg-neutral">
+          <span class="material-symbols-outlined text-[20px] text-muted">menu_book</span>
+        </div>
+        <div class="min-w-0">
+          <p class="text-[14px] font-semibold leading-snug text-ink" id="drawer-book">-</p>
+          <p class="mt-0.5 text-[12.5px] text-muted" id="drawer-author">-</p>
+          <p class="num mt-0.5 text-[12.5px] text-muted" id="drawer-isbn">-</p>
+          <p class="mt-1 text-[12.5px] font-semibold text-ink" id="drawer-pub-status">-</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Penerbit</h3>
+      <p class="mt-1.5 text-[13.5px] font-semibold text-ink" id="drawer-publisher">-</p>
+      <p class="mt-0.5 text-[12.5px] text-muted" id="drawer-publisher-meta">-</p>
+    </section>
+
+    <section class="border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Detail Laporan</h3>
+      <dl class="mt-2 space-y-2 text-[13px]">
+        <div class="flex justify-between gap-3"><dt class="text-muted">Jenis laporan</dt><dd class="text-right font-medium text-ink" id="drawer-type">-</dd></div>
+        <div class="flex justify-between gap-3"><dt class="text-muted">Dilaporkan</dt><dd class="num text-right text-ink" id="drawer-date">-</dd></div>
+        <div class="flex justify-between gap-3"><dt class="text-muted">Format berkas</dt><dd class="num text-right text-ink" id="drawer-format">-</dd></div>
+        <div class="hidden justify-between gap-3" id="drawer-section-row"><dt class="text-muted">Bagian bermasalah</dt><dd class="num text-right text-ink" id="drawer-section">-</dd></div>
+      </dl>
+      <p class="mt-2 text-[12px] font-semibold text-muted">Keterangan pelapor</p>
+      <p class="review-text mt-1 rounded-xl border border-border p-3.5 text-[13.5px] leading-relaxed text-ink" id="drawer-notes">-</p>
+    </section>
+
+    <section class="border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Hasil Pemeriksaan</h3>
+      <p class="mt-1.5 text-[13px] leading-relaxed text-muted">Periksa kesesuaian berkas e-book dan hak cipta pada laporan ini sebelum menutup laporan atau menonaktifkan buku.</p>
+      <p id="drawer-decision" class="mt-2 hidden text-[13px] font-semibold text-ink">-</p>
+    </section>
+  </div>
+
+  <footer class="border-t border-divider px-5 py-3">
+    <div class="flex flex-wrap items-center justify-end gap-2">
+      <button type="button" id="btn-close-report" class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[13.5px] font-semibold text-ink hover:bg-neutral disabled:cursor-not-allowed disabled:opacity-40">Tutup Laporan</button>
+      <button type="button" id="btn-takedown" class="focus-ring inline-flex h-10 items-center rounded-xl bg-[#B42318] px-4 text-[13.5px] font-semibold text-white hover:bg-[#971B13] disabled:cursor-not-allowed disabled:opacity-40">Nonaktifkan Buku</button>
+    </div>
+  </footer>
+</aside>

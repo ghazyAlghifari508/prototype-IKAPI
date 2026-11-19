@@ -1,0 +1,571 @@
+<script>
+(function () {
+  'use strict';
+
+  var $ = function (id) { return document.getElementById(id); };
+  var rupiah = function (n) { return 'Rp ' + Number(n).toLocaleString('id-ID'); };
+  var MAX_BYTES = 5 * 1024 * 1024;
+  var ALLOWED = ['application/pdf', 'image/jpeg', 'image/png'];
+
+  /* Demo payout dataset. Amounts and royalty figures come from the existing page.
+     Account for PT Kiblat follows the publisher profile/invoice source (•••• 4892). */
+  var BASE_PAYOUTS = [
+    {
+      id: 'WD-2026-1104', publisher: 'PT Kiblat Buku Utama', member: '041/JBA/2020',
+      bank: 'BCA', account: '5220394892', holder: 'PT Kiblat Buku Utama',
+      amount: 645000, status: 'proses', date: '2026-11-14',
+      royalty: { gross: 780000, previous: 135000, requested: 645000, remaining: 0 },
+      reason: ''
+    },
+    {
+      id: 'WD-2026-1102', publisher: 'PT Mizan Pustaka Utama', member: '112/JBA/2019',
+      bank: 'BCA', account: '8849211120', holder: 'PT Mizan Pustaka Utama',
+      amount: 4250000, status: 'selesai', date: '2026-11-10', proofName: 'bukti-transfer-4250000.jpg',
+      royalty: null, reason: ''
+    },
+    {
+      id: 'WD-2026-1098', publisher: 'CV Angkasa Bandung', member: '087/JBA/2018',
+      bank: 'Bank Mandiri', account: '1300088417', holder: 'CV Angkasa Bandung',
+      amount: 1820000, status: 'selesai', date: '2026-11-08', proofName: 'bukti-transfer-1820000.jpg',
+      royalty: null, reason: ''
+    },
+    {
+      id: 'WD-2026-1095', publisher: 'Penerbit Lentera Ilmu', member: '204/JBA/2022',
+      bank: 'BNI', account: '0912320107', holder: 'Penerbit Lentera Ilmu',
+      amount: 950000, status: 'ditolak', date: '2026-11-05',
+      royalty: null, reason: 'Data rekening tujuan belum sesuai dengan dokumen penerbit.'
+    }
+  ];
+
+  var payouts = BASE_PAYOUTS.map(function (p) { return Object.assign({}, p); });
+  var ui = { tab: 'proses', query: '', bank: 'all', sort: 'newest', page: 1, pageSize: 8, demo: 'A' };
+  var selectedId = null;
+  var finalizing = false;
+  var lastTrigger = null;
+
+  /* ---------- helpers ---------- */
+  function mask(acc) { return '•••• ' + String(acc).slice(-4); }
+  function fullAcc(acc) { return String(acc).replace(/(\d{4})(?=\d)/g, '$1 '); }
+  function fmtDate(iso) {
+    var d = new Date(iso + 'T00:00:00+07:00');
+    return new Intl.DateTimeFormat('id-ID', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Asia/Jakarta' }).format(d);
+  }
+  function statusLabel(s) { return s === 'proses' ? 'Dalam Proses' : (s === 'selesai' ? 'Selesai' : 'Ditolak'); }
+  function statusClass(s) {
+    if (s === 'selesai') return 'text-[12px] font-semibold text-[#0F7B4F]';
+    if (s === 'ditolak') return 'text-[12px] font-semibold text-[#B42318]';
+    return 'text-[12px] font-semibold text-muted';
+  }
+  function note(t) { var el = $('page-note'); el.textContent = t || ''; el.classList.toggle('hidden', !t); }
+  function toast(t) {
+    $('toast-text').textContent = t;
+    $('toast').classList.remove('hidden');
+    window.clearTimeout(toast.t);
+    toast.t = window.setTimeout(function () { $('toast').classList.add('hidden'); }, 2800);
+  }
+  function fmtSize(b) { return (b / 1024 / 1024).toFixed(1) + ' MB'; }
+
+  /* ---------- filtering ---------- */
+  function filtered() {
+    var q = ui.query.trim().toLowerCase();
+    var list = payouts.filter(function (p) {
+      if (p.status !== ui.tab) return false;
+      var okBank = ui.bank === 'all' || p.bank === ui.bank;
+      var okSearch = !q || (p.publisher + ' ' + p.id + ' ' + p.bank).toLowerCase().indexOf(q) !== -1;
+      return okBank && okSearch;
+    });
+    list.sort(function (a, b) {
+      if (ui.sort === 'amount') return b.amount - a.amount;
+      if (ui.sort === 'oldest') return a.date < b.date ? -1 : 1;
+      return a.date > b.date ? -1 : 1;
+    });
+    return list;
+  }
+
+  function paintRejectMeta(parts) {
+    var el = $('reject-meta');
+    el.textContent = '';
+    el.className = 'num mt-1 flex flex-wrap items-center gap-2 text-[12.5px] text-muted';
+    parts.forEach(function (t, i) {
+      if (i) {
+        var dv = document.createElement('span');
+        dv.className = 'inline-block h-3 w-px bg-border';
+        el.appendChild(dv);
+      }
+      var sp = document.createElement('span');
+      sp.textContent = t;
+      el.appendChild(sp);
+    });
+  }
+
+  function paintTabs() {
+    var counts = { proses: 0, selesai: 0, ditolak: 0 };
+    payouts.forEach(function (p) { counts[p.status]++; });
+    document.querySelectorAll('.tab-btn').forEach(function (btn) {
+      var t = btn.getAttribute('data-tab');
+      btn.querySelector('.tab-count').textContent = '(' + counts[t] + ')';
+      var on = t === ui.tab;
+      btn.setAttribute('aria-selected', on ? 'true' : 'false');
+      btn.className = 'tab-btn focus-ring rounded-lg px-3 py-1.5 text-[12.5px] ' +
+        (on ? 'bg-white font-bold text-primary shadow-sm' : 'font-semibold text-muted hover:text-ink');
+    });
+
+    var pending = payouts.filter(function (p) { return p.status === 'proses'; });
+    var total = pending.reduce(function (a, p) { return a + p.amount; }, 0);
+    var sum = $('payout-summary');
+    sum.textContent = '';
+    sum.className = 'flex flex-wrap items-center gap-2 num mb-4 text-[13px] text-muted';
+    var sumCount = document.createElement('span');
+    sumCount.textContent = pending.length + ' pengajuan menunggu';
+    var sumDiv = document.createElement('span');
+    sumDiv.className = 'inline-block h-3 w-px bg-border';
+    var sumTotal = document.createElement('span');
+    sumTotal.textContent = rupiah(total);
+    sum.appendChild(sumCount);
+    sum.appendChild(sumDiv);
+    sum.appendChild(sumTotal);
+  }
+
+  function paintBankOptions() {
+    var sel = $('bank-filter');
+    var current = ui.bank;
+    var banks = [];
+    payouts.forEach(function (p) { if (banks.indexOf(p.bank) === -1) banks.push(p.bank); });
+    sel.innerHTML = '';
+    var all = document.createElement('option');
+    all.value = 'all'; all.textContent = 'Semua Bank';
+    sel.appendChild(all);
+    banks.forEach(function (b) {
+      var o = document.createElement('option');
+      o.value = b; o.textContent = b;
+      sel.appendChild(o);
+    });
+    sel.value = banks.indexOf(current) !== -1 || current === 'all' ? current : 'all';
+    if (sel.value !== current) ui.bank = sel.value;
+  }
+
+  /* ---------- table ---------- */
+  function render() {
+    var list = filtered();
+    var pages = Math.max(1, Math.ceil(list.length / ui.pageSize));
+    if (ui.page > pages) ui.page = pages;
+    var start = (ui.page - 1) * ui.pageSize;
+    var visible = list.slice(start, start + ui.pageSize);
+
+    var tbody = $('payout-rows');
+    tbody.innerHTML = '';
+
+    visible.forEach(function (p) {
+      var tr = document.createElement('tr');
+      tr.className = 'border-b border-divider align-middle transition-colors hover:bg-soft';
+      tr.setAttribute('data-payout-id', p.id);
+
+      var tdPub = document.createElement('td');
+      tdPub.className = 'px-5 py-3.5 lg:px-6';
+      var name = document.createElement('p');
+      name.className = 'text-[13.5px] font-semibold text-ink';
+      name.textContent = p.publisher;
+      var meta = document.createElement('p');
+      meta.className = 'num mt-0.5 text-[12px] text-muted';
+      var metaDiv = document.createElement('span');
+      metaDiv.className = 'mx-1.5 inline-block h-3 w-px bg-border';
+      var metaMember = document.createElement('span');
+      metaMember.textContent = p.member;
+      meta.textContent = p.id;
+      meta.className = 'num mt-0.5 flex items-center text-[12px] text-muted';
+      meta.appendChild(metaDiv);
+      meta.appendChild(metaMember);
+      tdPub.appendChild(name);
+      tdPub.appendChild(meta);
+
+      var tdBank = document.createElement('td');
+      tdBank.className = 'px-4 py-3.5 text-ink';
+      tdBank.textContent = p.bank;
+
+      var tdAcc = document.createElement('td');
+      tdAcc.className = 'num px-4 py-3.5 text-muted';
+      tdAcc.textContent = mask(p.account);
+
+      var tdAmount = document.createElement('td');
+      tdAmount.className = 'num whitespace-nowrap px-4 py-3.5 text-right font-semibold text-ink';
+      tdAmount.textContent = rupiah(p.amount);
+
+      var tdStatus = document.createElement('td');
+      tdStatus.className = 'px-4 py-3.5';
+      var chip = document.createElement('span');
+      chip.className = statusClass(p.status);
+      chip.textContent = statusLabel(p.status);
+      tdStatus.appendChild(chip);
+
+      var tdAction = document.createElement('td');
+      tdAction.className = 'px-4 py-3.5 pr-5 text-right lg:pr-6';
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'focus-ring rounded-lg px-2.5 py-1.5 text-[12.5px] font-semibold text-primary transition-colors hover:bg-soft';
+      btn.textContent = p.status === 'proses' ? 'Periksa' : 'Lihat Detail';
+      btn.setAttribute('data-open', p.id);
+      tdAction.appendChild(btn);
+
+      tr.appendChild(tdPub); tr.appendChild(tdBank); tr.appendChild(tdAcc);
+      tr.appendChild(tdAmount); tr.appendChild(tdStatus); tr.appendChild(tdAction);
+      tbody.appendChild(tr);
+    });
+
+    var empty = payouts.length === 0;
+    var noResults = !empty && list.length === 0;
+    tbody.closest('table').classList.toggle('hidden', empty || noResults);
+    $('state-empty').classList.toggle('hidden', !empty);
+    $('state-noresults').classList.toggle('hidden', !noResults);
+
+    $('result-summary').textContent = 'Menampilkan ' + visible.length + ' dari ' + list.length + ' pengajuan';
+    $('page-current').textContent = String(ui.page);
+    $('page-prev').disabled = ui.page <= 1;
+    $('page-next').disabled = ui.page >= pages;
+    $('btn-clear-search').classList.toggle('hidden', !ui.query);
+    $('btn-clear-search').classList.toggle('grid', !!ui.query);
+
+    paintTabs();
+    syncDemoMenu();
+  }
+
+  /* ---------- drawer ---------- */
+  function byId(id) { return payouts.filter(function (p) { return p.id === id; })[0]; }
+
+  function openDrawer(p, trigger) {
+    selectedId = p.id;
+    lastTrigger = trigger || null;
+
+    $('drawer-id').textContent = p.id;
+    $('drawer-publisher').textContent = p.publisher;
+    $('drawer-amount').textContent = rupiah(p.amount);
+    $('drawer-status').textContent = statusLabel(p.status);
+    $('drawer-date').textContent = fmtDate(p.date);
+    $('drawer-bank').textContent = p.bank;
+    $('drawer-holder').textContent = p.holder;
+    $('drawer-account').textContent = fullAcc(p.account);
+
+    /* Royalty breakdown: only when the record actually has the figures. */
+    var hasRoyalty = !!p.royalty;
+    $('royalty-block').classList.toggle('hidden', !hasRoyalty);
+    $('royalty-unavailable').classList.toggle('hidden', hasRoyalty);
+    if (hasRoyalty) {
+      $('royalty-gross').textContent = rupiah(p.royalty.gross);
+      $('royalty-previous').textContent = rupiah(p.royalty.previous);
+      $('royalty-requested').textContent = rupiah(p.royalty.requested);
+      $('royalty-remaining').textContent = rupiah(p.royalty.remaining);
+      $('royalty-detail').classList.add('hidden');
+      $('royalty-chevron').textContent = 'expand_more';
+      $('btn-toggle-royalty').setAttribute('aria-expanded', 'false');
+    }
+
+    /* Rejection reason */
+    var rejected = p.status === 'ditolak';
+    $('reject-reason-block').classList.toggle('hidden', !rejected);
+    if (rejected) $('drawer-reason').textContent = p.reason || 'Tidak ada alasan tercatat.';
+
+    /* Proof section state (read-only: proof is uploaded by the publisher) */
+    var hasProof = !!p.proofName;
+    $('proof-stored').classList.toggle('hidden', !hasProof);
+    if (hasProof) $('stored-name').textContent = p.proofName;
+    $('proof-none').classList.toggle('hidden', hasProof);
+    $('proof-none').textContent = rejected
+      ? 'Pengajuan ditolak, penerbit tidak mengunggah bukti transfer.'
+      : 'Penerbit belum mengunggah bukti transfer untuk pengajuan ini.';
+
+    /* Actions */
+    $('btn-finalize').disabled = !editable;
+    $('btn-reject').disabled = !editable;
+    $('btn-finalize').textContent = editable ? 'Selesaikan Pencairan' : 'Pengajuan ' + statusLabel(p.status);
+
+    $('drawer-scrim').classList.remove('hidden');
+    $('payout-drawer').classList.add('is-open');
+    $('payout-drawer').setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    $('drawer-close').focus();
+  }
+
+  function closeDrawer() {
+    $('payout-drawer').classList.remove('is-open');
+    $('payout-drawer').setAttribute('aria-hidden', 'true');
+    $('drawer-scrim').classList.add('hidden');
+    document.body.style.overflow = '';
+    if (lastTrigger && document.contains(lastTrigger)) lastTrigger.focus();
+    lastTrigger = null;
+  }
+
+  $('drawer-close').addEventListener('click', closeDrawer);
+  $('drawer-scrim').addEventListener('click', closeDrawer);
+
+  document.addEventListener('click', function (e) {
+    var open = e.target.closest('[data-open]');
+    if (!open) return;
+    var p = byId(open.getAttribute('data-open'));
+    if (p) openDrawer(p, open);
+  });
+
+  $('btn-copy-account').addEventListener('click', function () {
+    var p = byId(selectedId);
+    if (!p) return;
+    var text = p.account;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { toast('Nomor rekening disalin.'); },
+        function () { toast('Nomor rekening: ' + text); });
+    } else {
+      toast('Nomor rekening: ' + text);
+    }
+  });
+
+  $('btn-toggle-royalty').addEventListener('click', function () {
+    var open = $('royalty-detail').classList.contains('hidden');
+    $('royalty-detail').classList.toggle('hidden', !open);
+    $('royalty-chevron').textContent = open ? 'expand_less' : 'expand_more';
+    this.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  /* ---------- stored proof preview ---------- */
+  $('btn-stored-preview').addEventListener('click', function () {
+    var body = $('preview-body');
+    body.innerHTML = '';
+    $('preview-title').textContent = 'Bukti transfer';
+    var img = document.createElement('img');
+    img.src = '../../assets/ilustration/bukti-transfer-demo.jpg';
+    img.alt = 'Bukti transfer pengajuan pencairan';
+    img.className = 'mx-auto max-h-[70vh] w-auto rounded-lg border border-border object-contain';
+    body.appendChild(img);
+    $('modal-preview').classList.remove('hidden');
+  });
+
+  document.querySelectorAll('[data-close-preview]').forEach(function (el) {
+    el.addEventListener('click', function () { $('modal-preview').classList.add('hidden'); });
+  });
+
+  /* ---------- finalize ---------- */
+  $('btn-finalize').addEventListener('click', function () {
+    var p = byId(selectedId);
+    if (!p || p.status !== 'proses') return;
+    $('finalize-publisher').textContent = p.publisher;
+    $('finalize-amount').textContent = rupiah(p.amount);
+    $('finalize-account').textContent = p.bank + ' ' + mask(p.account);
+    $('modal-finalize').classList.remove('hidden');
+  });
+
+  document.querySelectorAll('[data-close-finalize]').forEach(function (el) {
+    el.addEventListener('click', function () { $('modal-finalize').classList.add('hidden'); });
+  });
+
+  $('btn-confirm-finalize').addEventListener('click', function () {
+    if (finalizing) return;
+    var p = byId(selectedId);
+    if (!p) { $('modal-finalize').classList.add('hidden'); return; }
+
+    finalizing = true;
+    var btn = $('btn-confirm-finalize');
+    btn.disabled = true;
+    $('finalize-label').textContent = 'Memproses...';
+
+    window.setTimeout(function () {
+      finalizing = false;
+      btn.disabled = false;
+      $('finalize-label').textContent = 'Konfirmasi Penyelesaian';
+
+      p.status = 'selesai';
+      p.proofName = p.proofName || 'bukti-transfer.jpg';
+      $('modal-finalize').classList.add('hidden');
+      closeDrawer();
+      render();
+      toast('Pencairan ditandai selesai pada simulasi prototype ini.');
+    }, 700);
+  });
+
+  /* ---------- rejection ---------- */
+  $('btn-reject').addEventListener('click', function () {
+    var p = byId(selectedId);
+    if (!p || p.status !== 'proses') return;
+    paintRejectMeta([p.id, p.publisher, rupiah(p.amount)]);
+    $('reject-reason').value = '';
+    $('reject-error').classList.add('hidden');
+    $('modal-reject').classList.remove('hidden');
+    $('reject-reason').focus();
+  });
+
+  document.querySelectorAll('[data-close-reject]').forEach(function (el) {
+    el.addEventListener('click', function () { $('modal-reject').classList.add('hidden'); });
+  });
+
+  $('btn-confirm-reject').addEventListener('click', function () {
+    var reason = $('reject-reason').value.trim();
+    if (!reason) {
+      $('reject-error').classList.remove('hidden');
+      $('reject-reason').focus();
+      return;
+    }
+    $('reject-error').classList.add('hidden');
+
+    var p = byId(selectedId);
+    if (p) { p.status = 'ditolak'; p.reason = reason; }
+    $('modal-reject').classList.add('hidden');
+    closeDrawer();
+    render();
+    toast('Pengajuan ditolak pada simulasi prototype ini.');
+  });
+
+  /* ---------- toolbar ---------- */
+  document.querySelectorAll('.tab-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      ui.tab = btn.getAttribute('data-tab');
+      ui.page = 1;
+      render();
+    });
+  });
+  $('payout-search').addEventListener('input', function (e) {
+    ui.query = e.target.value;
+    ui.page = 1;
+    render();
+  });
+  $('btn-clear-search').addEventListener('click', function () {
+    ui.query = '';
+    $('payout-search').value = '';
+    ui.page = 1;
+    render();
+  });
+  $('bank-filter').addEventListener('change', function (e) {
+    ui.bank = e.target.value;
+    ui.page = 1;
+    render();
+  });
+  $('sort-order').addEventListener('change', function (e) {
+    ui.sort = e.target.value;
+    ui.page = 1;
+    render();
+  });
+  $('btn-reset-filter').addEventListener('click', function () {
+    ui.query = ''; ui.bank = 'all'; ui.sort = 'newest'; ui.page = 1;
+    $('payout-search').value = ''; $('bank-filter').value = 'all'; $('sort-order').value = 'newest';
+    render();
+  });
+  $('page-prev').addEventListener('click', function () { if (ui.page > 1) { ui.page--; render(); } });
+  $('page-next').addEventListener('click', function () { ui.page++; render(); });
+
+  /* ---------- demo scenarios ---------- */
+  var demoToggle = $('demo-toggle'), demoMenu = $('demo-menu');
+  function closeDemo() { demoMenu.classList.add('hidden'); demoToggle.setAttribute('aria-expanded', 'false'); }
+  function syncDemoMenu() {
+    document.querySelectorAll('.demo-item').forEach(function (b) {
+      var on = b.getAttribute('data-demo') === ui.demo;
+      b.setAttribute('aria-checked', on ? 'true' : 'false');
+      b.classList.toggle('bg-soft', on);
+      var c = b.querySelector('.demo-check');
+      if (c) c.classList.toggle('hidden', !on);
+    });
+  }
+
+  function applyDemo(s) {
+    ui.demo = s;
+    closeDrawer();
+    $('modal-finalize').classList.add('hidden');
+    $('modal-reject').classList.add('hidden');
+    note('');
+    payouts = BASE_PAYOUTS.map(function (p) { return Object.assign({}, p); });
+    ui.query = ''; ui.bank = 'all'; ui.sort = 'newest'; ui.page = 1;
+    $('payout-search').value = ''; $('sort-order').value = 'newest';
+    paintBankOptions();
+
+    if (s === 'A') { ui.tab = 'proses'; }
+    else if (s === 'B') { ui.tab = 'selesai'; }
+    else if (s === 'C') { ui.tab = 'ditolak'; }
+    else if (s === 'D') { ui.tab = 'proses'; render(); openDrawer(byId('WD-2026-1104'), $('demo-toggle')); return; }
+    else if (s === 'E') {
+      ui.tab = 'selesai'; render();
+      openDrawer(byId('WD-2026-1102'), $('demo-toggle'));
+      return;
+    } else if (s === 'F') {
+      ui.tab = 'proses'; render();
+      openDrawer(byId('WD-2026-1104'), $('demo-toggle'));
+      return;
+    } else if (s === 'G') {
+      ui.tab = 'proses'; render();
+      openDrawer(byId('WD-2026-1104'), $('demo-toggle'));
+      paintRejectMeta(['WD-2026-1104', 'PT Kiblat Buku Utama', rupiah(645000)]);
+      $('reject-reason').value = '';
+      $('reject-error').classList.add('hidden');
+      $('modal-reject').classList.remove('hidden');
+      $('reject-reason').focus();
+      return;
+    } else if (s === 'H') {
+      ui.tab = 'proses'; render();
+      openDrawer(byId('WD-2026-1104'), $('demo-toggle'));
+      $('btn-finalize').click();
+      return;
+    }
+
+    render();
+  }
+
+  demoToggle.addEventListener('click', function () {
+    var open = demoMenu.classList.contains('hidden');
+    demoMenu.classList.toggle('hidden', !open);
+    demoToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  demoMenu.addEventListener('click', function (e) {
+    var btn = e.target.closest('.demo-item');
+    if (!btn) return;
+    closeDemo();
+    applyDemo(btn.getAttribute('data-demo'));
+  });
+
+  /* ---------- notifications / sidebar / keyboard ---------- */
+  var notifBtn = $('btn-notif'), notifPanel = $('notif-panel');
+  notifBtn.addEventListener('click', function () {
+    var open = notifPanel.classList.contains('hidden');
+    notifPanel.classList.toggle('hidden', !open);
+    notifBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!demoMenu.contains(e.target) && !demoToggle.contains(e.target)) closeDemo();
+    if (!notifPanel.contains(e.target) && !notifBtn.contains(e.target)) {
+      notifPanel.classList.add('hidden');
+      notifBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (!$('modal-preview').classList.contains('hidden')) { $('modal-preview').classList.add('hidden'); return; }
+    if (!$('modal-reject').classList.contains('hidden')) { $('modal-reject').classList.add('hidden'); return; }
+    if (!$('modal-finalize').classList.contains('hidden')) { $('modal-finalize').classList.add('hidden'); return; }
+    if ($('payout-drawer').classList.contains('is-open')) { closeDrawer(); return; }
+    closeDemo();
+    notifPanel.classList.add('hidden');
+    notifBtn.setAttribute('aria-expanded', 'false');
+    closeSidebar();
+  });
+
+  var sidebar = $('publisher-sidebar'), scrim = $('sidebar-scrim'), toggle = $('sidebar-toggle');
+  function openSidebar() {
+    sidebar.classList.add('is-open');
+    scrim.classList.remove('hidden');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    var first = sidebar.querySelector('a');
+    if (first) first.focus();
+  }
+  function closeSidebar() {
+    if (!sidebar.classList.contains('is-open')) return;
+    sidebar.classList.remove('is-open');
+    scrim.classList.add('hidden');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    toggle.focus();
+  }
+  toggle.addEventListener('click', function () {
+    sidebar.classList.contains('is-open') ? closeSidebar() : openSidebar();
+  });
+  scrim.addEventListener('click', closeSidebar);
+  sidebar.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeSidebar); });
+
+  /* ---------- init (tab Dalam Proses) ---------- */
+  paintBankOptions();
+  render();
+})();
+</script>

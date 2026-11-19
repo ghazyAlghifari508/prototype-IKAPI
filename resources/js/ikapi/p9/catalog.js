@@ -1,0 +1,625 @@
+// catalog - Portal Administrator
+// Ported verbatim from docs/design/prototype-copy/admin/pengawasan_katalog_buku_global_desktop.html (inline <script>, 618 lines).
+// Only this wrapper is new: module scope and the app route names.
+import { onReady } from '../shared.js';
+
+onReady(function () {
+    if (!document.querySelector('#cat-search')) return;
+
+    (function () {
+      'use strict';
+
+      var $ = function (id) { return document.getElementById(id); };
+      var rupiah = function (n) { return 'Rp ' + Number(n).toLocaleString('id-ID'); };
+
+      /* Demo dataset carried over from the existing page. Titles are not present in the
+         local asset folder, so covers render as a neutral placeholder. */
+      var BASE_REPORTS = [
+        {
+          id: 'LPR-2026-041', book: 'Sang Pemimpi', author: 'Andrea Hirata', isbn: '978-602-291-001-5',
+          publisher: 'PT Mizan Pustaka Utama', publisherMeta: 'Anggota IKAPI Jawa Barat',
+          type: 'Berkas PDF Rusak', date: '2026-11-14', dateText: '14 Nov 2026', format: 'PDF - 14.2 MB',
+          notes: 'Beberapa halaman tidak dapat dimuat dan berkas terasa berat saat dibuka di web reader.',
+          section: 'Halaman 42-48',
+          pubStatus: 'terbit', reportStatus: 'baru', decision: ''
+        },
+        {
+          id: 'LPR-2026-042', book: 'Aroma Karsa', author: 'Dee Lestari', isbn: '978-602-424-694-5',
+          publisher: 'CV Angkasa Publishing', publisherMeta: 'Kota Bandung, Jawa Barat',
+          type: 'Dugaan Hak Cipta', date: '2026-11-13', dateText: '13 Nov 2026', format: 'EPUB - 8.6 MB',
+          notes: 'Berkas diduga disebarkan tanpa izin pemegang hak cipta. Mohon diperiksa kelengkapan lisensinya.',
+          pubStatus: 'terbit', reportStatus: 'baru', decision: ''
+        }
+      ];
+
+      var BASE_CATALOG = [
+        { id: 'BK-101', book: 'Pulang', author: 'Leila S. Chudori', publisher: 'Kepustakaan Populer Gramedia', format: 'EPUB - 5.1 MB', price: 89000, sold: 842, status: 'terbit' },
+        { id: 'BK-102', book: 'Cantik Itu Luka', author: 'Eka Kurniawan', publisher: 'Gramedia Pustaka Utama', format: 'PDF - 18.4 MB', price: 105000, sold: 1412, status: 'terbit' }
+      ];
+
+      var reports = BASE_REPORTS.map(function (r) { return Object.assign({}, r); });
+      var catalog = BASE_CATALOG.map(function (c) { return Object.assign({}, c); });
+      var ui = { tab: 'reports', query: '', type: 'all', publisher: 'all', sort: 'newest', repPage: 1, catPage: 1, pageSize: 5, demo: 'A' };
+      var selectedId = null;
+      var lastTrigger = null;
+      var takedownBusy = false;
+
+      function note(t) { var el = $('page-note'); el.textContent = t || ''; el.classList.toggle('hidden', !t); }
+      function toast(t) {
+        $('toast-text').textContent = t;
+        $('toast').classList.remove('hidden');
+        window.clearTimeout(toast.t);
+        toast.t = window.setTimeout(function () { $('toast').classList.add('hidden'); }, 2800);
+      }
+      function openReports() { return reports.filter(function (r) { return r.reportStatus === 'baru'; }); }
+      function byId(id) { return reports.filter(function (r) { return r.id === id; })[0]; }
+
+      /* ---------- filtering ---------- */
+      function filterReports() {
+        var q = ui.query.trim().toLowerCase();
+        var list = reports.filter(function (r) {
+          if (ui.type !== 'all' && r.type !== ui.type) return false;
+          if (ui.publisher !== 'all' && r.publisher !== ui.publisher) return false;
+          if (!q) return true;
+          return (r.book + ' ' + r.author + ' ' + r.isbn + ' ' + r.publisher + ' ' + r.notes).toLowerCase().indexOf(q) !== -1;
+        });
+        return list.sort(function (a, b) {
+          if (ui.sort === 'title') return a.book.localeCompare(b.book);
+          return ui.sort === 'oldest' ? (a.date < b.date ? -1 : 1) : (a.date > b.date ? -1 : 1);
+        });
+      }
+
+      function filterCatalog() {
+        var q = ui.query.trim().toLowerCase();
+        return catalog.filter(function (c) {
+          if (ui.publisher !== 'all' && c.publisher !== ui.publisher) return false;
+          if (!q) return true;
+          return (c.book + ' ' + c.author + ' ' + c.publisher + ' ' + c.format).toLowerCase().indexOf(q) !== -1;
+        });
+      }
+
+      function paintTabs() {
+        var counts = { reports: reports.length, catalog: catalog.length };
+        document.querySelectorAll('.tab-btn').forEach(function (btn) {
+          var t = btn.getAttribute('data-tab');
+          btn.querySelector('.tab-count').textContent = '(' + counts[t] + ')';
+          var on = t === ui.tab;
+          btn.setAttribute('aria-selected', on ? 'true' : 'false');
+          btn.className = 'tab-btn focus-ring rounded-lg px-3 py-1.5 text-[12.5px] ' +
+            (on ? 'bg-white font-bold text-primary' : 'font-semibold text-muted hover:text-ink');
+          if (on) btn.classList.add('shadow-sm');
+        });
+        var pending = openReports().length;
+        $('report-counter').textContent = pending + ' laporan perlu ditinjau';
+      }
+
+      /* Canonical report types. Buyer reports (detail_buku_desktop.html) map their
+         categories onto these values, so the filter lists them even before a matching
+         record exists in this dataset. */
+      var CANONICAL_REPORT_TYPES = [
+        'Berkas E-Book Bermasalah',
+        'Metadata Tidak Sesuai',
+        'Dugaan Hak Cipta',
+        'Lainnya'
+      ];
+
+      function paintOptions() {
+        var typeSel = $('type-filter');
+        var types = [];
+        reports.forEach(function (r) { if (types.indexOf(r.type) === -1) types.push(r.type); });
+        CANONICAL_REPORT_TYPES.forEach(function (t) { if (types.indexOf(t) === -1) types.push(t); });
+        typeSel.innerHTML = '';
+        var all1 = document.createElement('option'); all1.value = 'all'; all1.textContent = 'Semua Jenis Laporan'; typeSel.appendChild(all1);
+        types.forEach(function (t) { var o = document.createElement('option'); o.value = t; o.textContent = t; typeSel.appendChild(o); });
+        typeSel.value = types.indexOf(ui.type) !== -1 ? ui.type : 'all';
+        if (typeSel.value !== ui.type) ui.type = 'all';
+
+        var pubSel = $('publisher-filter');
+        var pubs = [];
+        reports.forEach(function (r) { if (pubs.indexOf(r.publisher) === -1) pubs.push(r.publisher); });
+        catalog.forEach(function (c) { if (pubs.indexOf(c.publisher) === -1) pubs.push(c.publisher); });
+        pubSel.innerHTML = '';
+        var all2 = document.createElement('option'); all2.value = 'all'; all2.textContent = 'Semua Penerbit'; pubSel.appendChild(all2);
+        pubs.forEach(function (p) { var o = document.createElement('option'); o.value = p; o.textContent = p; pubSel.appendChild(o); });
+        pubSel.value = pubs.indexOf(ui.publisher) !== -1 ? ui.publisher : 'all';
+        if (pubSel.value !== ui.publisher) ui.publisher = 'all';
+      }
+
+      /* ---------- tables ---------- */
+      function statusChip(text, kind) {
+        var s = document.createElement('span');
+        s.className = kind === 'success'
+          ? 'text-[12px] font-semibold text-[#0F7B4F]'
+          : 'text-[12px] font-semibold text-muted';
+        s.textContent = text;
+        return s;
+      }
+
+      function renderReports() {
+        var list = filterReports();
+        var pages = Math.max(1, Math.ceil(list.length / ui.pageSize));
+        if (ui.repPage > pages) ui.repPage = pages;
+        var start = (ui.repPage - 1) * ui.pageSize;
+        var visible = list.slice(start, start + ui.pageSize);
+
+        var tbody = $('report-rows');
+        tbody.innerHTML = '';
+        visible.forEach(function (r) {
+          var tr = document.createElement('tr');
+          tr.className = 'border-b border-divider align-middle transition-colors hover:bg-soft';
+
+          var tdBook = document.createElement('td');
+          tdBook.className = 'px-5 py-3.5 lg:px-6';
+          var wrap = document.createElement('div');
+          wrap.className = 'flex items-start gap-3';
+          var cover = document.createElement('div');
+          cover.className = 'grid h-14 w-10 shrink-0 place-items-center rounded border border-border bg-neutral';
+          var ci = document.createElement('span'); ci.className = 'material-symbols-outlined text-[18px] text-muted'; ci.textContent = 'menu_book';
+          cover.appendChild(ci);
+          var box = document.createElement('div');
+          box.className = 'min-w-0';
+          var t = document.createElement('p');
+          t.className = 'line-clamp-2 text-[13.5px] font-semibold leading-snug text-ink';
+          t.textContent = r.book;
+          var a = document.createElement('p');
+          a.className = 'mt-0.5 text-[12px] text-muted';
+          a.textContent = r.author;
+          var isbn = document.createElement('p');
+          isbn.className = 'num mt-0.5 text-[12px] text-muted';
+          isbn.textContent = 'ISBN ' + r.isbn;
+          box.appendChild(t); box.appendChild(a); box.appendChild(isbn);
+          wrap.appendChild(cover); wrap.appendChild(box);
+          tdBook.appendChild(wrap);
+
+          var tdPub = document.createElement('td');
+          tdPub.className = 'px-4 py-3.5 text-ink';
+          tdPub.textContent = r.publisher;
+
+          var tdType = document.createElement('td');
+          tdType.className = 'px-4 py-3.5 text-ink';
+          tdType.textContent = r.type;
+
+          var tdDate = document.createElement('td');
+          tdDate.className = 'num whitespace-nowrap px-4 py-3.5 text-muted';
+          tdDate.textContent = r.dateText;
+
+          var tdStatus = document.createElement('td');
+          tdStatus.className = 'px-4 py-3.5';
+          tdStatus.appendChild(statusChip(r.pubStatus === 'terbit' ? 'Terbit' : 'Nonaktif', r.pubStatus === 'terbit' ? 'success' : 'muted'));
+
+          var tdAction = document.createElement('td');
+          tdAction.className = 'px-4 py-3.5 pr-5 text-right lg:pr-6';
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'focus-ring rounded-lg px-2.5 py-1.5 text-[12.5px] font-semibold text-primary transition-colors hover:bg-soft';
+          btn.textContent = r.reportStatus === 'baru' ? 'Tinjau' : 'Lihat Detail';
+          btn.setAttribute('data-open-report', r.id);
+          tdAction.appendChild(btn);
+
+          tr.appendChild(tdBook); tr.appendChild(tdPub); tr.appendChild(tdType);
+          tr.appendChild(tdDate); tr.appendChild(tdStatus); tr.appendChild(tdAction);
+          tbody.appendChild(tr);
+        });
+
+        var empty = openReports().length === 0 && list.length === 0 && !ui.query && ui.type === 'all' && ui.publisher === 'all';
+        var noResults = !empty && list.length === 0;
+        tbody.closest('table').classList.toggle('hidden', list.length === 0);
+        $('reports-empty').classList.toggle('hidden', !empty);
+        $('reports-noresults').classList.toggle('hidden', !noResults);
+
+        $('reports-count').textContent = 'Menampilkan ' + visible.length + ' dari ' + list.length + ' laporan';
+        $('rep-page').textContent = String(ui.repPage);
+        $('rep-prev').disabled = ui.repPage <= 1;
+        $('rep-next').disabled = ui.repPage >= pages;
+      }
+
+      function renderCatalog() {
+        var list = filterCatalog();
+        var pages = Math.max(1, Math.ceil(list.length / ui.pageSize));
+        if (ui.catPage > pages) ui.catPage = pages;
+        var start = (ui.catPage - 1) * ui.pageSize;
+        var visible = list.slice(start, start + ui.pageSize);
+
+        var tbody = $('catalog-rows');
+        tbody.innerHTML = '';
+        visible.forEach(function (c) {
+          var tr = document.createElement('tr');
+          tr.className = 'border-b border-divider align-middle transition-colors hover:bg-soft';
+
+          var tdBook = document.createElement('td');
+          tdBook.className = 'px-5 py-3.5 lg:px-6';
+          var wrap = document.createElement('div');
+          wrap.className = 'flex items-start gap-3';
+          var cover = document.createElement('div');
+          cover.className = 'grid h-14 w-10 shrink-0 place-items-center rounded border border-border bg-neutral';
+          var ci = document.createElement('span'); ci.className = 'material-symbols-outlined text-[18px] text-muted'; ci.textContent = 'menu_book';
+          cover.appendChild(ci);
+          var box = document.createElement('div');
+          box.className = 'min-w-0';
+          var t = document.createElement('p'); t.className = 'line-clamp-2 text-[13.5px] font-semibold leading-snug text-ink'; t.textContent = c.book;
+          var a = document.createElement('p'); a.className = 'mt-0.5 text-[12px] text-muted'; a.textContent = c.author;
+          box.appendChild(t); box.appendChild(a);
+          wrap.appendChild(cover); wrap.appendChild(box);
+          tdBook.appendChild(wrap);
+
+          var tdPub = document.createElement('td');
+          tdPub.className = 'px-4 py-3.5 text-ink';
+          tdPub.textContent = c.publisher;
+
+          var tdFormat = document.createElement('td');
+          tdFormat.className = 'num px-4 py-3.5 text-muted';
+          tdFormat.textContent = c.format;
+
+          var tdPrice = document.createElement('td');
+          tdPrice.className = 'px-4 py-3.5 text-right';
+          var p = document.createElement('p'); p.className = 'num whitespace-nowrap font-semibold text-ink'; p.textContent = rupiah(c.price);
+          var s = document.createElement('p'); s.className = 'num mt-0.5 text-[12px] text-muted'; s.textContent = c.sold.toLocaleString('id-ID') + ' terjual';
+          tdPrice.appendChild(p); tdPrice.appendChild(s);
+
+          var tdStatus = document.createElement('td');
+          tdStatus.className = 'px-4 py-3.5';
+          tdStatus.appendChild(statusChip(c.status === 'terbit' ? 'Terbit' : 'Nonaktif', c.status === 'terbit' ? 'success' : 'muted'));
+
+          var tdAction = document.createElement('td');
+          tdAction.className = 'px-4 py-3.5 pr-5 text-right lg:pr-6';
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'focus-ring rounded-lg px-2.5 py-1.5 text-[12.5px] font-semibold text-primary transition-colors hover:bg-soft';
+          btn.textContent = 'Detail';
+          btn.setAttribute('data-open-catalog', c.id);
+          tdAction.appendChild(btn);
+
+          tr.appendChild(tdBook); tr.appendChild(tdPub); tr.appendChild(tdFormat);
+          tr.appendChild(tdPrice); tr.appendChild(tdStatus); tr.appendChild(tdAction);
+          tbody.appendChild(tr);
+        });
+
+        var empty = catalog.length === 0;
+        tbody.closest('table').classList.toggle('hidden', list.length === 0);
+        $('catalog-empty').classList.toggle('hidden', !empty);
+        $('catalog-count').textContent = 'Menampilkan ' + visible.length + ' dari ' + list.length + ' buku';
+        $('cat-page').textContent = String(ui.catPage);
+        $('cat-prev').disabled = ui.catPage <= 1;
+        $('cat-next').disabled = ui.catPage >= pages;
+      }
+
+      function render() {
+        renderReports();
+        renderCatalog();
+        paintTabs();
+        $('btn-clear-search').classList.toggle('hidden', !ui.query);
+        $('btn-clear-search').classList.toggle('grid', !!ui.query);
+        syncDemoMenu();
+      }
+
+      /* ---------- drawer ---------- */
+      function openReportDrawer(r, trigger) {
+        selectedId = r.id;
+        lastTrigger = trigger || null;
+
+        $('drawer-title').textContent = 'Detail Laporan Buku';
+        $('drawer-id').textContent = r.id;
+        $('drawer-book').textContent = r.book;
+        $('drawer-author').textContent = r.author;
+        $('drawer-isbn').textContent = 'ISBN ' + r.isbn;
+        $('drawer-pub-status').textContent = 'Status publikasi: ' + (r.pubStatus === 'terbit' ? 'Terbit' : 'Nonaktif');
+        $('drawer-publisher').textContent = r.publisher;
+        $('drawer-publisher-meta').textContent = r.publisherMeta;
+        $('drawer-type').textContent = r.type;
+        $('drawer-date').textContent = r.dateText;
+        $('drawer-format').textContent = r.format;
+        $('drawer-notes').textContent = r.notes;
+
+        var section = r.section || r.affectedSection || '';
+        var sectionRow = $('drawer-section-row');
+        sectionRow.classList.toggle('hidden', !section);
+        sectionRow.classList.toggle('flex', !!section);
+        $('drawer-section').textContent = section || '-';
+
+        var closed = r.reportStatus !== 'baru';
+        $('drawer-decision').classList.toggle('hidden', !closed);
+        if (closed) $('drawer-decision').textContent = r.decision;
+        $('btn-close-report').disabled = closed;
+        $('btn-takedown').disabled = closed || r.pubStatus !== 'terbit';
+
+        openDrawerShell();
+      }
+
+      function openCatalogDrawer(c, trigger) {
+        selectedId = c.id;
+        lastTrigger = trigger || null;
+
+        $('drawer-title').textContent = 'Detail Katalog Buku';
+        $('drawer-id').textContent = c.id;
+        $('drawer-book').textContent = c.book;
+        $('drawer-author').textContent = c.author;
+        $('drawer-isbn').textContent = c.format;
+        $('drawer-pub-status').textContent = 'Harga ' + rupiah(c.price) + ' - ' + c.sold.toLocaleString('id-ID') + ' terjual';
+        $('drawer-publisher').textContent = c.publisher;
+        $('drawer-publisher-meta').textContent = 'Penerbit pada katalog platform';
+        $('drawer-type').textContent = '-';
+        $('drawer-date').textContent = '-';
+        $('drawer-format').textContent = c.format;
+        $('drawer-notes').textContent = 'Tidak ada laporan masalah untuk buku ini.';
+        $('drawer-decision').classList.add('hidden');
+        $('btn-close-report').disabled = true;
+        $('btn-takedown').disabled = c.status !== 'terbit';
+
+        openDrawerShell();
+      }
+
+      function openDrawerShell() {
+        $('drawer-scrim').classList.remove('hidden');
+        $('catalog-drawer').classList.add('is-open');
+        $('catalog-drawer').setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        $('drawer-close').focus();
+      }
+
+      function closeDrawer() {
+        $('catalog-drawer').classList.remove('is-open');
+        $('catalog-drawer').setAttribute('aria-hidden', 'true');
+        $('drawer-scrim').classList.add('hidden');
+        document.body.style.overflow = '';
+        if (lastTrigger && document.contains(lastTrigger)) lastTrigger.focus();
+        lastTrigger = null;
+      }
+
+      $('drawer-close').addEventListener('click', closeDrawer);
+      $('drawer-scrim').addEventListener('click', closeDrawer);
+
+      document.addEventListener('click', function (e) {
+        var rep = e.target.closest('[data-open-report]');
+        if (rep) {
+          var r = byId(rep.getAttribute('data-open-report'));
+          if (r) openReportDrawer(r, rep);
+          return;
+        }
+        var cat = e.target.closest('[data-open-catalog]');
+        if (cat) {
+          var id = cat.getAttribute('data-open-catalog');
+          var c = catalog.filter(function (x) { return x.id === id; })[0];
+          if (c) openCatalogDrawer(c, cat);
+        }
+      });
+
+      /* ---------- takedown ---------- */
+      $('btn-takedown').addEventListener('click', function () {
+        var r = byId(selectedId);
+        var c = catalog.filter(function (x) { return x.id === selectedId; })[0];
+        var book = r ? r.book : (c ? c.book : null);
+        var pub = r ? r.publisher : (c ? c.publisher : '');
+        if (!book) return;
+        $('takedown-book').textContent = book;
+        $('takedown-publisher').textContent = pub;
+        $('takedown-reason').value = '';
+        $('takedown-error').classList.add('hidden');
+        $('modal-takedown').classList.remove('hidden');
+        $('takedown-reason').focus();
+      });
+
+      document.querySelectorAll('[data-close-takedown]').forEach(function (el) {
+        el.addEventListener('click', function () { $('modal-takedown').classList.add('hidden'); });
+      });
+
+      $('btn-confirm-takedown').addEventListener('click', function () {
+        if (takedownBusy) return;
+        var reason = $('takedown-reason').value.trim();
+        if (!reason) {
+          $('takedown-error').classList.remove('hidden');
+          $('takedown-reason').focus();
+          return;
+        }
+        $('takedown-error').classList.add('hidden');
+
+        takedownBusy = true;
+        var btn = $('btn-confirm-takedown');
+        btn.disabled = true;
+        $('takedown-label').textContent = 'Memproses...';
+
+        window.setTimeout(function () {
+          takedownBusy = false;
+          btn.disabled = false;
+          $('takedown-label').textContent = 'Nonaktifkan Buku';
+
+          var r = byId(selectedId);
+          if (r) { r.pubStatus = 'nonaktif'; r.reportStatus = 'ditutup'; r.decision = 'Buku dinonaktifkan. Alasan: ' + reason; }
+          var c = catalog.filter(function (x) { return x.id === selectedId; })[0];
+          if (c) c.status = 'nonaktif';
+
+          $('modal-takedown').classList.add('hidden');
+          render();
+          closeDrawer();
+          toast('Status publikasi buku diperbarui pada state prototype ini.');
+        }, 600);
+      });
+
+      /* ---------- close report ---------- */
+      $('btn-close-report').addEventListener('click', function () {
+        var r = byId(selectedId);
+        if (!r || r.reportStatus !== 'baru') return;
+        $('close-book').textContent = r.book;
+        $('close-reg').textContent = r.id;
+        $('modal-close-report').classList.remove('hidden');
+      });
+
+      document.querySelectorAll('[data-close-report]').forEach(function (el) {
+        el.addEventListener('click', function () { $('modal-close-report').classList.add('hidden'); });
+      });
+
+      $('btn-confirm-close-report').addEventListener('click', function () {
+        var r = byId(selectedId);
+        if (!r) { $('modal-close-report').classList.add('hidden'); return; }
+        r.reportStatus = 'ditutup';
+        r.decision = 'Laporan ditutup tanpa perubahan status publikasi.';
+        $('modal-close-report').classList.add('hidden');
+        render();
+        closeDrawer();
+        toast('Laporan ditandai selesai pada state prototype ini.');
+      });
+
+      /* ---------- toolbar ---------- */
+      document.querySelectorAll('.tab-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          ui.tab = btn.getAttribute('data-tab');
+          $('view-reports').classList.toggle('hidden', ui.tab !== 'reports');
+          $('view-catalog').classList.toggle('hidden', ui.tab !== 'catalog');
+          render();
+        });
+      });
+      $('cat-search').addEventListener('input', function (e) {
+        ui.query = e.target.value;
+        render();
+      });
+      $('btn-clear-search').addEventListener('click', function () {
+        ui.query = '';
+        $('cat-search').value = '';
+        render();
+      });
+      $('type-filter').addEventListener('change', function (e) { ui.type = e.target.value; render(); });
+      $('publisher-filter').addEventListener('change', function (e) { ui.publisher = e.target.value; render(); });
+      $('sort-order').addEventListener('change', function (e) { ui.sort = e.target.value; render(); });
+
+      function doReset() {
+        ui.query = ''; ui.type = 'all'; ui.publisher = 'all'; ui.sort = 'newest'; ui.repPage = 1; ui.catPage = 1;
+        $('cat-search').value = ''; $('type-filter').value = 'all'; $('publisher-filter').value = 'all'; $('sort-order').value = 'newest';
+        render();
+      }
+      $('btn-reset').addEventListener('click', doReset);
+      $('btn-reset-empty').addEventListener('click', doReset);
+
+      $('rep-prev').addEventListener('click', function () { if (ui.repPage > 1) { ui.repPage--; render(); } });
+      $('rep-next').addEventListener('click', function () { ui.repPage++; render(); });
+      $('cat-prev').addEventListener('click', function () { if (ui.catPage > 1) { ui.catPage--; render(); } });
+      $('cat-next').addEventListener('click', function () { ui.catPage++; render(); });
+
+
+      /* ---------- demo scenarios ---------- */
+      var demoToggle = $('demo-toggle'), demoMenu = $('demo-menu');
+      function closeDemo() { demoMenu.classList.add('hidden'); demoToggle.setAttribute('aria-expanded', 'false'); }
+      function syncDemoMenu() {
+        document.querySelectorAll('.demo-item').forEach(function (b) {
+          var on = b.getAttribute('data-demo') === ui.demo;
+          b.setAttribute('aria-checked', on ? 'true' : 'false');
+          b.classList.toggle('bg-soft', on);
+          var c = b.querySelector('.demo-check');
+          if (c) c.classList.toggle('hidden', !on);
+        });
+      }
+
+      function resetAll() {
+        closeDrawer();
+        $('modal-takedown').classList.add('hidden');
+        $('modal-close-report').classList.add('hidden');
+        $('toast').classList.add('hidden');
+        note('');
+        reports = BASE_REPORTS.map(function (r) { return Object.assign({}, r); });
+        catalog = BASE_CATALOG.map(function (c) { return Object.assign({}, c); });
+        ui.query = ''; ui.type = 'all'; ui.publisher = 'all'; ui.sort = 'newest'; ui.repPage = 1; ui.catPage = 1;
+        $('cat-search').value = ''; $('sort-order').value = 'newest';
+        paintOptions();
+      }
+
+      function showTab(tab) {
+        ui.tab = tab;
+        $('view-reports').classList.toggle('hidden', tab !== 'reports');
+        $('view-catalog').classList.toggle('hidden', tab !== 'catalog');
+      }
+
+      function applyDemo(s) {
+        ui.demo = s;
+        resetAll();
+
+        if (s === 'A') { showTab('reports'); render(); }
+        else if (s === 'B') { showTab('catalog'); render(); }
+        else if (s === 'C') { showTab('reports'); render(); openReportDrawer(byId('LPR-2026-041'), $('demo-toggle')); }
+        else if (s === 'D') {
+          showTab('reports'); render();
+          openReportDrawer(byId('LPR-2026-041'), $('demo-toggle'));
+          $('takedown-book').textContent = 'Sang Pemimpi';
+          $('takedown-publisher').textContent = 'PT Mizan Pustaka Utama';
+          $('takedown-reason').value = '';
+          $('takedown-error').classList.add('hidden');
+          $('modal-takedown').classList.remove('hidden');
+        } else if (s === 'E') {
+          showTab('reports'); render();
+          openReportDrawer(byId('LPR-2026-042'), $('demo-toggle'));
+          $('close-book').textContent = 'Aroma Karsa';
+          $('close-reg').textContent = 'LPR-2026-042';
+          $('modal-close-report').classList.remove('hidden');
+        } else if (s === 'F') {
+          showTab('reports'); render();
+          toast('Status publikasi buku diperbarui pada state prototype ini.');
+        } else if (s === 'G') {
+          reports.forEach(function (r) { r.reportStatus = 'ditutup'; r.decision = 'Laporan ditutup tanpa perubahan status publikasi.'; });
+          showTab('reports');
+          render();
+        }
+      }
+
+      demoToggle.addEventListener('click', function () {
+        var open = demoMenu.classList.contains('hidden');
+        demoMenu.classList.toggle('hidden', !open);
+        demoToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      demoMenu.addEventListener('click', function (e) {
+        var btn = e.target.closest('.demo-item');
+        if (!btn) return;
+        closeDemo();
+        applyDemo(btn.getAttribute('data-demo'));
+      });
+
+      /* ---------- notifications / sidebar / keyboard ---------- */
+      var notifBtn = $('btn-notif'), notifPanel = $('notif-panel');
+      notifBtn.addEventListener('click', function () {
+        var open = notifPanel.classList.contains('hidden');
+        notifPanel.classList.toggle('hidden', !open);
+        notifBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!demoMenu.contains(e.target) && !demoToggle.contains(e.target)) closeDemo();
+        if (!notifPanel.contains(e.target) && !notifBtn.contains(e.target)) {
+          notifPanel.classList.add('hidden');
+          notifBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape') return;
+        if (!$('modal-close-report').classList.contains('hidden')) { $('modal-close-report').classList.add('hidden'); return; }
+        if (!$('modal-takedown').classList.contains('hidden')) { $('modal-takedown').classList.add('hidden'); return; }
+        if ($('catalog-drawer').classList.contains('is-open')) { closeDrawer(); return; }
+        closeDemo();
+        notifPanel.classList.add('hidden');
+        notifBtn.setAttribute('aria-expanded', 'false');
+        closeSidebar();
+      });
+
+      var sidebar = $('publisher-sidebar'), scrim = $('sidebar-scrim'), toggle = $('sidebar-toggle');
+      function openSidebar() {
+        sidebar.classList.add('is-open');
+        scrim.classList.remove('hidden');
+        toggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+        var first = sidebar.querySelector('a');
+        if (first) first.focus();
+      }
+      function closeSidebar() {
+        if (!sidebar.classList.contains('is-open')) return;
+        sidebar.classList.remove('is-open');
+        scrim.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        toggle.focus();
+      }
+      toggle.addEventListener('click', function () {
+        sidebar.classList.contains('is-open') ? closeSidebar() : openSidebar();
+      });
+      scrim.addEventListener('click', closeSidebar);
+      sidebar.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeSidebar); });
+
+      /* ---------- init ---------- */
+      paintOptions();
+      render();
+    })();});

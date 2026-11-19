@@ -1,0 +1,7 @@
+<script>
+    (function () {
+      var role = new URLSearchParams(window.location.search).get('role') === 'publisher' ? 'publisher' : 'buyer';
+      var back = document.getElementById('back-to-login');
+      if (back) back.setAttribute('href', 'masuk_login_desktop.html?role=' + role);
+    })();
+  </script>

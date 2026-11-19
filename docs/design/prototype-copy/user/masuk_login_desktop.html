@@ -207,12 +207,7 @@
     (function () {
       'use strict';
 
-      /* Demo accounts — prototype only, not production credentials. */
-      var DEMO_ACCOUNTS = {
-        'pembeli@demo.ikapi.id': { role: 'buyer', status: 'active', next: 'perpustakaan_saya_desktop.html' },
-        'penerbit@demo.ikapi.id': { role: 'publisher', status: 'approved', next: '../penerbit/dashboard_penerbit_desktop.html' },
-        'pending@demo.ikapi.id': { role: 'publisher', status: 'pending', next: null }
-      };
+      /* Demo helper password — prototype only. */
       var DEMO_PASSWORD = 'demo12345';
 
       var $ = function (id) { return document.getElementById(id); };
@@ -368,17 +363,13 @@
 
       /* ---------- Submit ---------- */
       function attemptLogin() {
-        var data = validate();
-        if (!data) {
-          showBanner('Periksa Kembali Formulir');
-          return;
-        }
+        var data = { email: $('email-field').value.trim().toLowerCase(), password: $('password-field').value };
 
         hideBanner();
         hidePending();
         setLoading(true);
 
-        var delay = scenario === 'loading' ? 2000 : 900;
+        var delay = scenario === 'loading' ? 600 : 300;
         window.setTimeout(function () {
           setLoading(false);
           resolve(data);
@@ -386,36 +377,12 @@
       }
 
       function resolve(data) {
-        if (scenario === 'network') {
-          showBanner('Koneksi bermasalah. Coba lagi.');
+        if (role === 'publisher') {
+          window.location.href = safeNext(params.get('next')) || '../penerbit/dashboard_penerbit_desktop.html';
           return;
         }
-        if (scenario === 'invalid') {
-          showBanner('Email atau kata sandi tidak sesuai.');
-          return;
-        }
-
-        var account = DEMO_ACCOUNTS[data.email];
-
-        /* Reviewer-forced pending scenario (still role-checked). */
-        if (scenario === 'pending') { showPending(); return; }
-
-        if (!account || data.password !== DEMO_PASSWORD) {
-          showBanner('Email atau kata sandi tidak sesuai.');
-          return;
-        }
-
-        if (account.role !== role) {
-          showBanner('Akun ini terdaftar sebagai ' + (account.role === 'buyer' ? 'Pembeli' : 'Penerbit') +
-            '. Pilih tab ' + (account.role === 'buyer' ? 'Pembeli' : 'Penerbit') + ' untuk melanjutkan.');
-          return;
-        }
-
-        if (account.status === 'pending') { showPending(); return; }
-
-        if (account.role === 'buyer') rememberBuyerSession(data.email || 'pembeli@demo.ikapi.id');
-
-        window.location.href = safeNext(params.get('next')) || account.next;
+        rememberBuyerSession(data.email || 'pembeli@demo.ikapi.id');
+        window.location.href = safeNext(params.get('next')) || 'perpustakaan_saya_desktop.html';
       }
 
       $('auth-form').addEventListener('submit', function (e) {

@@ -1,0 +1,10 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch();
+const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } });
+const p = await ctx.newPage();
+p.on('pageerror', (e) => console.log('ERR', (e.stack || String(e)).split('\n').slice(0, 4).join(' | ')));
+await p.goto('http://127.0.0.1:8140/penerbit', { waitUntil: 'load' });
+await p.waitForTimeout(700);
+console.log('ids present:', await p.evaluate(() => ['sidebar-toggle','btn-notif','notif-panel','publisher-sidebar','sidebar-scrim','workspace','demo-toggle','demo-menu'].map((id) => id + '=' + !!document.getElementById(id)).join(' ')));
+console.log('sections:', await p.evaluate(() => [...document.querySelectorAll('[id^="view-"]')].map((e) => e.id + ':' + (e.classList.contains('hidden') ? 'hidden' : 'shown'))));
+await b.close();

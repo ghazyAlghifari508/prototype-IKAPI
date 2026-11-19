@@ -1,0 +1,34 @@
+<section id="view-room" class="hidden flex-col gap-6">
+
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div class="min-w-0">
+              <p id="room-community" class="text-[12.5px] font-semibold text-ink-muted"></p>
+              <h2 class="mt-0.5 text-[22px] font-bold tracking-tight text-ink-body sm:text-[26px]">Ruang Diskusi</h2>
+              <p class="mt-1.5 max-w-2xl text-[14px] leading-relaxed text-ink-muted">Diskusikan buku, bagikan rekomendasi, dan bertukar pendapat dengan anggota lainnya.</p>
+            </div>
+            <div class="flex shrink-0 flex-col items-start gap-1.5 sm:items-end">
+              <button type="button" id="btn-new-topic" class="inline-flex h-10 cursor-pointer items-center gap-2 rounded-xl bg-primary px-4 text-[13.5px] font-bold text-white transition-colors hover:bg-primary-hover">
+                <span class="material-symbols-outlined text-[18px]" aria-hidden="true">add</span>
+                <span>Buat Topik</span>
+              </button>
+              <p id="room-permission-note" class="text-[12px] text-ink-muted"></p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2" role="tablist" aria-label="Urutan diskusi">
+            <button type="button" id="sort-newest" role="tab" aria-selected="true" class="sort-tab rounded-lg bg-surface-neutral px-3 py-1.5 text-[12.5px] font-bold text-primary">Terbaru</button>
+            <button type="button" id="sort-last-activity" role="tab" aria-selected="false" class="sort-tab rounded-lg px-3 py-1.5 text-[12.5px] font-semibold text-ink-muted hover:text-ink-body">Aktivitas Terakhir</button>
+          </div>
+
+          <div id="topic-list" class="divide-y divide-border-subtle border-y border-border-subtle"></div>
+
+          <div id="room-empty" class="hidden flex-col items-center justify-center rounded-2xl border border-border-subtle bg-white px-4 py-12 text-center">
+            <img src="../../assets/ilustration/community_reading.svg" alt="" aria-hidden="true" class="mb-3 h-32 w-auto sm:h-40">
+            <h3 class="text-[18px] font-bold tracking-tight text-ink-body">Belum ada topik diskusi</h3>
+            <p class="mt-1.5 max-w-sm text-[14px] text-ink-muted">Belum ada pembahasan di komunitas ini.</p>
+            <button type="button" id="btn-empty-new-topic" class="mt-4 inline-flex h-10 items-center gap-2 rounded-xl border border-border-subtle bg-surface-neutral px-4 text-[13.5px] font-bold text-ink-muted" disabled="">
+              <span class="material-symbols-outlined text-[18px]" aria-hidden="true">add</span>
+              <span>Buat Topik</span>
+            </button>
+          </div>
+        </section>

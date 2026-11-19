@@ -1,0 +1,77 @@
+<div id="ikapi-chat-widget-wrapper" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    
+    <!-- Chat Window Container -->
+    <div id="ikapi-chat-window" class="w-[400px] h-[580px] max-w-[calc(100vw-32px)] max-h-[calc(100vh-120px)] bg-white rounded-3xl shadow-2xl border border-border-subtle flex flex-col overflow-hidden mb-3 transition-all duration-300 origin-bottom-right" role="dialog" aria-labelledby="chat-header-title">
+      
+      <!-- Widget Header (Clean White Hostinger-style) -->
+      <div class="bg-white px-5 py-3.5 border-b border-border-subtle flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-surface-soft border border-primary/20 flex items-center justify-center text-primary font-bold text-[14px] shrink-0 shadow-xs">
+            <span class="material-symbols-outlined text-[20px]">smart_toy</span>
+          </div>
+          <div>
+            <h2 id="chat-header-title" class="text-[15px] font-bold text-ink-body tracking-tight leading-tight">
+              Bantuan IKAPI
+            </h2>
+            <span class="text-[12px] text-ink-muted leading-tight block">
+              Asisten buku dan pesanan
+            </span>
+          </div>
+        </div>
+        <div class="flex items-center gap-1">
+          <button type="button" aria-label="Bersihkan Percakapan" class="w-8 h-8 rounded-xl flex items-center justify-center text-ink-muted hover:text-ink-body hover:bg-surface-neutral transition-colors" onclick="resetChatConversation()" title="Bersihkan Percakapan">
+            <span class="material-symbols-outlined text-[18px]">refresh</span>
+          </button>
+          <button type="button" aria-label="Tutup Jendela Bantuan" class="w-8 h-8 rounded-xl flex items-center justify-center text-ink-muted hover:text-ink-body hover:bg-surface-neutral transition-colors" onclick="toggleWidgetPanel()" title="Tutup Jendela">
+            <span class="material-symbols-outlined text-[18px]">close</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Chat Body (Scrollable Conversation Thread - Z.ai text-first layout) -->
+      <div id="chat-body-scrollable" class="flex-1 overflow-y-auto p-5 space-y-4 bg-white" role="log" aria-live="polite">
+        <!-- Messages rendered dynamically by JS -->
+      </div>
+
+      <!-- Quick Question Prompts Container (Hidden when initial screen is shown) -->
+      <div id="quick-prompts-wrapper" class="hidden px-4 py-2 bg-white border-t border-border-subtle shrink-0">
+        <span class="text-[11px] font-bold text-ink-muted uppercase tracking-wider block mb-1.5">
+          Coba tanyakan:
+        </span>
+        <div class="flex flex-wrap gap-1.5">
+          <button type="button" class="text-left text-[12px] font-medium px-3 py-1.5 rounded-xl bg-surface-neutral hover:bg-surface-soft hover:text-primary text-ink-body transition-colors border border-border-subtle" onclick="handleQuickPrompt('Cari buku sejarah Sunda')">
+            Cari buku sejarah Sunda
+          </button>
+          <button type="button" class="text-left text-[12px] font-medium px-3 py-1.5 rounded-xl bg-surface-neutral hover:bg-surface-soft hover:text-primary text-ink-body transition-colors border border-border-subtle" onclick="handleQuickPrompt('Cara pembayaran')">
+            Cara pembayaran
+          </button>
+          <button type="button" class="text-left text-[12px] font-medium px-3 py-1.5 rounded-xl bg-surface-neutral hover:bg-surface-soft hover:text-primary text-ink-body transition-colors border border-border-subtle" onclick="handleQuickPrompt('Cara membaca e-book')">
+            Cara membaca e-book
+          </button>
+          <button type="button" class="text-left text-[12px] font-medium px-3 py-1.5 rounded-xl bg-surface-neutral hover:bg-surface-soft hover:text-primary text-ink-body transition-colors border border-border-subtle" onclick="handleQuickPrompt('Hubungi bantuan')">
+            Hubungi bantuan
+          </button>
+        </div>
+      </div>
+
+      <!-- Composer / Bottom Input Area (Unified rounded pill with arrow upward submit) -->
+      <div class="p-3 bg-white border-t border-border-subtle shrink-0">
+        <form class="flex items-center gap-2 p-1.5 pl-4 rounded-full bg-surface-neutral border border-border-subtle focus-within:border-primary focus-within:bg-white focus-within:ring-2 focus-within:ring-primary/20 transition-all" onsubmit="handleChatSubmit(event)">
+          <div class="relative flex-1">
+            <textarea id="chat-input-field" rows="1" class="w-full resize-none py-1.5 bg-transparent border-0 outline-none text-ink-body text-[14px] placeholder:text-ink-muted leading-relaxed max-h-24" placeholder="Tulis pertanyaan..." onkeydown="handleTextareaKeydown(event)"></textarea>
+          </div>
+          <button id="chat-send-btn" type="submit" aria-label="Kirim Pesan" class="w-10 h-10 rounded-full bg-primary hover:bg-primary-hover text-white flex items-center justify-center shrink-0 transition-colors shadow-xs cursor-pointer">
+            <span class="material-symbols-outlined text-[20px]">arrow_upward</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Floating Action Button Launcher -->
+    <button id="launcher-button" type="button" aria-expanded="true" aria-controls="ikapi-chat-window" aria-label="Buka Bantuan IKAPI" class="w-14 h-14 rounded-full bg-primary hover:bg-primary-hover text-white shadow-xl flex items-center justify-center transition-all duration-200 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-primary/30" onclick="toggleWidgetPanel()">
+      <span id="launcher-icon-chat" class="material-symbols-outlined text-[26px] hidden">chat</span>
+      <span id="launcher-icon-close" class="material-symbols-outlined text-[26px]">close</span>
+    </button>
+
+  </div>

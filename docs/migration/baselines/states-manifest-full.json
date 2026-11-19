@@ -1,0 +1,1045 @@
+[
+ {
+  "key": "register#buyer",
+  "page": "user/daftar_akun_register_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "buyer",
+    "file": "user/daftar_akun_register_desktop/state-buyer-full.png",
+    "bytes": 153446
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/daftar_akun_register_desktop.html?role=buyer"
+ },
+ {
+  "key": "forgot#default",
+  "page": "user/lupa_kata_sandi_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "default",
+    "file": "user/lupa_kata_sandi_desktop/state-default-full.png",
+    "bytes": 125512
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/lupa_kata_sandi_desktop.html"
+ },
+ {
+  "key": "verify#default",
+  "page": "user/verifikasi_email_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "default",
+    "file": "user/verifikasi_email_desktop/state-default-full.png",
+    "bytes": 136933
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/verifikasi_email_desktop.html"
+ },
+ {
+  "key": "status#pending",
+  "page": "user/status_pendaftaran_penerbit_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "pending",
+    "file": "user/status_pendaftaran_penerbit_desktop/state-pending-full.png",
+    "bytes": 58602
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/status_pendaftaran_penerbit_desktop.html"
+ },
+ {
+  "key": "status#demo-ok",
+  "page": "user/status_pendaftaran_penerbit_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "demo-ok",
+    "file": "user/status_pendaftaran_penerbit_desktop/state-demo-ok-full.png",
+    "bytes": 58602
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/status_pendaftaran_penerbit_desktop.html"
+ },
+ {
+  "key": "status#demo-rejected",
+  "page": "user/status_pendaftaran_penerbit_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "demo-rejected",
+    "file": "user/status_pendaftaran_penerbit_desktop/state-demo-rejected-full.png",
+    "bytes": 58602
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/status_pendaftaran_penerbit_desktop.html"
+ },
+ {
+  "key": "home#default",
+  "page": "user/beranda_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "default",
+    "file": "user/beranda_desktop/state-default-full.png",
+    "bytes": 4030440
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/beranda_desktop.html"
+ },
+ {
+  "key": "catalog#default",
+  "page": "user/katalog_buku_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "default",
+    "file": "user/katalog_buku_desktop/state-default-full.png",
+    "bytes": 2526387
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/katalog_buku_desktop.html"
+ },
+ {
+  "key": "catalog#category-filter",
+  "page": "user/katalog_buku_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "category-filter",
+    "file": "user/katalog_buku_desktop/state-category-filter-full.png",
+    "bytes": 2526353
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/katalog_buku_desktop.html"
+ },
+ {
+  "key": "detail#default",
+  "page": "user/detail_buku_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "default",
+    "file": "user/detail_buku_desktop/state-default-full.png",
+    "bytes": 1257126
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/detail_buku_desktop.html"
+ },
+ {
+  "key": "detail#rating-filled",
+  "page": "user/detail_buku_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "rating-filled",
+    "file": "user/detail_buku_desktop/state-rating-filled-full.png",
+    "bytes": 1257126
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/detail_buku_desktop.html"
+ },
+ {
+  "key": "detail#comment-menu",
+  "page": "user/detail_buku_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "comment-menu",
+    "file": "user/detail_buku_desktop/state-comment-menu-full.png",
+    "bytes": 1257126
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/detail_buku_desktop.html"
+ },
+ {
+  "key": "preview#default",
+  "page": "user/preview_buku_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "default",
+    "file": "user/preview_buku_desktop/state-default-full.png",
+    "bytes": 184577
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/preview_buku_desktop.html"
+ },
+ {
+  "key": "reader#default",
+  "page": "user/web_reader_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "default",
+    "file": "user/web_reader_desktop/state-default-full.png",
+    "bytes": 140411
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/web_reader_desktop.html"
+ },
+ {
+  "key": "cart#filled",
+  "page": "user/keranjang_pembayaran_terpadu_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "filled",
+    "file": "user/keranjang_pembayaran_terpadu_desktop/state-filled-full.png",
+    "bytes": 155592
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/keranjang_pembayaran_terpadu_desktop.html"
+ },
+ {
+  "key": "cart#order-details",
+  "page": "user/keranjang_pembayaran_terpadu_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "order-details",
+    "file": "user/keranjang_pembayaran_terpadu_desktop/state-order-details-full.png",
+    "bytes": 155592
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/keranjang_pembayaran_terpadu_desktop.html"
+ },
+ {
+  "key": "cart#status-menunggu",
+  "page": "user/keranjang_pembayaran_terpadu_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "status-menunggu",
+    "file": "user/keranjang_pembayaran_terpadu_desktop/state-status-menunggu-full.png",
+    "bytes": 155592
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/keranjang_pembayaran_terpadu_desktop.html"
+ },
+ {
+  "key": "cart#status-gagal",
+  "page": "user/keranjang_pembayaran_terpadu_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "status-gagal",
+    "file": "user/keranjang_pembayaran_terpadu_desktop/state-status-gagal-full.png",
+    "bytes": 155592
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/keranjang_pembayaran_terpadu_desktop.html"
+ },
+ {
+  "key": "cart#status-kedaluwarsa",
+  "page": "user/keranjang_pembayaran_terpadu_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "status-kedaluwarsa",
+    "file": "user/keranjang_pembayaran_terpadu_desktop/state-status-kedaluwarsa-full.png",
+    "bytes": 155592
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/keranjang_pembayaran_terpadu_desktop.html"
+ },
+ {
+  "key": "orders#default",
+  "page": "user/riwayat_pesanan_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "default",
+    "file": "user/riwayat_pesanan_desktop/state-default-full.png",
+    "bytes": 288074
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/riwayat_pesanan_desktop.html"
+ },
+ {
+  "key": "library#default",
+  "page": "user/perpustakaan_saya_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "default",
+    "file": "user/perpustakaan_saya_desktop/state-default-full.png",
+    "bytes": 647811
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/perpustakaan_saya_desktop.html"
+ },
+ {
+  "key": "reviews#default",
+  "page": "user/riwayat_ulasan_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "default",
+    "file": "user/riwayat_ulasan_desktop/state-default-full.png",
+    "bytes": 171572
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/riwayat_ulasan_desktop.html"
+ },
+ {
+  "key": "profile#default",
+  "page": "user/akun_saya_profil_dropdown_navigasi_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "default",
+    "file": "user/akun_saya_profil_dropdown_navigasi_desktop/state-default-full.png",
+    "bytes": 132489
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/akun_saya_profil_dropdown_navigasi_desktop.html"
+ },
+ {
+  "key": "settings#default",
+  "page": "user/pengaturan_akun_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "default",
+    "file": "user/pengaturan_akun_desktop/state-default-full.png",
+    "bytes": 174970
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/pengaturan_akun_desktop.html"
+ },
+ {
+  "key": "help#default",
+  "page": "user/bantuan_akun_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "default",
+    "file": "user/bantuan_akun_desktop/state-default-full.png",
+    "bytes": 168892
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/bantuan_akun_desktop.html"
+ },
+ {
+  "key": "help#faq-open",
+  "page": "user/bantuan_akun_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "faq-open",
+    "file": "user/bantuan_akun_desktop/state-faq-open-full.png",
+    "bytes": 168892
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/bantuan_akun_desktop.html"
+ },
+ {
+  "key": "onboarding#step1",
+  "page": "user/onboarding_preferensi_bacaan_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "step1",
+    "file": "user/onboarding_preferensi_bacaan_desktop/state-step1-full.png",
+    "bytes": 122863
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/onboarding_preferensi_bacaan_desktop.html"
+ },
+ {
+  "key": "agenda#default",
+  "page": "user/agenda_berita_literasi_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "default",
+    "file": "user/agenda_berita_literasi_desktop/state-default-full.png",
+    "bytes": 1101794
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/agenda_berita_literasi_desktop.html"
+ },
+ {
+  "key": "agenda#featured-modal",
+  "page": "user/agenda_berita_literasi_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "featured-modal",
+    "file": "user/agenda_berita_literasi_desktop/state-featured-modal-full.png",
+    "bytes": 1101794
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/agenda_berita_literasi_desktop.html"
+ },
+ {
+  "key": "detail-agenda#invalid",
+  "page": "user/detail_agenda_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "invalid",
+    "file": "user/detail_agenda_desktop/state-invalid-full.png",
+    "bytes": 86408
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/detail_agenda_desktop.html?id=tidak-ada"
+ },
+ {
+  "key": "chatbot-page#default",
+  "page": "user/chatbot_bantuan_rekomendasi_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "default",
+    "file": "user/chatbot_bantuan_rekomendasi_desktop/state-default-full.png",
+    "bytes": 532021
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/chatbot_bantuan_rekomendasi_desktop.html"
+ },
+ {
+  "key": "community#explore",
+  "page": "user/komunitas_literasi_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "explore",
+    "file": "user/komunitas_literasi_desktop/state-explore-full.png",
+    "bytes": 431644
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/user/komunitas_literasi_desktop.html"
+ },
+ {
+  "key": "penerbit/kelola_buku_desktop.html#demo-menu",
+  "page": "penerbit/kelola_buku_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "filled",
+    "label": "Katalog Berisicheck",
+    "clicked": true,
+    "file": "penerbit/kelola_buku_desktop/state-filled-full.png",
+    "bytes": 129767
+   },
+   {
+    "state": "empty",
+    "label": "Katalog Kosongcheck",
+    "clicked": true,
+    "file": "penerbit/kelola_buku_desktop/state-empty-full.png",
+    "bytes": 92332
+   },
+   {
+    "state": "noresults",
+    "label": "Pencarian Nihilcheck",
+    "clicked": true,
+    "file": "penerbit/kelola_buku_desktop/state-noresults-full.png",
+    "bytes": 95982
+   },
+   {
+    "state": "draft",
+    "label": "Filter Draftcheck",
+    "clicked": true,
+    "file": "penerbit/kelola_buku_desktop/state-draft-full.png",
+    "bytes": 85697
+   },
+   {
+    "state": "unpublish",
+    "label": "Modal Hentikan Publikasicheck",
+    "clicked": true,
+    "file": "penerbit/kelola_buku_desktop/state-unpublish-full.png",
+    "bytes": 101806
+   },
+   {
+    "state": "loading",
+    "label": "Sedang Memuatcheck",
+    "clicked": true,
+    "file": "penerbit/kelola_buku_desktop/state-loading-full.png",
+    "bytes": 87929
+   }
+  ],
+  "chipCount": 6,
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/penerbit/kelola_buku_desktop.html"
+ },
+ {
+  "key": "penerbit/pesanan_masuk_desktop.html#demo-menu",
+  "page": "penerbit/pesanan_masuk_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "a",
+    "label": "Pesanan Berisicheck",
+    "clicked": true,
+    "file": "penerbit/pesanan_masuk_desktop/state-a-full.png",
+    "bytes": 148106
+   },
+   {
+    "state": "b",
+    "label": "Belum Ada Pesanancheck",
+    "clicked": true,
+    "file": "penerbit/pesanan_masuk_desktop/state-b-full.png",
+    "bytes": 72397
+   },
+   {
+    "state": "c",
+    "label": "Pencarian Nihilcheck",
+    "clicked": true,
+    "file": "penerbit/pesanan_masuk_desktop/state-c-full.png",
+    "bytes": 87141
+   },
+   {
+    "state": "d",
+    "label": "Menyiapkan Invoicecheck",
+    "clicked": true,
+    "file": "penerbit/pesanan_masuk_desktop/state-d-full.png",
+    "bytes": 154057
+   },
+   {
+    "state": "e",
+    "label": "Gagal Mengunduh Invoicecheck",
+    "clicked": true,
+    "file": "penerbit/pesanan_masuk_desktop/state-e-full.png",
+    "bytes": 154435
+   },
+   {
+    "state": "f",
+    "label": "Sedang Memuatcheck",
+    "clicked": true,
+    "file": "penerbit/pesanan_masuk_desktop/state-f-full.png",
+    "bytes": 67797
+   }
+  ],
+  "chipCount": 6,
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/penerbit/pesanan_masuk_desktop.html"
+ },
+ {
+  "key": "penerbit/pendapatan_dan_pencairan_desktop.html#demo-menu",
+  "page": "penerbit/pendapatan_dan_pencairan_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "a",
+    "label": "Saldo Tersedia (Default)check",
+    "clicked": true,
+    "file": "penerbit/pendapatan_dan_pencairan_desktop/state-a-full.png",
+    "bytes": 164065
+   },
+   {
+    "state": "b",
+    "label": "Saldo Kosongcheck",
+    "clicked": true,
+    "file": "penerbit/pendapatan_dan_pencairan_desktop/state-b-full.png",
+    "bytes": 161888
+   },
+   {
+    "state": "c",
+    "label": "Rekening Belum Adacheck",
+    "clicked": true,
+    "file": "penerbit/pendapatan_dan_pencairan_desktop/state-c-full.png",
+    "bytes": 165287
+   },
+   {
+    "state": "d",
+    "label": "Validasi Errorcheck",
+    "clicked": true,
+    "file": "penerbit/pendapatan_dan_pencairan_desktop/state-d-full.png",
+    "bytes": 167025
+   },
+   {
+    "state": "e",
+    "label": "Sedang Mengajukancheck",
+    "clicked": true,
+    "file": "penerbit/pendapatan_dan_pencairan_desktop/state-e-full.png",
+    "bytes": 188341
+   },
+   {
+    "state": "f",
+    "label": "Sukses Konfirmasicheck",
+    "clicked": true,
+    "file": "penerbit/pendapatan_dan_pencairan_desktop/state-f-full.png",
+    "bytes": 182342
+   },
+   {
+    "state": "g",
+    "label": "Detail Pencairan (Selesai)check",
+    "clicked": true,
+    "file": "penerbit/pendapatan_dan_pencairan_desktop/state-g-full.png",
+    "bytes": 185313
+   },
+   {
+    "state": "h",
+    "label": "Detail Pencairan (Proses)check",
+    "clicked": true,
+    "file": "penerbit/pendapatan_dan_pencairan_desktop/state-h-full.png",
+    "bytes": 186336
+   },
+   {
+    "state": "i",
+    "label": "Gagal Memuatcheck",
+    "clicked": true,
+    "file": "penerbit/pendapatan_dan_pencairan_desktop/state-i-full.png",
+    "bytes": 75412
+   }
+  ],
+  "chipCount": 9,
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/penerbit/pendapatan_dan_pencairan_desktop.html"
+ },
+ {
+  "key": "penerbit/ulasan_pembeli_desktop.html#demo-menu",
+  "page": "penerbit/ulasan_pembeli_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "a",
+    "label": "Berisi (Default)check",
+    "clicked": true,
+    "file": "penerbit/ulasan_pembeli_desktop/state-a-full.png",
+    "bytes": 199677
+   },
+   {
+    "state": "b",
+    "label": "Buka Balasancheck",
+    "clicked": true,
+    "file": "penerbit/ulasan_pembeli_desktop/state-b-full.png",
+    "bytes": 210380
+   },
+   {
+    "state": "c",
+    "label": "Validasi Errorcheck",
+    "clicked": true,
+    "file": "penerbit/ulasan_pembeli_desktop/state-c-full.png",
+    "bytes": 213060
+   },
+   {
+    "state": "d",
+    "label": "Sedang Mengirimcheck",
+    "clicked": true,
+    "file": "penerbit/ulasan_pembeli_desktop/state-d-full.png",
+    "bytes": 210673
+   },
+   {
+    "state": "e",
+    "label": "Balasan Tersimpancheck",
+    "clicked": true,
+    "file": "penerbit/ulasan_pembeli_desktop/state-e-full.png",
+    "bytes": 213465
+   },
+   {
+    "state": "f",
+    "label": "Ulasan Kosongcheck",
+    "clicked": true,
+    "file": "penerbit/ulasan_pembeli_desktop/state-f-full.png",
+    "bytes": 77362
+   },
+   {
+    "state": "g",
+    "label": "Pencarian Nihilcheck",
+    "clicked": true,
+    "file": "penerbit/ulasan_pembeli_desktop/state-g-full.png",
+    "bytes": 93421
+   }
+  ],
+  "chipCount": 7,
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/penerbit/ulasan_pembeli_desktop.html"
+ },
+ {
+  "key": "admin/dashboard_administrasi_utama_desktop.html#demo-menu",
+  "page": "admin/dashboard_administrasi_utama_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "a",
+    "label": "Normalcheck",
+    "clicked": true,
+    "file": "admin/dashboard_administrasi_utama_desktop/state-a-full.png",
+    "bytes": 153548
+   },
+   {
+    "state": "b",
+    "label": "Antrean Bersihcheck",
+    "clicked": true,
+    "file": "admin/dashboard_administrasi_utama_desktop/state-b-full.png",
+    "bytes": 132948
+   },
+   {
+    "state": "c",
+    "label": "Data Kosongcheck",
+    "clicked": true,
+    "file": "admin/dashboard_administrasi_utama_desktop/state-c-full.png",
+    "bytes": 110217
+   },
+   {
+    "state": "d",
+    "label": "Gagal Memuatcheck",
+    "clicked": true,
+    "file": "admin/dashboard_administrasi_utama_desktop/state-d-full.png",
+    "bytes": 84640
+   }
+  ],
+  "chipCount": 4,
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/admin/dashboard_administrasi_utama_desktop.html"
+ },
+ {
+  "key": "admin/kelola_pengguna_desktop.html#demo-menu",
+  "page": "admin/kelola_pengguna_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "a",
+    "label": "Menunggu Persetujuancheck",
+    "clicked": true,
+    "file": "admin/kelola_pengguna_desktop/state-a-full.png",
+    "bytes": 119544
+   },
+   {
+    "state": "b",
+    "label": "Semua Penggunacheck",
+    "clicked": true,
+    "file": "admin/kelola_pengguna_desktop/state-b-full.png",
+    "bytes": 132989
+   },
+   {
+    "state": "c",
+    "label": "Detail Penerbitcheck",
+    "clicked": true,
+    "file": "admin/kelola_pengguna_desktop/state-c-full.png",
+    "bytes": 151964
+   },
+   {
+    "state": "d",
+    "label": "Konfirmasi Persetujuancheck",
+    "clicked": true,
+    "file": "admin/kelola_pengguna_desktop/state-d-full.png",
+    "bytes": 157292
+   },
+   {
+    "state": "e",
+    "label": "Konfirmasi Penolakancheck",
+    "clicked": true,
+    "file": "admin/kelola_pengguna_desktop/state-e-full.png",
+    "bytes": 146960
+   },
+   {
+    "state": "f",
+    "label": "Konfirmasi Nonaktifkancheck",
+    "clicked": true,
+    "file": "admin/kelola_pengguna_desktop/state-f-full.png",
+    "bytes": 153232
+   },
+   {
+    "state": "g",
+    "label": "Notifikasi Suksescheck",
+    "clicked": true,
+    "file": "admin/kelola_pengguna_desktop/state-g-full.png",
+    "bytes": 127075
+   }
+  ],
+  "chipCount": 7,
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/admin/kelola_pengguna_desktop.html"
+ },
+ {
+  "key": "admin/pengawasan_katalog_buku_global_desktop.html#demo-menu",
+  "page": "admin/pengawasan_katalog_buku_global_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "a",
+    "label": "Laporan Bukucheck",
+    "clicked": true,
+    "file": "admin/pengawasan_katalog_buku_global_desktop/state-a-full.png",
+    "bytes": 121165
+   },
+   {
+    "state": "b",
+    "label": "Seluruh Katalogcheck",
+    "clicked": true,
+    "file": "admin/pengawasan_katalog_buku_global_desktop/state-b-full.png",
+    "bytes": 121893
+   },
+   {
+    "state": "c",
+    "label": "Detail Laporancheck",
+    "clicked": true,
+    "file": "admin/pengawasan_katalog_buku_global_desktop/state-c-full.png",
+    "bytes": 151099
+   },
+   {
+    "state": "d",
+    "label": "Konfirmasi Nonaktifkancheck",
+    "clicked": true,
+    "file": "admin/pengawasan_katalog_buku_global_desktop/state-d-full.png",
+    "bytes": 150525
+   },
+   {
+    "state": "e",
+    "label": "Konfirmasi Tutup Laporancheck",
+    "clicked": true,
+    "file": "admin/pengawasan_katalog_buku_global_desktop/state-e-full.png",
+    "bytes": 151261
+   },
+   {
+    "state": "f",
+    "label": "Notifikasi Suksescheck",
+    "clicked": true,
+    "file": "admin/pengawasan_katalog_buku_global_desktop/state-f-full.png",
+    "bytes": 129360
+   },
+   {
+    "state": "g",
+    "label": "Antrean Kosongcheck",
+    "clicked": true,
+    "file": "admin/pengawasan_katalog_buku_global_desktop/state-g-full.png",
+    "bytes": 123845
+   }
+  ],
+  "chipCount": 7,
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/admin/pengawasan_katalog_buku_global_desktop.html"
+ },
+ {
+  "key": "admin/monitoring_global_desktop.html#demo-menu",
+  "page": "admin/monitoring_global_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "a",
+    "label": "Default: 14 Haricheck",
+    "clicked": true,
+    "file": "admin/monitoring_global_desktop/state-a-full.png",
+    "bytes": 202076
+   },
+   {
+    "state": "b",
+    "label": "Filter: 7 Haricheck",
+    "clicked": true,
+    "file": "admin/monitoring_global_desktop/state-b-full.png",
+    "bytes": 199287
+   },
+   {
+    "state": "c",
+    "label": "Filter: PT Mizancheck",
+    "clicked": true,
+    "file": "admin/monitoring_global_desktop/state-c-full.png",
+    "bytes": 166402
+   },
+   {
+    "state": "d",
+    "label": "Data Kosongcheck",
+    "clicked": true,
+    "file": "admin/monitoring_global_desktop/state-d-full.png",
+    "bytes": 141047
+   },
+   {
+    "state": "e",
+    "label": "Gagal Memuatcheck",
+    "clicked": true,
+    "file": "admin/monitoring_global_desktop/state-e-full.png",
+    "bytes": 100987
+   }
+  ],
+  "chipCount": 5,
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/admin/monitoring_global_desktop.html"
+ },
+ {
+  "key": "admin/kelola_pencairan_dana_desktop.html#demo-menu",
+  "page": "admin/kelola_pencairan_dana_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "a",
+    "label": "Pengajuan Dalam Prosescheck",
+    "clicked": true,
+    "file": "admin/kelola_pencairan_dana_desktop/state-a-full.png",
+    "bytes": 105363
+   },
+   {
+    "state": "b",
+    "label": "Pengajuan Selesaicheck",
+    "clicked": true,
+    "file": "admin/kelola_pencairan_dana_desktop/state-b-full.png",
+    "bytes": 115359
+   },
+   {
+    "state": "c",
+    "label": "Pengajuan Ditolakcheck",
+    "clicked": true,
+    "file": "admin/kelola_pencairan_dana_desktop/state-c-full.png",
+    "bytes": 103691
+   },
+   {
+    "state": "d",
+    "label": "Detail Pencairancheck",
+    "clicked": true,
+    "file": "admin/kelola_pencairan_dana_desktop/state-d-full.png",
+    "bytes": 105355
+   },
+   {
+    "state": "e",
+    "label": "Bukti Transfer Terkirimcheck",
+    "clicked": true,
+    "file": "admin/kelola_pencairan_dana_desktop/state-e-full.png",
+    "bytes": 116423
+   },
+   {
+    "state": "f",
+    "label": "Bukti Belum Tersediacheck",
+    "clicked": true,
+    "file": "admin/kelola_pencairan_dana_desktop/state-f-full.png",
+    "bytes": 106380
+   },
+   {
+    "state": "g",
+    "label": "Konfirmasi Penolakancheck",
+    "clicked": true,
+    "file": "admin/kelola_pencairan_dana_desktop/state-g-full.png",
+    "bytes": 106421
+   },
+   {
+    "state": "h",
+    "label": "Konfirmasi Penyelesaiancheck",
+    "clicked": true,
+    "file": "admin/kelola_pencairan_dana_desktop/state-h-full.png",
+    "bytes": 106448
+   }
+  ],
+  "chipCount": 8,
+  "errors": [
+   "ReferenceError: editable is not defined",
+   "ReferenceError: editable is not defined",
+   "ReferenceError: editable is not defined",
+   "ReferenceError: editable is not defined",
+   "ReferenceError: editable is not defined"
+  ],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/admin/kelola_pencairan_dana_desktop.html"
+ },
+ {
+  "key": "penerbit-settings#bank-edit",
+  "page": "penerbit/pengaturan_profil_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "bank-edit",
+    "file": "penerbit/pengaturan_profil_desktop/state-bank-edit-full.png",
+    "bytes": 131014
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/penerbit/pengaturan_profil_desktop.html"
+ },
+ {
+  "key": "admin-catalog#reports",
+  "page": "admin/pengawasan_katalog_buku_global_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "reports",
+    "file": "admin/pengawasan_katalog_buku_global_desktop/state-reports-full.png",
+    "bytes": 121153
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/admin/pengawasan_katalog_buku_global_desktop.html"
+ },
+ {
+  "key": "admin-monitoring#reset-filter",
+  "page": "admin/monitoring_global_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "reset-filter",
+    "file": "admin/monitoring_global_desktop/state-reset-filter-full.png",
+    "bytes": 202076
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/admin/monitoring_global_desktop.html"
+ },
+ {
+  "key": "admin-payouts#drawer",
+  "page": "admin/kelola_pencairan_dana_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "drawer",
+    "file": "admin/kelola_pencairan_dana_desktop/state-drawer-full.png",
+    "bytes": 105464
+   }
+  ],
+  "errors": [
+   "ReferenceError: editable is not defined"
+  ],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/admin/kelola_pencairan_dana_desktop.html"
+ },
+ {
+  "key": "admin-community#create",
+  "page": "admin/kelola_komunitas_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "create",
+    "file": "admin/kelola_komunitas_desktop/state-create-full.png",
+    "bytes": 115958
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/admin/kelola_komunitas_desktop.html"
+ },
+ {
+  "key": "admin-login#default",
+  "page": "admin/login_administrator_desktop.html",
+  "viewport": "desktop",
+  "screens": [
+   {
+    "state": "default",
+    "file": "admin/login_administrator_desktop/state-default-full.png",
+    "bytes": 584361
+   }
+  ],
+  "errors": [],
+  "finalUrl": "http://127.0.0.1:8099/prototype-copy/admin/login_administrator_desktop.html"
+ }
+]

@@ -1,0 +1,31 @@
+<div id="composer-modal" class="fixed inset-0 z-[85] hidden" role="dialog" aria-modal="true" aria-labelledby="composer-title" aria-describedby="composer-desc">
+    <div id="composer-scrim" class="absolute inset-0 bg-[#222225]/45"></div>
+    <div class="relative flex h-full items-end justify-center sm:items-center sm:p-4">
+      <div class="flex max-h-full w-full flex-col overflow-hidden bg-white sm:max-w-[560px] sm:rounded-2xl sm:border sm:border-border-subtle sm:shadow-[0_20px_48px_rgba(34,34,37,0.18)]">
+        <header class="border-b border-border-subtle px-5 py-4">
+          <h2 id="composer-title" class="text-[17px] font-bold tracking-tight text-ink-body">Buat Topik Diskusi</h2>
+          <p id="composer-desc" class="mt-0.5 text-[13px] text-ink-muted">Mulai pembahasan baru di komunitas ini.</p>
+        </header>
+        <div class="flex-1 space-y-4 overflow-y-auto px-5 py-4">
+          <div>
+            <label for="topic-title-input" class="block text-[13px] font-bold text-ink-body">Judul Topik</label>
+            <input id="topic-title-input" type="text" maxlength="120" placeholder="Contoh: Novel apa yang menarik untuk dibahas bersama?" class="mt-1.5 h-11 w-full rounded-xl border border-border-subtle bg-white px-3 text-[14px] text-ink-body placeholder:text-ink-muted focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20">
+            <p id="topic-title-error" role="alert" class="mt-1 hidden text-[12.5px] font-medium text-[#B42318]"></p>
+          </div>
+          <div>
+            <div class="flex items-baseline justify-between gap-3">
+              <label for="topic-body-input" class="block text-[13px] font-bold text-ink-body">Isi Diskusi</label>
+              <span id="topic-body-counter" class="text-[12px] tabular-nums text-ink-muted">0/2000</span>
+            </div>
+            <textarea id="topic-body-input" rows="5" maxlength="2000" placeholder="Tulis pertanyaan atau pendapatmu agar anggota lain bisa ikut berdiskusi." class="mt-1.5 w-full resize-none rounded-xl border border-border-subtle bg-white p-3 text-[14px] leading-relaxed text-ink-body placeholder:text-ink-muted focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"></textarea>
+            <p id="topic-body-error" role="alert" class="mt-1 hidden text-[12.5px] font-medium text-[#B42318]"></p>
+          </div>
+          <p id="composer-error" role="alert" class="hidden text-[12.5px] font-medium text-[#B42318]"></p>
+        </div>
+        <footer class="flex items-center justify-end gap-2 border-t border-border-subtle px-5 py-3.5">
+          <button type="button" id="composer-cancel" class="h-10 cursor-pointer rounded-xl border border-border-subtle px-4 text-[13.5px] font-semibold text-ink-body transition-colors hover:bg-surface-neutral">Batal</button>
+          <button type="button" id="composer-submit" class="h-10 cursor-pointer rounded-xl bg-primary px-4 text-[13.5px] font-bold text-white transition-colors hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-50">Terbitkan Topik</button>
+        </footer>
+      </div>
+    </div>
+  </div>

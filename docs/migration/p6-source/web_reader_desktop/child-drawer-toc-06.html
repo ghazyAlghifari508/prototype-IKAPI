@@ -1,0 +1,28 @@
+<div id="drawer-toc" class="fixed inset-y-0 left-0 w-full sm:w-96 theme-chrome border-r shadow-2xl z-50 transform transition-transform duration-300 ease-in-out flex flex-col -translate-x-full hidden font-sans">
+    <div class="p-4 border-b theme-border flex items-center justify-between">
+      <div class="flex items-center gap-2 theme-text">
+        <span class="material-symbols-outlined text-[20px] text-primary">menu_book</span>
+        <h2 class="font-bold text-[16px]">Daftar Isi Buku</h2>
+      </div>
+      <button type="button" aria-label="Tutup Daftar Isi" class="w-8 h-8 rounded-xl flex items-center justify-center theme-muted hover:theme-text hover:bg-black/5 dark:hover:bg-white/5 transition-colors cursor-pointer" onclick="closeAllDrawers()">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+
+    <div class="flex-1 overflow-y-auto p-4 space-y-2">
+      <button type="button" class="toc-item w-full text-left p-3.5 rounded-2xl bg-surface-soft border border-primary/20 flex items-center justify-between cursor-pointer" onclick="navigateToChapter(41)">
+        <div>
+          <p class="text-[11px] text-primary font-bold uppercase">Bab 3 (Aktif)</p>
+          <p class="text-[13px] theme-text font-bold leading-tight mt-0.5">Menelusuri Jejak Aksara Kuno di Hulu Cimanuk</p>
+        </div>
+        <span class="text-[12px] font-mono text-primary font-bold">Hal 41</span>
+      </button>
+      <button type="button" class="toc-item w-full text-left p-3.5 rounded-2xl hover:bg-black/5 dark:hover:bg-white/5 transition-colors flex items-center justify-between cursor-pointer border border-transparent" onclick="navigateToChapter(43)">
+        <div>
+          <p class="text-[11px] theme-muted font-bold uppercase">Bab 3 — Bagian 2</p>
+          <p class="text-[13px] theme-text font-bold leading-tight mt-0.5">Malam di Pondok Ki Warsa</p>
+        </div>
+        <span class="text-[12px] font-mono theme-muted">Hal 43</span>
+      </button>
+    </div>
+  </div>

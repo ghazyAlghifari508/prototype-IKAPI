@@ -1,0 +1,228 @@
+[
+  {
+    "scenario": "1-shell-navigation-drawer",
+    "out": {
+      "dashboardKpi": "",
+      "queueRows": 4,
+      "sidebarLinks": [
+        "http://127.0.0.1:8140/admin",
+        "http://127.0.0.1:8140/admin/pengguna",
+        "http://127.0.0.1:8140/admin/katalog",
+        "http://127.0.0.1:8140/admin/moderasi-ulasan",
+        "http://127.0.0.1:8140/admin/komunitas",
+        "http://127.0.0.1:8140/admin/moderasi-diskusi",
+        "http://127.0.0.1:8140/admin/monitoring",
+        "http://127.0.0.1:8140/admin/pencairan"
+      ],
+      "activeNav": [
+        "groupKelola Pengguna"
+      ],
+      "rowsAfterReload": 2
+    },
+    "mobile": {
+      "drawerOpen": {
+        "scrim": true,
+        "expanded": "true",
+        "locked": "hidden"
+      },
+      "closedByEscape": true
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "2-users-search-filter-drawer-actions",
+    "out": {
+      "initial": 2,
+      "afterSearch": 1,
+      "afterRoleFilter": 2,
+      "drawerOpen": true,
+      "drawerFocus": "drawer-close",
+      "drawerActions": [
+        "approve",
+        "reject"
+      ],
+      "approveVisible": true,
+      "approveModal": true,
+      "afterApprove": "CV Angkasa Bandung ratna.j@angkasabandung.com Dra. Ratna Juw",
+      "drawerClosed": false
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "3-catalog-search-drawer-takedown",
+    "out": {
+      "initial": 4,
+      "afterSearch": 0,
+      "drawerOpen": true,
+      "takedownEnabled": true,
+      "drawerDecision": "-",
+      "takedownRowFound": true,
+      "drawerKind": "Detail Laporan Buku",
+      "takedownModal": false,
+      "confirmDisabled": false,
+      "closeReportVisible": true,
+      "closeReportModal": false,
+      "afterCloseReport": {
+        "modalClosed": true,
+        "drawerDecision": "-"
+      }
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "4-review-moderation-queue-drawer-delete",
+    "out": {
+      "queue": "3 laporan menunggu peninjauan",
+      "categories": [
+        "Semua Kategori",
+        "Kata Kasar & Provokasi",
+        "Spam & Promosi Eksternal",
+        "Ujaran Kebencian",
+        "Informasi Pribadi",
+        "Lainnya"
+      ],
+      "initial": 3,
+      "afterSearch": 0,
+      "cardCount": 3,
+      "drawerOpen": true,
+      "deleteActionAvailable": true,
+      "drawerState": {
+        "decision": "-",
+        "category": "Kata Kasar & Provokasi"
+      },
+      "deleteModal": true,
+      "afterDelete": {
+        "modalClosed": true,
+        "drawerDecision": "-",
+        "queueText": "PromoBookOnline99 @bot_diskon Spam & Promosi Eksternal 1 lap"
+      }
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "5-monitoring-filters-reset",
+    "out": {
+      "initial": 5,
+      "filters": {
+        "range": [],
+        "publishers": [
+          "all",
+          "PT Mizan Pustaka Utama",
+          "PT Bentang Pustaka",
+          "CV Angkasa Publishing",
+          "CV Pelangi Aksara",
+          "PT Kiblat Buku Utama",
+          "UPI Press",
+          "Bumi Aksara",
+          "ITB Press"
+        ]
+      },
+      "rangeDisabled": null,
+      "rangeOptions": [],
+      "afterRange": 5,
+      "afterPublisher": 5,
+      "afterReset": 5
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "6-payouts-search-drawer-finalize",
+    "out": {
+      "summary": "1 pengajuan menunggu Rp 645.000",
+      "initial": 1,
+      "afterSearch": 1,
+      "drawerOpen": true,
+      "finalizeEnabled": true,
+      "finalizeModal": true,
+      "modalClosed": true
+    },
+    "errors": [
+      "ReferenceError: editable is not defined"
+    ],
+    "bad": []
+  },
+  {
+    "scenario": "7-communities-create-cross-buyer-directory",
+    "out": {
+      "initial": 3,
+      "drawerOpen": true,
+      "nameField": "form-name",
+      "afterCreate": 4,
+      "stored": {
+        "count": 4,
+        "names": [
+          "Masyarakat Sejarah & Budaya Sunda",
+          "Komunitas Uji Admin"
+        ]
+      },
+      "buyerSees": [
+        "Komunitas Filologi Pasundan",
+        "Klub Buku Priangan (KBP)",
+        "Masyarakat Sejarah & Budaya Sunda",
+        "Komunitas Uji Admin"
+      ]
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "8-discussion-moderation-cross-feature",
+    "out": {
+      "counts": {
+        "pending": "(1)",
+        "all": "(1)"
+      },
+      "rows": 1,
+      "targets": [
+        "BALASAN Induk uji moderasi admin Klub Buku Priangan (K"
+      ],
+      "rowsAll": 1,
+      "drawerOpen": true,
+      "parentContext": {
+        "parent": "-",
+        "topic": "Topik: Novel apa yang menarik untuk diba",
+        "siblings": "5 balasan lain pada topik ini."
+      },
+      "removeVisible": true,
+      "afterRemove": {
+        "reportStatus": "removed",
+        "targetId": "RPL-P09-P",
+        "targetRemoved": true,
+        "childrenAlive": 1
+      },
+      "buyerThread": {
+        "deletedPlaceholders": 1,
+        "nodes": 6
+      }
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "9-admin-login-preview",
+    "out": {
+      "validation": {
+        "banner": false,
+        "emailErr": true,
+        "passwordErr": true
+      },
+      "feedback": "Autentikasi administrator belum tersedia pada prototype ini. Gunakan pratinjau dashboard d",
+      "previewLinkVisible": true,
+      "previewNoteVisible": true,
+      "redirected": true,
+      "session": {
+        "role": "admin",
+        "preview": true,
+        "email": "admin@ikapi-jabar.id"
+      },
+      "noSecurityClaim": true
+    },
+    "errors": [],
+    "bad": []
+  }
+]

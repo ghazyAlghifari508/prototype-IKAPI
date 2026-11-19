@@ -1,0 +1,30 @@
+<div id="modal-detail" class="fixed inset-0 z-[70] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-detail=""></div>
+  <div class="relative mx-auto mt-20 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[520px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:p-6" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+    <div class="mb-3 flex items-start justify-between gap-4">
+      <div>
+        <h2 id="detail-title" class="text-[18px] font-bold tracking-tight text-ink">Detail Pesanan</h2>
+        <p class="num mt-0.5 text-[13px] text-muted" id="detail-order">-</p>
+        <p class="mt-0.5 text-[12.5px] text-muted" id="detail-date">-</p>
+      </div>
+      <button type="button" data-close-detail="" aria-label="Tutup" class="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+
+    <p class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Buku dalam pesanan</p>
+    <ul id="detail-items" class="mt-2 space-y-2"></ul>
+    <p id="detail-items-note" class="mt-2 hidden text-[12px] leading-relaxed text-muted">Daftar judul lengkap belum tersedia pada dataset prototype ini.</p>
+
+    <dl class="mt-4 space-y-2.5 border-t border-divider pt-4 text-[13px]">
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Total buku</dt><dd class="num font-semibold text-ink" id="detail-qty">-</dd></div>
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Pendapatan bersih</dt><dd class="num font-semibold text-ink" id="detail-net">-</dd></div>
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Status</dt><dd class="font-semibold text-ink" id="detail-status">-</dd></div>
+    </dl>
+
+    <div class="mt-5 flex items-center justify-end gap-2 border-t border-divider pt-4">
+      <button type="button" data-close-detail="" class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">Tutup</button>
+      <a id="detail-invoice" href="invoice_penjualan_pdf_portal_penerbit.html" target="_blank" rel="noopener" class="focus-ring inline-flex h-10 items-center rounded-xl bg-primary px-4 text-[14px] font-semibold text-white hover:bg-primary-hover">Lihat Invoice</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,111 @@
+<aside class="lg:col-span-3 bg-white rounded-3xl p-6 border border-border-subtle shadow-sm flex flex-col gap-6 lg:sticky lg:top-36">
+              <!-- Title & Reset -->
+              <div class="flex items-center justify-between pb-3 border-b border-border-subtle">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+                  <h2 class="text-[16px] font-bold text-ink-body">Filter Buku</h2>
+                </div>
+                <button type="button" class="text-[13px] font-semibold text-primary hover:text-primary-hover hover:underline cursor-pointer" onclick="resetAllFilters()">
+                  Reset
+                </button>
+              </div>
+
+              <!-- Section: Kategori -->
+              <div class="flex flex-col gap-3">
+                <span class="text-[13px] font-bold text-ink-body uppercase tracking-wider block">Kategori</span>
+                <div class="flex flex-col gap-2.5 text-[13.5px]">
+                  <label class="flex items-center justify-between cursor-pointer group select-none">
+                    <span class="flex items-center gap-2.5">
+                      <input id="cat-all" checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" type="checkbox" onchange="handleCategoryCheckbox('all')">
+                      <span class="text-ink-body group-hover:text-primary transition-colors font-medium">Semua Kategori</span>
+                    </span>
+                    <span class="text-[12px] text-ink-muted">(12)</span>
+                  </label>
+                  <label class="flex items-center justify-between cursor-pointer group select-none">
+                    <span class="flex items-center gap-2.5">
+                      <input class="cat-filter-checkbox w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" data-category="Pendidikan" type="checkbox" onchange="handleCategoryCheckbox('specific')">
+                      <span class="text-ink-muted group-hover:text-ink-body transition-colors">Pendidikan</span>
+                    </span>
+                    <span class="text-[12px] text-ink-muted">(3)</span>
+                  </label>
+                  <label class="flex items-center justify-between cursor-pointer group select-none">
+                    <span class="flex items-center gap-2.5">
+                      <input class="cat-filter-checkbox w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" data-category="Sastra &amp; Fiksi" type="checkbox" onchange="handleCategoryCheckbox('specific')">
+                      <span class="text-ink-muted group-hover:text-ink-body transition-colors">Sastra &amp; Fiksi</span>
+                    </span>
+                    <span class="text-[12px] text-ink-muted">(3)</span>
+                  </label>
+                  <label class="flex items-center justify-between cursor-pointer group select-none">
+                    <span class="flex items-center gap-2.5">
+                      <input class="cat-filter-checkbox w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" data-category="Budaya &amp; Tradisi" type="checkbox" onchange="handleCategoryCheckbox('specific')">
+                      <span class="text-ink-muted group-hover:text-ink-body transition-colors">Budaya &amp; Tradisi</span>
+                    </span>
+                    <span class="text-[12px] text-ink-muted">(3)</span>
+                  </label>
+                  <label class="flex items-center justify-between cursor-pointer group select-none">
+                    <span class="flex items-center gap-2.5">
+                      <input class="cat-filter-checkbox w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" data-category="Bisnis &amp; Ekonomi" type="checkbox" onchange="handleCategoryCheckbox('specific')">
+                      <span class="text-ink-muted group-hover:text-ink-body transition-colors">Bisnis &amp; Ekonomi</span>
+                    </span>
+                    <span class="text-[12px] text-ink-muted">(3)</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Section: Penerbit IKAPI Jabar -->
+              <div class="flex flex-col gap-3 pt-3 border-t border-border-subtle">
+                <span class="text-[13px] font-bold text-ink-body uppercase tracking-wider block">
+                  Penerbit IKAPI Jabar
+                </span>
+                <div class="flex flex-col gap-2.5 text-[13.5px]">
+                  <label class="flex items-center justify-between cursor-pointer group select-none">
+                    <span class="flex items-center gap-2.5">
+                      <input class="pub-filter-checkbox w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" data-publisher="Kiblat Buku Utama" type="checkbox" onchange="handlePublisherCheckbox()">
+                      <span class="text-ink-muted group-hover:text-ink-body transition-colors">Kiblat Buku Utama</span>
+                    </span>
+                    <span class="text-[12px] text-ink-muted">(3)</span>
+                  </label>
+                  <label class="flex items-center justify-between cursor-pointer group select-none">
+                    <span class="flex items-center gap-2.5">
+                      <input class="pub-filter-checkbox w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" data-publisher="UPI Press" type="checkbox" onchange="handlePublisherCheckbox()">
+                      <span class="text-ink-muted group-hover:text-ink-body transition-colors">UPI Press</span>
+                    </span>
+                    <span class="text-[12px] text-ink-muted">(3)</span>
+                  </label>
+                  <label class="flex items-center justify-between cursor-pointer group select-none">
+                    <span class="flex items-center gap-2.5">
+                      <input class="pub-filter-checkbox w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" data-publisher="ITB Press" type="checkbox" onchange="handlePublisherCheckbox()">
+                      <span class="text-ink-muted group-hover:text-ink-body transition-colors">ITB Press</span>
+                    </span>
+                    <span class="text-[12px] text-ink-muted">(3)</span>
+                  </label>
+                  <label class="flex items-center justify-between cursor-pointer group select-none">
+                    <span class="flex items-center gap-2.5">
+                      <input class="pub-filter-checkbox w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" data-publisher="Geger Sunten" type="checkbox" onchange="handlePublisherCheckbox()">
+                      <span class="text-ink-muted group-hover:text-ink-body transition-colors">Geger Sunten</span>
+                    </span>
+                    <span class="text-[12px] text-ink-muted">(3)</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Section: Rentang Harga -->
+              <div class="flex flex-col gap-3 pt-3 border-t border-border-subtle">
+                <span class="text-[13px] font-bold text-ink-body uppercase tracking-wider block">Rentang Harga (Rp)</span>
+                
+                <!-- Price Inputs (Min & Max) -->
+                <div class="grid grid-cols-2 gap-2 mt-1">
+                  <div class="space-y-1">
+                    <span class="text-[11px] text-ink-muted font-bold uppercase">Min</span>
+                    <input id="price-min-input" class="w-full h-10 px-2.5 rounded-xl bg-surface-neutral text-[13px] text-ink-body font-mono border border-border-subtle outline-none focus:border-primary focus:bg-white" type="number" placeholder="20000" value="20000">
+                  </div>
+                  <div class="space-y-1">
+                    <span class="text-[11px] text-ink-muted font-bold uppercase">Max</span>
+                    <input id="price-max-input" class="w-full h-10 px-2.5 rounded-xl bg-surface-neutral text-[13px] text-ink-body font-mono border border-border-subtle outline-none focus:border-primary focus:bg-white" type="number" placeholder="100000" value="100000">
+                  </div>
+                </div>
+                <button type="button" class="w-full h-10 rounded-xl bg-surface-neutral hover:bg-surface-soft hover:text-primary text-ink-body font-bold text-[13px] border border-border-subtle transition-colors cursor-pointer" onclick="applyPriceFilter()">
+                  Terapkan Harga
+                </button>
+              </div>
+            </aside>

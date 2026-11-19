@@ -1,0 +1,11 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch();
+const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } });
+const p = await ctx.newPage();
+const err = [];
+p.on('pageerror', (e) => err.push(String(e.stack || e).split('\n').slice(0, 3).join(' | ')));
+await p.goto('http://127.0.0.1:8140/komunitas/community-klub-buku/diskusi/TPC-2026-101/balas/RPL-2026-201', { waitUntil: 'load' });
+await p.waitForTimeout(900);
+console.log('errors:', err);
+console.log('ids present:', await p.evaluate(() => ['reply-parent-card','reply-parent-unavailable','reply-view-form','reply-view-restricted','reply-view-input','reply-view-error','reply-view-counter','reply-view-submit','view-reply'].map((id) => id + '=' + !!document.getElementById(id)).join(' ')));
+await b.close();

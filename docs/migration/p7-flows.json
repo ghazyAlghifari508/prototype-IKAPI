@@ -1,0 +1,236 @@
+[
+  {
+    "scenario": "1-directory-to-nested-reply",
+    "out": {
+      "directoryCards": 3,
+      "afterSearch": 1,
+      "noResultsVisible": true,
+      "profileUrl": "/komunitas/community-filologi",
+      "joinBtnVisible": true,
+      "membership": {
+        "USR-PMB-0042": [
+          "community-filologi"
+        ]
+      },
+      "roomUrl": "/komunitas/community-filologi/diskusi",
+      "roomTopics": 2,
+      "createEnabled": true,
+      "composerOpen": true,
+      "topicCreated": true,
+      "topicUrl": "/komunitas/community-filologi/diskusi/TPC-MWN5J4R3",
+      "rootReplies": 1,
+      "rootStored": [
+        {
+          "id": "RPL-MWN5J5EZ",
+          "parent": null
+        }
+      ],
+      "replyUrl": "/komunitas/community-filologi/diskusi/TPC-MWN5J4R3/balas/RPL-MWN5J5EZ",
+      "parentCardVisible": true,
+      "childStored": {
+        "id": "RPL-MWN5J672",
+        "parent": "RPL-MWN5J5EZ",
+        "topicId": "TPC-MWN5J4R3"
+      },
+      "treeAfterReload": [
+        {
+          "x": 72,
+          "h": 182
+        },
+        {
+          "x": 108,
+          "h": 113
+        }
+      ],
+      "nestedIndented": 2,
+      "shot": "topic-with-nested-reply.png"
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "2-permissions-nonmember-guest-member-leave",
+    "out": {
+      "memberships": null,
+      "createDisabledNonMember": true,
+      "createClasses": "inline-flex h-10 cursor-not-allowed items-center gap-2 rounded-xl border border-border-subtle bg-surface-neutral px-4 text-[13.5px] font-bold text-ink-muted",
+      "restrictionNote": "Diskusikan buku, bagikan rekomendasi, dan bertukar pendapat dengan anggota lainnya.",
+      "topicReadable": true,
+      "replyFormVisibleAsGuest": false,
+      "createEnabledAfterJoin": true,
+      "createDisabledAfterLeave": true
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "3-reply-count-link-no-autofocus",
+    "out": {
+      "replyLinks": [
+        {
+          "label": "chat_bubble1 balasan",
+          "aria": "Lihat 1 balasan pada topik Bagaimana kalian memilih buku berikutnya?",
+          "href": "http://127.0.0.1:8140/komunitas/community-klub-buku/diskusi/TPC-2026-102"
+        },
+        {
+          "label": "chat_bubble4 balasan",
+          "aria": "Lihat 4 balasan pada topik Novel apa yang menarik untuk dibahas bersama?",
+          "href": "http://127.0.0.1:8140/komunitas/community-klub-buku/diskusi/TPC-2026-101"
+        }
+      ],
+      "zeros": 1,
+      "titleClickable": false,
+      "zeroLink": {
+        "label": "chat_bubble0 balasan",
+        "aria": "Lihat diskusi Topik tanpa balasan (uji tautan 0 balasan), belum ada balasan"
+      },
+      "afterOpen": {
+        "url": "/komunitas/community-klub-buku/diskusi/TPC-MWN5JH1D",
+        "scrollY": 0,
+        "activeId": "topic-title"
+      }
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "4-multi-parent-siblings-deep-mobile",
+    "out": {
+      "tree": [
+        {
+          "x": 72,
+          "depth": 1
+        },
+        {
+          "x": 108,
+          "depth": 1
+        },
+        {
+          "x": 144,
+          "depth": 0
+        },
+        {
+          "x": 72,
+          "depth": 0
+        }
+      ],
+      "distinctIndents": 3,
+      "hasSiblings": 0,
+      "maxDepth": 2,
+      "vp390": {
+        "scrollW": 390,
+        "clientW": 390,
+        "nodes": [
+          16,
+          40,
+          64,
+          16
+        ],
+        "overflowX": false,
+        "distinctIndents": 3
+      },
+      "vp320": {
+        "scrollW": 320,
+        "clientW": 320,
+        "nodes": [
+          16,
+          40,
+          64,
+          16
+        ],
+        "overflowX": false,
+        "distinctIndents": 3
+      },
+      "deepGeometry": {
+        "levels": [
+          72,
+          108,
+          144,
+          180,
+          180
+        ],
+        "siblingA": 144,
+        "siblingB": 144,
+        "distinctLevelIndents": 4,
+        "nodeCount": 11,
+        "maxChildrenPerNode": 3,
+        "indentsMonotonic": false
+      },
+      "deep390": {
+        "scrollW": 390,
+        "clientW": 390,
+        "nodes": 11,
+        "overflowX": false
+      },
+      "deep320": {
+        "scrollW": 320,
+        "clientW": 320,
+        "nodes": 11,
+        "overflowX": false
+      }
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "5-report-nested-and-invalid-ids",
+    "out": {
+      "childMenuVisible": true,
+      "menuOpen": true,
+      "reportModalOpen": true,
+      "reportStored": {
+        "keys": [
+          "communityId",
+          "createdAt",
+          "details",
+          "id",
+          "reasonId",
+          "reasonLabel",
+          "reporterUserId",
+          "status",
+          "targetId",
+          "targetType"
+        ],
+        "targetType": "reply",
+        "targetId": "RPL-2026-207",
+        "status": "pending"
+      },
+      "deletedFlow": {
+        "id": "RPL-2026-201",
+        "childCount": 1
+      },
+      "badTopicRendersUnavailable": true,
+      "statusCodes": {
+        "badTopic": 200,
+        "crossTopic": 404,
+        "badCommunity": 404
+      }
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "6-report-shape-for-admin",
+    "out": {
+      "reportShape": [
+        [
+          "communityId",
+          "createdAt",
+          "details",
+          "id",
+          "reasonId",
+          "reasonLabel",
+          "reporterUserId",
+          "status",
+          "targetId",
+          "targetType",
+          "topicId"
+        ]
+      ],
+      "adminFieldsPresent": true,
+      "adminFixtures": true
+    },
+    "errors": [],
+    "bad": []
+  }
+]

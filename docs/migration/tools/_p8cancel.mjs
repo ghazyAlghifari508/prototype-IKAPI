@@ -1,0 +1,27 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch();
+const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } });
+const p = await ctx.newPage();
+p.on('pageerror', (e) => console.log('ERR', String(e).slice(0, 140)));
+await p.goto('http://127.0.0.1:8099/prototype-copy/penerbit/pengaturan_profil_desktop.html', { waitUntil: 'load' });
+await p.waitForTimeout(500);
+const start = await p.inputValue('#p-name');
+console.log('start', start);
+await p.fill('#p-name', 'PT Kiblat Buku Utama (uji)');
+await p.waitForTimeout(300);
+console.log('dirty note visible:', await p.evaluate(() => !document.getElementById('profile-dirty-note').classList.contains('hidden')));
+await p.click('#btn-profile-cancel');
+await p.waitForTimeout(400);
+console.log('after cancel', await p.inputValue('#p-name'));
+// reviews count after reply
+await p.goto('http://127.0.0.1:8140/penerbit/ulasan', { waitUntil: 'load' });
+await p.waitForTimeout(400);
+console.log('counts before', await p.evaluate(() => [...document.querySelectorAll('button.filter-btn')].map((b) => b.textContent.trim())));
+const rid = await p.getAttribute('button[data-reply]', 'data-reply');
+await p.click('button[data-reply]');
+await p.waitForTimeout(200);
+await p.fill('[data-textarea="' + rid + '"]', 'Balasan uji hitung.');
+await p.click('[data-send="' + rid + '"]');
+await p.waitForTimeout(800);
+console.log('counts after', await p.evaluate(() => [...document.querySelectorAll('button.filter-btn')].map((b) => b.textContent.trim())));
+await b.close();

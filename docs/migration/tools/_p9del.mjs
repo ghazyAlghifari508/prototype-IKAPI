@@ -1,0 +1,16 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch();
+const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } });
+const p = await ctx.newPage();
+p.on('pageerror', (e) => console.log('ERR', String(e).slice(0, 120)));
+await p.goto('http://127.0.0.1:8140/admin/moderasi-ulasan', { waitUntil: 'load' });
+await p.waitForTimeout(500);
+await p.locator('#queue article').first().click();
+await p.waitForTimeout(500);
+const st = await p.evaluate(() => ({ open: !document.getElementById('mod-drawer').classList.contains('hidden'), dis: document.getElementById('btn-delete').disabled, decision: document.getElementById('drawer-decision')?.innerText.trim().slice(0, 20) }));
+console.log('before', JSON.stringify(st));
+await p.evaluate(() => document.getElementById('btn-delete').click());
+await p.waitForTimeout(400);
+console.log('modal hidden?', await p.evaluate(() => document.getElementById('modal-delete')?.classList.contains('hidden')));
+console.log('modal buttons:', await p.evaluate(() => [...document.querySelectorAll('#modal-delete button')].map((b) => [b.id || '-', b.textContent.trim().slice(0, 18), b.disabled])));
+await b.close();

@@ -1,0 +1,37 @@
+<header class="fixed top-0 left-0 w-full z-40 theme-chrome border-b transition-colors duration-300 shadow-xs">
+    <div class="h-16 w-full max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 font-sans">
+      
+      <!-- Back to Library -->
+      <div class="flex items-center gap-3 shrink-0">
+        <a href="perpustakaan_saya_desktop.html" data-path="reader-library" class="inline-flex items-center gap-1.5 text-[13.5px] font-semibold theme-text hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+          <span class="hidden sm:inline">Perpustakaan Saya</span>
+        </a>
+      </div>
+
+      <!-- Center Title and Author -->
+      <div class="flex flex-col items-center justify-center text-center min-w-0 flex-1 truncate px-2">
+        <h1 class="font-bold text-[14px] sm:text-[15px] theme-text truncate max-w-xs md:max-w-md">
+          Laskar Aksara Pasundan
+        </h1>
+        <span class="text-[12px] theme-muted truncate">Ayi R. Kurnia • E-Book Berlisensi</span>
+      </div>
+
+      <!-- Controls: TOC, Bookmark, Settings, Fullscreen -->
+      <div class="flex items-center gap-1.5 shrink-0">
+        <button id="btn-open-toc" type="button" data-path="reader-toc" aria-label="Daftar Isi" class="w-9 h-9 rounded-xl flex items-center justify-center theme-muted hover:theme-text hover:bg-black/5 dark:hover:bg-white/5 transition-colors cursor-pointer" title="Daftar Isi" onclick="openDrawer('drawer-toc')">
+          <span class="material-symbols-outlined text-[20px]">menu_book</span>
+        </button>
+        <button id="btn-open-bookmarks" type="button" data-path="reader-bookmarks" aria-label="Penanda Buku" class="w-9 h-9 rounded-xl flex items-center justify-center theme-muted hover:theme-text hover:bg-black/5 dark:hover:bg-white/5 transition-colors cursor-pointer" title="Penanda Buku" onclick="openDrawer('drawer-bookmarks')">
+          <span class="material-symbols-outlined text-[20px]">bookmarks</span>
+        </button>
+        <button id="btn-open-settings" type="button" data-path="reader-settings" aria-label="Pengaturan Tampilan" class="w-9 h-9 rounded-xl flex items-center justify-center theme-muted hover:theme-text hover:bg-black/5 dark:hover:bg-white/5 transition-colors cursor-pointer" title="Pengaturan Tampilan" onclick="openDrawer('drawer-settings')">
+          <span class="material-symbols-outlined text-[20px]">tune</span>
+        </button>
+        <button id="btn-toggle-fullscreen" type="button" aria-label="Layar Penuh" class="w-9 h-9 rounded-xl flex items-center justify-center theme-muted hover:theme-text hover:bg-black/5 dark:hover:bg-white/5 transition-colors cursor-pointer" title="Layar Penuh" onclick="toggleFullscreen()">
+          <span id="fullscreen-icon" class="material-symbols-outlined text-[20px]">fullscreen</span>
+        </button>
+      </div>
+
+    </div>
+  </header>

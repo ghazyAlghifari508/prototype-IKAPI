@@ -1,0 +1,37 @@
+<section id="view-reply" class="hidden flex-col gap-5">
+
+          <div>
+            <h2 class="text-[22px] font-bold tracking-tight text-ink-body sm:text-[26px]">Balas Komentar</h2>
+            <p class="mt-1 text-[13.5px] text-ink-muted">Membalas <span id="reply-parent-name" class="font-semibold text-ink-body">-</span></p>
+          </div>
+
+          <div id="reply-parent-card" class="rounded-2xl border border-border-subtle bg-white p-4 sm:p-5">
+            <div class="flex items-center gap-2.5">
+              <span id="reply-parent-avatar" class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-surface-soft text-[13px] font-bold text-primary" aria-hidden="true"></span>
+              <div class="min-w-0">
+                <p id="reply-parent-author" class="text-[13.5px] font-bold text-ink-body"></p>
+                <p id="reply-parent-time" class="text-[12px] text-ink-muted"></p>
+              </div>
+            </div>
+            <p id="reply-parent-body" class="mt-2.5 whitespace-pre-line text-[14px] leading-relaxed text-ink-body"></p>
+          </div>
+
+          <div id="reply-parent-unavailable" class="hidden rounded-2xl border border-border-subtle bg-white px-4 py-8 text-center">
+            <p class="text-[15px] font-semibold text-ink-body">Komentar tidak tersedia</p>
+            <p class="mx-auto mt-1.5 max-w-sm text-[13.5px] leading-relaxed text-ink-muted">Komentar yang ingin dibalas sudah dihapus atau tidak ditemukan.</p>
+          </div>
+
+          <form id="reply-view-form" class="flex flex-col gap-2" novalidate="">
+            <label for="reply-view-input" class="text-[13px] font-bold text-ink-body">Balasanmu</label>
+            <textarea id="reply-view-input" rows="4" maxlength="1200" placeholder="Tulis balasanmu..." class="w-full resize-none rounded-xl border border-border-subtle bg-white p-3 text-[14px] leading-relaxed text-ink-body placeholder:text-ink-muted focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"></textarea>
+            <p id="reply-view-error" role="alert" class="hidden text-[12.5px] font-medium text-[#B42318]"></p>
+            <div class="flex items-center justify-between gap-3 border-t border-border-subtle pt-3">
+              <span id="reply-view-counter" class="text-[12px] tabular-nums text-ink-muted">0/1200</span>
+              <button type="submit" id="reply-view-submit" class="h-10 cursor-pointer rounded-xl bg-primary px-4 text-[13.5px] font-bold text-white transition-colors hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-50">Kirim Balasan</button>
+            </div>
+          </form>
+
+          <p id="reply-view-restricted" class="hidden rounded-xl border border-border-subtle bg-surface-neutral px-4 py-3 text-[13px] leading-relaxed text-ink-muted">
+            Gabung komunitas ini untuk membalas komentar.
+          </p>
+        </section>

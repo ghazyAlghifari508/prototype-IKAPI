@@ -1,0 +1,1466 @@
+{
+ "masuk_login_desktop": {
+  "loc": 482,
+  "title": "Masuk — IKAPI Jawa Barat",
+  "keys": [
+   "ikapi_buyer_session_demo"
+  ],
+  "scripts": [
+   {
+    "attrs": "src=\"https://cdn.tailwindcss.com\"",
+    "start": 12,
+    "end": 12,
+    "loc": 0
+   },
+   {
+    "attrs": "",
+    "start": 13,
+    "end": 27,
+    "loc": 14
+   },
+   {
+    "attrs": "",
+    "start": 206,
+    "end": 479,
+    "loc": 273
+   }
+  ],
+  "hasHeader": false,
+  "hasFooter": false,
+  "headerIds": [
+   "tab-buyer",
+   "tab-publisher",
+   "pending-panel"
+  ],
+  "topSections": [
+   {
+    "tag": "main",
+    "cls": "w-full max-w-6xl mx-auto py-4"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full grid grid-cols-1 lg:grid-cols-12 rounded-3xl overflow-hidden shadow-xl bg-white border border-border-subtle"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full max-w-md mx-auto space-y-5"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full border-t border-border-subtle"
+   }
+  ],
+  "functions": [
+   "setRole",
+   "paintTab",
+   "showBanner",
+   "hideBanner",
+   "showPending",
+   "hidePending",
+   "safeNext",
+   "rememberBuyerSession",
+   "resetToForm",
+   "clearFieldErrors",
+   "setLoading",
+   "validate",
+   "attemptLogin",
+   "resolve"
+  ]
+ },
+ "daftar_akun_register_desktop": {
+  "loc": 633,
+  "title": "Daftar Akun — IKAPI Jawa Barat",
+  "keys": [
+   "ikapi_publisher_application_demo",
+   "ikapi_publisher_status_preview"
+  ],
+  "scripts": [
+   {
+    "attrs": "src=\"https://cdn.tailwindcss.com\"",
+    "start": 12,
+    "end": 12,
+    "loc": 0
+   },
+   {
+    "attrs": "",
+    "start": 13,
+    "end": 27,
+    "loc": 14
+   },
+   {
+    "attrs": "",
+    "start": 312,
+    "end": 630,
+    "loc": 318
+   }
+  ],
+  "hasHeader": false,
+  "hasFooter": false,
+  "headerIds": [
+   "tab-buyer",
+   "tab-publisher",
+   "step-label",
+   "step-title",
+   "step-track"
+  ],
+  "topSections": [
+   {
+    "tag": "main",
+    "cls": "w-full max-w-6xl mx-auto py-4"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full grid grid-cols-1 lg:grid-cols-12 rounded-3xl overflow-hidden shadow-xl bg-white border border-border-subtle"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full max-w-lg mx-auto space-y-5"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full border-t border-border-subtle"
+   }
+  ],
+  "functions": [
+   "showErr",
+   "showBanner",
+   "hideBanner",
+   "showInfo",
+   "hideInfo",
+   "setBusy",
+   "setRole",
+   "paintTab",
+   "saveStep",
+   "restorePublisherStep",
+   "submitPublisherApplication",
+   "showStep",
+   "validateStep"
+  ]
+ },
+ "lupa_kata_sandi_desktop": {
+  "loc": 249,
+  "title": "Lupa Kata Sandi — IKAPI Store Jawa Barat",
+  "keys": [],
+  "scripts": [
+   {
+    "attrs": "src=\"https://cdn.tailwindcss.com\"",
+    "start": 51,
+    "end": 51,
+    "loc": 0
+   },
+   {
+    "attrs": "id=\"tailwind-config\"",
+    "start": 52,
+    "end": 91,
+    "loc": 39
+   },
+   {
+    "attrs": "",
+    "start": 183,
+    "end": 239,
+    "loc": 56
+   },
+   {
+    "attrs": "",
+    "start": 240,
+    "end": 246,
+    "loc": 6
+   }
+  ],
+  "hasHeader": false,
+  "hasFooter": false,
+  "headerIds": [
+   "toast",
+   "toast-message"
+  ],
+  "topSections": [
+   {
+    "tag": "main",
+    "cls": "w-full max-w-6xl mx-auto py-4"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full grid grid-cols-1 lg:grid-cols-12 rounded-3xl overflow-hidden shadow-xl bg-white border border-border-subtle"
+   },
+   {
+    "tag": "div",
+    "cls": "relative w-full max-w-[380px] flex items-center justify-center"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-md w-full mx-auto space-y-6"
+   }
+  ],
+  "functions": [
+   "showToast",
+   "handleResetSubmit"
+  ]
+ },
+ "verifikasi_email_desktop": {
+  "loc": 253,
+  "title": "Verifikasi Email — IKAPI Store Jawa Barat",
+  "keys": [],
+  "scripts": [
+   {
+    "attrs": "src=\"https://cdn.tailwindcss.com\"",
+    "start": 51,
+    "end": 51,
+    "loc": 0
+   },
+   {
+    "attrs": "id=\"tailwind-config\"",
+    "start": 52,
+    "end": 91,
+    "loc": 39
+   },
+   {
+    "attrs": "",
+    "start": 188,
+    "end": 250,
+    "loc": 62
+   }
+  ],
+  "hasHeader": false,
+  "hasFooter": false,
+  "headerIds": [
+   "toast",
+   "toast-message"
+  ],
+  "topSections": [
+   {
+    "tag": "main",
+    "cls": "w-full max-w-6xl mx-auto py-4"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full grid grid-cols-1 lg:grid-cols-12 rounded-3xl overflow-hidden shadow-xl bg-white border border-border-subtle"
+   },
+   {
+    "tag": "div",
+    "cls": "relative w-full max-w-[380px] flex items-center justify-center"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-md w-full mx-auto space-y-6"
+   }
+  ],
+  "functions": [
+   "showToast",
+   "updateEmailDisplayFromUrl",
+   "handleResendEmail"
+  ]
+ },
+ "onboarding_preferensi_bacaan_desktop": {
+  "loc": 381,
+  "title": "Preferensi Bacaan - IKAPI Store Jawa Barat",
+  "keys": [
+   "ikapi_reading_prefs_demo"
+  ],
+  "scripts": [
+   {
+    "attrs": "src=\"https://cdn.tailwindcss.com\"",
+    "start": 11,
+    "end": 11,
+    "loc": 0
+   },
+   {
+    "attrs": "",
+    "start": 12,
+    "end": 25,
+    "loc": 13
+   },
+   {
+    "attrs": "",
+    "start": 244,
+    "end": 379,
+    "loc": 135
+   }
+  ],
+  "hasHeader": false,
+  "hasFooter": false,
+  "headerIds": [
+   "step-label",
+   "step-progress"
+  ],
+  "topSections": [
+   {
+    "tag": "main",
+    "cls": "mx-auto flex min-h-screen w-full max-w-[1200px] flex-col px-4 py-6 sm:px-6"
+   },
+   {
+    "tag": "div",
+    "cls": "mx-auto w-full max-w-[460px]"
+   }
+  ],
+  "functions": [
+   "loadPrefs",
+   "savePrefs",
+   "paintProgress",
+   "paintSelection",
+   "showStep"
+  ]
+ },
+ "status_pendaftaran_penerbit_desktop": {
+  "loc": 419,
+  "title": "Status Pendaftaran Penerbit — IKAPI Jawa Barat",
+  "keys": [
+   "ikapi_publisher_application_demo",
+   "ikapi_publisher_status_preview"
+  ],
+  "scripts": [
+   {
+    "attrs": "src=\"https://cdn.tailwindcss.com\"",
+    "start": 12,
+    "end": 12,
+    "loc": 0
+   },
+   {
+    "attrs": "",
+    "start": 13,
+    "end": 27,
+    "loc": 14
+   },
+   {
+    "attrs": "",
+    "start": 133,
+    "end": 416,
+    "loc": 283
+   }
+  ],
+  "hasHeader": true,
+  "hasFooter": false,
+  "headerIds": [
+   "detail-empty",
+   "toast",
+   "toast-text"
+  ],
+  "topSections": [
+   {
+    "tag": "div",
+    "cls": "mx-auto flex h-16 w-full max-w-[1080px] items-center justify-between gap-4 px-4 sm:px-6 lg:px-8"
+   },
+   {
+    "tag": "main",
+    "cls": "mx-auto w-full max-w-[1080px] px-4 py-8 sm:px-6 sm:py-12 lg:px-8"
+   },
+   {
+    "tag": "div",
+    "cls": "mx-auto w-full max-w-[640px]"
+   }
+  ],
+  "functions": [
+   "readStore",
+   "writeStore",
+   "formatDate",
+   "toast",
+   "resolveView",
+   "buildChips",
+   "paintChips",
+   "actionClass",
+   "link",
+   "actionButton",
+   "paintActions",
+   "checkStatus",
+   "render"
+  ]
+ },
+ "akun_saya_profil_dropdown_navigasi_desktop": {
+  "loc": 699,
+  "title": "Profil Saya — IKAPI Store Jawa Barat",
+  "keys": [
+   "ikapi_user_profile"
+  ],
+  "scripts": [
+   {
+    "attrs": "src=\"https://cdn.tailwindcss.com\"",
+    "start": 51,
+    "end": 51,
+    "loc": 0
+   },
+   {
+    "attrs": "id=\"tailwind-config\"",
+    "start": 52,
+    "end": 91,
+    "loc": 39
+   },
+   {
+    "attrs": "",
+    "start": 459,
+    "end": 696,
+    "loc": 237
+   }
+  ],
+  "hasHeader": true,
+  "hasFooter": true,
+  "headerIds": [
+   "header-cart-badge",
+   "header-avatar",
+   "header-avatar-initials",
+   "header-user-name",
+   "header-user-dropdown",
+   "toast-notification",
+   "toastIcon",
+   "toastMessage"
+  ],
+  "topSections": [
+   {
+    "tag": "div",
+    "cls": "h-28 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between"
+   },
+   {
+    "tag": "div",
+    "cls": "relative w-full"
+   },
+   {
+    "tag": "main",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]"
+   },
+   {
+    "tag": "div",
+    "cls": "flex flex-col w-full"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 w-full flex flex-col gap-6"
+   },
+   {
+    "tag": "footer",
+    "cls": "w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8"
+   }
+  ],
+  "functions": [
+   "getStoredProfile",
+   "saveStoredProfile",
+   "showToast",
+   "getInitials",
+   "syncGlobalIdentity",
+   "syncDraftFormView",
+   "handleNameInput",
+   "handlePhoneInput",
+   "handlePhotoUpload",
+   "handleDeletePhoto",
+   "toggleCategoryChip",
+   "handleProfileSubmit",
+   "handleProfileCancel",
+   "openDropdown",
+   "closeDropdown"
+  ]
+ },
+ "pengaturan_akun_desktop": {
+  "loc": 771,
+  "title": "Pengaturan Akun — IKAPI Store Jawa Barat",
+  "keys": [
+   "ikapi_user_preferences",
+   "ikapi_user_profile"
+  ],
+  "scripts": [
+   {
+    "attrs": "src=\"https://cdn.tailwindcss.com\"",
+    "start": 57,
+    "end": 57,
+    "loc": 0
+   },
+   {
+    "attrs": "id=\"tailwind-config\"",
+    "start": 58,
+    "end": 97,
+    "loc": 39
+   },
+   {
+    "attrs": "",
+    "start": 557,
+    "end": 768,
+    "loc": 211
+   }
+  ],
+  "hasHeader": true,
+  "hasFooter": true,
+  "headerIds": [
+   "header-cart-badge",
+   "header-avatar",
+   "header-avatar-initials",
+   "header-user-name",
+   "header-user-dropdown",
+   "modal-change-password",
+   "pwd-modal-title",
+   "toast-notification",
+   "toastIcon",
+   "toastMessage"
+  ],
+  "topSections": [
+   {
+    "tag": "div",
+    "cls": "h-28 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between"
+   },
+   {
+    "tag": "div",
+    "cls": "relative w-full"
+   },
+   {
+    "tag": "main",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]"
+   },
+   {
+    "tag": "div",
+    "cls": "flex flex-col w-full"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 w-full flex flex-col gap-6"
+   },
+   {
+    "tag": "div",
+    "cls": "bg-white rounded-3xl max-w-md w-full overflow-hidden shadow-2xl border border-border-subtle flex flex-col animate-in fad"
+   },
+   {
+    "tag": "footer",
+    "cls": "w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8"
+   }
+  ],
+  "functions": [
+   "getStoredProfile",
+   "getInitials",
+   "syncGlobalIdentity",
+   "showToast",
+   "loadNotificationPreferences",
+   "markPreferencesDirty",
+   "saveNotificationPreferences",
+   "openPasswordModal",
+   "closePasswordModal",
+   "handlePasswordSubmit",
+   "openDropdown",
+   "closeDropdown"
+  ]
+ },
+ "bantuan_akun_desktop": {
+  "loc": 701,
+  "title": "Pusat Bantuan — IKAPI Store Jawa Barat",
+  "keys": [
+   "ikapi_user_profile"
+  ],
+  "scripts": [
+   {
+    "attrs": "src=\"https://cdn.tailwindcss.com\"",
+    "start": 51,
+    "end": 51,
+    "loc": 0
+   },
+   {
+    "attrs": "id=\"tailwind-config\"",
+    "start": 52,
+    "end": 91,
+    "loc": 39
+   },
+   {
+    "attrs": "",
+    "start": 453,
+    "end": 698,
+    "loc": 245
+   }
+  ],
+  "hasHeader": true,
+  "hasFooter": true,
+  "headerIds": [
+   "header-cart-badge",
+   "header-avatar",
+   "header-avatar-initials",
+   "header-user-name",
+   "header-user-dropdown",
+   "faq-empty-state"
+  ],
+  "topSections": [
+   {
+    "tag": "div",
+    "cls": "h-28 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between"
+   },
+   {
+    "tag": "div",
+    "cls": "relative w-full"
+   },
+   {
+    "tag": "main",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]"
+   },
+   {
+    "tag": "div",
+    "cls": "flex flex-col w-full"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 w-full flex flex-col gap-6"
+   },
+   {
+    "tag": "div",
+    "cls": "relative w-full"
+   },
+   {
+    "tag": "div",
+    "cls": "flex items-center gap-2.5 w-full sm:w-auto shrink-0"
+   },
+   {
+    "tag": "footer",
+    "cls": "w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8"
+   }
+  ],
+  "functions": [
+   "getStoredProfile",
+   "getInitials",
+   "syncGlobalIdentity",
+   "renderFaqList",
+   "toggleFaqAccordion",
+   "selectFaqTopic",
+   "handleFaqSearch",
+   "clearFaqSearch"
+  ]
+ },
+ "keranjang_pembayaran_terpadu_desktop": {
+  "loc": 910,
+  "title": "Keranjang Belanja — IKAPI Store Jawa Barat",
+  "keys": [],
+  "scripts": [
+   {
+    "attrs": "src=\"https://cdn.tailwindcss.com\"",
+    "start": 51,
+    "end": 51,
+    "loc": 0
+   },
+   {
+    "attrs": "id=\"tailwind-config\"",
+    "start": 52,
+    "end": 91,
+    "loc": 39
+   },
+   {
+    "attrs": "",
+    "start": 662,
+    "end": 907,
+    "loc": 245
+   }
+  ],
+  "hasHeader": true,
+  "hasFooter": true,
+  "headerIds": [
+   "header-cart-badge",
+   "cart-empty-view",
+   "snap-modal-box",
+   "order-details-drawer",
+   "status-menunggu",
+   "status-menunggu-total",
+   "cart-toast",
+   "toast-icon",
+   "toast-msg"
+  ],
+  "topSections": [
+   {
+    "tag": "div",
+    "cls": "h-28 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between"
+   },
+   {
+    "tag": "div",
+    "cls": "relative w-full"
+   },
+   {
+    "tag": "main",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]"
+   },
+   {
+    "tag": "div",
+    "cls": "flex flex-col w-full"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 w-full"
+   },
+   {
+    "tag": "div",
+    "cls": "flex-1 min-w-0 flex flex-col justify-between py-1 w-full sm:w-auto"
+   },
+   {
+    "tag": "div",
+    "cls": "flex-1 min-w-0 flex flex-col justify-between py-1 w-full sm:w-auto"
+   },
+   {
+    "tag": "aside",
+    "cls": "lg:col-span-4 lg:sticky lg:top-36 w-full"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full max-w-xl mx-auto py-12 text-center flex flex-col items-center gap-4 hidden"
+   },
+   {
+    "tag": "div",
+    "cls": "bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden border border-border-subtle flex flex-col max-h-[92vh] a"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full bg-surface-neutral p-4 rounded-2xl border border-border-subtle text-left text-[13.5px] space-y-2"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full flex flex-col gap-2.5 pt-2"
+   }
+  ],
+  "functions": [
+   "showToast",
+   "formatRupiah",
+   "recalculateCart",
+   "removeCartItem",
+   "toggleFavorite",
+   "triggerDirectPaymentModal",
+   "closeSnapOverlay",
+   "toggleOrderDetailsDrawer",
+   "toggleVaAccordion",
+   "hideAllSnapSubviews",
+   "backToSnapSelector",
+   "selectPaymentMethod",
+   "setDemoPaymentStatus",
+   "checkPaymentStatus"
+  ]
+ },
+ "riwayat_pesanan_desktop": {
+  "loc": 887,
+  "title": "Riwayat Pesanan — IKAPI Store Jawa Barat",
+  "keys": [
+   "ikapi_user_profile"
+  ],
+  "scripts": [
+   {
+    "attrs": "src=\"https://cdn.tailwindcss.com\"",
+    "start": 50,
+    "end": 50,
+    "loc": 0
+   },
+   {
+    "attrs": "id=\"tailwind-config\"",
+    "start": 51,
+    "end": 90,
+    "loc": 39
+   },
+   {
+    "attrs": "",
+    "start": 482,
+    "end": 884,
+    "loc": 402
+   }
+  ],
+  "hasHeader": true,
+  "hasFooter": true,
+  "headerIds": [
+   "header-cart-badge",
+   "header-avatar",
+   "header-avatar-initials",
+   "header-user-name",
+   "header-user-dropdown",
+   "tab-filter-all",
+   "tab-filter-success",
+   "tab-filter-pending",
+   "tab-filter-failed",
+   "tab-filter-expired",
+   "orders-empty-state",
+   "orders-empty-desc",
+   "modal-order-detail",
+   "modal-order-id",
+   "modal-order-badge",
+   "modal-order-date",
+   "modal-order-payment",
+   "modal-order-items",
+   "modal-order-subtotal",
+   "modal-order-total",
+   "modal-order-actions",
+   "toast-notification",
+   "toastIcon",
+   "toastMessage"
+  ],
+  "topSections": [
+   {
+    "tag": "div",
+    "cls": "h-28 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between"
+   },
+   {
+    "tag": "div",
+    "cls": "relative w-full"
+   },
+   {
+    "tag": "main",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]"
+   },
+   {
+    "tag": "div",
+    "cls": "flex flex-col w-full"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 w-full flex flex-col gap-6"
+   },
+   {
+    "tag": "div",
+    "cls": "bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-border-subtle flex flex-col "
+   },
+   {
+    "tag": "footer",
+    "cls": "w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8"
+   },
+   {
+    "tag": "div",
+    "cls": "flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-2 pt-2 sm:pt-0 border-t sm:border-t-0 bo"
+   }
+  ],
+  "functions": [
+   "getStoredProfile",
+   "getInitials",
+   "syncGlobalIdentity",
+   "formatRupiah",
+   "getStatusBadgeClass",
+   "renderOrders",
+   "filterOrders",
+   "openOrderDetailModal",
+   "closeOrderDetailModal",
+   "openDropdown",
+   "closeDropdown"
+  ]
+ },
+ "perpustakaan_saya_desktop": {
+  "loc": 1089,
+  "title": "Perpustakaan Saya — IKAPI Store Jawa Barat",
+  "keys": [
+   "ikapi_user_profile"
+  ],
+  "scripts": [
+   {
+    "attrs": "src=\"https://cdn.tailwindcss.com\"",
+    "start": 51,
+    "end": 51,
+    "loc": 0
+   },
+   {
+    "attrs": "id=\"tailwind-config\"",
+    "start": 52,
+    "end": 91,
+    "loc": 39
+   },
+   {
+    "attrs": "",
+    "start": 635,
+    "end": 1086,
+    "loc": 451
+   }
+  ],
+  "hasHeader": true,
+  "hasFooter": true,
+  "headerIds": [
+   "header-cart-badge",
+   "header-avatar",
+   "header-avatar-initials",
+   "header-user-name",
+   "header-user-dropdown",
+   "qa-simulation-panel",
+   "btnSimulateEmpty",
+   "tab-all",
+   "tab-reading",
+   "tab-unread",
+   "tab-favorite",
+   "emptyCategoryState",
+   "empty-state-title",
+   "empty-state-desc",
+   "empty-state-cta",
+   "empty-state-cta-text",
+   "emptySearchState",
+   "toastNotification",
+   "toastIcon",
+   "toastMessage"
+  ],
+  "topSections": [
+   {
+    "tag": "div",
+    "cls": "h-28 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between"
+   },
+   {
+    "tag": "div",
+    "cls": "relative w-full"
+   },
+   {
+    "tag": "main",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]"
+   },
+   {
+    "tag": "div",
+    "cls": "flex flex-col w-full"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 w-full flex flex-col gap-6"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full lg:w-80"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full bg-white rounded-3xl p-6 sm:p-7 border border-border-subtle shadow-xs"
+   },
+   {
+    "tag": "div",
+    "cls": "flex items-center gap-4 sm:gap-5 w-full sm:w-auto"
+   },
+   {
+    "tag": "div",
+    "cls": "mt-2 flex flex-col gap-1 w-full max-w-xs"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full h-2 rounded-full bg-surface-soft overflow-hidden border border-primary/20"
+   },
+   {
+    "tag": "div",
+    "cls": "flex sm:flex-col items-stretch sm:items-end gap-2.5 w-full sm:w-auto shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border"
+   },
+   {
+    "tag": "div",
+    "cls": "book-cover-container relative w-full aspect-[2/3] rounded-2xl overflow-hidden bg-surface-neutral mb-3 flex items-center "
+   }
+  ],
+  "functions": [
+   "getStoredProfile",
+   "getInitials",
+   "syncGlobalIdentity",
+   "showToast",
+   "updateTabCounts",
+   "switchTab",
+   "toggleFavorite",
+   "markAsFinished",
+   "renderBooks",
+   "toggleViewMode",
+   "applySorting",
+   "simulateEmptyLibrary",
+   "simulateNoSearchResult",
+   "resetLibraryState",
+   "clearSearchInput",
+   "openDropdown",
+   "closeDropdown"
+  ]
+ },
+ "web_reader_desktop": {
+  "loc": 917,
+  "title": "Laskar Aksara Pasundan — Web Reader IKAPI Store",
+  "keys": [
+   "ikapi_reader_bookmarks",
+   "ikapi_reader_pos_laskar_aksara",
+   "ikapi_reader_settings"
+  ],
+  "scripts": [
+   {
+    "attrs": "src=\"https://cdn.tailwindcss.com\"",
+    "start": 109,
+    "end": 109,
+    "loc": 0
+   },
+   {
+    "attrs": "id=\"tailwind-config\"",
+    "start": 110,
+    "end": 149,
+    "loc": 39
+   },
+   {
+    "attrs": "",
+    "start": 446,
+    "end": 914,
+    "loc": 468
+   }
+  ],
+  "hasHeader": true,
+  "hasFooter": true,
+  "headerIds": [
+   "reader-toast",
+   "toast-inner",
+   "toast-icon",
+   "toast-message",
+   "drawer-backdrop",
+   "drawer-bookmarks",
+   "drawer-settings",
+   "drawer-toc",
+   "modal-unlicensed"
+  ],
+  "topSections": [
+   {
+    "tag": "header",
+    "cls": "fixed top-0 left-0 w-full z-40 theme-chrome border-b transition-colors duration-300 shadow-xs"
+   },
+   {
+    "tag": "div",
+    "cls": "h-16 w-full max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 font-sans"
+   },
+   {
+    "tag": "main",
+    "cls": "w-full min-h-screen pt-28 pb-28 flex-1 flex flex-col items-center justify-start px-4 sm:px-6 md:px-8"
+   },
+   {
+    "tag": "footer",
+    "cls": "fixed bottom-0 left-0 w-full theme-chrome border-t px-4 sm:px-6 py-2.5 z-40 transition-colors duration-300 shadow-xs fon"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full flex items-center gap-2.5 pt-0.5"
+   },
+   {
+    "tag": "div",
+    "cls": "fixed inset-y-0 right-0 w-full sm:w-96 theme-chrome border-l shadow-2xl z-50 transform transition-transform duration-300"
+   },
+   {
+    "tag": "div",
+    "cls": "fixed inset-y-0 right-0 w-full sm:w-96 theme-chrome border-l shadow-2xl z-50 transform transition-transform duration-300"
+   },
+   {
+    "tag": "div",
+    "cls": "fixed inset-y-0 left-0 w-full sm:w-96 theme-chrome border-r shadow-2xl z-50 transform transition-transform duration-300 "
+   },
+   {
+    "tag": "div",
+    "cls": "w-full max-w-md theme-chrome rounded-3xl shadow-2xl p-6 sm:p-8 text-center space-y-4 border theme-border"
+   }
+  ],
+  "functions": [
+   "showToast",
+   "renderCurrentPage",
+   "changePage",
+   "goToPageNumber",
+   "navigateToChapter",
+   "handleScrub",
+   "setReaderTheme",
+   "setFontFamily",
+   "setTextSize",
+   "setLineHeight",
+   "saveSettings",
+   "loadSavedSettings",
+   "renderBookmarksList",
+   "addCurrentBookmark",
+   "removeBookmark",
+   "loadSavedBookmarks",
+   "openDrawer",
+   "closeAllDrawers",
+   "toggleFullscreen"
+  ]
+ },
+ "riwayat_ulasan_desktop": {
+  "loc": 819,
+  "title": "Riwayat Ulasan — IKAPI Store Jawa Barat",
+  "keys": [
+   "ikapi_rating_laskar_aksara",
+   "ikapi_user_profile",
+   "ikapi_user_review_history"
+  ],
+  "scripts": [
+   {
+    "attrs": "src=\"https://cdn.tailwindcss.com\"",
+    "start": 59,
+    "end": 59,
+    "loc": 0
+   },
+   {
+    "attrs": "id=\"tailwind-config\"",
+    "start": 60,
+    "end": 99,
+    "loc": 39
+   },
+   {
+    "attrs": "",
+    "start": 484,
+    "end": 816,
+    "loc": 332
+   }
+  ],
+  "hasHeader": true,
+  "hasFooter": true,
+  "headerIds": [
+   "header-cart-badge",
+   "header-avatar",
+   "header-avatar-initials",
+   "header-user-name",
+   "header-user-dropdown",
+   "reviews-empty-state",
+   "modal-edit-review",
+   "edit-review-modal-title",
+   "edit-modal-book-title",
+   "modal-delete-confirm",
+   "toast",
+   "toast-icon",
+   "toast-message"
+  ],
+  "topSections": [
+   {
+    "tag": "div",
+    "cls": "h-28 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between"
+   },
+   {
+    "tag": "div",
+    "cls": "relative w-full"
+   },
+   {
+    "tag": "main",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]"
+   },
+   {
+    "tag": "div",
+    "cls": "flex flex-col w-full"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 w-full flex flex-col gap-6"
+   },
+   {
+    "tag": "div",
+    "cls": "bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-border-subtle flex flex-col animate-in fad"
+   },
+   {
+    "tag": "div",
+    "cls": "bg-white rounded-3xl max-w-sm w-full p-6 text-center space-y-4 shadow-2xl border border-border-subtle animate-in fade-in"
+   },
+   {
+    "tag": "footer",
+    "cls": "w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8"
+   }
+  ],
+  "functions": [
+   "showToast",
+   "loadUserReviews",
+   "saveUserReviews",
+   "renderReviewList",
+   "handleSortReviews",
+   "openEditModal",
+   "closeEditModal",
+   "selectEditRating",
+   "handleSaveEditedReview",
+   "openDeleteModal",
+   "closeDeleteModal"
+  ]
+ },
+ "agenda_berita_literasi_desktop": {
+  "loc": 1199,
+  "title": "Agenda &amp; Berita Literasi — IKAPI Store Jawa Barat",
+  "keys": [],
+  "scripts": [
+   {
+    "attrs": "src=\"https://cdn.tailwindcss.com\"",
+    "start": 51,
+    "end": 51,
+    "loc": 0
+   },
+   {
+    "attrs": "id=\"tailwind-config\"",
+    "start": 52,
+    "end": 91,
+    "loc": 39
+   },
+   {
+    "attrs": "",
+    "start": 745,
+    "end": 1193,
+    "loc": 448
+   },
+   {
+    "attrs": "src=\"chatbot-widget.js\" defer",
+    "start": 1195,
+    "end": 1195,
+    "loc": 0
+   }
+  ],
+  "hasHeader": true,
+  "hasFooter": true,
+  "headerIds": [
+   "header-cart-badge",
+   "qa-simulation-panel",
+   "btn-state-empty-events",
+   "btn-state-empty-news",
+   "events-empty-state",
+   "events-empty-desc",
+   "articles-empty-state",
+   "modal-featured-detail",
+   "featured-modal-title",
+   "modal-article-preview",
+   "article-modal-category",
+   "article-modal-title",
+   "article-modal-meta",
+   "article-modal-image",
+   "article-modal-body",
+   "article-modal-share-btn",
+   "toastNotification",
+   "toastIcon",
+   "toastMessage"
+  ],
+  "topSections": [
+   {
+    "tag": "div",
+    "cls": "h-28 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between"
+   },
+   {
+    "tag": "div",
+    "cls": "relative w-full"
+   },
+   {
+    "tag": "main",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]"
+   },
+   {
+    "tag": "div",
+    "cls": "flex flex-col w-full"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-20 w-full flex flex-col gap-10"
+   },
+   {
+    "tag": "section",
+    "cls": "w-full rounded-3xl bg-gradient-to-br from-[#2f1c6a] via-[#28175d] to-[#1e1047] text-white overflow-hidden shadow-xl bord"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full h-full min-h-[260px] sm:min-h-[320px] rounded-2xl overflow-hidden relative shadow-lg border border-white/15"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full sm:w-48 h-36 rounded-xl overflow-hidden shrink-0 relative bg-surface-neutral border border-border-subtle"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full sm:w-48 h-36 rounded-xl overflow-hidden shrink-0 relative bg-surface-neutral border border-border-subtle"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full sm:w-48 h-36 rounded-xl overflow-hidden shrink-0 relative bg-surface-neutral border border-border-subtle"
+   },
+   {
+    "tag": "div",
+    "cls": "w-full h-64 sm:h-80 relative overflow-hidden bg-surface-neutral"
+   },
+   {
+    "tag": "div",
+    "cls": "bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-border-subtle flex flex-col "
+   }
+  ],
+  "functions": [
+   "showToast",
+   "renderCalendar",
+   "prevCalendarMonth",
+   "nextCalendarMonth",
+   "selectCalendarDate",
+   "resetCalendarSelection",
+   "renderFilteredEvents",
+   "downloadIcsFile",
+   "shareArticle",
+   "openFeaturedEventModal",
+   "closeFeaturedEventModal",
+   "openArticleModal",
+   "closeArticleModal",
+   "setViewState"
+  ]
+ },
+ "detail_agenda_desktop": {
+  "loc": 544,
+  "title": "Detail Agenda — IKAPI Store Jawa Barat",
+  "keys": [],
+  "scripts": [
+   {
+    "attrs": "src=\"https://cdn.tailwindcss.com\"",
+    "start": 51,
+    "end": 51,
+    "loc": 0
+   },
+   {
+    "attrs": "id=\"tailwind-config\"",
+    "start": 52,
+    "end": 91,
+    "loc": 39
+   },
+   {
+    "attrs": "",
+    "start": 314,
+    "end": 539,
+    "loc": 225
+   },
+   {
+    "attrs": "src=\"chatbot-widget.js\" defer",
+    "start": 541,
+    "end": 541,
+    "loc": 0
+   }
+  ],
+  "hasHeader": true,
+  "hasFooter": true,
+  "headerIds": [
+   "header-cart-badge"
+  ],
+  "topSections": [
+   {
+    "tag": "div",
+    "cls": "h-28 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between"
+   },
+   {
+    "tag": "div",
+    "cls": "relative w-full"
+   },
+   {
+    "tag": "main",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-6"
+   },
+   {
+    "tag": "section",
+    "cls": "w-full pt-5 pb-12"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8"
+   },
+   {
+    "tag": "div",
+    "cls": "relative w-full aspect-[16/9] overflow-hidden rounded-2xl border border-border-subtle bg-surface-neutral"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pb-16"
+   },
+   {
+    "tag": "footer",
+    "cls": "w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8"
+   }
+  ],
+  "functions": [
+   "fill",
+   "downloadIcsFile"
+  ]
+ },
+ "chatbot_bantuan_rekomendasi_desktop": {
+  "loc": 944,
+  "title": "Bantuan &amp; Rekomendasi Buku — IKAPI Store Jawa Barat",
+  "keys": [],
+  "scripts": [
+   {
+    "attrs": "src=\"https://cdn.tailwindcss.com\"",
+    "start": 65,
+    "end": 65,
+    "loc": 0
+   },
+   {
+    "attrs": "id=\"tailwind-config\"",
+    "start": 66,
+    "end": 105,
+    "loc": 39
+   },
+   {
+    "attrs": "",
+    "start": 451,
+    "end": 941,
+    "loc": 490
+   }
+  ],
+  "hasHeader": true,
+  "hasFooter": true,
+  "headerIds": [
+   "header-cart-badge",
+   "qa-simulation-panel",
+   "chat-header-title",
+   "toast-notification",
+   "toastIcon",
+   "toastMessage"
+  ],
+  "topSections": [
+   {
+    "tag": "div",
+    "cls": "h-28 max-w-[1240px] mx-auto px-4 md:px-8 flex flex-col justify-between"
+   },
+   {
+    "tag": "div",
+    "cls": "relative w-full"
+   },
+   {
+    "tag": "main",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]"
+   },
+   {
+    "tag": "div",
+    "cls": "flex flex-col w-full"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-[1240px] w-full mx-auto px-4 md:px-8 py-8 flex flex-col gap-6"
+   },
+   {
+    "tag": "div",
+    "cls": "aspect-[2/3] w-full bg-surface-neutral rounded-xl overflow-hidden relative mb-3 border border-border-subtle shadow-xs"
+   },
+   {
+    "tag": "div",
+    "cls": "aspect-[2/3] w-full bg-surface-neutral rounded-xl overflow-hidden relative mb-3 border border-border-subtle shadow-xs"
+   },
+   {
+    "tag": "div",
+    "cls": "aspect-[2/3] w-full bg-surface-neutral rounded-xl overflow-hidden relative mb-3 border border-border-subtle shadow-xs"
+   },
+   {
+    "tag": "div",
+    "cls": "aspect-[2/3] w-full bg-surface-neutral rounded-xl overflow-hidden relative mb-3 border border-border-subtle shadow-xs"
+   },
+   {
+    "tag": "div",
+    "cls": "w-[400px] h-[580px] max-w-[calc(100vw-32px)] max-h-[calc(100vh-120px)] bg-white rounded-3xl shadow-2xl border border-bor"
+   },
+   {
+    "tag": "footer",
+    "cls": "w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]"
+   },
+   {
+    "tag": "div",
+    "cls": "max-w-[1240px] mx-auto px-4 md:px-8"
+   }
+  ],
+  "functions": [
+   "showToast",
+   "copyMessageText",
+   "escapeHtml",
+   "initWelcomeConversation",
+   "renderConversation",
+   "toggleWidgetPanel",
+   "openWidgetIfClosed",
+   "resetChatConversation",
+   "dispatchAssistantResponse",
+   "handleQuickPrompt",
+   "handleChatSubmit",
+   "handleTextareaKeydown",
+   "setDemoScenario"
+  ]
+ }
+}

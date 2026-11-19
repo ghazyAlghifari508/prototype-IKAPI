@@ -1,0 +1,148 @@
+<main class="w-full pt-28 bg-white min-h-[calc(100vh-16rem)]">
+    <div class="flex flex-col w-full">
+      
+      <!-- BACKGROUND CATALOG CONTEXT SHELF -->
+      <div class="max-w-[1240px] w-full mx-auto px-4 md:px-8 py-8 flex flex-col gap-6">
+        
+        <!-- Breadcrumb & Compact Collapsible Reviewer Panel -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-[13px] text-ink-muted">
+            <a class="hover:text-primary transition-colors" data-path="beranda" href="beranda_desktop.html">Beranda</a>
+            <span class="text-ink-subtle">/</span>
+            <span class="text-ink-body font-semibold">Katalog Buku Digital</span>
+          </nav>
+
+          <!-- Collapsible Compact Reviewer Panel (Preserved in Same HTML) -->
+          <details id="qa-simulation-panel" class="group bg-surface-neutral border border-border-subtle rounded-xl text-[12px] select-none transition-all">
+            <summary class="px-3.5 py-1.5 cursor-pointer font-medium text-ink-muted hover:text-ink-body flex items-center gap-2 list-none">
+              <span class="material-symbols-outlined text-[16px] text-primary">smart_toy</span>
+              <span>Panel Simulasi Chatbot (4 Mode)</span>
+              <span class="material-symbols-outlined text-[16px] text-ink-muted transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <div class="p-2.5 pt-1.5 flex flex-wrap items-center gap-1.5 border-t border-border-subtle bg-white rounded-b-xl">
+              <button id="btn-state-rekomendasi" type="button" class="px-3 py-1 rounded-lg bg-primary text-white font-medium transition-all shadow-xs" onclick="setDemoScenario('rekomendasi')">
+                Rekomendasi Buku
+              </button>
+              <button id="btn-state-pembayaran" type="button" class="px-3 py-1 rounded-lg bg-surface-neutral text-ink-body hover:bg-surface-soft hover:text-primary font-medium transition-all border border-border-subtle" onclick="setDemoScenario('pembayaran')">
+                Bantuan Pembayaran &amp; Reader
+              </button>
+              <button id="btn-state-eskalasi" type="button" class="px-3 py-1 rounded-lg bg-surface-neutral text-ink-body hover:bg-surface-soft hover:text-primary font-medium transition-all border border-border-subtle" onclick="setDemoScenario('eskalasi')">
+                Layanan CS / Luar Lingkup
+              </button>
+              <button id="btn-state-loading" type="button" class="px-3 py-1 rounded-lg bg-surface-neutral text-ink-body hover:bg-surface-soft hover:text-primary font-medium transition-all border border-border-subtle" onclick="setDemoScenario('loading')">
+                Status Memuat...
+              </button>
+              <button id="btn-state-toggle" type="button" class="px-3 py-1 rounded-lg bg-surface-soft text-primary font-bold hover:bg-surface-neutral transition-all flex items-center gap-1 border border-primary/20" onclick="toggleWidgetPanel()">
+                <span class="material-symbols-outlined text-[15px]">visibility</span>
+                <span id="toggle-label-text">Tutup Jendela Chat</span>
+              </button>
+            </div>
+          </details>
+        </div>
+
+        <!-- Section Header -->
+        <div class="pb-2 border-b border-border-subtle flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div>
+            <h1 class="text-[28px] md:text-[32px] font-bold text-ink-body tracking-tight leading-tight">
+              Katalog Buku Digital
+            </h1>
+            <p class="text-[15px] text-ink-muted mt-1">
+              Koleksi buku digital resmi dari penerbit anggota IKAPI Jawa Barat.
+            </p>
+          </div>
+          <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="text-[14px] text-primary hover:text-primary-hover font-bold flex items-center gap-1 transition-colors">
+            <span>Buka Katalog Lengkap</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- Catalog Sample Grid (100% Local Images) -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
+          <!-- Book 1 -->
+          <article class="group flex flex-col bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all">
+            <div class="aspect-[2/3] w-full bg-surface-neutral rounded-xl overflow-hidden relative mb-3 border border-border-subtle shadow-xs">
+              <img src="../../assets/covers/laskar-aksara-pasundan.jpg" alt="Sampul Laskar Aksara Pasundan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+            </div>
+            <div class="flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="text-[15px] font-bold text-ink-body line-clamp-1 group-hover:text-primary transition-colors">
+                  Laskar Aksara Pasundan
+                </h3>
+                <p class="text-[13px] text-ink-muted mt-0.5">Ayi R. Kurnia</p>
+              </div>
+              <div class="pt-3 mt-2 border-t border-border-subtle flex items-center justify-between">
+                <span class="text-[15px] font-bold text-ink-body">Rp 45.000</span>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-8 px-3 rounded-lg bg-primary hover:bg-primary-hover text-white text-[12px] font-semibold flex items-center transition-colors shadow-xs">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 2 -->
+          <article class="group flex flex-col bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all">
+            <div class="aspect-[2/3] w-full bg-surface-neutral rounded-xl overflow-hidden relative mb-3 border border-border-subtle shadow-xs">
+              <img src="../../assets/covers/B02.jpg" alt="Sampul Pendidikan Karakter Sunda" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+            </div>
+            <div class="flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="text-[15px] font-bold text-ink-body line-clamp-1 group-hover:text-primary transition-colors">
+                  Pendidikan Karakter Sunda
+                </h3>
+                <p class="text-[13px] text-ink-muted mt-0.5">Dr. Cecep Hidayat</p>
+              </div>
+              <div class="pt-3 mt-2 border-t border-border-subtle flex items-center justify-between">
+                <span class="text-[15px] font-bold text-ink-body">Rp 58.000</span>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-8 px-3 rounded-lg bg-primary hover:bg-primary-hover text-white text-[12px] font-semibold flex items-center transition-colors shadow-xs">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 3 -->
+          <article class="group flex flex-col bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all">
+            <div class="aspect-[2/3] w-full bg-surface-neutral rounded-xl overflow-hidden relative mb-3 border border-border-subtle shadow-xs">
+              <img src="../../assets/covers/B03.jpg" alt="Sampul Bumi Parahyangan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+            </div>
+            <div class="flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="text-[15px] font-bold text-ink-body line-clamp-1 group-hover:text-primary transition-colors">
+                  Bumi Parahyangan: Narasi Alam
+                </h3>
+                <p class="text-[13px] text-ink-muted mt-0.5">Prof. Didi Supardi</p>
+              </div>
+              <div class="pt-3 mt-2 border-t border-border-subtle flex items-center justify-between">
+                <span class="text-[15px] font-bold text-ink-body">Rp 74.000</span>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-8 px-3 rounded-lg bg-primary hover:bg-primary-hover text-white text-[12px] font-semibold flex items-center transition-colors shadow-xs">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 4 -->
+          <article class="group flex flex-col bg-white rounded-2xl p-4 border border-border-subtle shadow-xs hover:shadow-md hover:border-primary/40 transition-all">
+            <div class="aspect-[2/3] w-full bg-surface-neutral rounded-xl overflow-hidden relative mb-3 border border-border-subtle shadow-xs">
+              <img src="../../assets/covers/B04.jpg" alt="Sampul Antologi Puisi Lembayung" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+            </div>
+            <div class="flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="text-[15px] font-bold text-ink-body line-clamp-1 group-hover:text-primary transition-colors">
+                  Antologi Puisi Lembayung
+                </h3>
+                <p class="text-[13px] text-ink-muted mt-0.5">Dewi Sartika Putri</p>
+              </div>
+              <div class="pt-3 mt-2 border-t border-border-subtle flex items-center justify-between">
+                <span class="text-[15px] font-bold text-ink-body">Rp 38.000</span>
+                <a href="detail_buku_desktop.html" data-path="detail-buku" class="h-8 px-3 rounded-lg bg-primary hover:bg-primary-hover text-white text-[12px] font-semibold flex items-center transition-colors shadow-xs">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+    </div>
+  </main>

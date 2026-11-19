@@ -1,0 +1,21 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch();
+const grab = async (url, prep) => {
+  const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } });
+  const p = await ctx.newPage();
+  await p.goto(url, { waitUntil: 'load' });
+  await p.waitForTimeout(700);
+  if (prep) await prep(p);
+  const t = await p.evaluate(() => document.querySelector('main').innerText.replace(/\s+/g, ' ').trim());
+  await ctx.close();
+  return t;
+};
+const A = await grab('http://127.0.0.1:8099/prototype-copy/user/komunitas_literasi_desktop.html');
+const B = await grab('http://127.0.0.1:8140/komunitas');
+console.log('P len', A.length, '| B len', B.length);
+const aw = A.split(' '), bw = B.split(' ');
+let i = 0; while (i < Math.min(aw.length, bw.length) && aw[i] === bw[i]) i++;
+console.log('first diff at word', i);
+console.log('P:', aw.slice(Math.max(0,i-8), i+18).join(' '));
+console.log('B:', bw.slice(Math.max(0,i-8), i+18).join(' '));
+await b.close();

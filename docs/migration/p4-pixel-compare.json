@@ -1,0 +1,46 @@
+[
+ {
+  "part": "header",
+  "viewport": "1440x900",
+  "a": "C:\\Coding\\Web Development\\Laravel\\IKAPI JAWA BARAT\\docs\\migration\\baselines\\shells\\pixel\\proto-header-1440x900.png",
+  "b": "C:\\Coding\\Web Development\\Laravel\\IKAPI JAWA BARAT\\docs\\migration\\baselines\\shells\\pixel\\blade-header-1440x900.png",
+  "w": 1440,
+  "h": 113,
+  "diffPixels": 0,
+  "totalPixels": 162720,
+  "ratio": 0
+ },
+ {
+  "part": "footer",
+  "viewport": "1440x900",
+  "a": "C:\\Coding\\Web Development\\Laravel\\IKAPI JAWA BARAT\\docs\\migration\\baselines\\shells\\pixel\\proto-footer-1440x900.png",
+  "b": "C:\\Coding\\Web Development\\Laravel\\IKAPI JAWA BARAT\\docs\\migration\\baselines\\shells\\pixel\\blade-footer-1440x900.png",
+  "w": 1440,
+  "h": 363,
+  "diffPixels": 0,
+  "totalPixels": 522720,
+  "ratio": 0
+ },
+ {
+  "part": "header",
+  "viewport": "390x844",
+  "a": "C:\\Coding\\Web Development\\Laravel\\IKAPI JAWA BARAT\\docs\\migration\\baselines\\shells\\pixel\\proto-header-390x844.png",
+  "b": "C:\\Coding\\Web Development\\Laravel\\IKAPI JAWA BARAT\\docs\\migration\\baselines\\shells\\pixel\\blade-header-390x844.png",
+  "w": 390,
+  "h": 113,
+  "diffPixels": 0,
+  "totalPixels": 44070,
+  "ratio": 0
+ },
+ {
+  "part": "footer",
+  "viewport": "390x844",
+  "a": "C:\\Coding\\Web Development\\Laravel\\IKAPI JAWA BARAT\\docs\\migration\\baselines\\shells\\pixel\\proto-footer-390x844.png",
+  "b": "C:\\Coding\\Web Development\\Laravel\\IKAPI JAWA BARAT\\docs\\migration\\baselines\\shells\\pixel\\blade-footer-390x844.png",
+  "w": 390,
+  "h": 600,
+  "diffPixels": 0,
+  "totalPixels": 234000,
+  "ratio": 0
+ }
+]

@@ -1,0 +1,254 @@
+[
+  {
+    "route": "/",
+    "inlineHandlers": 13,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/katalog",
+    "inlineHandlers": 13,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/buku/laskar-aksara-pasundan",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/buku/laskar-aksara-pasundan/cuplikan",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/masuk",
+    "inlineHandlers": 1,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/daftar",
+    "inlineHandlers": 2,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/lupa-kata-sandi",
+    "inlineHandlers": 1,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/verifikasi-email",
+    "inlineHandlers": 1,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/onboarding",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/status-pendaftaran-penerbit",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/akun/profil",
+    "inlineHandlers": 11,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/akun/pengaturan",
+    "inlineHandlers": 8,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/akun/bantuan",
+    "inlineHandlers": 16,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/akun/bantuan/chatbot",
+    "inlineHandlers": 18,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/keranjang",
+    "inlineHandlers": 25,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/akun/pesanan",
+    "inlineHandlers": 12,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/akun/perpustakaan",
+    "inlineHandlers": 17,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/akun/perpustakaan/laskar-aksara-pasundan/baca",
+    "inlineHandlers": 29,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/akun/ulasan",
+    "inlineHandlers": 14,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/agenda",
+    "inlineHandlers": 39,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/agenda/ev-1",
+    "inlineHandlers": 13,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/komunitas",
+    "inlineHandlers": 25,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/komunitas/community-filologi",
+    "inlineHandlers": 18,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/komunitas/community-filologi/diskusi",
+    "inlineHandlers": 18,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/komunitas/community-klub-buku/diskusi/TPC-2026-101",
+    "inlineHandlers": 18,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/komunitas/community-klub-buku/diskusi/TPC-2026-101/balas/RPL-2026-201",
+    "inlineHandlers": 18,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/penerbit",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/penerbit/buku",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/penerbit/pesanan",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/penerbit/keuangan",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/penerbit/ulasan",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/penerbit/pengaturan",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/penerbit/invoice",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/admin",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/admin/pengguna",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/admin/katalog",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/admin/moderasi-ulasan",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/admin/monitoring",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/admin/pencairan",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/admin/komunitas",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/admin/moderasi-diskusi",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  },
+  {
+    "route": "/admin/masuk",
+    "inlineHandlers": 0,
+    "missing": [],
+    "errors": []
+  }
+]

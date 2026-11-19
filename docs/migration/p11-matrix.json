@@ -1,0 +1,7486 @@
+{
+  "rows": [
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "home",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        3663,
+        3663
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "home",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        3663,
+        3663
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "home",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        5060,
+        5060
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "home",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        5937,
+        5937
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "home",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        5643,
+        5643
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "catalog",
+      "viewport": "1440x900",
+      "ratio": 0.002192,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        3338,
+        3338
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "catalog",
+      "viewport": "1366x768",
+      "ratio": 0.00231,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        3338,
+        3338
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "catalog",
+      "viewport": "768x1024",
+      "ratio": 0.001905,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        5727,
+        5727
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "catalog",
+      "viewport": "390x844",
+      "ratio": 0.002044,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        10369,
+        10369
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "catalog",
+      "viewport": "320x700",
+      "ratio": 0.002889,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        9240,
+        9240
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "detail",
+      "viewport": "1440x900",
+      "ratio": 1,
+      "mismatch": true,
+      "dh": -40,
+      "h": [
+        3168,
+        3208
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        1,
+        1
+      ]
+    },
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "detail",
+      "viewport": "1366x768",
+      "ratio": 1,
+      "mismatch": true,
+      "dh": -40,
+      "h": [
+        3168,
+        3208
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        1,
+        1
+      ]
+    },
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "detail",
+      "viewport": "768x1024",
+      "ratio": 1,
+      "mismatch": true,
+      "dh": -63,
+      "h": [
+        4413,
+        4476
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        1,
+        1
+      ]
+    },
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "detail",
+      "viewport": "390x844",
+      "ratio": 1,
+      "mismatch": true,
+      "dh": -108,
+      "h": [
+        4710,
+        4818
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        1,
+        1
+      ]
+    },
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "detail",
+      "viewport": "320x700",
+      "ratio": 1,
+      "mismatch": true,
+      "dh": -131,
+      "h": [
+        4928,
+        5059
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        1,
+        1
+      ]
+    },
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "preview",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1239,
+        1239
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "preview",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1239,
+        1239
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "preview",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1339,
+        1339
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "preview",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2030,
+        2030
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P05",
+      "dir": "p5",
+      "page": "preview",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2438,
+        2438
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "login",
+      "viewport": "1440x900",
+      "ratio": 0.000176,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        900,
+        900
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "login",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        830,
+        830
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "login",
+      "viewport": "768x1024",
+      "ratio": 0.000145,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1024,
+        1024
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "login",
+      "viewport": "390x844",
+      "ratio": 0.000352,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        844,
+        844
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "login",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        818,
+        818
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "login-publisher",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        900,
+        900
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "login-publisher",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        768,
+        768
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "login-publisher",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1024,
+        1024
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "login-publisher",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        844,
+        844
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "login-publisher",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        729,
+        729
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "register",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        917,
+        917
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "register",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        917,
+        917
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "register",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1024,
+        1024
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "register",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1064,
+        1064
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "register",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1085,
+        1085
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "register-publisher",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        944,
+        944
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "register-publisher",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        944,
+        944
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "register-publisher",
+      "viewport": "768x1024",
+      "ratio": 0.000286,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1024,
+        1024
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "register-publisher",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        896,
+        896
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "register-publisher",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        950,
+        950
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "forgot",
+      "viewport": "1440x900",
+      "ratio": 0.00013,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        900,
+        900
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "forgot",
+      "viewport": "1366x768",
+      "ratio": 0.000205,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        768,
+        768
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "forgot",
+      "viewport": "768x1024",
+      "ratio": 0.000207,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1024,
+        1024
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "forgot",
+      "viewport": "390x844",
+      "ratio": 0.000495,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        844,
+        844
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "forgot",
+      "viewport": "320x700",
+      "ratio": 0.000728,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        700,
+        700
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "verify",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        900,
+        900
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "verify",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        768,
+        768
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "verify",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1024,
+        1024
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "verify",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        844,
+        844
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "verify",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        700,
+        700
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "onboarding",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        900,
+        900
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "onboarding",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        768,
+        768
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "onboarding",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1024,
+        1024
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "onboarding",
+      "viewport": "390x844",
+      "ratio": 0.003174,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        975,
+        975
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "onboarding",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1110,
+        1110
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "publisher-status",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        900,
+        900
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "publisher-status",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        824,
+        824
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "publisher-status",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1024,
+        1024
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "publisher-status",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        849,
+        849
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "publisher-status",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        957,
+        957
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "publisher-status-aktif",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        900,
+        900
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "publisher-status-aktif",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        824,
+        824
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "publisher-status-aktif",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1024,
+        1024
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "publisher-status-aktif",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        903,
+        903
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "publisher-status-aktif",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1011,
+        1011
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "profile",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1371,
+        1371
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "profile",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1371,
+        1371
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "profile",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1483,
+        1483
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "profile",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2010,
+        2010
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "profile",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2195,
+        2195
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "settings",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1843,
+        1843
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "settings",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1843,
+        1843
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "settings",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1971,
+        1971
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "settings",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2497,
+        2497
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "settings",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2819,
+        2819
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "help",
+      "viewport": "1440x900",
+      "ratio": 0.000031,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1694,
+        1694
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "help",
+      "viewport": "1366x768",
+      "ratio": 0.000032,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1694,
+        1694
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "help",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1822,
+        1822
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "help",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2381,
+        2381
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "help",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2634,
+        2634
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "cart",
+      "viewport": "1440x900",
+      "ratio": 0.000093,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1137,
+        1137
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "cart",
+      "viewport": "1366x768",
+      "ratio": 0.001787,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1137,
+        1137
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "cart",
+      "viewport": "768x1024",
+      "ratio": 0.00013,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1517,
+        1517
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "cart",
+      "viewport": "390x844",
+      "ratio": 0.000201,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1909,
+        1909
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "cart",
+      "viewport": "320x700",
+      "ratio": 0.000228,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2054,
+        2054
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "orders",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1953,
+        1953
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "orders",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1953,
+        1953
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "orders",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2081,
+        2081
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "orders",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2621,
+        2621
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "orders",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2877,
+        2877
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "library",
+      "viewport": "1440x900",
+      "ratio": 0.000406,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1673,
+        1673
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "library",
+      "viewport": "1366x768",
+      "ratio": 0.000428,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1673,
+        1673
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "library",
+      "viewport": "768x1024",
+      "ratio": 0.000531,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2608,
+        2608
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "library",
+      "viewport": "390x844",
+      "ratio": 0.000757,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        3616,
+        3616
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "library",
+      "viewport": "320x700",
+      "ratio": 0.001028,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        3484,
+        3484
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "reader",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1142,
+        1142
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "reader",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1142,
+        1142
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "reader",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1174,
+        1174
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "reader",
+      "viewport": "390x844",
+      "ratio": 0.000301,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1815,
+        1815
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "reader",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2190,
+        2190
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "reviews",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1293,
+        1293
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "reviews",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1293,
+        1293
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "reviews",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1420,
+        1420
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "reviews",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1769,
+        1769
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "reviews",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1946,
+        1946
+      ],
+      "w": [
+        328,
+        328
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "agenda",
+      "viewport": "1440x900",
+      "ratio": 0.006239,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2676,
+        2676
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "agenda",
+      "viewport": "1366x768",
+      "ratio": 0.006577,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2676,
+        2676
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "agenda",
+      "viewport": "768x1024",
+      "ratio": 0.006377,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        3942,
+        3942
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "agenda",
+      "viewport": "390x844",
+      "ratio": 0.008163,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        4574,
+        4574
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "agenda",
+      "viewport": "320x700",
+      "ratio": 0.008372,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        4907,
+        4907
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "agenda-detail",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2140,
+        2140
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "agenda-detail",
+      "viewport": "1366x768",
+      "ratio": 0.000132,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2140,
+        2140
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "agenda-detail",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2470,
+        2470
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "agenda-detail",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2669,
+        2669
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "agenda-detail",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2915,
+        2915
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "chatbot",
+      "viewport": "1440x900",
+      "ratio": 0.000021,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1249,
+        1249
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "chatbot",
+      "viewport": "1366x768",
+      "ratio": 0.000023,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1249,
+        1249
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "chatbot",
+      "viewport": "768x1024",
+      "ratio": 0.000031,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1663,
+        1663
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "chatbot",
+      "viewport": "390x844",
+      "ratio": 0.00002,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1805,
+        1805
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P06",
+      "dir": "p6",
+      "page": "chatbot",
+      "viewport": "320x700",
+      "ratio": 0.000065,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1862,
+        1862
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "directory",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1509,
+        1509
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        1
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "directory",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1509,
+        1509
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        1
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "directory",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1925,
+        1925
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        1
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "directory",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2826,
+        2826
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        1
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "directory",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2813,
+        2813
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        1
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "profile",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1454,
+        1454
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "profile",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1454,
+        1454
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "profile",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1807,
+        1807
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "profile",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2426,
+        2426
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "profile",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2628,
+        2628
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "room",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1034,
+        1034
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "room",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1034,
+        1034
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "room",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1188,
+        1188
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "room",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1494,
+        1494
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "room",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1639,
+        1639
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "topic",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1321,
+        1321
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "topic",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1321,
+        1321
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "topic",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1448,
+        1448
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "topic",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1913,
+        1913
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "topic",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2146,
+        2146
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "reply",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1008,
+        1008
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        1
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "reply",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        877,
+        877
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        1
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "reply",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1188,
+        1188
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        1
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "reply",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1189,
+        1189
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        1
+      ]
+    },
+    {
+      "phase": "P07",
+      "dir": "p7",
+      "page": "reply",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1351,
+        1351
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        1
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "dashboard",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1409,
+        1409
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "dashboard",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1439,
+        1439
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "dashboard",
+      "viewport": "768x1024",
+      "ratio": 0.004756,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2094,
+        2094
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "dashboard",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2529,
+        2529
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "dashboard",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2613,
+        2613
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "books",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        942,
+        942
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        1,
+        1
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "books",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        942,
+        942
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        1,
+        1
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "books",
+      "viewport": "768x1024",
+      "ratio": 0.00031,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1024,
+        1024
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        1,
+        1
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "books",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1026,
+        1026
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        1,
+        1
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "books",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1095,
+        1095
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        1,
+        1
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "orders",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        964,
+        964
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "orders",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        964,
+        964
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "orders",
+      "viewport": "768x1024",
+      "ratio": 0.000028,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1024,
+        1024
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "orders",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1064,
+        1064
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "orders",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1085,
+        1085
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "finance",
+      "viewport": "1440x900",
+      "ratio": 0.003661,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1333,
+        1333
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "finance",
+      "viewport": "1366x768",
+      "ratio": 0.003948,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1333,
+        1333
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "finance",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1817,
+        1817
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "finance",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2092,
+        2092
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "finance",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2213,
+        2213
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "reviews",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1748,
+        1748
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "reviews",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1770,
+        1770
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "reviews",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1871,
+        1871
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "reviews",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2132,
+        2132
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "reviews",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2367,
+        2367
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "settings",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1187,
+        1187
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "settings",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1187,
+        1187
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "settings",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1198,
+        1198
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "settings",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1339,
+        1339
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "settings",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1380,
+        1380
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "invoice",
+      "viewport": "1440x900",
+      "ratio": 0.000103,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1268,
+        1268
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "invoice",
+      "viewport": "1366x768",
+      "ratio": 0.000109,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1268,
+        1268
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "invoice",
+      "viewport": "768x1024",
+      "ratio": 0.000204,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1199,
+        1199
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "invoice",
+      "viewport": "390x844",
+      "ratio": 0.000254,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1845,
+        1845
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P08",
+      "dir": "p8",
+      "page": "invoice",
+      "viewport": "320x700",
+      "ratio": 0.000282,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1909,
+        1909
+      ],
+      "w": [
+        340,
+        340
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "dashboard",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1028,
+        1028
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "dashboard",
+      "viewport": "1366x768",
+      "ratio": 0.004239,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1028,
+        1028
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "dashboard",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1702,
+        1702
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "dashboard",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2009,
+        2009
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "dashboard",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2090,
+        2090
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "users",
+      "viewport": "1440x900",
+      "ratio": 0.000041,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        900,
+        900
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "users",
+      "viewport": "1366x768",
+      "ratio": 0.000163,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        768,
+        768
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "users",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1024,
+        1024
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "users",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        910,
+        910
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "users",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        950,
+        950
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "catalog",
+      "viewport": "1440x900",
+      "ratio": 0.000021,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        900,
+        900
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "catalog",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        791,
+        791
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "catalog",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1046,
+        1046
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "catalog",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1068,
+        1068
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "catalog",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1089,
+        1089
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "review-moderation",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1222,
+        1222
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        1,
+        1
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "review-moderation",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1222,
+        1222
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        1,
+        1
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "review-moderation",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1368,
+        1368
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        1,
+        1
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "review-moderation",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1458,
+        1458
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        1,
+        1
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "review-moderation",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1610,
+        1610
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        1,
+        1
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "monitoring",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1646,
+        1646
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "monitoring",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1646,
+        1646
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "monitoring",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1993,
+        1993
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "monitoring",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2495,
+        2495
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "monitoring",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        2585,
+        2585
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "payouts",
+      "viewport": "1440x900",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        900,
+        900
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "payouts",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        768,
+        768
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "payouts",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1024,
+        1024
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "payouts",
+      "viewport": "390x844",
+      "ratio": 0.003393,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        844,
+        844
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "payouts",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        851,
+        851
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "communities",
+      "viewport": "1440x900",
+      "ratio": 0.003323,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        900,
+        900
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        2,
+        2
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "communities",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        768,
+        768
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        2,
+        2
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "communities",
+      "viewport": "768x1024",
+      "ratio": 0.000025,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1024,
+        1024
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        2,
+        2
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "communities",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        844,
+        844
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        2,
+        2
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "communities",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        816,
+        816
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        2,
+        2
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "discussion-moderation",
+      "viewport": "1440x900",
+      "ratio": 0.00003,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        900,
+        900
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "discussion-moderation",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        768,
+        768
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "discussion-moderation",
+      "viewport": "768x1024",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1024,
+        1024
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "discussion-moderation",
+      "viewport": "390x844",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        844,
+        844
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "discussion-moderation",
+      "viewport": "320x700",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        888,
+        888
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "login",
+      "viewport": "1440x900",
+      "ratio": 0.000973,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        900,
+        900
+      ],
+      "w": [
+        1440,
+        1440
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "login",
+      "viewport": "1366x768",
+      "ratio": 0,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        768,
+        768
+      ],
+      "w": [
+        1366,
+        1366
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "login",
+      "viewport": "768x1024",
+      "ratio": 0.000066,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        1024,
+        1024
+      ],
+      "w": [
+        768,
+        768
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "login",
+      "viewport": "390x844",
+      "ratio": 0.00065,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        844,
+        844
+      ],
+      "w": [
+        390,
+        390
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "P09",
+      "dir": "p9",
+      "page": "login",
+      "viewport": "320x700",
+      "ratio": 0.00096,
+      "mismatch": false,
+      "dh": 0,
+      "h": [
+        700,
+        700
+      ],
+      "w": [
+        320,
+        320
+      ],
+      "err": [
+        0,
+        0
+      ],
+      "bad": [
+        0,
+        0
+      ],
+      "broken": [
+        0,
+        0
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "id": "p5/home",
+      "phase": "P05",
+      "page": "home",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P05/home",
+      "source": "user/beranda_desktop.html",
+      "route": "/"
+    },
+    {
+      "id": "p5/catalog",
+      "phase": "P05",
+      "page": "catalog",
+      "worst": 0.002889,
+      "worstVp": "320x700",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P05/catalog",
+      "source": "user/katalog_buku_desktop.html",
+      "route": "/katalog"
+    },
+    {
+      "id": "p5/detail",
+      "phase": "P05",
+      "page": "detail",
+      "worst": 1,
+      "worstVp": "1440x900",
+      "mismatches": [
+        "1440x900(-40px)",
+        "1366x768(-40px)",
+        "768x1024(-63px)",
+        "390x844(-108px)",
+        "320x700(-131px)"
+      ],
+      "viewports": 5,
+      "dhRange": [
+        -40,
+        -40,
+        -63,
+        -108,
+        -131
+      ],
+      "errTotal": 0,
+      "brokenMax": 1,
+      "key": "P05/detail",
+      "source": "user/detail_buku_desktop.html",
+      "route": "/buku/{slug}"
+    },
+    {
+      "id": "p5/preview",
+      "phase": "P05",
+      "page": "preview",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P05/preview",
+      "source": "user/preview_buku_desktop.html",
+      "route": "/buku/{slug}/cuplikan"
+    },
+    {
+      "id": "p6/login",
+      "phase": "P06",
+      "page": "login",
+      "worst": 0.000352,
+      "worstVp": "390x844",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/login",
+      "source": "user/masuk_login_desktop.html",
+      "route": "/masuk"
+    },
+    {
+      "id": "p6/login-publisher",
+      "phase": "P06",
+      "page": "login-publisher",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/login-publisher",
+      "source": "user/masuk_login_desktop.html?role=publisher",
+      "route": "/masuk?role=publisher"
+    },
+    {
+      "id": "p6/register",
+      "phase": "P06",
+      "page": "register",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/register",
+      "source": "user/daftar_akun_register_desktop.html",
+      "route": "/daftar"
+    },
+    {
+      "id": "p6/register-publisher",
+      "phase": "P06",
+      "page": "register-publisher",
+      "worst": 0.000286,
+      "worstVp": "768x1024",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/register-publisher",
+      "source": "user/daftar_akun_register_desktop.html?role=publisher",
+      "route": "/daftar?role=publisher"
+    },
+    {
+      "id": "p6/forgot",
+      "phase": "P06",
+      "page": "forgot",
+      "worst": 0.000728,
+      "worstVp": "320x700",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/forgot",
+      "source": "user/lupa_kata_sandi_desktop.html",
+      "route": "/lupa-kata-sandi"
+    },
+    {
+      "id": "p6/verify",
+      "phase": "P06",
+      "page": "verify",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/verify",
+      "source": "user/verifikasi_email_desktop.html",
+      "route": "/verifikasi-email"
+    },
+    {
+      "id": "p6/onboarding",
+      "phase": "P06",
+      "page": "onboarding",
+      "worst": 0.003174,
+      "worstVp": "390x844",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/onboarding",
+      "source": "user/onboarding_preferensi_bacaan_desktop.html",
+      "route": "/onboarding"
+    },
+    {
+      "id": "p6/publisher-status",
+      "phase": "P06",
+      "page": "publisher-status",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/publisher-status",
+      "source": "user/status_pendaftaran_penerbit_desktop.html",
+      "route": "/status-pendaftaran-penerbit"
+    },
+    {
+      "id": "p6/publisher-status-aktif",
+      "phase": "P06",
+      "page": "publisher-status-aktif",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/publisher-status-aktif",
+      "source": "user/status_pendaftaran_penerbit_desktop.html?sesi=aktif",
+      "route": "/status-pendaftaran-penerbit?sesi=aktif"
+    },
+    {
+      "id": "p6/profile",
+      "phase": "P06",
+      "page": "profile",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/profile",
+      "source": "user/akun_saya_profil_dropdown_navigasi_desktop.html",
+      "route": "/akun/profil"
+    },
+    {
+      "id": "p6/settings",
+      "phase": "P06",
+      "page": "settings",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/settings",
+      "source": "user/pengaturan_akun_desktop.html",
+      "route": "/akun/pengaturan"
+    },
+    {
+      "id": "p6/help",
+      "phase": "P06",
+      "page": "help",
+      "worst": 0.000032,
+      "worstVp": "1366x768",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/help",
+      "source": "user/bantuan_akun_desktop.html",
+      "route": "/akun/bantuan"
+    },
+    {
+      "id": "p6/cart",
+      "phase": "P06",
+      "page": "cart",
+      "worst": 0.001787,
+      "worstVp": "1366x768",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/cart",
+      "source": "user/keranjang_pembayaran_terpadu_desktop.html",
+      "route": "/keranjang"
+    },
+    {
+      "id": "p6/orders",
+      "phase": "P06",
+      "page": "orders",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/orders",
+      "source": "user/riwayat_pesanan_desktop.html",
+      "route": "/akun/pesanan"
+    },
+    {
+      "id": "p6/library",
+      "phase": "P06",
+      "page": "library",
+      "worst": 0.001028,
+      "worstVp": "320x700",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/library",
+      "source": "user/perpustakaan_saya_desktop.html",
+      "route": "/akun/perpustakaan"
+    },
+    {
+      "id": "p6/reader",
+      "phase": "P06",
+      "page": "reader",
+      "worst": 0.000301,
+      "worstVp": "390x844",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/reader",
+      "source": "user/web_reader_desktop.html",
+      "route": "/akun/perpustakaan/{book}/baca"
+    },
+    {
+      "id": "p6/reviews",
+      "phase": "P06",
+      "page": "reviews",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/reviews",
+      "source": "user/riwayat_ulasan_desktop.html",
+      "route": "/akun/ulasan"
+    },
+    {
+      "id": "p6/agenda",
+      "phase": "P06",
+      "page": "agenda",
+      "worst": 0.008372,
+      "worstVp": "320x700",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/agenda",
+      "source": "user/agenda_berita_literasi_desktop.html",
+      "route": "/agenda"
+    },
+    {
+      "id": "p6/agenda-detail",
+      "phase": "P06",
+      "page": "agenda-detail",
+      "worst": 0.000132,
+      "worstVp": "1366x768",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/agenda-detail",
+      "source": "user/detail_agenda_desktop.html?id=ev-1",
+      "route": "/agenda/{event}"
+    },
+    {
+      "id": "p6/chatbot",
+      "phase": "P06",
+      "page": "chatbot",
+      "worst": 0.000065,
+      "worstVp": "320x700",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P06/chatbot",
+      "source": "user/chatbot_bantuan_rekomendasi_desktop.html",
+      "route": "/akun/bantuan/chatbot"
+    },
+    {
+      "id": "p7/directory",
+      "phase": "P07",
+      "page": "directory",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P07/directory",
+      "source": "user/komunitas_literasi_desktop.html",
+      "route": "/komunitas"
+    },
+    {
+      "id": "p7/profile",
+      "phase": "P07",
+      "page": "profile",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P07/profile",
+      "source": "user/komunitas_literasi_desktop.html?komunitas=community-filologi",
+      "route": "/komunitas/{community}"
+    },
+    {
+      "id": "p7/room",
+      "phase": "P07",
+      "page": "room",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P07/room",
+      "source": "user/komunitas_literasi_desktop.html?komunitas=community-filologi (ruang)",
+      "route": "/komunitas/{community}/diskusi"
+    },
+    {
+      "id": "p7/topic",
+      "phase": "P07",
+      "page": "topic",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P07/topic",
+      "source": "user/komunitas_literasi_desktop.html?topik=TPC-2026-101",
+      "route": "/komunitas/{community}/diskusi/{topic}"
+    },
+    {
+      "id": "p7/reply",
+      "phase": "P07",
+      "page": "reply",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P07/reply",
+      "source": "user/komunitas_literasi_desktop.html?balas=RPL-2026-201",
+      "route": "/komunitas/{community}/diskusi/{topic}/balas/{reply}"
+    },
+    {
+      "id": "p8/dashboard",
+      "phase": "P08",
+      "page": "dashboard",
+      "worst": 0.004756,
+      "worstVp": "768x1024",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P08/dashboard",
+      "source": "penerbit/dashboard_penerbit_desktop.html",
+      "route": "/penerbit"
+    },
+    {
+      "id": "p8/books",
+      "phase": "P08",
+      "page": "books",
+      "worst": 0.00031,
+      "worstVp": "768x1024",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 1,
+      "key": "P08/books",
+      "source": "penerbit/kelola_buku_desktop.html",
+      "route": "/penerbit/buku"
+    },
+    {
+      "id": "p8/orders",
+      "phase": "P08",
+      "page": "orders",
+      "worst": 0.000028,
+      "worstVp": "768x1024",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P08/orders",
+      "source": "penerbit/pesanan_masuk_desktop.html",
+      "route": "/penerbit/pesanan"
+    },
+    {
+      "id": "p8/finance",
+      "phase": "P08",
+      "page": "finance",
+      "worst": 0.003948,
+      "worstVp": "1366x768",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P08/finance",
+      "source": "penerbit/pendapatan_dan_pencairan_desktop.html",
+      "route": "/penerbit/keuangan"
+    },
+    {
+      "id": "p8/reviews",
+      "phase": "P08",
+      "page": "reviews",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P08/reviews",
+      "source": "penerbit/ulasan_pembeli_desktop.html",
+      "route": "/penerbit/ulasan"
+    },
+    {
+      "id": "p8/settings",
+      "phase": "P08",
+      "page": "settings",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P08/settings",
+      "source": "penerbit/pengaturan_profil_desktop.html",
+      "route": "/penerbit/pengaturan"
+    },
+    {
+      "id": "p8/invoice",
+      "phase": "P08",
+      "page": "invoice",
+      "worst": 0.000282,
+      "worstVp": "320x700",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P08/invoice",
+      "source": "penerbit/invoice_penjualan_pdf_portal_penerbit.html",
+      "route": "/penerbit/invoice/{order?}"
+    },
+    {
+      "id": "p9/dashboard",
+      "phase": "P09",
+      "page": "dashboard",
+      "worst": 0.004239,
+      "worstVp": "1366x768",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P09/dashboard",
+      "source": "admin/dashboard_administrasi_utama_desktop.html",
+      "route": "/admin"
+    },
+    {
+      "id": "p9/users",
+      "phase": "P09",
+      "page": "users",
+      "worst": 0.000163,
+      "worstVp": "1366x768",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P09/users",
+      "source": "admin/kelola_pengguna_desktop.html",
+      "route": "/admin/pengguna"
+    },
+    {
+      "id": "p9/catalog",
+      "phase": "P09",
+      "page": "catalog",
+      "worst": 0.000021,
+      "worstVp": "1440x900",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P09/catalog",
+      "source": "admin/pengawasan_katalog_buku_global_desktop.html",
+      "route": "/admin/katalog"
+    },
+    {
+      "id": "p9/review-moderation",
+      "phase": "P09",
+      "page": "review-moderation",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 1,
+      "key": "P09/review-moderation",
+      "source": "admin/moderasi_ulasan_dan_komentar_desktop.html",
+      "route": "/admin/moderasi-ulasan"
+    },
+    {
+      "id": "p9/monitoring",
+      "phase": "P09",
+      "page": "monitoring",
+      "worst": 0,
+      "worstVp": "",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P09/monitoring",
+      "source": "admin/monitoring_global_desktop.html",
+      "route": "/admin/monitoring"
+    },
+    {
+      "id": "p9/payouts",
+      "phase": "P09",
+      "page": "payouts",
+      "worst": 0.003393,
+      "worstVp": "390x844",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P09/payouts",
+      "source": "admin/kelola_pencairan_dana_desktop.html",
+      "route": "/admin/pencairan"
+    },
+    {
+      "id": "p9/communities",
+      "phase": "P09",
+      "page": "communities",
+      "worst": 0.003323,
+      "worstVp": "1440x900",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 2,
+      "key": "P09/communities",
+      "source": "admin/kelola_komunitas_desktop.html",
+      "route": "/admin/komunitas"
+    },
+    {
+      "id": "p9/discussion-moderation",
+      "phase": "P09",
+      "page": "discussion-moderation",
+      "worst": 0.00003,
+      "worstVp": "1440x900",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P09/discussion-moderation",
+      "source": "admin/moderasi_diskusi_komunitas_desktop.html",
+      "route": "/admin/moderasi-diskusi"
+    },
+    {
+      "id": "p9/login",
+      "phase": "P09",
+      "page": "login",
+      "worst": 0.000973,
+      "worstVp": "1440x900",
+      "mismatches": [],
+      "viewports": 5,
+      "dhRange": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "errTotal": 0,
+      "brokenMax": 0,
+      "key": "P09/login",
+      "source": "admin/login_administrator_desktop.html",
+      "route": "/admin/masuk"
+    }
+  ],
+  "audit": {
+    "app": 86,
+    "proto": 86
+  }
+}

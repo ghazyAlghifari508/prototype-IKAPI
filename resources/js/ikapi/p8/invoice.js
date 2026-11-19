@@ -1,0 +1,117 @@
+// invoice - Portal Penerbit
+// Ported verbatim from docs/design/prototype-copy/penerbit/invoice_penjualan_pdf_portal_penerbit.html (inline <script>).
+import { onReady } from '../shared.js';
+
+onReady(function () {
+    if (!document.getElementById('invoice-sheet') && !document.querySelector('.invoice-sheet')) return;
+
+    (function () {
+      'use strict';
+
+      /* Single source of truth for this document (demo transaction data from the project). */
+      var INVOICE = {
+        number: 'INV/2026/11/041-0082',
+        order: 'ORD-2026-11082',
+        paidAt: '2026-11-14T14:30:00+07:00',
+        method: 'QRIS',
+        status: 'Lunas',
+        feeRate: 0.10,
+        publisher: {
+          name: 'PT Kiblat Buku Utama',
+          memberNo: '041/JBA/2020',
+          address: 'Jl. Lengkong Besar No. 127, Bandung 40261',
+          email: 'redaksi@kiblatbuku.co.id'
+        },
+        items: [
+          { title: 'Laskar Aksara Pasundan', author: 'Ayi R. Kurnia', qty: 1, unitPrice: 45000 },
+          { title: 'Pendidikan Karakter Sunda', author: 'Dr. Cecep Hidayat', qty: 1, unitPrice: 52000 },
+          { title: 'Bumi Parahyangan: Jejak Purba', author: 'T. Bachtiar', qty: 1, unitPrice: 65000 },
+          { title: 'Flora Priangan: Arsip Hayati', author: 'Dr. Encep Kosasih', qty: 1, unitPrice: 48000 },
+          { title: 'Tata Bahasa & Morfologi Sunda Modern', author: 'Prof. Dr. Iskandar', qty: 1, unitPrice: 58000 }
+        ]
+      };
+
+      var rupiah = function (n) {
+        return 'Rp ' + Math.round(n).toLocaleString('id-ID');
+      };
+
+      function formatPaidAt(iso) {
+        var d = new Date(iso);
+        var date = new Intl.DateTimeFormat('id-ID', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Jakarta' }).format(d);
+        var time = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Asia/Jakarta' }).format(d);
+        return date + ', ' + time + ' WIB';
+      }
+
+      function setText(id, value) {
+        var el = document.getElementById(id);
+        if (el) el.textContent = value;
+      }
+
+      function render() {
+        setText('doc-number', INVOICE.number);
+        setText('meta-order', INVOICE.order);
+        setText('meta-paid', formatPaidAt(INVOICE.paidAt));
+        setText('meta-method', INVOICE.method);
+        setText('meta-status', INVOICE.status);
+        setText('meta-items', INVOICE.items.length + ' e-book');
+        setText('pub-name', INVOICE.publisher.name);
+        setText('pub-member', INVOICE.publisher.memberNo);
+        setText('pub-address', INVOICE.publisher.address);
+        setText('pub-email', INVOICE.publisher.email);
+
+        setText('doc-status', INVOICE.status);
+
+        var tbody = document.getElementById('item-rows');
+        tbody.innerHTML = '';
+
+        var gross = 0;
+        INVOICE.items.forEach(function (item) {
+          var lineTotal = item.qty * item.unitPrice;
+          gross += lineTotal;
+
+          var tr = document.createElement('tr');
+          tr.className = 'border-b border-border align-top';
+
+          var tdBook = document.createElement('td');
+          tdBook.className = 'py-3 pr-3';
+          var title = document.createElement('span');
+          title.className = 'block font-semibold text-ink';
+          title.textContent = item.title;
+          var sub = document.createElement('span');
+          sub.className = 'block text-[12px] text-muted';
+          sub.textContent = item.author + ', E-Book';
+          tdBook.appendChild(title);
+          tdBook.appendChild(sub);
+
+          var tdQty = document.createElement('td');
+          tdQty.className = 'num py-3 px-3 text-center text-ink';
+          tdQty.textContent = String(item.qty);
+
+          var tdUnit = document.createElement('td');
+          tdUnit.className = 'num py-3 px-3 text-right text-ink';
+          tdUnit.textContent = rupiah(item.unitPrice);
+
+          var tdTotal = document.createElement('td');
+          tdTotal.className = 'num py-3 pl-3 text-right font-semibold text-ink';
+          tdTotal.textContent = rupiah(lineTotal);
+
+          tr.appendChild(tdBook);
+          tr.appendChild(tdQty);
+          tr.appendChild(tdUnit);
+          tr.appendChild(tdTotal);
+          tbody.appendChild(tr);
+        });
+
+        var fee = gross * INVOICE.feeRate;
+        setText('sum-gross', rupiah(gross));
+        setText('sum-fee', '− ' + rupiah(fee));
+        setText('sum-net', rupiah(gross - fee));
+      }
+
+      document.getElementById('btn-print').addEventListener('click', function () {
+        window.print();
+      });
+
+      render();
+    })();
+});

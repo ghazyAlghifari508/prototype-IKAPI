@@ -1,0 +1,17 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch();
+const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } });
+const p = await ctx.newPage();
+p.on('pageerror', (e) => console.log('ERR', String(e).slice(0, 120)));
+await p.goto('http://127.0.0.1:8140/admin/katalog', { waitUntil: 'load' });
+await p.waitForTimeout(500);
+await p.locator('main table tbody tr').nth(2).click({ position: { x: 30, y: 16 } });
+await p.waitForTimeout(500);
+console.log('drawer open', await p.evaluate(() => !document.getElementById('catalog-drawer').classList.contains('hidden')));
+console.log('takedown disabled?', await p.evaluate(() => document.getElementById('btn-takedown')?.disabled));
+await p.evaluate(() => document.getElementById('btn-takedown').click());
+await p.waitForTimeout(500);
+console.log('modal-takedown hidden?', await p.evaluate(() => document.getElementById('modal-takedown')?.classList.contains('hidden')));
+console.log('confirm disabled?', await p.evaluate(() => document.getElementById('btn-confirm-takedown')?.disabled));
+console.log('modal buttons:', await p.evaluate(() => [...document.querySelectorAll('#modal-takedown button')].map((b) => [b.id || '-', b.textContent.trim().slice(0, 20), b.disabled])));
+await b.close();

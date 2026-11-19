@@ -1,0 +1,12 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch();
+const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } });
+const p = await ctx.newPage();
+await p.goto('http://127.0.0.1:8140/admin/moderasi-ulasan', { waitUntil: 'load' });
+await p.waitForTimeout(500);
+console.log('queue children:', await p.evaluate(() => [...(document.getElementById('queue')?.children || [])].map((c) => c.tagName + '.' + String(c.className).slice(0, 26) + '|' + (c.getAttribute('data-id') || '-'))) );
+await p.goto('http://127.0.0.1:8140/admin/moderasi-diskusi', { waitUntil: 'load' });
+await p.waitForTimeout(500);
+console.log('report rows:', await p.evaluate(() => [...document.querySelectorAll('#report-rows tr')].map((tr) => tr.innerText.replace(/\s+/g, ' ').slice(0, 60))));
+console.log('seeded reports:', await p.evaluate(() => JSON.parse(localStorage.getItem('ikapi_discussion_reports_demo') || '[]').map((r) => [r.id, r.targetType, r.targetId, r.status])));
+await b.close();

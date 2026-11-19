@@ -1,0 +1,219 @@
+{
+  "communities": [
+    {
+      "id": "community-filologi",
+      "name": "Komunitas Filologi Pasundan",
+      "focus": "filologi",
+      "focusLabel": "Filologi & Aksara Kuno",
+      "location": "Bandung, Jawa Barat",
+      "shortDesc": "Komunitas yang mempelajari dan melestarikan naskah serta aksara Sunda kuno.",
+      "fullDesc": "Komunitas Filologi Pasundan berakar dari lingkaran pegiat manuskrip, peneliti sastra daerah, dan generasi muda yang berikhtiar menyelamatkan lembaran naskah lontar dan daluwang di Jawa Barat agar dapat dipelajari secara luas.",
+      "photo": "/assets/ikapi/events/event-community.jpg",
+      "photoAlt": "Foto kegiatan komunitas",
+      "focusPoints": [
+        "Transliterasi naskah lontar dan aksara Sunda kuno",
+        "Kajian filologi dan penelusuran sejarah manuskrip Pasundan",
+        "Pelatihan pembacaan aksara kuno bagi pegiat literasi muda"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "community-klub-buku",
+      "name": "Klub Buku Priangan (KBP)",
+      "focus": "fiksi",
+      "focusLabel": "Klub Baca Fiksi",
+      "location": "Bandung & Cimahi, Jawa Barat",
+      "shortDesc": "Komunitas pembaca yang membahas novel dan karya sastra.",
+      "fullDesc": "Klub Buku Priangan adalah lingkar pembaca independen yang rutin mengadakan pertemuan diskusi karya sastra fiksi, bedah buku kurasi IKAPI, dan ruang bertukar bacaan di berbagai ruang publik terbuka.",
+      "photo": "/assets/ikapi/events/event-children-story.jpg",
+      "photoAlt": "Foto kegiatan komunitas",
+      "focusPoints": [
+        "Diskusi berkala novel dan antologi sastra Nusantara",
+        "Kegiatan bertukar buku dan apresiasi karya penulis lokal",
+        "Klub baca akhir pekan di taman literasi dan kedai buku"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "community-sejarah",
+      "name": "Masyarakat Sejarah & Budaya Sunda",
+      "focus": "sejarah",
+      "focusLabel": "Sejarah Priangan",
+      "location": "Sumedang & Garut, Jawa Barat",
+      "shortDesc": "Komunitas yang mempelajari sejarah dan kebudayaan Sunda melalui diskusi serta kegiatan literasi.",
+      "fullDesc": "Masyarakat Sejarah & Budaya Sunda mengkaji babad, sejarah geomorfologi Priangan, dan buku-buku kearifan lokal bersama para peneliti, pengarang daerah, serta pendidik dari berbagai institusi.",
+      "photo": "/assets/ikapi/events/event-book-fair.jpg",
+      "photoAlt": "Foto kegiatan komunitas",
+      "focusPoints": [
+        "Kajian sejarah lokal dan dokumentasi cerita rakyat",
+        "Diskusi buku geomorfologi dan bentang alam Bandung Purba",
+        "Penyelenggaraan ekspedisi literasi situs sejarah Pasundan"
+      ],
+      "status": "active"
+    }
+  ],
+  "topics": [
+    {
+      "id": "TPC-2026-101",
+      "communityId": "community-klub-buku",
+      "title": "Novel apa yang menarik untuk dibahas bersama?",
+      "body": "Lagi cari novel dengan karakter dan konflik menarik untuk diskusi klub baca bulan ini. Boleh bagikan satu judul beserta alasan singkatnya.",
+      "authorId": "USR-DEMO-NADIA",
+      "authorName": "Nadia",
+      "createdAt": "2026-11-17T14:02:35.976Z",
+      "updatedAt": null,
+      "removed": false
+    },
+    {
+      "id": "TPC-2026-102",
+      "communityId": "community-klub-buku",
+      "title": "Bagaimana kalian memilih buku berikutnya?",
+      "body": "Penasaran bagaimana anggota klub baca menentukan bacaan untuk diskusi bulanan. Apakah lewat voting, giliran, atau usulan bebas?",
+      "authorId": "USR-DEMO-RAKA",
+      "authorName": "Raka",
+      "createdAt": "2026-11-18T00:02:35.976Z",
+      "updatedAt": null,
+      "removed": false
+    },
+    {
+      "id": "TPC-2026-103",
+      "communityId": "community-filologi",
+      "title": "E-book naskah kuno: versi digital atau cetak yang lebih nyaman?",
+      "body": "Untuk menelaah naskah panjang, saya lebih nyaman membaca e-book karena bisa memperbesar bagian tulisan. Bagaimana pengalaman anggota lain?",
+      "authorId": "USR-DEMO-DINA",
+      "authorName": "Dina",
+      "createdAt": "2026-11-15T22:02:35.976Z",
+      "updatedAt": null,
+      "removed": false
+    },
+    {
+      "id": "TPC-2026-104",
+      "communityId": "community-filologi",
+      "title": "Rekomendasi buku pengantar filologi untuk pembaca baru",
+      "body": "Ada yang punya rekomendasi buku pengantar yang bahasanya ramah untuk pembaca yang baru mulai menekuni naskah lama?",
+      "authorId": "USR-DEMO-NADIA",
+      "authorName": "Nadia",
+      "createdAt": "2026-11-16T20:02:35.976Z",
+      "updatedAt": null,
+      "removed": false
+    },
+    {
+      "id": "TPC-2026-105",
+      "communityId": "community-sejarah",
+      "title": "Buku sejarah lokal apa yang paling berkesan tahun ini?",
+      "body": "Bagikan satu judul buku sejarah Priangan yang menurutmu paling berkesan, sekalian alasan singkatnya.",
+      "authorId": "USR-DEMO-RAKA",
+      "authorName": "Raka",
+      "createdAt": "2026-11-17T18:02:35.976Z",
+      "updatedAt": null,
+      "removed": false
+    },
+    {
+      "id": "TPC-2026-106",
+      "communityId": "community-sejarah",
+      "title": "Tips mengatur jadwal baca untuk buku yang tebal",
+      "body": "Buku sejarah biasanya tebal. Ada tips membagi waktu baca harian supaya tetap selesai tanpa kehilangan alur ceritanya?",
+      "authorId": "USR-DEMO-DINA",
+      "authorName": "Dina",
+      "createdAt": "2026-11-18T08:02:35.976Z",
+      "updatedAt": null,
+      "removed": false
+    }
+  ],
+  "replies": [
+    {
+      "id": "RPL-2026-201",
+      "topicId": "TPC-2026-101",
+      "communityId": "community-klub-buku",
+      "body": "Menurutku novel dengan banyak sudut pandang akan menarik untuk dibahas bersama, karena tiap pembaca bisa memilih tokoh yang paling meyakinkan.",
+      "authorId": "USR-DEMO-DINA",
+      "authorName": "Dina",
+      "createdAt": "2026-11-17T16:02:35.976Z",
+      "updatedAt": null,
+      "removed": false
+    },
+    {
+      "id": "RPL-2026-202",
+      "topicId": "TPC-2026-101",
+      "communityId": "community-klub-buku",
+      "body": "Usulku novel yang latarnya dekat dengan kehidupan sehari-hari pembaca, supaya diskusinya tidak berhenti di ringkasan cerita.",
+      "authorId": "USR-DEMO-RAKA",
+      "authorName": "Raka",
+      "createdAt": "2026-11-17T18:02:35.976Z",
+      "updatedAt": null,
+      "removed": false
+    },
+    {
+      "id": "RPL-2026-203",
+      "topicId": "TPC-2026-102",
+      "communityId": "community-klub-buku",
+      "body": "Di klub kami pakai voting sederhana: tiga usulan, lalu dipilih yang paling banyak disebut anggota.",
+      "authorId": "USR-DEMO-NADIA",
+      "authorName": "Nadia",
+      "createdAt": "2026-11-18T06:02:35.976Z",
+      "updatedAt": null,
+      "removed": false
+    },
+    {
+      "id": "RPL-2026-204",
+      "topicId": "TPC-2026-103",
+      "communityId": "community-filologi",
+      "body": "Saya pakai e-book untuk membaca cepat, lalu versi cetak untuk mencatat. Kombinasi itu paling nyaman untuk naskah panjang.",
+      "authorId": "USR-DEMO-RAKA",
+      "authorName": "Raka",
+      "createdAt": "2026-11-16T08:02:35.976Z",
+      "updatedAt": null,
+      "removed": false
+    },
+    {
+      "id": "RPL-2026-205",
+      "topicId": "TPC-2026-105",
+      "communityId": "community-sejarah",
+      "body": "Bumi Parahyangan: Jejak Purba cukup berkesan karena penjelasannya menghubungkan bentang alam dengan cerita warga setempat.",
+      "authorId": "USR-DEMO-NADIA",
+      "authorName": "Nadia",
+      "createdAt": "2026-11-18T00:02:35.976Z",
+      "updatedAt": null,
+      "removed": false
+    },
+    {
+      "id": "RPL-2026-206",
+      "topicId": "TPC-2026-106",
+      "communityId": "community-sejarah",
+      "body": "Saya biasakan 20 halaman per hari sambil mencatat satu kutipan. Alurnya tetap terjaga walau bukunya tebal.",
+      "authorId": "USR-DEMO-RAKA",
+      "authorName": "Raka",
+      "createdAt": "2026-11-18T12:02:35.976Z",
+      "updatedAt": null,
+      "removed": false
+    },
+    {
+      "id": "RPL-2026-207",
+      "topicId": "TPC-2026-101",
+      "communityId": "community-klub-buku",
+      "parentReplyId": "RPL-2026-201",
+      "body": "Setuju soal sudut pandang. Novel dengan dua narator biasanya paling ramai dibahas di klub kami.",
+      "authorId": "USR-DEMO-RAKA",
+      "authorName": "Raka",
+      "createdAt": "2026-11-17T20:02:35.976Z",
+      "updatedAt": null,
+      "removed": false
+    },
+    {
+      "id": "RPL-2026-208",
+      "topicId": "TPC-2026-101",
+      "communityId": "community-klub-buku",
+      "parentReplyId": "RPL-2026-207",
+      "body": "Kalau dua narator, biasanya peserta terbelah jadi dua kubu. Itu yang bikin diskusinya hidup.",
+      "authorId": "USR-DEMO-DINA",
+      "authorName": "Dina",
+      "createdAt": "2026-11-17T22:02:35.976Z",
+      "updatedAt": null,
+      "removed": false
+    }
+  ],
+  "memberships": null,
+  "reports": null,
+  "seedVersion": null,
+  "cards": []
+}

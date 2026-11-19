@@ -1,0 +1,22 @@
+import { chromium } from 'playwright';
+import { diff } from './imagediff.mjs';
+const b = await chromium.launch();
+const shoot = async (url, sel, file) => {
+  const ctx = await b.newContext({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
+  const p = await ctx.newPage();
+  await p.goto(url, { waitUntil: 'load' });
+  await p.evaluate(async () => { await document.fonts.ready; });
+  await p.waitForTimeout(500);
+  const el = await p.$(sel);
+  await el.screenshot({ path: file });
+  const box = await el.boundingBox();
+  await ctx.close();
+  return box;
+};
+const sel = process.argv[2] || '#invoice-sheet';
+const a = await shoot('http://127.0.0.1:8099/prototype-copy/penerbit/invoice_penjualan_pdf_portal_penerbit.html', sel, 'C:/Users/alghi/AppData/Local/Temp/el-p.png');
+const c = await shoot('http://127.0.0.1:8140/penerbit/invoice', sel, 'C:/Users/alghi/AppData/Local/Temp/el-b.png');
+console.log('boxes', JSON.stringify(a), JSON.stringify(c));
+const r = diff('C:/Users/alghi/AppData/Local/Temp/el-p.png', 'C:/Users/alghi/AppData/Local/Temp/el-b.png', {});
+console.log(sel, 'diff', r.diffPixels, (r.ratio || 0).toFixed(6), r.sizeMismatch ? 'size mismatch' : '');
+await b.close();

@@ -1,0 +1,53 @@
+<section id="view-explore" class="flex flex-col gap-6">
+
+          <div class="flex flex-col gap-4">
+            <div class="relative w-full">
+              <label for="community-search" class="sr-only">Cari komunitas</label>
+              <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-muted text-[20px] pointer-events-none" aria-hidden="true">search</span>
+              <input id="community-search" type="text" class="w-full h-11 pl-11 pr-4 rounded-xl bg-surface-neutral border border-border-subtle text-ink-body text-[14px] placeholder:text-ink-muted outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Cari nama komunitas, topik, atau wilayah..." oninput="handleSearchInput(event)">
+            </div>
+
+            <div class="flex items-center gap-2 overflow-x-auto pb-1" role="group" aria-label="Filter fokus kegiatan">
+              <span class="text-[12px] font-bold text-ink-muted mr-1 shrink-0 uppercase tracking-wider">Fokus:</span>
+              <button type="button" class="filter-chip px-3.5 py-1.5 rounded-xl text-[13px] font-semibold transition-all bg-primary text-white shadow-xs shrink-0 cursor-pointer" data-filter="all" aria-pressed="true" onclick="selectFilter('all')">
+                Semua
+              </button>
+              <button type="button" class="filter-chip px-3.5 py-1.5 rounded-xl text-[13px] font-semibold transition-all bg-surface-neutral text-ink-body hover:bg-surface-soft hover:text-primary border border-border-subtle shrink-0 cursor-pointer" data-filter="filologi" aria-pressed="false" onclick="selectFilter('filologi')">
+                Filologi
+              </button>
+              <button type="button" class="filter-chip px-3.5 py-1.5 rounded-xl text-[13px] font-semibold transition-all bg-surface-neutral text-ink-body hover:bg-surface-soft hover:text-primary border border-border-subtle shrink-0 cursor-pointer" data-filter="fiksi" aria-pressed="false" onclick="selectFilter('fiksi')">
+                Klub Baca
+              </button>
+              <button type="button" class="filter-chip px-3.5 py-1.5 rounded-xl text-[13px] font-semibold transition-all bg-surface-neutral text-ink-body hover:bg-surface-soft hover:text-primary border border-border-subtle shrink-0 cursor-pointer" data-filter="sejarah" aria-pressed="false" onclick="selectFilter('sejarah')">
+                Sejarah
+              </button>
+            </div>
+          </div>
+
+          <p id="directory-notice" role="status" class="hidden text-[13px] font-semibold text-[#B42318]"></p>
+
+          <div class="mt-6 flex items-center justify-between border-b border-border-subtle pb-2.5">
+            <h2 class="text-[19px] font-bold tracking-tight text-ink-body">Direktori Komunitas</h2>
+            <span id="directory-count" class="text-[13px] font-bold text-primary">3 komunitas ditemukan</span>
+          </div>
+
+          <div id="directory-grid" class="grid grid-cols-1 gap-4 md:grid-cols-2"></div>
+
+          <div id="view-noresults" class="hidden flex-col items-center justify-center rounded-2xl border border-border-subtle bg-white px-4 py-12 text-center">
+            <img src="../../assets/ilustration/notfoundil.png" alt="" aria-hidden="true" class="mb-3 h-32 w-auto">
+            <h3 class="mb-1 text-[18px] font-bold tracking-tight text-ink-body">Komunitas tidak ditemukan</h3>
+            <p class="mb-5 max-w-sm text-[14px] text-ink-muted">Tidak ada komunitas yang cocok dengan pencarianmu.</p>
+            <button type="button" class="h-10 cursor-pointer rounded-xl border border-border-subtle bg-surface-neutral px-5 text-[13px] font-bold text-ink-body transition-colors hover:bg-surface-soft hover:text-primary" onclick="resetSearchState()">
+              Hapus Pencarian
+            </button>
+          </div>
+
+          <div id="view-empty" class="hidden flex-col items-center justify-center rounded-2xl border border-border-subtle bg-white px-4 py-12 text-center">
+            <img src="../../assets/ilustration/notfoundil.png" alt="" aria-hidden="true" class="mb-3 h-32 w-auto">
+            <h3 class="mb-1 text-[18px] font-bold tracking-tight text-ink-body">Belum ada komunitas</h3>
+            <p class="mb-5 max-w-sm text-[14px] text-ink-muted">Belum ada komunitas yang ditampilkan di direktori.</p>
+            <button type="button" class="h-10 cursor-pointer rounded-xl bg-primary px-5 text-[13px] font-bold text-white shadow-xs transition-colors hover:bg-primary-hover" onclick="setSimState('normal')">
+              Muat Ulang Direktori
+            </button>
+          </div>
+        </section>

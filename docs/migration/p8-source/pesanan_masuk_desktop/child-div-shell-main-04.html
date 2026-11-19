@@ -1,0 +1,134 @@
+<div class="shell-main">
+  <div aria-hidden="true" class="banner-bleed relative h-[232px] overflow-hidden bg-primary-deep sm:h-[260px] lg:h-[276px]">
+    <svg class="absolute inset-0 h-full w-full" viewBox="0 0 1440 212" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="topScrim" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2F1C6A" stop-opacity="0.96"></stop>
+          <stop offset="100%" stop-color="#2F1C6A" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="212" fill="#2F1C6A"></rect>
+      <polygon points="418,0 612,0 470,212 276,212" fill="#4B2CBA"></polygon>
+      <polygon points="648,0 706,0 564,212 506,212" fill="#825CF1"></polygon>
+      <polygon points="748,0 1002,0 860,212 606,212" fill="#673DE6"></polygon>
+      <polygon points="1042,0 1084,0 942,212 900,212" fill="#4475D8"></polygon>
+      <polygon points="1124,0 1290,0 1148,212 982,212" fill="#4B2CBA"></polygon>
+      <polygon points="1342,0 1440,0 1440,212 1200,212" fill="#825CF1"></polygon>
+      <polygon points="1420,0 1440,0 1440,212 1378,212" fill="#4475D8"></polygon>
+      <rect width="1440" height="58" fill="url(#topScrim)"></rect>
+    </svg>
+  </div>
+
+  <main id="workspace" class="relative z-10 -mt-20 rounded-t-[20px] border-t border-border bg-white lg:ml-6">
+    <div class="mx-auto w-full max-w-[1560px] px-4 pb-16 pt-6 sm:px-6 lg:px-10 lg:pt-8">
+
+      <!-- Heading -->
+      <div class="mb-6 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+        <div class="min-w-0">
+          <h1 class="text-[26px] font-bold leading-tight tracking-tight text-ink lg:text-[30px]">Pesanan Masuk</h1>
+          <p class="mt-1 text-[14px] text-muted">Pantau transaksi penjualan e-book dan detail pesanan.</p>
+        </div>
+        <div class="relative">
+          <button type="button" id="demo-toggle" aria-expanded="false" aria-haspopup="true" class="focus-ring inline-flex h-10 items-center gap-1.5 rounded-xl border border-dashed border-border px-3 text-[13px] font-semibold text-muted transition-colors hover:bg-neutral hover:text-ink">
+            <span class="material-symbols-outlined text-[17px]">tune</span>
+            <span>Mode Demo</span>
+            <span class="material-symbols-outlined text-[17px]">expand_more</span>
+          </button>
+          <div id="demo-menu" class="absolute right-0 top-12 z-30 hidden w-64 rounded-2xl border border-border bg-white p-1.5 shadow-[0_16px_40px_rgba(34,34,37,0.12)]" role="menu" aria-label="Pilih skenario demo">
+            <button type="button" data-demo="A" role="menuitemradio" aria-checked="true" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl bg-soft px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Pesanan Berisi</span><span class="material-symbols-outlined demo-check text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="B" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Belum Ada Pesanan</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="C" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Pencarian Nihil</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="D" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Menyiapkan Invoice</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="E" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Gagal Mengunduh Invoice</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <button type="button" data-demo="F" role="menuitemradio" aria-checked="false" class="demo-item focus-ring flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral"><span>Sedang Memuat</span><span class="material-symbols-outlined demo-check hidden text-[17px] text-primary">check</span></button>
+            <p class="px-3 pb-1.5 pt-2 text-[11px] leading-relaxed text-muted">Peralihan status hanya simulasi prototype.</p>
+          </div>
+        </div>
+      </div>
+
+      <p id="page-note" role="status" class="mb-3 hidden text-[12.5px] text-muted"></p>
+
+      <!-- Toolbar -->
+      <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center">
+        <div class="relative w-full sm:max-w-[360px]">
+          <span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[19px] text-muted">search</span>
+          <label for="order-search" class="sr-only">Cari nomor pesanan atau judul buku</label>
+          <input id="order-search" type="search" autocomplete="off" placeholder="Cari nomor pesanan atau judul buku..." class="h-10 w-full rounded-xl border border-border bg-white pl-10 pr-9 text-[14px] text-ink outline-none placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary/15">
+          <button type="button" id="btn-clear-search" aria-label="Bersihkan pencarian" class="focus-ring absolute right-1.5 top-1/2 hidden h-7 w-7 -translate-y-1/2 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+            <span class="material-symbols-outlined text-[17px]">close</span>
+          </button>
+        </div>
+        <div>
+          <label for="date-filter" class="sr-only">Rentang waktu pesanan</label>
+          <select id="date-filter" class="h-10 rounded-xl border border-border bg-white px-3 text-[13.5px] font-medium text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+            <option value="all">Semua Waktu</option>
+            <option value="30d">30 Hari Terakhir</option>
+            <option value="month">Bulan Ini</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Loading skeleton (State F) -->
+      <div id="view-loading" class="hidden" aria-hidden="true">
+        <div class="overflow-hidden rounded-2xl border border-border">
+          <div class="h-11 animate-pulse border-b border-border"></div>
+          <div class="divide-y divide-divider">
+            <div class="flex items-center gap-4 p-4"><div class="h-3.5 w-32 animate-pulse rounded bg-neutral"></div><div class="h-14 w-10 animate-pulse rounded bg-neutral"></div><div class="flex-1 space-y-2"><div class="h-3.5 w-48 animate-pulse rounded bg-neutral"></div><div class="h-3 w-28 animate-pulse rounded bg-neutral"></div></div><div class="h-3.5 w-16 animate-pulse rounded bg-neutral"></div><div class="h-8 w-24 animate-pulse rounded bg-neutral"></div></div>
+            <div class="flex items-center gap-4 p-4"><div class="h-3.5 w-32 animate-pulse rounded bg-neutral"></div><div class="h-14 w-10 animate-pulse rounded bg-neutral"></div><div class="flex-1 space-y-2"><div class="h-3.5 w-56 animate-pulse rounded bg-neutral"></div><div class="h-3 w-32 animate-pulse rounded bg-neutral"></div></div><div class="h-3.5 w-16 animate-pulse rounded bg-neutral"></div><div class="h-8 w-24 animate-pulse rounded bg-neutral"></div></div>
+            <div class="flex items-center gap-4 p-4"><div class="h-3.5 w-32 animate-pulse rounded bg-neutral"></div><div class="h-14 w-10 animate-pulse rounded bg-neutral"></div><div class="flex-1 space-y-2"><div class="h-3.5 w-44 animate-pulse rounded bg-neutral"></div><div class="h-3 w-24 animate-pulse rounded bg-neutral"></div></div><div class="h-3.5 w-16 animate-pulse rounded bg-neutral"></div><div class="h-8 w-24 animate-pulse rounded bg-neutral"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div id="view-table" class="overflow-hidden rounded-2xl border border-border">
+        <div class="overflow-x-auto">
+          <table class="w-full min-w-[900px] border-collapse text-left">
+            <caption class="sr-only">Daftar pesanan e-book yang sudah dibayar beserta jumlah, pendapatan bersih, status, dan aksi</caption>
+            <thead>
+              <tr class="border-b border-border bg-white text-[11px] uppercase tracking-[0.1em] text-muted">
+                <th scope="col" class="w-[190px] px-5 py-3 font-bold lg:px-6">Pesanan</th>
+                <th scope="col" class="px-4 py-3 font-bold">Buku</th>
+                <th scope="col" class="w-24 px-4 py-3 text-right font-bold">Jumlah</th>
+                <th scope="col" class="w-36 px-4 py-3 text-right font-bold">Neto</th>
+                <th scope="col" class="w-28 px-4 py-3 font-bold">Status</th>
+                <th scope="col" class="w-[170px] px-4 py-3 pr-5 text-right font-bold lg:pr-6">Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="order-rows" class="text-[13px]"></tbody>
+          </table>
+        </div>
+
+        <!-- Empty: dataset kosong (State B) -->
+        <div id="state-empty" class="hidden px-5 py-14 text-center">
+          <p class="text-[15px] font-semibold text-ink">Belum Ada Pesanan</p>
+          <p class="mx-auto mt-1.5 max-w-sm text-[13px] leading-relaxed text-muted">Pesanan yang telah berhasil dibayar akan muncul di sini.</p>
+        </div>
+
+        <!-- Empty: hasil filter kosong (State C) -->
+        <div id="state-noresults" class="hidden px-5 py-12 text-center">
+          <img src="../../assets/ilustration/notfoundil.png" alt="" aria-hidden="true" class="mx-auto h-28 w-auto">
+          <p class="mt-3 text-[15px] font-semibold text-ink">Pesanan Tidak Ditemukan</p>
+          <p class="mx-auto mt-1.5 max-w-sm text-[13px] leading-relaxed text-muted">Tidak ada pesanan yang cocok dengan pencarian atau filter ini.</p>
+          <button type="button" id="btn-reset-filter" class="focus-ring mt-4 inline-flex h-10 items-center rounded-xl border border-border px-4 text-[13.5px] font-semibold text-ink hover:bg-neutral">
+            Bersihkan Pencarian &amp; Filter
+          </button>
+        </div>
+
+        <!-- Footer -->
+        <div id="table-footer" class="flex flex-col gap-3 border-t border-border px-5 py-3 sm:flex-row sm:items-center sm:justify-between lg:px-6">
+          <p class="text-[12.5px] text-muted" id="result-summary">Menampilkan 0 dari 0 pesanan</p>
+          <div class="flex items-center gap-1.5">
+            <button type="button" id="page-prev" aria-label="Halaman sebelumnya" class="focus-ring grid h-8 w-8 place-items-center rounded-lg border border-border text-ink hover:bg-neutral disabled:cursor-not-allowed disabled:opacity-40">
+              <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+            </button>
+            <span class="num min-w-8 rounded-lg bg-primary px-2 py-1 text-center text-[12.5px] font-bold text-white" id="page-current">1</span>
+            <button type="button" id="page-next" aria-label="Halaman berikutnya" class="focus-ring grid h-8 w-8 place-items-center rounded-lg border border-border text-ink hover:bg-neutral disabled:cursor-not-allowed disabled:opacity-40">
+              <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

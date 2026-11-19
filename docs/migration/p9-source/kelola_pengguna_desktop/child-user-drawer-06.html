@@ -1,0 +1,48 @@
+<aside id="user-drawer" class="fixed right-0 top-0 z-[70] flex h-full w-full max-w-full flex-col border-l border-border bg-white shadow-[-16px_0_40px_rgba(34,34,37,0.12)] sm:max-w-[520px]" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+  <header class="flex items-start justify-between gap-4 border-b border-divider px-5 py-4">
+    <div class="min-w-0">
+      <h2 id="drawer-title" class="text-[17px] font-bold tracking-tight text-ink">Detail Pendaftaran</h2>
+      <p class="num mt-0.5 text-[12.5px] text-muted" id="drawer-reg">-</p>
+    </div>
+    <button type="button" id="drawer-close" aria-label="Tutup detail" class="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[18px]">close</span>
+    </button>
+  </header>
+
+  <div class="flex-1 space-y-5 overflow-y-auto px-5 py-4">
+    <section>
+      <p class="text-[15px] font-semibold leading-snug text-ink" id="drawer-name">-</p>
+      <div class="mt-2 flex flex-wrap items-center gap-2">
+        <span id="drawer-status" class="text-[12px] font-semibold text-muted">-</span>
+        <span id="drawer-account" class="text-[12px] font-semibold text-muted">-</span>
+      </div>
+      <p class="mt-2 text-[12.5px] text-muted">Diajukan <span id="drawer-date">-</span></p>
+    </section>
+
+    <section class="border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Informasi Penerbit</h3>
+      <dl class="mt-2 space-y-2 text-[13px]">
+        <div class="flex flex-wrap justify-between gap-2"><dt class="text-muted">Penanggung jawab</dt><dd class="text-right font-medium text-ink" id="drawer-pj">-</dd></div>
+        <div class="flex flex-wrap justify-between gap-2"><dt class="text-muted">Email</dt><dd class="text-right text-ink" id="drawer-email">-</dd></div>
+        <div class="flex flex-wrap justify-between gap-2"><dt class="text-muted">Telepon</dt><dd class="num text-right text-ink" id="drawer-phone">-</dd></div>
+        <div class="flex flex-wrap justify-between gap-2"><dt class="text-muted">Alamat</dt><dd class="max-w-[62%] text-right text-ink" id="drawer-address">-</dd></div>
+        <div class="flex flex-wrap justify-between gap-2"><dt class="text-muted">Nomor anggota IKAPI</dt><dd class="num text-right text-ink" id="drawer-ikapi">-</dd></div>
+      </dl>
+      <p class="mt-2 text-[12px] leading-relaxed text-muted">Nomor anggota tercatat pada formulir pendaftaran dan belum diverifikasi otomatis.</p>
+    </section>
+
+    <section class="border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Hasil Pemeriksaan</h3>
+      <p class="mt-1.5 text-[13px] leading-relaxed text-muted">Periksa kesesuaian identitas penanggung jawab dan nomor keanggotaan IKAPI sebelum menyetujui pendaftaran.</p>
+    </section>
+
+    <section id="reject-reason-block" class="hidden border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Alasan Penolakan</h3>
+      <p class="mt-1 text-[13px] leading-relaxed text-ink" id="drawer-reason">-</p>
+    </section>
+  </div>
+
+  <footer class="border-t border-divider px-5 py-3">
+    <div id="drawer-actions" class="flex flex-wrap items-center justify-end gap-2"></div>
+  </footer>
+</aside>

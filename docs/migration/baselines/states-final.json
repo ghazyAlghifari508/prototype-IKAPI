@@ -1,0 +1,182 @@
+[
+ {
+  "key": "cart#status-menunggu",
+  "page": "user/keranjang_pembayaran_terpadu_desktop.html",
+  "actions": [
+   "checkout",
+   "sim-btn:⏳ Menunggu"
+  ],
+  "before": "hidden",
+  "after": "shown",
+  "reached": true,
+  "file": "user/keranjang_pembayaran_terpadu_desktop/state-status-menunggu-final.png",
+  "bytes": 154682,
+  "errors": []
+ },
+ {
+  "key": "cart#status-gagal",
+  "page": "user/keranjang_pembayaran_terpadu_desktop.html",
+  "actions": [],
+  "error": "TypeError: c.actions is not iterable"
+ },
+ {
+  "key": "detail#comment-menu",
+  "page": "user/detail_buku_desktop.html",
+  "actions": [
+   "clicked:flag\n                    Lapor"
+  ],
+  "before": "visible-menus:0",
+  "after": "visible-menus:0",
+  "reached": false,
+  "file": "user/detail_buku_desktop/state-comment-menu-final.png",
+  "bytes": 272538,
+  "errors": []
+ },
+ {
+  "key": "catalog#category-filter",
+  "page": "user/katalog_buku_desktop.html",
+  "actions": [
+   "no-input"
+  ],
+  "before": "{\"checked\":[\"cat-all\"],\"cards\":0}",
+  "after": "{\"checked\":[\"cat-all\"],\"cards\":0}",
+  "reached": false,
+  "file": "user/katalog_buku_desktop/state-category-filter-final.png",
+  "bytes": 661237,
+  "errors": []
+ },
+ {
+  "key": "help#faq-open",
+  "page": "user/bantuan_akun_desktop.html",
+  "actions": [
+   "opened"
+  ],
+  "before": "[false]",
+  "after": "[true]",
+  "reached": true,
+  "file": "user/bantuan_akun_desktop/state-faq-open-final.png",
+  "bytes": 101309,
+  "errors": []
+ },
+ {
+  "key": "admin-community#create",
+  "page": "admin/kelola_komunitas_desktop.html",
+  "actions": [
+   "clicked:add\n            Tambah K"
+  ],
+  "before": "{\"visible\":true,\"x\":920}",
+  "after": "{\"visible\":true,\"x\":920}",
+  "reached": false,
+  "file": "admin/kelola_komunitas_desktop/state-create-final.png",
+  "bytes": 155409,
+  "errors": []
+ },
+ {
+  "key": "admin-monitoring#reset-filter",
+  "page": "admin/monitoring_global_desktop.html",
+  "actions": [
+   "clicked"
+  ],
+  "before": "empty-hidden",
+  "after": "empty-hidden",
+  "reached": false,
+  "file": "admin/monitoring_global_desktop/state-reset-filter-final.png",
+  "bytes": 122260,
+  "errors": []
+ },
+ {
+  "key": "admin-catalog#reports",
+  "page": "admin/pengawasan_katalog_buku_global_desktop.html",
+  "actions": [
+   "tab0:Laporan Masalah Buku"
+  ],
+  "before": "{\"reports\":true,\"catalog\":false}",
+  "after": "{\"reports\":true,\"catalog\":false}",
+  "reached": false,
+  "file": "admin/pengawasan_katalog_buku_global_desktop/state-reports-final.png",
+  "bytes": 121184,
+  "errors": []
+ },
+ {
+  "key": "admin-payouts#drawer",
+  "page": "admin/kelola_pencairan_dana_desktop.html",
+  "actions": [
+   "clicked"
+  ],
+  "before": "{\"w\":520,\"x\":1440,\"vw\":1440}",
+  "after": "{\"w\":520,\"x\":1440,\"vw\":1440}",
+  "reached": false,
+  "file": "admin/kelola_pencairan_dana_desktop/state-drawer-final.png",
+  "bytes": 105464,
+  "errors": [
+   "ReferenceError: editable is not defined"
+  ]
+ },
+ {
+  "key": "penerbit-settings#bank-edit",
+  "page": "penerbit/pengaturan_profil_desktop.html",
+  "actions": [
+   "clicked"
+  ],
+  "before": "{\"formVisible\":false,\"emptyState\":\"hidden\"}",
+  "after": "{\"formVisible\":true,\"emptyState\":\"hidden\"}",
+  "reached": true,
+  "file": "penerbit/pengaturan_profil_desktop/state-bank-edit-final.png",
+  "bytes": 97689,
+  "errors": []
+ },
+ {
+  "key": "agenda#featured-modal",
+  "page": "user/agenda_berita_literasi_desktop.html",
+  "actions": [
+   "clicked"
+  ],
+  "before": "hidden",
+  "after": "hidden",
+  "reached": false,
+  "file": "user/agenda_berita_literasi_desktop/state-featured-modal-final.png",
+  "bytes": 582056,
+  "errors": []
+ },
+ {
+  "key": "detail#rating-filled",
+  "page": "user/detail_buku_desktop.html",
+  "actions": [
+   "clicked-star:10"
+  ],
+  "before": "{\"checked\":null,\"hasTextarea\":true}",
+  "after": "{\"checked\":null,\"hasTextarea\":true}",
+  "reached": false,
+  "file": "user/detail_buku_desktop/state-rating-filled-final.png",
+  "bytes": 264795,
+  "errors": []
+ },
+ {
+  "key": "penerbit/kelola_buku_desktop.html#demo-menu#draft",
+  "page": "penerbit/kelola_buku_desktop.html",
+  "actions": [
+   null,
+   "clicked"
+  ],
+  "before": "table-shown",
+  "after": "table-shown",
+  "reached": false,
+  "file": "penerbit/kelola_buku_desktop/state-demo-draft-final.png",
+  "bytes": 85697,
+  "errors": []
+ },
+ {
+  "key": "admin/kelola_komunitas_desktop.html#demo-menu#inactive",
+  "page": "admin/kelola_komunitas_desktop.html",
+  "actions": [
+   null,
+   "clicked:reset"
+  ],
+  "before": "all",
+  "after": "all",
+  "reached": false,
+  "file": "admin/kelola_komunitas_desktop/state-demo-inactive-final.png",
+  "bytes": 123490,
+  "errors": []
+ }
+]

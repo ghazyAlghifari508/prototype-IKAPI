@@ -1,0 +1,1177 @@
+{
+ "dashboard_administrasi_utama_desktop": {
+  "bodyClass": "bg-canvas text-ink antialiased",
+  "title": "Dashboard Administrator — IKAPI Jawa Barat",
+  "children": [
+   {
+    "file": "child-a-sr-only-00.html",
+    "tag": "a",
+    "id": "",
+    "cls": "sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focu",
+    "loc": 1,
+    "bytes": 241
+   },
+   {
+    "file": "child-header-absolute-01.html",
+    "tag": "header",
+    "id": "",
+    "cls": "absolute inset-x-0 top-0 z-50 h-16",
+    "loc": 23,
+    "bytes": 1572
+   },
+   {
+    "file": "child-sidebar-scrim-02.html",
+    "tag": "div",
+    "id": "sidebar-scrim",
+    "cls": "fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden",
+    "loc": 1,
+    "bytes": 90
+   },
+   {
+    "file": "child-publisher-sidebar-03.html",
+    "tag": "aside",
+    "id": "publisher-sidebar",
+    "cls": "fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgb",
+    "loc": 44,
+    "bytes": 3986
+   },
+   {
+    "file": "child-div-shell-main-04.html",
+    "tag": "div",
+    "id": "",
+    "cls": "shell-main",
+    "loc": 150,
+    "bytes": 11032
+   },
+   {
+    "file": "child-script-x-05.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 288,
+    "bytes": 11473
+   }
+  ],
+  "scripts": [
+   20,
+   286
+  ],
+  "keys": [],
+  "ids": [
+   "sidebar-toggle",
+   "btn-notif",
+   "notif-panel",
+   "sidebar-scrim",
+   "publisher-sidebar",
+   "topScrim",
+   "workspace",
+   "demo-toggle",
+   "demo-menu",
+   "page-note",
+   "view-error",
+   "btn-retry",
+   "retry-note",
+   "view-loading",
+   "view-data",
+   "kpi-revenue",
+   "kpi-paid",
+   "kpi-books",
+   "kpi-publishers",
+   "queue-title",
+   "queue-count",
+   "queue-list",
+   "queue-empty",
+   "queue-empty-title",
+   "queue-empty-desc",
+   "activity-title",
+   "activity-list",
+   "activity-empty"
+  ]
+ },
+ "kelola_pengguna_desktop": {
+  "bodyClass": "bg-canvas text-ink antialiased",
+  "title": "Kelola Pengguna - Portal Administrator IKAPI Jawa Barat",
+  "children": [
+   {
+    "file": "child-a-sr-only-00.html",
+    "tag": "a",
+    "id": "",
+    "cls": "sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focu",
+    "loc": 1,
+    "bytes": 241
+   },
+   {
+    "file": "child-header-absolute-01.html",
+    "tag": "header",
+    "id": "",
+    "cls": "absolute inset-x-0 top-0 z-50 h-16",
+    "loc": 23,
+    "bytes": 1572
+   },
+   {
+    "file": "child-sidebar-scrim-02.html",
+    "tag": "div",
+    "id": "sidebar-scrim",
+    "cls": "fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden",
+    "loc": 1,
+    "bytes": 90
+   },
+   {
+    "file": "child-publisher-sidebar-03.html",
+    "tag": "aside",
+    "id": "publisher-sidebar",
+    "cls": "fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgb",
+    "loc": 44,
+    "bytes": 3986
+   },
+   {
+    "file": "child-div-shell-main-04.html",
+    "tag": "div",
+    "id": "",
+    "cls": "shell-main",
+    "loc": 133,
+    "bytes": 11766
+   },
+   {
+    "file": "child-drawer-scrim-05.html",
+    "tag": "div",
+    "id": "drawer-scrim",
+    "cls": "fixed inset-0 z-[60] hidden bg-[#222225]/45",
+    "loc": 1,
+    "bytes": 81
+   },
+   {
+    "file": "child-user-drawer-06.html",
+    "tag": "aside",
+    "id": "user-drawer",
+    "cls": "fixed right-0 top-0 z-[70] flex h-full w-full max-w-full flex-col border-l border-border bg-white sh",
+    "loc": 48,
+    "bytes": 3383
+   },
+   {
+    "file": "child-modal-approve-07.html",
+    "tag": "div",
+    "id": "modal-approve",
+    "cls": "fixed inset-0 z-[80] hidden",
+    "loc": 16,
+    "bytes": 1695
+   },
+   {
+    "file": "child-modal-reject-08.html",
+    "tag": "div",
+    "id": "modal-reject",
+    "cls": "fixed inset-0 z-[80] hidden",
+    "loc": 15,
+    "bytes": 1726
+   },
+   {
+    "file": "child-modal-deactivate-09.html",
+    "tag": "div",
+    "id": "modal-deactivate",
+    "cls": "fixed inset-0 z-[80] hidden",
+    "loc": 12,
+    "bytes": 1263
+   },
+   {
+    "file": "child-toast-10.html",
+    "tag": "div",
+    "id": "toast",
+    "cls": "pointer-events-none fixed bottom-6 left-1/2 z-[95] hidden -translate-x-1/2 rounded-xl border border-",
+    "loc": 3,
+    "bytes": 281
+   },
+   {
+    "file": "child-script-x-11.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 489,
+    "bytes": 20421
+   }
+  ],
+  "scripts": [
+   13,
+   487
+  ],
+  "keys": [],
+  "ids": [
+   "sidebar-toggle",
+   "btn-notif",
+   "notif-panel",
+   "sidebar-scrim",
+   "publisher-sidebar",
+   "topScrim",
+   "workspace",
+   "demo-toggle",
+   "demo-menu",
+   "page-note",
+   "user-search",
+   "btn-clear-search",
+   "role-filter",
+   "status-filter",
+   "filter-hint",
+   "user-rows",
+   "state-empty",
+   "state-empty-title",
+   "state-empty-desc",
+   "state-noresults",
+   "btn-reset-filter",
+   "result-summary",
+   "page-prev",
+   "page-current",
+   "page-next",
+   "drawer-scrim",
+   "user-drawer",
+   "drawer-title",
+   "drawer-reg",
+   "drawer-close",
+   "drawer-name",
+   "drawer-status",
+   "drawer-account",
+   "drawer-date",
+   "drawer-pj",
+   "drawer-email",
+   "drawer-phone",
+   "drawer-address",
+   "drawer-ikapi",
+   "reject-reason-block",
+   "drawer-reason",
+   "drawer-actions",
+   "modal-approve",
+   "approve-title",
+   "approve-name",
+   "approve-reg",
+   "btn-confirm-approve",
+   "modal-reject",
+   "reject-title",
+   "reject-name",
+   "reject-reg",
+   "reject-reason",
+   "reject-error",
+   "btn-confirm-reject",
+   "modal-deactivate",
+   "deactivate-title",
+   "deactivate-name",
+   "btn-confirm-deactivate",
+   "toast",
+   "toast-text"
+  ]
+ },
+ "pengawasan_katalog_buku_global_desktop": {
+  "bodyClass": "bg-canvas text-ink antialiased",
+  "title": "Pengawasan Katalog - Portal Administrator IKAPI Jawa Barat",
+  "children": [
+   {
+    "file": "child-a-sr-only-00.html",
+    "tag": "a",
+    "id": "",
+    "cls": "sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focu",
+    "loc": 1,
+    "bytes": 241
+   },
+   {
+    "file": "child-header-absolute-01.html",
+    "tag": "header",
+    "id": "",
+    "cls": "absolute inset-x-0 top-0 z-50 h-16",
+    "loc": 23,
+    "bytes": 1572
+   },
+   {
+    "file": "child-sidebar-scrim-02.html",
+    "tag": "div",
+    "id": "sidebar-scrim",
+    "cls": "fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden",
+    "loc": 1,
+    "bytes": 90
+   },
+   {
+    "file": "child-publisher-sidebar-03.html",
+    "tag": "aside",
+    "id": "publisher-sidebar",
+    "cls": "fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgb",
+    "loc": 44,
+    "bytes": 3986
+   },
+   {
+    "file": "child-div-shell-main-04.html",
+    "tag": "div",
+    "id": "",
+    "cls": "shell-main",
+    "loc": 178,
+    "bytes": 14871
+   },
+   {
+    "file": "child-drawer-scrim-05.html",
+    "tag": "div",
+    "id": "drawer-scrim",
+    "cls": "fixed inset-0 z-[60] hidden bg-[#222225]/45",
+    "loc": 1,
+    "bytes": 81
+   },
+   {
+    "file": "child-catalog-drawer-06.html",
+    "tag": "aside",
+    "id": "catalog-drawer",
+    "cls": "fixed right-0 top-0 z-[70] flex h-full w-full max-w-full flex-col border-l border-border bg-white sh",
+    "loc": 59,
+    "bytes": 4260
+   },
+   {
+    "file": "child-modal-takedown-07.html",
+    "tag": "div",
+    "id": "modal-takedown",
+    "cls": "fixed inset-0 z-[80] hidden",
+    "loc": 18,
+    "bytes": 2013
+   },
+   {
+    "file": "child-modal-close-report-08.html",
+    "tag": "div",
+    "id": "modal-close-report",
+    "cls": "fixed inset-0 z-[80] hidden",
+    "loc": 13,
+    "bytes": 1341
+   },
+   {
+    "file": "child-toast-09.html",
+    "tag": "div",
+    "id": "toast",
+    "cls": "pointer-events-none fixed bottom-6 left-1/2 z-[95] hidden -translate-x-1/2 rounded-xl border border-",
+    "loc": 3,
+    "bytes": 281
+   },
+   {
+    "file": "child-script-x-10.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 619,
+    "bytes": 27314
+   }
+  ],
+  "scripts": [
+   13,
+   617
+  ],
+  "keys": [],
+  "ids": [
+   "sidebar-toggle",
+   "btn-notif",
+   "notif-panel",
+   "sidebar-scrim",
+   "publisher-sidebar",
+   "topScrim",
+   "workspace",
+   "demo-toggle",
+   "demo-menu",
+   "report-counter",
+   "page-note",
+   "cat-search",
+   "btn-clear-search",
+   "type-filter",
+   "publisher-filter",
+   "sort-order",
+   "btn-reset",
+   "view-reports",
+   "report-rows",
+   "reports-empty",
+   "reports-noresults",
+   "btn-reset-empty",
+   "reports-count",
+   "rep-prev",
+   "rep-page",
+   "rep-next",
+   "view-catalog",
+   "catalog-rows",
+   "catalog-empty",
+   "catalog-count",
+   "cat-prev",
+   "cat-page",
+   "cat-next",
+   "drawer-scrim",
+   "catalog-drawer",
+   "drawer-title",
+   "drawer-id",
+   "drawer-close",
+   "drawer-book",
+   "drawer-author",
+   "drawer-isbn",
+   "drawer-pub-status",
+   "drawer-publisher",
+   "drawer-publisher-meta",
+   "drawer-type",
+   "drawer-date",
+   "drawer-format",
+   "drawer-section-row",
+   "drawer-section",
+   "drawer-notes",
+   "drawer-decision",
+   "btn-close-report",
+   "btn-takedown",
+   "modal-takedown",
+   "takedown-title",
+   "takedown-book",
+   "takedown-publisher",
+   "takedown-reason",
+   "takedown-error",
+   "btn-confirm-takedown"
+  ]
+ },
+ "moderasi_ulasan_dan_komentar_desktop": {
+  "bodyClass": "bg-canvas text-ink antialiased",
+  "title": "Moderasi Ulasan & Komentar - Portal Administrator IKAPI Jawa Barat",
+  "children": [
+   {
+    "file": "child-a-sr-only-00.html",
+    "tag": "a",
+    "id": "",
+    "cls": "sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focu",
+    "loc": 1,
+    "bytes": 241
+   },
+   {
+    "file": "child-header-absolute-01.html",
+    "tag": "header",
+    "id": "",
+    "cls": "absolute inset-x-0 top-0 z-50 h-16",
+    "loc": 23,
+    "bytes": 1572
+   },
+   {
+    "file": "child-sidebar-scrim-02.html",
+    "tag": "div",
+    "id": "sidebar-scrim",
+    "cls": "fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden",
+    "loc": 1,
+    "bytes": 90
+   },
+   {
+    "file": "child-publisher-sidebar-03.html",
+    "tag": "aside",
+    "id": "publisher-sidebar",
+    "cls": "fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgb",
+    "loc": 44,
+    "bytes": 3986
+   },
+   {
+    "file": "child-div-shell-main-04.html",
+    "tag": "div",
+    "id": "",
+    "cls": "shell-main",
+    "loc": 109,
+    "bytes": 9945
+   },
+   {
+    "file": "child-drawer-scrim-05.html",
+    "tag": "div",
+    "id": "drawer-scrim",
+    "cls": "fixed inset-0 z-[60] hidden bg-[#222225]/45",
+    "loc": 1,
+    "bytes": 81
+   },
+   {
+    "file": "child-mod-drawer-06.html",
+    "tag": "aside",
+    "id": "mod-drawer",
+    "cls": "fixed right-0 top-0 z-[70] flex h-full w-full max-w-full flex-col border-l border-border bg-white sh",
+    "loc": 69,
+    "bytes": 4699
+   },
+   {
+    "file": "child-modal-delete-07.html",
+    "tag": "div",
+    "id": "modal-delete",
+    "cls": "fixed inset-0 z-[80] hidden",
+    "loc": 15,
+    "bytes": 1410
+   },
+   {
+    "file": "child-toast-08.html",
+    "tag": "div",
+    "id": "toast",
+    "cls": "pointer-events-none fixed bottom-6 left-1/2 z-[95] hidden -translate-x-1/2 rounded-xl border border-",
+    "loc": 3,
+    "bytes": 281
+   },
+   {
+    "file": "child-script-x-09.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 479,
+    "bytes": 19469
+   }
+  ],
+  "scripts": [
+   13,
+   477
+  ],
+  "keys": [],
+  "ids": [
+   "sidebar-toggle",
+   "btn-notif",
+   "notif-panel",
+   "sidebar-scrim",
+   "publisher-sidebar",
+   "topScrim",
+   "workspace",
+   "demo-toggle",
+   "demo-menu",
+   "queue-summary",
+   "page-note",
+   "mod-search",
+   "btn-clear-search",
+   "category-filter",
+   "sort-order",
+   "queue",
+   "state-queue-empty",
+   "state-noresults",
+   "btn-reset-filter",
+   "state-nodata",
+   "drawer-scrim",
+   "mod-drawer",
+   "drawer-title",
+   "drawer-id",
+   "drawer-close",
+   "drawer-user",
+   "drawer-time",
+   "drawer-comment",
+   "drawer-cover",
+   "drawer-book",
+   "drawer-author",
+   "drawer-publisher",
+   "drawer-rating",
+   "drawer-category",
+   "drawer-reporters",
+   "drawer-reported-at",
+   "drawer-notes",
+   "drawer-reply-publisher",
+   "drawer-reply",
+   "drawer-reply-empty",
+   "drawer-decision",
+   "btn-keep",
+   "btn-delete",
+   "modal-delete",
+   "delete-title",
+   "delete-user",
+   "delete-book",
+   "btn-confirm-delete",
+   "delete-label",
+   "toast",
+   "toast-text"
+  ]
+ },
+ "monitoring_global_desktop": {
+  "bodyClass": "bg-canvas text-ink antialiased",
+  "title": "Monitoring Global - Portal Administrator IKAPI Jawa Barat",
+  "children": [
+   {
+    "file": "child-a-sr-only-00.html",
+    "tag": "a",
+    "id": "",
+    "cls": "sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focu",
+    "loc": 1,
+    "bytes": 241
+   },
+   {
+    "file": "child-header-absolute-01.html",
+    "tag": "header",
+    "id": "",
+    "cls": "absolute inset-x-0 top-0 z-50 h-16",
+    "loc": 23,
+    "bytes": 1572
+   },
+   {
+    "file": "child-sidebar-scrim-02.html",
+    "tag": "div",
+    "id": "sidebar-scrim",
+    "cls": "fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden",
+    "loc": 1,
+    "bytes": 90
+   },
+   {
+    "file": "child-publisher-sidebar-03.html",
+    "tag": "aside",
+    "id": "publisher-sidebar",
+    "cls": "fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgb",
+    "loc": 44,
+    "bytes": 3986
+   },
+   {
+    "file": "child-div-shell-main-04.html",
+    "tag": "div",
+    "id": "",
+    "cls": "shell-main",
+    "loc": 198,
+    "bytes": 15511
+   },
+   {
+    "file": "child-script-x-05.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 444,
+    "bytes": 19481
+   }
+  ],
+  "scripts": [
+   13,
+   442
+  ],
+  "keys": [],
+  "ids": [
+   "sidebar-toggle",
+   "btn-notif",
+   "notif-panel",
+   "sidebar-scrim",
+   "publisher-sidebar",
+   "topScrim",
+   "workspace",
+   "demo-toggle",
+   "demo-menu",
+   "page-note",
+   "filter-title",
+   "date-range",
+   "publisher-filter",
+   "btn-reset",
+   "view-error",
+   "btn-retry",
+   "retry-note",
+   "view-data",
+   "kpi-revenue",
+   "kpi-revenue-sub",
+   "kpi-count",
+   "kpi-books",
+   "kpi-publishers",
+   "chart-title",
+   "chart-peak",
+   "revenue-chart",
+   "chart-tooltip",
+   "tip-date",
+   "tip-revenue",
+   "tip-count",
+   "chart-empty",
+   "chart-desc",
+   "table-title",
+   "table-sub",
+   "btn-export",
+   "tx-rows",
+   "state-empty",
+   "btn-reset-empty",
+   "table-count",
+   "page-prev",
+   "page-current",
+   "page-next"
+  ]
+ },
+ "kelola_pencairan_dana_desktop": {
+  "bodyClass": "bg-canvas text-ink antialiased",
+  "title": "Kelola Pencairan Dana - Portal Administrator IKAPI Jawa Barat",
+  "children": [
+   {
+    "file": "child-a-sr-only-00.html",
+    "tag": "a",
+    "id": "",
+    "cls": "sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focu",
+    "loc": 1,
+    "bytes": 241
+   },
+   {
+    "file": "child-header-absolute-01.html",
+    "tag": "header",
+    "id": "",
+    "cls": "absolute inset-x-0 top-0 z-50 h-16",
+    "loc": 23,
+    "bytes": 1572
+   },
+   {
+    "file": "child-sidebar-scrim-02.html",
+    "tag": "div",
+    "id": "sidebar-scrim",
+    "cls": "fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden",
+    "loc": 1,
+    "bytes": 90
+   },
+   {
+    "file": "child-publisher-sidebar-03.html",
+    "tag": "aside",
+    "id": "publisher-sidebar",
+    "cls": "fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgb",
+    "loc": 44,
+    "bytes": 3986
+   },
+   {
+    "file": "child-div-shell-main-04.html",
+    "tag": "div",
+    "id": "",
+    "cls": "shell-main",
+    "loc": 137,
+    "bytes": 12211
+   },
+   {
+    "file": "child-drawer-scrim-05.html",
+    "tag": "div",
+    "id": "drawer-scrim",
+    "cls": "fixed inset-0 z-[60] hidden bg-[#222225]/45",
+    "loc": 1,
+    "bytes": 81
+   },
+   {
+    "file": "child-payout-drawer-06.html",
+    "tag": "aside",
+    "id": "payout-drawer",
+    "cls": "fixed right-0 top-0 z-[70] flex h-full w-full max-w-full flex-col border-l border-border bg-white sh",
+    "loc": 85,
+    "bytes": 6033
+   },
+   {
+    "file": "child-modal-finalize-07.html",
+    "tag": "div",
+    "id": "modal-finalize",
+    "cls": "fixed inset-0 z-[80] hidden",
+    "loc": 18,
+    "bytes": 1869
+   },
+   {
+    "file": "child-modal-reject-08.html",
+    "tag": "div",
+    "id": "modal-reject",
+    "cls": "fixed inset-0 z-[80] hidden",
+    "loc": 14,
+    "bytes": 1664
+   },
+   {
+    "file": "child-modal-preview-09.html",
+    "tag": "div",
+    "id": "modal-preview",
+    "cls": "fixed inset-0 z-[90] hidden",
+    "loc": 12,
+    "bytes": 1006
+   },
+   {
+    "file": "child-toast-10.html",
+    "tag": "div",
+    "id": "toast",
+    "cls": "pointer-events-none fixed bottom-6 left-1/2 z-[95] hidden -translate-x-1/2 rounded-xl border border-",
+    "loc": 3,
+    "bytes": 281
+   },
+   {
+    "file": "child-script-x-11.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 571,
+    "bytes": 23111
+   }
+  ],
+  "scripts": [
+   13,
+   569
+  ],
+  "keys": [],
+  "ids": [
+   "sidebar-toggle",
+   "btn-notif",
+   "notif-panel",
+   "sidebar-scrim",
+   "publisher-sidebar",
+   "topScrim",
+   "workspace",
+   "demo-toggle",
+   "demo-menu",
+   "payout-summary",
+   "page-note",
+   "payout-search",
+   "btn-clear-search",
+   "bank-filter",
+   "sort-order",
+   "payout-rows",
+   "state-empty",
+   "state-noresults",
+   "btn-reset-filter",
+   "result-summary",
+   "page-prev",
+   "page-current",
+   "page-next",
+   "drawer-scrim",
+   "payout-drawer",
+   "drawer-title",
+   "drawer-id",
+   "drawer-close",
+   "drawer-publisher",
+   "drawer-amount",
+   "drawer-status",
+   "drawer-date",
+   "drawer-bank",
+   "drawer-holder",
+   "drawer-account",
+   "btn-copy-account",
+   "royalty-block",
+   "btn-toggle-royalty",
+   "royalty-chevron",
+   "royalty-detail",
+   "royalty-gross",
+   "royalty-previous",
+   "royalty-requested",
+   "royalty-remaining",
+   "royalty-unavailable",
+   "proof-stored",
+   "stored-name",
+   "btn-stored-preview",
+   "proof-none",
+   "reject-reason-block",
+   "drawer-reason",
+   "btn-reject",
+   "btn-finalize",
+   "modal-finalize",
+   "finalize-title",
+   "finalize-publisher",
+   "finalize-amount",
+   "finalize-account",
+   "btn-confirm-finalize",
+   "finalize-label"
+  ]
+ },
+ "kelola_komunitas_desktop": {
+  "bodyClass": "bg-canvas text-ink antialiased",
+  "title": "Kelola Komunitas - Portal Administrator IKAPI Jawa Barat",
+  "children": [
+   {
+    "file": "child-a-sr-only-00.html",
+    "tag": "a",
+    "id": "",
+    "cls": "sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focu",
+    "loc": 1,
+    "bytes": 241
+   },
+   {
+    "file": "child-header-absolute-01.html",
+    "tag": "header",
+    "id": "",
+    "cls": "absolute inset-x-0 top-0 z-50 h-16",
+    "loc": 23,
+    "bytes": 1572
+   },
+   {
+    "file": "child-sidebar-scrim-02.html",
+    "tag": "div",
+    "id": "sidebar-scrim",
+    "cls": "fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden",
+    "loc": 1,
+    "bytes": 90
+   },
+   {
+    "file": "child-publisher-sidebar-03.html",
+    "tag": "aside",
+    "id": "publisher-sidebar",
+    "cls": "fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgb",
+    "loc": 44,
+    "bytes": 4042
+   },
+   {
+    "file": "child-div-shell-main-04.html",
+    "tag": "div",
+    "id": "",
+    "cls": "shell-main",
+    "loc": 88,
+    "bytes": 5813
+   },
+   {
+    "file": "child-script-x-05.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 44,
+    "bytes": 1645
+   },
+   {
+    "file": "child-drawer-scrim-06.html",
+    "tag": "div",
+    "id": "drawer-scrim",
+    "cls": "fixed inset-0 z-[60] hidden bg-[#222225]/45",
+    "loc": 1,
+    "bytes": 81
+   },
+   {
+    "file": "child-community-drawer-07.html",
+    "tag": "aside",
+    "id": "community-drawer",
+    "cls": "fixed right-0 top-0 z-[70] flex h-full w-full max-w-full flex-col border-l border-border bg-white sh",
+    "loc": 98,
+    "bytes": 7046
+   },
+   {
+    "file": "child-toast-08.html",
+    "tag": "div",
+    "id": "toast",
+    "cls": "pointer-events-none fixed bottom-6 left-1/2 z-[95] hidden -translate-x-1/2 rounded-xl border border-",
+    "loc": 3,
+    "bytes": 281
+   },
+   {
+    "file": "child-script-x-09.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 429,
+    "bytes": 16855
+   }
+  ],
+  "scripts": [
+   13,
+   42,
+   427
+  ],
+  "keys": [
+   "ikapi_communities_demo",
+   "ikapi_community_topics_demo"
+  ],
+  "ids": [
+   "sidebar-toggle",
+   "btn-notif",
+   "notif-panel",
+   "sidebar-scrim",
+   "publisher-sidebar",
+   "topScrim",
+   "workspace",
+   "demo-toggle",
+   "demo-menu",
+   "btn-add",
+   "page-note",
+   "community-search",
+   "status-filter",
+   "community-rows",
+   "table-summary",
+   "state-empty",
+   "drawer-scrim",
+   "community-drawer",
+   "drawer-title",
+   "drawer-id",
+   "drawer-close",
+   "drawer-view",
+   "view-photo",
+   "view-name",
+   "view-focus",
+   "view-location",
+   "view-status",
+   "view-topics",
+   "view-short",
+   "view-full",
+   "drawer-form",
+   "form-name",
+   "err-name",
+   "form-focus",
+   "form-status",
+   "form-location",
+   "err-location",
+   "form-short",
+   "err-short",
+   "form-full",
+   "form-photo",
+   "form-photo-preview",
+   "form-error",
+   "btn-toggle-status",
+   "btn-edit",
+   "btn-cancel-form",
+   "btn-save",
+   "toast",
+   "toast-text"
+  ]
+ },
+ "moderasi_diskusi_komunitas_desktop": {
+  "bodyClass": "bg-canvas text-ink antialiased",
+  "title": "Moderasi Diskusi Komunitas - Portal Administrator IKAPI Jawa Barat",
+  "children": [
+   {
+    "file": "child-a-sr-only-00.html",
+    "tag": "a",
+    "id": "",
+    "cls": "sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focu",
+    "loc": 1,
+    "bytes": 241
+   },
+   {
+    "file": "child-header-absolute-01.html",
+    "tag": "header",
+    "id": "",
+    "cls": "absolute inset-x-0 top-0 z-50 h-16",
+    "loc": 23,
+    "bytes": 1572
+   },
+   {
+    "file": "child-sidebar-scrim-02.html",
+    "tag": "div",
+    "id": "sidebar-scrim",
+    "cls": "fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden",
+    "loc": 1,
+    "bytes": 90
+   },
+   {
+    "file": "child-publisher-sidebar-03.html",
+    "tag": "aside",
+    "id": "publisher-sidebar",
+    "cls": "fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgb",
+    "loc": 44,
+    "bytes": 3986
+   },
+   {
+    "file": "child-div-shell-main-04.html",
+    "tag": "div",
+    "id": "",
+    "cls": "shell-main",
+    "loc": 95,
+    "bytes": 6547
+   },
+   {
+    "file": "child-script-x-05.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 43,
+    "bytes": 1584
+   },
+   {
+    "file": "child-drawer-scrim-06.html",
+    "tag": "div",
+    "id": "drawer-scrim",
+    "cls": "fixed inset-0 z-[60] hidden bg-[#222225]/45",
+    "loc": 1,
+    "bytes": 81
+   },
+   {
+    "file": "child-review-drawer-07.html",
+    "tag": "aside",
+    "id": "review-drawer",
+    "cls": "fixed right-0 top-0 z-[70] flex h-full w-full max-w-full flex-col border-l border-border bg-white sh",
+    "loc": 60,
+    "bytes": 4824
+   },
+   {
+    "file": "child-toast-08.html",
+    "tag": "div",
+    "id": "toast",
+    "cls": "pointer-events-none fixed bottom-6 left-1/2 z-[95] hidden -translate-x-1/2 rounded-xl border border-",
+    "loc": 3,
+    "bytes": 281
+   },
+   {
+    "file": "child-script-x-09.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 448,
+    "bytes": 19504
+   }
+  ],
+  "scripts": [
+   13,
+   41,
+   446
+  ],
+  "keys": [
+   "ikapi_communities_demo",
+   "ikapi_community_replies_demo",
+   "ikapi_community_topics_demo",
+   "ikapi_discussion_reports_demo"
+  ],
+  "ids": [
+   "sidebar-toggle",
+   "btn-notif",
+   "notif-panel",
+   "sidebar-scrim",
+   "publisher-sidebar",
+   "topScrim",
+   "workspace",
+   "demo-toggle",
+   "demo-menu",
+   "page-note",
+   "tab-pending",
+   "count-pending",
+   "tab-all",
+   "count-all",
+   "report-search",
+   "type-filter",
+   "report-rows",
+   "table-summary",
+   "state-empty",
+   "drawer-scrim",
+   "review-drawer",
+   "drawer-title",
+   "drawer-id",
+   "drawer-close",
+   "detail-community",
+   "detail-type",
+   "detail-topic",
+   "detail-author",
+   "detail-time",
+   "detail-status",
+   "detail-report-count",
+   "detail-content",
+   "detail-content-note",
+   "context-block",
+   "context-topic-title",
+   "context-topic-body",
+   "context-parent-reply",
+   "context-parent-author",
+   "context-parent-body",
+   "context-other-replies",
+   "detail-reason",
+   "detail-details",
+   "detail-decision",
+   "btn-keep",
+   "btn-remove",
+   "toast",
+   "toast-text"
+  ]
+ },
+ "login_administrator_desktop": {
+  "bodyClass": "min-h-screen antialiased",
+  "title": "Masuk Administrator - IKAPI Store Jawa Barat",
+  "children": [
+   {
+    "file": "child-div-mx-auto-00.html",
+    "tag": "div",
+    "id": "",
+    "cls": "mx-auto flex min-h-screen w-full max-w-[1200px] flex-col px-4 py-5 sm:px-6 sm:py-6",
+    "loc": 96,
+    "bytes": 7130
+   },
+   {
+    "file": "child-script-x-01.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 158,
+    "bytes": 6033
+   }
+  ],
+  "scripts": [
+   12,
+   156
+  ],
+  "keys": [
+   "ikapi_admin_session_demo"
+  ],
+  "ids": [
+   "feedback",
+   "feedback-icon",
+   "feedback-text",
+   "feedback-close",
+   "admin-login-form",
+   "admin-email",
+   "email-error",
+   "admin-password",
+   "toggle-password",
+   "toggle-icon",
+   "password-error",
+   "submit-btn",
+   "submit-label",
+   "submit-icon",
+   "access-blocked",
+   "preview-note",
+   "preview-dashboard-link"
+  ]
+ }
+}

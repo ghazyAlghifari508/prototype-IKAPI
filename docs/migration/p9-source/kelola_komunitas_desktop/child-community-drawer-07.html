@@ -1,0 +1,98 @@
+<aside id="community-drawer" class="fixed right-0 top-0 z-[70] flex h-full w-full max-w-full flex-col border-l border-border bg-white shadow-[-16px_0_40px_rgba(34,34,37,0.12)] sm:max-w-[520px]" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+  <header class="flex items-start justify-between gap-4 border-b border-divider px-5 py-4">
+    <div class="min-w-0">
+      <h2 id="drawer-title" class="text-[17px] font-bold tracking-tight text-ink">Detail Komunitas</h2>
+      <p class="num mt-0.5 text-[12.5px] text-muted" id="drawer-id">-</p>
+    </div>
+    <button type="button" id="drawer-close" aria-label="Tutup detail" class="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[18px]">close</span>
+    </button>
+  </header>
+
+  <div class="flex-1 space-y-5 overflow-y-auto px-5 py-4">
+    <!-- view mode -->
+    <div id="drawer-view" class="space-y-5">
+      <section>
+        <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Identitas</h3>
+        <div class="mt-2 flex items-start gap-3">
+          <img id="view-photo" src="" alt="" class="h-16 w-24 shrink-0 rounded-lg border border-border object-cover">
+          <div class="min-w-0">
+            <p class="text-[15px] font-semibold leading-snug text-ink" id="view-name">-</p>
+            <p class="mt-0.5 text-[12.5px] text-muted" id="view-focus">-</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-divider pt-4">
+        <dl class="space-y-2 text-[13px]">
+          <div class="flex justify-between gap-3"><dt class="text-muted">Wilayah</dt><dd class="text-right font-medium text-ink" id="view-location">-</dd></div>
+          <div class="flex justify-between gap-3"><dt class="text-muted">Status</dt><dd class="text-right font-semibold text-ink" id="view-status">-</dd></div>
+          <div class="flex justify-between gap-3"><dt class="text-muted">Jumlah topik</dt><dd class="num text-ink" id="view-topics">-</dd></div>
+        </dl>
+      </section>
+
+      <section class="border-t border-divider pt-4">
+        <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Deskripsi singkat</h3>
+        <p class="mt-1.5 text-[13.5px] leading-relaxed text-ink" id="view-short">-</p>
+        <h3 class="mt-4 text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Deskripsi lengkap</h3>
+        <p class="mt-1.5 text-[13.5px] leading-relaxed text-ink" id="view-full">-</p>
+      </section>
+    </div>
+
+    <!-- form mode -->
+    <form id="drawer-form" class="hidden space-y-4" novalidate="">
+      <div>
+        <label for="form-name" class="text-[12.5px] font-semibold text-ink">Nama komunitas</label>
+        <input id="form-name" type="text" maxlength="80" class="mt-1 h-10 w-full rounded-xl border border-border px-3 text-[13.5px] outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+        <p class="mt-1 hidden text-[12px] text-[#B42318]" id="err-name">Nama komunitas wajib diisi.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label for="form-focus" class="text-[12.5px] font-semibold text-ink">Fokus</label>
+          <select id="form-focus" class="mt-1 h-10 w-full rounded-xl border border-border bg-white px-3 text-[13.5px] outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+            <option value="filologi">Filologi &amp; Aksara Kuno</option>
+            <option value="fiksi">Klub Baca Fiksi</option>
+            <option value="sejarah">Sejarah Priangan</option>
+          </select>
+        </div>
+        <div>
+          <label for="form-status" class="text-[12.5px] font-semibold text-ink">Status</label>
+          <select id="form-status" class="mt-1 h-10 w-full rounded-xl border border-border bg-white px-3 text-[13.5px] outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+            <option value="active">Aktif</option>
+            <option value="inactive">Nonaktif</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label for="form-location" class="text-[12.5px] font-semibold text-ink">Wilayah</label>
+        <input id="form-location" type="text" maxlength="80" class="mt-1 h-10 w-full rounded-xl border border-border px-3 text-[13.5px] outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+        <p class="mt-1 hidden text-[12px] text-[#B42318]" id="err-location">Wilayah wajib diisi.</p>
+      </div>
+      <div>
+        <label for="form-short" class="text-[12.5px] font-semibold text-ink">Deskripsi singkat</label>
+        <textarea id="form-short" rows="2" maxlength="180" class="mt-1 w-full resize-none rounded-xl border border-border p-3 text-[13.5px] outline-none focus:border-primary focus:ring-2 focus:ring-primary/15"></textarea>
+        <p class="mt-1 hidden text-[12px] text-[#B42318]" id="err-short">Deskripsi singkat wajib diisi.</p>
+      </div>
+      <div>
+        <label for="form-full" class="text-[12.5px] font-semibold text-ink">Deskripsi lengkap</label>
+        <textarea id="form-full" rows="4" maxlength="600" class="mt-1 w-full resize-none rounded-xl border border-border p-3 text-[13.5px] outline-none focus:border-primary focus:ring-2 focus:ring-primary/15"></textarea>
+      </div>
+      <div>
+        <label for="form-photo" class="text-[12.5px] font-semibold text-ink">Foto komunitas</label>
+        <select id="form-photo" class="mt-1 h-10 w-full rounded-xl border border-border bg-white px-3 text-[13.5px] outline-none focus:border-primary focus:ring-2 focus:ring-primary/15"></select>
+        <img id="form-photo-preview" src="" alt="" class="mt-2 h-24 w-36 rounded-lg border border-border object-cover">
+        <p class="mt-1 text-[11.5px] leading-relaxed text-muted">Pilih dari aset ilustrasi yang tersedia. Unggah berkas belum didukung pada prototype ini.</p>
+      </div>
+      <p id="form-error" role="alert" class="hidden text-[12.5px] font-medium text-[#B42318]"></p>
+    </form>
+  </div>
+
+  <footer class="flex items-center justify-between gap-2 border-t border-divider px-5 py-3.5">
+    <button type="button" id="btn-toggle-status" class="focus-ring hidden h-10 items-center rounded-xl border border-border px-4 text-[13.5px] font-semibold text-ink hover:bg-neutral">Nonaktifkan</button>
+    <div class="ml-auto flex items-center gap-2">
+      <button type="button" id="btn-edit" class="focus-ring hidden h-10 items-center rounded-xl border border-border px-4 text-[13.5px] font-semibold text-ink hover:bg-neutral">Edit</button>
+      <button type="button" id="btn-cancel-form" class="focus-ring hidden h-10 items-center rounded-xl border border-border px-4 text-[13.5px] font-semibold text-ink hover:bg-neutral">Batal</button>
+      <button type="button" id="btn-save" class="focus-ring hidden h-10 items-center rounded-xl bg-primary px-4 text-[13.5px] font-semibold text-white hover:bg-primary-hover">Simpan</button>
+    </div>
+  </footer>
+</aside>

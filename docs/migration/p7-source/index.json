@@ -1,0 +1,74 @@
+[
+ {
+  "file": "child-header-fixed-00.html",
+  "tag": "header",
+  "id": "",
+  "cls": "fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md",
+  "loc": 43,
+  "bytes": 3799
+ },
+ {
+  "file": "child-main-w-full-01.html",
+  "tag": "main",
+  "id": "",
+  "cls": "w-full pt-32 bg-white min-h-[calc(100vh-16rem)]",
+  "loc": 350,
+  "bytes": 25422
+ },
+ {
+  "file": "child-composer-modal-02.html",
+  "tag": "div",
+  "id": "composer-modal",
+  "cls": "fixed inset-0 z-[85] hidden",
+  "loc": 31,
+  "bytes": 3116
+ },
+ {
+  "file": "child-discussion-report-modal-03.html",
+  "tag": "div",
+  "id": "discussion-report-modal",
+  "cls": "fixed inset-0 z-[86] hidden",
+  "loc": 33,
+  "bytes": 3039
+ },
+ {
+  "file": "child-delete-modal-04.html",
+  "tag": "div",
+  "id": "delete-modal",
+  "cls": "fixed inset-0 z-[86] hidden",
+  "loc": 13,
+  "bytes": 1261
+ },
+ {
+  "file": "child-content-menu-05.html",
+  "tag": "div",
+  "id": "content-menu",
+  "cls": "fixed z-[88] hidden w-[180px] rounded-xl border border-borde",
+  "loc": 1,
+  "bytes": 199
+ },
+ {
+  "file": "child-leave-modal-06.html",
+  "tag": "div",
+  "id": "leave-modal",
+  "cls": "fixed inset-0 z-[80] hidden",
+  "loc": 13,
+  "bytes": 1354
+ },
+ {
+  "file": "child-sr-announcer-07.html",
+  "tag": "p",
+  "id": "sr-announcer",
+  "cls": "sr-only",
+  "loc": 1,
+  "bytes": 74
+ },
+ {
+  "file": "child-footer-w-full-08.html",
+  "tag": "footer",
+  "id": "",
+  "cls": "w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[",
+  "loc": 59,
+  "bytes": 4650
+ }
+]

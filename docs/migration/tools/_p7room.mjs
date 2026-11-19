@@ -1,0 +1,10 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch();
+const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } });
+const p = await ctx.newPage();
+await p.goto('http://127.0.0.1:8140/komunitas/community-filologi/diskusi', { waitUntil: 'load' });
+await p.waitForTimeout(800);
+console.log('articles', await p.locator('#view-room article').count());
+console.log('links', await p.locator('#view-room a').evaluateAll((els) => els.map((e) => e.textContent.trim().slice(0, 30) + ' | ' + e.getAttribute('aria-label'))));
+console.log('ids in view-room', await p.evaluate(() => [...document.querySelectorAll('#view-room [id]')].map((e) => e.id)));
+await b.close();

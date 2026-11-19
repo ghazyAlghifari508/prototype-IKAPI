@@ -1,0 +1,282 @@
+{
+ "drawer-publisher": {
+  "before": {
+   "open": false,
+   "x": -248,
+   "scrimHidden": true,
+   "expanded": "false",
+   "bodyOverflow": "",
+   "focusIs": "body"
+  },
+  "opened": {
+   "open": true,
+   "x": 0,
+   "scrimHidden": false,
+   "expanded": "true",
+   "bodyOverflow": "hidden",
+   "focusIs": "sidebar-link:storefront\n      \n  "
+  },
+  "afterEscape": {
+   "open": false,
+   "x": -248,
+   "scrimHidden": true,
+   "expanded": "false",
+   "bodyOverflow": "",
+   "focusIs": "toggle"
+  },
+  "afterScrim": {
+   "open": false,
+   "x": -248,
+   "scrimHidden": true,
+   "expanded": "false",
+   "bodyOverflow": "",
+   "focusIs": "toggle"
+  },
+  "singleToggleOpens": true,
+  "errors": []
+ },
+ "drawer-admin": {
+  "before": {
+   "open": false,
+   "x": -248,
+   "scrimHidden": true,
+   "expanded": "false",
+   "bodyOverflow": "",
+   "focusIs": "body"
+  },
+  "opened": {
+   "open": true,
+   "x": 0,
+   "scrimHidden": false,
+   "expanded": "true",
+   "bodyOverflow": "hidden",
+   "focusIs": "sidebar-link:shield_person\n      "
+  },
+  "afterEscape": {
+   "open": false,
+   "x": -248,
+   "scrimHidden": true,
+   "expanded": "false",
+   "bodyOverflow": "",
+   "focusIs": "toggle"
+  },
+  "afterScrim": {
+   "open": false,
+   "x": -248,
+   "scrimHidden": true,
+   "expanded": "false",
+   "bodyOverflow": "",
+   "focusIs": "toggle"
+  },
+  "singleToggleOpens": true,
+  "errors": []
+ },
+ "menu-publisher": {
+  "nav": "Navigasi dashboard penerbit",
+  "items": [
+   "space_dashboardDashboard",
+   "menu_bookKelola Buku",
+   "inboxPesanan Masuk",
+   "paymentsPendapatan & Pencairan",
+   "reviewsUlasan Pembeli",
+   "tunePengaturan Profil"
+  ],
+  "links": 0,
+  "disabled": 6,
+  "account": "storefront Akun Penerbit IKAPI Jawa Barat logout",
+  "notif": [
+   "Tidak ada notifikasi baru.",
+   "Notifikasi pesanan dan pencairan akan muncul di sini."
+  ]
+ },
+ "menu-admin": {
+  "nav": "Navigasi dashboard administrator",
+  "items": [
+   "space_dashboardDashboard",
+   "Manajemen",
+   "groupKelola Pengguna",
+   "menu_bookPengawasan Katalog",
+   "reviewsModerasi Ulasan",
+   "groupsKelola Komunitas",
+   "forumModerasi Diskusi",
+   "Keuangan & Monitoring",
+   "monitoringMonitoring Global",
+   "paymentsKelola Pencairan Dana"
+  ],
+  "links": 0,
+  "disabled": 8,
+  "account": "shield_person Administrator Portal Administrator logout",
+  "notif": [
+   "Tidak ada notifikasi baru."
+  ]
+ },
+ "interactions": {
+  "notifClosed": {
+   "hidden": true,
+   "expanded": "false"
+  },
+  "notifOpen": {
+   "hidden": false,
+   "expanded": "true"
+  },
+  "notifAfterOutside": {
+   "hidden": true,
+   "expanded": "false"
+  },
+  "notifAfterEscape": {
+   "hidden": true,
+   "expanded": "false"
+  },
+  "toastShown": {
+   "hidden": false,
+   "text": "Toast portal ditampilkan 2,8 detik.",
+   "z": "95",
+   "position": "fixed",
+   "centerX": 720,
+   "bottom": 24,
+   "role": "status"
+  },
+  "toastAfter3s": true,
+  "modalClosed": {
+   "hidden": true,
+   "z": "70",
+   "bodyOverflow": "",
+   "focusInside": false,
+   "labelledby": "demo-modal-title",
+   "titleId": "Contoh modal portal",
+   "ariaModal": "true"
+  },
+  "modalOpen": {
+   "hidden": false,
+   "z": "70",
+   "bodyOverflow": "hidden",
+   "focusInside": true,
+   "labelledby": "demo-modal-title",
+   "titleId": "Contoh modal portal",
+   "ariaModal": "true"
+  },
+  "modalAfterEscape": {
+   "hidden": true,
+   "z": "70",
+   "bodyOverflow": "",
+   "focusInside": false,
+   "labelledby": "demo-modal-title",
+   "titleId": "Contoh modal portal",
+   "ariaModal": "true"
+  },
+  "focusReturnedToTrigger": true,
+  "modalAfterBackdrop": {
+   "hidden": true,
+   "z": "70",
+   "bodyOverflow": "",
+   "focusInside": false,
+   "labelledby": "demo-modal-title",
+   "titleId": "Contoh modal portal",
+   "ariaModal": "true"
+  },
+  "modalAfterCloseButton": {
+   "hidden": true,
+   "z": "70",
+   "bodyOverflow": "",
+   "focusInside": false,
+   "labelledby": "demo-modal-title",
+   "titleId": "Contoh modal portal",
+   "ariaModal": "true"
+  },
+  "errors": []
+ },
+ "dropdown": {
+  "closed": {
+   "hidden": true,
+   "expanded": "false"
+  },
+  "open": {
+   "hidden": false,
+   "expanded": "true"
+  },
+  "items": [
+   {
+    "t": "person Profil Saya",
+    "href": "#"
+   },
+   {
+    "t": "receipt_long Riwayat Pesanan",
+    "href": "#"
+   },
+   {
+    "t": "local_library Perpustakaan Saya",
+    "href": "#"
+   },
+   {
+    "t": "rate_review Riwayat Ulasan",
+    "href": "#"
+   },
+   {
+    "t": "settings Pengaturan Akun",
+    "href": "#"
+   },
+   {
+    "t": "help Bantuan",
+    "href": "#"
+   },
+   {
+    "t": "logout Keluar Akun",
+    "href": "#"
+   }
+  ],
+  "afterEscape": {
+   "hidden": true,
+   "expanded": "false"
+  },
+  "afterOutside": {
+   "hidden": true,
+   "expanded": "false"
+  },
+  "tabOrder": [
+   "Tamu",
+   "Anggota (dropdown akun)",
+   "",
+   "Laskar Aksara Pasundan",
+   "Tambah Laskar Aksara Pasun",
+   "",
+   "Pendidikan Karakter Sunda",
+   "Tambah Pendidikan Karakter",
+   ""
+  ],
+  "errors": []
+ },
+ "activeNav": [
+  {
+   "tag": "a",
+   "text": "Beranda",
+   "current": null,
+   "disabled": null,
+   "href": "http://127.0.0.1:8130",
+   "cls": false
+  },
+  {
+   "tag": "span",
+   "text": "Katalog Buku",
+   "current": null,
+   "disabled": "true",
+   "href": null,
+   "cls": false
+  },
+  {
+   "tag": "span",
+   "text": "Agenda Literasi",
+   "current": null,
+   "disabled": "true",
+   "href": null,
+   "cls": false
+  },
+  {
+   "tag": "span",
+   "text": "Komunitas Literasi",
+   "current": null,
+   "disabled": "true",
+   "href": null,
+   "cls": false
+  }
+ ]
+}

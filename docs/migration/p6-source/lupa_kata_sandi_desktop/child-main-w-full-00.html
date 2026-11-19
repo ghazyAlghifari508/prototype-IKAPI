@@ -1,0 +1,79 @@
+<main class="w-full max-w-6xl mx-auto py-4">
+    <div class="w-full">
+      
+      <!-- Unified Split-Screen Authentication Card (Hostinger Rounded Composition, Both Sides White, Zero Divider) -->
+      <div class="w-full grid grid-cols-1 lg:grid-cols-12 rounded-3xl overflow-hidden shadow-xl bg-white border border-border-subtle">
+        
+        <!-- Left Illustration Showcase (5 Cols) with Reading Illustration -->
+        <div class="hidden lg:flex lg:col-span-5 bg-white p-8 xl:p-12 items-center justify-center relative overflow-hidden">
+          <div class="relative w-full max-w-[380px] flex items-center justify-center">
+            <img src="../../assets/ilustration/auth_register_reading.png" alt="Ilustrasi Pemulihan Akun IKAPI Store" class="w-full h-auto max-h-[460px] object-contain drop-shadow-sm select-none">
+          </div>
+        </div>
+
+        <!-- Right Form Panel (7 Cols) with Compact & Balanced Typography -->
+        <div class="col-span-1 lg:col-span-7 p-6 sm:p-10 lg:p-12 flex flex-col justify-center bg-white">
+          <div class="max-w-md w-full mx-auto space-y-6">
+            
+            <!-- Header Copy -->
+            <div class="space-y-1">
+              <h1 class="text-[24px] sm:text-[26px] font-bold text-ink-body tracking-tight leading-snug">
+                Lupa Kata Sandi?
+              </h1>
+              <p class="text-[14px] text-ink-muted">
+                Masukkan email akun Anda untuk menerima tautan pengaturan ulang kata sandi.
+              </p>
+            </div>
+
+            <!-- Feedback Notice (Triggered upon Submit) -->
+            <div id="success-banner" class="hidden p-3.5 rounded-2xl bg-surface-soft border border-primary/20 text-ink-body text-[13px] leading-relaxed">
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-[20px] text-primary shrink-0 mt-0.5">mark_email_read</span>
+                <div class="flex flex-col gap-0.5">
+                  <span class="font-bold text-ink-body">Periksa email Anda</span>
+                  <p class="text-ink-muted">Jika alamat email tersebut terdaftar, tautan pengaturan ulang kata sandi telah dikirimkan ke kotak masuk Anda.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recovery Form -->
+            <form id="reset-password-form" class="space-y-4" onsubmit="handleResetSubmit(event)">
+              
+              <!-- Email Input -->
+              <div class="space-y-1.5">
+                <label for="recovery-email" class="block text-[13px] font-bold text-ink-body">
+                  Alamat Email <span class="text-red-500">*</span>
+                </label>
+                <div class="relative flex items-center">
+                  <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-ink-muted">
+                    <span class="material-symbols-outlined text-[19px]">alternate_email</span>
+                  </div>
+                  <input autofocus="" class="w-full h-11 pl-10 pr-4 rounded-xl bg-surface-neutral text-ink-body text-[14px] outline-none border border-border-subtle transition-all placeholder:text-ink-muted focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20" id="recovery-email" name="email" placeholder="nama@email.com" required="" type="email">
+                </div>
+              </div>
+
+              <!-- Submit Action Button -->
+              <button id="submit-btn" class="w-full h-11 rounded-xl bg-primary hover:bg-primary-hover text-white text-[14px] font-bold flex items-center justify-center gap-2 transition-all shadow-xs active:scale-[0.99] cursor-pointer" type="submit">
+                <span id="submit-btn-text">Kirim Tautan</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </button>
+            </form>
+
+            <!-- Bottom Links: Back to Login & Need Help -->
+            <div class="pt-2 flex flex-col items-center gap-2 text-[13.5px]">
+              <a id="back-to-login" href="masuk_login_desktop.html?role=buyer" data-path="login" class="text-primary hover:text-primary-hover font-semibold inline-flex items-center gap-1.5 hover:underline">
+                <span class="material-symbols-outlined text-[16px]">arrow_back</span>
+                <span>Kembali ke Masuk</span>
+              </a>
+              <a href="chatbot_bantuan_rekomendasi_desktop.html" data-path="bantuan" class="text-[12.5px] text-ink-muted hover:text-primary transition-colors">
+                Butuh bantuan?
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>

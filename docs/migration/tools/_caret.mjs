@@ -1,0 +1,20 @@
+import { chromium } from 'playwright';
+import { diff } from './imagediff.mjs';
+const b = await chromium.launch();
+const shot = async (url, file) => {
+  const ctx = await b.newContext({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
+  const p = await ctx.newPage();
+  await p.goto(url, { waitUntil: 'load' });
+  await p.evaluate(async () => { await document.fonts.ready; });
+  await p.waitForTimeout(400);
+  await p.evaluate(() => { if (document.activeElement && document.activeElement.blur) document.activeElement.blur(); });
+  await p.waitForTimeout(150);
+  await p.screenshot({ path: file, fullPage: true });
+  await ctx.close();
+};
+const P = 'http://127.0.0.1:8099/prototype-copy/user/lupa_kata_sandi_desktop.html';
+await shot(P, 'C:/Users/alghi/AppData/Local/Temp/f-p.png');
+await shot('http://127.0.0.1:8140/lupa-kata-sandi', 'C:/Users/alghi/AppData/Local/Temp/f-b.png');
+const r = diff('C:/Users/alghi/AppData/Local/Temp/f-p.png', 'C:/Users/alghi/AppData/Local/Temp/f-b.png', {});
+console.log('blurred diff', r.diffPixels, (r.ratio ?? 0).toFixed(6));
+await b.close();

@@ -1,0 +1,22 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch();
+const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } });
+const p = await ctx.newPage();
+await p.goto('http://127.0.0.1:8140/komunitas', { waitUntil: 'load' });
+await p.waitForTimeout(400);
+const probe = async (label) => {
+  const t = await p.evaluate(() => document.querySelector('main').offsetTop);
+  console.log(label, 'main.offsetTop =', t);
+};
+await probe('baseline');
+await p.evaluate(() => document.querySelector('header').remove());
+await probe('no header');
+await p.reload({ waitUntil: 'load' });
+await p.waitForTimeout(300);
+await p.evaluate(() => document.querySelectorAll('style').forEach((s) => { if (!s.textContent.includes('@layer icons')) s.remove(); }));
+await probe('no page style');
+await p.reload({ waitUntil: 'load' });
+await p.waitForTimeout(300);
+await p.evaluate(() => { document.documentElement.style.fontSize = '16px'; });
+await probe('font-size reset');
+await b.close();

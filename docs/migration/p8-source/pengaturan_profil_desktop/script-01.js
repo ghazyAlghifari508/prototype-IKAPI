@@ -1,0 +1,365 @@
+(function () {
+  'use strict';
+
+  var $ = function (id) { return document.getElementById(id); };
+
+  /* Baseline demo data (from the existing page). */
+  var SAVED_PROFILE = {
+    name: 'PT Kiblat Buku Utama',
+    pic: 'H. Asep Ridwan, M.Hum',
+    email: 'redaksi@kiblatbuku.co.id',
+    phone: '0812-2145-8890',
+    address: 'Jl. Lengkong Besar No. 127, Lengkong, Kota Bandung, Jawa Barat 40261',
+    member: '041/JBA/2020'
+  };
+  var SAVED_BANK = { bank: 'Bank Central Asia (BCA)', number: '5220394892', holder: 'PT Kiblat Buku Utama' };
+
+  var savedProfile = Object.assign({}, SAVED_PROFILE);
+  var draftProfile = Object.assign({}, SAVED_PROFILE);
+  var savedBank = Object.assign({}, SAVED_BANK);
+  var draftBank = Object.assign({}, SAVED_BANK);
+  var hasBank = true;
+  var savingProfile = false;
+  var ui = { demo: 'A' };
+  var lastTrigger = null;
+
+  /* ---------- helpers ---------- */
+  function mask(n) { return n ? '•••• ' + String(n).slice(-4) : '—'; }
+  function digits(v) { return String(v).replace(/\D/g, ''); }
+  function sameProfile(a, b) {
+    return a.name === b.name && a.pic === b.pic && a.phone === b.phone && a.address === b.address;
+  }
+  function showToast(msg) {
+    $('toast-text').textContent = msg;
+    $('toast').classList.remove('hidden');
+    window.clearTimeout(showToast.t);
+    showToast.t = window.setTimeout(function () { $('toast').classList.add('hidden'); }, 2600);
+  }
+  function setFieldError(name, on, msg) {
+    var p = document.querySelector('[data-err="' + name + '"]');
+    if (!p) return;
+    if (msg) p.textContent = msg;
+    p.classList.toggle('hidden', !on);
+    var input = $('p-' + name);
+    if (input) input.setAttribute('aria-invalid', on ? 'true' : 'false');
+  }
+  function setBankError(name, on) {
+    var p = document.querySelector('[data-berr="' + name + '"]');
+    if (p) p.classList.toggle('hidden', !on);
+  }
+
+  /* ---------- profile rendering ---------- */
+  function paintProfile() {
+    $('p-name').value = draftProfile.name;
+    $('p-pic').value = draftProfile.pic;
+    $('p-email').value = draftProfile.email;
+    $('p-phone').value = draftProfile.phone;
+    $('p-address').value = draftProfile.address;
+    $('p-member').textContent = draftProfile.member;
+    paintProfileDirty();
+  }
+
+  function paintProfileDirty() {
+    var dirty = !sameProfile(draftProfile, savedProfile);
+    $('btn-profile-save').disabled = !dirty || savingProfile;
+    $('btn-profile-cancel').disabled = !dirty || savingProfile;
+    $('profile-dirty-note').classList.toggle('hidden', !dirty);
+  }
+
+  function readForm() {
+    draftProfile.name = $('p-name').value.trim();
+    draftProfile.pic = $('p-pic').value.trim();
+    draftProfile.phone = $('p-phone').value.trim();
+    draftProfile.address = $('p-address').value.trim();
+  }
+
+  function validateProfile() {
+    readForm();
+    var ok = true;
+    if (!draftProfile.name) { setFieldError('name', true); ok = false; } else setFieldError('name', false);
+    if (!draftProfile.pic) { setFieldError('pic', true); ok = false; } else setFieldError('pic', false);
+    var phoneDigits = digits(draftProfile.phone);
+    var phoneOk = phoneDigits.length >= 8 && phoneDigits.length <= 16;
+    if (!phoneOk) { setFieldError('phone', true); ok = false; } else setFieldError('phone', false);
+    if (!draftProfile.address) { setFieldError('address', true); ok = false; } else setFieldError('address', false);
+    paintProfileDirty();
+    return ok;
+  }
+
+  ['p-name', 'p-pic', 'p-phone', 'p-address'].forEach(function (id) {
+    $(id).addEventListener('input', function () {
+      readForm();
+      paintProfileDirty();
+      ['name', 'pic', 'phone', 'address'].forEach(function (n) { setFieldError(n, false); });
+    });
+  });
+
+  $('profile-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (savingProfile) return;
+    if (!validateProfile()) return;
+    if (sameProfile(draftProfile, savedProfile)) return;
+
+    savingProfile = true;
+    $('btn-profile-save').disabled = true;
+    $('profile-save-label').textContent = 'Menyimpan...';
+
+    window.setTimeout(function () {
+      savingProfile = false;
+      $('profile-save-label').textContent = 'Simpan Perubahan';
+      savedProfile = Object.assign({}, draftProfile);
+      paintProfileDirty();
+      showToast('Perubahan profil tersimpan pada prototype ini.');
+    }, 700);
+  });
+
+  $('btn-profile-cancel').addEventListener('click', function () {
+    readForm();
+    if (sameProfile(draftProfile, savedProfile)) return;
+    lastTrigger = $('btn-profile-cancel');
+    openModal('modal-unsaved');
+  });
+
+  $('btn-discard').addEventListener('click', function () {
+    draftProfile = Object.assign({}, savedProfile);
+    closeModal('modal-unsaved');
+    paintProfile();
+    ['name', 'pic', 'phone', 'address'].forEach(function (n) { setFieldError(n, false); });
+  });
+
+  document.querySelectorAll('[data-close-unsaved]').forEach(function (el) {
+    el.addEventListener('click', function () { closeModal('modal-unsaved'); });
+  });
+
+  /* ---------- bank ---------- */
+  function paintBank() {
+    var showSummary = hasBank;
+    $('bank-summary').classList.toggle('hidden', !showSummary);
+    $('bank-empty').classList.toggle('hidden', showSummary);
+    if (showSummary) {
+      $('bank-name').textContent = savedBank.bank;
+      $('bank-holder').textContent = savedBank.holder;
+      $('bank-masked').textContent = mask(savedBank.number);
+    }
+  }
+
+  function openBankForm(mode) {
+    draftBank = Object.assign({}, hasBank ? savedBank : { bank: '', number: '', holder: '' });
+    $('bank-form-title').textContent = mode === 'add' ? 'Tambah Rekening Bank' : 'Ubah Rekening Bank';
+    $('b-bank').value = draftBank.bank || '';
+    $('b-number').value = draftBank.number || '';
+    $('b-holder').value = draftBank.holder || '';
+    ['bank', 'number', 'holder'].forEach(function (n) { setBankError(n, false); });
+    $('bank-form').classList.remove('hidden');
+    $('btn-bank-edit').disabled = true;
+    $('btn-bank-add') && ($('btn-bank-add').disabled = true);
+  }
+
+  function closeBankForm() {
+    $('bank-form').classList.add('hidden');
+    $('btn-bank-edit').disabled = false;
+    if ($('btn-bank-add')) $('btn-bank-add').disabled = false;
+  }
+
+  $('btn-bank-edit').addEventListener('click', function () {
+    lastTrigger = $('btn-bank-edit');
+    openBankForm('edit');
+  });
+  $('btn-bank-add').addEventListener('click', function () {
+    lastTrigger = $('btn-bank-add');
+    openBankForm('add');
+  });
+  $('btn-bank-cancel').addEventListener('click', function () {
+    closeBankForm();
+    draftBank = Object.assign({}, savedBank);
+  });
+
+  $('bank-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var bank = $('b-bank').value;
+    var holder = $('b-holder').value.trim();
+    var number = digits($('b-number').value);
+
+    var ok = true;
+    if (!bank) { setBankError('bank', true); ok = false; } else setBankError('bank', false);
+    if (!holder) { setBankError('holder', true); ok = false; } else setBankError('holder', false);
+    if (number.length < 8) { setBankError('number', true); ok = false; } else setBankError('number', false);
+    if (!ok) return;
+
+    draftBank = { bank: bank, number: number, holder: holder };
+
+    $('confirm-old-bank').textContent = hasBank ? savedBank.bank : 'Belum ada rekening';
+    $('confirm-old-account').textContent = hasBank ? mask(savedBank.number) : '—';
+    $('confirm-new-bank').textContent = bank;
+    $('confirm-new-account').textContent = holder + ', ' + mask(number);
+    openModal('modal-bank-confirm', lastTrigger || $('btn-bank-review'));
+  });
+
+  document.querySelectorAll('[data-close-bank-confirm]').forEach(function (el) {
+    el.addEventListener('click', function () { closeModal('modal-bank-confirm'); });
+  });
+
+  $('btn-bank-confirm').addEventListener('click', function () {
+    savedBank = Object.assign({}, draftBank);
+    hasBank = true;
+    closeModal('modal-bank-confirm');
+    closeBankForm();
+    paintBank();
+    showToast('Perubahan rekening tersimpan pada prototype ini.');
+  });
+
+  /* ---------- modals ---------- */
+  function openModal(id, trigger) {
+    lastTrigger = trigger || null;
+    $(id).classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    var focusable = $(id).querySelector('button');
+    if (focusable) focusable.focus();
+  }
+  function closeModal(id) {
+    $(id).classList.add('hidden');
+    document.body.style.overflow = '';
+    if (lastTrigger && document.contains(lastTrigger)) lastTrigger.focus();
+    lastTrigger = null;
+  }
+
+  /* ---------- demo states A–H ---------- */
+  var demoToggle = $('demo-toggle'), demoMenu = $('demo-menu');
+  function closeDemo() { demoMenu.classList.add('hidden'); demoToggle.setAttribute('aria-expanded', 'false'); }
+  function syncDemoMenu() {
+    document.querySelectorAll('.demo-item').forEach(function (b) {
+      var on = b.getAttribute('data-demo') === ui.demo;
+      b.setAttribute('aria-checked', on ? 'true' : 'false');
+      b.classList.toggle('bg-soft', on);
+      var c = b.querySelector('.demo-check');
+      if (c) c.classList.toggle('hidden', !on);
+    });
+  }
+
+  function applyDemo(s) {
+    ui.demo = s;
+    savingProfile = false;
+    $('profile-save-label').textContent = 'Simpan Perubahan';
+    closeModal('modal-unsaved');
+    closeModal('modal-bank-confirm');
+    closeBankForm();
+    $('view-error').classList.add('hidden');
+    $('view-main').classList.remove('hidden');
+
+    savedProfile = Object.assign({}, SAVED_PROFILE);
+    draftProfile = Object.assign({}, SAVED_PROFILE);
+    savedBank = Object.assign({}, SAVED_BANK);
+    draftBank = Object.assign({}, SAVED_BANK);
+    hasBank = true;
+
+    paintProfile();
+    paintBank();
+
+    if (s === 'B') {
+      hasBank = false;
+      paintBank();
+    } else if (s === 'C') {
+      openBankForm('edit');
+    } else if (s === 'D') {
+      draftProfile.name = '';
+      draftProfile.phone = 'abc';
+      draftProfile.address = '';
+      paintProfile();
+      validateProfile();
+    } else if (s === 'E') {
+      draftProfile.phone = '0812-2145-8899';
+      paintProfile();
+      savingProfile = true;
+      $('btn-profile-save').disabled = true;
+      $('profile-save-label').textContent = 'Menyimpan...';
+    } else if (s === 'F') {
+      showToast('Perubahan profil tersimpan pada prototype ini.');
+    } else if (s === 'G') {
+      draftProfile.phone = '0812-2145-8899';
+      draftProfile.address = draftProfile.address + ' (revisi)';
+      paintProfile();
+    } else if (s === 'H') {
+      $('view-main').classList.add('hidden');
+      $('view-error').classList.remove('hidden');
+    }
+    syncDemoMenu();
+  }
+
+  demoToggle.addEventListener('click', function () {
+    var open = demoMenu.classList.contains('hidden');
+    demoMenu.classList.toggle('hidden', !open);
+    demoToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  demoMenu.addEventListener('click', function (e) {
+    var btn = e.target.closest('.demo-item');
+    if (!btn) return;
+    closeDemo();
+    applyDemo(btn.getAttribute('data-demo'));
+  });
+
+  $('btn-retry').addEventListener('click', function () {
+    var btn = $('btn-retry');
+    btn.disabled = true;
+    window.setTimeout(function () {
+      btn.disabled = false;
+      $('view-error').classList.add('hidden');
+      $('view-main').classList.remove('hidden');
+      applyDemo('A');
+      showToast('Data ditampilkan kembali menggunakan data demo.');
+    }, 700);
+  });
+
+  /* ---------- notifications / sidebar / keyboard ---------- */
+  var notifBtn = $('btn-notif'), notifPanel = $('notif-panel');
+  notifBtn.addEventListener('click', function () {
+    var open = notifPanel.classList.contains('hidden');
+    notifPanel.classList.toggle('hidden', !open);
+    notifBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!demoMenu.contains(e.target) && !demoToggle.contains(e.target)) closeDemo();
+    if (!notifPanel.contains(e.target) && !notifBtn.contains(e.target)) {
+      notifPanel.classList.add('hidden');
+      notifBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (!$('modal-bank-confirm').classList.contains('hidden')) { closeModal('modal-bank-confirm'); return; }
+    if (!$('modal-unsaved').classList.contains('hidden')) { closeModal('modal-unsaved'); return; }
+    closeDemo();
+    notifPanel.classList.add('hidden');
+    notifBtn.setAttribute('aria-expanded', 'false');
+    closeSidebar();
+  });
+
+  var sidebar = $('publisher-sidebar'), scrim = $('sidebar-scrim'), toggle = $('sidebar-toggle');
+  function openSidebar() {
+    sidebar.classList.add('is-open');
+    scrim.classList.remove('hidden');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    var first = sidebar.querySelector('a');
+    if (first) first.focus();
+  }
+  function closeSidebar() {
+    if (!sidebar.classList.contains('is-open')) return;
+    sidebar.classList.remove('is-open');
+    scrim.classList.add('hidden');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    toggle.focus();
+  }
+  toggle.addEventListener('click', function () {
+    sidebar.classList.contains('is-open') ? closeSidebar() : openSidebar();
+  });
+  scrim.addEventListener('click', closeSidebar);
+  sidebar.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeSidebar); });
+
+  /* ---------- init ---------- */
+  paintProfile();
+  paintBank();
+  syncDemoMenu();
+})();

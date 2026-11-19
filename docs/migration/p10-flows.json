@@ -1,0 +1,361 @@
+{
+  "flows": [
+    {
+      "scenario": "1-guest-catalog-cart-checkout-orders-library-reader",
+      "out": {
+        "catalogCards": 12,
+        "detailUrl": "/buku/antologi-puisi-lembayung",
+        "cartBadgeAfterAdd": "3",
+        "cartItems": 2,
+        "cartTotal": "Rp 103.000",
+        "snapOpen": true,
+        "paymentMethods": 7,
+        "methods": [
+          "qr_code_2 GoPay / QRIS",
+          "BCA Virtual Account ch",
+          "Mandiri Bill Payment c",
+          "BNI Virtual Account ch",
+          "BRI Virtual Account ch",
+          "payments ShopeePay Bay",
+          "credit_card Kartu Kred"
+        ],
+        "afterMethodView": [
+          "status-success-order-id",
+          "status-berhasil-total",
+          "status-menunggu",
+          "status-pending-order-id",
+          "status-pending-method",
+          "status-menunggu-total",
+          "status-failed-order-id",
+          "status-expired-order-id"
+        ],
+        "statusPanel": [
+          "status-berhasil",
+          "status-success-order-id",
+          "status-berhasil-total",
+          "status-pending-order-id",
+          "status-pending-method",
+          "status-menunggu-total",
+          "status-failed-order-id",
+          "status-expired-order-id"
+        ],
+        "orders": 5,
+        "orderStatuses": [
+          "Pembayaran Berhasil",
+          "Menunggu Pembayaran",
+          "Pembayaran Berhasil",
+          "Kedaluwarsa",
+          "Pembayaran Gagal"
+        ],
+        "libraryBooks": 3,
+        "readerLink": "http://127.0.0.1:8140/akun/perpustakaan/laskar-aksara-pasundan/baca",
+        "readerPage": "Halaman 41 (1 dari 4 di Bab 3)",
+        "readerAfterReload": "Halaman 42 (2 dari 4 di Bab 3)",
+        "storedProgress": 1
+      },
+      "detailSlug": "antologi-puisi-lembayung",
+      "errors": [],
+      "bad": []
+    },
+    {
+      "scenario": "2-publisher-register-pending-admin-approved-rejected",
+      "out": {
+        "step1": true,
+        "statusUrl": "/status-pendaftaran-penerbit",
+        "application": {
+          "name": "CV Penerbit Uji P10",
+          "submittedAt": "2026-11-19T06:14:32.819Z",
+          "status": "pending",
+          "reason": ""
+        },
+        "statusPending": "Menunggu persetujuan",
+        "adminRows": 2,
+        "adminNames": [
+          "PT Mizan Pustaka Utama ahmad.fuadi@mizan",
+          "CV Angkasa Bandung ratna.j@angkasabandun"
+        ],
+        "statusApproved": "Menunggu persetujuan",
+        "cta": "Periksa Status Keluar dari Akun",
+        "statusRejected": "Tidak disetujui",
+        "rejectReasonShown": true
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "scenario": "3-publisher-book-edit-buyer-admin-catalog",
+      "out": {
+        "publisherRows": 5,
+        "publisherTitles": [
+          "Laskar Aksara Pasundan",
+          "Pendidikan Karakter Sunda",
+          "Bumi Parahyangan: Jejak Purba",
+          "Flora Priangan: Arsip Hayati",
+          "Tata Bahasa & Morfologi Sunda Modern"
+        ],
+        "rowMenu": true,
+        "editAvailable": true,
+        "formOpen": true,
+        "buyerTitles": [
+          "Antologi Puisi Lembayung",
+          "Bumi Parahyangan: Narasi Alam",
+          "Ekonomi Kerakyatan Jawa Barat",
+          "Filsafat Silih Asih Silih Asuh",
+          "Kamus Undak Usuk Basa Sunda",
+          "Kumpulan Cerpen Pasundan Kiwari"
+        ],
+        "adminCatalogRows": 2,
+        "adminCatalogText": [
+          "menu_book Sang Pemimpi Andrea Hira",
+          "menu_book Aroma Karsa Dee Lestari "
+        ]
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "scenario": "4-buyer-review-report-admin-moderation",
+      "out": {
+        "reviewStored": {
+          "rating": 4,
+          "text": "Ulasan integrasi P10.",
+          "date": "19 November 2026"
+        },
+        "historyStored": null,
+        "reviewsPage": 2,
+        "reviewsText": "star star star star star 4.0 / 5.0 Laskar Aksara Pasundan Penulis: Ayi R. Kurnia • Diulas ",
+        "commentReport": {
+          "reportId": "RPT-DEMO-001",
+          "commentId": "CMT-2026-101",
+          "reporterUserId": "USR-PMB-0042",
+          "reasonId": "spam",
+          "reasonLabel": "Spam atau promosi",
+          "moderationCategory": "Spam & Promosi Eksternal",
+          "details": "",
+          "createdAt": "2026-11-19T06:15:28.987Z",
+          "status": "pending"
+        },
+        "adminQueue": "3 laporan menunggu peninjauan",
+        "adminCards": 3
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "scenario": "5-community-join-topic-child-admin-moderation",
+      "out": {
+        "memberships": {
+          "USR-PMB-0042": [
+            "community-klub-buku"
+          ]
+        },
+        "topicUrl": "/komunitas/community-klub-buku/diskusi/TPC-MWN5P248",
+        "parentReplyId": "RPL-MWN5P29Q",
+        "graph": {
+          "parent": "RPL-MWN5P29Q",
+          "child": "RPL-MWN5P30P",
+          "childParent": "RPL-MWN5P29Q"
+        },
+        "adminPending": "(1)",
+        "adminTargets": [
+          "BALASAN Balasan induk P10. Klub Buku Prianga"
+        ],
+        "drawerOpen": true,
+        "drawerContext": {
+          "topic": "Topik: Topik integrasi P10",
+          "siblings": "1 balasan lain pada topik ini."
+        },
+        "afterModeration": {
+          "reportStatus": "removed",
+          "targetId": "RPL-MWN5P29Q",
+          "targetRemoved": true,
+          "childIds": [
+            "RPL-MWN5P30P"
+          ],
+          "childrenAlive": 1,
+          "totalReplies": 10
+        },
+        "buyerThread": {
+          "nodes": 2,
+          "placeholders": 1,
+          "childVisible": true
+        }
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "scenario": "6-publisher-payout-admin-status",
+      "out": {
+        "publisherBefore": [
+          "Rp 1.485.000",
+          "Rp 840.000"
+        ],
+        "confirmOpen": true,
+        "success": true,
+        "publisherAfter": [
+          "Rp 1.485.000",
+          "Rp 590.000"
+        ],
+        "adminSummary": "1 pengajuan menunggu Rp 645.000",
+        "adminRows": 1,
+        "adminAmounts": [
+          "Rp 645.000"
+        ]
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "scenario": "7-refresh-back-deeplinks-roles-invalid-ids",
+      "out": {
+        "reloadKeepsPage": "/buku/laskar-aksara-pasundan",
+        "backTo": "blank",
+        "forwardTo": "/katalog",
+        "invalid": {
+          "book": {
+            "status": 404,
+            "url": "/buku/tidak-ada"
+          },
+          "community": {
+            "status": 404,
+            "url": "/komunitas/tidak-ada"
+          },
+          "topic": {
+            "status": 200,
+            "url": "/komunitas/community-klub-buku/diskusi/TPC-TIDAK-ADA",
+            "unavailable": true
+          },
+          "reply": {
+            "status": 200,
+            "url": "/komunitas/community-klub-buku/diskusi/TPC-2026-101/balas/RPL-TIDAK-ADA",
+            "parentUnavailable": true
+          },
+          "invalidRole": {
+            "status": 200,
+            "url": "/masuk",
+            "activeTab": "tab-buyer"
+          }
+        },
+        "roleTab": "true",
+        "sessionAfterRoleSwitch": "{\"id\":\"USR-PMB-0042\",\"email\":\"pembeli@demo.ikapi.id\",\"name\":\"Pembeli Demo\",\"role\":\"buyer\"}"
+      },
+      "errors": [
+        "[console] Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "[console] Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "bad": [
+        "404 http://127.0.0.1:8140/buku/tidak-ada",
+        "404 http://127.0.0.1:8140/komunitas/tidak-ada"
+      ]
+    }
+  ],
+  "storage": {
+    "reads": {
+      "ikapi_user_profile": {
+        "/akun/:id": 3
+      },
+      "ikapi_reader_settings": {
+        "/akun/:id/:id/baca": 1
+      },
+      "ikapi_reader_pos_laskar_aksara": {
+        "/akun/:id/:id/baca": 1
+      },
+      "ikapi_reader_bookmarks": {
+        "/akun/:id/:id/baca": 1
+      },
+      "ikapi_publisher_application_demo": {
+        "/:id": 2
+      },
+      "ikapi_publisher_status_preview": {
+        "/:id": 2
+      },
+      "ikapi_buyer_session_demo": {
+        "/buku/:id": 3,
+        "/:id/:id": 8,
+        "/:id/:id/:id": 8,
+        "/:id/:id/:id/TPC-MWN5P248": 9
+      },
+      "ikapi_comment_reactions_demo": {
+        "/buku/:id": 3
+      },
+      "ikapi_comment_reports_demo": {
+        "/buku/:id": 3
+      },
+      "ikapi_book_reports_demo": {
+        "/buku/:id": 3
+      },
+      "ikapi_rating_laskar_aksara": {
+        "/buku/:id": 3,
+        "/akun/:id": 1
+      },
+      "ikapi_user_review_history": {
+        "/akun/:id": 1
+      },
+      "ikapi_communities_demo": {
+        "/:id/:id": 1,
+        "/:id/:id/:id": 1,
+        "/admin/:id": 1,
+        "/:id/:id/:id/TPC-MWN5P248": 1
+      },
+      "ikapi_community_memberships_demo": {
+        "/:id/:id": 5,
+        "/:id/:id/:id": 4,
+        "/:id/:id/:id/TPC-MWN5P248": 5
+      },
+      "ikapi_community_seed_version": {
+        "/:id/:id": 1,
+        "/:id/:id/:id": 1,
+        "/:id/:id/:id/TPC-MWN5P248": 1
+      },
+      "ikapi_community_topics_demo": {
+        "/:id/:id": 2,
+        "/:id/:id/:id": 2,
+        "/:id/:id/:id/TPC-MWN5P248": 2
+      },
+      "ikapi_community_replies_demo": {
+        "/:id/:id": 3,
+        "/:id/:id/:id": 3,
+        "/admin/:id": 1,
+        "/:id/:id/:id/TPC-MWN5P248": 3
+      },
+      "ikapi_discussion_reports_demo": {
+        "/admin/:id": 2
+      }
+    },
+    "writes": {
+      "ikapi_reader_pos_laskar_aksara": {
+        "/akun/:id/:id/baca": 1
+      },
+      "ikapi_probe": {
+        "/buku/:id": 3
+      },
+      "ikapi_communities_demo": {
+        "/:id/:id": 1
+      },
+      "ikapi_buyer_session_demo": {
+        "/:id/:id": 1
+      },
+      "ikapi_community_topics_demo": {
+        "/:id/:id": 2,
+        "/:id/:id/:id": 2,
+        "/:id/:id/:id/TPC-MWN5P248": 2
+      },
+      "ikapi_community_replies_demo": {
+        "/:id/:id": 3,
+        "/:id/:id/:id": 3,
+        "/:id/:id/:id/TPC-MWN5P248": 3
+      },
+      "ikapi_community_seed_version": {
+        "/:id/:id": 1,
+        "/:id/:id/:id": 1,
+        "/:id/:id/:id/TPC-MWN5P248": 1
+      }
+    },
+    "removes": {
+      "ikapi_probe": {
+        "/buku/:id": 3
+      }
+    }
+  }
+}

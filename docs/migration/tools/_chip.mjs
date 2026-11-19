@@ -1,0 +1,12 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch();
+const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } });
+const p = await ctx.newPage();
+await p.goto('http://127.0.0.1:8140/masuk', { waitUntil: 'load' });
+await p.waitForTimeout(400);
+await p.click('#demo-block-buyer summary');
+await p.click('#demo-block-buyer button[data-demo="default"]');
+await p.waitForTimeout(2500);
+console.log('url', p.url());
+console.log('session', await p.evaluate(() => localStorage.getItem('ikapi_buyer_session_demo')));
+await b.close();

@@ -1,0 +1,231 @@
+{
+  "observedAt": "2026-11-19T06:15:53.245Z",
+  "keys": [
+    {
+      "key": "ikapi_book_reports_demo",
+      "writers": [],
+      "readers": [
+        "/buku/:id"
+      ],
+      "removers": [],
+      "writeCount": 0,
+      "readCount": 3
+    },
+    {
+      "key": "ikapi_buyer_session_demo",
+      "writers": [
+        "/:id/:id"
+      ],
+      "readers": [
+        "/:id/:id",
+        "/:id/:id/:id",
+        "/:id/:id/:id/TPC-MWN5P248",
+        "/buku/:id"
+      ],
+      "removers": [],
+      "writeCount": 1,
+      "readCount": 28
+    },
+    {
+      "key": "ikapi_comment_reactions_demo",
+      "writers": [],
+      "readers": [
+        "/buku/:id"
+      ],
+      "removers": [],
+      "writeCount": 0,
+      "readCount": 3
+    },
+    {
+      "key": "ikapi_comment_reports_demo",
+      "writers": [],
+      "readers": [
+        "/buku/:id"
+      ],
+      "removers": [],
+      "writeCount": 0,
+      "readCount": 3
+    },
+    {
+      "key": "ikapi_communities_demo",
+      "writers": [
+        "/:id/:id"
+      ],
+      "readers": [
+        "/:id/:id",
+        "/:id/:id/:id",
+        "/:id/:id/:id/TPC-MWN5P248",
+        "/admin/:id"
+      ],
+      "removers": [],
+      "writeCount": 1,
+      "readCount": 4
+    },
+    {
+      "key": "ikapi_community_memberships_demo",
+      "writers": [],
+      "readers": [
+        "/:id/:id",
+        "/:id/:id/:id",
+        "/:id/:id/:id/TPC-MWN5P248"
+      ],
+      "removers": [],
+      "writeCount": 0,
+      "readCount": 14
+    },
+    {
+      "key": "ikapi_community_replies_demo",
+      "writers": [
+        "/:id/:id",
+        "/:id/:id/:id",
+        "/:id/:id/:id/TPC-MWN5P248"
+      ],
+      "readers": [
+        "/:id/:id",
+        "/:id/:id/:id",
+        "/:id/:id/:id/TPC-MWN5P248",
+        "/admin/:id"
+      ],
+      "removers": [],
+      "writeCount": 9,
+      "readCount": 10
+    },
+    {
+      "key": "ikapi_community_seed_version",
+      "writers": [
+        "/:id/:id",
+        "/:id/:id/:id",
+        "/:id/:id/:id/TPC-MWN5P248"
+      ],
+      "readers": [
+        "/:id/:id",
+        "/:id/:id/:id",
+        "/:id/:id/:id/TPC-MWN5P248"
+      ],
+      "removers": [],
+      "writeCount": 3,
+      "readCount": 3
+    },
+    {
+      "key": "ikapi_community_topics_demo",
+      "writers": [
+        "/:id/:id",
+        "/:id/:id/:id",
+        "/:id/:id/:id/TPC-MWN5P248"
+      ],
+      "readers": [
+        "/:id/:id",
+        "/:id/:id/:id",
+        "/:id/:id/:id/TPC-MWN5P248"
+      ],
+      "removers": [],
+      "writeCount": 6,
+      "readCount": 6
+    },
+    {
+      "key": "ikapi_discussion_reports_demo",
+      "writers": [],
+      "readers": [
+        "/admin/:id"
+      ],
+      "removers": [],
+      "writeCount": 0,
+      "readCount": 2
+    },
+    {
+      "key": "ikapi_probe",
+      "writers": [
+        "/buku/:id"
+      ],
+      "readers": [],
+      "removers": [
+        "/buku/:id"
+      ],
+      "writeCount": 3,
+      "readCount": 0
+    },
+    {
+      "key": "ikapi_publisher_application_demo",
+      "writers": [],
+      "readers": [
+        "/:id"
+      ],
+      "removers": [],
+      "writeCount": 0,
+      "readCount": 2
+    },
+    {
+      "key": "ikapi_publisher_status_preview",
+      "writers": [],
+      "readers": [
+        "/:id"
+      ],
+      "removers": [],
+      "writeCount": 0,
+      "readCount": 2
+    },
+    {
+      "key": "ikapi_rating_laskar_aksara",
+      "writers": [],
+      "readers": [
+        "/akun/:id",
+        "/buku/:id"
+      ],
+      "removers": [],
+      "writeCount": 0,
+      "readCount": 4
+    },
+    {
+      "key": "ikapi_reader_bookmarks",
+      "writers": [],
+      "readers": [
+        "/akun/:id/:id/baca"
+      ],
+      "removers": [],
+      "writeCount": 0,
+      "readCount": 1
+    },
+    {
+      "key": "ikapi_reader_pos_laskar_aksara",
+      "writers": [
+        "/akun/:id/:id/baca"
+      ],
+      "readers": [
+        "/akun/:id/:id/baca"
+      ],
+      "removers": [],
+      "writeCount": 1,
+      "readCount": 1
+    },
+    {
+      "key": "ikapi_reader_settings",
+      "writers": [],
+      "readers": [
+        "/akun/:id/:id/baca"
+      ],
+      "removers": [],
+      "writeCount": 0,
+      "readCount": 1
+    },
+    {
+      "key": "ikapi_user_profile",
+      "writers": [],
+      "readers": [
+        "/akun/:id"
+      ],
+      "removers": [],
+      "writeCount": 0,
+      "readCount": 3
+    },
+    {
+      "key": "ikapi_user_review_history",
+      "writers": [],
+      "readers": [
+        "/akun/:id"
+      ],
+      "removers": [],
+      "writeCount": 0,
+      "readCount": 1
+    }
+  ]
+}

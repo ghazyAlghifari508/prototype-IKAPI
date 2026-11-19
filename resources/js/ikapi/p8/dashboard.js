@@ -1,0 +1,248 @@
+// dashboard - Portal Penerbit
+// Ported verbatim from docs/design/prototype-copy/penerbit/dashboard_penerbit_desktop.html (inline <script>, 241 lines).
+// Only this wrapper is new: module scope, the demo fixture injection and the app route names.
+import { onReady } from '../shared.js';
+
+onReady(function () {
+    if (!document.querySelector('#chart-panel')) return;
+
+    (function () {
+      'use strict';
+
+      /* ---------------- Demo dataset (single source of truth) ---------------- */
+      var DEMO = {
+        updated: '14 Nov 2026, 15:30 WIB',
+        evalSamples: 42,
+        daily: [1,2,3,2,4,3,1,4,4,3,4,5,3,3,2,4,4,6,5,3,3,4,5,4,3,6,3,4,3,2]
+      };
+      DEMO.sold = DEMO.daily.reduce(function (a, b) { return a + b; }, 0); // 103, sama dengan kolom Terjual di Kelola Buku
+
+      var EMPTY = {
+        books: '0', booksSub: 'Belum ada judul e-book yang diterbitkan',
+        sold: '0', soldSub: '0 eksemplar terverifikasi',
+        revenue: 'Rp 0', revenueSub: 'Akumulasi neto hak penerbit',
+        balance: 'Rp 0', balanceSub: 'Dapat diajukan untuk pencairan'
+      };
+
+      var rupiah = function (n) { return 'Rp ' + n.toLocaleString('id-ID'); };
+
+      var FILLED = {
+        books: '4', booksSub: '4 judul terbit dari 5 judul di katalog',
+        sold: String(DEMO.sold), soldSub: DEMO.sold + ' eksemplar terjual pada katalog',
+        revenue: rupiah(1485000), revenueSub: 'Akumulasi neto setelah bagi hasil platform',
+        balance: rupiah(840000), balanceSub: 'Dapat diajukan untuk pencairan'
+      };
+
+      var $ = function (id) { return document.getElementById(id); };
+      var currentState = 'state-a';
+
+      /* ---------------- Chart rendering ---------------- */
+      function renderChart() {
+        var svg = $('sales-chart');
+        if (!svg) return;
+        var W = 680, H = 220, padL = 30, padR = 8, padT = 16, padB = 28;
+        var maxY = 12, ticks = [0, 4, 8, 12];
+        var data = DEMO.daily;
+        var stepX = (W - padL - padR) / (data.length - 1);
+        var yOf = function (v) { return padT + (H - padT - padB) * (1 - v / maxY); };
+        var xOf = function (i) { return padL + stepX * i; };
+        var parts = [];
+
+        ticks.forEach(function (t) {
+          var y = yOf(t).toFixed(1);
+          parts.push('<line x1="' + padL + '" x2="' + (W - padR) + '" y1="' + y + '" y2="' + y + '" stroke="#EFEFF2" stroke-width="1"' + (t === 0 ? ' stroke-dasharray="0"' : ' stroke-dasharray="3 4"') + '/>');
+          parts.push('<text x="0" y="' + (parseFloat(y) + 4) + '" font-size="11" fill="#62636B">' + t + '</text>');
+        });
+
+        var linePts = data.map(function (v, i) { return xOf(i).toFixed(1) + ',' + yOf(v).toFixed(1); }).join(' ');
+        var areaPts = padL + ',' + yOf(0).toFixed(1) + ' ' + linePts + ' ' + xOf(data.length - 1).toFixed(1) + ',' + yOf(0).toFixed(1);
+        parts.push('<defs><linearGradient id="areaFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#673DE6" stop-opacity="0.14"/><stop offset="100%" stop-color="#673DE6" stop-opacity="0"/></linearGradient></defs>');
+        parts.push('<polygon points="' + areaPts + '" fill="url(#areaFill)"/>');
+        parts.push('<polyline points="' + linePts + '" fill="none" stroke="#673DE6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>');
+
+        data.forEach(function (v, i) {
+          var day = i + 1;
+          parts.push('<circle cx="' + xOf(i).toFixed(1) + '" cy="' + yOf(v).toFixed(1) + '" r="' + (v === Math.max.apply(null, data) ? 4 : 3) + '" fill="#FFFFFF" stroke="#673DE6" stroke-width="2"><title>' + day + ' Nov 2026 — ' + v + ' eksemplar</title></circle>');
+        });
+
+        [0, 9, 19, 29].forEach(function (i) {
+          var anchor = i === 0 ? 'start' : (i === 29 ? 'end' : 'middle');
+          parts.push('<text x="' + xOf(i).toFixed(1) + '" y="' + (H - 6) + '" font-size="11" fill="#62636B" text-anchor="' + anchor + '">' + (i + 1) + ' Nov</text>');
+        });
+
+        svg.innerHTML = parts.join('');
+      }
+
+      /* ---------------- State switching ---------------- */
+      function setText(id, txt) { var el = $(id); if (el) el.textContent = txt; }
+
+      function applyDataVariant(variant) {
+        var d = variant === 'filled' ? FILLED : EMPTY;
+        setText('kpi-books-val', d.books); setText('kpi-books-sub', d.booksSub);
+        setText('kpi-sold-val', d.sold); setText('kpi-sold-sub', d.soldSub);
+        setText('kpi-rev-val', d.revenue); setText('kpi-rev-sub', d.revenueSub);
+        setText('kpi-bal-val', d.balance); setText('kpi-bal-sub', d.balanceSub);
+
+        var filled = variant === 'filled';
+        if (filled) {
+          var rows = [
+            ['Total ulasan', '4 ulasan'],
+            ['Sudah dibalas', '2 ulasan'],
+            ['Belum dibalas', '2 ulasan'],
+            ['Tingkat respons', '50%']
+          ];
+          var box = $('eval-body');
+          box.innerHTML = '';
+          rows.forEach(function (r) {
+            var line = document.createElement('div');
+            line.className = 'flex items-center justify-between border-b border-divider pb-2 text-[13px]';
+            var label = document.createElement('span');
+            label.className = 'text-muted';
+            label.textContent = r[0];
+            var value = document.createElement('span');
+            value.className = 'num font-semibold text-ink';
+            value.textContent = r[1];
+            line.appendChild(label);
+            line.appendChild(value);
+            box.appendChild(line);
+          });
+        }
+        $('chart-state-a').classList.toggle('hidden', filled);
+        $('chart-state-b').classList.toggle('hidden', !filled);
+        $('eval-state-a').classList.toggle('hidden', filled);
+        $('eval-state-b').classList.toggle('hidden', !filled);
+        $('table-state-a').classList.toggle('hidden', filled);
+        $('table-state-b').classList.toggle('hidden', !filled);
+      }
+
+      function switchState(state) {
+        currentState = state;
+        var skeleton = $('view-state-c');
+        var data = $('view-data');
+        var analytics = $('analytics-container');
+        var chartPanel = $('chart-panel');
+        var evalPanel = $('eval-panel');
+        var err = $('analytics-error');
+
+        if (state === 'state-c') {
+          data.classList.add('hidden');
+          skeleton.classList.remove('hidden');
+        } else {
+          skeleton.classList.add('hidden');
+          data.classList.remove('hidden');
+        }
+
+        // State D is analytics-scoped: KPI + transactions stay available.
+        var analyticsFailed = state === 'state-d';
+        analytics.classList.toggle('hidden', state === 'state-c');
+        chartPanel.classList.toggle('hidden', analyticsFailed);
+        evalPanel.classList.toggle('hidden', analyticsFailed);
+        err.classList.toggle('hidden', !analyticsFailed);
+
+        if (state === 'state-b') applyDataVariant('filled');
+        else if (state === 'state-a') applyDataVariant('empty');
+
+        // Demo menu reflects selection
+        document.querySelectorAll('.demo-item').forEach(function (btn) {
+          var on = btn.getAttribute('data-demo-state') === state;
+          btn.setAttribute('aria-checked', on ? 'true' : 'false');
+          btn.classList.toggle('bg-soft', on);
+          var check = btn.querySelector('.demo-check');
+          if (check) check.classList.toggle('hidden', !on);
+        });
+      }
+
+      /* ---------------- Period selector (honest: 30-day demo only) ---------------- */
+      document.querySelectorAll('.period-btn').forEach(function (btn) {
+        if (btn.hasAttribute('disabled')) return;
+        btn.addEventListener('click', function () {
+          if (btn.getAttribute('data-period') !== '30') return;
+          document.querySelectorAll('.period-btn').forEach(function (b) {
+            if (b.hasAttribute('disabled')) return;
+            b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+            b.classList.toggle('bg-white', b === btn);
+            b.classList.toggle('text-primary', b === btn);
+            b.classList.toggle('font-bold', b === btn);
+            b.classList.toggle('shadow-sm', b === btn);
+            if (b !== btn) { b.classList.add('text-muted'); b.classList.remove('bg-white', 'text-primary', 'font-bold', 'shadow-sm'); }
+          });
+        });
+      });
+
+      /* ---------------- Demo mode menu ---------------- */
+      var demoToggle = $('demo-toggle'), demoMenu = $('demo-menu');
+      function closeDemo() { demoMenu.classList.add('hidden'); demoToggle.setAttribute('aria-expanded', 'false'); }
+      demoToggle.addEventListener('click', function () {
+        var open = demoMenu.classList.contains('hidden');
+        demoMenu.classList.toggle('hidden', !open);
+        demoToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      demoMenu.addEventListener('click', function (e) {
+        var btn = e.target.closest('.demo-item');
+        if (!btn) return;
+        switchState(btn.getAttribute('data-demo-state'));
+        closeDemo();
+      });
+
+      /* ---------------- Notifications ---------------- */
+      var notifBtn = $('btn-notif'), notifPanel = $('notif-panel');
+      notifBtn.addEventListener('click', function () {
+        var open = notifPanel.classList.contains('hidden');
+        notifPanel.classList.toggle('hidden', !open);
+        notifBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!demoMenu.contains(e.target) && !demoToggle.contains(e.target)) closeDemo();
+        if (!notifPanel.contains(e.target) && !notifBtn.contains(e.target)) {
+          notifPanel.classList.add('hidden');
+          notifBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape') return;
+        closeDemo();
+        notifPanel.classList.add('hidden');
+        notifBtn.setAttribute('aria-expanded', 'false');
+        closeSidebar();
+      });
+
+      /* ---------------- Sidebar (mobile drawer) ---------------- */
+      var sidebar = $('publisher-sidebar');
+      var scrim = $('sidebar-scrim');
+      var toggle = $('sidebar-toggle');
+
+      function openSidebar() {
+        sidebar.classList.add('is-open');
+        scrim.classList.remove('hidden');
+        toggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+        sidebar.querySelector('a')?.focus();
+      }
+      function closeSidebar() {
+        if (!sidebar.classList.contains('is-open')) return;
+        sidebar.classList.remove('is-open');
+        scrim.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        toggle.focus();
+      }
+      toggle.addEventListener('click', function () {
+        sidebar.classList.contains('is-open') ? closeSidebar() : openSidebar();
+      });
+      scrim.addEventListener('click', closeSidebar);
+      sidebar.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeSidebar); });
+
+      /* ---------------- Retry (explicitly simulated) ---------------- */
+      var retryNote = $('retry-note');
+      $('btn-retry').addEventListener('click', function () {
+        var previous = currentState === 'state-d' ? 'state-b' : currentState;
+        retryNote.classList.remove('hidden');
+        switchState('state-c');
+        setTimeout(function () { switchState(previous); }, 700);
+      });
+
+      /* ---------------- Init ---------------- */
+      renderChart();
+      switchState('state-b');
+    })();});

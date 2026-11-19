@@ -1,0 +1,265 @@
+[
+  {
+    "scenario": "auth-login-publisher-pending",
+    "out": {
+      "initialRole": "true",
+      "publisherRole": "true",
+      "publisherHeading": "Masuk ke Portal Penerbit",
+      "emailFilled": "pending@demo.ikapi.id",
+      "pendingPanelVisible": true,
+      "errorBannerVisible": false
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "auth-login-buyer-redirect",
+    "out": {
+      "buyerEmailFilled": "pembeli@demo.ikapi.id",
+      "redirectPath": "/akun/perpustakaan",
+      "sessionStored": {
+        "id": "USR-PMB-0042",
+        "email": "pembeli@demo.ikapi.id",
+        "name": "Pembeli Demo",
+        "role": "buyer"
+      }
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "auth-register-publisher-wizard",
+    "out": {
+      "step1Visible": true,
+      "stepLabel2": "Langkah 2 dari 3",
+      "step2Visible": true,
+      "stepLabel3": "Langkah 3 dari 3",
+      "storedAppBeforeSubmit": null,
+      "urlAfterSubmit": "/status-pendaftaran-penerbit",
+      "applicationStored": {
+        "name": "CV Aksara Jaya",
+        "submittedAt": "2026-11-19T06:08:26.918Z",
+        "status": "pending",
+        "reason": ""
+      },
+      "statusStored": null
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "auth-forgot-password-flow",
+    "out": {
+      "bannerVisible": true,
+      "toastVisible": false
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "auth-verify-email-flow",
+    "out": {
+      "emailShown": "ahmad@literasi.id",
+      "feedbackVisible": true,
+      "toastVisible": false
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "auth-onboarding-wizard",
+    "out": {
+      "step1Visible": true,
+      "step2Visible": true,
+      "step3Visible": true,
+      "step4Visible": true,
+      "storedPrefs": {
+        "categories": [
+          "sastra"
+        ],
+        "styles": [
+          "ringan"
+        ],
+        "duration": "lt15",
+        "completed": true
+      }
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "auth-publisher-status-scenarios",
+    "out": {
+      "statusLabel": "Menunggu persetujuan",
+      "statusAfterApprove": "Disetujui",
+      "actionBtn": "Masuk ke Dashboard"
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "account-profile-edit-sync",
+    "out": {
+      "nameInitial": "Ahmad Hidayat",
+      "headerNameUpdated": "Ahmad Test Hidayat",
+      "storedProfile": {
+        "fullName": "Ahmad Test Hidayat",
+        "email": "ahmad.hidayat@literasi.id",
+        "phone": "0812-3456-7890",
+        "avatarUrl": null,
+        "categories": [
+          "Sastra & Fiksi",
+          "Budaya & Tradisi",
+          "Pendidikan"
+        ]
+      },
+      "dropdownOpen": true
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "account-settings-flow",
+    "out": {
+      "newBooksChecked": true,
+      "storedPrefs": {
+        "orderStatus": true,
+        "events": true,
+        "newBooks": true
+      },
+      "modalOpen": true,
+      "modalClosed": true
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "account-help-faq-flow",
+    "out": {
+      "initialFaqs": 8,
+      "faqsAfterSearch": 3,
+      "accordionExpanded": null
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "checkout-simulation-flow",
+    "out": {
+      "items": 2,
+      "initialTotal": "\n                Rp 103.000\n              ",
+      "snapOpen": true,
+      "methodCount": 12,
+      "subviewVisible": true,
+      "successViewVisible": false,
+      "successBadge": "check_circle\n            \n            \n              Pembaya"
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "orders-history-flow",
+    "out": {
+      "orderCount": 5,
+      "successOrders": 2,
+      "modalOpen": true,
+      "modalOrderId": "IKP-20261115-081",
+      "modalClosed": true
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "library-filter-search-flow",
+    "out": {
+      "initialBooks": 3,
+      "unreadBooks": 2,
+      "searchLaskar": 1
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "web-reader-interactions",
+    "out": {
+      "pageNumber": "Halaman 41 (1 dari 4 di Bab 3)",
+      "pageAfterNext": "Halaman 42 (2 dari 4 di Bab 3)",
+      "bookmarksDrawerOpen": true,
+      "bookmarkCount": "3 penanda tersimpan",
+      "settingsDrawerOpen": true,
+      "themeApplied": "theme-canvas antialiased min-h-screen flex flex-col justify-between transition-colors duration-300",
+      "downloadButtons": 0
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "reviews-edit-flow",
+    "out": {
+      "reviewCount": 2,
+      "editModalOpen": true,
+      "editModalClosed": true,
+      "storedReview": [
+        {
+          "id": "rev-laskar-aksara",
+          "bookId": "1",
+          "title": "Laskar Aksara Pasundan",
+          "author": "Ayi R. Kurnia",
+          "cover": "/assets/ikapi/covers/laskar-aksara-pasundan.jpg",
+          "rating": 5,
+          "date": "19 November 2026",
+          "timestamp": 1795068556173,
+          "comment": "Ulasan diperbarui via verifikasi otomatis."
+        },
+        {
+          "id": "rev-pendidikan-sunda",
+          "bookId": "2",
+          "title": "Pendidikan Karakter Sunda",
+          "author": "Dr. Cecep Hidayat",
+          "cover": "/assets/ikapi/covers/B02.jpg",
+          "rating": 4,
+          "date": "02 November 2026",
+          "timestamp": 1730534400000,
+          "comment": "Buku rujukan yang sangat bagus untuk memahami filosofi silih asah, silih asih, dan silih asuh dalam konteks pendidikan karakter generasi muda."
+        }
+      ]
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "agenda-calendar-events-articles-flow",
+    "out": {
+      "eventsCount": 3,
+      "articlesCount": 3,
+      "eventsAfterDateFilter": 3,
+      "articleModalOpen": true,
+      "articleModalClosed": true
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "agenda-detail-page-flow",
+    "out": {
+      "title": "Lokakarya Filologi Populer: Mengalihaksarakan Naskah Sunda Kuno",
+      "category": "Lokakarya",
+      "date": "Rabu, 18 November 2026",
+      "speakers": 2,
+      "rundown": 4
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "chatbot-interactive-conversation-flow",
+    "out": {
+      "initialBubbles": 10,
+      "bubblesAfterPrompt": 9,
+      "conversationText": "Rekomendasi buku sastra Sunda dong Ada buku yang membahas sejarah dan naskah Sunda. Ini yang paling sesuai dengan pencar",
+      "inputCleared": true
+    },
+    "errors": [],
+    "bad": []
+  }
+]

@@ -1,0 +1,33 @@
+<div id="discussion-report-modal" class="fixed inset-0 z-[86] hidden" role="dialog" aria-modal="true" aria-labelledby="discussion-report-title" aria-describedby="discussion-report-desc">
+    <div id="discussion-report-scrim" class="absolute inset-0 bg-[#222225]/45"></div>
+    <div class="relative flex h-full items-end justify-center sm:items-center sm:p-4">
+      <div class="flex max-h-full w-full flex-col overflow-hidden bg-white sm:max-w-[480px] sm:rounded-2xl sm:border sm:border-border-subtle sm:shadow-[0_20px_48px_rgba(34,34,37,0.18)]">
+        <header class="border-b border-border-subtle px-5 py-4">
+          <h2 id="discussion-report-title" class="text-[17px] font-bold tracking-tight text-ink-body">Laporkan Konten</h2>
+          <p id="discussion-report-desc" class="mt-0.5 text-[13px] text-ink-muted">Pilih alasan pelaporan.</p>
+        </header>
+        <div class="flex-1 space-y-4 overflow-y-auto px-5 py-4">
+          <div class="rounded-xl border border-border-subtle bg-surface-neutral px-3.5 py-3">
+            <p id="discussion-report-target" class="text-[13px] font-bold text-ink-body"></p>
+            <p id="discussion-report-excerpt" class="mt-1 line-clamp-3 text-[13px] leading-relaxed text-ink-muted"></p>
+          </div>
+          <fieldset>
+            <legend class="text-[13px] font-bold text-ink-body">Alasan</legend>
+            <div id="discussion-report-reasons" class="mt-1.5 -ml-2 space-y-0.5"></div>
+          </fieldset>
+          <div>
+            <div class="flex items-baseline justify-between gap-3">
+              <label for="discussion-report-details" id="discussion-report-details-label" class="block text-[13px] font-bold text-ink-body">Keterangan tambahan (opsional)</label>
+              <span id="discussion-report-counter" class="text-[12px] tabular-nums text-ink-muted">0/500</span>
+            </div>
+            <textarea id="discussion-report-details" rows="3" maxlength="500" placeholder="Jelaskan masalah pada konten ini..." class="mt-1.5 w-full resize-none rounded-xl border border-border-subtle bg-white p-3 text-[13.5px] leading-relaxed text-ink-body placeholder:text-ink-muted focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"></textarea>
+            <p id="discussion-report-error" role="alert" class="mt-1.5 hidden text-[12.5px] font-medium text-[#B42318]"></p>
+          </div>
+        </div>
+        <footer class="flex items-center justify-end gap-2 border-t border-border-subtle px-5 py-3.5">
+          <button type="button" id="discussion-report-cancel" class="h-10 cursor-pointer rounded-xl border border-border-subtle px-4 text-[13.5px] font-semibold text-ink-body transition-colors hover:bg-surface-neutral">Batal</button>
+          <button type="button" id="discussion-report-submit" class="h-10 cursor-pointer rounded-xl bg-primary px-4 text-[13.5px] font-bold text-white transition-colors hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-50">Kirim Laporan</button>
+        </footer>
+      </div>
+    </div>
+  </div>

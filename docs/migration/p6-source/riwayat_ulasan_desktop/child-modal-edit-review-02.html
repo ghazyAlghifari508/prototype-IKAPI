@@ -1,0 +1,62 @@
+<div id="modal-edit-review" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="edit-review-modal-title">
+    <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-border-subtle flex flex-col animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- Modal Header -->
+      <div class="p-5 sm:p-6 border-b border-border-subtle flex items-center justify-between">
+        <div>
+          <h3 id="edit-review-modal-title" class="text-[17px] font-bold text-ink-body">
+            Edit Ulasan Buku
+          </h3>
+          <p id="edit-modal-book-title" class="text-[13px] text-ink-muted mt-0.5">
+            Laskar Aksara Pasundan
+          </p>
+        </div>
+        <button type="button" onclick="closeEditModal()" class="w-8 h-8 rounded-full bg-surface-neutral hover:bg-border-subtle text-ink-body flex items-center justify-center transition-colors cursor-pointer" aria-label="Tutup">
+          <span class="material-symbols-outlined text-[18px]">close</span>
+        </button>
+      </div>
+
+      <!-- Modal Form -->
+      <form class="p-5 sm:p-6 space-y-5" onsubmit="handleSaveEditedReview(event)">
+        <!-- Star Rating Input -->
+        <div class="space-y-1.5">
+          <label class="block text-[13px] font-bold text-ink-body">Penilaian Bintang</label>
+          <div id="edit-stars-container" class="flex items-center gap-1.5">
+            <button type="button" class="edit-star-btn p-1 cursor-pointer" data-star="1" onclick="selectEditRating(1)">
+              <span class="material-symbols-outlined text-[28px]">star</span>
+            </button>
+            <button type="button" class="edit-star-btn p-1 cursor-pointer" data-star="2" onclick="selectEditRating(2)">
+              <span class="material-symbols-outlined text-[28px]">star</span>
+            </button>
+            <button type="button" class="edit-star-btn p-1 cursor-pointer" data-star="3" onclick="selectEditRating(3)">
+              <span class="material-symbols-outlined text-[28px]">star</span>
+            </button>
+            <button type="button" class="edit-star-btn p-1 cursor-pointer" data-star="4" onclick="selectEditRating(4)">
+              <span class="material-symbols-outlined text-[28px]">star</span>
+            </button>
+            <button type="button" class="edit-star-btn p-1 cursor-pointer" data-star="5" onclick="selectEditRating(5)">
+              <span class="material-symbols-outlined text-[28px]">star</span>
+            </button>
+            <span id="edit-stars-label" class="text-[13px] font-bold text-ink-body ml-2">5 Bintang</span>
+          </div>
+        </div>
+
+        <!-- Review Comment Text -->
+        <div class="space-y-1.5">
+          <label for="edit-comment-input" class="block text-[13px] font-bold text-ink-body">Isi Ulasan</label>
+          <textarea id="edit-comment-input" rows="4" class="w-full p-3.5 rounded-2xl bg-surface-neutral border border-border-subtle text-ink-body text-[14px] placeholder:text-ink-muted focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20 transition-all resize-none leading-relaxed" placeholder="Tuliskan pengalaman atau ulasan membacamu..."></textarea>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center justify-end gap-2.5 pt-3 border-t border-border-subtle">
+          <button type="button" class="h-10 px-4 rounded-xl border border-border-subtle bg-white hover:bg-surface-neutral text-ink-body text-[13px] font-semibold transition-colors" onclick="closeEditModal()">
+            Batal
+          </button>
+          <button type="submit" class="h-10 px-5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold transition-all shadow-xs cursor-pointer">
+            Simpan Ulasan
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>

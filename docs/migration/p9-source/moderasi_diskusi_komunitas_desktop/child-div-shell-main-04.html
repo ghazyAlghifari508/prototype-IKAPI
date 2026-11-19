@@ -1,0 +1,95 @@
+<div class="shell-main">
+  <div aria-hidden="true" class="banner-bleed relative h-[232px] overflow-hidden bg-primary-deep sm:h-[260px] lg:h-[276px]">
+    <svg class="absolute inset-0 h-full w-full" viewBox="0 0 1440 212" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="topScrim" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2F1C6A" stop-opacity="0.96"></stop>
+          <stop offset="100%" stop-color="#2F1C6A" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="212" fill="#2F1C6A"></rect>
+      <polygon points="418,0 612,0 470,212 276,212" fill="#4B2CBA"></polygon>
+      <polygon points="648,0 706,0 564,212 506,212" fill="#825CF1"></polygon>
+      <polygon points="748,0 1002,0 860,212 606,212" fill="#673DE6"></polygon>
+      <polygon points="1042,0 1084,0 942,212 900,212" fill="#4475D8"></polygon>
+      <polygon points="1124,0 1290,0 1148,212 982,212" fill="#4B2CBA"></polygon>
+      <polygon points="1342,0 1440,0 1440,212 1200,212" fill="#825CF1"></polygon>
+      <polygon points="1420,0 1440,0 1440,212 1378,212" fill="#4475D8"></polygon>
+      <rect width="1440" height="58" fill="url(#topScrim)"></rect>
+    </svg>
+  </div>
+
+  <main id="workspace" class="relative z-10 -mt-20 rounded-t-[20px] border-t border-border bg-white lg:ml-6">
+    <div class="mx-auto w-full max-w-[1560px] px-4 pb-16 pt-6 sm:px-6 lg:px-10 lg:pt-8">
+
+      <div class="mb-4 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+        <div class="min-w-0">
+          <h1 class="text-[26px] font-bold leading-tight tracking-tight text-ink lg:text-[30px]">Moderasi Diskusi Komunitas</h1>
+          <p class="mt-1 text-[14px] text-muted">Tinjau laporan topik dan balasan diskusi komunitas literasi.</p>
+        </div>
+        <div class="relative">
+          <button type="button" id="demo-toggle" aria-expanded="false" aria-haspopup="true" class="focus-ring inline-flex h-10 items-center gap-1.5 rounded-xl border border-dashed border-border px-3 text-[13px] font-semibold text-muted transition-colors hover:bg-neutral hover:text-ink">
+            <span class="material-symbols-outlined text-[17px]">tune</span>
+            <span>Mode Demo</span>
+            <span class="material-symbols-outlined text-[17px]">expand_more</span>
+          </button>
+          <div id="demo-menu" class="absolute right-0 top-12 z-30 hidden w-72 rounded-2xl border border-border bg-white p-1.5 shadow-[0_16px_40px_rgba(34,34,37,0.12)]" role="menu" aria-label="Pilih skenario demo">
+            <button type="button" data-demo="seed" role="menuitem" class="focus-ring flex w-full items-center rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral">Muat contoh laporan demo</button>
+            <button type="button" data-demo="clear" role="menuitem" class="focus-ring flex w-full items-center rounded-xl px-3 py-2 text-left text-[13px] font-medium text-ink hover:bg-neutral">Kosongkan laporan demo</button>
+            <p class="px-3 pb-1.5 pt-2 text-[11px] leading-relaxed text-muted">Laporan asli dari halaman komunitas muncul di sini karena data demo disimpan di browser ini.</p>
+          </div>
+        </div>
+      </div>
+
+      <p id="page-note" role="status" class="mb-3 hidden text-[12.5px] text-muted"></p>
+
+      <div class="mb-3 flex flex-wrap items-center justify-between gap-3">
+        <div class="inline-flex items-center gap-1 rounded-xl border border-border bg-white p-1" role="tablist" aria-label="Filter status laporan">
+          <button type="button" id="tab-pending" role="tab" aria-selected="true" class="tab-btn focus-ring rounded-lg bg-primary px-3 py-1.5 text-[12.5px] font-semibold text-white">
+            Menunggu Ditinjau <span class="num" id="count-pending">(0)</span>
+          </button>
+          <button type="button" id="tab-all" role="tab" aria-selected="false" class="tab-btn focus-ring rounded-lg px-3 py-1.5 text-[12.5px] font-semibold text-muted hover:text-ink">
+            Semua Laporan <span class="num" id="count-all">(0)</span>
+          </button>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2">
+          <div class="relative min-w-[200px]">
+            <label for="report-search" class="sr-only">Cari laporan</label>
+            <span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-muted">search</span>
+            <input id="report-search" type="search" placeholder="Cari laporan..." class="h-10 w-full rounded-xl border border-border bg-white pl-9 pr-3 text-[13.5px] text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+          </div>
+          <label for="type-filter" class="sr-only">Filter jenis konten</label>
+          <select id="type-filter" class="h-10 rounded-xl border border-border bg-white px-3 text-[13.5px] font-medium text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+            <option value="all">Semua Jenis Konten</option>
+            <option value="topic">Topik</option>
+            <option value="reply">Balasan</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-border bg-white">
+        <table class="w-full min-w-[860px] border-collapse text-left">
+          <thead>
+            <tr class="border-b border-divider bg-white text-[11px] uppercase tracking-[0.06em] text-muted">
+              <th scope="col" class="px-4 py-3 font-bold">Konten</th>
+              <th scope="col" class="px-4 py-3 font-bold">Komunitas</th>
+              <th scope="col" class="px-4 py-3 font-bold">Alasan</th>
+              <th scope="col" class="px-4 py-3 font-bold">Pelapor</th>
+              <th scope="col" class="px-4 py-3 font-bold">Status</th>
+              <th scope="col" class="px-4 py-3 pr-5 text-right font-bold">Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="report-rows" class="text-[13px]"></tbody>
+        </table>
+      </div>
+
+      <p id="table-summary" class="mt-3 text-[12.5px] text-muted"></p>
+
+      <div id="state-empty" class="mt-3 hidden rounded-2xl border border-border bg-white px-5 py-14 text-center">
+        <p class="text-[15px] font-semibold text-ink">Tidak Ada Laporan</p>
+        <p class="mx-auto mt-1.5 max-w-md text-[13px] leading-relaxed text-muted">Laporan topik atau balasan komunitas akan muncul di sini setelah dikirim oleh pembeli.</p>
+      </div>
+    </div>
+  </main>
+</div>

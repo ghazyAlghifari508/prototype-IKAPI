@@ -1,0 +1,18 @@
+<div id="modal-finalize" class="fixed inset-0 z-[80] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-finalize=""></div>
+  <div class="relative mx-auto mt-20 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[460px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:p-6" role="dialog" aria-modal="true" aria-labelledby="finalize-title">
+    <h2 id="finalize-title" class="text-[18px] font-bold tracking-tight text-ink">Konfirmasi Penyelesaian Pencairan</h2>
+    <dl class="mt-3 space-y-2 text-[13px]">
+      <div class="flex justify-between gap-3"><dt class="text-muted">Penerbit</dt><dd class="text-right font-semibold text-ink" id="finalize-publisher">-</dd></div>
+      <div class="flex justify-between gap-3"><dt class="text-muted">Nominal</dt><dd class="num font-semibold text-ink" id="finalize-amount">-</dd></div>
+      <div class="flex justify-between gap-3"><dt class="text-muted">Rekening tujuan</dt><dd class="num text-right text-ink" id="finalize-account">-</dd></div>
+    </dl>
+    <p class="mt-3 text-[12px] leading-relaxed text-muted">Saya menyatakan transfer telah dilakukan di luar aplikasi dan bukti yang dilampirkan sesuai.</p>
+    <div class="mt-5 flex items-center justify-end gap-2 border-t border-divider pt-4">
+      <button type="button" data-close-finalize="" class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">Kembali</button>
+      <button type="button" id="btn-confirm-finalize" class="focus-ring inline-flex h-10 items-center gap-2 rounded-xl bg-primary px-4 text-[14px] font-semibold text-white hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-60">
+        <span id="finalize-label">Konfirmasi Penyelesaian</span>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div id="modal-book" class="fixed inset-0 z-[70] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-book=""></div>
+  <div class="relative mx-auto mt-16 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[520px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:mt-24 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-book-title">
+    <div class="mb-4 flex items-start justify-between gap-4">
+      <div>
+        <h2 id="modal-book-title" class="text-[18px] font-bold tracking-tight text-ink">Tambah Buku Baru</h2>
+        <p class="mt-0.5 text-[13px] text-muted">Metadata katalog. Unggah berkas e-book tidak termasuk pada prototype ini.</p>
+      </div>
+      <button type="button" data-close-book="" aria-label="Tutup" class="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+
+    <form id="book-form" novalidate="" class="space-y-3.5">
+      <div>
+        <label for="f-title" class="mb-1 block text-[12.5px] font-semibold text-ink">Judul buku</label>
+        <input id="f-title" name="title" type="text" required="" maxlength="120" class="h-10 w-full rounded-xl border border-border px-3 text-[14px] text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+        <p class="mt-1 hidden text-[12px] text-[#B42318]" data-error="title">Judul buku wajib diisi.</p>
+      </div>
+      <div>
+        <label for="f-author" class="mb-1 block text-[12.5px] font-semibold text-ink">Penulis</label>
+        <input id="f-author" name="author" type="text" required="" maxlength="80" class="h-10 w-full rounded-xl border border-border px-3 text-[14px] text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+        <p class="mt-1 hidden text-[12px] text-[#B42318]" data-error="author">Nama penulis wajib diisi.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label for="f-price" class="mb-1 block text-[12.5px] font-semibold text-ink">Harga (Rp)</label>
+          <input id="f-price" name="price" type="number" min="1000" step="500" required="" class="num h-10 w-full rounded-xl border border-border px-3 text-[14px] text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+          <p class="mt-1 hidden text-[12px] text-[#B42318]" data-error="price">Harga minimal Rp 1.000.</p>
+        </div>
+        <div>
+          <label for="f-discount" class="mb-1 block text-[12.5px] font-semibold text-ink">Diskon (%)</label>
+          <input id="f-discount" name="discount" type="number" min="0" max="90" step="1" value="0" class="num h-10 w-full rounded-xl border border-border px-3 text-[14px] text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/15">
+        </div>
+      </div>
+      <label class="flex items-center gap-2.5 rounded-xl border border-border px-3 py-2.5">
+        <input id="f-published" name="published" type="checkbox" class="h-4 w-4 rounded border-border text-primary focus:ring-primary/30">
+        <span class="text-[13px] text-ink">Terbitkan langsung ke katalog</span>
+      </label>
+
+      <div class="mt-1 flex items-center justify-end gap-2 border-t border-divider pt-4">
+        <button type="button" data-close-book="" class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">Batal</button>
+        <button type="submit" class="focus-ring inline-flex h-10 items-center rounded-xl bg-primary px-4 text-[14px] font-semibold text-white hover:bg-primary-hover">Simpan</button>
+      </div>
+    </form>
+  </div>
+</div>

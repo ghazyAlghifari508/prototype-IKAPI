@@ -1,0 +1,787 @@
+{
+ "dashboard_penerbit_desktop": {
+  "bodyClass": "bg-canvas text-ink antialiased",
+  "title": "Dashboard Penerbit — IKAPI Jawa Barat",
+  "children": [
+   {
+    "file": "child-a-sr-only-00.html",
+    "tag": "a",
+    "id": "",
+    "cls": "sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focu",
+    "loc": 1,
+    "bytes": 241
+   },
+   {
+    "file": "child-header-absolute-01.html",
+    "tag": "header",
+    "id": "",
+    "cls": "absolute inset-x-0 top-0 z-50 h-16",
+    "loc": 25,
+    "bytes": 1686
+   },
+   {
+    "file": "child-sidebar-scrim-02.html",
+    "tag": "div",
+    "id": "sidebar-scrim",
+    "cls": "fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden",
+    "loc": 1,
+    "bytes": 90
+   },
+   {
+    "file": "child-publisher-sidebar-03.html",
+    "tag": "aside",
+    "id": "publisher-sidebar",
+    "cls": "fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgb",
+    "loc": 43,
+    "bytes": 3327
+   },
+   {
+    "file": "child-div-shell-main-04.html",
+    "tag": "div",
+    "id": "",
+    "cls": "shell-main",
+    "loc": 298,
+    "bytes": 22999
+   },
+   {
+    "file": "child-script-x-05.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 242,
+    "bytes": 10418
+   }
+  ],
+  "scripts": [
+   23,
+   240
+  ],
+  "keys": [],
+  "ids": [
+   "sidebar-toggle",
+   "btn-notif",
+   "notif-panel",
+   "sidebar-scrim",
+   "publisher-sidebar",
+   "topScrim",
+   "workspace",
+   "demo-toggle",
+   "demo-menu",
+   "view-state-c",
+   "view-data",
+   "kpi-container",
+   "kpi-books-val",
+   "kpi-books-sub",
+   "kpi-sold-val",
+   "kpi-sold-sub",
+   "kpi-rev-val",
+   "kpi-rev-sub",
+   "kpi-bal-val",
+   "kpi-bal-sub",
+   "analytics-container",
+   "chart-panel",
+   "chart-title",
+   "chart-state-a",
+   "chart-state-b",
+   "sales-chart",
+   "chart-desc",
+   "eval-panel",
+   "eval-title",
+   "eval-state-a",
+   "eval-state-b",
+   "eval-body",
+   "analytics-error",
+   "btn-retry",
+   "retry-note",
+   "table-container",
+   "table-title",
+   "table-state-a",
+   "table-state-b",
+   "areaFill"
+  ]
+ },
+ "kelola_buku_desktop": {
+  "bodyClass": "bg-canvas text-ink antialiased",
+  "title": "Kelola Buku — Portal Penerbit IKAPI Jawa Barat",
+  "children": [
+   {
+    "file": "child-a-sr-only-00.html",
+    "tag": "a",
+    "id": "",
+    "cls": "sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focu",
+    "loc": 1,
+    "bytes": 241
+   },
+   {
+    "file": "child-header-absolute-01.html",
+    "tag": "header",
+    "id": "",
+    "cls": "absolute inset-x-0 top-0 z-50 h-16",
+    "loc": 23,
+    "bytes": 1562
+   },
+   {
+    "file": "child-sidebar-scrim-02.html",
+    "tag": "div",
+    "id": "sidebar-scrim",
+    "cls": "fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden",
+    "loc": 1,
+    "bytes": 90
+   },
+   {
+    "file": "child-publisher-sidebar-03.html",
+    "tag": "aside",
+    "id": "publisher-sidebar",
+    "cls": "fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgb",
+    "loc": 43,
+    "bytes": 3327
+   },
+   {
+    "file": "child-div-shell-main-04.html",
+    "tag": "div",
+    "id": "",
+    "cls": "shell-main",
+    "loc": 270,
+    "bytes": 24078
+   },
+   {
+    "file": "child-row-menu-05.html",
+    "tag": "div",
+    "id": "row-menu",
+    "cls": "fixed z-[60] hidden w-56 rounded-2xl border border-border bg-white p-1.5 shadow-[0_16px_40px_rgba(34",
+    "loc": 18,
+    "bytes": 1444
+   },
+   {
+    "file": "child-modal-detail-06.html",
+    "tag": "div",
+    "id": "modal-detail",
+    "cls": "fixed inset-0 z-[70] hidden",
+    "loc": 48,
+    "bytes": 2931
+   },
+   {
+    "file": "child-modal-book-07.html",
+    "tag": "div",
+    "id": "modal-book",
+    "cls": "fixed inset-0 z-[70] hidden",
+    "loc": 47,
+    "bytes": 3781
+   },
+   {
+    "file": "child-modal-unpublish-08.html",
+    "tag": "div",
+    "id": "modal-unpublish",
+    "cls": "fixed inset-0 z-[70] hidden",
+    "loc": 17,
+    "bytes": 1677
+   },
+   {
+    "file": "child-script-x-09.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 497,
+    "bytes": 19787
+   }
+  ],
+  "scripts": [
+   20,
+   495
+  ],
+  "keys": [],
+  "ids": [
+   "sidebar-toggle",
+   "btn-notif",
+   "notif-panel",
+   "sidebar-scrim",
+   "publisher-sidebar",
+   "topScrim",
+   "workspace",
+   "btn-add",
+   "demo-toggle",
+   "demo-menu",
+   "book-search",
+   "btn-clear-search",
+   "filter-group",
+   "page-note",
+   "view-loading",
+   "view-table",
+   "book-rows",
+   "BK-01",
+   "BK-02",
+   "BK-03",
+   "BK-04",
+   "BK-05",
+   "state-empty",
+   "state-noresults",
+   "btn-clear-all",
+   "state-draft-empty",
+   "table-footer",
+   "result-summary",
+   "page-prev",
+   "page-current",
+   "page-next",
+   "row-menu",
+   "menu-detail",
+   "menu-edit",
+   "menu-publish",
+   "menu-unpublish",
+   "modal-detail",
+   "modal-detail-title",
+   "det-cover",
+   "det-title",
+   "det-author",
+   "det-status",
+   "det-id",
+   "det-sold",
+   "det-price",
+   "det-discount",
+   "det-final",
+   "det-edit",
+   "modal-book",
+   "modal-book-title",
+   "book-form",
+   "f-title",
+   "f-author",
+   "f-price",
+   "f-discount",
+   "f-published",
+   "modal-unpublish",
+   "modal-unpublish-title",
+   "unpublish-body",
+   "btn-confirm-unpublish"
+  ]
+ },
+ "pesanan_masuk_desktop": {
+  "bodyClass": "bg-canvas text-ink antialiased",
+  "title": "Pesanan Masuk — Portal Penerbit IKAPI Jawa Barat",
+  "children": [
+   {
+    "file": "child-a-sr-only-00.html",
+    "tag": "a",
+    "id": "",
+    "cls": "sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focu",
+    "loc": 1,
+    "bytes": 241
+   },
+   {
+    "file": "child-header-absolute-01.html",
+    "tag": "header",
+    "id": "",
+    "cls": "absolute inset-x-0 top-0 z-50 h-16",
+    "loc": 23,
+    "bytes": 1562
+   },
+   {
+    "file": "child-sidebar-scrim-02.html",
+    "tag": "div",
+    "id": "sidebar-scrim",
+    "cls": "fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden",
+    "loc": 1,
+    "bytes": 90
+   },
+   {
+    "file": "child-publisher-sidebar-03.html",
+    "tag": "aside",
+    "id": "publisher-sidebar",
+    "cls": "fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgb",
+    "loc": 36,
+    "bytes": 3284
+   },
+   {
+    "file": "child-div-shell-main-04.html",
+    "tag": "div",
+    "id": "",
+    "cls": "shell-main",
+    "loc": 134,
+    "bytes": 11951
+   },
+   {
+    "file": "child-modal-detail-05.html",
+    "tag": "div",
+    "id": "modal-detail",
+    "cls": "fixed inset-0 z-[70] hidden",
+    "loc": 30,
+    "bytes": 2514
+   },
+   {
+    "file": "child-script-x-06.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 408,
+    "bytes": 15807
+   }
+  ],
+  "scripts": [
+   20,
+   406
+  ],
+  "keys": [],
+  "ids": [
+   "sidebar-toggle",
+   "btn-notif",
+   "notif-panel",
+   "sidebar-scrim",
+   "publisher-sidebar",
+   "topScrim",
+   "workspace",
+   "demo-toggle",
+   "demo-menu",
+   "page-note",
+   "order-search",
+   "btn-clear-search",
+   "date-filter",
+   "view-loading",
+   "view-table",
+   "order-rows",
+   "state-empty",
+   "state-noresults",
+   "btn-reset-filter",
+   "table-footer",
+   "result-summary",
+   "page-prev",
+   "page-current",
+   "page-next",
+   "modal-detail",
+   "detail-title",
+   "detail-order",
+   "detail-date",
+   "detail-items",
+   "detail-items-note",
+   "detail-qty",
+   "detail-net",
+   "detail-status",
+   "detail-invoice"
+  ]
+ },
+ "pendapatan_dan_pencairan_desktop": {
+  "bodyClass": "bg-canvas text-ink antialiased",
+  "title": "Pendapatan & Pencairan — Portal Penerbit IKAPI Jawa Barat",
+  "children": [
+   {
+    "file": "child-a-sr-only-00.html",
+    "tag": "a",
+    "id": "",
+    "cls": "sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focu",
+    "loc": 1,
+    "bytes": 241
+   },
+   {
+    "file": "child-header-absolute-01.html",
+    "tag": "header",
+    "id": "",
+    "cls": "absolute inset-x-0 top-0 z-50 h-16",
+    "loc": 23,
+    "bytes": 1562
+   },
+   {
+    "file": "child-sidebar-scrim-02.html",
+    "tag": "div",
+    "id": "sidebar-scrim",
+    "cls": "fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden",
+    "loc": 1,
+    "bytes": 90
+   },
+   {
+    "file": "child-publisher-sidebar-03.html",
+    "tag": "aside",
+    "id": "publisher-sidebar",
+    "cls": "fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgb",
+    "loc": 36,
+    "bytes": 3284
+   },
+   {
+    "file": "child-div-shell-main-04.html",
+    "tag": "div",
+    "id": "",
+    "cls": "shell-main",
+    "loc": 248,
+    "bytes": 20989
+   },
+   {
+    "file": "child-modal-confirm-05.html",
+    "tag": "div",
+    "id": "modal-confirm",
+    "cls": "fixed inset-0 z-[70] hidden",
+    "loc": 23,
+    "bytes": 2153
+   },
+   {
+    "file": "child-modal-success-06.html",
+    "tag": "div",
+    "id": "modal-success",
+    "cls": "fixed inset-0 z-[70] hidden",
+    "loc": 15,
+    "bytes": 1539
+   },
+   {
+    "file": "child-modal-detail-07.html",
+    "tag": "div",
+    "id": "modal-detail",
+    "cls": "fixed inset-0 z-[70] hidden",
+    "loc": 25,
+    "bytes": 2306
+   },
+   {
+    "file": "child-script-x-08.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 494,
+    "bytes": 19600
+   }
+  ],
+  "scripts": [
+   20,
+   492
+  ],
+  "keys": [],
+  "ids": [
+   "sidebar-toggle",
+   "btn-notif",
+   "notif-panel",
+   "sidebar-scrim",
+   "publisher-sidebar",
+   "topScrim",
+   "workspace",
+   "btn-export",
+   "demo-toggle",
+   "demo-menu",
+   "page-note",
+   "view-loading",
+   "view-error",
+   "btn-retry",
+   "retry-note",
+   "view-main",
+   "kpi-net",
+   "kpi-available",
+   "kpi-pending",
+   "form-title",
+   "withdraw-form",
+   "input-nominal",
+   "nominal-error",
+   "bank-summary",
+   "bank-empty",
+   "confirm-check",
+   "confirm-error",
+   "btn-review",
+   "review-label",
+   "bank-title",
+   "bank-card-active",
+   "bank-card-empty",
+   "history-title",
+   "history-search",
+   "history-filter",
+   "history-rows",
+   "history-empty",
+   "btn-reset-filter",
+   "history-count",
+   "page-prev",
+   "page-current",
+   "page-next",
+   "modal-confirm",
+   "confirm-title",
+   "confirm-amount",
+   "confirm-bank",
+   "btn-submit",
+   "submit-label",
+   "modal-success",
+   "success-title",
+   "success-number",
+   "success-amount",
+   "modal-detail",
+   "detail-title",
+   "detail-number",
+   "detail-status",
+   "detail-date",
+   "detail-amount",
+   "detail-bank",
+   "detail-proof"
+  ]
+ },
+ "ulasan_pembeli_desktop": {
+  "bodyClass": "bg-canvas text-ink antialiased",
+  "title": "Ulasan Pembeli — Portal Penerbit IKAPI Jawa Barat",
+  "children": [
+   {
+    "file": "child-a-sr-only-00.html",
+    "tag": "a",
+    "id": "",
+    "cls": "sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focu",
+    "loc": 1,
+    "bytes": 241
+   },
+   {
+    "file": "child-header-absolute-01.html",
+    "tag": "header",
+    "id": "",
+    "cls": "absolute inset-x-0 top-0 z-50 h-16",
+    "loc": 23,
+    "bytes": 1562
+   },
+   {
+    "file": "child-sidebar-scrim-02.html",
+    "tag": "div",
+    "id": "sidebar-scrim",
+    "cls": "fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden",
+    "loc": 1,
+    "bytes": 90
+   },
+   {
+    "file": "child-publisher-sidebar-03.html",
+    "tag": "aside",
+    "id": "publisher-sidebar",
+    "cls": "fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgb",
+    "loc": 36,
+    "bytes": 3284
+   },
+   {
+    "file": "child-div-shell-main-04.html",
+    "tag": "div",
+    "id": "",
+    "cls": "shell-main",
+    "loc": 99,
+    "bytes": 9005
+   },
+   {
+    "file": "child-toast-05.html",
+    "tag": "div",
+    "id": "toast",
+    "cls": "pointer-events-none fixed bottom-6 left-1/2 z-[80] hidden -translate-x-1/2 rounded-xl border border-",
+    "loc": 3,
+    "bytes": 281
+   },
+   {
+    "file": "child-script-x-06.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 449,
+    "bytes": 17578
+   }
+  ],
+  "scripts": [
+   20,
+   447
+  ],
+  "keys": [],
+  "ids": [
+   "sidebar-toggle",
+   "btn-notif",
+   "notif-panel",
+   "sidebar-scrim",
+   "publisher-sidebar",
+   "topScrim",
+   "workspace",
+   "demo-toggle",
+   "demo-menu",
+   "review-summary",
+   "page-note",
+   "review-search",
+   "btn-clear-search",
+   "review-list",
+   "state-empty",
+   "state-noresults",
+   "btn-reset-filter",
+   "toast",
+   "toast-text"
+  ]
+ },
+ "pengaturan_profil_desktop": {
+  "bodyClass": "bg-canvas text-ink antialiased",
+  "title": "Pengaturan Profil — Portal Penerbit IKAPI Jawa Barat",
+  "children": [
+   {
+    "file": "child-a-sr-only-00.html",
+    "tag": "a",
+    "id": "",
+    "cls": "sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-xl focu",
+    "loc": 1,
+    "bytes": 241
+   },
+   {
+    "file": "child-header-absolute-01.html",
+    "tag": "header",
+    "id": "",
+    "cls": "absolute inset-x-0 top-0 z-50 h-16",
+    "loc": 23,
+    "bytes": 1562
+   },
+   {
+    "file": "child-sidebar-scrim-02.html",
+    "tag": "div",
+    "id": "sidebar-scrim",
+    "cls": "fixed inset-0 z-40 hidden bg-[#222225]/40 lg:hidden",
+    "loc": 1,
+    "bytes": 90
+   },
+   {
+    "file": "child-publisher-sidebar-03.html",
+    "tag": "aside",
+    "id": "publisher-sidebar",
+    "cls": "fixed bottom-0 left-0 z-40 flex w-[248px] flex-col rounded-tr-[12px] bg-white shadow-[2px_0_10px_rgb",
+    "loc": 36,
+    "bytes": 3284
+   },
+   {
+    "file": "child-div-shell-main-04.html",
+    "tag": "div",
+    "id": "",
+    "cls": "shell-main",
+    "loc": 185,
+    "bytes": 16215
+   },
+   {
+    "file": "child-modal-bank-confirm-05.html",
+    "tag": "div",
+    "id": "modal-bank-confirm",
+    "cls": "fixed inset-0 z-[70] hidden",
+    "loc": 29,
+    "bytes": 2433
+   },
+   {
+    "file": "child-modal-unsaved-06.html",
+    "tag": "div",
+    "id": "modal-unsaved",
+    "cls": "fixed inset-0 z-[70] hidden",
+    "loc": 11,
+    "bytes": 1100
+   },
+   {
+    "file": "child-toast-07.html",
+    "tag": "div",
+    "id": "toast",
+    "cls": "pointer-events-none fixed bottom-6 left-1/2 z-[80] hidden -translate-x-1/2 rounded-xl border border-",
+    "loc": 3,
+    "bytes": 281
+   },
+   {
+    "file": "child-script-x-08.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 367,
+    "bytes": 13580
+   }
+  ],
+  "scripts": [
+   20,
+   365
+  ],
+  "keys": [],
+  "ids": [
+   "sidebar-toggle",
+   "btn-notif",
+   "notif-panel",
+   "sidebar-scrim",
+   "publisher-sidebar",
+   "topScrim",
+   "workspace",
+   "demo-toggle",
+   "demo-menu",
+   "view-error",
+   "btn-retry",
+   "view-main",
+   "profile-title",
+   "profile-form",
+   "p-name",
+   "p-pic",
+   "p-email",
+   "p-phone",
+   "p-address",
+   "p-member",
+   "profile-dirty-note",
+   "btn-profile-cancel",
+   "btn-profile-save",
+   "profile-save-label",
+   "bank-title",
+   "bank-summary",
+   "bank-name",
+   "bank-holder",
+   "bank-masked",
+   "btn-bank-edit",
+   "bank-empty",
+   "btn-bank-add",
+   "bank-form",
+   "bank-form-title",
+   "b-bank",
+   "b-holder",
+   "b-number",
+   "btn-bank-cancel",
+   "btn-bank-review",
+   "modal-bank-confirm",
+   "bank-confirm-title",
+   "confirm-old-bank",
+   "confirm-old-account",
+   "confirm-new-bank",
+   "confirm-new-account",
+   "btn-bank-confirm",
+   "modal-unsaved",
+   "unsaved-title",
+   "btn-discard",
+   "toast",
+   "toast-text"
+  ]
+ },
+ "invoice_penjualan_pdf_portal_penerbit": {
+  "bodyClass": "antialiased",
+  "title": "Invoice Penjualan — IKAPI Jawa Barat",
+  "children": [
+   {
+    "file": "child-div-no-print-00.html",
+    "tag": "div",
+    "id": "",
+    "cls": "no-print sticky top-0 z-30 border-b border-border bg-white/95 backdrop-blur",
+    "loc": 15,
+    "bytes": 952
+   },
+   {
+    "file": "child-main-flex-01.html",
+    "tag": "main",
+    "id": "",
+    "cls": "flex justify-center px-4 py-8 sm:px-6 sm:py-10",
+    "loc": 107,
+    "bytes": 5558
+   },
+   {
+    "file": "child-script-x-02.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 111,
+    "bytes": 3928
+   }
+  ],
+  "scripts": [
+   16,
+   109
+  ],
+  "keys": [],
+  "ids": [
+   "btn-print",
+   "invoice-sheet",
+   "doc-logo",
+   "doc-title",
+   "doc-number",
+   "doc-status",
+   "pub-name",
+   "pub-member",
+   "pub-address",
+   "pub-email",
+   "meta-title",
+   "meta-order",
+   "meta-paid",
+   "meta-method",
+   "meta-status",
+   "meta-items",
+   "items-title",
+   "item-rows",
+   "summary-title",
+   "sum-gross",
+   "sum-fee",
+   "sum-net"
+  ]
+ }
+}

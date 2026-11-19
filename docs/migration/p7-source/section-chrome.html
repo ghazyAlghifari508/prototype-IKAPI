@@ -1,0 +1,61 @@
+<section class="w-full border-b border-border-subtle bg-white pt-4 pb-3">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between gap-3">
+
+            <div class="min-w-0">
+              <div id="top-back-profile" class="hidden">
+                <button type="button" id="btn-back-to-directory" class="inline-flex cursor-pointer items-center gap-1.5 rounded-xl border border-border-subtle bg-white px-3.5 py-2 text-[13px] font-semibold text-ink-body transition-colors hover:bg-surface-neutral">
+                  <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_back</span>
+                  <span>Kembali ke Direktori</span>
+                </button>
+              </div>
+              <div id="top-back-room" class="hidden">
+                <button type="button" id="btn-room-back" class="inline-flex cursor-pointer items-center gap-1.5 rounded-xl border border-border-subtle bg-white px-3.5 py-2 text-[13px] font-semibold text-ink-body transition-colors hover:bg-surface-neutral">
+                  <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_back</span>
+                  <span>Kembali ke Profil Komunitas</span>
+                </button>
+              </div>
+              <div id="top-back-reply" class="hidden">
+                <button type="button" id="btn-reply-back" class="inline-flex cursor-pointer items-center gap-1.5 rounded-xl border border-border-subtle bg-white px-3.5 py-2 text-[13px] font-semibold text-ink-body transition-colors hover:bg-surface-neutral">
+                  <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_back</span>
+                  <span>Kembali ke Diskusi</span>
+                </button>
+              </div>
+              <div id="top-back-topic" class="hidden">
+                <button type="button" id="btn-topic-back" class="inline-flex cursor-pointer items-center gap-1.5 rounded-xl border border-border-subtle bg-white px-3.5 py-2 text-[13px] font-semibold text-ink-body transition-colors hover:bg-surface-neutral">
+                  <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_back</span>
+                  <span>Kembali ke Ruang Diskusi</span>
+                </button>
+              </div>
+            </div>
+
+            <details id="qa-simulation-panel" class="group shrink-0 rounded-xl border border-border-subtle bg-surface-neutral text-[12px] select-none transition-all">
+              <summary class="flex cursor-pointer list-none items-center gap-2 px-3.5 py-1.5 font-medium text-ink-muted hover:text-ink-body">
+                <span class="material-symbols-outlined text-[16px] text-primary">tune</span>
+                <span>Mode Simulasi (4 State)</span>
+                <span class="material-symbols-outlined text-[16px] text-ink-muted transition-transform group-open:rotate-180">expand_more</span>
+              </summary>
+              <div class="absolute right-4 z-20 mt-1 flex w-[min(92vw,420px)] flex-wrap items-center gap-1.5 rounded-xl border border-border-subtle bg-white p-2.5 shadow-[0_16px_40px_rgba(34,34,37,0.12)]" role="toolbar">
+                <button id="sim-normal" type="button" class="px-3 py-1 rounded-lg bg-primary text-white font-medium transition-all shadow-xs" onclick="setSimState('normal')">
+                  Direktori Normal
+                </button>
+                <button id="sim-detail" type="button" class="px-3 py-1 rounded-lg bg-surface-neutral text-ink-body hover:bg-surface-soft hover:text-primary font-medium transition-all border border-border-subtle" onclick="setSimState('detail', 'community-filologi')">
+                  Mode Detail Komunitas
+                </button>
+                <button id="sim-noresults" type="button" class="px-3 py-1 rounded-lg bg-surface-neutral text-ink-body hover:bg-surface-soft hover:text-primary font-medium transition-all border border-border-subtle" onclick="setSimState('noresults')">
+                  Pencarian Nihil
+                </button>
+                <button id="sim-empty" type="button" class="px-3 py-1 rounded-lg bg-surface-neutral text-ink-body hover:bg-surface-soft hover:text-primary font-medium transition-all border border-border-subtle" onclick="setSimState('empty')">
+                  Data Kosong
+                </button>
+                <span aria-hidden="true" class="mx-0.5 h-4 w-px bg-border-subtle"></span>
+                <button id="demo-session-toggle" type="button" class="px-3 py-1 rounded-lg bg-surface-neutral text-ink-body hover:bg-surface-soft hover:text-primary font-medium transition-all border border-border-subtle" onclick="toggleDemoSession()">
+                  Keluar sesi pembeli demo
+                </button>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- DYNAMIC CONTENT CONTAINER (1360px Container) -->

@@ -1,0 +1,137 @@
+<main class="w-full pt-28 bg-white min-h-[calc(100vh-16rem)]">
+    <div class="flex flex-col w-full">
+      <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 w-full flex flex-col gap-6">
+        
+        <!-- Mobile Compact Account Navigation Menu -->
+        <details class="lg:hidden group bg-white border border-border-subtle rounded-2xl text-[14px] overflow-hidden shadow-xs">
+          <summary class="px-4 py-3 cursor-pointer font-semibold text-ink-body flex items-center justify-between list-none select-none">
+            <div class="flex items-center gap-2.5 text-primary">
+              <span class="material-symbols-outlined text-[20px]">rate_review</span>
+              <span>Menu Akun: Riwayat Ulasan</span>
+            </div>
+            <span class="material-symbols-outlined text-[20px] text-ink-muted transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <div class="p-3 border-t border-border-subtle bg-surface-neutral flex flex-col gap-1">
+            <a href="akun_saya_profil_dropdown_navigasi_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Profil Saya</a>
+            <a href="riwayat_pesanan_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Riwayat Pesanan</a>
+            <a href="perpustakaan_saya_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Perpustakaan Saya</a>
+            <a href="riwayat_ulasan_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-surface-soft text-primary font-bold">Riwayat Ulasan</a>
+            <a href="pengaturan_akun_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Pengaturan Akun</a>
+            <a href="bantuan_akun_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-ink-muted hover:text-ink-body font-medium">Bantuan</a>
+            <div class="h-px bg-border-subtle my-1"></div>
+            <a href="masuk_login_desktop.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-red-600 font-semibold">Keluar Akun</a>
+          </div>
+        </details>
+
+        <!-- Page Header -->
+        <div class="pb-2 border-b border-border-subtle">
+          <h1 class="text-[30px] md:text-[34px] font-bold text-ink-body tracking-tight leading-tight">
+            Riwayat Ulasan
+          </h1>
+          <p class="text-[14px] sm:text-[15px] text-ink-muted mt-1">
+            Lihat dan kelola penilaian serta ulasan buku yang pernah kamu tulis.
+          </p>
+        </div>
+
+        <!-- 2-COLUMN WORKSPACE: Google Stitch Floating Sidebar + Main Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- LEFT FLOATING SIDEBAR (Independent Rounded Panel) -->
+          <aside class="hidden lg:block lg:col-span-4 xl:col-span-3">
+            <div class="lg:sticky lg:top-36 bg-white rounded-3xl border border-border-subtle shadow-sm p-6 flex flex-col gap-6">
+              
+              <!-- Mini Profile Identity Header -->
+              <div class="flex items-center gap-3.5 pb-5 border-b border-border-subtle">
+                <div id="sidebar-avatar" class="w-12 h-12 rounded-full bg-primary text-white font-bold text-[18px] flex items-center justify-center shrink-0 overflow-hidden shadow-xs">
+                  <span id="sidebar-avatar-initials">AH</span>
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <span id="sidebar-user-name" class="font-bold text-[15px] text-ink-body truncate">Ahmad Hidayat</span>
+                  <span id="sidebar-user-email" class="text-[12px] text-ink-muted truncate">ahmad.hidayat@literasi.id</span>
+                </div>
+              </div>
+
+              <!-- Navigation Menu Links (Updated: Buku Favorit removed, Riwayat Ulasan & Bantuan present) -->
+              <nav class="flex flex-col gap-1.5 text-[14px]">
+                <a href="akun_saya_profil_dropdown_navigasi_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">person</span>
+                  <span>Profil Saya</span>
+                </a>
+                <a href="riwayat_pesanan_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">receipt_long</span>
+                  <span>Riwayat Pesanan</span>
+                </a>
+                <a href="perpustakaan_saya_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">local_library</span>
+                  <span>Perpustakaan Saya</span>
+                </a>
+                <a href="riwayat_ulasan_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl bg-surface-soft text-primary font-bold shadow-xs transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">rate_review</span>
+                  <span>Riwayat Ulasan</span>
+                </a>
+                <a href="pengaturan_akun_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">settings</span>
+                  <span>Pengaturan Akun</span>
+                </a>
+                <a href="bantuan_akun_desktop.html" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-ink-muted hover:text-ink-body hover:bg-surface-neutral font-medium transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">help</span>
+                  <span>Bantuan</span>
+                </a>
+
+                <div class="h-px bg-border-subtle my-2"></div>
+
+                <a href="masuk_login_desktop.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-red-600 hover:bg-red-50 transition-colors font-semibold">
+                  <span class="material-symbols-outlined text-[20px]">logout</span>
+                  <span>Keluar Akun</span>
+                </a>
+              </nav>
+
+            </div>
+          </aside>
+
+          <!-- RIGHT MAIN: Review History Workspace -->
+          <section class="lg:col-span-8 xl:col-span-9 flex flex-col gap-6">
+            
+            <!-- Controls Bar: Count and Sorting -->
+            <div class="flex items-center justify-between pb-2 border-b border-border-subtle">
+              <span id="review-total-count" class="text-[14px] font-bold text-ink-body">
+                2 Ulasan Ditulis
+              </span>
+              <div class="flex items-center gap-2 text-[13px] text-ink-muted">
+                <span>Urutkan:</span>
+                <select id="review-sort-select" class="bg-surface-neutral text-ink-body text-[13px] font-semibold rounded-xl py-1.5 px-3 border border-border-subtle focus:border-primary focus:bg-white focus:outline-none cursor-pointer" onchange="handleSortReviews()">
+                  <option value="newest">Terbaru</option>
+                  <option value="oldest">Terlama</option>
+                  <option value="rating_high">Rating Tertinggi</option>
+                  <option value="rating_low">Rating Terendah</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Review Cards List Container -->
+            <div id="reviews-list-container" class="flex flex-col gap-4">
+              <!-- Rendered dynamically by renderReviewList() -->
+            </div>
+
+            <!-- Empty State for Reviews -->
+            <div id="reviews-empty-state" class="hidden p-10 sm:p-14 rounded-3xl bg-white border border-border-subtle shadow-xs text-center flex-col items-center justify-center gap-3">
+              <div class="w-36 aspect-square flex items-center justify-center mb-1">
+                <img src="../../assets/ilustration/notfoundil.png" alt="Belum Ada Ulasan" class="w-full h-full object-contain">
+              </div>
+              <h3 class="text-[19px] font-bold text-ink-body">Belum Ada Ulasan</h3>
+              <p class="text-[13.5px] text-ink-muted max-w-sm">
+                Ulasan dan penilaian bintang buku yang kamu tulis akan muncul di sini.
+              </p>
+              <a href="perpustakaan_saya_desktop.html" class="mt-2 inline-flex items-center gap-2 h-11 px-6 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13.5px] font-bold transition-all shadow-xs">
+                <span>Lihat Koleksi Buku</span>
+                <span class="material-symbols-outlined text-[17px]">arrow_forward</span>
+              </a>
+            </div>
+
+          </section>
+
+        </div>
+
+      </div>
+    </div>
+  </main>

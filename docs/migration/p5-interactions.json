@@ -1,0 +1,159 @@
+[
+ {
+  "scenario": "nav-chain",
+  "chain": [
+   {
+    "step": "home -> catalog",
+    "url": "/katalog",
+    "cards": 12
+   },
+   {
+    "step": "catalog -> detail",
+    "url": "/buku/antologi-puisi-lembayung",
+    "title": "\n            Antologi Puisi Lembayung\n          "
+   },
+   {
+    "step": "detail -> preview",
+    "url": "/buku/antologi-puisi-lembayung/cuplikan",
+    "counter": "Cuplikan 1 dari 4"
+   },
+   {
+    "step": "preview -> back to detail",
+    "url": "/buku/antologi-puisi-lembayung",
+    "title": "\n            Antologi Puisi Lembayung\n          "
+   },
+   {
+    "step": "detail -> back to catalog",
+    "url": "/katalog",
+    "cards": 12
+   }
+  ],
+  "errors": [],
+  "bad": []
+ },
+ {
+  "scenario": "catalog-pipeline",
+  "counts": {
+   "initial": 12,
+   "initialOrder": "\n                  Antologi Puisi Lembayung\n                ",
+   "searchLaskar": 1,
+   "categoryPendidikan": 3,
+   "allCheckboxUnchecked": true,
+   "publisherUpi": 4,
+   "firstAfterSortDesc": "\n                  Ekonomi Kerakyatan Jawa Barat\n                ",
+   "listClass": "flex flex-col gap-4",
+   "gridClass": "grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6",
+   "afterReset": 12,
+   "afterResetSort": "az",
+   "emptyVisible": true,
+   "gridHidden": true
+  },
+  "prices": [
+   "Rp 65.000",
+   "Rp 58.000",
+   "Rp 56.000",
+   "Rp 49.000"
+  ],
+  "errors": [],
+  "bad": []
+ },
+ {
+  "scenario": "detail-interactions",
+  "out": {
+   "stars": 5,
+   "labelAfterSelect": "Rating kamu: Sangat bagus (5 bintang)",
+   "userReviewInjected": 1,
+   "badgeAfter": "4 ulasan (termasuk kamu)",
+   "storedRating": {
+    "rating": 5,
+    "text": "Catatan uji integrasi.",
+    "date": "19 November 2026"
+   },
+   "userReviewAfterReset": 0,
+   "wishlistIcon": "favorite",
+   "cartBadge": "3",
+   "toastVisible": true,
+   "menuVisible": true,
+   "reactionBadge": true,
+   "storedReactions": 1,
+   "reportModalVisible": true,
+   "reportReasons": 5,
+   "reportErrorShown": true,
+   "reportStored": 1,
+   "reportClosed": true,
+   "bookModalVisible": true,
+   "bookTypes": 4,
+   "coverFilled": "http://127.0.0.1:8140/assets/ikapi/covers/laskar-aksara-pasundan.jpg",
+   "bookErrorShown": true,
+   "sectionFieldShown": true,
+   "bookReportStored": 1,
+   "bookReportRecord": {
+    "reportId": "LPR-DEMO-001",
+    "bookId": "BK-01",
+    "book": "Laskar Aksara Pasundan",
+    "author": "Ayi R. Kurnia",
+    "publisher": "Kiblat Buku Utama",
+    "cover": "http://127.0.0.1:8140/assets/ikapi/covers/laskar-aksara-pasundan.jpg",
+    "reporterUserId": "USR-PMB-0042",
+    "reportType": "Berkas E-Book Bermasalah",
+    "reportTypeId": "file",
+    "affectedSection": "",
+    "description": "",
+    "createdAt": "2026-11-19T06:07:54.866Z",
+    "reportStatus": "baru"
+   },
+   "bookModalClosed": true
+  },
+  "errors": [],
+  "bad": []
+ },
+ {
+  "scenario": "preview-interactions",
+  "out": {
+   "counter": "Cuplikan 1 dari 4",
+   "progress": "width: 25%;",
+   "prevDisabled": true,
+   "counter2": "Cuplikan 2 dari 4",
+   "title2": "Aroma Daluwang dan Jejak Masa Lalu",
+   "progress2": "width: 50%;",
+   "counterLast": "Cuplikan 4 dari 4",
+   "nextDisabled": true,
+   "endBox": 1,
+   "paragraphs": 6,
+   "toastVisible": true,
+   "addLabel": "Ditambahkan ke Keranjang"
+  },
+  "errors": [],
+  "bad": []
+ },
+ {
+  "scenario": "route-reload /",
+  "status": 200,
+  "h1": "Rekomendasi Buku",
+  "stable": true
+ },
+ {
+  "scenario": "route-reload /katalog",
+  "status": 200,
+  "h1": "Katalog Buku Digital",
+  "stable": true
+ },
+ {
+  "scenario": "route-reload /buku/laskar-aksara-pasundan",
+  "status": 200,
+  "h1": "Laskar Aksara Pasundan",
+  "stable": true
+ },
+ {
+  "scenario": "route-reload /buku/laskar-aksara-pasundan/cuplikan",
+  "status": 200,
+  "h1": "Jejak Aksara di Kaki Gunung Manglayang",
+  "stable": true
+ },
+ {
+  "scenario": "route-reload /buku/tidak-ada",
+  "status": 404,
+  "h1": "Buku atau halaman ini tidak ditemukan",
+  "stable": true
+ }
+]

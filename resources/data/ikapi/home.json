@@ -1,0 +1,120 @@
+{
+  "slides": [
+    {
+      "image": "banner-hero/Dari Penerbit Jawa Barat.png",
+      "alt": "Dari Penerbit Jawa Barat",
+      "bookSlug": null
+    },
+    {
+      "image": "banner-hero/Screenshot 2026-11-15 005252.png",
+      "alt": "Promo Spesial E-Book IKAPI Store",
+      "bookSlug": null
+    },
+    {
+      "image": "banner-hero/Screenshot 2026-11-15 005335.png",
+      "alt": "Rekomendasi Naskah & Pre-Order Buku",
+      "bookSlug": null
+    }
+  ],
+  "categories": [
+    {
+      "label": "Sastra & Fiksi",
+      "image": "sastra.png",
+      "alt": "Sastra & Fiksi"
+    },
+    {
+      "label": "Pendidikan",
+      "image": "pendidikan.png",
+      "alt": "Pendidikan"
+    },
+    {
+      "label": "Budaya & Tradisi",
+      "image": "budaya.png",
+      "alt": "Budaya & Tradisi"
+    },
+    {
+      "label": "Bisnis & Ekonomi",
+      "image": "bisnis.png",
+      "alt": "Bisnis & Ekonomi"
+    },
+    {
+      "label": "Anak & Remaja",
+      "image": "anak-remaja.png",
+      "alt": "Anak & Remaja"
+    }
+  ],
+  "shelves": [
+    {
+      "title": "Rekomendasi Buku",
+      "bookSlugs": [
+        "pride-and-prejudice",
+        "the-great-gatsby",
+        "the-adventures-of-sherlock-holmes",
+        "the-book-of-tea",
+        "the-picture-of-dorian-gray"
+      ]
+    },
+    {
+      "title": "Buku Rilis Terbaru",
+      "bookSlugs": [
+        "frankenstein",
+        "alices-adventures-in-wonderland",
+        "the-time-machine",
+        "flatland-a-romance",
+        "the-call-of-the-wild"
+      ]
+    },
+    {
+      "title": "Buku Terlaris",
+      "bookSlugs": [
+        "the-art-of-war",
+        "dracula",
+        "the-theory-of-the-leisure-class",
+        "a-tale-of-two-cities",
+        "moby-dick"
+      ]
+    }
+  ],
+  "agenda": [
+    {
+      "title": "Pekan Buku Jawa Barat 2026: Temu Penulis & Penerbit",
+      "image": "events/event-book-fair.jpg",
+      "alt": "Poster Pekan Buku Jawa Barat 2026",
+      "date": "28 Nov – 05 Des 2026 | 09:00 - 18:00 WIB",
+      "location": "Gedung Indonesia Menggugat, Bandung",
+      "price": "Gratis",
+      "priceClass": "text-[14px] font-bold text-primary",
+      "shareTitle": "Pekan Buku Jawa Barat 2026"
+    },
+    {
+      "title": "Festival Dongeng & Literasi Anak Pasundan",
+      "image": "events/event-children-story.jpg",
+      "alt": "Poster Festival Dongeng & Literasi Anak Pasundan",
+      "date": "12 Desember 2026 | 10:00 - 15:00 WIB",
+      "location": "Taman Literasi Bandung",
+      "price": "Gratis",
+      "priceClass": "text-[14px] font-bold text-primary",
+      "shareTitle": "Festival Dongeng & Literasi Anak Pasundan"
+    },
+    {
+      "title": "Bincang Buku: Masa Depan Penerbitan & Ekosistem E-Book",
+      "image": "events/event-community.jpg",
+      "alt": "Poster Bincang Buku Masa Depan Ekosistem E-Book",
+      "date": "18 Desember 2026 | 14:00 - 17:00 WIB",
+      "location": "Selasar Sunaryo Art Space, Bandung",
+      "price": "Rp 25.000",
+      "priceClass": "text-[14px] font-bold text-ink-body",
+      "shareTitle": "Bincang Buku: Masa Depan Penerbitan & Ekosistem E-Book"
+    },
+    {
+      "title": "Lokakarya Penulisan Buku Akademik & Monograf Ber-ISBN",
+      "image": "events/event-webinar.jpg",
+      "alt": "Poster Lokakarya Penulisan Buku Akademik & Monograf",
+      "date": "22 Desember 2026 | 09:00 - 12:00 WIB",
+      "location": "Daring via Zoom / Hybrid Unpad",
+      "price": "Gratis",
+      "priceClass": "text-[14px] font-bold text-primary",
+      "shareTitle": "Lokakarya Penulisan Buku Akademik & Monograf Ber-ISBN"
+    }
+  ]
+}

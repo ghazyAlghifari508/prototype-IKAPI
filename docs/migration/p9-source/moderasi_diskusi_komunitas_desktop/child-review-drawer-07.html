@@ -1,0 +1,60 @@
+<aside id="review-drawer" class="fixed right-0 top-0 z-[70] flex h-full w-full max-w-full flex-col border-l border-border bg-white shadow-[-16px_0_40px_rgba(34,34,37,0.12)] sm:max-w-[540px]" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+  <header class="flex items-start justify-between gap-4 border-b border-divider px-5 py-4">
+    <div class="min-w-0">
+      <h2 id="drawer-title" class="text-[17px] font-bold tracking-tight text-ink">Tinjau Laporan</h2>
+      <p class="num mt-0.5 text-[12.5px] text-muted" id="drawer-id">-</p>
+    </div>
+    <button type="button" id="drawer-close" aria-label="Tutup detail" class="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+      <span class="material-symbols-outlined text-[18px]">close</span>
+    </button>
+  </header>
+
+  <div class="flex-1 space-y-5 overflow-y-auto px-5 py-4">
+    <section>
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Konteks</h3>
+      <dl class="mt-2 space-y-2 text-[13px]">
+        <div class="flex justify-between gap-3"><dt class="text-muted">Komunitas</dt><dd class="text-right font-medium text-ink" id="detail-community">-</dd></div>
+        <div class="flex justify-between gap-3"><dt class="text-muted">Jenis konten</dt><dd class="text-right font-medium text-ink" id="detail-type">-</dd></div>
+        <div class="flex justify-between gap-3"><dt class="text-muted">Topik</dt><dd class="text-right font-medium text-ink" id="detail-topic">-</dd></div>
+        <div class="flex justify-between gap-3"><dt class="text-muted">Penulis</dt><dd class="text-right font-medium text-ink" id="detail-author">-</dd></div>
+        <div class="flex justify-between gap-3"><dt class="text-muted">Dilaporkan</dt><dd class="num text-right text-ink" id="detail-time">-</dd></div>
+        <div class="flex justify-between gap-3"><dt class="text-muted">Status laporan</dt><dd class="text-right font-semibold text-ink" id="detail-status">-</dd></div>
+        <div class="flex justify-between gap-3"><dt class="text-muted">Jumlah laporan konten ini</dt><dd class="num text-right text-ink" id="detail-report-count">-</dd></div>
+      </dl>
+    </section>
+
+    <section class="border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Konten yang dilaporkan</h3>
+      <p class="review-text mt-2 rounded-xl border border-border p-3.5 text-[13.5px] leading-relaxed text-ink" id="detail-content">-</p>
+      <p id="detail-content-note" class="mt-1.5 hidden text-[12px] text-[#B42318]"></p>
+    </section>
+
+    <section id="context-block" class="hidden border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Konteks diskusi</h3>
+      <p class="mt-1.5 text-[13px] font-semibold text-ink" id="context-topic-title">-</p>
+      <p class="mt-1 line-clamp-4 text-[13px] leading-relaxed text-muted" id="context-topic-body">-</p>
+      <div id="context-parent-reply" class="mt-2.5 hidden rounded-lg border border-border bg-neutral p-2.5 text-[12.5px] leading-relaxed">
+        <span class="block font-semibold text-ink" id="context-parent-author">-</span>
+        <span class="mt-0.5 block text-muted" id="context-parent-body">-</span>
+      </div>
+      <p class="mt-2 text-[12px] text-muted" id="context-other-replies"></p>
+    </section>
+
+    <section class="border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Alasan pelaporan</h3>
+      <p class="mt-1.5 text-[13.5px] font-semibold text-ink" id="detail-reason">-</p>
+      <p class="mt-1.5 text-[13px] leading-relaxed text-muted" id="detail-details">Tidak ada keterangan tambahan.</p>
+      <p class="mt-2 text-[12px] leading-relaxed text-muted">Alasan laporan bukan keputusan akhir. Periksa konteks sebelum menetapkan tindakan.</p>
+    </section>
+
+    <section class="border-t border-divider pt-4">
+      <h3 class="text-[11px] font-bold uppercase tracking-[0.08em] text-muted">Keputusan</h3>
+      <p class="mt-1.5 text-[13px] leading-relaxed text-ink" id="detail-decision">Belum ada keputusan.</p>
+    </section>
+  </div>
+
+  <footer class="flex items-center justify-end gap-2 border-t border-divider px-5 py-3.5">
+    <button type="button" id="btn-keep" class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[13.5px] font-semibold text-ink hover:bg-neutral disabled:cursor-not-allowed disabled:opacity-50">Pertahankan</button>
+    <button type="button" id="btn-remove" class="focus-ring inline-flex h-10 items-center rounded-xl bg-[#B42318] px-4 text-[13.5px] font-semibold text-white hover:bg-[#971B13] disabled:cursor-not-allowed disabled:opacity-50">Hapus Konten</button>
+  </footer>
+</aside>

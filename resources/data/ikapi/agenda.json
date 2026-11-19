@@ -1,0 +1,84 @@
+{
+  "events": [
+    {
+      "id": "ev-1",
+      "title": "Lokakarya Filologi Populer: Mengalihaksarakan Naskah Sunda Kuno",
+      "dates": [
+        "2026-11-18"
+      ],
+      "displayDate": "18 November 2026",
+      "time": "10:00 – 12:30 WIB",
+      "location": "Ruang Seminar Graha IKAPI Jabar, Bandung",
+      "organizer": "Kiblat Buku",
+      "category": "Lokakarya",
+      "image": "/assets/ikapi/events/event-community.jpg"
+    },
+    {
+      "id": "ev-2",
+      "title": "Bedah Buku & Diskusi Publik: Pendidikan Karakter Berbasis Kearifan Lokal",
+      "dates": [
+        "2026-11-22"
+      ],
+      "displayDate": "22 November 2026",
+      "time": "13:30 – 16:00 WIB",
+      "location": "Aula Pusat Studi Sunda, Bandung",
+      "organizer": "UPI Press",
+      "category": "Diskusi Publik",
+      "image": "/assets/ikapi/events/event-children-story.jpg"
+    },
+    {
+      "id": "ev-3",
+      "title": "Sarasehan Editor & Penulis: Standarisasi E-Book Berlisensi",
+      "dates": [
+        "2026-11-28"
+      ],
+      "displayDate": "28 November 2026",
+      "time": "09:00 – 12:00 WIB",
+      "location": "Daring via Zoom / Hybrid IKAPI Jabar",
+      "organizer": "IKAPI Jabar",
+      "category": "Webinar",
+      "image": "/assets/ikapi/events/event-webinar.jpg"
+    }
+  ],
+  "articles": {
+    "art-1": {
+      "title": "Transformasi Digital Buku Klasik Sunda: Menjangkau Generasi Muda Lewat Web Reader",
+      "category": "Warta Utama",
+      "date": "12 November 2026",
+      "author": "Redaksi IKAPI Jawa Barat",
+      "image": "/assets/ikapi/events/article-digital-classic.jpg",
+      "paragraphs": [
+        "Dalam era digital yang bergerak cepat, pelestarian karya sastra klasik menghadapi tantangan sekaligus peluang besar. IKAPI Jawa Barat bersama jejaring penerbit daerah meluncurkan inisiatif digitalisasi naskah Sunda klasik dengan format Web Reader yang ramah peramban.",
+        "Melalui platform ini, pembaca dari kalangan generasi muda dapat mengakses naskah berharga seperti Carita Parahyangan, Wawacan Panji Wulung, hingga naskah sejarah lokal dengan kenyamanan tipografi modern tanpa merusak keaslian teks aslinya.",
+        "\"Kami tidak hanya mendigitalkan teks, tetapi juga menyediakan transliterasi aksara dan glosarium kosakata arkais langsung di samping teks bacaan,\" tutur perwakilan tim kurasi literasi IKAPI Jawa Barat.",
+        "Dengan sistem lisensi resmi dan perlindungan hak cipta terpadu, inisiatif ini membuktikan bahwa teknologi modern dapat menjadi jembatan penghubung yang kokoh antara warisan masa silam dan generasi masa depan."
+      ]
+    },
+    "art-2": {
+      "title": "Wawancara Ayi R. Kurnia: Dari Naskah Kuno Cimanuk Menuju Novel Sejarah",
+      "category": "Wawancara Khusus",
+      "date": "10 November 2026",
+      "author": "Pewarta IKAPI Jabar",
+      "image": "/assets/ikapi/events/article-interview-author.jpg",
+      "paragraphs": [
+        "Ayi R. Kurnia, novelis sejarah terkemuka asal Garut, berbagi kisah riset mendalam di balik karya terbarunya yang mengangkat riwayat peradaban lembah Sungai Cimanuk abad ke-17.",
+        "Selama lebih dari tiga tahun, Ayi menelusuri lembar-lembar naskah lontar dan catatan kolonial di berbagai perpustakaan arsip untuk menghidupkan kembali narasi lokal yang nyaris terlupakan.",
+        "\"Tantangan terbesar dalam menulis fiksi sejarah adalah menjaga keseimbangan antara fakta sejarah yang valid dan daya imajinasi sastrawi yang memikat pembaca hari ini,\" ungkap Ayi dalam perbincangan hangat di Bandung.",
+        "Novel terbarunya kini telah tersedia dalam versi e-book berlisensi resmi di IKAPI Store Jawa Barat lengkap dengan pratinjau cuplikan bab pembuka."
+      ]
+    },
+    "art-3": {
+      "title": "Pentingnya Pembiasaan Literasi Aksara Nusantara di Sekolah Menengah",
+      "category": "Edukasi & Budaya",
+      "date": "08 November 2026",
+      "author": "Pusat Kajian Budaya Sunda",
+      "image": "/assets/ikapi/events/article-school-literacy.jpg",
+      "paragraphs": [
+        "Pengenalan aksara daerah bukan sekadar pelajaran bahasa lokal, melainkan fondasi pembentukan kesadaran sejarah dan identitas kultural anak bangsa sejak bangku sekolah.",
+        "Pusat Kajian Budaya Sunda bersama pendidik di Jawa Barat menginisiasi modul literasi visual berbasis komik dan buku cerita beraksara dwibahasa (Latin-Sunda) yang terbukti meningkatkan antusiasme siswa sekolah menengah.",
+        "Pendekatan visual kontemporer dan pemanfaatan media digital interaktif membantu mematahkan kesan bahwa aksara kuno sulit dipelajari oleh generasi Z.",
+        "Program percontohan ini rencananya akan diperluas ke berbagai sanggar literasi dan perpustakaan sekolah di wilayah Priangan Timur dan Cirebon Raya."
+      ]
+    }
+  }
+}

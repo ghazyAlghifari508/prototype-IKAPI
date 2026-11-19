@@ -1,0 +1,146 @@
+<main class="w-full pt-28 bg-white min-h-[calc(100vh-16rem)]">
+    <div class="flex flex-col w-full">
+      <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 w-full">
+        
+        <!-- Page Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-4 border-b border-border-subtle mb-8">
+          <div class="flex flex-col gap-1">
+            <h1 class="text-[28px] sm:text-[34px] font-bold text-ink-body tracking-tight leading-tight">
+              Keranjang Belanja
+            </h1>
+            <p id="cart-item-count" class="text-[14px] sm:text-[15px] text-ink-muted">
+              2 buku
+            </p>
+          </div>
+        </div>
+
+        <!-- VIEW 1: ACTIVE FILLED CART (Grid Layout) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start" id="cart-filled-view">
+          
+          <!-- LEFT COLUMN: Book List (8 Cols) -->
+          <div class="lg:col-span-8 flex flex-col gap-4">
+            <h2 class="text-[18px] font-bold text-ink-body">
+              Buku di Keranjang
+            </h2>
+
+            <!-- BOOK ITEM 1 -->
+            <article class="cart-item bg-white rounded-3xl p-5 border border-border-subtle shadow-xs hover:border-primary/40 transition-all flex flex-col sm:flex-row gap-5 items-start sm:items-center" id="cart-item-1" data-id="1" data-price="45000" data-title="Laskar Aksara Pasundan" data-cover="../../assets/covers/laskar-aksara-pasundan.jpg">
+              <div class="w-20 sm:w-24 aspect-[2/3] rounded-2xl overflow-hidden bg-surface-neutral border border-border-subtle shrink-0 shadow-xs">
+                <img src="../../assets/covers/laskar-aksara-pasundan.jpg" alt="Sampul Laskar Aksara Pasundan" class="w-full h-full object-cover">
+              </div>
+              <div class="flex-1 min-w-0 flex flex-col justify-between py-1 w-full sm:w-auto">
+                <div>
+                  <h3 class="text-[16px] font-bold text-ink-body leading-snug truncate">
+                    Laskar Aksara Pasundan
+                  </h3>
+                  <p class="text-[13px] text-ink-muted mt-0.5">
+                    Ayi R. Kurnia • E-Book
+                  </p>
+                </div>
+                <div class="mt-4 pt-2.5 border-t border-border-subtle flex items-center justify-between">
+                  <span class="text-[18px] font-bold text-ink-body font-sans">
+                    Rp 45.000
+                  </span>
+                  <div class="flex items-center gap-2">
+                    <button type="button" aria-label="Favorit" class="btn-fav w-9 h-9 rounded-xl hover:bg-surface-soft text-ink-muted transition-colors flex items-center justify-center border border-transparent hover:border-border-subtle cursor-pointer" onclick="toggleFavorite(1, this)">
+                      <span class="material-symbols-outlined text-[20px] transition-colors">favorite_border</span>
+                    </button>
+                    <button type="button" aria-label="Hapus dari Keranjang" class="h-9 px-3 rounded-xl text-red-600 hover:bg-red-50 text-[13px] font-semibold flex items-center gap-1 transition-colors cursor-pointer" onclick="removeCartItem(1)">
+                      <span class="material-symbols-outlined text-[17px]">delete</span>
+                      <span>Hapus</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- BOOK ITEM 2 -->
+            <article class="cart-item bg-white rounded-3xl p-5 border border-border-subtle shadow-xs hover:border-primary/40 transition-all flex flex-col sm:flex-row gap-5 items-start sm:items-center" id="cart-item-2" data-id="2" data-price="58000" data-title="Pendidikan Karakter Sunda" data-cover="../../assets/covers/B02.jpg">
+              <div class="w-20 sm:w-24 aspect-[2/3] rounded-2xl overflow-hidden bg-surface-neutral border border-border-subtle shrink-0 shadow-xs">
+                <img src="../../assets/covers/B02.jpg" alt="Sampul Pendidikan Karakter Sunda" class="w-full h-full object-cover">
+              </div>
+              <div class="flex-1 min-w-0 flex flex-col justify-between py-1 w-full sm:w-auto">
+                <div>
+                  <h3 class="text-[16px] font-bold text-ink-body leading-snug truncate">
+                    Pendidikan Karakter Sunda
+                  </h3>
+                  <p class="text-[13px] text-ink-muted mt-0.5">
+                    Dr. Cecep Hidayat, M.Pd. • E-Book
+                  </p>
+                </div>
+                <div class="mt-4 pt-2.5 border-t border-border-subtle flex items-center justify-between">
+                  <span class="text-[18px] font-bold text-ink-body font-sans">
+                    Rp 58.000
+                  </span>
+                  <div class="flex items-center gap-2">
+                    <button type="button" aria-label="Favorit" class="btn-fav w-9 h-9 rounded-xl hover:bg-surface-soft text-ink-muted transition-colors flex items-center justify-center border border-transparent hover:border-border-subtle cursor-pointer" onclick="toggleFavorite(2, this)">
+                      <span class="material-symbols-outlined text-[20px] transition-colors">favorite_border</span>
+                    </button>
+                    <button type="button" aria-label="Hapus dari Keranjang" class="h-9 px-3 rounded-xl text-red-600 hover:bg-red-50 text-[13px] font-semibold flex items-center gap-1 transition-colors cursor-pointer" onclick="removeCartItem(2)">
+                      <span class="material-symbols-outlined text-[17px]">delete</span>
+                      <span>Hapus</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- RIGHT COLUMN: Order Summary (4 Cols, Sticky on Desktop) -->
+          <aside class="lg:col-span-4 lg:sticky lg:top-36 w-full">
+            <div class="bg-white rounded-3xl p-6 border border-border-subtle shadow-sm flex flex-col gap-5">
+              <h2 class="text-[18px] font-bold text-ink-body pb-3 border-b border-border-subtle">
+                Ringkasan Pesanan
+              </h2>
+
+              <div class="flex flex-col gap-3 text-[14px]">
+                <div class="flex items-center justify-between">
+                  <span class="text-ink-muted">Subtotal</span>
+                  <span id="summary-subtotal" class="font-bold text-ink-body font-sans">Rp 103.000</span>
+                </div>
+                <div class="flex items-center justify-between text-ink-muted">
+                  <span>Biaya Layanan &amp; Lisensi</span>
+                  <span class="text-emerald-700 font-bold">Gratis</span>
+                </div>
+              </div>
+
+              <div class="pt-3 border-t border-border-subtle flex items-baseline justify-between">
+                <span class="text-[15px] font-bold text-ink-body">Total Pembayaran</span>
+                <span id="summary-total" class="text-[24px] font-bold text-primary font-sans leading-none">
+                  Rp 103.000
+                </span>
+              </div>
+
+              <!-- Directly opens Custom Midtrans Snap Modal (Redundant confirmation modal eliminated!) -->
+              <button id="btn-checkout" type="button" class="w-full h-12 rounded-xl bg-primary hover:bg-primary-hover text-white text-[15px] font-bold flex items-center justify-center gap-2 transition-all shadow-xs active:scale-[0.99] cursor-pointer" onclick="triggerDirectPaymentModal()">
+                <span>Lanjut ke Pembayaran</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </button>
+            </div>
+          </aside>
+
+        </div>
+
+        <!-- VIEW 2: EMPTY CART STATE (Directly on canvas, zero box/border) -->
+        <div class="w-full max-w-xl mx-auto py-12 text-center flex flex-col items-center gap-4 hidden" id="cart-empty-view">
+          <div class="w-44 sm:w-52 aspect-square flex items-center justify-center">
+            <img src="../../assets/ilustration/cart_empty_state.svg" alt="Keranjang Belanja Kosong" class="w-full h-full object-contain">
+          </div>
+          <div class="space-y-1">
+            <h2 class="text-[22px] sm:text-[24px] font-bold text-ink-body tracking-tight">
+              Keranjang Belanja Kosong
+            </h2>
+            <p class="text-[14px] sm:text-[15px] text-ink-muted">
+              Belum ada e-book di keranjang belanja Anda.
+            </p>
+          </div>
+          <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="mt-2 inline-flex items-center justify-center gap-2 h-11 px-6 rounded-xl bg-primary hover:bg-primary-hover text-white text-[14px] font-bold transition-colors shadow-xs">
+            <span class="material-symbols-outlined text-[18px]">explore</span>
+            <span>Lihat Katalog Buku</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>

@@ -1,0 +1,491 @@
+<script>
+    let isWidgetOpen = true;
+
+    // True Conversation Thread State
+    let conversationHistory = [];
+
+    let toastTimer = null;
+    function showToast(message, icon = 'check_circle') {
+      const toast = document.getElementById('toast-notification');
+      const msg = document.getElementById('toastMessage');
+      const ic = document.getElementById('toastIcon');
+      if (!toast || !msg) return;
+
+      msg.textContent = message;
+      if (ic) ic.textContent = icon;
+      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2500);
+    }
+
+    // Copy to clipboard helper for Z.ai action
+    function copyMessageText(btn, text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast('Pesan berhasil disalin ke papan klip', 'content_copy');
+        }).catch(() => {
+          showToast('Teks siap disalin', 'content_copy');
+        });
+      } else {
+        showToast('Teks siap disalin', 'content_copy');
+      }
+    }
+
+    // Helper to sanitize HTML strings
+    function escapeHtml(str) {
+      if (!str) return '';
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    function initWelcomeConversation() {
+      conversationHistory = [];
+      renderConversation();
+    }
+
+    function renderConversation() {
+      const body = document.getElementById('chat-body-scrollable');
+      const quickPromptsWrapper = document.getElementById('quick-prompts-wrapper');
+      if (!body) return;
+
+      // When conversation is empty, display the clean initial greeting & prompt cards (like Z.ai)
+      if (conversationHistory.length === 0) {
+        if (quickPromptsWrapper) quickPromptsWrapper.classList.add('hidden');
+        body.innerHTML = `
+          <div class="h-full flex flex-col justify-center items-center text-center px-1 py-6 space-y-5 animate-in fade-in duration-300">
+            <!-- Headline & Subtitle -->
+            <div class="space-y-1.5">
+              <h3 class="text-[20px] font-bold text-ink-body tracking-tight leading-snug">
+                Ada yang bisa dibantu?
+              </h3>
+              <p class="text-[13px] text-ink-muted leading-relaxed max-w-xs mx-auto">
+                Tanyakan rekomendasi buku, panduan pembayaran, atau cara membaca e-book di IKAPI Store.
+              </p>
+            </div>
+
+            <!-- Unified Rounded Card Container with 4 rows and 1px dividers (100% matching screenshot) -->
+            <div class="w-full rounded-2xl bg-surface-neutral border border-border-subtle overflow-hidden divide-y divide-border-subtle text-left shadow-xs">
+              <button type="button" class="w-full px-4 py-3.5 flex items-center gap-3.5 hover:bg-surface-soft hover:text-primary text-ink-body transition-colors cursor-pointer group" onclick="handleQuickPrompt('Cari buku sejarah Sunda')">
+                <span class="material-symbols-outlined text-[20px] text-primary shrink-0">auto_stories</span>
+                <span class="text-[13.5px] font-medium group-hover:text-primary transition-colors">Cari buku sejarah Sunda</span>
+              </button>
+
+              <button type="button" class="w-full px-4 py-3.5 flex items-center gap-3.5 hover:bg-surface-soft hover:text-primary text-ink-body transition-colors cursor-pointer group" onclick="handleQuickPrompt('Cara pembayaran')">
+                <span class="material-symbols-outlined text-[20px] text-primary shrink-0">payments</span>
+                <span class="text-[13.5px] font-medium group-hover:text-primary transition-colors">Cara pembayaran</span>
+              </button>
+
+              <button type="button" class="w-full px-4 py-3.5 flex items-center gap-3.5 hover:bg-surface-soft hover:text-primary text-ink-body transition-colors cursor-pointer group" onclick="handleQuickPrompt('Cara membaca e-book')">
+                <span class="material-symbols-outlined text-[20px] text-primary shrink-0">menu_book</span>
+                <span class="text-[13.5px] font-medium group-hover:text-primary transition-colors">Cara membaca e-book</span>
+              </button>
+
+              <button type="button" class="w-full px-4 py-3.5 flex items-center gap-3.5 hover:bg-surface-soft hover:text-primary text-ink-body transition-colors cursor-pointer group" onclick="handleQuickPrompt('Hubungi bantuan')">
+                <span class="material-symbols-outlined text-[20px] text-primary shrink-0">support_agent</span>
+                <span class="text-[13.5px] font-medium group-hover:text-primary transition-colors">Hubungi bantuan</span>
+              </button>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      // If conversation has messages, render conversation thread and show compact prompt row
+      if (quickPromptsWrapper) quickPromptsWrapper.classList.remove('hidden');
+      body.innerHTML = conversationHistory.map(msg => {
+        // User Messages: Z.ai right-aligned with sharp bottom-right corner
+        if (msg.role === 'user') {
+          return `
+            <div class="flex justify-end">
+              <div class="ikapi-user-message shadow-xs">
+                ${escapeHtml(msg.content)}
+              </div>
+            </div>
+          `;
+        }
+
+        if (msg.type === 'loading') {
+          return `
+            <div class="flex items-center gap-1.5 py-1.5 text-ink-muted text-[13px] animate-in fade-in duration-200">
+              <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+              <span class="w-2 h-2 rounded-full bg-primary animate-pulse [animation-delay:200ms]"></span>
+              <span class="w-2 h-2 rounded-full bg-primary animate-pulse [animation-delay:400ms]"></span>
+              <span class="ml-1 text-[13px]">Menyiapkan jawaban...</span>
+            </div>
+          `;
+        }
+
+        if (msg.type === 'rekomendasi') {
+          const rawCopyText = `${msg.content} Laskar Aksara Pasundan oleh Ayi R. Kurnia - Rp 45.000`;
+          return `
+            <div class="flex flex-col items-start gap-1 w-full animate-in fade-in duration-200">
+              <div class="w-full text-[14px] text-ink-body leading-relaxed space-y-3">
+                <p>${escapeHtml(msg.content)}</p>
+                
+                <!-- Recommendation Card -->
+                <div class="w-full bg-surface-neutral hover:bg-surface-soft/60 border border-border-subtle rounded-2xl p-3.5 flex gap-3.5 shadow-xs transition-colors">
+                  <div class="w-16 sm:w-20 aspect-[2/3] bg-white rounded-xl overflow-hidden shrink-0 border border-border-subtle shadow-xs">
+                    <img src="../../assets/covers/laskar-aksara-pasundan.jpg" alt="Sampul Laskar Aksara Pasundan" class="w-full h-full object-cover">
+                  </div>
+                  <div class="flex flex-col justify-between flex-1 min-w-0 py-0.5">
+                    <div>
+                      <h4 class="text-[14px] font-bold text-ink-body leading-tight truncate">Laskar Aksara Pasundan</h4>
+                      <p class="text-[12px] text-ink-muted mt-0.5">Ayi R. Kurnia</p>
+                      <p class="text-[14px] font-bold text-primary mt-1">Rp 45.000</p>
+                    </div>
+                    <div class="pt-1.5">
+                      <a href="detail_buku_desktop.html" data-path="detail-buku" class="inline-flex items-center gap-1 text-[13px] font-bold text-primary hover:text-primary-hover">
+                        <span>Lihat Buku</span>
+                        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Copy Action -->
+                <div>
+                  <button type="button" class="inline-flex items-center gap-1.5 text-[12px] text-ink-muted hover:text-primary transition-colors cursor-pointer" onclick="copyMessageText(this, '${escapeHtml(rawCopyText)}')">
+                    <span class="material-symbols-outlined text-[15px]">content_copy</span>
+                    <span>Salin</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        if (msg.type === 'pembayaran') {
+          const rawCopyText = `Cara Membeli & Membayar E-Book: 1. Pilih buku dan tambahkan ke keranjang. 2. Lanjutkan ke konfirmasi pesanan dan pembayaran. 3. Pilih metode pembayaran (QRIS atau Virtual Account). 4. Setelah terverifikasi, buku otomatis masuk ke akun Anda.`;
+          return `
+            <div class="flex flex-col items-start gap-1 w-full animate-in fade-in duration-200">
+              <div class="w-full text-[14px] text-ink-body leading-relaxed space-y-2.5">
+                <p class="font-bold text-ink-body">Cara Membeli &amp; Membayar E-Book:</p>
+                <ol class="list-decimal list-inside space-y-1 text-ink-body text-[13.5px]">
+                  <li>Pilih buku dan tambahkan ke keranjang belanja.</li>
+                  <li>Lanjutkan ke konfirmasi pesanan dan pembayaran.</li>
+                  <li>Pilih metode pembayaran (QRIS atau Virtual Account).</li>
+                  <li>Setelah terverifikasi, buku otomatis masuk ke akun Anda.</li>
+                </ol>
+                <div class="pt-1 flex items-center justify-between">
+                  <a href="perpustakaan_saya_desktop.html" data-path="perpustakaan-saya" class="text-[13px] font-bold text-primary hover:text-primary-hover inline-flex items-center gap-1">
+                    <span>Buka Perpustakaan Saya</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                  </a>
+                  <button type="button" class="inline-flex items-center gap-1.5 text-[12px] text-ink-muted hover:text-primary transition-colors cursor-pointer" onclick="copyMessageText(this, '${escapeHtml(rawCopyText)}')">
+                    <span class="material-symbols-outlined text-[15px]">content_copy</span>
+                    <span>Salin</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        if (msg.type === 'reader') {
+          const rawCopyText = `Cara Membaca E-Book: 1. Masuk ke akun IKAPI Store Anda. 2. Buka menu Perpustakaan Saya. 3. Pilih buku yang telah dibeli, lalu klik Mulai Baca. 4. E-book langsung dibaca di peramban tanpa unduh file.`;
+          return `
+            <div class="flex flex-col items-start gap-1 w-full animate-in fade-in duration-200">
+              <div class="w-full text-[14px] text-ink-body leading-relaxed space-y-2.5">
+                <p class="font-bold text-ink-body">Cara Membaca E-Book:</p>
+                <ol class="list-decimal list-inside space-y-1 text-ink-body text-[13.5px]">
+                  <li>Masuk ke akun IKAPI Store Anda.</li>
+                  <li>Buka menu <strong>Perpustakaan Saya</strong>.</li>
+                  <li>Pilih buku yang telah dibeli, lalu klik <strong>Mulai Baca</strong>.</li>
+                  <li>E-book langsung dibaca di peramban tanpa unduh file.</li>
+                </ol>
+                <div class="pt-1 flex items-center justify-between">
+                  <a href="perpustakaan_saya_desktop.html" data-path="perpustakaan-saya" class="text-[13px] font-bold text-primary hover:text-primary-hover inline-flex items-center gap-1">
+                    <span>Buka Perpustakaan Saya</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                  </a>
+                  <button type="button" class="inline-flex items-center gap-1.5 text-[12px] text-ink-muted hover:text-primary transition-colors cursor-pointer" onclick="copyMessageText(this, '${escapeHtml(rawCopyText)}')">
+                    <span class="material-symbols-outlined text-[15px]">content_copy</span>
+                    <span>Salin</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        if (msg.type === 'eskalasi') {
+          const rawCopyText = `Kontak Sekretariat IKAPI Jabar: Email: sekretariat@ikapi-jabar.id | Alamat: Jl. Buah Batu No. 120, Kota Bandung`;
+          return `
+            <div class="flex flex-col items-start gap-1 w-full animate-in fade-in duration-200">
+              <div class="w-full text-[14px] text-ink-body leading-relaxed space-y-2.5">
+                <p class="text-ink-body">
+                  Untuk pertanyaan seputar kerja sama penerbit, keanggotaan, atau kendala transaksi khusus, silakan hubungi tim kami:
+                </p>
+                <div class="bg-surface-neutral p-3 rounded-2xl border border-border-subtle text-[13px] space-y-2">
+                  <div class="flex items-center gap-2.5">
+                    <span class="material-symbols-outlined text-[18px] text-primary">mail</span>
+                    <a href="mailto:sekretariat@ikapi-jabar.id" class="text-primary font-medium hover:underline">sekretariat@ikapi-jabar.id</a>
+                  </div>
+                  <div class="flex items-center gap-2.5">
+                    <span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+                    <span class="text-ink-body">Jl. Buah Batu No. 120, Kota Bandung</span>
+                  </div>
+                </div>
+                <div class="pt-1">
+                  <button type="button" class="inline-flex items-center gap-1.5 text-[12px] text-ink-muted hover:text-primary transition-colors cursor-pointer" onclick="copyMessageText(this, '${escapeHtml(rawCopyText)}')">
+                    <span class="material-symbols-outlined text-[15px]">content_copy</span>
+                    <span>Salin</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        // Generic Plain Text Assistant Response
+        const plainCopyText = msg.content;
+        return `
+          <div class="flex flex-col items-start gap-1 w-full animate-in fade-in duration-200">
+            <div class="text-[14px] text-ink-body leading-relaxed space-y-2">
+              <p>${escapeHtml(msg.content)}</p>
+              <button type="button" class="inline-flex items-center gap-1.5 text-[12px] text-ink-muted hover:text-primary transition-colors cursor-pointer" onclick="copyMessageText(this, '${escapeHtml(plainCopyText)}')">
+                <span class="material-symbols-outlined text-[15px]">content_copy</span>
+                <span>Salin</span>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Auto scroll to bottom
+      setTimeout(() => {
+        body.scrollTop = body.scrollHeight;
+      }, 50);
+    }
+
+    // Toggle Chat Window
+    function toggleWidgetPanel() {
+      const windowEl = document.getElementById('ikapi-chat-window');
+      const chatIcon = document.getElementById('launcher-icon-chat');
+      const closeIcon = document.getElementById('launcher-icon-close');
+      const toggleLabel = document.getElementById('toggle-label-text');
+      const launcherBtn = document.getElementById('launcher-button');
+
+      isWidgetOpen = !isWidgetOpen;
+
+      if (isWidgetOpen) {
+        windowEl.classList.remove('hidden', 'scale-95', 'opacity-0', 'pointer-events-none');
+        windowEl.classList.add('flex', 'scale-100', 'opacity-100');
+        chatIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+        if (toggleLabel) toggleLabel.textContent = 'Tutup Jendela Chat';
+        if (launcherBtn) {
+          launcherBtn.setAttribute('aria-expanded', 'true');
+          launcherBtn.setAttribute('aria-label', 'Tutup Bantuan IKAPI');
+        }
+      } else {
+        windowEl.classList.add('hidden', 'scale-95', 'opacity-0', 'pointer-events-none');
+        windowEl.classList.remove('flex', 'scale-100', 'opacity-100');
+        chatIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        if (toggleLabel) toggleLabel.textContent = 'Buka Jendela Chat';
+        if (launcherBtn) {
+          launcherBtn.setAttribute('aria-expanded', 'false');
+          launcherBtn.setAttribute('aria-label', 'Buka Bantuan IKAPI');
+        }
+      }
+    }
+
+    function openWidgetIfClosed() {
+      if (!isWidgetOpen) {
+        toggleWidgetPanel();
+      }
+    }
+
+    // Reset Conversation to Initial Welcome
+    function resetChatConversation() {
+      initWelcomeConversation();
+      const input = document.getElementById('chat-input-field');
+      if (input) input.value = '';
+      showToast('Percakapan dibersihkan', 'refresh');
+    }
+
+    // Dispatch Assistant Response by Intent
+    function dispatchAssistantResponse(userText) {
+      const lower = userText.toLowerCase();
+
+      // Check Intent
+      if (lower.includes('sunda') || lower.includes('naskah') || lower.includes('sejarah') || lower.includes('rekomendasi')) {
+        conversationHistory.push({
+          id: 'msg-' + Date.now(),
+          role: 'assistant',
+          type: 'rekomendasi',
+          content: 'Ada buku yang membahas sejarah dan naskah Sunda. Ini yang paling sesuai dengan pencarianmu:'
+        });
+      } else if (lower.includes('bayar') || lower.includes('qris') || lower.includes('transfer') || lower.includes('pembayaran')) {
+        conversationHistory.push({
+          id: 'msg-' + Date.now(),
+          role: 'assistant',
+          type: 'pembayaran',
+          content: ''
+        });
+      } else if (lower.includes('baca') || lower.includes('reader') || lower.includes('e-book') || lower.includes('perpustakaan')) {
+        conversationHistory.push({
+          id: 'msg-' + Date.now(),
+          role: 'assistant',
+          type: 'reader',
+          content: ''
+        });
+      } else if (lower.includes('hubungi') || lower.includes('kontak') || lower.includes('bantuan') || lower.includes('cs') || lower.includes('admin') || lower.includes('kerja sama')) {
+        conversationHistory.push({
+          id: 'msg-' + Date.now(),
+          role: 'assistant',
+          type: 'eskalasi',
+          content: ''
+        });
+      } else {
+        // Fallback response
+        conversationHistory.push({
+          id: 'msg-' + Date.now(),
+          role: 'assistant',
+          type: 'text',
+          content: 'Untuk saat ini, aku bisa bantu cari buku, menjelaskan pembayaran, dan cara membaca e-book. Mau pilih salah satunya?'
+        });
+      }
+
+      renderConversation();
+    }
+
+    function handleQuickPrompt(text) {
+      openWidgetIfClosed();
+      conversationHistory.push({
+        id: 'msg-' + Date.now(),
+        role: 'user',
+        content: text
+      });
+      renderConversation();
+      setTimeout(() => {
+        dispatchAssistantResponse(text);
+      }, 100);
+    }
+
+    function handleChatSubmit(e) {
+      if (e) e.preventDefault();
+      const input = document.getElementById('chat-input-field');
+      if (!input) return;
+      const val = input.value.trim();
+      if (!val) return;
+
+      openWidgetIfClosed();
+      conversationHistory.push({
+        id: 'msg-' + Date.now(),
+        role: 'user',
+        content: val
+      });
+      input.value = '';
+      renderConversation();
+
+      setTimeout(() => {
+        dispatchAssistantResponse(val);
+      }, 100);
+    }
+
+    function handleTextareaKeydown(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        handleChatSubmit(e);
+      }
+    }
+
+    // Demo Scenario Switcher for Reviewers
+    function setDemoScenario(scenario) {
+      openWidgetIfClosed();
+
+      // Update Toolbar buttons visual
+      ['rekomendasi', 'pembayaran', 'eskalasi', 'loading'].forEach(sc => {
+        const btn = document.getElementById('btn-state-' + sc);
+        if (!btn) return;
+        if (sc === scenario) {
+          btn.className = "px-3 py-1 rounded-lg bg-primary text-white font-medium transition-all shadow-xs";
+        } else {
+          btn.className = "px-3 py-1 rounded-lg bg-surface-neutral text-ink-body hover:bg-surface-soft hover:text-primary font-medium transition-all border border-border-subtle";
+        }
+      });
+
+      if (scenario === 'rekomendasi') {
+        conversationHistory = [
+          {
+            id: 'demo-u1',
+            role: 'user',
+            content: 'Ada rekomendasi buku tentang sejarah atau naskah Sunda kuno?'
+          },
+          {
+            id: 'demo-a1',
+            role: 'assistant',
+            type: 'rekomendasi',
+            content: 'Ada buku yang membahas sejarah dan naskah Sunda. Ini yang paling sesuai dengan pencarianmu:'
+          }
+        ];
+        showToast('Skenario: Rekomendasi Buku aktif', 'smart_toy');
+      } else if (scenario === 'pembayaran') {
+        conversationHistory = [
+          {
+            id: 'demo-u2',
+            role: 'user',
+            content: 'Bagaimana cara melakukan pembayaran dan membuka e-book?'
+          },
+          {
+            id: 'demo-a2',
+            role: 'assistant',
+            type: 'pembayaran',
+            content: ''
+          }
+        ];
+        showToast('Skenario: Panduan Pembayaran aktif', 'payments');
+      } else if (scenario === 'eskalasi') {
+        conversationHistory = [
+          {
+            id: 'demo-u3',
+            role: 'user',
+            content: 'Saya ingin mengajukan kerja sama penerbitan naskah.'
+          },
+          {
+            id: 'demo-a3',
+            role: 'assistant',
+            type: 'eskalasi',
+            content: ''
+          }
+        ];
+        showToast('Skenario: Layanan CS aktif', 'support_agent');
+      } else if (scenario === 'loading') {
+        conversationHistory = [
+          {
+            id: 'demo-u4',
+            role: 'user',
+            content: 'Carikan buku antologi puisi Sunda kontemporer...'
+          },
+          {
+            id: 'demo-a4',
+            role: 'assistant',
+            type: 'loading',
+            content: ''
+          }
+        ];
+        showToast('Skenario: Status Memuat aktif', 'hourglass_top');
+      }
+
+      renderConversation();
+    }
+
+    // Close on Escape if widget is open
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isWidgetOpen) {
+        toggleWidgetPanel();
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initWelcomeConversation();
+    });
+  </script>

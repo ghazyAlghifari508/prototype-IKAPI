@@ -1,0 +1,6092 @@
+[
+ {
+  "page": "login",
+  "viewport": "1440x900",
+  "ratio": 0.000176,
+  "diffPixels": 228,
+  "protoHeight": 900,
+  "bladeHeight": 900,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Selamat Datang Kembali",
+     "fs": "26px",
+     "box": [
+      736,
+      189,
+      448,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Selamat Datang Kembali",
+     "fs": "26px",
+     "box": [
+      736,
+      189,
+      448,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "login",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 830,
+  "bladeHeight": 830,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Selamat Datang Kembali",
+     "fs": "26px",
+     "box": [
+      699,
+      155,
+      448,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Selamat Datang Kembali",
+     "fs": "26px",
+     "box": [
+      699,
+      155,
+      448,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "login",
+  "viewport": "768x1024",
+  "ratio": 0.000145,
+  "diffPixels": 114,
+  "protoHeight": 1024,
+  "bladeHeight": 1024,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Selamat Datang Kembali",
+     "fs": "26px",
+     "box": [
+      160,
+      251,
+      448,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Selamat Datang Kembali",
+     "fs": "26px",
+     "box": [
+      160,
+      251,
+      448,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "login",
+  "viewport": "390x844",
+  "ratio": 0.000352,
+  "diffPixels": 116,
+  "protoHeight": 844,
+  "bladeHeight": 844,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Selamat Datang Kembali",
+     "fs": "24px",
+     "box": [
+      41,
+      152,
+      308,
+      33
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Selamat Datang Kembali",
+     "fs": "24px",
+     "box": [
+      41,
+      152,
+      308,
+      33
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "login",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 818,
+  "bladeHeight": 818,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Selamat Datang Kembali",
+     "fs": "24px",
+     "box": [
+      41,
+      123,
+      238,
+      66
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Selamat Datang Kembali",
+     "fs": "24px",
+     "box": [
+      41,
+      123,
+      238,
+      66
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "login-publisher",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 900,
+  "bladeHeight": 900,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Masuk ke Portal Penerbit",
+     "fs": "26px",
+     "box": [
+      736,
+      234,
+      448,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Masuk ke Portal Penerbit",
+     "fs": "26px",
+     "box": [
+      736,
+      234,
+      448,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "login-publisher",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 768,
+  "bladeHeight": 768,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Masuk ke Portal Penerbit",
+     "fs": "26px",
+     "box": [
+      699,
+      168,
+      448,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Masuk ke Portal Penerbit",
+     "fs": "26px",
+     "box": [
+      699,
+      168,
+      448,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "login-publisher",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1024,
+  "bladeHeight": 1024,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Masuk ke Portal Penerbit",
+     "fs": "26px",
+     "box": [
+      160,
+      296,
+      448,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Masuk ke Portal Penerbit",
+     "fs": "26px",
+     "box": [
+      160,
+      296,
+      448,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "login-publisher",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 844,
+  "bladeHeight": 844,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Masuk ke Portal Penerbit",
+     "fs": "24px",
+     "box": [
+      41,
+      207,
+      308,
+      33
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Masuk ke Portal Penerbit",
+     "fs": "24px",
+     "box": [
+      41,
+      207,
+      308,
+      33
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "login-publisher",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 729,
+  "bladeHeight": 729,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Masuk ke Portal Penerbit",
+     "fs": "24px",
+     "box": [
+      41,
+      123,
+      238,
+      66
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Masuk ke Portal Penerbit",
+     "fs": "24px",
+     "box": [
+      41,
+      123,
+      238,
+      66
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "register",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 917,
+  "bladeHeight": 917,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Buat Akun",
+     "fs": "26px",
+     "box": [
+      704,
+      155,
+      512,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Buat Akun",
+     "fs": "26px",
+     "box": [
+      704,
+      155,
+      512,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "register",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 917,
+  "bladeHeight": 917,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Buat Akun",
+     "fs": "26px",
+     "box": [
+      667,
+      155,
+      512,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Buat Akun",
+     "fs": "26px",
+     "box": [
+      667,
+      155,
+      512,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "register",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1024,
+  "bladeHeight": 1024,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Buat Akun",
+     "fs": "26px",
+     "box": [
+      128,
+      208,
+      512,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Buat Akun",
+     "fs": "26px",
+     "box": [
+      128,
+      208,
+      512,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "register",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1064,
+  "bladeHeight": 1064,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Buat Akun",
+     "fs": "24px",
+     "box": [
+      41,
+      123,
+      308,
+      33
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Buat Akun",
+     "fs": "24px",
+     "box": [
+      41,
+      123,
+      308,
+      33
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "register",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1085,
+  "bladeHeight": 1085,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Buat Akun",
+     "fs": "24px",
+     "box": [
+      41,
+      123,
+      238,
+      33
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Buat Akun",
+     "fs": "24px",
+     "box": [
+      41,
+      123,
+      238,
+      33
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "register-publisher",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 944,
+  "bladeHeight": 944,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Daftar sebagai Penerbit",
+     "fs": "26px",
+     "box": [
+      704,
+      155,
+      512,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Daftar sebagai Penerbit",
+     "fs": "26px",
+     "box": [
+      704,
+      155,
+      512,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "register-publisher",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 944,
+  "bladeHeight": 944,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Daftar sebagai Penerbit",
+     "fs": "26px",
+     "box": [
+      667,
+      155,
+      512,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Daftar sebagai Penerbit",
+     "fs": "26px",
+     "box": [
+      667,
+      155,
+      512,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "register-publisher",
+  "viewport": "768x1024",
+  "ratio": 0.000286,
+  "diffPixels": 225,
+  "protoHeight": 1024,
+  "bladeHeight": 1024,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Daftar sebagai Penerbit",
+     "fs": "26px",
+     "box": [
+      128,
+      194,
+      512,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Daftar sebagai Penerbit",
+     "fs": "26px",
+     "box": [
+      128,
+      194,
+      512,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "register-publisher",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 896,
+  "bladeHeight": 896,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Daftar sebagai Penerbit",
+     "fs": "24px",
+     "box": [
+      41,
+      123,
+      308,
+      33
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Daftar sebagai Penerbit",
+     "fs": "24px",
+     "box": [
+      41,
+      123,
+      308,
+      33
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "register-publisher",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 950,
+  "bladeHeight": 950,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Daftar sebagai Penerbit",
+     "fs": "24px",
+     "box": [
+      41,
+      123,
+      238,
+      66
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Daftar sebagai Penerbit",
+     "fs": "24px",
+     "box": [
+      41,
+      123,
+      238,
+      66
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "forgot",
+  "viewport": "1440x900",
+  "ratio": 0.00013,
+  "diffPixels": 168,
+  "protoHeight": 900,
+  "bladeHeight": 900,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Lupa Kata Sandi?",
+     "fs": "26px",
+     "box": [
+      736,
+      293,
+      448,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Lupa Kata Sandi?",
+     "fs": "26px",
+     "box": [
+      736,
+      293,
+      448,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "forgot",
+  "viewport": "1366x768",
+  "ratio": 0.000205,
+  "diffPixels": 215,
+  "protoHeight": 768,
+  "bladeHeight": 768,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Lupa Kata Sandi?",
+     "fs": "26px",
+     "box": [
+      699,
+      227,
+      448,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Lupa Kata Sandi?",
+     "fs": "26px",
+     "box": [
+      699,
+      227,
+      448,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "forgot",
+  "viewport": "768x1024",
+  "ratio": 0.000207,
+  "diffPixels": 163,
+  "protoHeight": 1024,
+  "bladeHeight": 1024,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Lupa Kata Sandi?",
+     "fs": "26px",
+     "box": [
+      160,
+      355,
+      448,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Lupa Kata Sandi?",
+     "fs": "26px",
+     "box": [
+      160,
+      355,
+      448,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "forgot",
+  "viewport": "390x844",
+  "ratio": 0.000495,
+  "diffPixels": 163,
+  "protoHeight": 844,
+  "bladeHeight": 844,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Lupa Kata Sandi?",
+     "fs": "24px",
+     "box": [
+      41,
+      266,
+      308,
+      33
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Lupa Kata Sandi?",
+     "fs": "24px",
+     "box": [
+      41,
+      266,
+      308,
+      33
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "forgot",
+  "viewport": "320x700",
+  "ratio": 0.000728,
+  "diffPixels": 163,
+  "protoHeight": 700,
+  "bladeHeight": 700,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Lupa Kata Sandi?",
+     "fs": "24px",
+     "box": [
+      41,
+      184,
+      238,
+      33
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Lupa Kata Sandi?",
+     "fs": "24px",
+     "box": [
+      41,
+      184,
+      238,
+      33
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "verify",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 900,
+  "bladeHeight": 900,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Cek Email untuk Verifikasi",
+     "fs": "26px",
+     "box": [
+      736,
+      265,
+      448,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Cek Email untuk Verifikasi",
+     "fs": "26px",
+     "box": [
+      736,
+      265,
+      448,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "verify",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 768,
+  "bladeHeight": 768,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Cek Email untuk Verifikasi",
+     "fs": "26px",
+     "box": [
+      699,
+      199,
+      448,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Cek Email untuk Verifikasi",
+     "fs": "26px",
+     "box": [
+      699,
+      199,
+      448,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "verify",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1024,
+  "bladeHeight": 1024,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Cek Email untuk Verifikasi",
+     "fs": "26px",
+     "box": [
+      160,
+      327,
+      448,
+      36
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Cek Email untuk Verifikasi",
+     "fs": "26px",
+     "box": [
+      160,
+      327,
+      448,
+      36
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "verify",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 844,
+  "bladeHeight": 844,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Cek Email untuk Verifikasi",
+     "fs": "24px",
+     "box": [
+      41,
+      207,
+      308,
+      33
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Cek Email untuk Verifikasi",
+     "fs": "24px",
+     "box": [
+      41,
+      207,
+      308,
+      33
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "verify",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 700,
+  "bladeHeight": 700,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Cek Email untuk Verifikasi",
+     "fs": "24px",
+     "box": [
+      41,
+      118,
+      238,
+      66
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Cek Email untuk Verifikasi",
+     "fs": "24px",
+     "box": [
+      41,
+      118,
+      238,
+      66
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "onboarding",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 900,
+  "bladeHeight": 900,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Kategori buku apa yang kamu sukai?",
+     "fs": "26px",
+     "box": [
+      730,
+      295,
+      460,
+      36
+     ]
+    },
+    {
+     "t": "Kamu lebih suka gaya bacaan seperti apa?",
+     "fs": "26px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Berapa lama kamu biasanya membaca dalam ",
+     "fs": "26px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Preferensi bacaan tersimpan",
+     "fs": "24px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Kategori buku apa yang kamu sukai?",
+     "fs": "26px",
+     "box": [
+      730,
+      295,
+      460,
+      36
+     ]
+    },
+    {
+     "t": "Kamu lebih suka gaya bacaan seperti apa?",
+     "fs": "26px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Berapa lama kamu biasanya membaca dalam ",
+     "fs": "26px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Preferensi bacaan tersimpan",
+     "fs": "24px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", system-ui, sa",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", system-ui, sa",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "onboarding",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 768,
+  "bladeHeight": 768,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Kategori buku apa yang kamu sukai?",
+     "fs": "26px",
+     "box": [
+      693,
+      229,
+      460,
+      36
+     ]
+    },
+    {
+     "t": "Kamu lebih suka gaya bacaan seperti apa?",
+     "fs": "26px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Berapa lama kamu biasanya membaca dalam ",
+     "fs": "26px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Preferensi bacaan tersimpan",
+     "fs": "24px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Kategori buku apa yang kamu sukai?",
+     "fs": "26px",
+     "box": [
+      693,
+      229,
+      460,
+      36
+     ]
+    },
+    {
+     "t": "Kamu lebih suka gaya bacaan seperti apa?",
+     "fs": "26px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Berapa lama kamu biasanya membaca dalam ",
+     "fs": "26px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Preferensi bacaan tersimpan",
+     "fs": "24px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", system-ui, sa",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", system-ui, sa",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "onboarding",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1024,
+  "bladeHeight": 1024,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Kategori buku apa yang kamu sukai?",
+     "fs": "26px",
+     "box": [
+      154,
+      564,
+      460,
+      36
+     ]
+    },
+    {
+     "t": "Kamu lebih suka gaya bacaan seperti apa?",
+     "fs": "26px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Berapa lama kamu biasanya membaca dalam ",
+     "fs": "26px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Preferensi bacaan tersimpan",
+     "fs": "24px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Kategori buku apa yang kamu sukai?",
+     "fs": "26px",
+     "box": [
+      154,
+      564,
+      460,
+      36
+     ]
+    },
+    {
+     "t": "Kamu lebih suka gaya bacaan seperti apa?",
+     "fs": "26px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Berapa lama kamu biasanya membaca dalam ",
+     "fs": "26px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Preferensi bacaan tersimpan",
+     "fs": "24px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", system-ui, sa",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", system-ui, sa",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "onboarding",
+  "viewport": "390x844",
+  "ratio": 0.003174,
+  "diffPixels": 1207,
+  "protoHeight": 975,
+  "bladeHeight": 975,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Kategori buku apa yang kamu sukai?",
+     "fs": "24px",
+     "box": [
+      41,
+      408,
+      308,
+      66
+     ]
+    },
+    {
+     "t": "Kamu lebih suka gaya bacaan seperti apa?",
+     "fs": "24px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Berapa lama kamu biasanya membaca dalam ",
+     "fs": "24px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Preferensi bacaan tersimpan",
+     "fs": "24px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Kategori buku apa yang kamu sukai?",
+     "fs": "24px",
+     "box": [
+      41,
+      408,
+      308,
+      66
+     ]
+    },
+    {
+     "t": "Kamu lebih suka gaya bacaan seperti apa?",
+     "fs": "24px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Berapa lama kamu biasanya membaca dalam ",
+     "fs": "24px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Preferensi bacaan tersimpan",
+     "fs": "24px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", system-ui, sa",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", system-ui, sa",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "onboarding",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1110,
+  "bladeHeight": 1110,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Kategori buku apa yang kamu sukai?",
+     "fs": "24px",
+     "box": [
+      41,
+      356,
+      238,
+      66
+     ]
+    },
+    {
+     "t": "Kamu lebih suka gaya bacaan seperti apa?",
+     "fs": "24px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Berapa lama kamu biasanya membaca dalam ",
+     "fs": "24px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Preferensi bacaan tersimpan",
+     "fs": "24px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Kategori buku apa yang kamu sukai?",
+     "fs": "24px",
+     "box": [
+      41,
+      356,
+      238,
+      66
+     ]
+    },
+    {
+     "t": "Kamu lebih suka gaya bacaan seperti apa?",
+     "fs": "24px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Berapa lama kamu biasanya membaca dalam ",
+     "fs": "24px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "Preferensi bacaan tersimpan",
+     "fs": "24px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", system-ui, sa",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", system-ui, sa",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "publisher-status",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 900,
+  "bladeHeight": 900,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "24px",
+     "box": [
+      433,
+      182,
+      574,
+      33
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "24px",
+     "box": [
+      433,
+      182,
+      574,
+      33
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "publisher-status",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 824,
+  "bladeHeight": 824,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "24px",
+     "box": [
+      396,
+      182,
+      574,
+      33
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "24px",
+     "box": [
+      396,
+      182,
+      574,
+      33
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "publisher-status",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1024,
+  "bladeHeight": 1024,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "24px",
+     "box": [
+      97,
+      182,
+      574,
+      33
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "24px",
+     "box": [
+      97,
+      182,
+      574,
+      33
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "publisher-status",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 849,
+  "bladeHeight": 849,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "22px",
+     "box": [
+      37,
+      158,
+      316,
+      61
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "22px",
+     "box": [
+      37,
+      158,
+      316,
+      61
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "publisher-status",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 957,
+  "bladeHeight": 957,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "22px",
+     "box": [
+      37,
+      158,
+      246,
+      61
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "22px",
+     "box": [
+      37,
+      158,
+      246,
+      61
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "publisher-status-aktif",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 900,
+  "bladeHeight": 900,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "24px",
+     "box": [
+      433,
+      182,
+      574,
+      33
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "24px",
+     "box": [
+      433,
+      182,
+      574,
+      33
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "publisher-status-aktif",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 824,
+  "bladeHeight": 824,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "24px",
+     "box": [
+      396,
+      182,
+      574,
+      33
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "24px",
+     "box": [
+      396,
+      182,
+      574,
+      33
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "publisher-status-aktif",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1024,
+  "bladeHeight": 1024,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "24px",
+     "box": [
+      97,
+      182,
+      574,
+      33
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "24px",
+     "box": [
+      97,
+      182,
+      574,
+      33
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "publisher-status-aktif",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 903,
+  "bladeHeight": 903,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "22px",
+     "box": [
+      37,
+      158,
+      316,
+      61
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "22px",
+     "box": [
+      37,
+      158,
+      316,
+      61
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "publisher-status-aktif",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1011,
+  "bladeHeight": 1011,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "22px",
+     "box": [
+      37,
+      158,
+      246,
+      61
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pendaftaran penerbit sedang ditinjau",
+     "fs": "22px",
+     "box": [
+      37,
+      158,
+      246,
+      61
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(245, 245, 246)"
+   ]
+  }
+ },
+ {
+  "page": "profile",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1371,
+  "bladeHeight": 1371,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Profil Saya",
+     "fs": "34px",
+     "box": [
+      72,
+      144,
+      1296,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Profil Saya",
+     "fs": "34px",
+     "box": [
+      72,
+      144,
+      1296,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "profile",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1371,
+  "bladeHeight": 1371,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Profil Saya",
+     "fs": "34px",
+     "box": [
+      35,
+      144,
+      1296,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Profil Saya",
+     "fs": "34px",
+     "box": [
+      35,
+      144,
+      1296,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "profile",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1483,
+  "bladeHeight": 1483,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Profil Saya",
+     "fs": "34px",
+     "box": [
+      24,
+      215,
+      720,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Profil Saya",
+     "fs": "34px",
+     "box": [
+      24,
+      215,
+      720,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "profile",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 2010,
+  "bladeHeight": 2010,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Profil Saya",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      358,
+      38
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Profil Saya",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      358,
+      38
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "profile",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 2195,
+  "bladeHeight": 2195,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Profil Saya",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      288,
+      38
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Profil Saya",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      288,
+      38
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "settings",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1843,
+  "bladeHeight": 1843,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pengaturan Akun",
+     "fs": "34px",
+     "box": [
+      72,
+      144,
+      1296,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pengaturan Akun",
+     "fs": "34px",
+     "box": [
+      72,
+      144,
+      1296,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "settings",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1843,
+  "bladeHeight": 1843,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pengaturan Akun",
+     "fs": "34px",
+     "box": [
+      35,
+      144,
+      1296,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pengaturan Akun",
+     "fs": "34px",
+     "box": [
+      35,
+      144,
+      1296,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "settings",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1971,
+  "bladeHeight": 1971,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pengaturan Akun",
+     "fs": "34px",
+     "box": [
+      24,
+      215,
+      720,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pengaturan Akun",
+     "fs": "34px",
+     "box": [
+      24,
+      215,
+      720,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "settings",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 2497,
+  "bladeHeight": 2497,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pengaturan Akun",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      358,
+      38
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pengaturan Akun",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      358,
+      38
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "settings",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 2819,
+  "bladeHeight": 2819,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pengaturan Akun",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      288,
+      38
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pengaturan Akun",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      288,
+      38
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "help",
+  "viewport": "1440x900",
+  "ratio": 0.000031,
+  "diffPixels": 75,
+  "protoHeight": 1694,
+  "bladeHeight": 1694,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pusat Bantuan",
+     "fs": "34px",
+     "box": [
+      72,
+      144,
+      1296,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pusat Bantuan",
+     "fs": "34px",
+     "box": [
+      72,
+      144,
+      1296,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "help",
+  "viewport": "1366x768",
+  "ratio": 0.000032,
+  "diffPixels": 75,
+  "protoHeight": 1694,
+  "bladeHeight": 1694,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pusat Bantuan",
+     "fs": "34px",
+     "box": [
+      35,
+      144,
+      1296,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pusat Bantuan",
+     "fs": "34px",
+     "box": [
+      35,
+      144,
+      1296,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "help",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1822,
+  "bladeHeight": 1822,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pusat Bantuan",
+     "fs": "34px",
+     "box": [
+      24,
+      215,
+      720,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pusat Bantuan",
+     "fs": "34px",
+     "box": [
+      24,
+      215,
+      720,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "help",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 2381,
+  "bladeHeight": 2381,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pusat Bantuan",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      358,
+      38
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pusat Bantuan",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      358,
+      38
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "help",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 2634,
+  "bladeHeight": 2634,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Pusat Bantuan",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      288,
+      38
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Pusat Bantuan",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      288,
+      38
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "cart",
+  "viewport": "1440x900",
+  "ratio": 0.000093,
+  "diffPixels": 152,
+  "protoHeight": 1137,
+  "bladeHeight": 1137,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Keranjang Belanja",
+     "fs": "34px",
+     "box": [
+      72,
+      144,
+      266,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Keranjang Belanja",
+     "fs": "34px",
+     "box": [
+      72,
+      144,
+      266,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "cart",
+  "viewport": "1366x768",
+  "ratio": 0.001787,
+  "diffPixels": 2776,
+  "protoHeight": 1137,
+  "bladeHeight": 1137,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Keranjang Belanja",
+     "fs": "34px",
+     "box": [
+      35,
+      144,
+      266,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Keranjang Belanja",
+     "fs": "34px",
+     "box": [
+      35,
+      144,
+      266,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "cart",
+  "viewport": "768x1024",
+  "ratio": 0.00013,
+  "diffPixels": 152,
+  "protoHeight": 1517,
+  "bladeHeight": 1517,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Keranjang Belanja",
+     "fs": "34px",
+     "box": [
+      24,
+      144,
+      266,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Keranjang Belanja",
+     "fs": "34px",
+     "box": [
+      24,
+      144,
+      266,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "cart",
+  "viewport": "390x844",
+  "ratio": 0.000201,
+  "diffPixels": 150,
+  "protoHeight": 1909,
+  "bladeHeight": 1909,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Keranjang Belanja",
+     "fs": "28px",
+     "box": [
+      16,
+      144,
+      358,
+      35
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Keranjang Belanja",
+     "fs": "28px",
+     "box": [
+      16,
+      144,
+      358,
+      35
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "cart",
+  "viewport": "320x700",
+  "ratio": 0.000228,
+  "diffPixels": 150,
+  "protoHeight": 2054,
+  "bladeHeight": 2054,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Keranjang Belanja",
+     "fs": "28px",
+     "box": [
+      16,
+      144,
+      288,
+      35
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Keranjang Belanja",
+     "fs": "28px",
+     "box": [
+      16,
+      144,
+      288,
+      35
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "orders",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1953,
+  "bladeHeight": 1953,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Riwayat Pesanan",
+     "fs": "34px",
+     "box": [
+      72,
+      144,
+      1296,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Riwayat Pesanan",
+     "fs": "34px",
+     "box": [
+      72,
+      144,
+      1296,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "orders",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1953,
+  "bladeHeight": 1953,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Riwayat Pesanan",
+     "fs": "34px",
+     "box": [
+      35,
+      144,
+      1296,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Riwayat Pesanan",
+     "fs": "34px",
+     "box": [
+      35,
+      144,
+      1296,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "orders",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 2081,
+  "bladeHeight": 2081,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Riwayat Pesanan",
+     "fs": "34px",
+     "box": [
+      24,
+      215,
+      720,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Riwayat Pesanan",
+     "fs": "34px",
+     "box": [
+      24,
+      215,
+      720,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "orders",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 2621,
+  "bladeHeight": 2621,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Riwayat Pesanan",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      358,
+      38
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Riwayat Pesanan",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      358,
+      38
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "orders",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 2877,
+  "bladeHeight": 2877,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Riwayat Pesanan",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      288,
+      38
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Riwayat Pesanan",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      288,
+      38
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "library",
+  "viewport": "1440x900",
+  "ratio": 0.000406,
+  "diffPixels": 979,
+  "protoHeight": 1673,
+  "bladeHeight": 1673,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Perpustakaan Saya",
+     "fs": "34px",
+     "box": [
+      72,
+      192,
+      574,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Perpustakaan Saya",
+     "fs": "34px",
+     "box": [
+      72,
+      192,
+      574,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "library",
+  "viewport": "1366x768",
+  "ratio": 0.000428,
+  "diffPixels": 979,
+  "protoHeight": 1673,
+  "bladeHeight": 1673,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Perpustakaan Saya",
+     "fs": "34px",
+     "box": [
+      35,
+      192,
+      574,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Perpustakaan Saya",
+     "fs": "34px",
+     "box": [
+      35,
+      192,
+      574,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "library",
+  "viewport": "768x1024",
+  "ratio": 0.000531,
+  "diffPixels": 1064,
+  "protoHeight": 2608,
+  "bladeHeight": 2608,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Perpustakaan Saya",
+     "fs": "34px",
+     "box": [
+      24,
+      263,
+      720,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Perpustakaan Saya",
+     "fs": "34px",
+     "box": [
+      24,
+      263,
+      720,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "library",
+  "viewport": "390x844",
+  "ratio": 0.000757,
+  "diffPixels": 1067,
+  "protoHeight": 3616,
+  "bladeHeight": 3616,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Perpustakaan Saya",
+     "fs": "30px",
+     "box": [
+      16,
+      263,
+      358,
+      38
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Perpustakaan Saya",
+     "fs": "30px",
+     "box": [
+      16,
+      263,
+      358,
+      38
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "library",
+  "viewport": "320x700",
+  "ratio": 0.001028,
+  "diffPixels": 1146,
+  "protoHeight": 3484,
+  "bladeHeight": 3484,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Perpustakaan Saya",
+     "fs": "30px",
+     "box": [
+      16,
+      284,
+      288,
+      38
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Perpustakaan Saya",
+     "fs": "30px",
+     "box": [
+      16,
+      284,
+      288,
+      38
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "reader",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1142,
+  "bladeHeight": 1142,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Laskar Aksara Pasundan",
+     "fs": "15px",
+     "box": [
+      625,
+      12,
+      178,
+      23
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Laskar Aksara Pasundan",
+     "fs": "15px",
+     "box": [
+      625,
+      12,
+      178,
+      23
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", -apple-system",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "reader",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1142,
+  "bladeHeight": 1142,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Laskar Aksara Pasundan",
+     "fs": "15px",
+     "box": [
+      588,
+      12,
+      178,
+      23
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Laskar Aksara Pasundan",
+     "fs": "15px",
+     "box": [
+      588,
+      12,
+      178,
+      23
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", -apple-system",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "reader",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1174,
+  "bladeHeight": 1174,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Laskar Aksara Pasundan",
+     "fs": "15px",
+     "box": [
+      289,
+      12,
+      178,
+      23
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Laskar Aksara Pasundan",
+     "fs": "15px",
+     "box": [
+      289,
+      12,
+      178,
+      23
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", -apple-system",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "reader",
+  "viewport": "390x844",
+  "ratio": 0.000301,
+  "diffPixels": 213,
+  "protoHeight": 1815,
+  "bladeHeight": 1815,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Laskar Aksara Pasundan",
+     "fs": "14px",
+     "box": [
+      41,
+      13,
+      166,
+      21
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Laskar Aksara Pasundan",
+     "fs": "14px",
+     "box": [
+      41,
+      13,
+      166,
+      21
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", -apple-system",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "reader",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 2190,
+  "bladeHeight": 2190,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Laskar Aksara Pasundan",
+     "fs": "14px",
+     "box": [
+      6,
+      13,
+      166,
+      21
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Laskar Aksara Pasundan",
+     "fs": "14px",
+     "box": [
+      6,
+      13,
+      166,
+      21
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", -apple-system",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", -apple-system",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "reviews",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1293,
+  "bladeHeight": 1293,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Riwayat Ulasan",
+     "fs": "34px",
+     "box": [
+      72,
+      144,
+      1296,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Riwayat Ulasan",
+     "fs": "34px",
+     "box": [
+      72,
+      144,
+      1296,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "reviews",
+  "viewport": "1366x768",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1293,
+  "bladeHeight": 1293,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Riwayat Ulasan",
+     "fs": "34px",
+     "box": [
+      35,
+      144,
+      1296,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Riwayat Ulasan",
+     "fs": "34px",
+     "box": [
+      35,
+      144,
+      1296,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "reviews",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1420,
+  "bladeHeight": 1420,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Riwayat Ulasan",
+     "fs": "34px",
+     "box": [
+      24,
+      215,
+      720,
+      43
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Riwayat Ulasan",
+     "fs": "34px",
+     "box": [
+      24,
+      215,
+      720,
+      43
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "reviews",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1769,
+  "bladeHeight": 1769,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Riwayat Ulasan",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      358,
+      38
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Riwayat Ulasan",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      358,
+      38
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "reviews",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 1946,
+  "bladeHeight": 1946,
+  "protoWidth": 328,
+  "bladeWidth": 328,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Riwayat Ulasan",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      288,
+      38
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Riwayat Ulasan",
+     "fs": "30px",
+     "box": [
+      16,
+      215,
+      288,
+      38
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "agenda",
+  "viewport": "1440x900",
+  "ratio": 0.006239,
+  "diffPixels": 24042,
+  "protoHeight": 2676,
+  "bladeHeight": 2676,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [],
+   "proto": []
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "agenda",
+  "viewport": "1366x768",
+  "ratio": 0.006577,
+  "diffPixels": 24042,
+  "protoHeight": 2676,
+  "bladeHeight": 2676,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [],
+   "proto": []
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "agenda",
+  "viewport": "768x1024",
+  "ratio": 0.006377,
+  "diffPixels": 19306,
+  "protoHeight": 3942,
+  "bladeHeight": 3942,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [],
+   "proto": []
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "agenda",
+  "viewport": "390x844",
+  "ratio": 0.008163,
+  "diffPixels": 14562,
+  "protoHeight": 4574,
+  "bladeHeight": 4574,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [],
+   "proto": []
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "agenda",
+  "viewport": "320x700",
+  "ratio": 0.008372,
+  "diffPixels": 13146,
+  "protoHeight": 4907,
+  "bladeHeight": 4907,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [],
+   "proto": []
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "agenda-detail",
+  "viewport": "1440x900",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 2140,
+  "bladeHeight": 2140,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Lokakarya Filologi Populer: Mengalihaksa",
+     "fs": "32px",
+     "box": [
+      72,
+      707,
+      851,
+      80
+     ]
+    },
+    {
+     "t": "Agenda tidak ditemukan",
+     "fs": "18px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Lokakarya Filologi Populer: Mengalihaksa",
+     "fs": "32px",
+     "box": [
+      72,
+      707,
+      851,
+      80
+     ]
+    },
+    {
+     "t": "Agenda tidak ditemukan",
+     "fs": "18px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "agenda-detail",
+  "viewport": "1366x768",
+  "ratio": 0.000132,
+  "diffPixels": 387,
+  "protoHeight": 2140,
+  "bladeHeight": 2140,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Lokakarya Filologi Populer: Mengalihaksa",
+     "fs": "32px",
+     "box": [
+      35,
+      707,
+      851,
+      80
+     ]
+    },
+    {
+     "t": "Agenda tidak ditemukan",
+     "fs": "18px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Lokakarya Filologi Populer: Mengalihaksa",
+     "fs": "32px",
+     "box": [
+      35,
+      707,
+      851,
+      80
+     ]
+    },
+    {
+     "t": "Agenda tidak ditemukan",
+     "fs": "18px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "agenda-detail",
+  "viewport": "768x1024",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 2470,
+  "bladeHeight": 2470,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Lokakarya Filologi Populer: Mengalihaksa",
+     "fs": "32px",
+     "box": [
+      24,
+      634,
+      720,
+      80
+     ]
+    },
+    {
+     "t": "Agenda tidak ditemukan",
+     "fs": "18px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Lokakarya Filologi Populer: Mengalihaksa",
+     "fs": "32px",
+     "box": [
+      24,
+      634,
+      720,
+      80
+     ]
+    },
+    {
+     "t": "Agenda tidak ditemukan",
+     "fs": "18px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "agenda-detail",
+  "viewport": "390x844",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 2669,
+  "bladeHeight": 2669,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Lokakarya Filologi Populer: Mengalihaksa",
+     "fs": "26px",
+     "box": [
+      16,
+      430,
+      358,
+      98
+     ]
+    },
+    {
+     "t": "Agenda tidak ditemukan",
+     "fs": "18px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Lokakarya Filologi Populer: Mengalihaksa",
+     "fs": "26px",
+     "box": [
+      16,
+      430,
+      358,
+      98
+     ]
+    },
+    {
+     "t": "Agenda tidak ditemukan",
+     "fs": "18px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "agenda-detail",
+  "viewport": "320x700",
+  "ratio": 0,
+  "diffPixels": 0,
+  "protoHeight": 2915,
+  "bladeHeight": 2915,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Lokakarya Filologi Populer: Mengalihaksa",
+     "fs": "26px",
+     "box": [
+      16,
+      391,
+      288,
+      130
+     ]
+    },
+    {
+     "t": "Agenda tidak ditemukan",
+     "fs": "18px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Lokakarya Filologi Populer: Mengalihaksa",
+     "fs": "26px",
+     "box": [
+      16,
+      391,
+      288,
+      130
+     ]
+    },
+    {
+     "t": "Agenda tidak ditemukan",
+     "fs": "18px",
+     "box": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "chatbot",
+  "viewport": "1440x900",
+  "ratio": 0.000021,
+  "diffPixels": 38,
+  "protoHeight": 1249,
+  "bladeHeight": 1249,
+  "protoWidth": 1440,
+  "bladeWidth": 1440,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Katalog Buku Digital",
+     "fs": "32px",
+     "box": [
+      132,
+      200,
+      449,
+      40
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Katalog Buku Digital",
+     "fs": "32px",
+     "box": [
+      132,
+      200,
+      449,
+      40
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "chatbot",
+  "viewport": "1366x768",
+  "ratio": 0.000023,
+  "diffPixels": 39,
+  "protoHeight": 1249,
+  "bladeHeight": 1249,
+  "protoWidth": 1366,
+  "bladeWidth": 1366,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Katalog Buku Digital",
+     "fs": "32px",
+     "box": [
+      95,
+      200,
+      449,
+      40
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Katalog Buku Digital",
+     "fs": "32px",
+     "box": [
+      95,
+      200,
+      449,
+      40
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "chatbot",
+  "viewport": "768x1024",
+  "ratio": 0.000031,
+  "diffPixels": 39,
+  "protoHeight": 1663,
+  "bladeHeight": 1663,
+  "protoWidth": 768,
+  "bladeWidth": 768,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Katalog Buku Digital",
+     "fs": "32px",
+     "box": [
+      32,
+      200,
+      449,
+      40
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Katalog Buku Digital",
+     "fs": "32px",
+     "box": [
+      32,
+      200,
+      449,
+      40
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "chatbot",
+  "viewport": "390x844",
+  "ratio": 0.00002,
+  "diffPixels": 14,
+  "protoHeight": 1805,
+  "bladeHeight": 1805,
+  "protoWidth": 390,
+  "bladeWidth": 390,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Katalog Buku Digital",
+     "fs": "28px",
+     "box": [
+      16,
+      236,
+      358,
+      35
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Katalog Buku Digital",
+     "fs": "28px",
+     "box": [
+      16,
+      236,
+      358,
+      35
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ },
+ {
+  "page": "chatbot",
+  "viewport": "320x700",
+  "ratio": 0.000065,
+  "diffPixels": 39,
+  "protoHeight": 1862,
+  "bladeHeight": 1862,
+  "protoWidth": 320,
+  "bladeWidth": 320,
+  "errors": {
+   "blade": [],
+   "proto": []
+  },
+  "badResponses": {
+   "blade": [],
+   "proto": []
+  },
+  "h1": {
+   "blade": [
+    {
+     "t": "Katalog Buku Digital",
+     "fs": "28px",
+     "box": [
+      16,
+      236,
+      288,
+      35
+     ]
+    }
+   ],
+   "proto": [
+    {
+     "t": "Katalog Buku Digital",
+     "fs": "28px",
+     "box": [
+      16,
+      236,
+      288,
+      35
+     ]
+    }
+   ]
+  },
+  "brokenImages": {
+   "blade": 0,
+   "proto": 0
+  },
+  "body": {
+   "blade": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ],
+   "proto": [
+    "\"DM Sans\", sans-serif",
+    "rgb(255, 255, 255)"
+   ]
+  }
+ }
+]

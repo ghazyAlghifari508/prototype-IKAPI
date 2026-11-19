@@ -1,0 +1,14 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch();
+const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } });
+const p = await ctx.newPage();
+await p.goto('http://127.0.0.1:8140/komunitas/community-klub-buku/diskusi/TPC-2026-101/balas/RPL-2026-201', { waitUntil: 'load' });
+await p.waitForTimeout(600);
+await p.fill('#reply-view-input', 'Uji hitung submit anak.');
+const before = await p.evaluate(() => (JSON.parse(localStorage.getItem('ikapi_community_replies_demo') || '[]')).length);
+await p.evaluate(() => { document.getElementById('reply-view-form').requestSubmit(); });
+await p.waitForTimeout(900);
+const after = await p.evaluate(() => (JSON.parse(localStorage.getItem('ikapi_community_replies_demo') || '[]')));
+console.log('before', before, 'after', after.length, 'created', after.filter((r) => r.body === 'Uji hitung submit anak.').length);
+console.log('ids', after.filter((r) => r.body === 'Uji hitung submit anak.').map((r) => r.id));
+await b.close();

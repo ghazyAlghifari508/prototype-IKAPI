@@ -322,13 +322,8 @@
       /* Separate draft state per role so switching never mixes or drops data. */
       var pubDraft = { pubName: '', pubMember: '', pubAddress: '', pubPic: '', pubEmail: '', pubPhone: '', pubPassword: '', pubPasswordConfirm: '', pubTerms: false };
 
-      var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       var DUPLICATE_EMAIL = 'redaksi@kiblatbuku.co.id';
 
-      function showErr(name, on) {
-        var el = document.querySelector('[data-err="' + name + '"]');
-        if (el) el.classList.toggle('hidden', !on);
-      }
       function showBanner(title) {
         $('error-title').textContent = title;
         $('validation-banner').classList.remove('hidden');
@@ -346,14 +341,6 @@
       function hideInfo() {
         $('info-banner').classList.add('hidden');
         $('info-banner').classList.remove('flex');
-      }
-      function setBusy(btn, on, busyLabel) {
-        busy = on;
-        btn.disabled = on;
-        var label = btn.querySelector('[data-btn-label]');
-        var icon = btn.querySelector('[data-btn-icon]');
-        if (label) label.textContent = on ? busyLabel : label.getAttribute('data-idle') || 'Daftar';
-        if (icon) { icon.textContent = on ? 'progress_activity' : 'arrow_forward'; icon.classList.toggle('animate-spin', on); }
       }
 
       /* ---------- Role switch ---------- */
@@ -414,47 +401,17 @@
 
       $('buyer-form').addEventListener('submit', function (e) {
         e.preventDefault();
-        if (busy) return;
-
-        var name = $('fullName').value.trim();
-        var email = $('buyerEmail').value.trim().toLowerCase();
-        var phone = $('buyerPhone').value.trim();
-        var pw = $('buyerPassword').value;
-        var pw2 = $('buyerPasswordConfirm').value;
-        var terms = $('buyerTerms').checked;
-
-        var bad = false;
-        showErr('fullName', !name); bad = bad || !name;
-        var emailOk = EMAIL_RE.test(email); showErr('buyerEmail', !emailOk); bad = bad || !emailOk;
-        showErr('buyerPhone', !phone); bad = bad || !phone;
-        var pwOk = pw.length >= 8; showErr('buyerPassword', !pwOk); bad = bad || !pwOk;
-        var match = pwOk && pw === pw2; showErr('buyerPasswordConfirm', !match); bad = bad || !match;
-        showErr('buyerTerms', !terms); bad = bad || !terms;
-
-        if (bad) { showBanner('Periksa Kembali Formulir'); return; }
-
-        if (scenario === 'duplicate' || email === DUPLICATE_EMAIL) {
-          showBanner('Email sudah terdaftar pada prototype ini.');
-          return;
-        }
-
         hideBanner();
-        setBusy($('buyer-submit'), true, 'Mendaftarkan...');
-        window.setTimeout(function () {
-          setBusy($('buyer-submit'), false);
-          $('buyer-submit').querySelector('[data-btn-label]').textContent = 'Daftar';
-          showInfo('Pendaftaran tersimpan pada prototype ini.');
-          var infoBox = $('info-banner');
-          if (infoBox && !window.__onboardingLinked) {
-            window.__onboardingLinked = true;
-            var link = document.createElement('a');
-            link.id = 'info-onboarding-link';
-            link.href = 'onboarding_preferensi_bacaan_desktop.html';
-            link.className = 'focus-ring ml-2 shrink-0 rounded text-[12.5px] font-bold text-primary hover:text-primary-hover';
-            link.textContent = 'Lanjut ke Preferensi Bacaan';
-            infoBox.insertBefore(link, infoBox.lastElementChild);
-          }
-        }, scenario === 'loading' ? 1800 : 900);
+        var email = $('buyerEmail').value.trim().toLowerCase();
+        try {
+          window.localStorage.setItem('ikapi_buyer_session_demo', JSON.stringify({
+            id: 'USR-PMB-0042',
+            email: email || 'pembeli@demo.ikapi.id',
+            name: $('fullName').value.trim() || 'Pembeli Demo',
+            role: 'buyer'
+          }));
+        } catch (err) {}
+        window.location.href = 'perpustakaan_saya_desktop.html';
       });
 
       /* ---------- Publisher 3-step ---------- */
@@ -492,20 +449,20 @@
         }
       }
 
-      /* Prototype only: stores the application in this browser and hands over to the
-         status page. No request is sent and no account status is created. */
+      /* Prototype only: any submitted publisher registration is treated as approved
+         and goes straight to the portal. No request is sent. */
       function submitPublisherApplication() {
         var record = {
           name: $('pubName').value.trim(),
           submittedAt: new Date().toISOString(),
-          status: 'pending',
+          status: 'approved',
           reason: ''
         };
         try {
           window.localStorage.setItem('ikapi_publisher_application_demo', JSON.stringify(record));
           window.localStorage.removeItem('ikapi_publisher_status_preview');
         } catch (e) {}
-        window.location.href = 'status_pendaftaran_penerbit_desktop.html';
+        window.location.href = '../penerbit/dashboard_penerbit_desktop.html';
       }
 
       function showStep(n) {
@@ -528,40 +485,15 @@
         hideBanner();
       }
 
-      function validateStep() {
-        var bad = false;
-        if (step === 1) {
-          var n = $('pubName').value.trim(), m = $('pubMember').value.trim(), a = $('pubAddress').value.trim();
-          showErr('pubName', !n); showErr('pubMember', !m); showErr('pubAddress', !a);
-          bad = !n || !m || !a;
-        } else if (step === 2) {
-          var pic = $('pubPic').value.trim(), mail = $('pubEmail').value.trim(), tel = $('pubPhone').value.trim();
-          var mailOk = EMAIL_RE.test(mail);
-          showErr('pubPic', !pic); showErr('pubEmail', !mailOk); showErr('pubPhone', !tel);
-          bad = !pic || !mailOk || !tel;
-        } else {
-          var pw = $('pubPassword').value, pw2 = $('pubPasswordConfirm').value;
-          var pwOk = pw.length >= 8, match = pwOk && pw === pw2, terms = $('pubTerms').checked;
-          showErr('pubPassword', !pwOk); showErr('pubPasswordConfirm', !match); showErr('pubTerms', !terms);
-          bad = !pwOk || !match || !terms;
-        }
-        if (bad) showBanner('Lengkapi data pada langkah ini sebelum melanjutkan.');
-        return !bad;
-      }
+      
 
       $('pub-next').addEventListener('click', function () {
         if (busy) return;
-        if (!validateStep()) return;
         saveStep();
 
         if (step < 3) { showStep(step + 1); return; }
 
         /* Final submission */
-        if (scenario === 'duplicate' || pubDraft.pubEmail.toLowerCase() === DUPLICATE_EMAIL) {
-          showBanner('Email kantor sudah terdaftar pada prototype ini.');
-          showStep(2);
-          return;
-        }
 
         busy = true;
         var btn = $('pub-next');

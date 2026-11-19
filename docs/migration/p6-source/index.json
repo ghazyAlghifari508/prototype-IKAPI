@@ -1,0 +1,929 @@
+{
+ "masuk_login_desktop": {
+  "bodyClass": "min-h-screen bg-surface-neutral text-ink-body antialiased flex items-center justify-center p-4 sm:p-6",
+  "title": "Masuk — IKAPI Jawa Barat",
+  "children": [
+   {
+    "file": "child-main-w-full-00.html",
+    "tag": "main",
+    "id": "",
+    "cls": "w-full max-w-6xl mx-auto py-4",
+    "loc": 154,
+    "bytes": 13005,
+    "text": "Pembeli\n            \n            \n              Penerbit\n   "
+   },
+   {
+    "file": "child-script-x-01.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 274,
+    "bytes": 10818,
+    "text": "(function () {\n      'use strict';\n\n      /* Demo accounts —"
+   }
+  ],
+  "scripts": [
+   13,
+   272
+  ]
+ },
+ "daftar_akun_register_desktop": {
+  "bodyClass": "min-h-screen bg-surface-neutral text-ink-body antialiased flex items-center justify-center p-4 sm:p-6",
+  "title": "Daftar Akun — IKAPI Jawa Barat",
+  "children": [
+   {
+    "file": "child-main-w-full-00.html",
+    "tag": "main",
+    "id": "",
+    "cls": "w-full max-w-6xl mx-auto py-4",
+    "loc": 250,
+    "bytes": 22497,
+    "text": "Pembeli\n            Penerbit\n          \n\n          \n        "
+   },
+   {
+    "file": "child-script-x-01.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 319,
+    "bytes": 14209,
+    "text": "(function () {\n      'use strict';\n\n      var $ = function ("
+   }
+  ],
+  "scripts": [
+   13,
+   317
+  ]
+ },
+ "lupa_kata_sandi_desktop": {
+  "bodyClass": "bg-surface-neutral font-sans text-ink-body antialiased selection:bg-surface-soft selection:text-primary-deep min-h-screen flex items-center justify-center p-4 sm:p-6",
+  "title": "Lupa Kata Sandi — IKAPI Store Jawa Barat",
+  "children": [
+   {
+    "file": "child-main-w-full-00.html",
+    "tag": "main",
+    "id": "",
+    "cls": "w-full max-w-6xl mx-auto py-4",
+    "loc": 79,
+    "bytes": 4674,
+    "text": "Lupa Kata Sandi?\n              \n              \n             "
+   },
+   {
+    "file": "child-toast-01.html",
+    "tag": "div",
+    "id": "toast",
+    "cls": "fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none",
+    "loc": 4,
+    "bytes": 433,
+    "text": "check_circle\n    Permintaan berhasil diproses"
+   },
+   {
+    "file": "child-script-x-02.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 57,
+    "bytes": 2309,
+    "text": "let toastTimer = null;\n    function showToast(msg) {\n      c"
+   },
+   {
+    "file": "child-script-x-03.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 7,
+    "bytes": 306,
+    "text": "(function () {\n      var role = new URLSearchParams(window.l"
+   }
+  ],
+  "scripts": [
+   38,
+   55,
+   5
+  ]
+ },
+ "verifikasi_email_desktop": {
+  "bodyClass": "bg-surface-neutral font-sans text-ink-body antialiased selection:bg-surface-soft selection:text-primary-deep min-h-screen flex items-center justify-center p-4 sm:p-6",
+  "title": "Verifikasi Email — IKAPI Store Jawa Barat",
+  "children": [
+   {
+    "file": "child-main-w-full-00.html",
+    "tag": "main",
+    "id": "",
+    "cls": "w-full max-w-6xl mx-auto py-4",
+    "loc": 84,
+    "bytes": 4485,
+    "text": "Cek Email untuk Verifikasi\n              \n              \n   "
+   },
+   {
+    "file": "child-toast-01.html",
+    "tag": "div",
+    "id": "toast",
+    "cls": "fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none",
+    "loc": 4,
+    "bytes": 433,
+    "text": "check_circle\n    Permintaan berhasil diproses"
+   },
+   {
+    "file": "child-script-x-02.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 63,
+    "bytes": 2248,
+    "text": "let toastTimer = null;\n    function showToast(msg) {\n      c"
+   }
+  ],
+  "scripts": [
+   38,
+   61
+  ]
+ },
+ "onboarding_preferensi_bacaan_desktop": {
+  "bodyClass": "min-h-screen antialiased",
+  "title": "Preferensi Bacaan - IKAPI Store Jawa Barat",
+  "children": [
+   {
+    "file": "child-main-mx-auto-00.html",
+    "tag": "main",
+    "id": "",
+    "cls": "mx-auto flex min-h-screen w-full max-w-[1200px] flex-col px-4 py-6 sm:px-6",
+    "loc": 195,
+    "bytes": 16780,
+    "text": "Langkah 1 dari 4\n          \n            \n            \n      "
+   },
+   {
+    "file": "child-script-x-01.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 136,
+    "bytes": 5339,
+    "text": "(function () {\n  'use strict';\n\n  var $ = function (id) { re"
+   }
+  ],
+  "scripts": [
+   12,
+   134
+  ]
+ },
+ "status_pendaftaran_penerbit_desktop": {
+  "bodyClass": "min-h-screen bg-surface-neutral text-ink-body antialiased",
+  "title": "Status Pendaftaran Penerbit — IKAPI Jawa Barat",
+  "children": [
+   {
+    "file": "child-header-border-b-00.html",
+    "tag": "header",
+    "id": "",
+    "cls": "border-b border-border-subtle bg-white",
+    "loc": 9,
+    "bytes": 596,
+    "text": "IKAPI Store\n      \n      Status Pendaftaran"
+   },
+   {
+    "file": "child-main-mx-auto-01.html",
+    "tag": "main",
+    "id": "",
+    "cls": "mx-auto w-full max-w-[1080px] px-4 py-8 sm:px-6 sm:py-12 lg:px-8",
+    "loc": 78,
+    "bytes": 4531,
+    "text": "hourglass_top\n          Menunggu persetujuan\n        \n\n     "
+   },
+   {
+    "file": "child-toast-02.html",
+    "tag": "div",
+    "id": "toast",
+    "cls": "pointer-events-none fixed bottom-6 left-1/2 z-50 hidden -translate-x-1/2 rounded-xl border border-border-subtl",
+    "loc": 3,
+    "bytes": 281,
+    "text": ""
+   },
+   {
+    "file": "child-script-x-03.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 284,
+    "bytes": 11721,
+    "text": "/* Publisher application status page.\n       Prototype bound"
+   }
+  ],
+  "scripts": [
+   13,
+   282
+  ]
+ },
+ "akun_saya_profil_dropdown_navigasi_desktop": {
+  "bodyClass": "bg-white font-sans text-ink-body antialiased selection:bg-primary-soft selection:text-primary-deep",
+  "title": "Profil Saya — IKAPI Store Jawa Barat",
+  "children": [
+   {
+    "file": "child-header-fixed-00.html",
+    "tag": "header",
+    "id": "",
+    "cls": "fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-border-subtle shadow-[0_1px_4px_r",
+    "loc": 85,
+    "bytes": 6890,
+    "text": "search\n            \n          \n        \n        \n        \n  "
+   },
+   {
+    "file": "child-main-w-full-01.html",
+    "tag": "main",
+    "id": "",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]",
+    "loc": 204,
+    "bytes": 14071,
+    "text": "person\n              Menu Akun: Profil Saya\n            \n   "
+   },
+   {
+    "file": "child-toast-notification-02.html",
+    "tag": "div",
+    "id": "toast-notification",
+    "cls": "fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none",
+    "loc": 4,
+    "bytes": 460,
+    "text": "check_circle\n    Perubahan berhasil disimpan."
+   },
+   {
+    "file": "child-footer-w-full-03.html",
+    "tag": "footer",
+    "id": "",
+    "cls": "w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]",
+    "loc": 62,
+    "bytes": 4686,
+    "text": "Jelajahi\n          \n            Katalog Buku\n            Kat"
+   },
+   {
+    "file": "child-script-x-04.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 238,
+    "bytes": 8405,
+    "text": "const STORAGE_KEY = 'ikapi_user_profile';\n    const DEFAULT_"
+   }
+  ],
+  "scripts": [
+   38,
+   236
+  ]
+ },
+ "pengaturan_akun_desktop": {
+  "bodyClass": "bg-white font-sans text-ink-body antialiased selection:bg-primary-soft selection:text-primary-deep",
+  "title": "Pengaturan Akun — IKAPI Store Jawa Barat",
+  "children": [
+   {
+    "file": "child-header-fixed-00.html",
+    "tag": "header",
+    "id": "",
+    "cls": "fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-border-subtle shadow-[0_1px_4px_r",
+    "loc": 85,
+    "bytes": 6890,
+    "text": "search\n            \n          \n        \n        \n        \n  "
+   },
+   {
+    "file": "child-main-w-full-01.html",
+    "tag": "main",
+    "id": "",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]",
+    "loc": 245,
+    "bytes": 16220,
+    "text": "settings\n              Menu Akun: Pengaturan Akun\n          "
+   },
+   {
+    "file": "child-modal-change-password-02.html",
+    "tag": "div",
+    "id": "modal-change-password",
+    "cls": "fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm",
+    "loc": 49,
+    "bytes": 3367,
+    "text": "Ubah Kata Sandi\n        \n        \n          close\n        \n "
+   },
+   {
+    "file": "child-toast-notification-03.html",
+    "tag": "div",
+    "id": "toast-notification",
+    "cls": "fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none",
+    "loc": 4,
+    "bytes": 460,
+    "text": "check_circle\n    Tindakan berhasil dilakukan."
+   },
+   {
+    "file": "child-footer-w-full-04.html",
+    "tag": "footer",
+    "id": "",
+    "cls": "w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]",
+    "loc": 62,
+    "bytes": 4686,
+    "text": "Jelajahi\n          \n            Katalog Buku\n            Kat"
+   },
+   {
+    "file": "child-script-x-05.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 212,
+    "bytes": 7087,
+    "text": "const STORAGE_KEY = 'ikapi_user_profile';\n    const PREF_STO"
+   }
+  ],
+  "scripts": [
+   38,
+   210
+  ]
+ },
+ "bantuan_akun_desktop": {
+  "bodyClass": "bg-white font-sans text-ink-body antialiased selection:bg-primary-soft selection:text-primary-deep",
+  "title": "Pusat Bantuan — IKAPI Store Jawa Barat",
+  "children": [
+   {
+    "file": "child-header-fixed-00.html",
+    "tag": "header",
+    "id": "",
+    "cls": "fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-border-subtle shadow-[0_1px_4px_r",
+    "loc": 85,
+    "bytes": 6942,
+    "text": "search\n            \n          \n        \n        \n        \n  "
+   },
+   {
+    "file": "child-main-w-full-01.html",
+    "tag": "main",
+    "id": "",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]",
+    "loc": 207,
+    "bytes": 15213,
+    "text": "help\n              Menu Akun: Bantuan\n            \n         "
+   },
+   {
+    "file": "child-footer-w-full-02.html",
+    "tag": "footer",
+    "id": "",
+    "cls": "w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]",
+    "loc": 59,
+    "bytes": 4650,
+    "text": "Jelajahi\n          \n            Katalog Buku\n            Kat"
+   },
+   {
+    "file": "child-script-x-03.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 246,
+    "bytes": 9788,
+    "text": "const STORAGE_KEY = 'ikapi_user_profile';\n    const DEFAULT_"
+   }
+  ],
+  "scripts": [
+   38,
+   244
+  ]
+ },
+ "keranjang_pembayaran_terpadu_desktop": {
+  "bodyClass": "bg-white font-sans text-ink-body antialiased selection:bg-surface-soft selection:text-primary-deep",
+  "title": "Keranjang Belanja — IKAPI Store Jawa Barat",
+  "children": [
+   {
+    "file": "child-header-fixed-00.html",
+    "tag": "header",
+    "id": "",
+    "cls": "fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-border-subtle shadow-[0_1px_4px_r",
+    "loc": 43,
+    "bytes": 3718,
+    "text": "search\n            \n          \n        \n        \n        \n  "
+   },
+   {
+    "file": "child-main-w-full-01.html",
+    "tag": "main",
+    "id": "",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]",
+    "loc": 146,
+    "bytes": 8965,
+    "text": "Keranjang Belanja\n            \n            \n              2 "
+   },
+   {
+    "file": "child-snap-overlay-02.html",
+    "tag": "div",
+    "id": "snap-overlay",
+    "cls": "fixed inset-0 z-50 bg-black/60 backdrop-blur-xs hidden items-center justify-center p-4",
+    "loc": 302,
+    "bytes": 20605,
+    "text": "close\n        \n      \n\n      \n      \n        \n          \n   "
+   },
+   {
+    "file": "child-cart-toast-03.html",
+    "tag": "div",
+    "id": "cart-toast",
+    "cls": "fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none",
+    "loc": 4,
+    "bytes": 446,
+    "text": "check_circle\n    Item berhasil diperbarui"
+   },
+   {
+    "file": "child-footer-w-full-04.html",
+    "tag": "footer",
+    "id": "",
+    "cls": "w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]",
+    "loc": 59,
+    "bytes": 4650,
+    "text": "Jelajahi\n          \n            Katalog Buku\n            Kat"
+   },
+   {
+    "file": "child-script-x-05.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 246,
+    "bytes": 9595,
+    "text": "let currentCartTotal = 103000;\n    let toastTimer = null;\n  "
+   }
+  ],
+  "scripts": [
+   38,
+   244
+  ]
+ },
+ "riwayat_pesanan_desktop": {
+  "bodyClass": "bg-white font-sans text-ink-body antialiased selection:bg-primary-soft selection:text-primary-deep",
+  "title": "Riwayat Pesanan — IKAPI Store Jawa Barat",
+  "children": [
+   {
+    "file": "child-header-fixed-00.html",
+    "tag": "header",
+    "id": "",
+    "cls": "fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-border-subtle shadow-[0_1px_4px_r",
+    "loc": 85,
+    "bytes": 6890,
+    "text": "search\n            \n          \n        \n        \n        \n  "
+   },
+   {
+    "file": "child-main-w-full-01.html",
+    "tag": "main",
+    "id": "",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]",
+    "loc": 142,
+    "bytes": 9750,
+    "text": "receipt_long\n              Menu Akun: Riwayat Pesanan\n      "
+   },
+   {
+    "file": "child-modal-order-detail-02.html",
+    "tag": "div",
+    "id": "modal-order-detail",
+    "cls": "fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm",
+    "loc": 84,
+    "bytes": 4396,
+    "text": "#IKP-20261115-081\n            \n            \n              Pe"
+   },
+   {
+    "file": "child-toast-notification-03.html",
+    "tag": "div",
+    "id": "toast-notification",
+    "cls": "fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none",
+    "loc": 4,
+    "bytes": 460,
+    "text": "check_circle\n    Tindakan berhasil dilakukan."
+   },
+   {
+    "file": "child-footer-w-full-04.html",
+    "tag": "footer",
+    "id": "",
+    "cls": "w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]",
+    "loc": 62,
+    "bytes": 4686,
+    "text": "Jelajahi\n          \n            Katalog Buku\n            Kat"
+   },
+   {
+    "file": "child-script-x-05.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 403,
+    "bytes": 15369,
+    "text": "const STORAGE_KEY = 'ikapi_user_profile';\n    const DEFAULT_"
+   }
+  ],
+  "scripts": [
+   38,
+   401
+  ]
+ },
+ "perpustakaan_saya_desktop": {
+  "bodyClass": "bg-white font-sans text-ink-body antialiased selection:bg-surface-soft selection:text-primary-deep min-h-screen flex flex-col justify-between",
+  "title": "Perpustakaan Saya — IKAPI Store Jawa Barat",
+  "children": [
+   {
+    "file": "child-header-fixed-00.html",
+    "tag": "header",
+    "id": "",
+    "cls": "fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-border-subtle shadow-[0_1px_4px_r",
+    "loc": 85,
+    "bytes": 6905,
+    "text": "search\n            \n          \n        \n        \n        \n  "
+   },
+   {
+    "file": "child-main-w-full-01.html",
+    "tag": "main",
+    "id": "",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]",
+    "loc": 383,
+    "bytes": 30496,
+    "text": "local_library\n              Menu Akun: Perpustakaan Saya\n   "
+   },
+   {
+    "file": "child-toastNotification-02.html",
+    "tag": "div",
+    "id": "toastNotification",
+    "cls": "fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none",
+    "loc": 4,
+    "bytes": 451,
+    "text": "info\n    Tindakan berhasil dilakukan."
+   },
+   {
+    "file": "child-footer-w-full-03.html",
+    "tag": "footer",
+    "id": "",
+    "cls": "w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]",
+    "loc": 59,
+    "bytes": 4650,
+    "text": "Jelajahi\n          \n            Katalog Buku\n            Kat"
+   },
+   {
+    "file": "child-script-x-04.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 452,
+    "bytes": 17659,
+    "text": "const STORAGE_KEY = 'ikapi_user_profile';\n    const DEFAULT_"
+   }
+  ],
+  "scripts": [
+   38,
+   450
+  ]
+ },
+ "web_reader_desktop": {
+  "bodyClass": "theme-canvas antialiased min-h-screen flex flex-col justify-between transition-colors duration-300",
+  "title": "Laskar Aksara Pasundan — Web Reader IKAPI Store",
+  "children": [
+   {
+    "file": "child-header-fixed-00.html",
+    "tag": "header",
+    "id": "",
+    "cls": "fixed top-0 left-0 w-full z-40 theme-chrome border-b transition-colors duration-300 shadow-xs",
+    "loc": 37,
+    "bytes": 2929,
+    "text": "arrow_back\n          Perpustakaan Saya\n        \n      \n\n    "
+   },
+   {
+    "file": "child-main-w-full-01.html",
+    "tag": "main",
+    "id": "",
+    "cls": "w-full min-h-screen pt-28 pb-28 flex-1 flex flex-col items-center justify-start px-4 sm:px-6 md:px-8",
+    "loc": 32,
+    "bytes": 1831,
+    "text": "info\n        Halaman berhasil ditandai.\n      \n    \n\n    \n  "
+   },
+   {
+    "file": "child-footer-fixed-02.html",
+    "tag": "footer",
+    "id": "",
+    "cls": "fixed bottom-0 left-0 w-full theme-chrome border-t px-4 sm:px-6 py-2.5 z-40 transition-colors duration-300 sha",
+    "loc": 39,
+    "bytes": 2349,
+    "text": "chevron_left\n          Sebelumnya\n        \n\n        \n       "
+   },
+   {
+    "file": "child-drawer-backdrop-03.html",
+    "tag": "div",
+    "id": "drawer-backdrop",
+    "cls": "fixed inset-0 bg-black/50 z-40 transition-opacity hidden",
+    "loc": 1,
+    "bytes": 125,
+    "text": ""
+   },
+   {
+    "file": "child-drawer-bookmarks-04.html",
+    "tag": "div",
+    "id": "drawer-bookmarks",
+    "cls": "fixed inset-y-0 right-0 w-full sm:w-96 theme-chrome border-l shadow-2xl z-50 transform transition-transform du",
+    "loc": 34,
+    "bytes": 2023,
+    "text": "bookmarks\n        Penanda Buku\n      \n      \n        close\n "
+   },
+   {
+    "file": "child-drawer-settings-05.html",
+    "tag": "div",
+    "id": "drawer-settings",
+    "cls": "fixed inset-y-0 right-0 w-full sm:w-96 theme-chrome border-l shadow-2xl z-50 transform transition-transform du",
+    "loc": 82,
+    "bytes": 5300,
+    "text": "tune\n        Pengaturan Tampilan\n      \n      \n        close"
+   },
+   {
+    "file": "child-drawer-toc-06.html",
+    "tag": "div",
+    "id": "drawer-toc",
+    "cls": "fixed inset-y-0 left-0 w-full sm:w-96 theme-chrome border-r shadow-2xl z-50 transform transition-transform dur",
+    "loc": 28,
+    "bytes": 2020,
+    "text": "menu_book\n        Daftar Isi Buku\n      \n      \n        clos"
+   },
+   {
+    "file": "child-modal-unlicensed-07.html",
+    "tag": "div",
+    "id": "modal-unlicensed",
+    "cls": "fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex items-center justify-center p-4 hidden font-sans",
+    "loc": 21,
+    "bytes": 1317,
+    "text": "lock\n      \n      \n        Buku Tidak Dapat Dibuka\n        \n"
+   },
+   {
+    "file": "child-script-x-08.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 469,
+    "bytes": 22794,
+    "text": "// Storage keys\n    const SETTINGS_KEY = 'ikapi_reader_setti"
+   }
+  ],
+  "scripts": [
+   38,
+   467
+  ]
+ },
+ "riwayat_ulasan_desktop": {
+  "bodyClass": "bg-white font-sans text-ink-body antialiased selection:bg-primary-soft selection:text-primary-deep",
+  "title": "Riwayat Ulasan — IKAPI Store Jawa Barat",
+  "children": [
+   {
+    "file": "child-header-fixed-00.html",
+    "tag": "header",
+    "id": "",
+    "cls": "fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-border-subtle shadow-[0_1px_4px_r",
+    "loc": 85,
+    "bytes": 6942,
+    "text": "search\n            \n          \n        \n        \n        \n  "
+   },
+   {
+    "file": "child-main-w-full-01.html",
+    "tag": "main",
+    "id": "",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]",
+    "loc": 137,
+    "bytes": 9256,
+    "text": "rate_review\n              Menu Akun: Riwayat Ulasan\n        "
+   },
+   {
+    "file": "child-modal-edit-review-02.html",
+    "tag": "div",
+    "id": "modal-edit-review",
+    "cls": "fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm",
+    "loc": 62,
+    "bytes": 3937,
+    "text": "Edit Ulasan Buku\n          \n          \n            Laskar Ak"
+   },
+   {
+    "file": "child-modal-delete-confirm-03.html",
+    "tag": "div",
+    "id": "modal-delete-confirm",
+    "cls": "fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm",
+    "loc": 21,
+    "bytes": 1365,
+    "text": "delete\n      \n      \n        Hapus Ulasan?\n        \n        "
+   },
+   {
+    "file": "child-toast-04.html",
+    "tag": "div",
+    "id": "toast",
+    "cls": "fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none",
+    "loc": 4,
+    "bytes": 448,
+    "text": "check_circle\n    Tindakan berhasil dilakukan"
+   },
+   {
+    "file": "child-footer-w-full-05.html",
+    "tag": "footer",
+    "id": "",
+    "cls": "w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]",
+    "loc": 59,
+    "bytes": 4650,
+    "text": "Jelajahi\n          \n            Katalog Buku\n            Kat"
+   },
+   {
+    "file": "child-script-x-06.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 333,
+    "bytes": 13541,
+    "text": "const STORAGE_KEY = 'ikapi_user_profile';\n    const RATING_D"
+   }
+  ],
+  "scripts": [
+   38,
+   331
+  ]
+ },
+ "agenda_berita_literasi_desktop": {
+  "bodyClass": "bg-white font-sans text-ink-body antialiased selection:bg-primary-soft selection:text-primary-deep",
+  "title": "Agenda & Berita Literasi — IKAPI Store Jawa Barat",
+  "children": [
+   {
+    "file": "child-header-fixed-00.html",
+    "tag": "header",
+    "id": "",
+    "cls": "fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-border-subtle shadow-[0_1px_4px_r",
+    "loc": 40,
+    "bytes": 3510,
+    "text": "search\n            \n          \n        \n        \n        \n  "
+   },
+   {
+    "file": "child-main-w-full-01.html",
+    "tag": "main",
+    "id": "",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]",
+    "loc": 399,
+    "bytes": 28967,
+    "text": "tune\n              Panel Simulasi QA (4 Mode)\n              "
+   },
+   {
+    "file": "child-modal-featured-detail-02.html",
+    "tag": "div",
+    "id": "modal-featured-detail",
+    "cls": "fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm",
+    "loc": 88,
+    "bytes": 5895,
+    "text": "close\n        \n        \n          \n            Agenda Utama "
+   },
+   {
+    "file": "child-modal-article-preview-03.html",
+    "tag": "div",
+    "id": "modal-article-preview",
+    "cls": "fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm",
+    "loc": 44,
+    "bytes": 2624,
+    "text": "Warta\n          \n          \n            Judul Artikel\n      "
+   },
+   {
+    "file": "child-toastNotification-04.html",
+    "tag": "div",
+    "id": "toastNotification",
+    "cls": "fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none",
+    "loc": 4,
+    "bytes": 459,
+    "text": "check_circle\n    Tindakan berhasil dilakukan."
+   },
+   {
+    "file": "child-footer-w-full-05.html",
+    "tag": "footer",
+    "id": "",
+    "cls": "w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]",
+    "loc": 62,
+    "bytes": 4741,
+    "text": "Jelajahi\n          \n            Katalog Buku\n            Kat"
+   },
+   {
+    "file": "child-script-x-06.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 449,
+    "bytes": 19241,
+    "text": "// Events Dataset for November 2026\n    const eventsData = ["
+   },
+   {
+    "file": "child-script-x-07.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 1,
+    "bytes": 50,
+    "text": ""
+   }
+  ],
+  "scripts": [
+   38,
+   447
+  ]
+ },
+ "detail_agenda_desktop": {
+  "bodyClass": "bg-white font-sans text-ink-body antialiased selection:bg-primary-soft selection:text-primary-deep",
+  "title": "Detail Agenda — IKAPI Store Jawa Barat",
+  "children": [
+   {
+    "file": "child-header-fixed-00.html",
+    "tag": "header",
+    "id": "",
+    "cls": "fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-border-subtle shadow-[0_1px_4px_r",
+    "loc": 40,
+    "bytes": 3510,
+    "text": "search\n            \n          \n        \n        \n        \n  "
+   },
+   {
+    "file": "child-main-w-full-01.html",
+    "tag": "main",
+    "id": "",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]",
+    "loc": 111,
+    "bytes": 6524,
+    "text": "arrow_back\n        Kembali ke Agenda Literasi\n      \n    \n\n "
+   },
+   {
+    "file": "child-footer-w-full-02.html",
+    "tag": "footer",
+    "id": "",
+    "cls": "w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]",
+    "loc": 62,
+    "bytes": 4741,
+    "text": "Jelajahi\n          \n            Katalog Buku\n            Kat"
+   },
+   {
+    "file": "child-script-x-03.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 226,
+    "bytes": 9601,
+    "text": "/* Detail agenda. The three entries mirror the cards on agen"
+   },
+   {
+    "file": "child-script-x-04.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 1,
+    "bytes": 50,
+    "text": ""
+   }
+  ],
+  "scripts": [
+   38,
+   224
+  ]
+ },
+ "chatbot_bantuan_rekomendasi_desktop": {
+  "bodyClass": "bg-white font-sans text-ink-body antialiased selection:bg-surface-soft selection:text-primary-deep",
+  "title": "Bantuan & Rekomendasi Buku — IKAPI Store Jawa Barat",
+  "children": [
+   {
+    "file": "child-header-fixed-00.html",
+    "tag": "header",
+    "id": "",
+    "cls": "fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-border-subtle shadow-[0_1px_4px_r",
+    "loc": 43,
+    "bytes": 3752,
+    "text": "search\n            \n          \n        \n        \n        \n  "
+   },
+   {
+    "file": "child-main-w-full-01.html",
+    "tag": "main",
+    "id": "",
+    "cls": "w-full pt-28 bg-white min-h-[calc(100vh-16rem)]",
+    "loc": 148,
+    "bytes": 10036,
+    "text": "Beranda\n            /\n            Katalog Buku Digital\n     "
+   },
+   {
+    "file": "child-ikapi-chat-widget-wrapper-02.html",
+    "tag": "div",
+    "id": "ikapi-chat-widget-wrapper",
+    "cls": "fixed bottom-6 right-6 z-50 flex flex-col items-end",
+    "loc": 77,
+    "bytes": 5867,
+    "text": "smart_toy\n          \n          \n            \n              B"
+   },
+   {
+    "file": "child-toast-notification-03.html",
+    "tag": "div",
+    "id": "toast-notification",
+    "cls": "fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none",
+    "loc": 4,
+    "bytes": 460,
+    "text": "check_circle\n    Tindakan berhasil dilakukan."
+   },
+   {
+    "file": "child-footer-w-full-04.html",
+    "tag": "footer",
+    "id": "",
+    "cls": "w-full bg-[#111111] text-white pt-16 pb-12 border-t border-[#2a2a2a]",
+    "loc": 59,
+    "bytes": 4642,
+    "text": "Jelajahi\n          \n            Katalog Buku\n            Kat"
+   },
+   {
+    "file": "child-script-x-05.html",
+    "tag": "script",
+    "id": "",
+    "cls": "",
+    "loc": 491,
+    "bytes": 22663,
+    "text": "let isWidgetOpen = true;\n\n    // True Conversation Thread St"
+   }
+  ],
+  "scripts": [
+   38,
+   489
+  ]
+ }
+}

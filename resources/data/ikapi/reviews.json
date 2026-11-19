@@ -1,0 +1,26 @@
+{
+  "reviews": [
+    {
+      "id": "rev-laskar-aksara",
+      "bookId": "1",
+      "title": "Laskar Aksara Pasundan",
+      "author": "Ayi R. Kurnia",
+      "cover": "/assets/ikapi/covers/laskar-aksara-pasundan.jpg",
+      "rating": 5,
+      "date": "14 November 2026",
+      "timestamp": 1731571200000,
+      "comment": "Kisah penyelamatan naskah kuno yang sangat memikat dan sarat nilai historis Jawa Barat. Penggunaan Web Reader sangat nyaman untuk membaca naskah panjang ini."
+    },
+    {
+      "id": "rev-pendidikan-sunda",
+      "bookId": "2",
+      "title": "Pendidikan Karakter Sunda",
+      "author": "Dr. Cecep Hidayat",
+      "cover": "/assets/ikapi/covers/B02.jpg",
+      "rating": 4,
+      "date": "02 November 2026",
+      "timestamp": 1730534400000,
+      "comment": "Buku rujukan yang sangat bagus untuk memahami filosofi silih asah, silih asih, dan silih asuh dalam konteks pendidikan karakter generasi muda."
+    }
+  ]
+}

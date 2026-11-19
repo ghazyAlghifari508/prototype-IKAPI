@@ -1,0 +1,226 @@
+<script>
+    /* Detail agenda. The three entries mirror the cards on agenda_berita_literasi_desktop.html
+       so the listing and the detail page never disagree. */
+    (function () {
+      'use strict';
+
+      var EVENTS = {
+        'ev-1': {
+          title: 'Lokakarya Filologi Populer: Mengalihaksarakan Naskah Sunda Kuno',
+          category: 'Lokakarya',
+          format: 'Tatap muka',
+          dateText: 'Rabu, 18 November 2026',
+          dateIcs: ['20261118T100000', '20261118T123000'],
+          time: '10:00 - 12:30 WIB',
+          location: 'Ruang Seminar Graha IKAPI Jabar, Bandung',
+          organizer: 'Kiblat Buku',
+          fee: 'Gratis, kuota 40 peserta',
+          cover: '../../assets/events/event-community.jpg',
+          description: [
+            'Lokakarya ini membuka cara membaca dan mengalihaksarakan naskah Sunda kuno bagi pembaca umum. Peserta dikenalkan pada bentuk aksara, kaidah penulisan, serta langkah praktis memindahkan teks dari lembar naskah ke huruf Latin.',
+            'Materi disusun untuk peserta tanpa latar belakang filologi. Setiap sesi disertai latihan terbimbing menggunakan lembar kerja yang disediakan panitia.'
+          ],
+          rundown: [
+            ['10:00', 'Registrasi dan pembukaan'],
+            ['10:15', 'Pengenalan aksara Sunda kuno'],
+            ['11:00', 'Latihan alih aksara terbimbing'],
+            ['12:00', 'Diskusi dan penutup']
+          ],
+          speakers: [
+            ['Ayi R. Kurnia', 'Penulis dan peneliti naskah Sunda, Kiblat Buku'],
+            ['Ratih Wulandari', 'Pengajar filologi, Universitas Padjadjaran']
+          ],
+          notes: [
+            'Peserta membawa laptop atau buku catatan.',
+            'Lembar kerja naskah disediakan panitia.',
+            'Tidak diperlukan kemampuan membaca aksara sebelumnya.'
+          ]
+        },
+        'ev-2': {
+          title: 'Bedah Buku & Diskusi Publik: Pendidikan Karakter Berbasis Kearifan Lokal',
+          category: 'Diskusi Publik',
+          format: 'Tatap muka',
+          dateText: 'Minggu, 22 November 2026',
+          dateIcs: ['20261122T133000', '20261122T160000'],
+          time: '13:30 - 16:00 WIB',
+          location: 'Aula Pusat Studi Sunda, Bandung',
+          organizer: 'UPI Press',
+          fee: 'Gratis, kuota 80 peserta',
+          cover: '../../assets/events/event-children-story.jpg',
+          description: [
+            'Diskusi publik ini membahas buku Pendidikan Karakter Sunda dan cara nilai kearifan lokal dipakai di ruang kelas. Pembahasan diarahkan pada praktik pembelajaran, bukan hanya gagasan.',
+            'Sesi tanya jawab dibuka untuk guru, mahasiswa, dan pengelola komunitas literasi.'
+          ],
+          rundown: [
+            ['13:30', 'Registrasi dan pembukaan'],
+            ['13:45', 'Paparan penulis'],
+            ['14:45', 'Tanggapan penanggap'],
+            ['15:30', 'Tanya jawab dan penutup']
+          ],
+          speakers: [
+            ['Dr. Cecep Hidayat', 'Penulis, UPI Press'],
+            ['Fajar Ashari', 'Praktisi pendidikan dasar, Bandung']
+          ],
+          notes: [
+            'Terbuka untuk umum tanpa pendaftaran berkelompok.',
+            'Diskusi direkam untuk dokumentasi penyelenggara.'
+          ]
+        },
+        'ev-3': {
+          title: 'Sarasehan Editor & Penulis: Standarisasi E-Book Berlisensi',
+          category: 'Webinar',
+          format: 'Daring (Zoom)',
+          dateText: 'Sabtu, 28 November 2026',
+          dateIcs: ['20261128T090000', '20261128T120000'],
+          time: '09:00 - 12:00 WIB',
+          location: 'Daring via Zoom / Hybrid IKAPI Jabar',
+          organizer: 'IKAPI Jabar',
+          fee: 'Gratis untuk anggota IKAPI Jabar',
+          cover: '../../assets/events/event-webinar.jpg',
+          description: [
+            'Sarasehan ini membahas standar berkas e-book yang siap dipasarkan: struktur metadata, penamaan berkas, dan kelengkapan lisensi penerbit.',
+            'Materi ditujukan bagi editor dan penulis yang menyiapkan naskah untuk katalog digital.'
+          ],
+          rundown: [
+            ['09:00', 'Pembukaan dan pengantar'],
+            ['09:20', 'Standar metadata e-book'],
+            ['10:30', 'Pemeriksaan berkas dan lisensi'],
+            ['11:30', 'Tanya jawab']
+          ],
+          speakers: [
+            ['H. Asep Ridwan, M.Hum', 'Ketua IKAPI Jawa Barat'],
+            ['Dr. Encep Kosasih', 'Editor, Flora Priangan: Arsip Hayati']
+          ],
+          notes: [
+            'Tautan Zoom dikirim melalui email terdaftar pada hari kegiatan.',
+            'Rekaman tersedia terbatas untuk peserta.'
+          ]
+        }
+      };
+
+      var $ = function (id) { return document.getElementById(id); };
+      var params = new URLSearchParams(window.location.search);
+      var key = params.get('id');
+      var event = EVENTS[key];
+
+      function fill() {
+        if (!event) {
+          document.querySelector('main > section').classList.add('hidden');
+          $('event-not-found').classList.remove('hidden');
+          return;
+        }
+
+        document.title = event.title + ' — IKAPI Store Jawa Barat';
+        var cover = $('event-cover');
+        cover.src = event.cover;
+        cover.alt = 'Foto kegiatan ' + event.title;
+
+        $('event-category').textContent = event.category;
+        $('event-format').textContent = event.format;
+        $('event-title').textContent = event.title;
+        $('event-date').textContent = event.dateText;
+        $('event-time').textContent = event.time;
+        $('event-location').textContent = event.location;
+        $('event-organizer').textContent = event.organizer;
+        $('event-side-category').textContent = event.category;
+        $('event-side-format').textContent = event.format;
+        $('event-side-fee').textContent = event.fee;
+
+        var description = $('event-description');
+        description.textContent = '';
+        event.description.forEach(function (paragraph) {
+          var p = document.createElement('p');
+          p.textContent = paragraph;
+          description.appendChild(p);
+        });
+
+        var rundown = $('event-rundown');
+        rundown.textContent = '';
+        event.rundown.forEach(function (row) {
+          var li = document.createElement('li');
+          li.className = 'flex items-start gap-4 py-3 text-[14px]';
+          var time = document.createElement('span');
+          time.className = 'w-14 shrink-0 font-bold tabular-nums text-ink-body';
+          time.textContent = row[0];
+          var text = document.createElement('span');
+          text.className = 'text-ink-body';
+          text.textContent = row[1];
+          li.appendChild(time);
+          li.appendChild(text);
+          rundown.appendChild(li);
+        });
+
+        var speakers = $('event-speakers');
+        speakers.textContent = '';
+        event.speakers.forEach(function (person) {
+          var li = document.createElement('li');
+          li.className = 'flex items-start gap-3 rounded-xl border border-border-subtle bg-white px-4 py-3';
+          var icon = document.createElement('span');
+          icon.className = 'material-symbols-outlined text-[18px] text-primary';
+          icon.setAttribute('aria-hidden', 'true');
+          icon.textContent = 'person';
+          var wrap = document.createElement('div');
+          var name = document.createElement('p');
+          name.className = 'text-[14px] font-bold text-ink-body';
+          name.textContent = person[0];
+          var role = document.createElement('p');
+          role.className = 'mt-0.5 text-[13px] text-ink-muted';
+          role.textContent = person[1];
+          wrap.appendChild(name);
+          wrap.appendChild(role);
+          li.appendChild(icon);
+          li.appendChild(wrap);
+          speakers.appendChild(li);
+        });
+
+        var notes = $('event-notes');
+        notes.textContent = '';
+        event.notes.forEach(function (note) {
+          var li = document.createElement('li');
+          li.textContent = note;
+          notes.appendChild(li);
+        });
+      }
+
+      /* Same iCalendar writer used by the agenda list. */
+      function downloadIcsFile(title, startISO, endISO, location, description) {
+        var cleanSummary = title.replace(/([,;])/g, '\\$1');
+        var cleanLocation = location.replace(/([,;])/g, '\\$1');
+        var cleanDesc = description.replace(/([,;])/g, '\\$1');
+
+        var icsData = [
+          'BEGIN:VCALENDAR',
+          'VERSION:2.0',
+          'PRODID:-//IKAPI Jawa Barat//Agenda Literasi//ID',
+          'CALSCALE:GREGORIAN',
+          'METHOD:PUBLISH',
+          'BEGIN:VEVENT',
+          'SUMMARY:' + cleanSummary,
+          'DESCRIPTION:' + cleanDesc,
+          'LOCATION:' + cleanLocation,
+          'DTSTART:' + startISO,
+          'DTEND:' + endISO,
+          'STATUS:CONFIRMED',
+          'END:VEVENT',
+          'END:VCALENDAR'
+        ].join('\r\n');
+
+        var blob = new Blob([icsData], { type: 'text/calendar;charset=utf-8' });
+        var url = URL.createObjectURL(blob);
+        var link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', title.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '.ics');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      }
+
+      $('event-save').addEventListener('click', function () {
+        if (!event) return;
+        downloadIcsFile(event.title, event.dateIcs[0], event.dateIcs[1], event.location, event.title + ' - ' + event.category + ' IKAPI Jabar.');
+      });
+
+      fill();
+    })();
+  </script>

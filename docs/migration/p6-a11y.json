@@ -1,0 +1,86 @@
+[
+  {
+    "scenario": "login-enter-submit",
+    "redirected": true,
+    "url": "/akun/perpustakaan",
+    "errors": []
+  },
+  {
+    "scenario": "login-tab-order",
+    "order": [
+      "tab-buyer",
+      "tab-publisher",
+      "email-field",
+      "forgot-link",
+      "password-field",
+      "toggle-pw-btn",
+      "remember-device",
+      "submit-btn"
+    ],
+    "focusRing": {
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(103, 61, 230)",
+      "boxShadow": "none"
+    },
+    "errors": []
+  },
+  {
+    "scenario": "login-validation-empty-submit",
+    "state": {
+      "banner": true,
+      "emailErr": true,
+      "passwordErr": true,
+      "active": "email-field"
+    },
+    "errors": []
+  },
+  {
+    "scenario": "register-validation-blocks-incomplete-submit",
+    "state": {
+      "banner": true,
+      "emailErrVisible": true,
+      "passwordErrVisible": true,
+      "termsErrVisible": true,
+      "active": "buyer-submit"
+    },
+    "errors": []
+  },
+  {
+    "scenario": "settings-modal-escape",
+    "opened": true,
+    "scrollLocked": "hidden",
+    "closed": true,
+    "scrollAfter": "",
+    "errors": []
+  },
+  {
+    "scenario": "orders-modal-escape-and-back",
+    "opened": true,
+    "closed": true,
+    "backUrl": "/akun/profil",
+    "errors": []
+  },
+  {
+    "scenario": "profile-persist-after-reload",
+    "afterReload": "Nama Setelah Reload",
+    "inputValue": "Nama Setelah Reload",
+    "errors": []
+  },
+  {
+    "scenario": "reader-position-persist",
+    "start": "Halaman 41 (1 dari 4 di Bab 3)",
+    "moved": "Halaman 43 (3 dari 4 di Bab 3)",
+    "stored": 2,
+    "afterReload": "Halaman 43 (3 dari 4 di Bab 3)",
+    "errors": []
+  },
+  {
+    "scenario": "cart-reload-and-remove",
+    "total": "\n                Rp 103.000\n              ",
+    "items": 2,
+    "totalAfter": "\n                Rp 103.000\n              ",
+    "itemsAfter": 1,
+    "totalAfterRemove": "Rp 58.000",
+    "errors": []
+  }
+]

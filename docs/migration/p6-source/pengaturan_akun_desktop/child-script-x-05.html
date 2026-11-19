@@ -1,0 +1,212 @@
+<script>
+    const STORAGE_KEY = 'ikapi_user_profile';
+    const PREF_STORAGE_KEY = 'ikapi_user_preferences';
+
+    const DEFAULT_PROFILE = {
+      fullName: 'Ahmad Hidayat',
+      email: 'ahmad.hidayat@literasi.id',
+      phone: '0812-3456-7890',
+      avatarUrl: null
+    };
+
+    function getStoredProfile() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) return JSON.parse(raw);
+      } catch (e) {}
+      return Object.assign({}, DEFAULT_PROFILE);
+    }
+
+    function getInitials(name) {
+      if (!name) return 'AH';
+      const parts = name.trim().split(/\s+/);
+      if (parts.length === 1) return parts[0].substring(0, 2).toUpperCase();
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    }
+
+    function syncGlobalIdentity(profile) {
+      const initials = getInitials(profile.fullName);
+
+      ['header-user-name', 'dropdown-user-name', 'sidebar-user-name'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = profile.fullName;
+      });
+
+      ['dropdown-user-email', 'sidebar-user-email'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = profile.email;
+      });
+
+      const avatarContainers = [
+        { id: 'header-avatar', initialsId: 'header-avatar-initials' },
+        { id: 'sidebar-avatar', initialsId: 'sidebar-avatar-initials' }
+      ];
+
+      avatarContainers.forEach(t => {
+        const container = document.getElementById(t.id);
+        if (!container) return;
+        if (profile.avatarUrl) {
+          container.innerHTML = `<img src="${profile.avatarUrl}" alt="Avatar" class="w-full h-full object-cover">`;
+        } else {
+          container.innerHTML = `<span id="${t.initialsId}">${initials}</span>`;
+        }
+      });
+    }
+
+    let toastTimer = null;
+    function showToast(message, icon = 'check_circle') {
+      const toast = document.getElementById('toast-notification');
+      const msg = document.getElementById('toastMessage');
+      const ic = document.getElementById('toastIcon');
+      if (!toast || !msg) return;
+
+      msg.textContent = message;
+      if (ic) ic.textContent = icon;
+      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2800);
+    }
+
+    // Notification Preferences Management
+    function loadNotificationPreferences() {
+      try {
+        const raw = localStorage.getItem(PREF_STORAGE_KEY);
+        if (raw) {
+          const prefs = JSON.parse(raw);
+          const el1 = document.getElementById('pref-order-status');
+          const el2 = document.getElementById('pref-events');
+          const el3 = document.getElementById('pref-new-books');
+          if (el1) el1.checked = prefs.orderStatus ?? true;
+          if (el2) el2.checked = prefs.events ?? true;
+          if (el3) el3.checked = prefs.newBooks ?? false;
+        }
+      } catch (e) {}
+    }
+
+    function markPreferencesDirty() {
+      // Toggle state updated
+    }
+
+    function saveNotificationPreferences() {
+      const el1 = document.getElementById('pref-order-status');
+      const el2 = document.getElementById('pref-events');
+      const el3 = document.getElementById('pref-new-books');
+
+      const prefs = {
+        orderStatus: el1 ? el1.checked : true,
+        events: el2 ? el2.checked : true,
+        newBooks: el3 ? el3.checked : false
+      };
+
+      try {
+        localStorage.setItem(PREF_STORAGE_KEY, JSON.stringify(prefs));
+      } catch (e) {}
+
+      showToast('Preferensi notifikasi berhasil disimpan', 'check_circle');
+    }
+
+    // Modal Change Password
+    function openPasswordModal() {
+      const modal = document.getElementById('modal-change-password');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closePasswordModal() {
+      const modal = document.getElementById('modal-change-password');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function handlePasswordSubmit(e) {
+      e.preventDefault();
+      const currentPwd = document.getElementById('current-password')?.value;
+      const newPwd = document.getElementById('new-password')?.value;
+      const confirmPwd = document.getElementById('confirm-password')?.value;
+
+      if (!currentPwd || !newPwd || !confirmPwd) {
+        showToast('Semua kolom kata sandi wajib diisi', 'error');
+        return;
+      }
+
+      if (newPwd.length < 8) {
+        showToast('Kata sandi baru minimal 8 karakter', 'error');
+        return;
+      }
+
+      if (newPwd !== confirmPwd) {
+        showToast('Konfirmasi kata sandi tidak cocok', 'error');
+        return;
+      }
+
+      const dateLabel = document.getElementById('password-last-updated');
+      if (dateLabel) {
+        dateLabel.textContent = 'Terakhir diperbarui: Hari ini (Baru saja)';
+      }
+
+      closePasswordModal();
+      document.getElementById('change-password-form')?.reset();
+      showToast('Kata sandi akun berhasil diperbarui', 'lock_reset');
+    }
+
+    window.addEventListener('click', (e) => {
+      const modal = document.getElementById('modal-change-password');
+      if (modal && e.target === modal) closePasswordModal();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closePasswordModal();
+    });
+
+    // Account Dropdown Interactions
+    document.addEventListener('DOMContentLoaded', () => {
+      const profile = getStoredProfile();
+      syncGlobalIdentity(profile);
+      loadNotificationPreferences();
+
+      const toggleBtn = document.getElementById('toggle-dropdown-btn');
+      const dropdownMenu = document.getElementById('header-user-dropdown');
+
+      function openDropdown() {
+        if (!dropdownMenu) return;
+        dropdownMenu.classList.remove('hidden');
+        toggleBtn?.setAttribute('aria-expanded', 'true');
+      }
+
+      function closeDropdown() {
+        if (!dropdownMenu) return;
+        dropdownMenu.classList.add('hidden');
+        toggleBtn?.setAttribute('aria-expanded', 'false');
+      }
+
+      if (toggleBtn && dropdownMenu) {
+        toggleBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isHidden = dropdownMenu.classList.contains('hidden');
+          if (isHidden) openDropdown();
+          else closeDropdown();
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!dropdownMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+            closeDropdown();
+          }
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') closeDropdown();
+        });
+      }
+    });
+  </script>

@@ -1,0 +1,375 @@
+<main class="w-full pt-28 bg-white">
+    <div class="flex flex-col w-full">
+
+      <!-- Main Product Area (Zero Breadcrumb - Directly to Product Hero) -->
+      <section id="book-detail" data-book-id="BK-01" class="w-full pt-8 pb-12 bg-white">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            
+            <!-- Left: Book Cover (5 Cols) -->
+            <div class="lg:col-span-5 flex justify-center">
+              <div class="w-full max-w-[340px] aspect-[2/3] rounded-2xl overflow-hidden bg-surface-neutral border border-border-subtle shadow-md">
+                <img id="book-cover" src="../../assets/covers/laskar-aksara-pasundan.jpg" alt="Sampul Buku Laskar Aksara Pasundan" class="w-full h-full object-cover">
+              </div>
+            </div>
+
+            <!-- Right: Product Information & Purchase CTAs (7 Cols) -->
+            <div class="lg:col-span-7 flex flex-col justify-start gap-5">
+              
+              <!-- Title, Author & Publisher -->
+              <div class="space-y-2">
+                <h1 id="book-title" class="text-[28px] sm:text-[34px] font-bold text-ink-body tracking-tight leading-tight">
+                  Laskar Aksara Pasundan
+                </h1>
+                <p class="text-[16px] text-ink-muted">
+                  Karya <span id="book-author" class="font-bold text-ink-body">Ayi R. Kurnia</span>
+                </p>
+                <div class="flex items-center gap-3 text-[13px] text-ink-muted pt-0.5">
+                  <span id="book-publisher" class="font-medium text-primary">Penerbit Kiblat Buku Utama</span>
+                  <span>Tahun Terbit 2024</span>
+                </div>
+              </div>
+
+              <!-- Compact Supporting Metadata Row -->
+              <div class="flex flex-wrap items-center gap-2.5 text-[13px] text-ink-muted">
+                <span class="px-3 py-1 rounded-full bg-surface-neutral text-ink-body font-medium border border-border-subtle">Bahasa Indonesia &amp; Sunda</span>
+                <span class="px-3 py-1 rounded-full bg-surface-neutral text-ink-body font-medium border border-border-subtle">268 Halaman</span>
+              </div>
+
+              <!-- Compact Hostinger Purchase Panel -->
+              <div class="space-y-4 mt-1">
+                <div>
+                  <span class="text-[12px] font-bold text-ink-muted uppercase tracking-wider block mb-1">Harga Lisensi Baca</span>
+                  <div class="text-[32px] sm:text-[36px] font-bold text-ink-body tracking-tight leading-none">
+                    Rp 45.000
+                  </div>
+                </div>
+
+                <!-- Primary CTA -->
+                <button id="btnAddToCart" type="button" aria-label="Tambah ke Keranjang" class="w-full h-12 px-6 rounded-xl bg-primary hover:bg-primary-hover text-white text-[15px] font-bold flex items-center justify-center gap-2 transition-all shadow-xs cursor-pointer active:scale-[0.99]">
+                  <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+                  <span id="btnAddToCartText">Tambah ke Keranjang</span>
+                </button>
+
+                <!-- Secondary CTAs: Baca Cuplikan & Wishlist -->
+                <div class="flex items-center gap-3 pt-1">
+                  <a id="btnSamplePreview" href="preview_buku_desktop.html" data-path="preview-buku" class="flex-1 h-11 px-4 rounded-xl border border-border-subtle bg-white hover:bg-surface-soft text-ink-body text-[14px] font-semibold flex items-center justify-center gap-2 transition-colors">
+                    <span class="material-symbols-outlined text-[19px] text-primary">book_2</span>
+                    <span>Baca Cuplikan</span>
+                  </a>
+                  <button id="btnWishlist" type="button" aria-label="Tambah ke Favorit" class="h-11 w-11 rounded-xl border border-border-subtle bg-white hover:bg-surface-soft text-ink-muted hover:text-primary flex items-center justify-center transition-colors cursor-pointer">
+                    <span id="wishlistIcon" class="material-symbols-outlined text-[20px]">favorite_border</span>
+                  </button>
+                </div>
+
+                <!-- Report book: text button, secondary weight -->
+                <div class="pt-0.5">
+                  <button id="btn-report-book" type="button" aria-haspopup="dialog" class="-ml-2 inline-flex h-11 items-center gap-1.5 rounded-lg px-2 text-[13px] font-semibold text-ink-muted transition-colors hover:bg-surface-soft hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2">
+                    <span class="material-symbols-outlined text-[18px]" aria-hidden="true">flag</span>
+                    <span>Laporkan</span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Sinopsis & Detail Buku -->
+      <section class="w-full py-12 bg-white border-t border-border-subtle">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            
+            <!-- Sinopsis (7 cols) -->
+            <div class="lg:col-span-7 flex flex-col gap-4">
+              <h2 class="text-[22px] md:text-[24px] font-bold text-ink-body tracking-tight">Sinopsis</h2>
+              <div class="flex flex-col gap-3.5 text-[15px] text-ink-body leading-relaxed">
+                <p>
+                  Di lereng Gunung Manglayang, penemuan naskah daun lontar beraksara kuno memicu pergulatan batin Ki Danu, seorang juru pelihara naskah tua yang berupaya menjaga warisan budaya di tengah derasnya arus modernisasi.
+                </p>
+                <p>
+                  Ketika sekelompok pemuda pegiat kebudayaan dari Bandung tiba dengan misi digitalisasi, mereka menemukan rahasia filosofi luhur tentang ketahanan pangan, kearifan lingkungan, dan catatan sejarah Pasundan yang tersimpan selama berabad-abad.
+                </p>
+                <p>
+                  Melalui penceritaan yang hangat dan lekat dengan kearifan lokal, novel ini menggambarkan jembatan antar-generasi dalam merawat ingatan sejarah dan kearifan aksara Nusantara.
+                </p>
+              </div>
+            </div>
+
+            <!-- Detail Buku (5 cols) -->
+            <div class="lg:col-span-5 flex flex-col gap-4">
+              <h2 class="text-[22px] md:text-[24px] font-bold text-ink-body tracking-tight">Detail Buku</h2>
+              <div class="bg-surface-neutral rounded-2xl p-5 border border-border-subtle">
+                <dl class="divide-y divide-border-subtle text-[14px]">
+                  <div class="py-2.5 flex justify-between gap-4">
+                    <dt class="text-ink-muted">Penulis</dt>
+                    <dd class="font-bold text-ink-body text-right">Ayi R. Kurnia</dd>
+                  </div>
+                  <div class="py-2.5 flex justify-between gap-4">
+                    <dt class="text-ink-muted">Penerbit</dt>
+                    <dd class="font-bold text-primary text-right">Kiblat Buku Utama</dd>
+                  </div>
+                  <div class="py-2.5 flex justify-between gap-4">
+                    <dt class="text-ink-muted">Tahun Terbit</dt>
+                    <dd class="font-bold text-ink-body text-right">2024</dd>
+                  </div>
+                  <div class="py-2.5 flex justify-between gap-4">
+                    <dt class="text-ink-muted">Bahasa</dt>
+                    <dd class="font-bold text-ink-body text-right">Bahasa Indonesia &amp; Sunda</dd>
+                  </div>
+                  <div class="py-2.5 flex justify-between gap-4">
+                    <dt class="text-ink-muted">Format</dt>
+                    <dd class="font-bold text-ink-body text-right">E-Book (Web Reader)</dd>
+                  </div>
+                  <div class="py-2.5 flex justify-between gap-4">
+                    <dt class="text-ink-muted">Jumlah Halaman</dt>
+                    <dd class="font-bold text-ink-body text-right">268 halaman</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Ulasan Pembaca & Interactive Rating System -->
+      <section id="section-rating" class="w-full py-12 bg-white border-t border-border-subtle">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          
+          <div class="flex items-center justify-between pb-1">
+            <h2 class="text-[22px] md:text-[24px] font-bold text-ink-body tracking-tight">Ulasan Pembaca</h2>
+            <span id="review-count-badge" class="text-[14px] text-ink-muted font-medium">3 ulasan</span>
+          </div>
+
+          <!-- Interactive Rating & Review Submission Card -->
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-border-subtle shadow-sm space-y-5">
+            <div class="space-y-1">
+              <h3 class="text-[18px] font-bold text-ink-body tracking-tight">
+                Beri Penilaian
+              </h3>
+              <p class="text-[14px] text-ink-muted">
+                Bagaimana pendapatmu tentang buku ini?
+              </p>
+            </div>
+
+            <!-- 5-Star Interactive Rating Controls -->
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+              <div id="star-rating-container" class="flex items-center gap-1" role="radiogroup" aria-label="Penilaian bintang 1 sampai 5">
+                <button type="button" role="radio" aria-checked="false" aria-label="1 bintang - Sangat kurang" class="star-btn p-1 cursor-pointer" data-rating="1" onclick="selectStarRating(1)" onmouseenter="hoverStarRating(1)" onmouseleave="leaveStarRating()">
+                  <span class="material-symbols-outlined text-[32px]">star</span>
+                </button>
+                <button type="button" role="radio" aria-checked="false" aria-label="2 bintang - Kurang" class="star-btn p-1 cursor-pointer" data-rating="2" onclick="selectStarRating(2)" onmouseenter="hoverStarRating(2)" onmouseleave="leaveStarRating()">
+                  <span class="material-symbols-outlined text-[32px]">star</span>
+                </button>
+                <button type="button" role="radio" aria-checked="false" aria-label="3 bintang - Cukup" class="star-btn p-1 cursor-pointer" data-rating="3" onclick="selectStarRating(3)" onmouseenter="hoverStarRating(3)" onmouseleave="leaveStarRating()">
+                  <span class="material-symbols-outlined text-[32px]">star</span>
+                </button>
+                <button type="button" role="radio" aria-checked="false" aria-label="4 bintang - Bagus" class="star-btn p-1 cursor-pointer" data-rating="4" onclick="selectStarRating(4)" onmouseenter="hoverStarRating(4)" onmouseleave="leaveStarRating()">
+                  <span class="material-symbols-outlined text-[32px]">star</span>
+                </button>
+                <button type="button" role="radio" aria-checked="false" aria-label="5 bintang - Sangat bagus" class="star-btn p-1 cursor-pointer" data-rating="5" onclick="selectStarRating(5)" onmouseenter="hoverStarRating(5)" onmouseleave="leaveStarRating()">
+                  <span class="material-symbols-outlined text-[32px]">star</span>
+                </button>
+              </div>
+
+              <!-- Rating Label Feedback -->
+              <span id="star-rating-label" class="text-[13px] font-semibold text-ink-muted">
+                Rating kamu: Belum dipilih
+              </span>
+            </div>
+
+            <!-- Optional Review Text Input -->
+            <div class="space-y-1.5 pt-1">
+              <label for="user-review-text" class="block text-[13px] font-bold text-ink-body">
+                Tulis Ulasan (Opsional)
+              </label>
+              <textarea id="user-review-text" rows="2" class="w-full p-3.5 rounded-xl bg-surface-neutral border border-border-subtle text-ink-body text-[14px] placeholder:text-ink-muted focus:outline-none focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20 transition-all resize-none" placeholder="Tuliskan pengalaman atau kesan membaca buku ini..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex items-center gap-3 pt-1">
+              <button id="btn-submit-rating" type="button" class="h-10 px-5 rounded-xl bg-primary hover:bg-primary-hover text-white text-[13px] font-bold transition-all shadow-xs cursor-pointer" onclick="submitUserRating()">
+                Kirim Penilaian
+              </button>
+              <button id="btn-cancel-rating" type="button" class="hidden h-10 px-4 rounded-xl border border-border-subtle bg-white hover:bg-surface-neutral text-ink-muted text-[13px] font-medium transition-colors" onclick="resetUserRating()">
+                Hapus Penilaian
+              </button>
+            </div>
+          </div>
+
+          <!-- Existing Reviews List -->
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-border-subtle shadow-sm divide-y divide-border-subtle" id="reviews-list-container">
+            <!-- Review 1 -->
+            <article class="review-item py-4 first:pt-0 last:pb-0 flex flex-col gap-2" data-comment-id="CMT-2026-101">
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex min-w-0 flex-col gap-0.5">
+                  <span class="review-author text-[14px] font-bold text-ink-body">Gilang Nugraha</span>
+                  <time class="text-[12px] text-ink-muted" datetime="2025-01-12">12 Januari 2025</time>
+                </div>
+                <button type="button" class="comment-menu-btn -mr-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg text-ink-muted transition-colors hover:bg-surface-neutral hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40" aria-label="Aksi untuk komentar Gilang Nugraha" aria-haspopup="menu" aria-expanded="false">
+                  <span class="material-symbols-outlined text-[20px]" aria-hidden="true">more_horiz</span>
+                </button>
+              </div>
+              <p class="review-body text-[14px] text-ink-body leading-relaxed">
+                Pembahasan mengenai naskah kuno Priangan disampaikan secara mengalir. Gaya bahasanya mudah dinikmati dan memberikan wawasan baru tentang kekayaan tradisi tulisan Pasundan.
+              </p>
+              <span class="review-reaction hidden items-center gap-1 text-[12px] font-semibold text-primary" role="status">
+                <span class="material-symbols-outlined text-[15px]" data-reaction-icon="" aria-hidden="true">thumb_up</span>
+                <span data-reaction-label="">Suka</span>
+              </span>
+            </article>
+
+            <!-- Review 2 -->
+            <article class="review-item py-4 first:pt-0 last:pb-0 flex flex-col gap-2" data-comment-id="CMT-2026-102">
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex min-w-0 flex-col gap-0.5">
+                  <span class="review-author text-[14px] font-bold text-ink-body">Ratih Wulandari</span>
+                  <time class="text-[12px] text-ink-muted" datetime="2024-12-28">28 Desember 2024</time>
+                </div>
+                <button type="button" class="comment-menu-btn -mr-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg text-ink-muted transition-colors hover:bg-surface-neutral hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40" aria-label="Aksi untuk komentar Ratih Wulandari" aria-haspopup="menu" aria-expanded="false">
+                  <span class="material-symbols-outlined text-[20px]" aria-hidden="true">more_horiz</span>
+                </button>
+              </div>
+              <p class="review-body text-[14px] text-ink-body leading-relaxed">
+                Penjelasan filosofis tentang lambang aksara Sunda Kuna pada bab pertengahan sangat menarik. Buku ini cocok menjadi referensi bacaan bagi pegiat literasi daerah.
+              </p>
+              <span class="review-reaction hidden items-center gap-1 text-[12px] font-semibold text-primary" role="status">
+                <span class="material-symbols-outlined text-[15px]" data-reaction-icon="" aria-hidden="true">thumb_up</span>
+                <span data-reaction-label="">Suka</span>
+              </span>
+            </article>
+
+            <!-- Review 3 -->
+            <article class="review-item py-4 first:pt-0 last:pb-0 flex flex-col gap-2" data-comment-id="CMT-2026-103">
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex min-w-0 flex-col gap-0.5">
+                  <span class="review-author text-[14px] font-bold text-ink-body">Fajar Ashari</span>
+                  <time class="text-[12px] text-ink-muted" datetime="2024-12-19">19 Desember 2024</time>
+                </div>
+                <button type="button" class="comment-menu-btn -mr-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg text-ink-muted transition-colors hover:bg-surface-neutral hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40" aria-label="Aksi untuk komentar Fajar Ashari" aria-haspopup="menu" aria-expanded="false">
+                  <span class="material-symbols-outlined text-[20px]" aria-hidden="true">more_horiz</span>
+                </button>
+              </div>
+              <p class="review-body text-[14px] text-ink-body leading-relaxed">
+                Penceritaan sejarah lokal yang dikemas dalam bentuk narasi fiksi membuat topik filologi menjadi lebih memikat dan relevan untuk dibaca hari ini.
+              </p>
+              <span class="review-reaction hidden items-center gap-1 text-[12px] font-semibold text-primary" role="status">
+                <span class="material-symbols-outlined text-[15px]" data-reaction-icon="" aria-hidden="true">thumb_up</span>
+                <span data-reaction-label="">Suka</span>
+              </span>
+            </article>
+
+              <p class="text-[14px] text-ink-body leading-relaxed">
+                Penceritaan sejarah lokal yang dikemas dalam bentuk narasi fiksi membuat topik filologi menjadi lebih memikat dan relevan untuk dibaca hari ini.
+              </p>
+            
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section: Buku Terkait (Clean Local Covers) -->
+      <section class="w-full py-12 bg-white border-t border-border-subtle">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-[22px] md:text-[24px] font-bold text-ink-body tracking-tight">Buku Terkait</h2>
+            <a class="inline-flex items-center gap-1 text-[14px] text-primary hover:text-primary-hover font-bold group" data-path="katalog-buku" href="katalog_buku_desktop.html">
+              <span>Lihat Semua</span>
+              <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+            
+            <!-- Book 1 -->
+            <article class="group flex flex-col justify-between">
+              <div>
+                <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="block">
+                  <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-2.5 border border-border-subtle shadow-xs">
+                    <img src="../../assets/covers/B02.jpg" alt="Sampul buku Pendidikan Karakter Sunda" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                  </div>
+                </a>
+                <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="block">
+                  <h3 class="text-[15px] font-bold text-ink-body leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">Pendidikan Karakter Sunda</h3>
+                </a>
+                <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Dr. Cecep Hidayat, M.Pd.</p>
+              </div>
+              <div class="mt-2.5 pt-1 flex items-center justify-between">
+                <span class="text-[16px] font-bold text-ink-body">Rp 58.000</span>
+                <button aria-label="Tambah Pendidikan Karakter Sunda ke keranjang" class="btn-related-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white transition-colors flex items-center justify-center border border-primary/20 hover:border-transparent cursor-pointer" type="button" title="Tambah ke Keranjang">
+                  <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- Book 2 -->
+            <article class="group flex flex-col justify-between">
+              <div>
+                <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="block">
+                  <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-2.5 border border-border-subtle shadow-xs">
+                    <img src="../../assets/covers/B03.jpg" alt="Sampul buku Bumi Parahyangan" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                  </div>
+                </a>
+                <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="block">
+                  <h3 class="text-[15px] font-bold text-ink-body leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">Bumi Parahyangan: Narasi Tanah Pasundan</h3>
+                </a>
+                <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Prof. Didi Supardi</p>
+              </div>
+              <div class="mt-2.5 pt-1 flex items-center justify-between">
+                <span class="text-[16px] font-bold text-ink-body">Rp 74.000</span>
+                <button aria-label="Tambah Bumi Parahyangan ke keranjang" class="btn-related-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white transition-colors flex items-center justify-center border border-primary/20 hover:border-transparent cursor-pointer" type="button" title="Tambah ke Keranjang">
+                  <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- Book 3 -->
+            <article class="group flex flex-col justify-between">
+              <div>
+                <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="block">
+                  <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-2.5 border border-border-subtle shadow-xs">
+                    <img src="../../assets/covers/B06.jpg" alt="Sampul buku Strategi Wirausaha Kreatif" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                  </div>
+                </a>
+                <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="block">
+                  <h3 class="text-[15px] font-bold text-ink-body leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">Strategi Wirausaha Kreatif Era Digital</h3>
+                </a>
+                <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Rian Anggoro, M.B.A.</p>
+              </div>
+              <div class="mt-2.5 pt-1 flex items-center justify-between">
+                <span class="text-[16px] font-bold text-ink-body">Rp 62.000</span>
+                <button aria-label="Tambah Strategi Wirausaha Kreatif ke keranjang" class="btn-related-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white transition-colors flex items-center justify-center border border-primary/20 hover:border-transparent cursor-pointer" type="button" title="Tambah ke Keranjang">
+                  <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- Book 4 -->
+            <article class="group flex flex-col justify-between">
+              <div>
+                <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="block">
+                  <div class="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-surface-neutral mb-2.5 border border-border-subtle shadow-xs">
+                    <img src="../../assets/covers/B04.jpg" alt="Sampul buku Antologi Puisi Lembayung Bandung" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                  </div>
+                </a>
+                <a href="katalog_buku_desktop.html" data-path="katalog-buku" class="block">
+                  <h3 class="text-[15px] font-bold text-ink-body leading-snug line-clamp-2 min-h-[2.6em] group-hover:text-primary transition-colors">Antologi Puisi Lembayung Bandung</h3>
+                </a>
+                <p class="text-[13px] text-ink-muted line-clamp-1 mt-0.5">Dewi Sartika Putri</p>
+              </div>
+              <div class="mt-2.5 pt-1 flex items-center justify-between">
+                <span class="text-[16px] font-bold text-ink-body">Rp 38.000</span>
+                <button aria-label="Tambah Antologi Puisi Lembayung Bandung ke keranjang" class="btn-related-cart w-8 h-8 rounded-lg bg-surface-soft hover:bg-primary text-primary hover:text-white transition-colors flex items-center justify-center border border-primary/20 hover:border-transparent cursor-pointer" type="button" title="Tambah ke Keranjang">
+                  <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                </button>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>

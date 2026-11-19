@@ -1,0 +1,23 @@
+<div id="modal-confirm" class="fixed inset-0 z-[70] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-confirm=""></div>
+  <div class="relative mx-auto mt-20 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[440px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:p-6" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+    <div class="mb-3 flex items-start justify-between gap-4">
+      <h2 id="confirm-title" class="text-[18px] font-bold tracking-tight text-ink">Konfirmasi Pencairan</h2>
+      <button type="button" data-close-confirm="" aria-label="Tutup" class="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg text-muted hover:bg-neutral hover:text-ink">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+    <dl class="space-y-2.5 text-[13px]">
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Nominal pencairan</dt><dd class="num font-semibold text-ink" id="confirm-amount">-</dd></div>
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Rekening tujuan</dt><dd class="text-ink" id="confirm-bank">-</dd></div>
+      <div class="flex items-baseline justify-between gap-4"><dt class="text-muted">Penerima</dt><dd class="text-ink">PT Kiblat Buku Utama</dd></div>
+    </dl>
+    <p class="mt-4 text-[12px] leading-relaxed text-muted">Pengajuan pada prototype ini tidak dikirim ke sistem perbankan.</p>
+    <div class="mt-5 flex items-center justify-end gap-2 border-t border-divider pt-4">
+      <button type="button" data-close-confirm="" class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">Kembali</button>
+      <button type="button" id="btn-submit" class="focus-ring inline-flex h-10 items-center gap-2 rounded-xl bg-primary px-4 text-[14px] font-semibold text-white hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-60">
+        <span id="submit-label">Ajukan Pencairan</span>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div id="modal-approve" class="fixed inset-0 z-[80] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-approve=""></div>
+  <div class="relative mx-auto mt-20 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[440px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:p-6" role="dialog" aria-modal="true" aria-labelledby="approve-title">
+    <h2 id="approve-title" class="text-[18px] font-bold tracking-tight text-ink">Setujui Pendaftaran?</h2>
+    <p class="mt-1 text-[13px] leading-relaxed text-muted">Pastikan informasi penerbit telah diperiksa sebelum menyetujui pengajuan.</p>
+    <dl class="mt-3 space-y-2 text-[13px]">
+      <div class="flex justify-between gap-3"><dt class="text-muted">Penerbit</dt><dd class="text-right font-semibold text-ink" id="approve-name">-</dd></div>
+      <div class="flex justify-between gap-3"><dt class="text-muted">No. pendaftaran</dt><dd class="num text-ink" id="approve-reg">-</dd></div>
+    </dl>
+    <p class="mt-3 text-[12px] leading-relaxed text-muted">Status diperbarui pada state prototype ini saja, tanpa pengiriman email atau aktivasi akun nyata.</p>
+    <div class="mt-5 flex items-center justify-end gap-2 border-t border-divider pt-4">
+      <button type="button" data-close-approve="" class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">Batal</button>
+      <button type="button" id="btn-confirm-approve" class="focus-ring inline-flex h-10 items-center rounded-xl bg-primary px-4 text-[14px] font-semibold text-white hover:bg-primary-hover">Setujui</button>
+    </div>
+  </div>
+</div>

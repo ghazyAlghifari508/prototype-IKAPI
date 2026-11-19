@@ -1,0 +1,158 @@
+[
+  {
+    "label": "home@1440",
+    "checked": 6,
+    "diffs": [
+      {
+        "sel": "header",
+        "prop": "boxShadow",
+        "blade": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(34, 34, 37, 0.04) 0px 1px 4px 0px",
+        "proto": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(34, 34, 37, 0.04) 0px 1px 4px 0px"
+      },
+      {
+        "sel": "h1",
+        "missing": "blade"
+      }
+    ]
+  },
+  {
+    "label": "katalog@1440",
+    "checked": 5,
+    "diffs": [
+      {
+        "sel": "header",
+        "prop": "boxShadow",
+        "blade": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(34, 34, 37, 0.04) 0px 1px 4px 0px",
+        "proto": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(34, 34, 37, 0.04) 0px 1px 4px 0px"
+      }
+    ]
+  },
+  {
+    "label": "detail@1440",
+    "checked": 5,
+    "diffs": [
+      {
+        "sel": "header",
+        "prop": "boxShadow",
+        "blade": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(34, 34, 37, 0.04) 0px 1px 4px 0px",
+        "proto": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(34, 34, 37, 0.04) 0px 1px 4px 0px"
+      }
+    ]
+  },
+  {
+    "label": "login@390",
+    "checked": 4,
+    "diffs": [
+      {
+        "sel": "form",
+        "prop": "fontFamily",
+        "blade": "\"DM Sans\", sans-serif",
+        "proto": "\"DM Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif"
+      },
+      {
+        "sel": "h1",
+        "prop": "fontFamily",
+        "blade": "\"DM Sans\", sans-serif",
+        "proto": "\"DM Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif"
+      },
+      {
+        "sel": "input[type=\"email\"]",
+        "prop": "fontFamily",
+        "blade": "\"DM Sans\", sans-serif",
+        "proto": "\"DM Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif"
+      },
+      {
+        "sel": "button[type=\"submit\"]",
+        "prop": "fontFamily",
+        "blade": "\"DM Sans\", sans-serif",
+        "proto": "\"DM Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif"
+      }
+    ]
+  },
+  {
+    "label": "penerbit@1440",
+    "checked": 5,
+    "diffs": [
+      {
+        "sel": "h1",
+        "prop": "fontFamily",
+        "blade": "\"DM Sans\", sans-serif",
+        "proto": "\"DM Sans\", system-ui, sans-serif"
+      },
+      {
+        "sel": "main article",
+        "missing": "blade"
+      },
+      {
+        "sel": "table",
+        "prop": "fontFamily",
+        "blade": "\"DM Sans\", sans-serif",
+        "proto": "\"DM Sans\", system-ui, sans-serif"
+      },
+      {
+        "sel": "th",
+        "prop": "fontFamily",
+        "blade": "\"DM Sans\", sans-serif",
+        "proto": "\"DM Sans\", system-ui, sans-serif"
+      },
+      {
+        "sel": "#btn-notif",
+        "prop": "fontFamily",
+        "blade": "\"DM Sans\", sans-serif",
+        "proto": "\"DM Sans\", system-ui, sans-serif"
+      }
+    ]
+  },
+  {
+    "label": "admin@1440",
+    "checked": 5,
+    "diffs": [
+      {
+        "sel": "h1",
+        "prop": "fontFamily",
+        "blade": "\"DM Sans\", sans-serif",
+        "proto": "\"DM Sans\", system-ui, sans-serif"
+      },
+      {
+        "sel": "main article",
+        "missing": "blade"
+      },
+      {
+        "sel": "table",
+        "missing": "blade"
+      },
+      {
+        "sel": "th",
+        "missing": "blade"
+      },
+      {
+        "sel": "header",
+        "prop": "fontFamily",
+        "blade": "\"DM Sans\", sans-serif",
+        "proto": "\"DM Sans\", system-ui, sans-serif"
+      }
+    ]
+  },
+  {
+    "label": "invoice@1440",
+    "checked": 4,
+    "diffs": []
+  },
+  {
+    "label": "komunitas@1440",
+    "checked": 3,
+    "diffs": []
+  },
+  {
+    "label": "invariants",
+    "reader": {
+      "downloadControls": 0,
+      "mentionsDownload": false,
+      "anchorsToFile": 0
+    },
+    "hero": {
+      "heroAvatars": 4,
+      "heroHasFive": false
+    }
+  }
+]

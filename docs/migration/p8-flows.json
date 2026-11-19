@@ -1,0 +1,144 @@
+[
+  {
+    "scenario": "1-navigation-and-reload",
+    "out": {
+      "kpi": {
+        "books": "4",
+        "sold": "103"
+      },
+      "rows": 5,
+      "booksUrl": "/penerbit/buku",
+      "bookRows": 5,
+      "orderRows": 5,
+      "orderDrawer": true,
+      "finance": {
+        "net": null,
+        "available": null,
+        "text": [
+          "Rp 1.485.000",
+          "Rp 840.000",
+          "Rp 645.000"
+        ]
+      },
+      "financeAfterReload": [
+        "Rp 1.485.000",
+        "Rp 840.000",
+        "Rp 645.000"
+      ]
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "2-shell-drawer-notif-escape",
+    "out": {
+      "drawerOpen": {
+        "translated": true,
+        "scrimVisible": true,
+        "expanded": "true",
+        "bodyLocked": "hidden"
+      },
+      "drawerClosedByEscape": true,
+      "notifOpen": true,
+      "notifClosed": true
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "3-books-search-filter-drawer-form",
+    "out": {
+      "initialRows": 5,
+      "afterSearch": 1,
+      "afterDraftFilter": 1,
+      "rowMenuOpen": true,
+      "detailDrawer": true,
+      "detailClosed": true,
+      "formOpen": true,
+      "validationShown": true
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "4-finance-withdraw-simulation",
+    "out": {
+      "before": [
+        "Rp 1.485.000",
+        "Rp 840.000"
+      ],
+      "confirmOpen": true,
+      "confirmButtons": 3,
+      "successOpen": true,
+      "successAfterMs": 1000,
+      "successClosed": true,
+      "after": [
+        "Rp 1.485.000",
+        "Rp 590.000"
+      ]
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "5-reviews-filter-reply",
+    "out": {
+      "initialCards": 4,
+      "afterUnansweredFilter": 2,
+      "countsBefore": [
+        "Semua (4)",
+        "Belum Dibalas (2)",
+        "Sudah Dibalas (2)"
+      ],
+      "editorOpen": true,
+      "emptyReplyError": false,
+      "replySent": true,
+      "countsAfter": [
+        "Semua (4)",
+        "Belum Dibalas (2)",
+        "Sudah Dibalas (2)"
+      ],
+      "toastVisible": true,
+      "emptyReplyValidation": false
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "6-settings-profile-bank-modals",
+    "out": {
+      "nameStart": "PT Kiblat Buku Utama",
+      "dirtyNote": true,
+      "cancelKeepsText": true,
+      "dirtyNoteCleared": false,
+      "bankFormOpen": true,
+      "bankReviewVisible": true,
+      "reviewModalOpen": true,
+      "savedProfile": "redaksi@kiblatbuku.co.id"
+    },
+    "errors": [],
+    "bad": []
+  },
+  {
+    "scenario": "7-aliases-approval-invoice",
+    "out": {
+      "loginAlias": {
+        "redirectStatus": 302,
+        "landed": "/masuk?role=publisher"
+      },
+      "registerAlias": {
+        "redirectStatus": 302,
+        "landed": "/daftar?role=publisher"
+      },
+      "statusRejected": "Tidak disetujui",
+      "invoice": {
+        "number": "INV/2026/11/041-0082",
+        "rows": 5,
+        "total": "Rp 241.200",
+        "printBtn": true
+      }
+    },
+    "errors": [],
+    "bad": []
+  }
+]

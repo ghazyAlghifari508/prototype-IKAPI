@@ -1,0 +1,14 @@
+<div id="modal-reject" class="fixed inset-0 z-[80] hidden">
+  <div class="absolute inset-0 bg-[#222225]/45" data-close-reject=""></div>
+  <div class="relative mx-auto mt-20 max-h-[calc(100vh-4rem)] w-[calc(100%-2rem)] max-w-[460px] overflow-y-auto rounded-2xl border border-border bg-white p-5 shadow-[0_24px_60px_rgba(34,34,37,0.18)] sm:p-6" role="dialog" aria-modal="true" aria-labelledby="reject-title">
+    <h2 id="reject-title" class="text-[18px] font-bold tracking-tight text-ink">Tolak Pengajuan</h2>
+    <p class="num mt-1 text-[12.5px] text-muted" id="reject-meta">-</p>
+    <label for="reject-reason" class="mt-3 block text-[12.5px] font-semibold text-ink">Alasan Penolakan <span class="text-red-500">*</span></label>
+    <textarea id="reject-reason" rows="3" placeholder="Jelaskan alasan penolakan..." class="mt-1.5 w-full rounded-xl border border-border bg-white px-3 py-2.5 text-[13.5px] leading-relaxed text-ink outline-none placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary/15"></textarea>
+    <p id="reject-error" class="mt-1 hidden text-[12px] text-[#B42318]">Alasan penolakan wajib diisi.</p>
+    <div class="mt-5 flex items-center justify-end gap-2 border-t border-divider pt-4">
+      <button type="button" data-close-reject="" class="focus-ring inline-flex h-10 items-center rounded-xl border border-border px-4 text-[14px] font-semibold text-ink hover:bg-neutral">Batal</button>
+      <button type="button" id="btn-confirm-reject" class="focus-ring inline-flex h-10 items-center rounded-xl bg-[#B42318] px-4 text-[14px] font-semibold text-white hover:bg-[#971B13]">Tolak Pengajuan</button>
+    </div>
+  </div>
+</div>

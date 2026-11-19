@@ -1,0 +1,72 @@
+{
+  "facets": {
+    "categories": [
+      {
+        "label": "Pendidikan",
+        "count": 3
+      },
+      {
+        "label": "Sastra & Fiksi",
+        "count": 3
+      },
+      {
+        "label": "Budaya & Tradisi",
+        "count": 3
+      },
+      {
+        "label": "Bisnis & Ekonomi",
+        "count": 3
+      }
+    ],
+    "allCount": 12,
+    "publishers": [
+      {
+        "label": "Kiblat Buku Utama",
+        "count": 3
+      },
+      {
+        "label": "UPI Press",
+        "count": 3
+      },
+      {
+        "label": "ITB Press",
+        "count": 3
+      },
+      {
+        "label": "Geger Sunten",
+        "count": 3
+      }
+    ],
+    "sortOptions": [
+      {
+        "value": "az",
+        "label": "Urutkan: Judul (A–Z)"
+      },
+      {
+        "value": "za",
+        "label": "Urutkan: Judul (Z–A)"
+      },
+      {
+        "value": "newest",
+        "label": "Terbaru Rilis"
+      },
+      {
+        "value": "price_low",
+        "label": "Harga Terendah"
+      },
+      {
+        "value": "price_high",
+        "label": "Harga Tertinggi"
+      }
+    ],
+    "priceMin": 20000,
+    "priceMax": 100000
+  },
+  "defaults": {
+    "sort": "az",
+    "viewMode": "grid",
+    "pageSize": 12,
+    "minPrice": 20000,
+    "maxPrice": 100000
+  }
+}

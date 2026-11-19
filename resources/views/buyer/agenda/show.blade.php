@@ -1,0 +1,195 @@
+{{--
+  Agenda detail for ?id=ev-1..3 (prototype: three events mirrored from the agenda listing).
+  Source: docs/design/prototype-copy/user/detail_agenda_desktop.html (544 lines). Markup, classes, ids and copy are verbatim; only links,
+  asset URLs and the shell come from the app. See docs/migration/p6-buyer-flows.md.
+--}}
+
+@php
+    /** Links to screens of later phases resolve to '#' until their route exists: no dead route errors, no fake pages. */
+    $links = fn (string $name, array $params = []) => \Illuminate\Support\Facades\Route::has($name) ? route($name, $params) : '#';
+@endphp
+
+@extends('layouts.public')
+
+@push('head')
+<style>
+@layer utilities {
+:root {
+      --color-primary: #673de6;
+      --color-primary-hover: #5025d1;
+      --color-primary-deep: #2f1c6a;
+      --color-canvas: #ffffff;
+      --color-surface-soft: #f5f6ff;
+      --color-surface-neutral: #f5f5f6;
+      --color-text-primary: #222225;
+      --color-text-secondary: #62636b;
+      --color-border: #e5e7eb;
+    }
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        color: #222225;
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+      body {
+        overflow-x: clip;
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    .scrollbar-none::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-none {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+}
+</style>
+@endpush
+
+@section('title', 'Detail Agenda — IKAPI Store Jawa Barat')
+
+@section('header_z', 'z-40')
+
+@section('account', 'guest')
+
+@section('current_route', 'agenda')
+
+@section('cart_count', '2')
+
+@section('search_placeholder', 'Cari judul buku, lokakarya, atau artikel...')
+
+@section('nav_active_sm', '0')
+
+@section('account_pill', '0')
+
+@section('footer_variant', 'agenda')
+
+@section('main_pt', 'pt-28')
+
+@section('main_class', 'min-h-[calc(100vh-16rem)]')
+@section('chatbot', '1')
+
+@section('content')
+  <!-- Breadcrumb / back -->
+  <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+    <a href="{{ $links('agenda') }}" data-path="agenda-literasi" class="inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-ink-muted transition-colors hover:text-primary">
+      <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_back</span>
+      <span>Kembali ke Agenda Literasi</span>
+    </a>
+  </div>
+
+  <section class="w-full pt-5 pb-12">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10 items-start">
+
+        <!-- Article -->
+        <div class="lg:col-span-8">
+          <div class="relative w-full aspect-[16/9] overflow-hidden rounded-2xl border border-border-subtle bg-surface-neutral">
+            <img id="event-cover" src="" alt="" class="h-full w-full object-cover">
+          </div>
+
+          <div class="mt-5 flex flex-wrap items-center gap-2 text-[12.5px] text-ink-muted">
+            <span id="event-category" class="font-bold text-primary"></span>
+            <span aria-hidden="true" class="h-3 w-px bg-border-subtle"></span>
+            <span id="event-format"></span>
+          </div>
+
+          <h1 id="event-title" class="mt-2 text-[26px] font-bold leading-tight tracking-tight text-ink-body sm:text-[32px]"></h1>
+
+          <dl class="mt-5 grid grid-cols-1 gap-3 border-y border-border-subtle py-4 text-[13.5px] sm:grid-cols-3">
+            <div class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-[18px] text-primary" aria-hidden="true">calendar_month</span>
+              <div><dt class="text-ink-muted">Tanggal</dt><dd id="event-date" class="font-semibold text-ink-body"></dd></div>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-[18px] text-primary" aria-hidden="true">schedule</span>
+              <div><dt class="text-ink-muted">Waktu</dt><dd id="event-time" class="font-semibold text-ink-body"></dd></div>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-[18px] text-primary" aria-hidden="true">location_on</span>
+              <div><dt class="text-ink-muted">Lokasi</dt><dd id="event-location" class="font-semibold text-ink-body"></dd></div>
+            </div>
+          </dl>
+
+          <div class="mt-7 space-y-3">
+            <h2 class="text-[18px] font-bold tracking-tight text-ink-body">Tentang kegiatan</h2>
+            <div id="event-description" class="space-y-3 text-[15px] leading-relaxed text-ink-body"></div>
+          </div>
+
+          <div class="mt-8">
+            <h2 class="text-[18px] font-bold tracking-tight text-ink-body">Susunan acara</h2>
+            <ol id="event-rundown" class="mt-3 divide-y divide-border-subtle border-y border-border-subtle"></ol>
+          </div>
+
+          <div class="mt-8">
+            <h2 class="text-[18px] font-bold tracking-tight text-ink-body">Narasumber</h2>
+            <ul id="event-speakers" class="mt-3 space-y-3"></ul>
+          </div>
+
+          <div class="mt-8">
+            <h2 class="text-[18px] font-bold tracking-tight text-ink-body">Informasi peserta</h2>
+            <ul id="event-notes" class="mt-2.5 list-disc space-y-1.5 pl-5 text-[14px] leading-relaxed text-ink-body"></ul>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="lg:col-span-4 lg:sticky lg:top-28">
+          <div class="rounded-2xl border border-border-subtle bg-white p-5 shadow-xs">
+            <p class="text-[11px] font-bold uppercase tracking-[0.08em] text-ink-muted">Penyelenggara</p>
+            <p id="event-organizer" class="mt-1 text-[15px] font-bold text-ink-body"></p>
+
+            <dl class="mt-4 space-y-2.5 border-t border-border-subtle pt-4 text-[13.5px]">
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-ink-muted">Kategori</dt>
+                <dd id="event-side-category" class="text-right font-semibold text-ink-body"></dd>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-ink-muted">Format</dt>
+                <dd id="event-side-format" class="text-right font-semibold text-ink-body"></dd>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-ink-muted">Biaya</dt>
+                <dd id="event-side-fee" class="text-right font-semibold text-ink-body"></dd>
+              </div>
+            </dl>
+
+            <button type="button" id="event-save" class="mt-5 flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-primary text-[14px] font-bold text-white transition-colors hover:bg-primary-hover">
+              <span class="material-symbols-outlined text-[19px]" aria-hidden="true">calendar_add_on</span>
+              <span>Simpan ke Kalender</span>
+            </button>
+            <a href="{{ $links('agenda') }}" data-path="agenda-literasi" class="mt-2 flex h-11 w-full items-center justify-center rounded-xl border border-border-subtle text-[14px] font-semibold text-ink-body transition-colors hover:bg-surface-neutral">
+              Lihat agenda lain
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Not found -->
+  <section id="event-not-found" class="hidden">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <div class="rounded-2xl border border-border-subtle bg-white px-6 py-14 text-center">
+        <img src="{{ asset('assets/ikapi/ilustration/notfoundil.png') }}" alt="" aria-hidden="true" class="mx-auto h-28 w-auto">
+        <h1 class="mt-3 text-[18px] font-bold text-ink-body">Agenda tidak ditemukan</h1>
+        <p class="mx-auto mt-1.5 max-w-sm text-[13.5px] leading-relaxed text-ink-muted">Agenda yang kamu buka tidak tersedia. Pilih kegiatan lain dari daftar agenda literasi.</p>
+        <a href="{{ $links('agenda') }}" class="mt-4 inline-flex h-10 items-center rounded-xl bg-primary px-4 text-[13.5px] font-semibold text-white hover:bg-primary-hover">Kembali ke Agenda</a>
+      </div>
+    </div>
+  </section>
+@endsection
+
+@push('head')
+<script>
+window.IKAPI_P6_DATA = @json(['EVENTS' => $events]);
+window.IKAPI_P6_EVENT_ID = '{{ $eventId }}';
+</script>
+@endpush
