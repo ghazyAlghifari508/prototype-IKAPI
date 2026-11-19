@@ -19,7 +19,7 @@ class ResetPasswordController extends Controller
     {
         return view('auth.reset-password', [
             'token' => $token,
-            'email' => $request->email,
+            'email' => $request->query('email', old('email', '')),
         ]);
     }
 
@@ -45,8 +45,8 @@ class ResetPasswordController extends Controller
             ->where('email', $request->email)
             ->first();
 
-        if (! $record) {
-            return back()->withErrors(['email' => 'Permintaan atur ulang kata sandi tidak ditemukan atau telah kedaluwarsa.']);
+        if (! $record || ! Hash::check($request->token, $record->token)) {
+            return back()->withErrors(['email' => 'Permintaan atur ulang kata sandi tidak ditemukan atau token tidak valid/kedaluwarsa.']);
         }
 
         $user = User::where('email', $request->email)->first();

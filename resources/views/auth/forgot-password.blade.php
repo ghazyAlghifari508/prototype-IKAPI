@@ -33,9 +33,18 @@
           <div class="p-3.5 rounded-2xl bg-surface-soft border border-primary/20 text-ink-body text-[13px] leading-relaxed" id="success-banner">
             <div class="flex items-start gap-2.5">
               <span class="material-symbols-outlined text-[20px] text-primary shrink-0 mt-0.5">mark_email_read</span>
-              <div class="flex flex-col gap-0.5">
+              <div class="flex flex-col gap-0.5 w-full">
                 <span class="font-bold text-ink-body">Periksa email Anda</span>
                 <p class="text-ink-muted">{{ session('status') }}</p>
+                @if (session('demo_reset_url'))
+                  <div class="mt-2.5 pt-2.5 border-t border-primary/10">
+                    <p class="text-[12px] text-ink-muted mb-1 font-medium">Mode Lokal / Uji Coba Langsung:</p>
+                    <a href="{{ session('demo_reset_url') }}" class="inline-flex items-center gap-1.5 text-[13px] font-bold text-primary hover:text-primary-hover hover:underline">
+                      <span>Buka Form Reset Kata Sandi Baru</span>
+                      <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                    </a>
+                  </div>
+                @endif
               </div>
             </div>
           </div>

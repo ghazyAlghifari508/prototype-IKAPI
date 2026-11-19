@@ -8,6 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
 
@@ -34,6 +35,7 @@ class ForgotPasswordController extends Controller
         ]);
 
         $user = User::where('email', $request->email)->first();
+        $demoResetUrl = null;
 
         if ($user) {
             $token = Str::random(60);
@@ -45,9 +47,22 @@ class ForgotPasswordController extends Controller
                     'created_at' => now(),
                 ]
             );
+
+            $demoResetUrl = route('password.reset', [
+                'token' => $token,
+                'email' => $user->email,
+            ]);
+
+            Log::info("Password reset link for {$user->email}: {$demoResetUrl}");
         }
 
-        // Always return success status to prevent email enumeration
-        return back()->with('status', 'Tautan untuk mengatur ulang kata sandi telah dikirim ke alamat email Anda jika terdaftar di sistem.');
+        $response = back()->with('status', 'Tautan untuk mengatur ulang kata sandi telah dikirim ke alamat email Anda jika terdaftar di sistem.');
+
+        // Pada mode local/testing, sertakan link reset langsung agar dapat langsung dicoba tanpa SMTP
+        if ($demoResetUrl && config('app.env') === 'local') {
+            $response->with('demo_reset_url', $demoResetUrl);
+        }
+
+        return $response;
     }
 }
