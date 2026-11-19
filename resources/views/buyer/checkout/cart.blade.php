@@ -114,9 +114,6 @@
                   Rp 45.000
                 </span>
                 <div class="flex items-center gap-2">
-                  <button type="button" aria-label="Favorit" class="btn-fav w-9 h-9 rounded-xl hover:bg-surface-soft text-ink-muted transition-colors flex items-center justify-center border border-transparent hover:border-border-subtle cursor-pointer" onclick="toggleFavorite(1, this)">
-                    <span class="material-symbols-outlined text-[20px] transition-colors">favorite_border</span>
-                  </button>
                   <button type="button" aria-label="Hapus dari Keranjang" class="h-9 px-3 rounded-xl text-red-600 hover:bg-red-50 text-[13px] font-semibold flex items-center gap-1 transition-colors cursor-pointer" onclick="removeCartItem(1)">
                     <span class="material-symbols-outlined text-[17px]">delete</span>
                     <span>Hapus</span>
@@ -145,9 +142,6 @@
                   Rp 58.000
                 </span>
                 <div class="flex items-center gap-2">
-                  <button type="button" aria-label="Favorit" class="btn-fav w-9 h-9 rounded-xl hover:bg-surface-soft text-ink-muted transition-colors flex items-center justify-center border border-transparent hover:border-border-subtle cursor-pointer" onclick="toggleFavorite(2, this)">
-                    <span class="material-symbols-outlined text-[20px] transition-colors">favorite_border</span>
-                  </button>
                   <button type="button" aria-label="Hapus dari Keranjang" class="h-9 px-3 rounded-xl text-red-600 hover:bg-red-50 text-[13px] font-semibold flex items-center gap-1 transition-colors cursor-pointer" onclick="removeCartItem(2)">
                     <span class="material-symbols-outlined text-[17px]">delete</span>
                     <span>Hapus</span>
